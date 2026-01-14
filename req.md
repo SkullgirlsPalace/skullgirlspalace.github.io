@@ -1,4 +1,4 @@
-2\. Requisitos Funcionais (RF)
+1\. Requisitos Funcionais (RF)
 
 Funcionalidades que o sistema deve oferecer ao usuário.Módulo 1: Navegação e Estrutura Geral
 
@@ -49,7 +49,7 @@ Módulo 4: Conteúdo Estático e Tier List
 
 * **\[RF013\]** **Tier List:** Exibir uma Tier List gráfica idêntica à do site Skullgirls Hub (link oficial como referência visual).
 
-3\. Requisitos Não Funcionais (RNF)
+2\. Requisitos Não Funcionais (RNF)
 
 Restrições técnicas, de design e de qualidade.
 
