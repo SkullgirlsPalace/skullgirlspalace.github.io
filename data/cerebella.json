@@ -1,0 +1,366 @@
+{
+  "character": "Cerebella",
+  "version": "1.0",
+  "variants": {
+    "diamante": [
+      {
+        "name": "Estrelada",
+        "title_formatted": "> Estrelada <:Agua:1389703224210231437><:diamante:1407839264779141140>",
+        "element": "Água",
+        "color_hex": "#1095d5",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361401051395133460/1000.png?ex=681e4308&is=681cf188&hm=4627ee031d5d8786a4a9c98802004b3228c3cae645d1ea51aca673eb6b8e8859&"
+        },
+        "stats": {
+          "attack": "11,175",
+          "health": "88,052",
+          "power": "30,545"
+        },
+        "signature_ability": {
+          "name": "VOANDO ALTO",
+          "description": "[HAB 1]: Ganhe BARREIRA e inflija QUEBRA DE GUARDA por 15 s cada **quando quebrar ou acertar um ARREMESSO.**\n\n[HAB 2]: **Enquanto se beneficiar de BARREIRA e o oponente estiver no ar**, 25% de chance de infligir SANGR. e FADIGA por 7 s cada ao GOLPEAR."
+        },
+        "marquee_ability": "Mestre do Picadeiro",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Diamante Bruto, , <:Blockbuster:1434999898385944606> Excelebella,, <:Blockbuster:1434999898385944606> Dínamo Diamante, , <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Cavalo de Alça"
+      },
+      {
+        "name": "Mão Pesada",
+        "title_formatted": "> Mão Pesada <:Fogo:1389703188525092934><:diamante:1407839264779141140>",
+        "element": "Fogo",
+        "color_hex": "#ef2e2d",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361401095116554240/1000.png?ex=681e4312&is=681cf192&hm=51a4f0767a7ea0713dbecef7180ee07e18e449f82dfa4685655daa0c75e6f0cc&"
+        },
+        "stats": {
+          "attack": "13,152",
+          "health": "80,045",
+          "power": "31,304"
+        },
+        "signature_ability": {
+          "name": "SANDUÍCHE DE PUNHO",
+          "description": "[HAB 1]: Ganhe FÚRIA e PRECISÃO a cada 0.1 s segundos ao **carregar um ATAQUE CARREGADO**. Ganhe INABALÁVEL por 10 segundos ao atingir 5 acúmulos de FÚRIA. **Todas as FÚRIAS são removidas se a Cerebella for atingido.**\n\n[HAB 2]: Recupere 10% de VIDA MÁXIMA e remova 3 EF. POS. do oponente ao causar pelo menos 10% da VIDA MÁXIMA dele **com um único GOLPE.**"
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Mekastar",
+        "title_formatted": "> Mekastar <:Neutro:1389703364304175125><:diamante:1407839264779141140>",
+        "element": "Neutro",
+        "color_hex": "#efaae8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361401126607523900/1000.png?ex=681e431a&is=681cf19a&hm=ebef0f2d5ea7a412b655d775c17bb5efc8282b97405774d67c1627e9f2a94d4b&"
+        },
+        "stats": {
+          "attack": "15,130",
+          "health": "72,058",
+          "power": "32,069"
+        },
+        "signature_ability": {
+          "name": "GOLPES REFORÇADOS",
+          "description": "[HAB 1]: **Se nenhum dos BLOCKBUSTERS da Cerebella estiver totalmente carregado, ganhe FÚRIA por 10 s e 5% no MEDIDOR DE BLOCKBUSTER a cada 3 s quando não estiver BLOQUEANDO.**\n\n[HAB 2]: Ganhe BARREIRA e inflija MALDIÇÃO por 15 s cada ao usar um BLOCKBUSTER. Enquanto estiver com FÚRIA, **3% de chance ao GOLPEAR de derrotar o oponente imediatamente se ele tiver menos de 50% de VIDA.**"
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Ciclone Carmesim",
+        "title_formatted": "> Ciclone Carmesim <:Ar:1389703277532287066><:diamante:1407839264779141140>",
+        "element": "Ar",
+        "color_hex": "#00ff40",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1379099529101574155/Crimson_Cyclone_TEMP.png?ex=683f0206&is=683db086&hm=3f543fb3fa9cf69be28a904f51164422ec66a74677ed922449846e89dfe07870&"
+        },
+        "stats": {
+          "attack": "13,152",
+          "health": "80,045",
+          "power": "31,304"
+        },
+        "signature_ability": {
+          "name": "Músculo de Ferro",
+          "description": "[HAB 1]: **Cada 7° GOLPE DE COMBO em Cerebella ou no oponente concede REGENERAÇÃO e ARMADURA** por 15 segundos cada. Enquanto utilizam REGENERAÇÃO ou ARMADURA, BLOCKBUSTERS causam dano aumentado em 50%.\n\n[HAB 2]: Ganhe 15% de MEDIDOR DE BLOCKBUSTER e tenha 50% de **chance de atualizar a REATIVAÇÃO de todos os GOLPES ESPECIAIS ao realizar um ARREMESSO.**"
+        },
+        "marquee_ability": "Mestre do Picadeiro",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Final Mortal **BB3**, <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Punho Engatilhado, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Explosão"
+      }
+    ],
+    "ouro": [
+      {
+        "name": "Assustadora",
+        "title_formatted": "> Assustadora <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400724386349136/1000.png?ex=681e42ba&is=681cf13a&hm=074459705d8b74da39499e9aa9d7f79f722a3e81f8991e2e846b4b2085811bdf&"
+        },
+        "stats": {
+          "attack": "12,212",
+          "health": "74,324",
+          "power": "29,087"
+        },
+        "signature_ability": {
+          "name": "RUGIDO FEROZ",
+          "description": "[HAB 1]: Inflige DEFINHAR e concede ACELERAÇÃO por 8 segundos cada **quando o oponente estiver NOCAUTEADO.**\n\n[HAB 2]: 25% de chance **ao GOLPEAR** de conceder FÚRIA por 10 segundos e de DRENAR 5% da VIDA do oponente **enquanto se beneficia de ACELERAÇÃO.**"
+        },
+        "marquee_ability": "Mestre do Picadeiro",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Arlequim",
+        "title_formatted": "> Arlequim <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
+        "element": "Fogo",
+        "color_hex": "#ef2e2d",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400759614308422/1000.png?ex=681e42c2&is=681cf142&hm=c94a18c8507f41334817e8e3b3a27c94caa1dcff4b5a524f5ce3fb37b61eb1b0&"
+        },
+        "stats": {
+          "attack": "14,038",
+          "health": "66,804",
+          "power": "29,785"
+        },
+        "signature_ability": {
+          "name": "NÚMERO ESPECIAL",
+          "description": "[HAB 1]: **GOLPES ESPECIAIS causam 20% de dano extra para todos os aliados.**\n\n[HAB 2]: **O tempo de REATIVAÇÃO de GOLPES ESPECIAIS é reduzido em 35% para todos os aliados.**"
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Arremesso de Martelo (Expulsão), <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Blitz e Glamour",
+        "title_formatted": "> Blitz e Glamour <:Luz:1389703315167907902><:ouro:1407839155785826306>",
+        "element": "Luz",
+        "color_hex": "#dfd173",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400787514949642/1000.png?ex=681e42c9&is=681cf149&hm=c8cee22e023013ef943b7be0a11b359cf3e8027918f5adb71024e4e17c736460&"
+        },
+        "stats": {
+          "attack": "12,212",
+          "health": "74,324",
+          "power": "29,087"
+        },
+        "signature_ability": {
+          "name": "PRESENÇA DE PALCO",
+          "description": "[HAB 1]: **Enquanto estiver do lado do oponente do cenário**, Cerebella tem 15% de chance ao GOLPEAR de infligir POLARIDADE INVERSA e QUEBRA DE ARMADURA por 10 segundos cada.\n\n[HAB 2]: **Após 5 segundos em seu próprio lado do cenário, a Cerebella REMOVE todos os EFEITOS NEGATIVOS de si mesma** e ganha IMUNIDADE e REGENERAÇÃO. **Esses EFEITOS POSITIVOS são removidos se ela for NOCAUTEADA.**"
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Cérebro Gelado",
+        "title_formatted": "> Cérebro Gelado <:Agua:1389703224210231437><:ouro:1407839155785826306>",
+        "element": "Água",
+        "color_hex": "#1095d5",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400867944665158/1000.png?ex=681e42dc&is=681cf15c&hm=0a31ca3ffd25c90c38563f4025b85c83d5a53ff9bc229ab70899ca92f9b66f22&"
+        },
+        "stats": {
+          "attack": "12,212",
+          "health": "74,324",
+          "power": "29,087"
+        },
+        "signature_ability": {
+          "name": "CONGELADA",
+          "description": "[HAB 1]: **O dano de ATAQUE aumenta em 3% da sua VIDA ATUAL.**\n\n[HAB 2]: **O dano infligido pelo oponente é reduzido em 3% por cada GOLPE DE COMBO do oponente.**"
+        },
+        "marquee_ability": "Mestre do Picadeiro",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Final Mortal **BB3**, <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Punho Engatilhado, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Forças Armadas",
+        "title_formatted": "> Forças Armadas <:Ar:1389703277532287066><:ouro:1407839155785826306>",
+        "element": "Ar",
+        "color_hex": "#076314",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400939193307196/1000.png?ex=681e42ed&is=681cf16d&hm=6ae8aaface883030790f70cf1bf4a5b71e512ec34467e5f61b1644ed45a8d47b&"
+        },
+        "stats": {
+          "attack": "10,368",
+          "health": "81,773",
+          "power": "28,355"
+        },
+        "signature_ability": {
+          "name": "DEFESA DE DIAMANTE",
+          "description": "[HAB 1]: 10% de chance de Cerebella ganhar ARMADURA e INABALÁVEL por 10 s **ao ser GOLPEADA.**\n\n[HAB 2]: **Quando Cerebella ganha um EF. POS., 100% de chance de transferir 1 EF. NEG. dela ao oponente.**"
+        },
+        "marquee_ability": "Mestre do Picadeiro",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Final Mortal **BB3**, <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Punho Engatilhado, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Mente Criminosa",
+        "title_formatted": "> Mente Criminosa <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400975033635057/1000.png?ex=681e42f6&is=681cf176&hm=0c2526b7efaf74f365a7bb59b6b200dc8b3e315609388fdc2378d3745e902545&"
+        },
+        "stats": {
+          "attack": "14,038",
+          "health": "66,804",
+          "power": "29,785"
+        },
+        "signature_ability": {
+          "name": "SITUAÇÃO ESPINHOSA",
+          "description": "[HAB 1]: Inflija MARCA DA MORTE e ganhe ESPINHOS por 10 seg cada **quando um lutador tirar ao menos 10% da VIDA MÁX. com um só GOLPE.**\n\n[HAB 2]: **Oponentes ficam com SANGRAMENTO por 5 seg ao arrancar sofrendo MARCA DA MORTE.**"
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      }
+    ],
+    "prata": [
+      {
+        "name": "Massa Cinzenta",
+        "title_formatted": "> Massa Cinzenta <:Trevas:1389703142848991364><:prata:1407839105169227957>",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400544979320882/1000.png?ex=681e428f&is=681cf10f&hm=78f7d9d912f9f35cbf67cfb09271ad65b1141626ae367ea6636746aee27fc449&"
+        },
+        "stats": {
+          "attack": "11,309",
+          "health": "69,005",
+          "power": "26,953"
+        },
+        "signature_ability": {
+          "name": "CHAPÉU DE MÁGICO",
+          "description": "[HAB 1]: **Todos os aliados começam a luta com 25% no MEDIDOR de BLOCKBUSTER.**\n\n[HAB 2]: **Uma vez por luta, enquanto a Cerebella estiver viva**, todos os aliados ganham 50% no MEDIDOR DE BLOCKBUSTER quando tiverem menos de 25% de VIDA."
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Arremesso de Martelo (Expulsão), <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa,  <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Guerreira Toad",
+        "title_formatted": "> Guerreira Toad <:Ar:1389703277532287066><:prata:1407839105169227957>",
+        "element": "Ar",
+        "color_hex": "#076314",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400638222762105/1000.png?ex=681e42a5&is=681cf125&hm=244b0a873ac76ce6bce8c349fe35d989330b7b88c2bcc0f5b844693bc1a7d2a4&"
+        },
+        "stats": {
+          "attack": "12,999",
+          "health": "62,112",
+          "power": "27,592"
+        },
+        "signature_ability": {
+          "name": "TURBO TUNNEL",
+          "description": "[HAB 1]: Ganhe 3% no MEDIDOR DE BLOCKBUSTER por segundo enquanto estiver perto de um oponente.\n\n[HAB 2]: Cause 50% de dano extra enquanto um BLOCKBUSTER estiver totalmente carregado."
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Ressurgente",
+        "title_formatted": "> Ressurgente <:Luz:1389703315167907902><:prata:1407839105169227957>",
+        "element": "Luz",
+        "color_hex": "#dfd173",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361400660276543749/1000.png?ex=681e42ab&is=681cf12b&hm=34795eec94313c88cd037f6550510d9abe03e34ede75f88c7e55a533c993cf58&"
+        },
+        "stats": {
+          "attack": "9,620",
+          "health": "75,936",
+          "power": "26,322"
+        },
+        "signature_ability": {
+          "name": "BIS",
+          "description": "[HAB 1]: **Uma vez por luta**, RESSUSCITA com 50% de VIDA quando derrotada. Fica INVENCÍVEL e INABALÁVEL por 8 s.\n\n[HAB 2]: **Quando um dos lutadores é NOCAUTEADO**, remove 1 EF. NEG. de si e ganha REGENERAÇÃO FORTE por 10 s."
+        },
+        "marquee_ability": "Mestre do Picadeiro",
+        "recommended_build": "Vida%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Final Mortal **BB3**, <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Punho Engatilhado, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Sentinela de Pedra",
+        "title_formatted": "> Sentinela de Pedra <:Trevas:1389703142848991364><:prata:1407839105169227957>",
+        "element": "Trevas",
+        "color_hex": "#400080",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707472672882698/Stone_Sentinel.png?ex=6909f7b5&is=6908a635&hm=5c8e33e1347e0f11956c18c6f7e4ecd5cfafc8412b1a6ba8834979817b6ceb2b&"
+        },
+        "stats": {
+          "attack": "9,620",
+          "health": "75,936",
+          "power": "26,322"
+        },
+        "signature_ability": {
+          "name": "Coração de Pedra",
+          "description": "[HAB 1]: Enquanto estiver no **lado do palco da Cerebella**, recebe 60% a menos de DANO.\n\n[HAB 2]: **Enquanto estiver no lado do palco do oponente**, o lutador ativo ganha 1 acúmulo(s) de BARREIRA por 10 segundos a cada 5 segundos."
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "Vida%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Final Mortal **BB3**, <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Punho Engatilhado, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Explosão"
+      }
+    ],
+    "bronze": [
+      {
+        "name": "Substituta",
+        "title_formatted": "> Substituta <:Agua:1389703224210231437><:bronze:1407839009664798801>",
+        "element": "Água",
+        "color_hex": "#1095d5",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361389695497671036/1000.png?ex=681e3874&is=681ce6f4&hm=d4e7054f6093a4e0b1ff32be85c963dcc5ca14cfb9ccbe850b1304f0b72f8cdc&"
+        },
+        "stats": {
+          "attack": "10,522",
+          "health": "64,090",
+          "power": "25,055"
+        },
+        "signature_ability": {
+          "name": "JOGO DE CHÃO",
+          "description": "[HAB 1]: **ARREMESSOS** causam 50% de dano extra.\n\n[HAB 2]: Ganhe ARMADURA por 15 segundos **ao ARREMESSAR o oponente**."
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      },
+      {
+        "name": "Cabeça Dura",
+        "title_formatted": "> Cabeça Dura <:Luz:1389703315167907902><:bronze:1407839009664798801>",
+        "element": "Luz",
+        "color_hex": "#dfd173",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389480844556501074/Icon-Cerebella.png?ex=68656f20&is=68641da0&hm=ea7189eb8db9592dcbe8f80535eba0d8a78ac0949e0869adf788983a37940215&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361389738149544116/1000.png?ex=681e387e&is=681ce6fe&hm=89abc5b41dafdb1dd448903500fef02dea6f78c4e8d47974e6f538b90a1c8c9b&"
+        },
+        "stats": {
+          "attack": "12,135",
+          "health": "57,658",
+          "power": "25,694"
+        },
+        "signature_ability": {
+          "name": "GRANDE RUPTURA",
+          "description": "[HAB 1]: **ARREMESSOS** têm 50% de chance de infligir INCAPACITAÇÃO por 7 segundos.\n\n[HAB 2]: **Também** inflige QUEBRA DE ARMADURA por 7 segundos."
+        },
+        "marquee_ability": "Vantagem",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Rede de Segurança, , <:Blockbuster:1434999898385944606> Diamante Bruto, <:GolpeEspecial:1434999859768987748> Cerecóptero, <:GolpeEspecial:1434999859768987748> Chifrada Montanhesa, <:GolpeEspecial:1434999859768987748> Gorilassel"
+      }
+    ]
+  }
+}

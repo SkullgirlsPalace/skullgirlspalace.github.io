@@ -1,0 +1,388 @@
+{
+  "character": "Valentine",
+  "version": "1.0",
+  "variants": {
+    "diamante": [
+      {
+        "name": "Preços para matar",
+        "title_formatted": "> Preços para matar <:Luz:1389703315167907902><:diamante:1407839264779141140>",
+        "element": "Luz",
+        "color_hex": "#ffff00",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686908064759981/1000.png?ex=681ea481&is=681d5301&hm=22ed1fd0e8833a0ab219141f516389c9a9c9ea589fb827299858fd7c729d4c3c&"
+        },
+        "stats": {
+          "attack": "8,794",
+          "health": "78,221",
+          "power": "25,796"
+        },
+        "signature_ability": {
+          "name": "SANGRADO",
+          "description": "[HAB 1]: **Quando qualquer lutador usa um BLOCKBUSTER**, ele perde 25% da VIDA restante e sofre SANGRAMENTO FORTE por 5 s.\n\n[HAB 2]: Ganhe 5% de VIDA por segundo **enquanto estiver perto de um oponente sofrendo SANGRAMENTO.**"
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Morte Cardiovascular **BB3**, <:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Incisão Excessiva, <:GolpeEspecial:1434999859768987748> Cruz da Morte, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Soldado Serafim",
+        "title_formatted": "> Soldado Serafim <:Fogo:1389703188525092934><:diamante:1407839264779141140>",
+        "element": "Fogo",
+        "color_hex": "#ff0000",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686952348352512/1000.png?ex=681ea48c&is=681d530c&hm=2c3fecacf81b05e591bd5ddb14a2e2a2fbf6c64c7a19af51c90369eff0faeb62&"
+        },
+        "stats": {
+          "attack": "10,330",
+          "health": "71,117",
+          "power": "26,212"
+        },
+        "signature_ability": {
+          "name": "CORAÇÕES EM CHAMAS",
+          "description": "[HAB 1]: **Enquanto Valentine estiver viva**, o lutador ativo ganha FÚRIA por 10 segundos quando causar dano de pelo menos 10% da VIDA MÁX. do oponente com um único GOLPE. Além disso, o DANO do **Lutador do Elemento Fogo ativo aumenta permanentemente em 0.5% a cada segundo.**\n\n[HAB 2]: **Enquanto Valentine estiver viva,** 25% de **todo o DANO infligido pelos CRÍTICOS do lutador ativo é recuperado como VIDA enquanto esse lutador estiver se beneficiando de FÚRIA.**"
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Negócio Sangrento",
+        "title_formatted": "> Negócio Sangrento <:Agua:1389703224210231437><:diamante:1407839264779141140>",
+        "element": "Água",
+        "color_hex": "#00ffff",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686930731040768/1000.png?ex=681ea487&is=681d5307&hm=2b21dd80f4b35e21c6876d063f2c29583a87494cc74e2112fab822c079da0ca9&"
+        },
+        "stats": {
+          "attack": "10,330",
+          "health": "71,117",
+          "power": "26,212"
+        },
+        "signature_ability": {
+          "name": "ACROBACIA AÉREA",
+          "description": "[HAB 1]: Ganhe ESQUIVA a cada 1 s enquanto **carrega um ATAQUE DE CARGA.**\n\n[HAB 2]: **Quando estiver jogando um oponente no ar,** Valentine ganha FÚRIA e o oponente sofre QUEBRA DE ARMADURA e MARCA DA MORTE por 7 s."
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Très Chic",
+        "title_formatted": "> Très Chic <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
+        "element": "Trevas",
+        "color_hex": "#800080",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686976134123581/1000.png?ex=681ea492&is=681d5312&hm=9eb738ccf9e1650f980ee83a3c3e43f7815b230802ac1adeb7dfd9cdc5c2b341&"
+        },
+        "stats": {
+          "attack": "11,847",
+          "health": "64,032",
+          "power": "26,609"
+        },
+        "signature_ability": {
+          "name": "DUAS CARAS",
+          "description": "[HAB 1]: **Enquanto está do seu lado do cenário**, a Valentine ganha 1 camada(s) de BARREIRA, ESPINHOS ou ARMADURA a cada 3 seg. Esses EF. POSITIVOS são removidos quando NOCAUTEADA.\n\n[HAB 2]: **Ao ficar do lado do oponente,** GOLPES CRÍTICOS infligem SANGRAMENTO, MARCA DA MORTE ou QUEBRA DE ARMADURA por 10 seg."
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Perto da Morte",
+        "title_formatted": "> Perto da Morte <:Neutro:1389703364304175125><:diamante:1407839264779141140>",
+        "element": "Neutro",
+        "color_hex": "#ff80c0",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361687022107889724/1000.png?ex=681ea49c&is=681d531c&hm=c0098379e2f36f59a2fa75c6fddca91802ada71dbadbe88a56212e0a93ead301&"
+        },
+        "stats": {
+          "attack": "11,847",
+          "health": "64,032",
+          "power": "26,609"
+        },
+        "signature_ability": {
+          "name": "EXECUÇÃO DE ROTINA",
+          "description": "[HAB 1]: Transfira 1 EF. NEG. para o oponente e inflija QUEBRA DE GUARDA por 15 s a cada 5 s **sem sofrer GOLPES (incluindo GOLPES bloqueados).**\n\n[HAB 2]: **Com o oponente sofrendo um EF. NEG.,** concede OLHO-MORTO por 15 s ao usar um BLOCKBUSTER. Enquanto o oponente tiver 3 ou mais camadas de QUEBRA DE GUARDA, os BLOCKBUSTERS causam 100% de dano extra."
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      }
+    ],
+    "ouro": [
+      {
+        "name": "Última Esperança",
+        "title_formatted": "> Última Esperança <:Luz:1389703315167907902><:ouro:1407839155785826306>",
+        "element": "Luz",
+        "color_hex": "#ffff00",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686795946823902/1000.png?ex=681ea467&is=681d52e7&hm=f0a7ff4dc25e610f07e71984ec55fdf706d5a5e168503ea730950a41eb993188&"
+        },
+        "stats": {
+          "attack": "8,160",
+          "health": "72,634",
+          "power": "23,946"
+        },
+        "signature_ability": {
+          "name": "PRONTO-SOCORRO",
+          "description": "[HAB 1]: **Enquanto Valentine estiver viva**, quando qualquer aliado for derrotado, RESSUSITE com 25% de VIDA. Este efeito só pode ser usado uma vez por aliado.\n\n[HAB 2]: **Além disso, concede REGENERAÇÃO FORTE por 15 segundos.**"
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Morte Cardiovascular **BB3**, <:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Cruz da Morte, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Piro-técnica",
+        "title_formatted": "> Piro-técnica <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
+        "element": "Fogo",
+        "color_hex": "#ff0000",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686840377213078/1000.png?ex=681ea471&is=681d52f1&hm=b484558154c86512d38415209c659d3f2e694a01e9f653af99def93291dce07d&"
+        },
+        "stats": {
+          "attack": "9,581",
+          "health": "66,048",
+          "power": "24,328"
+        },
+        "signature_ability": {
+          "name": "QUEIMADURA DE ALMA",
+          "description": "[HAB 1]: **ACERTOS DE BLOCKBUSTERS e GOLPES ESPECIAIS** têm uma chance de 20% de infligir DEFINHAR e SANGRAMENTO por 10 segundos.\n\n[HAB 2]: 20% de chance **ao GOLPEAR** de ganhar FÚRIA por 10 segundos **se o oponente estiver sofrendo de DEFINHAR ou SANGRAMENTO.**"
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Morro Quieto",
+        "title_formatted": "> Morro Quieto <:Agua:1389703224210231437><:ouro:1407839155785826306>",
+        "element": "Água",
+        "color_hex": "#00ffff",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686816297582763/1000.png?ex=681ea46b&is=681d52eb&hm=692cab59ea707b69ea85875268e4e614b18a3315019c54fb0eb8048d2d6abd2d&"
+        },
+        "stats": {
+          "attack": "9,581",
+          "health": "66,048",
+          "power": "24,328"
+        },
+        "signature_ability": {
+          "name": "MEMÓRIA TURVA",
+          "description": "[HAB 1]: **Ao GOLPEAR,** tem 25% de chance de **REMOVER todos os EFEITOS NEGATIVOS de si mesmo.**\n\n[HAB 2]: **Ao GOLPEAR,** tem 25% de chance de **REMOVER todos os EFEITOS POSITIVOS do oponente.**"
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Presa Final",
+        "title_formatted": "> Presa Final <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
+        "element": "Trevas",
+        "color_hex": "#800080",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686886879465532/1000.png?ex=681ea47c&is=681d52fc&hm=710f67fa98a23b434f58748fcdff559bc2b01c14b5324881d001b7c410fcc8a5&"
+        },
+        "stats": {
+          "attack": "11,002",
+          "health": "69,143",
+          "power": "26,711"
+        },
+        "signature_ability": {
+          "name": "1001 TÉCNICAS",
+          "description": "[HAB 1]: **Quando o oponente ganhar um EFEITO POSITIVO,** COPIE 1 dos EFEITOS POSITIVOS dele e inflija MALDIÇÃO por 7 s.\n\n[HAB 2]: **Ao GOLPEAR,** 20% de chance de infligir um EF. NEG. aleatório por 15 s se o **oponente estiver sofrendo um EF. NEG.**"
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Cirurgiã-General",
+        "title_formatted": "> Cirurgiã-General <:Ar:1389703277532287066><:ouro:1407839155785826306>",
+        "element": "Ar",
+        "color_hex": "#008000",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686862095319232/1000.png?ex=681ea476&is=681d52f6&hm=11d2cbad0b8b11d380f0344c0431093033e69eaca9e04f4c9f723db29f32b882&"
+        },
+        "stats": {
+          "attack": "11,002",
+          "health": "69,143",
+          "power": "26,711"
+        },
+        "signature_ability": {
+          "name": "STIMPAK",
+          "description": "[HAB 1]: **Enquanto a Valentine está viva,** ela ganha uma FÚRIA permanente a cada 30 segundos.\n\n[HAB 2]: **Enquanto Valentine estiver viva,** todos os colegas de equipe recebem IMUNIDADE e REGENERAÇÃO por 15 seg a cada 30 seg."
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Superluminal",
+        "title_formatted": "> Superluminal <:Ar:1389703277532287066><:ouro:1407839155785826306>",
+        "element": "Ar",
+        "color_hex": "#00ff00",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707508211089408/Superluminal.png?ex=6909f7bd&is=6908a63d&hm=3ebccba88eeb38ce02a0e279d8a230bd16a5332b10df80aa69a3e1e0e1c20e39&"
+        },
+        "stats": {
+          "attack": "9,581",
+          "health": "66,048",
+          "power": "24,328"
+        },
+        "signature_ability": {
+          "name": "Fazendo Bagunça",
+          "description": "[HAB 1]: **Enquanto Valentine estiver viva**, o TEMPO DE RECARGA dos MOVIMENTOS ESPECIAIS do lutador ativo é 100% mais rápido durante uma arrancada ou arrancada para trás. ATAQUES DE ARRANCADA bem-sucedidos restauram instantaneamente AS ENTRADAS DE ASSISTÊNCIA.\n\n[HAB 2]: **Enquanto Valentine estiver viva**, o primeiro GOLPE de MOVIMENTO ESPECIAL em um combo concede ESQUIVA a todos os aliados, e o primeiro GOLPE de BLOCKBUSTER concede ACELERAÇÃO a todos os aliados por 7 segundos."
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      }
+    ],
+    "prata": [
+      {
+        "name": "Turno Mortal",
+        "title_formatted": "> Turno Mortal <:Trevas:1389703142848991364><:prata:1407839105169227957>",
+        "element": "Trevas",
+        "color_hex": "#800080",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686724635263066/1000.png?ex=681ea456&is=681d52d6&hm=cc27a41f8faf1bcde047fa61c6e96d9ac942aabd5f893a3d383a930f4763bc79&"
+        },
+        "stats": {
+          "attack": "7,604",
+          "health": "67,469",
+          "power": "22,272"
+        },
+        "signature_ability": {
+          "name": "CRIMINOLOGIA",
+          "description": "[HAB 1]: **A Valentine e todos os aliados ganham REGEN. FORTE** por 15 s **quando qualquer lutador é derrotado.**\n\n[HAB 2]: **Ao GOLPEAR sob efeito de REGENERAÇÃO,** 15% de chance de infligir MALDIÇÃO e BLOQ. DE CURA por 10 s."
+        },
+        "marquee_ability": "UTI (Ataque) / Centro de Traumas (Suporte)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Matadora Joy",
+        "title_formatted": "> Matadora Joy <:Luz:1389703315167907902><:prata:1407839105169227957>",
+        "element": "Luz",
+        "color_hex": "#ffff00",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686744512204810/latest.png?ex=681ea45a&is=681d52da&hm=b375f63e67dfa7edd7487d621b8bc5790e430c689a2ba243227660ea5875b807&"
+        },
+        "stats": {
+          "attack": "8,909",
+          "health": "61,326",
+          "power": "22,804"
+        },
+        "signature_ability": {
+          "name": "ENFERMEIRA OU MATADORA?",
+          "description": "[HAB 1]: **Aliados ganham REGENERAÇÃO permanente na primeira vez** que a VIDA cair abaixo de 50% quando em VANTAGEM ELEMENTAL.\n\n[HAB 2]: **Uma vez por luta, quando DERROTADA,** RESSUSCITA todos os aliados derrotados com 25% de VIDA."
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Mai-s O Quê?",
+        "title_formatted": "> Mai-s O Quê? <:Fogo:1389703188525092934><:prata:1407839105169227957>",
+        "element": "Fogo",
+        "color_hex": "#ff0000",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686771368333544/1000.png?ex=681ea461&is=681d52e1&hm=2b01ab48c2e5c8cf7085173d05209768d8511133edb20a30e43a687fbcc4c888&"
+        },
+        "stats": {
+          "attack": "10,215",
+          "health": "55,181",
+          "power": "22,938"
+        },
+        "signature_ability": {
+          "name": "FÚRIA MORTAL",
+          "description": "[HAB 1]: Ganhe 2 camadas de FÚRIA por 20 s e 5 camadas de PRECISÃO **após derrotar um oponente.**\n\n[HAB 2]: **Quando qualquer Lutador é derrotado,** todos os aliados ganham 2 camadas de FÚRIA por 15 segundos."
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Hallow – Demônio",
+        "title_formatted": "> Hallow – Demônio <:Agua:1389703224210231437><:prata:1407839105169227957>",
+        "element": "Água",
+        "color_hex": "#004080",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707372835733655/Hallow_Fiend.png?ex=6909f79d&is=6908a61d&hm=d55a44db4ceaba329d08ae227e8b9842d9ef19b9bb2a96a25b742b49e13d324c&"
+        },
+        "stats": {
+          "attack": "10,215",
+          "health": "55,181",
+          "power": "22,938"
+        },
+        "signature_ability": {
+          "name": "Injeção Letal",
+          "description": "[HAB 1]: **Enquanto nenhum dos BLOCKBUSTERS da Valentine estiver totalmente carregado**, GOLPES que não sejam BLOCKBUSTER drenam 5% da BARRA DE BLOCKBUSTER.\n\n[HAB 2]: **Se nenhum dos BLOCKBUSTERS dos oponentes estiver carregado**, GOLPES DE BLOCKBUSTERS causam FEITIÇO por 6 s."
+        },
+        "marquee_ability": "UTI",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Laringectomia, <:Blockbuster:1434999898385944606> Incisão Excessiva, , <:Blockbuster:1434999898385944606> Contraveneno: Paralisia,, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      }
+    ],
+    "bronze": [
+      {
+        "name": "Jaleco",
+        "title_formatted": "> Jaleco <:Ar:1389703277532287066><:bronze:1407839009664798801>",
+        "element": "Ar",
+        "color_hex": "#00ff00",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686677294284963/1000.png?ex=681ea44a&is=681d52ca&hm=ea1cee082ac0f8495b8b3a9421fb458ef4b8269bc7168823cbda2b0092683786&"
+        },
+        "stats": {
+          "attack": "8,237",
+          "health": "56,948",
+          "power": "20,948"
+        },
+        "signature_ability": {
+          "name": "AMBULATÓRIO",
+          "description": "[HAB 1]: **Todos os aliados recuperam instantaneamente** 15% de VIDA **quando Valentine SAI DA ASSISTÊNCIA.**\n\n[HAB 2]: **Aliados na reserva regeneram DANO DE ARRANHÃO** e ganham MEDIDOR DE BLOCKBUSTER 100% mais rápido."
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      },
+      {
+        "name": "Quente com Gelo",
+        "title_formatted": "> Quente com Gelo <:Agua:1389703224210231437><:bronze:1407839009664798801>",
+        "element": "Água",
+        "color_hex": "#0080ff",
+        "images": {
+          "icon_url": "https://media.discordapp.net/attachments/1389702388683899052/1406018085558681661/Icon-Valentine.png?ex=68a78762&is=68a635e2&hm=c8cbeab97407735fe3ddbce6ff57c273e280716fcc2c9b0bdd204541f41a9774&=&format=webp&quality=lossless&width=125&height=125",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686702342537320/1000.png?ex=681ea450&is=681d52d0&hm=0beed6e7cb341eb166ac95c46573c7596dbcaebb53e41b17ca5aece6ca889ff7&"
+        },
+        "stats": {
+          "attack": "9,428",
+          "health": "51,264",
+          "power": "21,236"
+        },
+        "signature_ability": {
+          "name": "SOCORRISTA",
+          "description": "[HAB 1]: **Todos os aliados ENTRAM NA ASSISTÊNCIA com REGENERAÇÃO** por 15 segundos.\n\n[HAB 2]: **Na ASSISTÊNCIA, todos os aliados ganham** 15% no MEDIDOR DE BLOCKBUSTER."
+        },
+        "marquee_ability": "Centro de Traumas",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Ressuscitação Agressiva, <:Blockbuster:1434999898385944606> Contraveneno: Detox, <:Blockbuster:1434999898385944606> Contraveneno: Paralisia, <:GolpeEspecial:1434999859768987748> Triagem! (Expulsão), , <:GolpeEspecial:1434999859768987748> Risco Biológico: Tipo A"
+      }
+    ]
+  }
+}

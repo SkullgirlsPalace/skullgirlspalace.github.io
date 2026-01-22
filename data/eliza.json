@@ -1,0 +1,366 @@
+{
+  "character": "Eliza",
+  "version": "1.0",
+  "variants": {
+    "diamante": [
+      {
+        "name": "Múmia Querida",
+        "title_formatted": "> Múmia Querida <:Luz:1389703315167907902> <:diamante:1407839264779141140>",
+        "element": "Luz",
+        "color_hex": "#dfd173",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a6deac&is=68a58d2c&hm=5fed7c3a5c93fb4d18815111478d105b19159b2195df454b8de58e821e43ea95&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680713212231722/1000.png?ex=681df5fc&is=681ca47c&hm=cffcc6efbef7919b85b3d7c0b2624b831c27a3a4089481b3f967729f0798a894&"
+        },
+        "stats": {
+          "attack": "10,004",
+          "health": "88,052",
+          "power": "29,162"
+        },
+        "signature_ability": {
+          "name": "DOMINAÇÃO ABSOLUTA",
+          "description": "[HAB 1]: Usar um GOLPE ESPECIAL **sacrifica 10% da VIDA MÁX. da Eliza** e dá 35% do MED. DE BLOCKBUSTER e REGENERAÇÃO FORTE por 10 seg.\n\n[HAB 2]: Ganhe BÊNÇÃO e IMUNIDADE por 30 segundos cada **ao entrar no MODO SEKHMET.**"
+        },
+        "marquee_ability": "**Juramento de Sangue** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sol de Khepri, <:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Damas Escarlates (Provocar), <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Don Passione",
+        "title_formatted": "> Don Passione <:Neutro:1389703364304175125><:diamante:1407839264779141140>",
+        "element": "Neutro",
+        "color_hex": "#efaae8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a6deac&is=68a58d2c&hm=5fed7c3a5c93fb4d18815111478d105b19159b2195df454b8de58e821e43ea95&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680781059297382/1000.png?ex=681df60d&is=681ca48d&hm=a7e8ae50f5cd194a5124ca2d356cbfd43d071126dc5bacf0fcae973c80468975&"
+        },
+        "stats": {
+          "attack": "11,770",
+          "health": "80,045",
+          "power": "29,671"
+        },
+        "signature_ability": {
+          "name": "EM PEDAÇOS",
+          "description": "[HAB 1]: Quando Eliza **estiver para sofrer um EF. NEG., 50% de chance de impedi-lo** e infligir SANGRAMENTO, FEITIÇO ou QUIETUS por 12 segundos.\n\n[HAB 2]: Ganhe MIASMA permanente para cada EF. NEG. que um oponente **tenha ao sair do Modo Sekhmet** (máx. de 3 por saída). Remove MIASMA **quando o oponente não estiver mais sofrendo** um EF. NEG."
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria da Sekhmet, <:Blockbuster:1434999898385944606> Mordida da Sekhmet,, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "A Vampira",
+        "title_formatted": "> A Vampira <:Ar:1389703277532287066><:diamante:1407839264779141140>",
+        "element": "Ar",
+        "color_hex": "#076314",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a6deac&is=68a58d2c&hm=5fed7c3a5c93fb4d18815111478d105b19159b2195df454b8de58e821e43ea95&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680753804706023/1000.png?ex=681df606&is=681ca486&hm=bb22481e7e71ad97bc9789c44e778ec953da099dc2fbc931b67dacc7fbfc8df6&"
+        },
+        "stats": {
+          "attack": "11,770",
+          "health": "80,045",
+          "power": "29,671"
+        },
+        "signature_ability": {
+          "name": "BUFFET",
+          "description": "[HAB 1]: 75% de todo o dano infligido é recuperado como VIDA **desde que o percentual de VIDA da Eliza seja menor que o do oponente** (também vale para golpes bloqueados).\n\n[HAB 2]: **Quando o oponente tenta ganhar um EF. POS., Eliza tem 50% de chance de impedi-lo** e ganhar 25% no MEDIDOR DE BLOCKBUSTER."
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria da Sekhmet, <:Blockbuster:1434999898385944606> Mordida da Sekhmet,, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Senhor das Trevas",
+        "title_formatted": "> Senhor das Trevas <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
+        "element": "Trevas",
+        "color_hex": "#800080",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a6deac&is=68a58d2c&hm=5fed7c3a5c93fb4d18815111478d105b19159b2195df454b8de58e821e43ea95&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423007345197318225/0e0e5bd5-3e85-4034-b839-9ecebcbb7b99.png?ex=68debe5d&is=68dd6cdd&hm=c10d9838a36c8c070c9b63a8ed5d6145a404e706f6abf7e4984bf1d900d89886&"
+        },
+        "stats": {
+          "attack": "13,556",
+          "health": "72,058",
+          "power": "30,209"
+        },
+        "signature_ability": {
+          "name": "RITUAL SOMBRIO",
+          "description": "[HAB 1]: Eliza começa a luta com FADIGA permanente. Na primeira vez que um oponente for derrotado **enquanto Eliza estiver viva**, a FADIGA é removida, ela recupera 100% de VIDA e **ganha permanentemente** 50% a mais de TAXA DE ATQ CRÍTICO E DANO CRÍTICO.\n\n[HAB 2]: **GOLPES CRÍTICOS** infilgem MARCA DA MORTE, QUIETUS ou SANGRAMENTO e concedem FÚRIA por 15 segundos cada"
+        },
+        "marquee_ability": "Sacrifício Ritual",
+        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606>  Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Mergulho de Hórus, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      }
+    ],
+    "ouro": [
+      {
+        "name": "Veludo Vermelho",
+        "title_formatted": "> Veludo Vermelho <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
+        "element": "Fogo",
+        "color_hex": "#ef2e2d",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680480260591908/1000.png?ex=681df5c5&is=681ca445&hm=5e966b3ccc203abcca87f0ab607edf11436de7268b520dcbffd7be5307718958&"
+        },
+        "stats": {
+          "attack": "9,293",
+          "health": "81,773",
+          "power": "27,085"
+        },
+        "signature_ability": {
+          "name": "HORA DAS BRUXAS",
+          "description": "[HAB 1]: Inflige FEITIÇO por 15 s **ao entrar no Modo Sekhmet**, desativando HAB. CARACTERÍSTICAS do oponente enquanto o efeito durar.\n\n[HAB 2]: Se um oponente SAIR DA ASSISTÊNCIA sob FEITIÇO, **o próximo oponente será afetado** por 3 EFEITOS NEGATIVOS aleatórios por 15 segundos."
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Exílio do Paraíso (Expulsão),, <:GolpeEspecial:1434999859768987748> Ascenção, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Magnata Nobre",
+        "title_formatted": "> Magnata Nobre <:Luz:1389703315167907902><:ouro:1407839155785826306>",
+        "element": "Luz",
+        "color_hex": "#dfd173",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680517619126354/1000.png?ex=681df5ce&is=681ca44e&hm=951242137b63c4f2c5d097cb0cfaa0b9ec51ddbe11345228d443ccae8f3954ec&"
+        },
+        "stats": {
+          "attack": "9,293",
+          "health": "81,773",
+          "power": "27,085"
+        },
+        "signature_ability": {
+          "name": "Banhando-se em Glória",
+          "description": "[HAB 1]: **Enquanto Eliza estiver viva**, todos os aliados ganham BARREIRA a cada 20 segundos.\n\n[HAB 2]: **Enquanto Eliza estiver viva**, **todos os aliados do ELEMENTO LUZ causam 15% de dano extra para cada camada de BARREIRA aplicada a eles**, e Eliza ganha IMUNIDADE enquanto se beneficiar de BARREIRA."
+        },
+        "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria da Sekhmet, <:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Espiral de Osíris), <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Intervenção da Diva",
+        "title_formatted": "> Intervenção da Diva <:Luz:1389703315167907902><:ouro:1407839155785826306>",
+        "element": "Luz",
+        "color_hex": "#dfd173",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680593573908560/1000.png?ex=681df5e0&is=681ca460&hm=4d48002f6496f794c0eff04af2efe00dd249f15b09d565b830f6f1799d8b57f8&"
+        },
+        "stats": {
+          "attack": "10,925",
+          "health": "74,324",
+          "power": "27,546"
+        },
+        "signature_ability": {
+          "name": "CLAREAMENTO ÓSSEO",
+          "description": "[HAB 1]: No Modo Sekhmet, 50% do dano infligido por **ataques NÃO BLOCKBUSTER é recuperado como VIDA.**\n\n[HAB 2]: No Modo Sekhmet, **ataques NÃO BLOCKBUSTER causam 100% de dano extra e drenam 8% do MEDIDOR DE BLOCKBUSTER do oponente.**"
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria da Sekhmet, <:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Confusão Interior",
+        "title_formatted": "> Confusão Interior <:Neutro:1389703364304175125><:ouro:1407839155785826306>",
+        "element": "Neutro",
+        "color_hex": "#efaae8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680554856284222/1000.png?ex=681df5d7&is=681ca457&hm=7cc9e0aa4965325930d6b705a10b0b5ec223c50efc41872b13bbacb8fc134120&"
+        },
+        "stats": {
+          "attack": "10,925",
+          "health": "74,324",
+          "power": "27,546"
+        },
+        "signature_ability": {
+          "name": "AUTOABSORÇÃO",
+          "description": "[HAB 1]: **Ao entrar no Modo Sekhmet**, ganha um EF. POSITIVO por 15 seg por aliado. O EF. POSITIVO ganho é determinado pelo ELEMENTO de cada aliado. [Efeitos Positivos dos Elementos](https://skullgirlsmobile.fandom.com/wiki/Inner_Pieces).\n\n[HAB 2]: Ao usar a ASSISTÊNCIA de ou para a Eliza, tem 100% de chance de **transferir todos os EF. POSITIVOS ativos para o próximo aliado.**"
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Mordida da Sekhmet, , <:GolpeEspecial:1434999859768987748> Exílio do Paraíso (Expulsão),, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Lazulita",
+        "title_formatted": "> Lazulita <:Agua:1389703224210231437><:ouro:1407839155785826306>",
+        "element": "Água",
+        "color_hex": "#1095d5",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680622489178122/1000.png?ex=681df5e7&is=681ca467&hm=9f052ffc404c2c448aa41b057ed14192908fad5a63a6685c73f0630c6528c50b&"
+        },
+        "stats": {
+          "attack": "12,176",
+          "health": "66,804",
+          "power": "28,030"
+        },
+        "signature_ability": {
+          "name": "MUDANÇA DE MARÉ",
+          "description": "[HAB 1]: **Uma vez por luta**, ao ENTRAR NA ASSISTÊNCIA, **iguale o valor do MEDIDOR DE BLOCKBUSTER mais alto do oponente** e inflija QUEBRA de ARM. por 15 s.\n\n[HAB 2]: **Uma vez por luta**, ao usar um BLOCKBUSTER CATEGORIA 3, **troque a porcentagem de VIDA com o oponente** e ganhe REGEN. FORTE por 15 s."
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Dama do Massacre (Indefensável/BB3), <:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Banho de Sangue",
+        "title_formatted": "> Banho de Sangue <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680680001601768/1000.png?ex=681df5f4&is=681ca474&hm=bd7c6ba429b8301a6e7ed398f28fa7158bf3b0a0bb7b84830bc58875af7c2782&"
+        },
+        "stats": {
+          "attack": "12,176",
+          "health": "66,804",
+          "power": "28,030"
+        },
+        "signature_ability": {
+          "name": "SOLO SANGUÍNEO",
+          "description": "[HAB 1]: **Se um dos lutadores usar um BLOCKBUSTER, ambos sofrerão SANGRAMENTO** por 10 segundos.\n\n[HAB 2]: 100% de chance de **converter todos os efeitos de SANGRAMENTO do próprio lutador em REGENERAÇÃO.**"
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria da Sekhmet, <:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      }
+    ],
+    "prata": [
+      {
+        "name": "Sombria",
+        "title_formatted": "> Sombria <:Trevas:1389703142848991364><:prata:1407839105169227957>",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680372496207984/1000.png?ex=681df5ab&is=681ca42b&hm=6b9363b8723f2d78e594b6354fdd21fd81350686633835063c46734d78f864df&"
+        },
+        "stats": {
+          "attack": "8,602",
+          "health": "75,936",
+          "power": "25,119"
+        },
+        "signature_ability": {
+          "name": "DEFLEXÃO ASTRAL",
+          "description": "[HAB 1]: Inflige DEFINHAR, MALDIÇÃO, QUIETUS ou FEITIÇO por 10 s **ao usar um BLOCKBUSTER ou GOLPE ESPECIAL.**\n\n[HAB 2]: Também ganha 1 camada de ESQUIVA por 10 s ** ao usar um BLOCKBUSTER.**"
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Exílio do Paraíso (Expulsão),, <:GolpeEspecial:1434999859768987748> Ascensão, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Amor Sangrento",
+        "title_formatted": "> Amor Sangrento <:Ar:1389703277532287066><:prata:1407839105169227957>",
+        "element": "Ar",
+        "color_hex": "#076314",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680406210150541/1000.png?ex=681df5b3&is=681ca433&hm=15fea9335a265eebc4f046c3b5090a35d1abaf6a9adb3df4102407284cd1bf4f&"
+        },
+        "stats": {
+          "attack": "10,138",
+          "health": "69,005",
+          "power": "25,569"
+        },
+        "signature_ability": {
+          "name": "ESQUEMA DE PIRÂMIDE",
+          "description": "[HAB 1]: Recupera 10% de VIDA **quando um dos lutadores usa um GOLPE ESPECIAL.**\n\n[HAB 2]: Recupera 15% do MEDIDOR DE BLOCKBUSTER **quando um dos lutadores usa um BLOCKBUSTER.**"
+        },
+        "marquee_ability": "**Juramento de Sangue** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Exílio do Paraíso (Expulsão) ou Explosão,, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Víbora Escarlate",
+        "title_formatted": "> Víbora Escarlate <:Fogo:1389703188525092934><:prata:1407839105169227957>",
+        "element": "Fogo",
+        "color_hex": "#ef2e2d",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680443253981395/1000.png?ex=681df5bc&is=681ca43c&hm=740e7496cb60ee6381e2bf4d1004e43d430d4ff000c67c016025b38b9f1cad42&"
+        },
+        "stats": {
+          "attack": "11,674",
+          "health": "62,074",
+          "power": "26,019"
+        },
+        "signature_ability": {
+          "name": "SANGUE NO OLHO",
+          "description": "[HAB 1]: Inflige SANGRAMENTO por 15 segundos em **ambos os lutadores ao entrar no Modo Sekhmet.**\n\n[HAB 2]: Ganhe FÚRIA por 15 segundos **ao sofrer um EFEITO NEGATIVO.**"
+        },
+        "marquee_ability": "Juramento de Sangue",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606>  Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Mergulho de Hórus, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      },
+      {
+        "name": "Sombruma",
+        "title_formatted": "> Sombruma <:Agua:1389703224210231437><:prata:1407839105169227957>",
+        "element": "Água",
+        "color_hex": "#0000ff",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707430268473434/Nightshade.png?ex=6909f7aa&is=6908a62a&hm=232fd64adf6907c92d4abf925c6c1dce667a8fdbacf60855bd91bb7ae3c541b7&"
+        },
+        "stats": {
+          "attack": "10,138",
+          "health": "69,005",
+          "power": "25,569"
+        },
+        "signature_ability": {
+          "name": "SANGUE NO OLHO",
+          "description": "[HAB 1]: Ganhe OLHO-MORTO por 6 s **quando um oponente sofrer um EF. NEGATIVO.**\n\n[HAB 2]: **Sekhmet causa 100% de dano extra**. Os oponentes derrotados pelos ataques de Sekhmet não podem ser revividos."
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606>  Fúria de Sekhmet, <:Blockbuster:1434999898385944606> Mordida da Sekhmet, <:GolpeEspecial:1434999859768987748> Espiral de Osíris, <:GolpeEspecial:1434999859768987748> Banir o Caos, <:GolpeEspecial:1434999859768987748> Peso de Anúbis"
+      }
+    ],
+    "bronze": [
+      {
+        "name": "Rainha do Nilo",
+        "title_formatted": "> Rainha do Nilo <:Agua:1389703224210231437><:bronze:1407839009664798801>",
+        "element": "Água",
+        "color_hex": "#1095d5",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680271665139944/1000.png?ex=681df593&is=681ca413&hm=fd069837fd543731545216f35070aed2b27e31e5624a0c1e76e6a8c30e547226&"
+        },
+        "stats": {
+          "attack": "9,428",
+          "health": "64,090",
+          "power": "23,762"
+        },
+        "signature_ability": {
+          "name": "BELEZA INTERIOR",
+          "description": "[HAB 1]: Inflige QUEBRA DE ARMADURA por 15 s **ao entrar no Modo Sekhmet.**\n\n[HAB 2]: Remova todos os EFEITOS NEGATIVOS e ganhe IMUNIDADE por 15 segundos **ao entrar no Modo Sekhmet.**"
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": ""
+      },
+      {
+        "name": "Decifrada",
+        "title_formatted": "> Decifrada <:Trevas:1389703142848991364><:bronze:1407839009664798801>",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018130068901918/icon-eliza.png?ex=68a7876c&is=68a635ec&hm=858672557427419f204d5132be1f2f58ea1e93aecd197b60003f4acad5d4badf&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680318452596746/1000.png?ex=681df59e&is=681ca41e&hm=f57f880732bf388ec4cda3b41de446d6671e7aca383230c42213ab89c586e50b&"
+        },
+        "stats": {
+          "attack": "7,968",
+          "health": "70,464",
+          "power": "23,292"
+        },
+        "signature_ability": {
+          "name": "INVEJA",
+          "description": "[HAB 1]: Inflige 25% de dano extra **a todos os aliados vivos do oponente.**\n\n[HAB 2]: Transfere 1 EFEITO POSITIVO do inimigo para você e inflige DEFINHAR por 10 segundos **quando você entrar no MODO SEKHMET.**"
+        },
+        "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": ""
+      }
+    ]
+  }
+}

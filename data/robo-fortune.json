@@ -1,0 +1,372 @@
+{
+  "character": "Robo-Fortune",
+  "version": "1.0",
+  "variants": {
+    "diamante": [
+      {
+        "name": "Overclocked",
+        "title_formatted": "> Overclocked <:Neutro:1389703364304175125><:diamante:1407839264779141140>",
+        "element": "Neutro",
+        "color_hex": "#ff80c0",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685280083411045/1000.png?ex=681dfa3d&is=681ca8bd&hm=7942f3af5a50d76b5d791fba6228df452860f6f3e9a962fbbef1d94d86b4bd83&"
+        },
+        "stats": {
+          "attack": "11,770",
+          "health": "71,117",
+          "power": "27,913"
+        },
+        "signature_ability": {
+          "name": "ESTOURO DE BUFFER",
+          "description": "[HAB 1]: Ganhe PRECISÃO e BARREIRA **após cada 3 s sem sofrer um golpe (incluindo golpes bloqueados).**\n\n[HAB 2]: **Todos os ataques são INDEFENSÁVEIS com 3 ou mais camadas de PRECISÃO,** e 50% do dano recebido é refletido **ao ter 3 ou mais camadas de BARREIRA.**"
+        },
+        "marquee_ability": [
+          "> VERIFICAÇÃO DE PING (Ataque)",
+          "> DDOS (Defesa)"
+        ],
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> ARMADILHA MAGNÉTICA, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Corte Rápido,, <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "X-Bot",
+        "title_formatted": "> X-Bot <:Ar:1389703277532287066><:diamante:1407839264779141140>",
+        "element": "Ar",
+        "color_hex": "#00ff00",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685302577725590/1000.png?ex=681dfa43&is=681ca8c3&hm=0b224c9f10c5bb15112a241e383004934651d41da16f1887de237faf9bcca750&"
+        },
+        "stats": {
+          "attack": "13,152",
+          "health": "80,045",
+          "power": "31,304"
+        },
+        "signature_ability": {
+          "name": "TIRO NA CABEÇA",
+          "description": "[HAB 1]: Ganhe PRECISÃO e inflija MARCA DA MORTE **após 1 seg enquanto estiver longe do oponente.**\n\n[HAB 2]: Ganhe também BARREIRA e cura de 5% de VIDA."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Replicada",
+        "title_formatted": "> Replicada <:Agua:1389703224210231437> <:diamante:1407839264779141140>",
+        "element": "Água",
+        "color_hex": "#0080ff",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685339277623458/1000.png?ex=681dfa4b&is=681ca8cb&hm=73f2736ec84c7a9997b4783930d51a074be4666395e3709dde6f1e10c84850ba&"
+        },
+        "stats": {
+          "attack": "10,004",
+          "health": "88,052",
+          "power": "29,162"
+        },
+        "signature_ability": {
+          "name": "REINICIALIZAÇÃO FORÇADA",
+          "description": "[HAB 1]: **O 1º GOLPE DE COMBO que acertar Robo-Fortune** converte 1 EF. POS. do oponente em um EF. NEG. aleatório e concede ARMADURA por 10 s cada.\n\n[HAB 2]: **Ao ser derrotada ou DETONADA, **reduz o MEDIDOR DE BLOCKBUSTER do oponente em 100%. **Uma vez por luta,** REVIVA com 25% de VIDA e ganhe REGENERAÇÃO e FÚRIA permanentes."
+        },
+        "marquee_ability": "DDOS",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita,, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Pulso de Prótons",
+        "title_formatted": "> Pulso de Prótons <:Luz:1389703315167907902><:diamante:1407839264779141140>",
+        "element": "Luz",
+        "color_hex": "#ffff00",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389701683113754647/1411354183298187405/2baf4a20-6023-4247-8eac-357e8c8cbc4c.webp?ex=68b45982&is=68b30802&hm=cca62b548a4b3b6ffd4155e323ab6d4cb92894e28bfb1022d5d680c29d416b09&"
+        },
+        "stats": {
+          "attack": "13,556",
+          "health": "72,058",
+          "power": "30,209"
+        },
+        "signature_ability": {
+          "name": "Energia Total",
+          "description": "[HAB 1]: 20% de chance ao GOLPEAR, aplica OSCILAÇÃO DE ENERGIA por 20 seg **em ambos os lutadores enquanto estiver perto do oponente.** Golpes NÃO-BLOCKBUSTER concedem 3% de medidor de BLOCKBUSTER.\n\n[HAB 2]: **Ao usar um BLOCKBUSTER**, ganha FÚRIA, REGENERAÇÃO ou ESQUIVA por 20 seg por cada camada de OSCILAÇÃO DE ENERGIA removida em ambos os lutadores."
+        },
+        "marquee_ability": "DDOS",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítica e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CURTO-CIRCUITO, <:Blockbuster:1434999898385944606> ARMADILHA MAGNÉTICA, , <:GolpeEspecial:1434999859768987748> CANHÃO DRAMÁTICO ALFA, <:GolpeEspecial:1434999859768987748> Raio de Teonita, , <:GolpeEspecial:1434999859768987748> Fidget Spin"
+      }
+    ],
+    "ouro": [
+      {
+        "name": "Zona de Buffer",
+        "title_formatted": "> Zona de Buffer <:Ar:1389703277532287066><:ouro:1407839155785826306>",
+        "element": "Ar",
+        "color_hex": "#00ff00",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685063124648099/1000.png?ex=681dfa09&is=681ca889&hm=b43a699748d1b79f56baf55bfe4201094639902742f703616c58e7cc21ae39f4&"
+        },
+        "stats": {
+          "attack": "9,293",
+          "health": "72,634",
+          "power": "25,285"
+        },
+        "signature_ability": {
+          "name": "PROTOCOLO DE INTRUSÃO",
+          "description": "[HAB 1]: **Quando Robo-Fortune ENTRA NA ASSISTÊNCIA,** remove todos os EF. POS. do oponente, inflige FEITIÇO e DESATIVA AS ASSISTÊNCIAS por 10 segundos cada.\n\n[HAB 2]: **Todos os ataques de RAIO e ENERGIA **têm 10% de chance de conceder BARREIRA e INABALÁVEL por 10 segundos cada **ao golpear. **Além disso, todos os EF. POS. ativos são transferidos da Robo-Fortune **para o lutador que estiver ENTRANDO NA ASSISTÊNCIA.**"
+        },
+        "marquee_ability": [
+          "> VERIFICAÇÃO DE PING (Ataque)",
+          "> DDOS (Defesa)"
+        ],
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Tela Azul",
+        "title_formatted": "> Tela Azul <:Agua:1389703224210231437> <:ouro:1407839155785826306>",
+        "element": "Água",
+        "color_hex": "#0080ff",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685096050200686/1000.png?ex=681dfa11&is=681ca891&hm=b855fc74b40c7d7fc7934b528d315bf3bb1ecfb9be983bcf22ef1644aea19da6&"
+        },
+        "stats": {
+          "attack": "8,160",
+          "health": "81,773",
+          "power": "25,746"
+        },
+        "signature_ability": {
+          "name": "ERRO FATAL DO SISTEMA",
+          "description": "[HAB 1]: Ganhe ARMADURA a cada 5 segundos. A ARMADURA **será removida ao ser NOCAUTEADA.**\n\n[HAB 2]: **Quando derrotada, **detona na mesma hora e inflige 50% de dano extra **para cada camada de ARMADURA aplicada à Robo-Fortune.**"
+        },
+        "marquee_ability": "DDOS",
+        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita,, <:GolpeEspecial:1434999859768987748> Explosão"
+      },
+      {
+        "name": "Terror Byte",
+        "title_formatted": "> Terror Byte <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
+        "element": "Trevas",
+        "color_hex": "#590059",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685152132104323/1000.png?ex=681dfa1f&is=681ca89f&hm=bc156a78184fc05049e8900c1c984ecfe38097d713a7254c21514fa0a339c4ab&"
+        },
+        "stats": {
+          "attack": "10,925",
+          "health": "66,048",
+          "power": "25,917"
+        },
+        "signature_ability": {
+          "name": "MALWARE",
+          "description": "[HAB 1]: **GOLPES CABEÇONES (inclui golpes bloqueados)** infligem POLARIDADE INVERSA e DESABILITAM GOLPES ESPECIAIS por 15 segundos cada.\n\n[HAB 2]: **Enquanto estiver perto de um oponente sofrendo um EFEITO NEGATIVO**, ambos os lutadores recebem 2% de VIDA por segundo."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CURTO-CIRCUITO, <:Blockbuster:1434999898385944606> ARMADILHA MAGNÉTICA, , <:Blockbuster:1434999898385944606> BATERIA DE ASSALTO, <:GolpeEspecial:1434999859768987748> Rotação Perigosa!, , <:GolpeEspecial:1434999859768987748> Fidget Spin"
+      },
+      {
+        "name": "Persona Grata",
+        "title_formatted": "> Persona Grata <:Luz:1389703315167907902> <:ouro:1407839155785826306>",
+        "element": "Luz",
+        "color_hex": "#ffff00",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685217789743326/1000.png?ex=681dfa2e&is=681ca8ae&hm=a5ee584f7b0c4b462561a0640fdcf1f9f4bf21cd8ee1e2c9d62d30adab0e5c72&"
+        },
+        "stats": {
+          "attack": "11,002",
+          "health": "66,912",
+          "power": "26,178"
+        },
+        "signature_ability": {
+          "name": "CIBERPROTEÇÃO",
+          "description": "[HAB 1]: **A cada 20 s que a Robo-Fortune está viva,** ela ganha 5 camadas de PRECISÃO e 5 de FÚRIA por 5 segundos. Os aliados dela também ganham 1 camadas de BÊNÇÃO e BARREIRA.\n\n[HAB 2]: 100% de chance dos **ATAQUES DE ARRANCADA** serem INDEFENSÁVEIS **ao se beneficiar de FÚRIA.**"
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> ARMADILHA MAGNÉTICA, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Corte Rápido,, <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Caça-cabeças",
+        "title_formatted": "> Caça-cabeças <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
+        "element": "Fogo",
+        "color_hex": "#ff0000",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685249817575495/1000.png?ex=681dfa36&is=681ca8b6&hm=d70ffa092080f4092c7b69976bd6e0fc8238dcf3118220ca13c5e759ae4c6952&"
+        },
+        "stats": {
+          "attack": "14,036",
+          "health": "52,032",
+          "power": "26,832"
+        },
+        "signature_ability": {
+          "name": "LASER ZERO",
+          "description": "[HAB 1]: Ganhe 1 camada de PRECISÃO **a cada 0.5 segundos ao BLOQUEAR sem ser golpeada.**\n\n[HAB 2]: **Com ao menos 3 camadas de PRECISÃO, todos os ataques de RAIO e ENERGIA são INDEFENSÁVEIS** e infligem OSC. ENERGIA por 15 s."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Tritura-Números",
+        "title_formatted": "> Tritura-Números <:Trevas:1389703142848991364> <:ouro:1407839155785826306>",
+        "element": "Trevas",
+        "color_hex": "#800080",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685123212378297/1000.png?ex=681dfa18&is=681ca898&hm=c13e5073a383e65397c5013117df277937d1b4ad53191e03f0a0bea1bbc6a5b6&"
+        },
+        "stats": {
+          "attack": "12,212",
+          "health": "57,812",
+          "power": "25,015"
+        },
+        "signature_ability": {
+          "name": "PODER DOS CINCO",
+          "description": "[HAB 1]: 50% de chance de ganhar 1 cam. de BENÇÃO por 20 s** a cada 5 GOLPES COMBO.**\n\n[HAB 2]: **Ao atingir 5 cam. de BÊNÇÃO,** remova todas as BÊNÇÃOS e inflija 5 cam. de QUEBRA DE GUARDA por 10 s."
+        },
+        "marquee_ability": "DDOS",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CURTO-CIRCUITO, <:Blockbuster:1434999898385944606> ARMADILHA MAGNÉTICA, , <:GolpeEspecial:1434999859768987748> CANHÃO DRAMÁTICO ALFA, <:GolpeEspecial:1434999859768987748> Raio de Teonita, , <:GolpeEspecial:1434999859768987748> Fidget Spin"
+      }
+    ],
+    "prata": [
+      {
+        "name": "Bombardeiro Azul",
+        "title_formatted": "> Bombardeiro Azul <:Agua:1389703224210231437> <:prata:1407839105169227957>",
+        "element": "Água",
+        "color_hex": "#000000",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684886360162394/1000.png?ex=681df9df&is=681ca85f&hm=a98a535be36874dac4f6349d32621fe3ff6404639ef1242489598281447e22ec&"
+        },
+        "stats": {
+          "attack": "9,620",
+          "health": "59,079",
+          "power": "23,002"
+        },
+        "signature_ability": {
+          "name": "MEGA BUSTER",
+          "description": "[HAB 1]: **Ao GOLPEAR, **todos os ataques de RAIO e ENERGIA têm 25% de chance de infligir QUEBRA DE ARMADURA por 15 segundos.\n\n[HAB 2]: Recupere 25% de VIDA e ganhe 5 camadas de BARREIRA **ao usar um BLOCKBUSTER de CATEGORIA 3.**"
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Nyanotec",
+        "title_formatted": "> Nyanotec <:Fogo:1389703188525092934><:prata:1407839105169227957>",
+        "element": "Fogo",
+        "color_hex": "#ff0000",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684918073299004/1000.png?ex=681df9e7&is=681ca867&hm=023dedda2e10bee1ab576b838b6c5d643a468eb582b16fa58694d8953a26098e&"
+        },
+        "stats": {
+          "attack": "8,602",
+          "health": "67,469",
+          "power": "23,452"
+        },
+        "signature_ability": {
+          "name": "FIREWALL",
+          "description": "[HAB 1]: Ganhe BARREIRA por 10 segundos **ao lançar um CABEÇONE.**\n\n[HAB 2]: **Quanto estiver com BARREIRA e sofrer um EF. NEG, **ganhe 100% de chance de converter imediatamente esse EF. NEG em FÚRIA."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Protetor Vetor",
+        "title_formatted": "> Protetor Vetor <:Ar:1389703277532287066><:prata:1407839105169227957>",
+        "element": "Ar",
+        "color_hex": "#80ff00",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684950277160970/1000.png?ex=681df9ef&is=681ca86f&hm=7291220639e72eba864a70df81499260adfa463f6e8a84bd8ba375846ebb163c&"
+        },
+        "stats": {
+          "attack": "8,909",
+          "health": "69,005",
+          "power": "24,117"
+        },
+        "signature_ability": {
+          "name": "Metalmorfose",
+          "description": "[HAB 1]: Ganhe ARMADURA por 10 segundos **quando qualquer lutador usar um GOLPE ESPECIAL.**\n\n[HAB 2]:** O uso de um BLOCKBUSTER** converte todas as camadas de ARMADURA em MIASMA por 10 segundos."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "Ronrominador",
+        "title_formatted": "> Ronrominador <:Trevas:1389703142848991364><:prata:1407839105169227957>",
+        "element": "Trevas",
+        "color_hex": "#800080",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685033454145688/1000.png?ex=681dfa02&is=681ca882&hm=ac6e65f5b73950aee2ec485a9ba61e94f894a46c72c21bcda5cc41686323442d&"
+        },
+        "stats": {
+          "attack": "11,674",
+          "health": "55,181",
+          "power": "24,661"
+        },
+        "signature_ability": {
+          "name": "APRENDIZADO DE MÁQUINA",
+          "description": "[HAB 1]: 15% de chance de ganhar 1 cam. de PRECISÃO e infligir MARCA DA MORTE por 10 s **se o opon. BLOQUEAR um GOLPE.**\n\n[HAB 2]: **Cada CRÍTICO acertado aumenta permanentemente o DANO** em 3%."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítica e Dano Crítico",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA, , <:Blockbuster:1434999898385944606> ARMADILHA MAGNÉTICA,, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Teonita, , <:GolpeEspecial:1434999859768987748> Fidget Spin"
+      }
+    ],
+    "bronze": [
+      {
+        "name": "Protótipo",
+        "title_formatted": "> Protótipo <:Ar:1389703277532287066><:bronze:1407839009664798801>",
+        "element": "Ar",
+        "color_hex": "#01fe07",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684835269345391/latest.png?ex=681df9d3&is=681ca853&hm=313738ced47d64c3fb1b108b4a76e9271b3e7c1bcf943b7a114aa21d0e294403&"
+        },
+        "stats": {
+          "attack": "10,522",
+          "health": "49,805",
+          "power": "22,242"
+        },
+        "signature_ability": {
+          "name": "CHOQUE DO SISTEMA",
+          "description": "[HAB 1]: **GOLPES DE BLOCKBUSTER** têm 25% de chance de infligir OSCILAÇÃO DE ENERGIA por 10 segundos.\n\n[HAB 2]: **Ao usar um BLOCKBUSTER,** ganhe 25% no MEDIDOR DE BLOCKBUSTER."
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Ganho Medidor",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA, , <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA,, <:Blockbuster:1434999898385944606> BATERIA DE ASSALTO, , <:GolpeEspecial:1434999859768987748> Raio de Calor,, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      },
+      {
+        "name": "M-1AU",
+        "title_formatted": "> M-1AU <:Luz:1389703315167907902> <:bronze:1407839009664798801>",
+        "element": "Luz",
+        "color_hex": "#ffff00",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018176873005156/icon-robo-fortune.png?ex=68a78777&is=68a635f7&hm=71d59fa796c7bb3655e29b6e4763296a7d8f85f931466d53fd628dfde12fa772&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684853531345086/1000.png?ex=681df9d7&is=681ca857&hm=0b31455f05c3c2c85140cc4aa8688ade7691b6afa4c6dd249d6561c0bb5c95f2&"
+        },
+        "stats": {
+          "attack": "8,237",
+          "health": "64,090",
+          "power": "22,355"
+        },
+        "signature_ability": {
+          "name": "MUITO, MUITO DISTANTE",
+          "description": "[HAB 1]: Causa 100% de dano extra **enquanto a Robo-Fortune está longe do oponente.**\n\n[HAB 2]: Ganha INVENCÍVEL por 5 segundos depois de 3 segundos **longe do oponente.**"
+        },
+        "marquee_ability": "VERIFICAÇÃO DE PING",
+        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ÔMEGA **BB3**, <:Blockbuster:1434999898385944606> CANHÃO DRAMÁTICO ALFA, , <:GolpeEspecial:1434999859768987748> Raio de Calor, <:GolpeEspecial:1434999859768987748> Raio de Teonita, <:GolpeEspecial:1434999859768987748> Raio de Teonita"
+      }
+    ]
+  }
+}
