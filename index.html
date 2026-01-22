@@ -1,0 +1,175 @@
+<!-- c:\Users\lifiz\Documents\VS Code\Novo Começo\index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skullgirls Mobile 2026 - Palácio Branco</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte opcional para estilo -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SGM 2026</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')">Início</a></li>
+            <li><a href="#" onclick="showSection('characters')">Personagens</a></li>
+            <li><a href="#" onclick="showSection('stats')">Estatísticas</a></li>
+            <li><a href="#" onclick="showSection('catalysts')">Catalisadores</a></li>
+            <li><a href="#" onclick="showSection('tierlist')">Tier List</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content">
+        
+        <!-- Seção: Home -->
+        <section id="home" class="active-section">
+            <div class="hero">
+                <h1>Bem-vindo ao Guia SGM 2026</h1>
+                <p>Sua fonte definitiva de builds, estatísticas e estratégias.</p>
+                <button class="cta-button" onclick="showSection('characters')">Ver Personagens</button>
+            </div>
+            
+            <div class="info-cards">
+                <div class="card-link">
+                    <h3>Comunidade Oficial</h3>
+                    <p>Junte-se ao servidor oficial do jogo.</p>
+                    <a href="https://discord.com/invite/skullgirlsmobile" target="_blank">Discord Oficial</a>
+                </div>
+                <div class="card-link">
+                    <h3>Contribua</h3>
+                    <p>Ajude a melhorar o projeto no GitHub.</p>
+                    <a href="https://github.com/bot-do-jao/palacio-branco-entreprises/tree/main" target="_blank">Repositório</a>
+                </div>
+                <div class="card-link">
+                    <h3>Créditos</h3>
+                    <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro (Bot do Jão)</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Personagens (Lista de Seleção) -->
+        <section id="characters" class="hidden-section">
+            <h2>Selecione um Personagem</h2>
+            <div id="character-grid" class="character-grid">
+                <!-- Preenchido via JS -->
+            </div>
+        </section>
+
+        <!-- Seção: Detalhes do Personagem (Variantes) -->
+        <section id="character-detail" class="hidden-section">
+            <button class="back-button" onclick="showSection('characters')">← Voltar</button>
+            <h2 id="detail-char-name">Nome do Personagem</h2>
+            
+            <!-- Filtros de Raridade -->
+            <div class="rarity-tabs">
+                <button class="rarity-btn diamante" onclick="filterRarity('diamante')">Diamante</button>
+                <button class="rarity-btn ouro" onclick="filterRarity('ouro')">Ouro</button>
+                <button class="rarity-btn prata" onclick="filterRarity('prata')">Prata</button>
+                <button class="rarity-btn bronze" onclick="filterRarity('bronze')">Bronze</button>
+            </div>
+
+            <!-- Filtros Gerais -->
+            <div class="filters">
+                <select id="sort-select" onchange="sortVariants()">
+                    <option value="score">Pontuação (Maior)</option>
+                    <option value="atk">Ataque (Maior)</option>
+                    <option value="hp">Vida (Maior)</option>
+                    <option value="name">Nome (A-Z)</option>
+                </select>
+            </div>
+
+            <div id="variants-container" class="variants-container">
+                <!-- Cards das variantes entram aqui -->
+            </div>
+        </section>
+
+        <!-- Seção: Estatísticas -->
+        <section id="stats" class="hidden-section">
+            <h2>Calculadora de Recursos</h2>
+            <p class="disclaimer-text">Nota: Todos os valores são estimativas aproximadas baseadas em dados da comunidade.</p>
+
+            <div class="stats-container">
+                <div class="calculator-box">
+                    <h3>Simulador de Ganhos Mensais</h3>
+                    <label><input type="checkbox" id="calc-pf"> Disputas Premiadas (Todas as faixas)</label>
+                    <label><input type="checkbox" id="calc-rift"> Reinos (Rifts)</label>
+                    <label>
+                        Passe de Batalha:
+                        <select id="calc-pass">
+                            <option value="free">Grátis</option>
+                            <option value="premium">Premium</option>
+                            <option value="premium_plus">Premium+</option>
+                        </select>
+                    </label>
+                    <label>
+                        Guilda:
+                        <select id="calc-guild">
+                            <option value="none">Nenhuma</option>
+                            <option value="top100">Top 100</option>
+                        </select>
+                    </label>
+                    <button onclick="calculateEarnings()">Calcular Ganhos</button>
+                    <div id="earnings-result" class="result-box">
+                        <p>Canopy Coins: 0</p>
+                        <p>Teonita: 0</p>
+                    </div>
+                </div>
+
+                <div class="calculator-box">
+                    <h3>Custo de Evolução</h3>
+                    <label>
+                        Evoluir Golpe (Nível):
+                        <select id="move-level">
+                            <option value="1-15">1 ao 15</option>
+                            <option value="1-3">1 ao 3</option>
+                            <option value="12-15">12 ao 15</option>
+                        </select>
+                    </label>
+                    <label>
+                        Evolução de Raridade:
+                        <select id="rarity-evo">
+                            <option value="gold-dia">Ouro -> Diamante</option>
+                            <option value="silver-gold">Prata -> Ouro</option>
+                            <option value="bronze-silver">Bronze -> Prata</option>
+                        </select>
+                    </label>
+                    <button onclick="calculateCosts()">Ver Custos</button>
+                    <div id="costs-result" class="result-box">
+                        <p>Custo Estimado: -</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Catalisadores -->
+        <section id="catalysts" class="hidden-section">
+            <h2>Catalisadores</h2>
+            <p>Em construção...</p>
+        </section>
+
+        <!-- Seção: Tier List -->
+        <section id="tierlist" class="hidden-section">
+            <h2>Tier List</h2>
+            <p>Tier Lists em breve...</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Projeto de Fã - Não afiliado à Hidden Variable ou Autumn Games.</p>
+            <p>Encontrou um erro? Reporte no servidor <a href="https://discord.gg/nsGXabuCSe" target="_blank">Palácio Branco</a>.</p>
+            <p class="credits-mini">Feito por Lifi ツ e João Pedro (Bot do Jão)</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
