@@ -1,13 +1,15 @@
-// c:\Users\lifiz\Documents\VS Code\Novo Começo\script.js
+// =====================================================
+// SKULLGIRLS MOBILE WIKI - PALÁCIO BRANCO
+// Main JavaScript Application
+// =====================================================
 
-// Lista de arquivos JSON para carregar. 
-// Para adicionar um novo personagem, basta colocar o arquivo na pasta 'data' e adicionar o nome aqui.
+// ========== CONFIGURATION ==========
 const CHARACTER_FILES = [
     'annie.json',
     'beowulf.json',
     'big-band.json',
-    'cerebella.json',
     'black-dahlia.json',
+    'cerebella.json',
     'double.json',
     'eliza.json',
     'filia.json',
@@ -23,155 +25,208 @@ const CHARACTER_FILES = [
     'valentine.json'
 ];
 
-// Armazenamento global dos dados
+// Character icon mapping for local images
+const CHARACTER_ICONS = {
+    'annie': 'img/icones/Annie_Icon.png',
+    'beowulf': 'img/icones/Beowulf_Icon.png',
+    'big-band': 'img/icones/BigBand_Icon.png',
+    'black-dahlia': 'img/icones/BlackDahlia_Icon.png',
+    'cerebella': 'img/icones/Cerebella_Icon.png',
+    'double': 'img/icones/Double_Icon.png',
+    'eliza': 'img/icones/Eliza_Icon.png',
+    'filia': 'img/icones/Filia_Icon.png',
+    'fukua': 'img/icones/Fukua_Icon.png',
+    'marie': 'img/icones/Marie_Icon.png',
+    'ms-fortune': 'img/icones/MsFortune_Icon.png',
+    'painwheel': 'img/icones/Painwheel_Icon.png',
+    'parasoul': 'img/icones/Parasoul_Icon.png',
+    'peacock': 'img/icones/Peacock_Icon.png',
+    'robo-fortune': 'img/icones/RoboFortune_Icon.png',
+    'squigly': 'img/icones/Squigly_Icon.png',
+    'umbrella': 'img/icones/Umbrella_Icon.png',
+    'valentine': 'img/icones/Valentine_Icon.png'
+};
+
+// Element mapping
+const ELEMENT_MAP = {
+    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo' },
+    'Água': { class: 'water', icon: '💧', key: 'agua' },
+    'Ar': { class: 'wind', icon: '🌪️', key: 'ar' },
+    'Luz': { class: 'light', icon: '☀️', key: 'luz' },
+    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas' },
+    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro' }
+};
+
+// ========== GLOBAL STATE ==========
 let allCharactersData = {};
 let currentCharacter = null;
-let currentRarityFilter = 'diamante'; // Padrão
+let currentRarityFilter = 'diamante';
+let statisticsData = null;
+let catalystsData = null;
 
-// --- Inicialização ---
-let homeSectionId = 'home'; // ID padrão da seção inicial
-
+// ========== INITIALIZATION ==========
 document.addEventListener('DOMContentLoaded', () => {
-    // Tenta identificar a seção inicial (onde está o grid)
-    const grid = document.getElementById('character-grid');
-    if (grid) {
-        const section = grid.closest('section');
-        if (section) homeSectionId = section.id;
-    }
-
+    // Load all data
     loadAllCharacterData();
-    loadStatistics();
+    loadStatisticsData();
     loadCatalystsData();
 
-    // Gerencia navegação (Voltar/Avançar do navegador)
+    // Generate test tier list (after characters load)
+    generateTestTierList();
+
+    // Setup lazy loading observer
+    setupLazyLoading();
+
+
+    // Handle browser back/forward
     window.addEventListener('popstate', (event) => {
-        if (event.state && event.state.character) {
-            openCharacterDetails(event.state.character, false);
+        if (event.state && event.state.section) {
+            showSection(event.state.section, false);
+            if (event.state.character) {
+                openCharacterDetails(event.state.character, false);
+            }
         } else {
-            showSection(homeSectionId);
+            showSection('home', false);
         }
     });
 });
 
-// --- Navegação ---
-function showSection(sectionId) {
-    // Esconde todas as seções
-    document.querySelectorAll('main > section').forEach(sec => {
-        sec.classList.remove('active-section');
-        sec.classList.add('hidden-section');
+// ========== NAVIGATION ==========
+function showSection(sectionId, updateHistory = true) {
+    // Hide all sections
+    document.querySelectorAll('main > section').forEach(section => {
+        section.classList.remove('active-section');
+        section.classList.add('hidden-section');
     });
-    
-    // Mostra a desejada
-    const target = document.getElementById(sectionId);
-    target.classList.remove('hidden-section');
-    target.classList.add('active-section');
 
-    // Fecha menu mobile se aberto
-    document.querySelector('.nav-links').classList.remove('active');
+    // Show target section
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.remove('hidden-section');
+        targetSection.classList.add('active-section');
+    }
+
+    // Update nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+    });
+    const activeLink = document.querySelector(`.nav-links a[onclick*="'${sectionId}'"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+
+    // Close mobile menu
+    document.getElementById('navLinks').classList.remove('active');
+
+    // Update history
+    if (updateHistory) {
+        history.pushState({ section: sectionId }, '', `#${sectionId}`);
+    }
+
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
+    document.getElementById('navLinks').classList.toggle('active');
 }
 
-// --- Carregamento de Dados ---
+// ========== CHARACTER DATA LOADING ==========
 async function loadAllCharacterData() {
     const grid = document.getElementById('character-grid');
-    grid.innerHTML = '<p>Carregando personagens...</p>';
 
     try {
-        const promises = CHARACTER_FILES.map(file => 
-            fetch(`data/${file}`).then(response => {
-                if (!response.ok) throw new Error(`Erro ao carregar ${file}`);
-                return response.json();
-            }).catch(err => {
-                console.warn(`Arquivo não encontrado ou erro: ${file}`, err);
-                return null;
-            })
+        const promises = CHARACTER_FILES.map(file =>
+            fetch(`data/${file}`)
+                .then(res => res.json())
+                .then(data => {
+                    const charKey = file.replace('.json', '').toLowerCase();
+                    allCharactersData[charKey] = data;
+                    return data;
+                })
+                .catch(err => {
+                    console.warn(`Error loading ${file}:`, err);
+                    return null;
+                })
         );
 
-        const results = await Promise.all(promises);
-        
-        // Limpa e processa
-        grid.innerHTML = '';
-        results.forEach(charData => {
-            if (charData) {
-                allCharactersData[charData.character] = charData;
-                createCharacterCard(charData);
-            }
-        });
-
-        // Verifica se há um personagem na URL (Deep Linking) ao carregar
-        const hash = decodeURIComponent(window.location.hash.substring(1));
-        if (hash && allCharactersData[hash]) {
-            openCharacterDetails(hash, false);
-        }
+        await Promise.all(promises);
+        renderCharacterGrid();
 
     } catch (error) {
-        grid.innerHTML = '<p>Erro ao carregar dados. Certifique-se de rodar em um servidor local.</p>';
-        console.error(error);
+        console.error('Error loading character data:', error);
+        grid.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Erro ao carregar personagens.</p>';
     }
 }
 
-function createCharacterCard(charData) {
+function renderCharacterGrid() {
     const grid = document.getElementById('character-grid');
+    grid.innerHTML = '';
+
+    // Sort characters alphabetically
+    const sortedChars = Object.entries(allCharactersData)
+        .filter(([key, data]) => data && data.character)
+        .sort((a, b) => a[1].character.localeCompare(b[1].character));
+
+    sortedChars.forEach(([charKey, charData], index) => {
+        const card = createCharacterCard(charKey, charData, index);
+        grid.appendChild(card);
+    });
+}
+
+function createCharacterCard(charKey, charData, index) {
     const card = document.createElement('div');
-    card.className = 'char-select-card';
-    
-    // Define o caminho da imagem local padrão (Nome_0.png)
-    // Normaliza o nome da pasta: minúsculo, substitui pontos e espaços por hífens
-    const folderName = charData.character.toLowerCase().replace(/[\.\s]/g, '-');
-    
-    // Normaliza o nome do arquivo: substitui espaços por underscores e ajusta Ms. Fortune
-    let fileName = charData.character.replace(/\s/g, '_');
-    if (fileName === 'Ms.Fortune') fileName = 'Ms._Fortune';
-    
-    const localIconUrl = `img/${folderName}/${fileName}_0.png`;
-    
-    // Define um ícone de fallback (primeira variante encontrada) caso a imagem local não exista
-    let fallbackIconUrl = 'images/default_icon.png';
-    const rarities = ['diamante', 'ouro', 'prata', 'bronze'];
-    for (let r of rarities) {
-        if (charData.variants[r] && charData.variants[r][0] && charData.variants[r][0].images) {
-            fallbackIconUrl = charData.variants[r][0].images.icon_url;
-            break;
-        }
-    }
+    card.className = 'character-card animate-in';
+    card.style.animationDelay = `${index * 0.03}s`;
+
+    // Get local icon
+    const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.png`;
 
     card.innerHTML = `
-        <img src="${localIconUrl}" 
-             alt="${charData.character}" 
-             class="char-icon" 
-             loading="lazy"
-             onerror="this.onerror=null; this.src='${fallbackIconUrl}';">
-        <h3>${charData.character}</h3>
+        <img src="${iconPath}" alt="${charData.character}" loading="lazy" 
+             onerror="this.src='img/icones/Annie_Icon.png'">
+        <div class="name">${charData.character.toUpperCase()}</div>
     `;
-    
-    card.onclick = () => openCharacterDetails(charData.character);
-    grid.appendChild(card);
+
+    card.onclick = () => openCharacterDetails(charKey);
+
+    return card;
 }
 
-// --- Detalhes do Personagem ---
-function openCharacterDetails(charName, updateHistory = true) {
-    currentCharacter = allCharactersData[charName];
-    if (!currentCharacter) return;
+// ========== CHARACTER DETAILS ==========
+function openCharacterDetails(charKey, updateHistory = true) {
+    const charData = allCharactersData[charKey];
+    if (!charData) return;
 
-    document.getElementById('detail-char-name').innerText = currentCharacter.character;
-    
-    // Reseta filtro para Diamante ou a maior raridade disponível
-    currentRarityFilter = 'diamante';
-    if (!currentCharacter.variants.diamante) currentRarityFilter = 'ouro';
-    
-    renderVariants();
-    showSection('character-detail');
+    currentCharacter = charKey;
 
+    // Update title
+    document.getElementById('detail-char-name').innerHTML = `
+        <span style="margin-right: 10px;">⚔️</span> ${charData.character}
+    `;
+
+    // Reset to diamante filter
+    filterRarity('diamante');
+
+    // Show detail section
+    showSection('character-detail', false);
+
+    // Update history
     if (updateHistory) {
-        history.pushState({ character: charName }, '', `#${charName}`);
+        history.pushState({ section: 'character-detail', character: charKey }, '', `#${charKey}`);
     }
 }
 
 function filterRarity(rarity) {
     currentRarityFilter = rarity;
+
+    // Update active button
+    document.querySelectorAll('.rarity-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`.rarity-btn.${rarity}`).classList.add('active');
+
+    // Render variants
     renderVariants();
 }
 
@@ -181,306 +236,503 @@ function sortVariants() {
 
 function renderVariants() {
     const container = document.getElementById('variants-container');
-    container.innerHTML = '';
+    const charData = allCharactersData[currentCharacter];
 
-    if (!currentCharacter || !currentCharacter.variants[currentRarityFilter]) {
-        container.innerHTML = '<p>Nenhuma variante encontrada para esta raridade.</p>';
+    if (!charData || !charData.variants) {
+        container.innerHTML = '<p style="color: var(--text-muted);">Nenhuma variante encontrada.</p>';
         return;
     }
 
-    let variants = [...currentCharacter.variants[currentRarityFilter]];
-    const sortType = document.getElementById('sort-select').value;
+    let variants = charData.variants[currentRarityFilter] || [];
 
-    // Ordenação
-    variants.sort((a, b) => {
-        if (sortType === 'name') return a.name.localeCompare(b.name);
-        
-        // Remove vírgulas para converter string numérica (ex: "10,000" -> 10000)
-        const valA = parseInt(a.stats[getStatKey(sortType)].replace(/,/g, '')) || 0;
-        const valB = parseInt(b.stats[getStatKey(sortType)].replace(/,/g, '')) || 0;
-        return valB - valA; // Decrescente
-    });
-
-    variants.forEach(variant => {
-        const card = document.createElement('div');
-        card.className = 'variant-card';
-        card.style.borderLeftColor = variant.color_hex || '#fff';
-
-        // Formata texto com markdown simples do discord para HTML
-        let rawDesc = variant.signature_ability.description;
-        // Remove [HAB X]: e asteriscos
-        rawDesc = rawDesc.replace(/\[HAB \d+\]:\s*/g, '').replace(/\*\*/g, '');
-        
-        // Divide em partes baseado em quebra de linha dupla e gera o HTML dos retângulos
-        const abilityParts = rawDesc.split(/\n\n+/).filter(p => p.trim().length > 0);
-        const abilityHtml = abilityParts.map(part => `<div class="ability-part">${formatText(part)}</div>`).join('');
-
-        const arsenal = formatText(variant.recommended_arsenal);
-
-        // Define o ícone do elemento
-        let elementIcon = 'img/icones/ElementalIconNeutral.png';
-        const elLower = variant.element.toLowerCase();
-        if (elLower === 'fogo') elementIcon = 'img/icones/ElementalIconFire.png';
-        else if (elLower === 'água' || elLower === 'agua') elementIcon = 'img/icones/ElementalIconWater.png';
-        else if (elLower === 'ar') elementIcon = 'img/icones/ElementalIconWind.png';
-        else if (elLower === 'luz') elementIcon = 'img/icones/ElementalIconLight.png';
-        // Trevas e Neutro usam o ícone Neutro
-
-        card.innerHTML = `
-            <div class="variant-header">
-                <img src="${variant.images.portrait_url}" alt="${variant.name}" class="variant-portrait" loading="lazy">
-                <div class="variant-info">
-                    <h3>${variant.name} <span style="color:${variant.color_hex}">●</span></h3>
-                    <p>${variant.element} | ${currentRarityFilter.toUpperCase()}</p>
-                    <div class="variant-stats">
-                        <span><img src="img/icones/AttackIcon.png" alt="ATQ" style="width:16px; vertical-align:middle; margin-right:4px;">${variant.stats.attack}</span>
-                        <span><img src="img/icones/HealthIcon.png" alt="HP" style="width:16px; vertical-align:middle; margin-right:4px;">${variant.stats.health}</span>
-                        <span><img src="${elementIcon}" alt="${variant.element}" style="width:16px; vertical-align:middle; margin-right:4px;">${variant.stats.power}</span>
-                    </div>
-                </div>
-            </div>
-            <div class="ability-box">
-                <div class="ability-title">${variant.signature_ability.name}</div>
-                ${abilityHtml}
-            </div>
-            <div class="build-box">
-                <p><strong>Superior Recomendada:</strong> ${Array.isArray(variant.marquee_ability) ? variant.marquee_ability.join(' / ') : variant.marquee_ability}</p>
-                <p><strong>Build Recomendada:</strong> ${variant.recommended_build}</p>
-                <p><strong>Arsenal Recomendado:</strong> ${arsenal}</p>
-            </div>
-        `;
-        container.appendChild(card);
-    });
-}
-
-function getStatKey(sortType) {
-    if (sortType === 'score') return 'power';
-    if (sortType === 'atk') return 'attack';
-    if (sortType === 'hp') return 'health';
-    return 'power';
-}
-
-// Função auxiliar para converter formatação básica (negrito **texto**) e emojis do discord
-function formatText(text) {
-    if (!text) return '';
-    let formatted = text;
-
-    // Mapeamento de imagens de golpes (Annie)
-    const moveImages = {
-        'Marcas de Fogo': 'img/annie/Annie_14.png',
-        'Estilingue Gravitacional': 'img/annie/Annie_28.png',
-        'Pilar da Destruição': 'img/annie/Annie_22.png',
-        'Corte Crescente': 'img/annie/Annie_26.png'
-    };
-    for (const [name, path] of Object.entries(moveImages)) {
-        formatted = formatted.split(name).join(`<img src="${path}" alt="${name}" style="height: 1.2em; vertical-align: middle; margin-right: 4px;"> ${name}`);
-    }
-
-    // Negrito
-    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    // Quebra de linha
-    formatted = formatted.replace(/\n/g, '<br>');
-    // Emojis customizados do discord <...>
-    formatted = formatted.replace(/<:(.*?):\d+>/g, '[$1]'); 
-    // HTML entities decode (caso venha &gt;)
-    const txt = document.createElement("textarea");
-    txt.innerHTML = formatted;
-    return txt.value;
-}
-
-// --- Estatísticas ---
-async function loadStatistics() {
-    try {
-        const response = await fetch('data/estatisticas.json');
-        if (!response.ok) throw new Error('Erro ao carregar estatísticas');
-        const data = await response.json();
-        renderStatistics(data);
-    } catch (error) {
-        console.error('Erro ao carregar estatísticas:', error);
-    }
-}
-
-function renderStatistics(data) {
-    // Tenta encontrar o container de estatísticas
-    let container = document.querySelector('.stats-container');
-    if (!container) container = document.getElementById('stats');
-    if (!container) container = document.getElementById('statistics');
-    
-    // Fallback: tenta achar onde estava a calculadora antiga
-    if (!container) {
-        const oldCalc = document.getElementById('earnings-result');
-        if (oldCalc) container = oldCalc.closest('section');
-    }
-
-    if (!container) return;
-
-    // Limpa conteúdo antigo
-    container.innerHTML = '<h2 style="text-align:center; margin-bottom:20px;">Estatísticas e Cenários</h2>';
-    
-    const wrapper = document.createElement('div');
-    wrapper.style.display = 'flex';
-    wrapper.style.flexDirection = 'column';
-    wrapper.style.gap = '20px';
-
-    // Cenários
-    if (data.scenarios) {
-        data.scenarios.forEach(scenario => {
-            const card = document.createElement('div');
-            card.className = 'calculator-box'; // Reutiliza estilo
-            card.style.overflowX = 'auto';
-            
-            let rows = scenario.items.map(item => `
-                <tr>
-                    <td style="padding:8px; border-bottom:1px solid #444;">${item.item}</td>
-                    <td style="padding:8px; border-bottom:1px solid #444;">${item.base_value}</td>
-                    <td style="padding:8px; border-bottom:1px solid #444;">${item.monthly_value}</td>
-                    <td style="padding:8px; border-bottom:1px solid #444;">${item.weekly_value}</td>
-                </tr>
-            `).join('');
-
-            if (scenario.totals && Object.keys(scenario.totals).length) {
-                rows += `
-                    <tr style="font-weight:bold; background:rgba(255,255,255,0.1);">
-                        <td style="padding:8px;">TOTAIS</td>
-                        <td style="padding:8px;">${scenario.totals.total_base || '-'}</td>
-                        <td style="padding:8px;">${scenario.totals.total_monthly || '-'}</td>
-                        <td style="padding:8px;">${scenario.totals.total_weekly || '-'}</td>
-                    </tr>
-                `;
-            }
-
-            card.innerHTML = `
-                <h3 style="color:var(--accent-color); margin-top:0;">${scenario.name}</h3>
-                <table style="width:100%; border-collapse:collapse; min-width:400px;">
-                    <thead>
-                        <tr style="text-align:left; color:#aaa;">
-                            <th style="padding:8px;">Item</th>
-                            <th style="padding:8px;">Base</th>
-                            <th style="padding:8px;">Mensal</th>
-                            <th style="padding:8px;">Semanal</th>
-                        </tr>
-                    </thead>
-                    <tbody>${rows}</tbody>
-                </table>
-            `;
-            wrapper.appendChild(card);
+    // Apply element filter
+    const elementFilter = document.getElementById('filter-element')?.value;
+    if (elementFilter && elementFilter !== 'todos') {
+        variants = variants.filter(v => {
+            const elementInfo = ELEMENT_MAP[v.element];
+            return elementInfo && elementInfo.key === elementFilter;
         });
     }
 
-    // Performance Stats
-    if (data.performance_stats) {
-        const card = document.createElement('div');
-        card.className = 'calculator-box';
-        card.style.overflowX = 'auto';
-        
-        const numCols = data.performance_stats[0].values.length;
-        const headers = Array.from({length: numCols}, (_, i) => `<th style="padding:8px;">Val ${i+1}</th>`).join('');
-        
-        const rows = data.performance_stats.map(stat => `
-            <tr>
-                <td style="padding:8px; border-bottom:1px solid #444;">${stat.metric}</td>
-                ${stat.values.map(v => `<td style="padding:8px; border-bottom:1px solid #444;">${v !== null ? v : '-'}</td>`).join('')}
-            </tr>
-        `).join('');
+    // Apply sorting
+    const sortBy = document.getElementById('sort-select')?.value || 'name';
+    variants = [...variants].sort((a, b) => {
+        switch (sortBy) {
+            case 'score':
+                return parseStatValue(b.stats?.power) - parseStatValue(a.stats?.power);
+            case 'atk':
+                return parseStatValue(b.stats?.attack) - parseStatValue(a.stats?.attack);
+            case 'hp':
+                return parseStatValue(b.stats?.health) - parseStatValue(a.stats?.health);
+            case 'name':
+            default:
+                return a.name.localeCompare(b.name);
+        }
+    });
 
-        card.innerHTML = `
-            <h3 style="color:var(--accent-color); margin-top:0;">Performance</h3>
-            <table style="width:100%; border-collapse:collapse; min-width:400px;">
-                <thead>
-                    <tr style="text-align:left; color:#aaa;">
-                        <th style="padding:8px;">Métrica</th>
-                        ${headers}
-                    </tr>
-                </thead>
-                <tbody>${rows}</tbody>
-            </table>
-        `;
-        wrapper.appendChild(card);
+    if (variants.length === 0) {
+        container.innerHTML = '<p style="color: var(--text-muted);">Nenhuma variante encontrada para este filtro.</p>';
+        return;
     }
 
-    container.appendChild(wrapper);
+    container.innerHTML = variants.map((variant, index) => createVariantCard(variant, index)).join('');
 }
 
-// --- Catalisadores ---
+function createVariantCard(variant, index) {
+    const elementInfo = ELEMENT_MAP[variant.element] || { icon: '⚪', class: 'neutral' };
+
+    // Get portrait URL (prefer local, fallback to Discord CDN)
+    let portraitUrl = variant.images?.portrait_url || '';
+    if (portraitUrl.includes('discord')) {
+        // Use local if Discord URL (may expire)
+        portraitUrl = `img/${currentCharacter}/${currentCharacter}_${index}.png`;
+    }
+
+    // Format ability description
+    const abilityDesc = formatText(variant.signature_ability?.description || 'Sem descrição');
+
+    // Format arsenal
+    const arsenal = formatArsenal(variant.recommended_arsenal || '');
+
+    return `
+        <div class="variant-card ${currentRarityFilter} animate-in" style="animation-delay: ${index * 0.05}s">
+            <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
+                 onerror="this.src='img/icones/Annie_Icon.png'">
+            
+            <div class="variant-info">
+                <div class="variant-header">
+                    <h3>
+                        <span class="element-badge ${elementInfo.class}">${elementInfo.icon} ${variant.element}</span>
+                        ${variant.name}
+                    </h3>
+                </div>
+                
+                <div class="variant-stats">
+                    <div class="stat-item">
+                        <span class="label">ATK</span>
+                        <span class="value">${variant.stats?.attack || '-'}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">HP</span>
+                        <span class="value">${variant.stats?.health || '-'}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">PWR</span>
+                        <span class="value">${variant.stats?.power || '-'}</span>
+                    </div>
+                </div>
+                
+                <div class="ability-box">
+                    <h4>🎯 ${variant.signature_ability?.name || 'Habilidade Especial'}</h4>
+                    <p>${abilityDesc}</p>
+                </div>
+                
+                ${variant.marquee_ability ? `
+                    <div class="ability-box" style="border-left-color: var(--rarity-diamond);">
+                        <h4>⭐ Marquee: ${variant.marquee_ability}</h4>
+                    </div>
+                ` : ''}
+                
+                ${variant.recommended_build ? `
+                    <div class="ability-box" style="border-left-color: var(--element-wind);">
+                        <h4>📊 Build Recomendada</h4>
+                        <p>${variant.recommended_build}</p>
+                    </div>
+                ` : ''}
+                
+                ${arsenal ? `
+                    <div class="arsenal-box">
+                        <h4>🎒 Arsenal Recomendado</h4>
+                        <div class="arsenal-list">${arsenal}</div>
+                    </div>
+                ` : ''}
+            </div>
+        </div>
+    `;
+}
+
+function parseStatValue(stat) {
+    if (!stat) return 0;
+    return parseInt(String(stat).replace(/[,\.]/g, '')) || 0;
+}
+
+function formatText(text) {
+    if (!text) return '';
+
+    // Convert **bold** to <strong>
+    text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+
+    // Convert Discord emoji format to simple text
+    text = text.replace(/<:[^:]+:\d+>/g, '');
+
+    // Convert \n to <br>
+    text = text.replace(/\\n/g, '<br>').replace(/\n/g, '<br>');
+
+    return text;
+}
+
+function formatArsenal(arsenal) {
+    if (!arsenal) return '';
+
+    // Remove Discord emoji codes
+    arsenal = arsenal.replace(/<:[^:]+:\d+>/g, '');
+
+    // Split by comma or similar
+    const items = arsenal.split(/,\s*/).filter(item => item.trim());
+
+    return items.map(item => `<span>${item.trim()}</span>`).join('');
+}
+
+// ========== FILTERS ==========
+function applyFilters() {
+    // If we're on character detail, re-render variants
+    if (currentCharacter) {
+        renderVariants();
+    }
+}
+
+// ========== STATISTICS ==========
+async function loadStatisticsData() {
+    try {
+        const response = await fetch('data/estatisticas.json');
+        statisticsData = await response.json();
+        renderScenariosTable();
+    } catch (error) {
+        console.error('Error loading statistics:', error);
+    }
+}
+
+function renderScenariosTable() {
+    if (!statisticsData || !statisticsData.scenarios) return;
+
+    const container = document.getElementById('scenarios-table');
+
+    // Create table from scenarios
+    let html = `
+        <table style="width: 100%; border-collapse: collapse; margin-top: 16px;">
+            <thead>
+                <tr style="border-bottom: 1px solid var(--bg-card-hover);">
+                    <th style="text-align: left; padding: 12px; color: var(--text-muted);">Cenário</th>
+                    <th style="text-align: right; padding: 12px; color: var(--text-muted);">Teonita/Mês</th>
+                    <th style="text-align: right; padding: 12px; color: var(--text-muted);">Teonita/Semana</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    statisticsData.scenarios.forEach(scenario => {
+        if (scenario.totals && scenario.totals.total_monthly) {
+            html += `
+                <tr style="border-bottom: var(--border-subtle);">
+                    <td style="padding: 12px; color: var(--text-primary); text-transform: capitalize;">${scenario.name}</td>
+                    <td style="text-align: right; padding: 12px; color: var(--accent-gold); font-weight: 600;">
+                        ${formatNumber(scenario.totals.total_monthly / 1000)}k
+                    </td>
+                    <td style="text-align: right; padding: 12px; color: var(--accent-gold-light);">
+                        ${formatNumber(scenario.totals.total_weekly / 1000)}k
+                    </td>
+                </tr>
+            `;
+        }
+    });
+
+    html += '</tbody></table>';
+    container.innerHTML = html;
+}
+
+function calculateEarnings() {
+    if (!statisticsData) {
+        alert('Dados de estatísticas não carregados.');
+        return;
+    }
+
+    // Get selections
+    const dpType = document.getElementById('calc-dp').value;
+    const riftTier = document.getElementById('calc-rift-tier').value;
+    const passType = document.getElementById('calc-pass').value;
+    const guildType = document.getElementById('calc-guild').value;
+    const hasPF = document.getElementById('calc-pf').checked;
+    const hasRift = document.getElementById('calc-rift').checked;
+
+    // Base values from scenarios
+    let monthlyTeonita = 0;
+    let weeklyTeonita = 0;
+
+    // Find matching scenario
+    const scenarioName = `cenário ${dpType.includes('dima') ? 'dima' : 'ouro'} + ${riftTier === 'pesadelo' ? 'pesadelo' : riftTier === 'sem-do' ? 'sem dó' : 'mestre'}`;
+    const scenario = statisticsData.scenarios.find(s => s.name.includes(dpType.includes('dima') ? 'dima' : 'ouro'));
+
+    if (scenario && scenario.items) {
+        scenario.items.forEach(item => {
+            if (hasPF && item.item.includes('dp')) {
+                monthlyTeonita += item.monthly_value;
+                weeklyTeonita += item.weekly_value || 0;
+            }
+            if (hasRift && item.item === 'reinos') {
+                monthlyTeonita += item.monthly_value;
+                weeklyTeonita += item.weekly_value || 0;
+            }
+            if (item.item === 'diaria') {
+                monthlyTeonita += item.monthly_value;
+                weeklyTeonita += item.weekly_value || 0;
+            }
+            if (item.item === 'passe' && passType !== 'free') {
+                monthlyTeonita += item.monthly_value * (passType === 'premium_plus' ? 1.5 : 1);
+            }
+            if (guildType === 'top100' && item.item.includes('guilda')) {
+                monthlyTeonita += item.monthly_value;
+                weeklyTeonita += item.weekly_value || 0;
+            }
+        });
+    }
+
+    // Fallback if no scenario found
+    if (monthlyTeonita === 0) {
+        monthlyTeonita = 25000;
+        weeklyTeonita = 6000;
+    }
+
+    // Update results
+    document.getElementById('result-teonita').textContent = formatNumber(monthlyTeonita);
+    document.getElementById('result-teonita-week').textContent = formatNumber(weeklyTeonita);
+    document.getElementById('result-coins').textContent = formatNumber(monthlyTeonita * 100) + ' (estimado)';
+}
+
+function calculateCosts() {
+    const bbLevel = document.getElementById('bb-level').value;
+    const rarityEvo = document.getElementById('rarity-evo').value;
+    const loadoutType = document.getElementById('loadout-type').value;
+
+    // Cost estimates (based on common game knowledge)
+    const costs = {
+        bb: {
+            '1-15': { coins: '~2.5M', keys: '~150' },
+            '1-10': { coins: '~800K', keys: '~60' },
+            '10-15': { coins: '~1.7M', keys: '~90' }
+        },
+        evolution: {
+            'gold-dia': { coins: '1.5M', essences: '7 Essências' },
+            'silver-gold': { coins: '500K', essences: '5 Essências' },
+            'bronze-silver': { coins: '100K', essences: '3 Essências' }
+        },
+        loadout: {
+            '5-moves': { coins: '~12.5M', keys: '~750' },
+            '5-moves-10': { coins: '~4M', keys: '~300' }
+        }
+    };
+
+    document.getElementById('cost-bb').textContent = `${costs.bb[bbLevel].coins} + ${costs.bb[bbLevel].keys} chaves`;
+    document.getElementById('cost-evo').textContent = `${costs.evolution[rarityEvo].coins} + ${costs.evolution[rarityEvo].essences}`;
+    document.getElementById('cost-loadout').textContent = `${costs.loadout[loadoutType].coins} + ${costs.loadout[loadoutType].keys} chaves`;
+}
+
+function formatNumber(num) {
+    if (typeof num !== 'number') return num;
+    return num.toLocaleString('pt-BR');
+}
+
+// ========== CATALYSTS ==========
 async function loadCatalystsData() {
     try {
         const response = await fetch('data/catalisadores.json');
-        if (!response.ok) throw new Error('Erro ao carregar catalisadores');
-        const data = await response.json();
-        renderCatalysts(data);
+        catalystsData = await response.json();
+        renderCatalysts();
     } catch (error) {
-        console.error('Erro ao carregar catalisadores:', error);
-        const container = document.getElementById('catalysts');
-        if (container) container.innerHTML = '<p>Erro ao carregar dados dos catalisadores.</p>';
+        console.error('Error loading catalysts:', error);
     }
 }
 
-function renderCatalysts(data) {
-    const container = document.getElementById('catalysts');
-    if (!container) return;
+function renderCatalysts() {
+    const container = document.getElementById('catalysts-container');
 
-    container.innerHTML = '';
-
-    if (!data.embeds || data.embeds.length === 0) return;
-    const embed = data.embeds[0];
-
-    const title = document.createElement('h2');
-    title.textContent = embed.title;
-    container.appendChild(title);
-
-    if (embed.description && Array.isArray(embed.description)) {
-        const descDiv = document.createElement('div');
-        descDiv.className = 'catalyst-description';
-        
-        let htmlDesc = embed.description.join('\n');
-        htmlDesc = htmlDesc
-            .replace(/^### (.*$)/gm, '<h3>$1</h3>')
-            .replace(/\(\+\)/g, '<span style="color:#4caf50; font-weight:bold;">(+)</span>')
-            .replace(/\(\=\)/g, '<span style="color:#ffeb3b; font-weight:bold;">(=)</span>')
-            .replace(/\(\-\)/g, '<span style="color:#f44336; font-weight:bold;">(-)</span>')
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/-\# (.*$)/gm, '<small>$1</small>')
-            .replace(/\n/g, '<br>');
-
-        descDiv.innerHTML = htmlDesc;
-        container.appendChild(descDiv);
+    if (!catalystsData || !catalystsData.embeds || !catalystsData.embeds[0]) {
+        container.innerHTML = '<p style="color: var(--text-muted);">Erro ao carregar catalisadores.</p>';
+        return;
     }
 
-    if (embed.fields) {
-        const grid = document.createElement('div');
-        grid.className = 'catalyst-grid';
+    const embed = catalystsData.embeds[0];
+    const fields = embed.fields || [];
 
-        embed.fields.forEach(field => {
-            const card = document.createElement('div');
-            card.className = 'catalyst-category-card';
-            
-            const catTitle = document.createElement('h3');
-            catTitle.textContent = field.name.replace(' ⬇️', '');
-            card.appendChild(catTitle);
+    // Map category names to CSS classes
+    const categoryClasses = {
+        'Forte': 'strong',
+        'Bom': 'good',
+        'Mediano': 'medium',
+        'Ruim': 'weak'
+    };
 
-            const list = document.createElement('ul');
-            if (Array.isArray(field.value)) {
-                field.value.forEach(line => {
-                    let cleanLine = line.replace(/^\* /, '');
-                    const items = cleanLine.split(',').map(s => s.trim());
-                    
-                    items.forEach(item => {
-                        if(item) {
-                            const li = document.createElement('li');
-                            let formattedItem = item;
-                            if (item.startsWith('+')) formattedItem = `<span style="color:#4caf50; font-weight:bold;">+</span> ${item.substring(1)}`;
-                            else if (item.startsWith('=')) formattedItem = `<span style="color:#ffeb3b; font-weight:bold;">=</span> ${item.substring(1)}`;
-                            else if (item.startsWith('-')) formattedItem = `<span style="color:#f44336; font-weight:bold;">-</span> ${item.substring(1)}`;
-                            
-                            li.innerHTML = formattedItem;
-                            list.appendChild(li);
-                        }
-                    });
-                });
+    let html = '';
+
+    fields.forEach(field => {
+        // Determine category class
+        let categoryClass = 'medium';
+        for (const [name, className] of Object.entries(categoryClasses)) {
+            if (field.name.includes(name)) {
+                categoryClass = className;
+                break;
             }
-            card.appendChild(list);
-            grid.appendChild(card);
+        }
+
+        // Parse value (array or string)
+        const items = Array.isArray(field.value) ? field.value : [field.value];
+
+        html += `
+            <div class="catalyst-category-card ${categoryClass}">
+                <h3>${field.name.replace('⬇️', '')}</h3>
+                <ul>
+                    ${items.map(item => `<li>${formatCatalystItem(item)}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
+}
+
+function formatCatalystItem(item) {
+    // Remove * prefix
+    let text = item.replace(/^\*\s*/, '');
+
+    // Replace symbols only at the start of words or standalone
+    // Use word boundary to avoid replacing inside CSS properties
+    text = text.replace(/\+(?=\w)/g, '<span style="color: #44cc66; font-weight: bold;">+</span>')
+        .replace(/(?<=\s)=(?=\w)/g, '<span style="color: #d4a84b; font-weight: bold;">=</span>')
+        .replace(/(?<=\s)-(?=\w)/g, '<span style="color: #ff4444; font-weight: bold;">-</span>');
+
+    return text;
+}
+
+
+// ========== LAZY LOADING ==========
+function setupLazyLoading() {
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px'
         });
-        container.appendChild(grid);
+
+        // Observe all lazy images
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            observer.observe(img);
+        });
     }
 }
+
+// ========== TIER LIST ==========
+// Generate test tier list with random diamond variants
+function generateTestTierList() {
+    // Wait for character data to be loaded
+    if (Object.keys(allCharactersData).length === 0) {
+        setTimeout(generateTestTierList, 500);
+        return;
+    }
+
+    // Collect all diamond variants from all characters
+    const allDiamonds = [];
+
+    Object.entries(allCharactersData).forEach(([charKey, charData]) => {
+        if (charData && charData.variants && charData.variants.diamante) {
+            charData.variants.diamante.forEach((variant, idx) => {
+                // Get portrait image
+                let img = variant.images?.portrait_url || '';
+                if (img.includes('discord') || !img) {
+                    img = `img/${charKey}/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_${idx}.png`;
+                }
+
+                allDiamonds.push({
+                    name: `${variant.name} (${charData.character})`,
+                    character: charData.character,
+                    charKey: charKey,
+                    image: img,
+                    element: variant.element
+                });
+            });
+        }
+    });
+
+    // Shuffle the array
+    const shuffled = allDiamonds.sort(() => Math.random() - 0.5);
+
+    // Take unique characters (no repeats)
+    const used = new Set();
+    const uniqueVariants = [];
+
+    for (const v of shuffled) {
+        if (!used.has(v.charKey) && uniqueVariants.length < 25) {
+            used.add(v.charKey);
+            uniqueVariants.push(v);
+        }
+    }
+
+    // Distribute to tiers
+    const tierData = {
+        s: uniqueVariants.slice(0, 5),
+        a: uniqueVariants.slice(5, 10),
+        b: uniqueVariants.slice(10, 15),
+        c: uniqueVariants.slice(15, 20),
+        d: uniqueVariants.slice(20, 25)
+    };
+
+    renderTierList(tierData);
+}
+
+function renderTierList(tierData) {
+    if (!tierData) return;
+
+    const tiers = ['s', 'a', 'b', 'c', 'd'];
+
+    tiers.forEach(tier => {
+        const container = document.getElementById(`tier-${tier}`);
+        const characters = tierData[tier] || [];
+
+        if (characters.length === 0) {
+            container.innerHTML = '<span class="tier-placeholder">-</span>';
+            return;
+        }
+
+        container.innerHTML = characters.map(char => `
+            <div class="tier-character" title="${char.name}">
+                <img src="${char.image}" alt="${char.name}" 
+                     onerror="this.src='img/icones/Annie_Icon.png'">
+            </div>
+        `).join('');
+    });
+}
+
+
+// ========== UTILITY FUNCTIONS ==========
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Handle initial hash on page load
+window.addEventListener('load', () => {
+    const hash = window.location.hash.slice(1);
+    if (hash && hash !== 'home') {
+        // Check if it's a character
+        if (allCharactersData[hash]) {
+            openCharacterDetails(hash, false);
+        } else {
+            showSection(hash, false);
+        }
+    }
+});
