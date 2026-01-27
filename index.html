@@ -1,104 +1,404 @@
-<!-- c:\Users\lifiz\Documents\VS Code\Novo Começo\index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skullgirls Mobile 2026 - Palácio Branco</title>
+    <meta name="description"
+        content="Skullgirls Mobile Wiki - Guia completo de builds, estatísticas, catalisadores e tier lists. Projeto da comunidade Palácio Branco.">
+    <meta name="keywords" content="Skullgirls Mobile, builds, tier list, catalisadores, guia, wiki">
+    <meta name="author" content="Palácio Branco - Lifi ツ e João Pedro">
+
+    <title>Skullgirls Mobile Wiki - Palácio Branco</title>
+
     <link rel="stylesheet" href="style.css">
-    <!-- Fonte opcional para estilo -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">SGM 2026</div>
-        <ul class="nav-links">
-            <li><a href="#" onclick="showSection('home')">Início</a></li>
-            <li><a href="#" onclick="showSection('characters')">Personagens</a></li>
-            <li><a href="#" onclick="showSection('stats')">Estatísticas</a></li>
-            <li><a href="#" onclick="showSection('catalysts')">Catalisadores</a></li>
-            <li><a href="#" onclick="showSection('tierlist')">Tier List</a></li>
+    <nav class="navbar hidden-nav">
+        <div class="navbar-brand">
+            <div class="logo" onclick="showSection('landing-hub')">SG MOBILE WIKI</div>
+            <a href="javascript:void(0)" onclick="toggleAboutDrawer()" class="about-link">
+                <img src="img/icones/IconInfo.png" alt="">
+                <span>sobre</span>
+            </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="javascript:void(0)" onclick="showSection('landing-hub')">Inicio</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('characters')">Personagens</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('catalysts')">Catalisadores</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('tierlist')">Tier List</a></li>
+            <li><a href="javascript:void(0)" onclick="showSection('stats')">Estatísticas</a></li>
         </ul>
+
         <div class="hamburger" onclick="toggleMenu()">☰</div>
     </nav>
 
-    <!-- Conteúdo Principal -->
+    <!-- Main Content -->
     <main id="main-content">
-        
-        <!-- Seção: Home -->
-        <section id="home" class="active-section">
-            <div class="hero">
-                <h1>Bem-vindo ao Guia SGM 2026</h1>
-                <p>Sua fonte definitiva de builds, estatísticas e estratégias.</p>
-                <button class="cta-button" onclick="showSection('characters')">Ver Personagens</button>
+
+        <!-- ========== ABOUT DRAWER ========== -->
+        <div id="drawer-overlay" class="drawer-overlay" onclick="toggleAboutDrawer()"></div>
+        <aside id="about-drawer" class="about-drawer">
+            <div class="drawer-header">
+                <h3>Sobre o Projeto</h3>
+                <button class="close-drawer" onclick="toggleAboutDrawer()">×</button>
             </div>
-            
-            <div class="info-cards">
-                <div class="card-link">
-                    <h3>Comunidade Oficial</h3>
-                    <p>Junte-se ao servidor oficial do jogo.</p>
-                    <a href="https://discord.com/invite/skullgirlsmobile" target="_blank">Discord Oficial</a>
+            <div class="drawer-content">
+                <div class="hero">
+                    <h1>Skullgirls Mobile Wiki</h1>
+                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da
+                        comunidade Palácio Branco.</p>
+                    <div class="hero-buttons">
+                        <a href="https://discord.gg/nsGXabuCSe" target="_blank" class="btn btn-primary">
+                            💬 Discord
+                        </a>
+                        <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank"
+                            class="btn btn-secondary">
+                            📦 GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="card-link">
-                    <h3>Contribua</h3>
-                    <p>Ajude a melhorar o projeto no GitHub.</p>
-                    <a href="https://github.com/bot-do-jao/palacio-branco-entreprises/tree/main" target="_blank">Repositório</a>
+
+                <div class="info-cards vertical">
+                    <div class="card-link">
+                        <h3>📖 Builds Completas</h3>
+                        <p>Variantes com atributos recomendados e arsenal otimizado.</p>
+                    </div>
+                    <div class="card-link">
+                        <h3>📊 Calculadora</h3>
+                        <p>Simule seus ganhos mensais de Canopy Coins e Teonita.</p>
+                    </div>
+                    <div class="card-link">
+                        <h3>🏰 Comunidade</h3>
+                        <p>Projeto de fãs para fãs. Junte-se ao servidor Palácio Branco!</p>
+                    </div>
                 </div>
-                <div class="card-link">
-                    <h3>Créditos</h3>
-                    <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro (Bot do Jão)</strong>.</p>
+
+                <div class="credits-section">
+                    <h4>✨ Créditos</h4>
+                    <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
+                    <p>Assets originais pertencem à Hidden Variable Studios e Autumn Games.</p>
+
+                    <div class="disclaimer-tooltip" style="margin-top: 20px;">
+                        <button class="disclaimer-btn" onclick="toggleDisclaimer()" title="Aviso Legal">⚠️</button>
+                        <div class="disclaimer-content" id="disclaimer-content">
+                            <p><strong>Aviso Legal:</strong> Projeto de Fã - Não afiliado à Hidden Variable Studios ou
+                                Autumn Games.</p>
+                            <p>Todos os assets pertencem aos seus respectivos proprietários.</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85rem; margin-top: 15px;">Encontrou um erro? Reporte no servidor <a
+                            href="https://discord.gg/nsGXabuCSe" target="_blank">Palácio Branco</a>.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ========== LANDING HUB SECTION ========== -->
+        <section id="landing-hub" class="active-section">
+            <div class="hub-container">
+                <div class="hub-top-bar">
+                    <a href="javascript:void(0)" onclick="toggleAboutDrawer()" class="about-link hub-about-top">
+                        <img src="img/icones/IconInfo.png" alt="">
+                        <span>sobre</span>
+                    </a>
+                </div>
+
+                <div class="hub-hero">
+                    <h1>Skullgirls Mobile Wiki</h1>
+                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile.</p>
+                </div>
+
+                <div class="hub-menu">
+                    <button onclick="showSection('characters')" class="hub-btn">
+                        <span>PERSONAGENS</span>
+                    </button>
+                    <button onclick="showSection('catalysts')" class="hub-btn">
+                        <span>CATALISADORES</span>
+                    </button>
+                    <button onclick="showSection('tierlist')" class="hub-btn">
+                        <span>TIER LIST</span>
+                    </button>
+                    <button onclick="showSection('stats')" class="hub-btn">
+                        <span>ESTATÍSTICAS</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Seção: Personagens (Lista de Seleção) -->
+        <!-- Content below landing hub... -->
+
+        <!-- ========== CHARACTERS SECTION ========== -->
         <section id="characters" class="hidden-section">
-            <h2>Selecione um Personagem</h2>
+            <h2 class="section-header">Escolha um Personagem</h2>
+
+
             <div id="character-grid" class="character-grid">
                 <!-- Preenchido via JS -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
             </div>
         </section>
 
-        <!-- Seção: Detalhes do Personagem (Variantes) -->
+        <!-- ========== CHARACTER DETAIL SECTION ========== -->
         <section id="character-detail" class="hidden-section">
-            <button class="back-button" onclick="showSection('characters')">← Voltar</button>
-            <h2 id="detail-char-name">Nome do Personagem</h2>
-            
-            <!-- Filtros de Raridade -->
-            <div class="rarity-tabs">
-                <button class="rarity-btn diamante" onclick="filterRarity('diamante')">Diamante</button>
-                <button class="rarity-btn ouro" onclick="filterRarity('ouro')">Ouro</button>
-                <button class="rarity-btn prata" onclick="filterRarity('prata')">Prata</button>
-                <button class="rarity-btn bronze" onclick="filterRarity('bronze')">Bronze</button>
+            <div class="character-detail-header">
+                <button class="back-button" onclick="showSection('characters')">← Voltar</button>
+
+                <div class="header-center-content">
+                    <h2 id="detail-char-name" class="section-header">Nome do Personagem</h2>
+
+                    <!-- Tabs -->
+                    <div class="detail-tabs">
+                        <button class="tab-btn active" data-tab="builds"
+                            onclick="switchCharDetailMode('builds')">Builds</button>
+                        <button class="tab-btn" data-tab="tier" onclick="switchCharDetailMode('tier')">Tier List do
+                            Site</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Filtros Gerais -->
-            <div class="filters">
-                <select id="sort-select" onchange="sortVariants()">
-                    <option value="score">Pontuação (Maior)</option>
-                    <option value="atk">Ataque (Maior)</option>
-                    <option value="hp">Vida (Maior)</option>
-                    <option value="name">Nome (A-Z)</option>
-                </select>
+            <!-- Shared Filter Bar -->
+            <div class="filter-bar">
+                <!-- Filter Header & Clear -->
+                <div class="filter-controls">
+                    <button class="filter-toggle-btn" onclick="toggleFilterVisibility()">
+                        <img src="img/icones/icon_filter.png" onerror="this.src='img/icones/filter.png'" alt="">
+                        <span>Filtrar</span>
+                    </button>
+                    <button class="clear-filters-btn" onclick="clearFilters()" title="Limpar Filtros">
+                        <img src="img/icones/constraints_no.png" alt="Limpar">
+                    </button>
+                </div>
+
+                <!-- Collapsible Filter Content -->
+                <div class="filter-content" id="filter-content">
+                    <div class="vertical-separator"></div>
+
+                    <!-- Rarity Grid (2x2) -->
+                    <div class="filter-grid rarity-grid">
+                        <button class="filter-btn rarity-btn" data-rarity="bronze"
+                            onclick="toggleFilter('rarity', 'bronze')" title="Bronze">
+                            <img src="img/icones/icone_bronze.png" alt="Bronze">
+                        </button>
+                        <button class="filter-btn rarity-btn" data-rarity="prata"
+                            onclick="toggleFilter('rarity', 'prata')" title="Prata">
+                            <img src="img/icones/icone_prata.png" alt="Prata">
+                        </button>
+                        <button class="filter-btn rarity-btn" data-rarity="ouro"
+                            onclick="toggleFilter('rarity', 'ouro')" title="Ouro">
+                            <img src="img/icones/icone_ouro.png" alt="Ouro">
+                        </button>
+                        <button class="filter-btn rarity-btn" data-rarity="diamante"
+                            onclick="toggleFilter('rarity', 'diamante')" title="Diamante">
+                            <img src="img/icones/icone_diamante.png" alt="Diamante">
+                        </button>
+                    </div>
+
+                    <div class="vertical-separator"></div>
+
+                    <!-- Element Grid (3x2) -->
+                    <div class="filter-grid element-grid">
+                        <!-- Top Row -->
+                        <button class="filter-btn element-btn" data-element="fogo"
+                            onclick="toggleFilter('element', 'fogo')" title="Fogo">
+                            <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                        </button>
+                        <button class="filter-btn element-btn" data-element="agua"
+                            onclick="toggleFilter('element', 'agua')" title="Água">
+                            <img src="img/icones/ElementalWaterBackless.png" alt="Água">
+                        </button>
+                        <button class="filter-btn element-btn" data-element="ar" onclick="toggleFilter('element', 'ar')"
+                            title="Ar">
+                            <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                        </button>
+
+                        <!-- Bottom Row -->
+                        <button class="filter-btn element-btn" data-element="luz"
+                            onclick="toggleFilter('element', 'luz')" title="Luz">
+                            <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                        </button>
+                        <button class="filter-btn element-btn" data-element="trevas"
+                            onclick="toggleFilter('element', 'trevas')" title="Trevas">
+                            <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
+                        </button>
+                        <button class="filter-btn element-btn" data-element="neutro"
+                            onclick="toggleFilter('element', 'neutro')" title="Neutro">
+                            <img src="img/icones/ElementalNeutralBackless.png" alt="Neutro">
+                        </button>
+                    </div>
+
+                    <div class="vertical-separator"></div>
+
+                    <!-- Sort Section -->
+                    <div class="filter-section right">
+                        <div class="sort-header">
+                            <img src="img/icones/icon_sort.png" onerror="this.style.display='none'" alt="">
+                            ORGANIZAR
+                        </div>
+                        <div class="vertical-separator"
+                            style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
+                        <div class="sort-group">
+                            <button class="sort-btn active" data-sort="score"
+                                onclick="toggleSort('score')">PONTUAÇÃO</button>
+                            <button class="sort-btn" data-sort="atk" onclick="toggleSort('atk')">ATAQUE</button>
+                            <button class="sort-btn" data-sort="hp" onclick="toggleSort('hp')">VIDA</button>
+                            <button class="sort-btn" data-sort="name" onclick="toggleSort('name')">ORDEM
+                                ALFABÉTICA</button>
+                            <button class="sort-btn" data-sort="element"
+                                onclick="toggleSort('element')">ELEMENTO</button>
+                            <button class="sort-btn" data-sort="class" onclick="toggleSort('class')">CATEGORIA</button>
+                        </div>
+                    </div>
+
+                    <div class="vertical-separator"></div>
+
+                    <!-- Character Navigator -->
+                    <div class="filter-section right character-nav">
+                        <div class="sort-header" id="char-nav-header">MUDE O PERSONAGEM</div>
+                        <div class="char-dropdown" id="char-dropdown">
+                            <button class="char-dropdown-btn" onclick="toggleCharDropdown()">
+                                <span id="current-char-label">Escolher Personagem</span>
+                                <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div class="char-dropdown-content" id="char-dropdown-content">
+                                <!-- Populated via JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="variants-container" class="variants-container">
-                <!-- Cards das variantes entram aqui -->
+            <!-- BUILDS VIEW -->
+            <div id="char-detail-builds" class="tab-content">
+                <div id="variants-container" class="variants-container">
+                    <!-- Cards das variantes entram aqui -->
+                </div>
+            </div>
+
+            <!-- TIER VIEW -->
+            <div id="char-detail-tier" class="tab-content hidden-section">
+                <!-- Temporary Editor Notice -->
+                <div class="temp-notice">
+                    <strong>MODO EDITOR ATIVO (TEMPORÁRIO)</strong>
+                    <p>Ative o modo edição abaixo para mudar as notas clicando nelas. <br>
+                        <em>Lembre-se de salvar suas alterações antes de sair!</em>
+                    </p>
+                </div>
+
+                <!-- Rank Explanations Dictionary -->
+                <div class="rank-dictionary">
+                    <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
+                        <p>O Melhor dos Melhores; Domina o Modo.</p>
+                    </div>
+                    <div class="dict-item"><span class="rank-badge rank-s">S</span>
+                        <p>Muito Forte e Útil; Poucas Falhas.</p>
+                    </div>
+                    <div class="dict-item"><span class="rank-badge rank-a">A</span>
+                        <p>Sólido, mas com algumas limitações.</p>
+                    </div>
+                    <div class="dict-item"><span class="rank-badge rank-b">B</span>
+                        <p>Razoável, mas tem desvantagens claras.</p>
+                    </div>
+                    <div class="dict-item"><span class="rank-badge rank-c">C</span>
+                        <p>Ruim; existem opções melhores.</p>
+                    </div>
+                    <div class="dict-item"><span class="rank-badge rank-u">U</span>
+                        <p>Inviável: Sem utilidade; Não Recomendado.</p>
+                    </div>
+                    <div class="dict-item"><span class="rank-badge rank-tbd">TBD</span>
+                        <p>Em Análise: Lutador Novo ou Alterado; Rank Pendente.</p>
+                    </div>
+                </div>
+
+                <!-- Editor Control Bar -->
+                <div class="editor-control-bar">
+                    <div class="editor-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="compact-mode-toggle" onchange="toggleCompactMode()">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="editor-label">Modo Compacto</span>
+                    </div>
+
+                    <div class="editor-toggle">
+                        <label class="switch">
+                            <input type="checkbox" id="editor-mode-toggle" onchange="toggleEditorMode()">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="editor-label">Modo Edição (Apenas para você)</span>
+                    </div>
+                    <button class="save-data-btn" onclick="saveTierDataDirectly()">Confirmar & Salvar
+                        Alterações</button>
+                </div>
+
+                <div class="tier-table-wrapper">
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>Variante</th>
+                                <th class="text-center">DP Ataque</th>
+                                <th class="text-center">Fenda Ataque</th>
+                                <th class="text-center">Fenda Defesa</th>
+                                <th class="text-center">Reinos Paralelos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="detail-tier-table-body">
+                            <!-- Preenchido via JS -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <!-- Seção: Estatísticas -->
+        <!-- ========== STATISTICS SECTION ========== -->
         <section id="stats" class="hidden-section">
-            <h2>Calculadora de Recursos</h2>
-            <p class="disclaimer-text">Nota: Todos os valores são estimativas aproximadas baseadas em dados da comunidade.</p>
+            <h2 class="section-header">Calculadora de Recursos</h2>
+
+            <p class="disclaimer-text">
+                Todos os valores apresentados são estimativas aproximadas baseadas em dados da comunidade. Os resultados
+                podem variar dependendo de eventos e atualizações do jogo.
+            </p>
 
             <div class="stats-container">
+                <!-- Earnings Calculator -->
                 <div class="calculator-box">
-                    <h3>Simulador de Ganhos Mensais</h3>
-                    <label><input type="checkbox" id="calc-pf"> Disputas Premiadas (Todas as faixas)</label>
-                    <label><input type="checkbox" id="calc-rift"> Reinos (Rifts)</label>
+                    <h3>💰 Simulador de Ganhos Mensais</h3>
+
+                    <label>
+                        <input type="checkbox" id="calc-pf" checked>
+                        Disputas Premiadas (Prize Fights)
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="calc-rift" checked>
+                        Reinos (Rifts)
+                    </label>
+
+                    <label>
+                        Faixa de DP:
+                        <select id="calc-dp">
+                            <option value="dima-10">Diamante Top 10%</option>
+                            <option value="dima-30">Diamante Top 30%</option>
+                            <option value="ouro">Ouro</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Faixa de Fenda:
+                        <select id="calc-rift-tier">
+                            <option value="pesadelo">Pesadelo</option>
+                            <option value="sem-do">Sem Dó</option>
+                            <option value="mestre">Mestre</option>
+                        </select>
+                    </label>
+
                     <label>
                         Passe de Batalha:
                         <select id="calc-pass">
@@ -107,69 +407,119 @@
                             <option value="premium_plus">Premium+</option>
                         </select>
                     </label>
+
                     <label>
                         Guilda:
                         <select id="calc-guild">
-                            <option value="none">Nenhuma</option>
+                            <option value="none">Nenhuma / Casual</option>
                             <option value="top100">Top 100</option>
                         </select>
                     </label>
+
                     <button onclick="calculateEarnings()">Calcular Ganhos</button>
+
                     <div id="earnings-result" class="result-box">
-                        <p>Canopy Coins: 0</p>
-                        <p>Teonita: 0</p>
+                        <h4>Resultado Estimado</h4>
+                        <p><span>Teonita Mensal:</span> <span class="value" id="result-teonita">-</span></p>
+                        <p><span>Teonita Semanal:</span> <span class="value" id="result-teonita-week">-</span></p>
+                        <p><span>Canopy Coins:</span> <span class="value" id="result-coins">-</span></p>
                     </div>
                 </div>
 
+                <!-- Evolution Cost Calculator -->
                 <div class="calculator-box">
-                    <h3>Custo de Evolução</h3>
+                    <h3>📈 Custos de Evolução</h3>
+
                     <label>
-                        Evoluir Golpe (Nível):
-                        <select id="move-level">
-                            <option value="1-15">1 ao 15</option>
-                            <option value="1-3">1 ao 3</option>
-                            <option value="12-15">12 ao 15</option>
+                        Evoluir Blockbuster:
+                        <select id="bb-level">
+                            <option value="1-15">Nível 1 → 15 (Completo)</option>
+                            <option value="1-10">Nível 1 → 10</option>
+                            <option value="10-15">Nível 10 → 15</option>
                         </select>
                     </label>
+
                     <label>
                         Evolução de Raridade:
                         <select id="rarity-evo">
-                            <option value="gold-dia">Ouro -> Diamante</option>
-                            <option value="silver-gold">Prata -> Ouro</option>
-                            <option value="bronze-silver">Bronze -> Prata</option>
+                            <option value="gold-dia">Ouro → Diamante</option>
+                            <option value="silver-gold">Prata → Ouro</option>
+                            <option value="bronze-silver">Bronze → Prata</option>
                         </select>
                     </label>
+
+                    <label>
+                        Loadout Completa:
+                        <select id="loadout-type">
+                            <option value="5-moves">5 Golpes (Nível 15)</option>
+                            <option value="5-moves-10">5 Golpes (Nível 10)</option>
+                        </select>
+                    </label>
+
                     <button onclick="calculateCosts()">Ver Custos</button>
+
                     <div id="costs-result" class="result-box">
-                        <p>Custo Estimado: -</p>
+                        <h4>Custos Estimados</h4>
+                        <p><span>Blockbuster:</span> <span class="value" id="cost-bb">-</span></p>
+                        <p><span>Evolução Raridade:</span> <span class="value" id="cost-evo">-</span></p>
+                        <p><span>Loadout:</span> <span class="value" id="cost-loadout">-</span></p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Scenarios Table -->
+            <div class="calculator-box" style="margin-top: 24px;">
+                <h3>📋 Cenários de Referência</h3>
+                <div id="scenarios-table">
+                    <!-- Preenchido via JS -->
                 </div>
             </div>
         </section>
 
-        <!-- Seção: Catalisadores -->
+        <!-- ========== CATALYSTS SECTION ========== -->
         <section id="catalysts" class="hidden-section">
-            <h2>Catalisadores</h2>
-            <p>Em construção...</p>
+            <h2 class="section-header">Catalisadores para Fenda</h2>
+
+            <p class="disclaimer-text">
+                Os catalisadores estão organizados por nível de utilidade. (+) Forte, (=) Bom, (-) Mediano/Ruim.
+            </p>
+
+            <div id="catalysts-container" class="catalysts-grid">
+                <!-- Preenchido via JS -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
         </section>
 
-        <!-- Seção: Tier List -->
+        <!-- ========== TIER LIST SECTION ========== -->
         <section id="tierlist" class="hidden-section">
-            <h2>Tier List</h2>
-            <p>Tier Lists em breve...</p>
+            <h2 class="section-header">Escolha uma Tier List</h2>
+
+            <p class="disclaimer-text">
+                Selecione um personagem para visualizar a classificação detalhada de suas variantes em cada modo de
+                jogo.
+            </p>
+
+            <div id="tierlist-char-grid" class="character-grid">
+                <!-- Preenchido via JS -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
         </section>
+
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>Projeto de Fã - Não afiliado à Hidden Variable ou Autumn Games.</p>
-            <p>Encontrou um erro? Reporte no servidor <a href="https://discord.gg/nsGXabuCSe" target="_blank">Palácio Branco</a>.</p>
-            <p class="credits-mini">Feito por Lifi ツ e João Pedro (Bot do Jão)</p>
-        </div>
-    </footer>
+
+    <!-- Floating Navigation -->
+    <div class="scroll-nav">
+        <button onclick="scrollToTop()" id="scrollTopBtn" title="Ir para o Topo"></button>
+        <button onclick="scrollToBottom()" id="scrollToBottomBtn" title="Ir para o Final"></button>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
