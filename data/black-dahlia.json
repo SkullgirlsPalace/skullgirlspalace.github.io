@@ -1,5 +1,5 @@
 {
-  "character": "Black Dahlia",
+  "character": "Dália Negra",
   "version": "1.0",
   "variants": {
     "diamante": [
@@ -70,7 +70,7 @@
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Presente de Despedida, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
       },
       {
-        "name": "",
+        "name": "Carregada",
         "title_formatted": "Carregada <:Ar:1389703277532287066><:diamante:1407839264779141140>",
         "element": "Ar",
         "color_hex": "#00ff00",
