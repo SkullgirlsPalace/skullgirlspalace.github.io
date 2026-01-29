@@ -4,7 +4,7 @@
 // =====================================================
 
 import { getCharacter, getCharacters } from '../services/dataService.js';
-import { getState, setCurrentCharacter, setCurrentTab, setFilters } from '../state/store.js';
+import { getState, setCurrentCharacter, setCurrentTab, setFilters, setSort } from '../state/store.js';
 import { CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
@@ -120,22 +120,18 @@ function renderTierTab(charKey, charData) {
  * @param {string} charKey - Character key
  * @param {string} initialTab - Initial tab
  */
-export function init(charKey, initialTab = 'builds') {
+export async function init(charKey, initialTab = 'builds') {
     setCurrentCharacter(charKey);
-    setCurrentTab(initialTab);
 
     // Reset filters when entering a new character
     setFilters({ rarity: [], element: [] });
 
-    // Populate variants if on builds tab
-    const state = getState();
-    if (state.currentTab === 'builds') {
-        refreshVariants(charKey);
-    }
+    // Force render of the initial tab content with clean filters
+    // This handles both 'builds' and 'tier' tabs correctly
+    await switchTab(charKey, initialTab);
 
     // Update filter UI
     updateFilterUI();
-    updateCharacterNav(charKey, state.currentTab);
 }
 
 /**
@@ -160,8 +156,26 @@ export function refreshVariants(charKey) {
  * @param {string} charKey - Character key
  * @param {string} tab - Tab to switch to
  */
-export function switchTab(charKey, tab) {
+export async function switchTab(charKey, tab) {
+    // Get current state BEFORE updating tab to check if we are changing context
+    const state = getState();
+    const previousTab = state.currentTab;
+
     setCurrentTab(tab);
+
+    // Only apply default sort if we are actually CHANGING tabs.
+    // This prevents resetting the user's sort preference when switching characters 
+    // while staying on the same tab (e.g. browsing Tier Lists).
+    // Also applies if previousTab is undefined (first load).
+    if (tab !== previousTab) {
+        if (tab === 'tier') {
+            // Tier List Default: Category Descending
+            setSort({ type: 'class', direction: 'desc' });
+        } else {
+            // Builds Default: Score Descending
+            setSort({ type: 'score', direction: 'desc' });
+        }
+    }
 
     // Update tab button states
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -182,4 +196,8 @@ export function switchTab(charKey, tab) {
     }
 
     updateCharacterNav(charKey, tab);
+
+    // Update filter UI to match the current sort state
+    const { updateFilterUI } = await import('../components/FilterBar.js');
+    updateFilterUI();
 }
