@@ -2979,15 +2979,15 @@ input:checked+.slider:before {
     margin-right: 4px;
 }
 
-.notation-\\+ {
+.notation-\+ {
     color: #4ade80;
 }
 
-.notation-\\= {
+.notation-\= {
     color: #fbbf24;
 }
 
-.notation-\\- {
+.notation-\- {
     color: #f87171;
 }
 
