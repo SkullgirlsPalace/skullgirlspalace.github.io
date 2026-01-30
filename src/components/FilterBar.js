@@ -89,9 +89,9 @@ export function createFilterBar() {
                     </div>
                     <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
                     <div class="sort-group">
-                        <button class="sort-btn active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
-                        <button class="sort-btn" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
-                        <button class="sort-btn" data-sort="hp" onclick="handleSortClick('hp')">VIDA</button>
+                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
+                        <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
+                        <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">VIDA</button>
                         <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
                         <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">ELEMENTO</button>
                         <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">CATEGORIA</button>

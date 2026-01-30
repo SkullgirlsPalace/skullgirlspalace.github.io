@@ -45,6 +45,30 @@ window.handleSaveTierData = handleSaveTierData;
 window.handleCalculateEarnings = handleCalculateEarnings;
 window.handleCalculateCosts = handleCalculateCosts;
 
+// ========== VARIANT CARD TAB HANDLER ==========
+/**
+ * Switch between tabs within a variant card (Habilidade, Build, Arsenal)
+ * @param {string} cardId - Unique card identifier
+ * @param {string} tab - Tab to activate ('habilidade', 'build', 'arsenal')
+ */
+window.switchVariantTab = function (cardId, tab) {
+    // Find the tabs container for this card
+    const tabsContainer = document.querySelector(`.variant-tabs[data-card-id="${cardId}"]`);
+    const contentsContainer = document.querySelector(`.variant-tab-contents[data-card-id="${cardId}"]`);
+
+    if (!tabsContainer || !contentsContainer) return;
+
+    // Update tab buttons
+    tabsContainer.querySelectorAll('.variant-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+
+    // Update tab contents
+    contentsContainer.querySelectorAll('.variant-tab-content').forEach(content => {
+        content.classList.toggle('active', content.dataset.tab === tab);
+    });
+};
+
 // ========== CALLBACKS FOR REACTIVE UPDATES ==========
 
 /**

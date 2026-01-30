@@ -8,7 +8,7 @@ import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal } from '../utils/formatters.js';
 
 /**
- * Create variant card HTML
+ * Create variant card HTML with tabbed sections
  * @param {Object} variant - Variant data object
  * @param {string} charKey - Current character key
  * @param {number} index - Index for animation delay
@@ -36,6 +36,13 @@ export function createVariantCard(variant, charKey, index = 0) {
     // Get rarity display name
     const rarityKey = variant.rarityKey || 'diamante';
     const rarityLabel = RARITY_LABELS[rarityKey] || rarityKey.toUpperCase();
+
+    // Unique ID for this card's tabs
+    const cardId = `variant-${charKey}-${index}`;
+
+    // Check what content is available
+    const hasBuildContent = variant.marquee_ability || variant.recommended_build;
+    const hasArsenalContent = arsenal;
 
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
@@ -72,30 +79,60 @@ export function createVariantCard(variant, charKey, index = 0) {
                     </div>
                 </div>
                 
-                <div class="ability-box">
-                    <h4>🎯 ${variant.signature_ability?.name || 'Habilidade Especial'}</h4>
-                    <p>${abilityDesc}</p>
+                <!-- Card Tabs Navigation -->
+                <div class="variant-tabs" data-card-id="${cardId}">
+                    <button class="variant-tab-btn active" data-tab="habilidade" onclick="switchVariantTab('${cardId}', 'habilidade')">
+                        🎯 Habilidade
+                    </button>
+                    ${hasBuildContent ? `
+                        <button class="variant-tab-btn" data-tab="build" onclick="switchVariantTab('${cardId}', 'build')">
+                            📊 Build
+                        </button>
+                    ` : ''}
+                    ${hasArsenalContent ? `
+                        <button class="variant-tab-btn" data-tab="arsenal" onclick="switchVariantTab('${cardId}', 'arsenal')">
+                            🎒 Arsenal
+                        </button>
+                    ` : ''}
                 </div>
                 
-                ${variant.marquee_ability ? `
-                    <div class="ability-box marquee">
-                        <h4>⭐ Superior Recomendada: ${variant.marquee_ability}</h4>
+                <!-- Tab Contents -->
+                <div class="variant-tab-contents" data-card-id="${cardId}">
+                    <!-- Habilidade Tab (Default Active) -->
+                    <div class="variant-tab-content active" data-tab="habilidade">
+                        <div class="ability-box">
+                            <h4>🎯 ${variant.signature_ability?.name || 'Habilidade Especial'}</h4>
+                            <p>${abilityDesc}</p>
+                        </div>
                     </div>
-                ` : ''}
-                
-                ${variant.recommended_build ? `
-                    <div class="ability-box build">
-                        <h4>📊 Build Recomendada</h4>
-                        <p>${variant.recommended_build}</p>
-                    </div>
-                ` : ''}
-                
-                ${arsenal ? `
-                    <div class="arsenal-box">
-                        <h4>🎒 Arsenal Recomendado</h4>
-                        <div class="arsenal-list">${arsenal}</div>
-                    </div>
-                ` : ''}
+                    
+                    <!-- Build Tab -->
+                    ${hasBuildContent ? `
+                        <div class="variant-tab-content" data-tab="build">
+                            ${variant.marquee_ability ? `
+                                <div class="ability-box marquee">
+                                    <h4>⭐ Superior Recomendada: ${variant.marquee_ability}</h4>
+                                </div>
+                            ` : ''}
+                            ${variant.recommended_build ? `
+                                <div class="ability-box build">
+                                    <h4>📊 Build Recomendada</h4>
+                                    <p>${variant.recommended_build}</p>
+                                </div>
+                            ` : ''}
+                        </div>
+                    ` : ''}
+                    
+                    <!-- Arsenal Tab -->
+                    ${hasArsenalContent ? `
+                        <div class="variant-tab-content" data-tab="arsenal">
+                            <div class="arsenal-box">
+                                <h4>🎒 Arsenal Recomendado</h4>
+                                <div class="arsenal-list">${arsenal}</div>
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
             </div>
         </div>
     `;

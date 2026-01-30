@@ -1020,6 +1020,11 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Hide builds-only sort buttons when on tier tab */
+.character-detail[data-current-tab="tier"] .sort-btn.builds-only {
+    display: none;
+}
+
 /* Responsive adjustment */
 @media (max-width: 1100px) {
     .filter-bar {
@@ -1268,6 +1273,82 @@ main {
     border-color: var(--accent-gold);
     background: rgba(212, 168, 75, 0.1);
     color: var(--accent-gold-light);
+}
+
+/* ========== VARIANT CARD TABS ========== */
+.variant-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.variant-tab-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.variant-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.variant-tab-btn.active {
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.2), rgba(212, 168, 75, 0.3));
+    color: var(--accent-gold);
+    border-color: rgba(212, 168, 75, 0.5);
+    box-shadow: 0 2px 12px rgba(212, 168, 75, 0.2);
+}
+
+/* Tab Contents */
+.variant-tab-contents {
+    position: relative;
+    min-height: 80px;
+}
+
+.variant-tab-content {
+    display: none;
+    animation: fadeInTab 0.25s ease-out;
+}
+
+.variant-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Remove margin-top from arsenal-box when inside tabs */
+.variant-tab-content .arsenal-box {
+    margin-top: 0;
+}
+
+/* Spacing adjustment for multiple boxes in Build tab */
+.variant-tab-content .ability-box+.ability-box {
+    margin-top: 12px;
 }
 
 /* ========== STATISTICS PAGE ========== */
@@ -2397,6 +2478,15 @@ input:checked+.slider:before {
 
     .variant-stats {
         justify-content: center;
+    }
+
+    .variant-tabs {
+        justify-content: center;
+    }
+
+    .variant-tab-btn {
+        padding: 8px 14px;
+        font-size: 0.75rem;
     }
 
     .stats-container {

@@ -250,6 +250,28 @@
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
       },
       {
+        "name": "Abóbora Fantasma",
+        "title_formatted": "> Abóbora Fantasma",
+        "element": "Trevas",
+        "color_hex": "#6426a8",
+        "images": {
+          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
+          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025858041610351/Jack-O-Specter.png?ex=68decf9b&is=68dd7e1b&hm=9af024eacff142e32b9605e9b88b3f55833217ae1c58110b8763ab94206e860b&"
+        },
+        "stats": {
+          "attack": "10,215",
+          "health": "62,112",
+          "power": "24,302"
+        },
+        "signature_ability": {
+          "name": "GOSTOSURAS OU TRAVESSURAS",
+          "description": "[HAB 1]: Ganhe um EF. POS. por 15 s **quando qualquer Lutador usar um GOLPE ESPECIAL.**\n\n[HAB 2]: Inflinge 3 EF. NEG. aleatórios no oponente por 15 segundos cada **quando qualquer lutador usar um BLOCKBUSTER.**"
+        },
+        "marquee_ability": "Incineração Melhorada",
+        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
+      },
+      {
         "name": "Domadora de Fantasmas",
         "title_formatted": "> Domadora de Fantasmas <:Fogo:1389703188525092934><:prata:1407839105169227957>",
         "element": "Fogo",
@@ -315,30 +337,6 @@
         },
         "marquee_ability": "Incineração Melhorada",
         "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      }
-    ],
-    "outros": [
-      {
-        "name": "Nome Desconhecido",
-        "title_formatted": "> Abóbora Fantasma",
-        "element": "Desconhecido",
-        "color_hex": "#8000ff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025858041610351/Jack-O-Specter.png?ex=68decf9b&is=68dd7e1b&hm=9af024eacff142e32b9605e9b88b3f55833217ae1c58110b8763ab94206e860b&"
-        },
-        "stats": {
-          "attack": "10,215",
-          "health": "62,112",
-          "power": "24,302"
-        },
-        "signature_ability": {
-          "name": "GOSTOSURAS OU TRAVESSURAS",
-          "description": "[HAB 1]: Ganhe um EF. POS. por 15 s **quando qualquer Lutador usar um GOLPE ESPECIAL.**\n\n[HAB 2]: Inflinge 3 EF. NEG. aleatórios no oponente por 15 segundos cada **quando qualquer lutador usar um BLOCKBUSTER.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
       }
     ]

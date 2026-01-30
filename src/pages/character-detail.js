@@ -39,7 +39,7 @@ export function render(charKey, initialTab = 'builds') {
     const currentTab = state.currentTab || initialTab;
 
     return `
-        <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}">
+        <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
             <div class="section-header">
                 <button class="btn-back" onclick="navigateTo('characters')">
                     ←
@@ -181,6 +181,12 @@ export async function switchTab(charKey, tab) {
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.tab === tab);
     });
+
+    // Update data-current-tab attribute for CSS-based sort button visibility
+    const sectionEl = document.getElementById('character-detail');
+    if (sectionEl) {
+        sectionEl.dataset.currentTab = tab;
+    }
 
     // Re-render content
     const charData = getCharacter(charKey);
