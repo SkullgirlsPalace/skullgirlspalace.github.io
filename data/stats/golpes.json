@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "description": "Custos para evoluir golpes (Special Moves e Blockbusters) no Skullgirls Mobile",
+        "currency": "coins",
+        "lastUpdated": "2026-01-29"
+    },
+    "custoPorNivel": {
+        "2": 3750,
+        "3": 5000,
+        "4": 6250,
+        "5": 10000,
+        "6": 20000,
+        "7": 50000,
+        "8": 100000,
+        "9": 150000,
+        "10": 200000,
+        "11": 240000,
+        "12": 300000,
+        "13": 400000,
+        "14": 450000,
+        "15": 1000000
+    },
+    "custoAcumulado": {
+        "1-5": 25000,
+        "1-10": 545000,
+        "1-15": 2935000,
+        "10-15": 2390000
+    },
+    "buildCompleta": {
+        "5golpesLv10": 2725000,
+        "5golpesLv15": 14675000
+    },
+    "personagemCompleto": {
+        "diamante": {
+            "normal": 4870000,
+            "shiny": 2435000
+        },
+        "ouro": {
+            "normal": 2435000,
+            "shiny": 1217500
+        }
+    },
+    "descricao": {
+        "normal": "Custo base para evoluir golpes",
+        "shiny": "Golpes shiny custam metade do valor normal"
+    }
+}

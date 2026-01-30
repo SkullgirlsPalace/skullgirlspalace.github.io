@@ -3,7 +3,17 @@
 // Earnings calculator and game statistics
 // =====================================================
 
-import { createEarningsCalculator, createCostsCalculator, createScenariosTable } from '../components/Calculator.js';
+import {
+    createEarningsCalculator,
+    createCostsCalculator,
+    createScenariosTable,
+    initCalculator,
+    renderScenarios,
+    handleCalculateEarnings,
+    handleCalculateGolpes,
+    handleCalculateAstros,
+    switchCalcTab
+} from '../components/Calculator.js';
 import { loadStatistics } from '../services/dataService.js';
 
 /**
@@ -17,11 +27,15 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>Estatísticas</h2>
+                <h2>📊 Estatísticas</h2>
             </div>
 
             <div class="stats-intro">
-                <p>Use os simuladores abaixo para calcular seus ganhos mensais estimados e custos de evolução no Skullgirls Mobile.</p>
+                <div class="intro-card">
+                    <h3>🎮 Bem-vindo ao Simulador</h3>
+                    <p>Calcule seus ganhos mensais estimados e custos de evolução no Skullgirls Mobile. 
+                    Configure seu perfil de jogador para obter resultados personalizados.</p>
+                </div>
             </div>
 
             <div class="calculators-container">
@@ -44,48 +58,20 @@ export function render() {
  * Initialize statistics page
  */
 export async function init() {
-    // Load statistics data for scenarios table
+    // Load statistics data
     const statsData = await loadStatistics();
 
-    const scenariosContainer = document.getElementById('scenarios-table');
-    if (scenariosContainer && statsData) {
-        renderScenariosTable(scenariosContainer, statsData);
-    }
-}
+    if (statsData) {
+        // Initialize calculator with data
+        initCalculator(statsData);
 
-/**
- * Render scenarios reference table
- * @param {HTMLElement} container - Container element
- * @param {Object} statsData - Statistics data
- */
-function renderScenariosTable(container, statsData) {
-    if (!statsData.scenarios || !Array.isArray(statsData.scenarios)) {
-        container.innerHTML = '<p class="info-state">Dados de cenários não disponíveis.</p>';
-        return;
+        // Render scenarios comparison table
+        renderScenarios();
     }
 
-    const rows = statsData.scenarios.map(scenario => `
-        <tr>
-            <td>${scenario.name || '-'}</td>
-            <td>${scenario.monthlyTheonite || '-'}</td>
-            <td>${scenario.monthlyCoins || '-'}</td>
-            <td>${scenario.notes || '-'}</td>
-        </tr>
-    `).join('');
-
-    container.innerHTML = `
-        <table class="scenarios-table">
-            <thead>
-                <tr>
-                    <th>Cenário</th>
-                    <th>Teonita/Mês</th>
-                    <th>Coins/Mês</th>
-                    <th>Notas</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${rows}
-            </tbody>
-        </table>
-    `;
+    // Register global handlers
+    window.handleCalculateEarnings = handleCalculateEarnings;
+    window.handleCalculateGolpes = handleCalculateGolpes;
+    window.handleCalculateAstros = handleCalculateAstros;
+    window.switchCalcTab = switchCalcTab;
 }

@@ -1,0 +1,95 @@
+{
+    "meta": {
+        "description": "Custos para evoluir Astros Convidados (Guests Stars) no Skullgirls Mobile",
+        "lastUpdated": "2026-01-29"
+    },
+    "custoPorNivel": {
+        "2": {
+            "gold": 25000,
+            "po": 0
+        },
+        "3": {
+            "gold": 50000,
+            "po": 0
+        },
+        "4": {
+            "gold": 75000,
+            "po": 0
+        },
+        "5": {
+            "gold": 100000,
+            "po": 0
+        },
+        "6": {
+            "gold": 125000,
+            "po": 500
+        },
+        "7": {
+            "gold": 150000,
+            "po": 0
+        },
+        "8": {
+            "gold": 175000,
+            "po": 0
+        },
+        "9": {
+            "gold": 200000,
+            "po": 0
+        },
+        "10": {
+            "gold": 225000,
+            "po": 0
+        },
+        "11": {
+            "gold": 250000,
+            "po": 1000
+        },
+        "12": {
+            "gold": 275000,
+            "po": 0
+        },
+        "13": {
+            "gold": 300000,
+            "po": 0
+        },
+        "14": {
+            "gold": 500000,
+            "po": 0
+        },
+        "15": {
+            "gold": 750000,
+            "po": 0
+        },
+        "16": {
+            "gold": 1000000,
+            "po": 2500
+        }
+    },
+    "totalPorRaridade": {
+        "bronze": {
+            "nivelMax": 6,
+            "gold": 375000,
+            "po": 500
+        },
+        "prata": {
+            "nivelMax": 11,
+            "gold": 750000,
+            "po": 1000
+        },
+        "ouro": {
+            "nivelMax": 16,
+            "gold": 1875000,
+            "po": 2500
+        },
+        "diamante": {
+            "nivelMax": 16,
+            "gold": 1875000,
+            "po": 0,
+            "nota": "Diamantes não precisam de pó de evolução"
+        }
+    },
+    "descricao": {
+        "gold": "Moedas (coins) necessárias",
+        "po": "Pó de evolução necessário"
+    }
+}

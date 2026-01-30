@@ -11,7 +11,12 @@ const cache = {
     characters: null,
     catalysts: null,
     statistics: null,
-    tierData: null
+    tierData: null,
+    // Stats-specific caches
+    golpes: null,
+    astros: null,
+    teonitas: null,
+    cenarios: null
 };
 
 /**
@@ -123,7 +128,7 @@ export async function loadCatalysts() {
 }
 
 /**
- * Load statistics data
+ * Load statistics data (consolidated from multiple JSONs)
  * @returns {Promise<Object>} Statistics data
  */
 export async function loadStatistics() {
@@ -132,8 +137,20 @@ export async function loadStatistics() {
     }
 
     try {
-        const res = await fetch('data/estatisticas.json');
-        const data = await res.json();
+        // Load all stats JSONs in parallel
+        const [golpes, astros, teonitas, cenarios] = await Promise.all([
+            loadGolpesData(),
+            loadAstrosData(),
+            loadTeonitasData(),
+            loadCenariosData()
+        ]);
+
+        const data = {
+            golpes,
+            astros,
+            teonitas,
+            cenarios
+        };
 
         cache.statistics = data;
         setStatistics(data);
@@ -141,6 +158,74 @@ export async function loadStatistics() {
         return data;
     } catch (err) {
         console.error('Error loading statistics:', err);
+        return null;
+    }
+}
+
+/**
+ * Load golpes (moves) cost data
+ * @returns {Promise<Object>} Golpes data
+ */
+export async function loadGolpesData() {
+    if (cache.golpes) return cache.golpes;
+
+    try {
+        const res = await fetch('data/stats/golpes.json');
+        cache.golpes = await res.json();
+        return cache.golpes;
+    } catch (err) {
+        console.error('Error loading golpes data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load astros (guest stars) cost data
+ * @returns {Promise<Object>} Astros data
+ */
+export async function loadAstrosData() {
+    if (cache.astros) return cache.astros;
+
+    try {
+        const res = await fetch('data/stats/astros.json');
+        cache.astros = await res.json();
+        return cache.astros;
+    } catch (err) {
+        console.error('Error loading astros data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load teonitas (currency) data
+ * @returns {Promise<Object>} Teonitas data
+ */
+export async function loadTeonitasData() {
+    if (cache.teonitas) return cache.teonitas;
+
+    try {
+        const res = await fetch('data/stats/teonitas.json');
+        cache.teonitas = await res.json();
+        return cache.teonitas;
+    } catch (err) {
+        console.error('Error loading teonitas data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load cenarios (earnings scenarios) data
+ * @returns {Promise<Object>} Cenarios data
+ */
+export async function loadCenariosData() {
+    if (cache.cenarios) return cache.cenarios;
+
+    try {
+        const res = await fetch('data/stats/cenarios.json');
+        cache.cenarios = await res.json();
+        return cache.cenarios;
+    } catch (err) {
+        console.error('Error loading cenarios data:', err);
         return null;
     }
 }
@@ -170,4 +255,8 @@ export function clearCache() {
     cache.catalysts = null;
     cache.statistics = null;
     cache.tierData = null;
+    cache.golpes = null;
+    cache.astros = null;
+    cache.teonitas = null;
+    cache.cenarios = null;
 }
