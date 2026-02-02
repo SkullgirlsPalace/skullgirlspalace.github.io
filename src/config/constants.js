@@ -67,12 +67,12 @@ export const CHARACTER_COLORS = {
 };
 
 export const ELEMENT_MAP = {
-    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/icones/ElementalIconFire.png' },
-    'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/icones/ElementalIconWater.png' },
-    'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/icones/ElementalIconWind.png' },
-    'Luz': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/icones/ElementalIconLight.png' },
-    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/icones/ElementalIconDark.png' },
-    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/icones/ElementalIconNeutral.png' }
+    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/icones/ElementalFireBackless.png', statIcon: 'img/icones/ElementalIconFire.png' },
+    'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/icones/ElementalWaterBackless.png', statIcon: 'img/icones/ElementalIconWater.png' },
+    'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/icones/ElementalWindBackless.png', statIcon: 'img/icones/ElementalIconWind.png' },
+    'Luz': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/icones/ElementalLightBackless.png', statIcon: 'img/icones/ElementalIconLight.png' },
+    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/icones/ElementalDarkBackless.png', statIcon: 'img/icones/ElementalIconDark.png' },
+    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/icones/ElementalNeutralBackless.png', statIcon: 'img/icones/ElementalIconNeutral.png' }
 };
 
 export const RARITY_ORDER = { 'diamante': 4, 'ouro': 3, 'prata': 2, 'bronze': 1 };
@@ -83,6 +83,13 @@ export const RARITY_LABELS = {
     'ouro': 'OURO',
     'prata': 'PRATA',
     'bronze': 'BRONZE'
+};
+
+export const RARITY_ICONS = {
+    'diamante': 'img/icones/icone_diamante.png',
+    'ouro': 'img/icones/icone_ouro.png',
+    'prata': 'img/icones/icone_prata.png',
+    'bronze': 'img/icones/icone_bronze.png'
 };
 
 export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'U', 'TBD'];

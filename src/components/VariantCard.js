@@ -3,7 +3,7 @@
 // Renders a detailed variant card with stats and abilities
 // =====================================================
 
-import { ELEMENT_MAP, RARITY_LABELS } from '../config/constants.js';
+import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal } from '../utils/formatters.js';
 
@@ -18,7 +18,8 @@ export function createVariantCard(variant, charKey, index = 0) {
     const elementInfo = ELEMENT_MAP[variant.element] || {
         icon: '⚪',
         class: 'neutral',
-        iconPath: 'img/icones/ElementalIconNeutral.png'
+        iconPath: 'img/icones/ElementalIconNeutral.png',
+        statIcon: 'img/icones/ElementalIconNeutral.png'
     };
 
     // Get portrait URL - prioritize local backup, fallback to JSON, then default
@@ -30,19 +31,20 @@ export function createVariantCard(variant, charKey, index = 0) {
     // Format ability description
     const abilityDesc = formatText(variant.signature_ability?.description || 'Sem descrição');
 
-    // Format arsenal
-    const arsenal = formatArsenal(variant.recommended_arsenal || '');
+    // Format arsenal with images
+    const arsenalHTML = formatArsenal(variant.recommended_arsenal || '', charKey);
 
     // Get rarity display name
     const rarityKey = variant.rarityKey || 'diamante';
     const rarityLabel = RARITY_LABELS[rarityKey] || rarityKey.toUpperCase();
+    const rarityIcon = RARITY_ICONS[rarityKey] || '';
 
     // Unique ID for this card's tabs
     const cardId = `variant-${charKey}-${index}`;
 
-    // Check what content is available
-    const hasBuildContent = variant.marquee_ability || variant.recommended_build;
-    const hasArsenalContent = arsenal;
+    // Build content - check if we have build or arsenal data
+    const buildText = variant.recommended_build || '';
+    const hasBuildContent = !!(buildText || arsenalHTML);
 
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
@@ -57,7 +59,10 @@ export function createVariantCard(variant, charKey, index = 0) {
                             <img src="${elementInfo.iconPath}" alt="${variant.element}">
                             ${variant.element.toUpperCase()}
                         </span>
-                        <span class="rarity-badge ${rarityKey}">${rarityLabel}</span>
+                        <span class="rarity-badge ${rarityKey}">
+                            ${rarityIcon ? `<img src="${rarityIcon}" alt="${rarityLabel}" class="rarity-icon">` : ''}
+                            ${rarityLabel}
+                        </span>
                     </div>
                 </div>
                 
@@ -68,68 +73,60 @@ export function createVariantCard(variant, charKey, index = 0) {
                         <span class="value">${variant.stats?.attack || '-'}</span>
                     </div>
                     <div class="stat-item">
-                        <img src="img/icones/HealthIcon.png" alt="VD" class="stat-icon">
-                        <span class="label">VD</span>
+                        <img src="img/icones/HealthIcon.png" alt="Vida" class="stat-icon">
+                        <span class="label">Vida</span>
                         <span class="value">${variant.stats?.health || '-'}</span>
                     </div>
                     <div class="stat-item">
-                        <img src="${elementInfo.iconPath}" alt="${variant.element}" class="stat-icon">
+                        <img src="${elementInfo.statIcon}" alt="${variant.element}" class="stat-icon">
                         <span class="label">Poder</span>
                         <span class="value">${variant.stats?.power || '-'}</span>
                     </div>
                 </div>
                 
-                <!-- Card Tabs Navigation -->
-                <div class="variant-tabs" data-card-id="${cardId}">
-                    <button class="variant-tab-btn active" data-tab="habilidade" onclick="switchVariantTab('${cardId}', 'habilidade')">
-                        🎯 Habilidade
+                <!-- Tab Navigation -->
+                <div class="variant-tabs">
+                    <button class="variant-tab-btn active" data-tab="habilidade" data-card="${cardId}">
+                        Habilidade
                     </button>
                     ${hasBuildContent ? `
-                        <button class="variant-tab-btn" data-tab="build" onclick="switchVariantTab('${cardId}', 'build')">
-                            📊 Build
-                        </button>
-                    ` : ''}
-                    ${hasArsenalContent ? `
-                        <button class="variant-tab-btn" data-tab="arsenal" onclick="switchVariantTab('${cardId}', 'arsenal')">
-                            🎒 Arsenal
+                        <button class="variant-tab-btn" data-tab="build" data-card="${cardId}">
+                            Build
                         </button>
                     ` : ''}
                 </div>
                 
-                <!-- Tab Contents -->
-                <div class="variant-tab-contents" data-card-id="${cardId}">
-                    <!-- Habilidade Tab (Default Active) -->
+                <div class="variant-tab-contents" id="${cardId}-contents">
+                    <!-- Habilidade Tab (Signature + Marquee) -->
                     <div class="variant-tab-content active" data-tab="habilidade">
                         <div class="ability-box">
-                            <h4>🎯 ${variant.signature_ability?.name || 'Habilidade Especial'}</h4>
+                            <h4>${variant.signature_ability?.name || 'Habilidade Especial'}</h4>
                             <p>${abilityDesc}</p>
                         </div>
+                        
+                        ${variant.marquee_ability ? `
+                            <div class="ability-box marquee">
+                                <h4>SUPERIOR RECOMENDADA: ${variant.marquee_ability.toUpperCase()}</h4>
+                            </div>
+                        ` : ''}
                     </div>
                     
-                    <!-- Build Tab -->
+                    <!-- Build Tab (Build + Arsenal) -->
                     ${hasBuildContent ? `
                         <div class="variant-tab-content" data-tab="build">
-                            ${variant.marquee_ability ? `
-                                <div class="ability-box marquee">
-                                    <h4>⭐ Superior Recomendada: ${variant.marquee_ability}</h4>
-                                </div>
-                            ` : ''}
-                            ${variant.recommended_build ? `
+                            ${buildText ? `
                                 <div class="ability-box build">
-                                    <h4>📊 Build Recomendada</h4>
-                                    <p>${variant.recommended_build}</p>
+                                    <h4>BUILD RECOMENDADA</h4>
+                                    <p>${buildText}</p>
                                 </div>
                             ` : ''}
-                        </div>
-                    ` : ''}
-                    
-                    <!-- Arsenal Tab -->
-                    ${hasArsenalContent ? `
-                        <div class="variant-tab-content" data-tab="arsenal">
-                            <div class="arsenal-box">
-                                <h4>🎒 Arsenal Recomendado</h4>
-                                <div class="arsenal-list">${arsenal}</div>
-                            </div>
+                            
+                            ${arsenalHTML ? `
+                                <div class="ability-box arsenal">
+                                    <h4>ARSENAL RECOMENDADO</h4>
+                                    <div class="arsenal-list">${arsenalHTML}</div>
+                                </div>
+                            ` : ''}
                         </div>
                     ` : ''}
                 </div>
@@ -156,4 +153,41 @@ export function renderVariants(containerId, variants, charKey) {
     container.innerHTML = variants
         .map((variant, index) => createVariantCard(variant, charKey, index))
         .join('');
+
+    // Attach event listeners for tab switching
+    container.querySelectorAll('.variant-tab-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const cardId = this.dataset.card;
+            const tabName = this.dataset.tab;
+            switchVariantTab(cardId, tabName);
+        });
+    });
 }
+
+/**
+ * Switch variant card tab
+ * @param {string} cardId - Card ID
+ * @param {string} tabName - Tab name to switch to
+ */
+function switchVariantTab(cardId, tabName) {
+    const contents = document.getElementById(`${cardId}-contents`);
+    if (!contents) return;
+
+    // Update tab buttons
+    const card = contents.closest('.variant-card');
+    if (card) {
+        card.querySelectorAll('.variant-tab-btn').forEach(btn => {
+            const isActive = btn.dataset.tab === tabName;
+            btn.classList.toggle('active', isActive);
+        });
+    }
+
+    // Update tab contents
+    contents.querySelectorAll('.variant-tab-content').forEach(content => {
+        const isActive = content.dataset.tab === tabName;
+        content.classList.toggle('active', isActive);
+    });
+}
+
+// Keep global function for backwards compatibility
+window.switchVariantTab = switchVariantTab;

@@ -27,19 +27,43 @@ export function formatText(text) {
     return text;
 }
 
+import { getMoveImage } from '../data/movesimages.js';
+
 /**
- * Format arsenal string into HTML spans
+ * Format arsenal string into HTML with move images
  * @param {string} arsenal - Comma-separated arsenal items
- * @returns {string} HTML string with span elements
+ * @param {string} charKey - Character key for move images
+ * @returns {string} HTML string with move items
  */
-export function formatArsenal(arsenal) {
+export function formatArsenal(arsenal, charKey = null) {
     if (!arsenal) return '';
 
     // Remove Discord emoji codes
     arsenal = arsenal.replace(/<:[^:]+:\d+>/g, '');
 
-    // Split by comma or similar
+    // Split by comma
     const items = arsenal.split(/,\s*/).filter(item => item.trim());
+
+    if (charKey) {
+        return items.map(item => {
+            const moveName = item.trim();
+            const moveImage = getMoveImage(charKey, moveName);
+
+            if (moveImage) {
+                return `
+                    <div class="arsenal-move">
+                        <img src="${moveImage}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
+                        <span class="move-name">${moveName}</span>
+                    </div>
+                `;
+            }
+            return `
+                <div class="arsenal-move">
+                    <span class="move-name">${moveName}</span>
+                </div>
+            `;
+        }).join('');
+    }
 
     return items.map(item => `<span>${item.trim()}</span>`).join('');
 }

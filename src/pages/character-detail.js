@@ -40,27 +40,28 @@ export function render(charKey, initialTab = 'builds') {
 
     return `
         <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
-            <div class="section-header">
-                <button class="btn-back" onclick="navigateTo('characters')">
-                    ←
+            <div class="character-detail-header">
+                <button class="btn-back pill" onclick="navigateTo('characters')">
+                    — Voltar
                 </button>
-                <div class="char-title">
+                
+                <div class="char-title-centered">
                     <img src="${masteryIcon}" alt="${charData.character}" class="char-mastery-icon"
                          onerror="this.src='img/icones/Annie_MasteryIcon.png'">
                     <h2>${charData.character.toUpperCase()}</h2>
                 </div>
-            </div>
-
-            <!-- Tab Navigation -->
-            <div class="detail-tabs">
-                <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
-                        onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
-                    📦 Builds
-                </button>
-                <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
-                        onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
-                    🏆 Tier List
-                </button>
+                
+                <!-- Tab Navigation -->
+                <div class="detail-tabs">
+                    <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
+                            onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
+                        BUILDS
+                    </button>
+                    <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
+                            onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
+                        TIER LIST
+                    </button>
+                </div>
             </div>
 
             ${createFilterBar()}
@@ -207,3 +208,6 @@ export async function switchTab(charKey, tab) {
     const { updateFilterUI } = await import('../components/FilterBar.js');
     updateFilterUI();
 }
+
+// Global function for tab switching
+window.switchDetailTab = switchTab;

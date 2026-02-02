@@ -13,8 +13,12 @@ export function render() {
             <div class="hub-container">
                 <!-- Hero Section -->
                 <div class="hub-hero">
-                    <h1>SKULLGIRLS</h1>
-                    <p>MOBILE WIKI</p>
+                    <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="hub-about-link">
+                        <img src="img/icones/IconInfo.png" alt="">
+                        <span>SOBRE</span>
+                    </a>
+                    <h1>Skullgirls Mobile Wiki</h1>
+                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile.</p>
                 </div>
 
                 <!-- Menu Buttons -->
@@ -25,25 +29,11 @@ export function render() {
                     <button class="hub-btn" onclick="navigateTo('catalysts')">
                         <span>CATALISADORES</span>
                     </button>
-                    <button class="hub-btn" onclick="navigateTo('tierlist')">
-                        <span>TIER LIST</span>
-                    </button>
                     <button class="hub-btn" onclick="navigateTo('stats')">
                         <span>ESTATÍSTICAS</span>
                     </button>
                 </div>
 
-                <!-- Community Links -->
-                <div class="hub-footer">
-                    <div class="hero-buttons">
-                        <a href="https://discord.gg/nsGXabuCSe" target="_blank" class="btn btn-primary">
-                            💬 Discord
-                        </a>
-                        <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank" class="btn btn-secondary">
-                            📦 Repositório
-                        </a>
-                    </div>
-                </div>
             </div>
         </section>
     `;

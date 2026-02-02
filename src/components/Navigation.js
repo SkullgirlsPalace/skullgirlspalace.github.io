@@ -23,7 +23,6 @@ export function createNavbar() {
                 <li><a href="javascript:void(0)" onclick="navigateTo('')">Inicio</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('characters')">Personagens</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('catalysts')">Catalisadores</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('tierlist')">Tier List</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Estatísticas</a></li>
             </ul>
             <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
@@ -112,8 +111,12 @@ export function updateNavbarVisibility(section) {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
 
-    // Always show navbar
-    navbar.classList.remove('hidden-nav');
+    // Hide navbar on home screen
+    if (section === '' || section === 'landing-hub') {
+        navbar.classList.add('hidden-nav');
+    } else {
+        navbar.classList.remove('hidden-nav');
+    }
 }
 
 /**
