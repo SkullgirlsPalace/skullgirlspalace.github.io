@@ -206,7 +206,7 @@
     ],
     "prata": [
       {
-        "name": "",
+        "name": "Rosinha",
         "title_formatted": "Rosinha  <:Fogo:1389703188525092934> <:prata:1407839105169227957> ",
         "element": "Fogo",
         "color_hex": "#ff0000",
@@ -228,7 +228,7 @@
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Hora do Rango **BB3**, <:Blockbuster:1434999898385944606> Trava-Língua, <:GolpeEspecial:1434999859768987748> Soprando Bolhas, <:GolpeEspecial:1434999859768987748> Moedor de Sal,, <:GolpeEspecial:1434999859768987748> Explosão"
       },
       {
-        "name": "",
+        "name": "Pirata de Poça",
         "title_formatted": "Pirata de Poça <:Agua:1389703224210231437> <:prata:1407839105169227957>",
         "element": "Água",
         "color_hex": "#0080ff",
@@ -250,7 +250,7 @@
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Hora do Rango **BB3**, <:Blockbuster:1434999898385944606> Trava-Língua, <:Blockbuster:1434999898385944606> Refluxo Ácido, <:GolpeEspecial:1434999859768987748> Bolha Boba, <:GolpeEspecial:1434999859768987748> Moedor de Sal"
       },
       {
-        "name": "",
+        "name": "Mordida Doce",
         "title_formatted": "Mordida Doce  <:Ar:1389703277532287066> <:prata:1407839105169227957>",
         "element": "Ar",
         "color_hex": "#00ff00",
@@ -272,7 +272,7 @@
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Hora do Rango **BB3**, <:Blockbuster:1434999898385944606> Trava-Língua, <:Blockbuster:1434999898385944606> Refluxo Ácido, <:GolpeEspecial:1434999859768987748> Bolha Boba, <:GolpeEspecial:1434999859768987748> Moedor de Sal"
       },
       {
-        "name": "",
+        "name": "Criança Selvagem",
         "title_formatted": "Criança Selvagem  <:Trevas:1389703142848991364> <:prata:1407839105169227957>",
         "element": "Trevas",
         "color_hex": "#800080",
@@ -296,7 +296,7 @@
     ],
     "bronze": [
       {
-        "name": "",
+        "name": "Pitada de Raiva",
         "title_formatted": "Pitada de Raiva  <:Luz:1389703315167907902> <:bronze:1407839009664798801>",
         "element": "Luz",
         "color_hex": "#ffff00",
@@ -318,7 +318,7 @@
         "recommended_arsenal": "<:Blockbuster:1434999898385944606> Lente Projetora, <:Blockbuster:1434999898385944606> Trava-Língua, <:Blockbuster:1434999898385944606> Refluxo Ácido, <:GolpeEspecial:1434999859768987748> Bolha Boba, <:GolpeEspecial:1434999859768987748> Moedor de Sal"
       },
       {
-        "name": "",
+        "name": "Pitada de Raiva",
         "title_formatted": "Vento Ventania <:Ar:1389703277532287066> <:bronze:1407839009664798801>",
         "element": "Ar",
         "color_hex": "#00ff00",

@@ -1,0 +1,100 @@
+{
+    "meta": {
+        "description": "Fontes de Teonita mensal no Skullgirls Mobile",
+        "lastUpdated": "2026-01-29"
+    },
+    "fontesMensais": {
+        "calendario": {
+            "nome": "Calendário Diário",
+            "valor": 250,
+            "tipo": "fixo",
+            "descricao": "Recompensa do calendário de login"
+        },
+        "dpMensal": {
+            "nome": "DP Mensal",
+            "valor": 550,
+            "tipo": "fixo",
+            "descricao": "Recompensa da Disputa Premiada Mensal"
+        },
+        "diarias": {
+            "nome": "Missões Diárias",
+            "valor": 1830,
+            "tipo": "fixo",
+            "descricao": "Teonita acumulada das missões diárias (61/dia x 30 dias)"
+        },
+        "dpPersonagemOuro": {
+            "nome": "DP Personagem (Ouro)",
+            "valor": 465,
+            "tipo": "variavel",
+            "descricao": "Média mensal nas DPs de personagem faixa Ouro"
+        },
+        "dpPersonagemDiamante": {
+            "nome": "DP Personagem (Diamante)",
+            "valor": 930,
+            "tipo": "variavel",
+            "descricao": "Média mensal nas DPs de personagem faixa Diamante"
+        },
+        "passeFree": {
+            "nome": "Passe de Batalha (Free)",
+            "valor": 0,
+            "tipo": "passe",
+            "descricao": "Versão gratuita do passe"
+        },
+        "passePremium": {
+            "nome": "Passe de Batalha (Premium)",
+            "valor": 200,
+            "tipo": "passe",
+            "descricao": "Versão premium do passe"
+        },
+        "passePremiumPlus": {
+            "nome": "Passe de Batalha (Premium+)",
+            "valor": 400,
+            "tipo": "passe",
+            "descricao": "Versão premium+ do passe"
+        },
+        "guilda": {
+            "nome": "Recompensas de Guilda",
+            "valor": 1180,
+            "tipo": "variavel",
+            "descricao": "Teonita de guilda ativa (raids + missões)"
+        }
+    },
+    "cenarios": {
+        "f2pAtivo": {
+            "nome": "F2P Ativo",
+            "total": 4675,
+            "fontes": [
+                "calendario",
+                "dpMensal",
+                "diarias",
+                "dpPersonagemDiamante",
+                "passeFree",
+                "guilda"
+            ]
+        },
+        "premiumAtivo": {
+            "nome": "Premium Ativo",
+            "total": 4875,
+            "fontes": [
+                "calendario",
+                "dpMensal",
+                "diarias",
+                "dpPersonagemDiamante",
+                "passePremium",
+                "guilda"
+            ]
+        },
+        "premiumPlusAtivo": {
+            "nome": "Premium+ Ativo",
+            "total": 5075,
+            "fontes": [
+                "calendario",
+                "dpMensal",
+                "diarias",
+                "dpPersonagemDiamante",
+                "passePremiumPlus",
+                "guilda"
+            ]
+        }
+    }
+}
