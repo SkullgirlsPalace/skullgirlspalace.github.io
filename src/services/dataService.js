@@ -16,7 +16,10 @@ const cache = {
     golpes: null,
     astros: null,
     teonitas: null,
-    cenarios: null
+    disputasPremiadas: null,
+    reinosParalelos: null,
+    ganhosFixos: null,
+    guildas: null
 };
 
 /**
@@ -138,18 +141,24 @@ export async function loadStatistics() {
 
     try {
         // Load all stats JSONs in parallel
-        const [golpes, astros, teonitas, cenarios] = await Promise.all([
+        const [golpes, astros, teonitas, disputasPremiadas, reinosParalelos, ganhosFixos, guildas] = await Promise.all([
             loadGolpesData(),
             loadAstrosData(),
             loadTeonitasData(),
-            loadCenariosData()
+            loadDisputasPremiadasData(),
+            loadReinosParalelosData(),
+            loadGanhosFixosData(),
+            loadGuildasData()
         ]);
 
         const data = {
             golpes,
             astros,
             teonitas,
-            cenarios
+            disputasPremiadas,
+            reinosParalelos,
+            ganhosFixos,
+            guildas
         };
 
         cache.statistics = data;
@@ -214,18 +223,69 @@ export async function loadTeonitasData() {
 }
 
 /**
- * Load cenarios (earnings scenarios) data
- * @returns {Promise<Object>} Cenarios data
+ * Load disputas premiadas (prize fights) data
+ * @returns {Promise<Object>} Disputas Premiadas data
  */
-export async function loadCenariosData() {
-    if (cache.cenarios) return cache.cenarios;
+export async function loadDisputasPremiadasData() {
+    if (cache.disputasPremiadas) return cache.disputasPremiadas;
 
     try {
-        const res = await fetch('data/stats/cenarios.json');
-        cache.cenarios = await res.json();
-        return cache.cenarios;
+        const res = await fetch('data/stats/disputas_premiadas.json');
+        cache.disputasPremiadas = await res.json();
+        return cache.disputasPremiadas;
     } catch (err) {
-        console.error('Error loading cenarios data:', err);
+        console.error('Error loading disputas premiadas data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load reinos paralelos (parallel realms) data
+ * @returns {Promise<Object>} Reinos Paralelos data
+ */
+export async function loadReinosParalelosData() {
+    if (cache.reinosParalelos) return cache.reinosParalelos;
+
+    try {
+        const res = await fetch('data/stats/reinos_paralelos.json');
+        cache.reinosParalelos = await res.json();
+        return cache.reinosParalelos;
+    } catch (err) {
+        console.error('Error loading reinos paralelos data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load ganhos fixos (fixed earnings) data
+ * @returns {Promise<Object>} Ganhos Fixos data
+ */
+export async function loadGanhosFixosData() {
+    if (cache.ganhosFixos) return cache.ganhosFixos;
+
+    try {
+        const res = await fetch('data/stats/ganhos_fixos.json');
+        cache.ganhosFixos = await res.json();
+        return cache.ganhosFixos;
+    } catch (err) {
+        console.error('Error loading ganhos fixos data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load guildas (guilds) data
+ * @returns {Promise<Object>} Guildas data
+ */
+export async function loadGuildasData() {
+    if (cache.guildas) return cache.guildas;
+
+    try {
+        const res = await fetch('data/stats/guildas.json');
+        cache.guildas = await res.json();
+        return cache.guildas;
+    } catch (err) {
+        console.error('Error loading guildas data:', err);
         return null;
     }
 }
@@ -258,5 +318,8 @@ export function clearCache() {
     cache.golpes = null;
     cache.astros = null;
     cache.teonitas = null;
-    cache.cenarios = null;
+    cache.disputasPremiadas = null;
+    cache.reinosParalelos = null;
+    cache.ganhosFixos = null;
+    cache.guildas = null;
 }

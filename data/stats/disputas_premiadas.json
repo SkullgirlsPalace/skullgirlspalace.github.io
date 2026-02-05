@@ -1,0 +1,127 @@
+{
+    "meta": {
+        "description": "Dados de Disputas Premiadas (Prize Fights) - Recompensas por Rank",
+        "lastUpdated": "2026-02-04"
+    },
+    "personagem": {
+        "regra": {
+            "frequencia": "semanal",
+            "ocorrenciasMensais": 9
+        },
+        "bronze": {
+            "nome": "Bronze",
+            "rankings": {
+                "top10": {
+                    "canopyCoins": 45000
+                },
+                "top10percent": {
+                    "canopyCoins": 35000
+                },
+                "top30percent": {
+                    "canopyCoins": 25000
+                },
+                "top60percent": {
+                    "canopyCoins": 15000
+                },
+                "padrao": {
+                    "canopyCoins": 51250,
+                    "teonita": 55
+                }
+            }
+        },
+        "prata": {
+            "nome": "Prata",
+            "rankings": {
+                "top10": {
+                    "canopyCoins": 90000
+                },
+                "top10percent": {
+                    "canopyCoins": 70000
+                },
+                "top30percent": {
+                    "canopyCoins": 50000
+                },
+                "top60percent": {
+                    "canopyCoins": 30000
+                },
+                "padrao": {
+                    "canopyCoins": 102500,
+                    "teonita": 55
+                }
+            }
+        },
+        "ouro": {
+            "nome": "Ouro",
+            "rankings": {
+                "top100": {
+                    "canopyCoins": 180000
+                },
+                "top10percent": {
+                    "canopyCoins": 140000
+                },
+                "top30percent": {
+                    "canopyCoins": 100000
+                },
+                "top60percent": {
+                    "canopyCoins": 60000
+                },
+                "padrao": {
+                    "canopyCoins": 205000,
+                    "teonita": 55
+                }
+            }
+        },
+        "diamante": {
+            "nome": "Diamante",
+            "rankings": {
+                "top100": {
+                    "canopyCoins": 315000
+                },
+                "top10percent": {
+                    "canopyCoins": 245000
+                },
+                "top30percent": {
+                    "canopyCoins": 175000
+                },
+                "top60percent": {
+                    "canopyCoins": 105000
+                },
+                "padrao": {
+                    "canopyCoins": 400000,
+                    "teonita": 100
+                }
+            }
+        }
+    },
+    "mensal": {
+        "nome": "Disputa Mensal",
+        "regra": {
+            "frequencia": "mensal",
+            "ocorrenciasMensais": 1
+        },
+        "rankings": {
+            "padrao": {
+                "canopyCoins": 4965000,
+                "teonita": 550
+            }
+        }
+    },
+    "medicis": {
+        "nome": "Disputa dos Médicis",
+        "regra": {
+            "frequencia": "semanal",
+            "ocorrenciasMensais": 4
+        },
+        "rankings": {
+            "top100": {
+                "canopyCoins": 500000
+            },
+            "top10percent": {
+                "canopyCoins": 250000
+            },
+            "padrao": {
+                "canopyCoins": 1055000
+            }
+        }
+    }
+}

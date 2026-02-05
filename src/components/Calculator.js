@@ -18,7 +18,7 @@ export function initCalculator(data) {
 }
 
 /**
- * Create earnings calculator HTML
+ * Create earnings calculator HTML with toggle buttons
  * @returns {string} HTML string
  */
 export function createEarningsCalculator() {
@@ -28,66 +28,117 @@ export function createEarningsCalculator() {
             <p class="calc-subtitle">Configure seu perfil para calcular ganhos em coins e teonita</p>
 
             <div class="calc-form">
+                <!-- Fixed Earnings Section -->
                 <div class="calc-section">
-                    <h4>📊 Disputa Premiada</h4>
-                    
-                    <label class="calc-checkbox">
-                        <input type="checkbox" id="calc-dp-mensal" checked>
-                        <span>Participar da DP Mensal</span>
-                    </label>
-
-                    <label class="calc-checkbox">
-                        <input type="checkbox" id="calc-dp-perso" checked>
-                        <span>Participar das DPs de Personagem</span>
-                    </label>
-
-                    <label class="calc-select">
-                        <span>Faixa de DP:</span>
-                        <select id="calc-dp-faixa">
-                            <option value="dima10">Diamante Top 10%</option>
-                            <option value="dima30">Diamante Top 30%</option>
-                            <option value="ouro">Ouro</option>
-                        </select>
-                    </label>
+                    <h4>📅 Fontes Fixas</h4>
+                    <div class="toggle-group" id="fixed-toggles">
+                        <button class="toggle-btn active" data-source="diarias" data-type="fixed">
+                            Eventos Diários
+                        </button>
+                        <button class="toggle-btn active" data-source="calendario" data-type="fixed">
+                            Calendário
+                        </button>
+                        <button class="toggle-btn active" data-source="site" data-type="fixed">
+                            Site
+                        </button>
+                        <button class="toggle-btn active" data-source="guildaDiaria" data-type="fixed">
+                            Missões de Guilda
+                        </button>
+                    </div>
                 </div>
 
-                <div class="calc-section">
-                    <h4>🏰 Reinos Paralelos </h4>
-                    
-                    <label class="calc-checkbox">
-                        <input type="checkbox" id="calc-reinos" checked>
-                        <span>Fazer Reinos</span>
-                    </label>
-
-                    <label class="calc-select">
-                        <span>Dificuldade:</span>
-                        <select id="calc-reinos-dif">
-                            <option value="pesadeloMax">Pesadelo (máximo)</option>
-                            <option value="pesadeloMin">Pesadelo (mínimo)</option>
-                            <option value="semdoMax">Sem Dó (máximo)</option>
-                            <option value="semdoMin">Sem Dó (mínimo)</option>
-                        </select>
-                    </label>
-                </div>
-
+                <!-- Battle Pass Section -->
                 <div class="calc-section">
                     <h4>🎫 Passe de Batalha</h4>
-                    <label class="calc-select">
-                        <span>Tipo de Passe:</span>
-                        <select id="calc-passe">
-                            <option value="free">Grátis (F2P)</option>
-                            <option value="premium">Premium</option>
-                            <option value="premiumPlus">Premium+</option>
-                        </select>
-                    </label>
+                    <div class="toggle-group exclusive" id="passe-toggles">
+                        <button class="toggle-btn active" data-source="gratis" data-type="passe">Grátis</button>
+                        <button class="toggle-btn" data-source="premium" data-type="passe">Premium</button>
+                    </div>
                 </div>
 
+                <!-- Prize Fights Section -->
+                <div class="calc-section">
+                    <h4>📊 Disputa Premiada (DP)</h4>
+                    
+                    <span class="toggle-label">DP Personagem (Faixa):</span>
+                    <div class="toggle-group exclusive" id="dp-faixa-toggles">
+                        <button class="toggle-btn" data-source="bronze" data-type="dpFaixa">Bronze</button>
+                        <button class="toggle-btn" data-source="prata" data-type="dpFaixa">Prata</button>
+                        <button class="toggle-btn" data-source="ouro" data-type="dpFaixa">Ouro</button>
+                        <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa">Diamante</button>
+                        <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">Não faço</button>
+                    </div>
+
+                    <span class="toggle-label">DP Personagem (Ranking):</span>
+                    <div class="toggle-group exclusive" id="dp-rank-toggles">
+                        <button class="toggle-btn" data-source="top10percent" data-type="dpRank">Top 10%</button>
+                        <button class="toggle-btn active" data-source="top30percent" data-type="dpRank">Top 30%</button>
+                        <button class="toggle-btn" data-source="top60percent" data-type="dpRank">Top 60%</button>
+                        <button class="toggle-btn" data-source="outros" data-type="dpRank">Outros</button>
+                    </div>
+
+                    <span class="toggle-label">DP Mensal:</span>
+                    <div class="toggle-group" id="dp-mensal-toggles">
+                        <button class="toggle-btn active" data-source="mensal" data-type="dpMensal">
+                            Participar
+                        </button>
+                    </div>
+                    
+                    <span class="toggle-label">DP Médicis:</span>
+                    <div class="toggle-group exclusive" id="dp-medicis-toggles">
+                        <button class="toggle-btn" data-source="top100" data-type="dpMedicis">Top 100</button>
+                        <button class="toggle-btn" data-source="top10percent" data-type="dpMedicis">Top 10%</button>
+                        <button class="toggle-btn active" data-source="outros" data-type="dpMedicis">Outros</button>
+                        <button class="toggle-btn off" data-source="nenhum" data-type="dpMedicis">Não faço</button>
+                    </div>
+                </div>
+
+                <!-- Parallel Realms Section -->
+                <div class="calc-section">
+                    <h4>🏰 Reinos Paralelos</h4>
+                    <span class="toggle-label">Dificuldade:</span>
+                    <div class="toggle-group exclusive" id="reinos-dif-toggles">
+                        <button class="toggle-btn" data-source="basico" data-type="reinosDif">Básico</button>
+                        <button class="toggle-btn" data-source="avancado" data-type="reinosDif">Avançado</button>
+                        <button class="toggle-btn" data-source="especialista" data-type="reinosDif">Especialista</button>
+                        <button class="toggle-btn" data-source="mestre" data-type="reinosDif">Mestre</button>
+                        <button class="toggle-btn" data-source="pesadelo" data-type="reinosDif">Pesadelo</button>
+                        <button class="toggle-btn active" data-source="semDo" data-type="reinosDif">Sem Dó</button>
+                        <button class="toggle-btn off" data-source="nenhum" data-type="reinosDif">Não faço</button>
+                    </div>
+                    <span class="toggle-label">Completude:</span>
+                    <div class="toggle-group exclusive" id="reinos-comp-toggles">
+                        <button class="toggle-btn" data-source="min" data-type="reinosComp">Mínimo</button>
+                        <button class="toggle-btn active" data-source="max" data-type="reinosComp">Máximo</button>
+                    </div>
+                </div>
+
+                <!-- Guilds Section -->
                 <div class="calc-section">
                     <h4>👥 Guilda</h4>
-                    <label class="calc-checkbox">
-                        <input type="checkbox" id="calc-guilda" checked>
-                        <span>Guilda Ativa (raids + missões)</span>
-                    </label>
+                    <div class="toggle-group" id="guilda-eventos-toggles">
+                        <button class="toggle-btn active" data-source="eventos" data-type="guildaEventos">
+                            Eventos de Guilda
+                        </button>
+                    </div>
+
+                    <span class="toggle-label">Tier de Batalha:</span>
+                    <div class="toggle-group exclusive" id="guilda-tier-toggles">
+                        <button class="toggle-btn" data-source="bronze" data-type="guildaTier">Bronze</button>
+                        <button class="toggle-btn" data-source="prata" data-type="guildaTier">Prata</button>
+                        <button class="toggle-btn" data-source="ouro" data-type="guildaTier">Ouro</button>
+                        <button class="toggle-btn active" data-source="diamante" data-type="guildaTier">Diamante</button>
+                        <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">Não participo</button>
+                    </div>
+
+                    <div id="diamante-slider-container" class="slider-container">
+                        <span class="toggle-label">Pontos da Guilda (Diamante): <span id="diamante-pontos-display">16000</span></span>
+                        <input type="range" id="diamante-pontos-slider" min="16000" max="30000" step="1000" value="16000" oninput="updateDiamanteSlider(this.value)">
+                        <div class="slider-labels">
+                            <span>16k</span>
+                            <span>30k</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -116,166 +167,204 @@ export function createEarningsCalculator() {
 }
 
 /**
- * Create costs calculator HTML
+ * Create costs calculator HTML - Unified version
  * @returns {string} HTML string
  */
 export function createCostsCalculator() {
     return `
         <div class="calculator-box costs-calc">
             <h3>📈 Custos de Evolução</h3>
-            <p class="calc-subtitle">Calcule quanto custa evoluir golpes e astros convidados</p>
+            <p class="calc-subtitle">Calcule quanto custa evoluir uma build completa</p>
 
-            <div class="calc-tabs">
-                <button class="calc-tab-btn active" data-tab="golpes" onclick="switchCalcTab('golpes')">
-                    ⚔️ Golpes
-                </button>
-                <button class="calc-tab-btn" data-tab="astros" onclick="switchCalcTab('astros')">
-                    ⭐ Astros
-                </button>
-            </div>
-
-            <!-- Golpes Tab -->
-            <div class="calc-tab-content active" data-tab="golpes">
-                <div class="calc-form">
-                    <label class="calc-select">
-                        <span>Nível Inicial:</span>
-                        <select id="golpe-nivel-ini">
-                            <option value="1">Nível 1</option>
-                            <option value="5">Nível 5</option>
-                            <option value="10">Nível 10</option>
-                        </select>
-                    </label>
-
-                    <label class="calc-select">
-                        <span>Nível Final:</span>
-                        <select id="golpe-nivel-fim">
-                            <option value="15" selected>Nível 15</option>
-                            <option value="10">Nível 10</option>
-                            <option value="5">Nível 5</option>
-                        </select>
-                    </label>
-
-                    <label class="calc-select">
-                        <span>Quantidade:</span>
-                        <select id="golpe-qtd">
-                            <option value="1">1 Golpe</option>
-                            <option value="5" selected>5 Golpes (build completa)</option>
-                        </select>
-                    </label>
-
-                    <label class="calc-checkbox">
-                        <input type="checkbox" id="golpe-shiny">
-                        <span>Golpe Shiny (50% de desconto)</span>
-                    </label>
+            <!-- GOLPES SECTION -->
+            <div class="calc-section">
+                <h4>⚔️ Golpes (5 por Build)</h4>
+                
+                <span class="toggle-label">Raridade do Personagem:</span>
+                <div class="toggle-group exclusive" id="golpe-raridade-toggles">
+                    <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade">Bronze</button>
+                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade">Prata</button>
+                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade">Ouro</button>
+                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade">Diamante</button>
+                    <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">Sem Golpes</button>
                 </div>
 
-                <button class="calc-btn" onclick="handleCalculateGolpes()">
-                    🧮 Calcular Custo
-                </button>
+                <div class="toggle-group" id="golpe-shiny-toggle">
+                    <button class="toggle-btn" data-source="shiny" data-type="golpeShiny">✨ Shiny (50% desconto)</button>
+                </div>
 
-                <div id="golpes-result" class="result-box hidden">
-                    <h4>💰 Custo Total</h4>
-                    <div class="result-card coins single">
-                        <span class="result-value" id="result-golpes">-</span>
-                        <span class="result-label">coins</span>
+                <span class="toggle-label">Nível Alvo:</span>
+                <div class="toggle-group exclusive" id="golpe-nivel-toggles">
+                    <button class="toggle-btn" data-source="9" data-type="golpeNivel">Lv 9</button>
+                    <button class="toggle-btn" data-source="12" data-type="golpeNivel">Lv 12</button>
+                    <button class="toggle-btn active" data-source="15" data-type="golpeNivel">Lv 15</button>
+                    <button class="toggle-btn" data-source="custom" data-type="golpeNivel">Customizado</button>
+                </div>
+
+                <div id="golpe-slider-container" class="slider-container" style="display: none;">
+                    <span class="toggle-label">Nível: <span id="golpe-nivel-display">2</span></span>
+                    <input type="range" id="golpe-nivel-slider" min="2" max="15" step="1" value="2" oninput="updateGolpeSlider(this.value)">
+                    <div class="slider-labels">
+                        <span>2</span>
+                        <span>15</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Astros Tab -->
-            <div class="calc-tab-content" data-tab="astros">
-                <div class="calc-form">
-                    <label class="calc-select">
-                        <span>Raridade do Astro:</span>
-                        <select id="astro-raridade">
-                            <option value="diamante">Diamante</option>
-                            <option value="ouro" selected>Ouro</option>
-                            <option value="prata">Prata</option>
-                            <option value="bronze">Bronze</option>
-                        </select>
-                    </label>
+            <!-- ASTROS SECTION -->
+            <div class="calc-section">
+                <h4>⭐ Astros Convidados (1 por Build)</h4>
 
-                    <label class="calc-select">
-                        <span>Quantidade:</span>
-                        <select id="astro-qtd">
-                            <option value="1" selected>1 Astro</option>
-                            <option value="3">3 Astros</option>
-                        </select>
-                    </label>
+                <span class="toggle-label">Raridade do Astro:</span>
+                <div class="toggle-group exclusive" id="astro-raridade-toggles">
+                    <button class="toggle-btn" data-source="bronze" data-type="astroRaridade">Bronze (Lv 5)</button>
+                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade">Prata (Lv 10)</button>
+                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade">Ouro (Lv 15)</button>
+                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade">Diamante (Lv 20)</button>
+                    <button class="toggle-btn" data-source="custom" data-type="astroRaridade">Customizado</button>
+                    <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">Sem Astro</button>
                 </div>
 
-                <button class="calc-btn" onclick="handleCalculateAstros()">
-                    🧮 Calcular Custo
-                </button>
+                <div class="toggle-group" id="astro-shiny-toggle">
+                    <button class="toggle-btn" data-source="shiny" data-type="astroShiny">✨ Shiny (50% desconto)</button>
+                </div>
 
-                <div id="astros-result" class="result-box hidden">
-                    <h4>💰 Custo Total</h4>
-                    <div class="result-grid">
-                        <div class="result-card coins">
-                            <span class="result-value" id="result-astros-gold">-</span>
-                            <span class="result-label">coins</span>
-                        </div>
-                        <div class="result-card evo-powder">
-                            <span class="result-value" id="result-astros-po">-</span>
-                            <span class="result-label">pó de evolução</span>
-                        </div>
+                <div id="astro-slider-container" class="slider-container" style="display: none;">
+                    <span class="toggle-label">Nível: <span id="astro-nivel-display">2</span></span>
+                    <input type="range" id="astro-nivel-slider" min="2" max="20" step="1" value="2" oninput="updateAstroSlider(this.value)">
+                    <div class="slider-labels">
+                        <span>2</span>
+                        <span>20</span>
                     </div>
                 </div>
+            </div>
+
+            <!-- UNIFIED CALCULATE BUTTON -->
+            <button class="calc-btn primary" onclick="handleCalculateBuildCost()">
+                🧮 Calcular Custo da Build
+            </button>
+
+            <!-- UNIFIED RESULTS -->
+            <div id="build-cost-result" class="result-box hidden">
+                <h4>💰 Custo Total da Build</h4>
+                <div id="build-cost-breakdown" class="breakdown-box styled"></div>
             </div>
         </div>
     `;
 }
 
 /**
- * Create scenarios comparison HTML
- * @returns {string} HTML string
+ * Update golpe slider display value
  */
-export function createScenariosTable() {
-    return `
-        <div class="calculator-box scenarios-box">
-            <h3>📋 Cenários de Referência</h3>
-            <p class="calc-subtitle">Compare diferentes perfis de jogadores</p>
-            <div id="scenarios-table" class="scenarios-grid">
-                <!-- Populated by loadScenarios() -->
-            </div>
-        </div>
-    `;
-}
-
-/**
- * Render scenarios from data
- */
-export function renderScenarios() {
-    const container = document.getElementById('scenarios-table');
-    if (!container || !statsData?.cenarios?.presets) return;
-
-    const presets = statsData.cenarios.presets;
-
-    let html = '';
-    for (const [key, preset] of Object.entries(presets)) {
-        html += `
-            <div class="scenario-card">
-                <h4>${preset.nome}</h4>
-                <p class="scenario-desc">${preset.descricao}</p>
-                <div class="scenario-stats">
-                    <div class="stat">
-                        <span class="stat-value">${formatNumber(preset.mensal)}</span>
-                        <span class="stat-label">coins/mês</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-value">${formatNumber(preset.semanal)}</span>
-                        <span class="stat-label">coins/semana</span>
-                    </div>
-                </div>
-            </div>
-        `;
+export function updateGolpeSlider(value) {
+    const display = document.getElementById('golpe-nivel-display');
+    if (display) {
+        display.textContent = value;
     }
-
-    container.innerHTML = html;
 }
 
 /**
- * Calculate monthly earnings based on inputs
+ * Update astro slider display value
+ */
+export function updateAstroSlider(value) {
+    const display = document.getElementById('astro-nivel-display');
+    if (display) {
+        display.textContent = value;
+    }
+}
+
+/**
+ * Initialize toggle button event listeners
+ */
+export function initToggleButtons() {
+    document.querySelectorAll('.toggle-group').forEach(group => {
+        const isExclusive = group.classList.contains('exclusive');
+
+        group.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (isExclusive) {
+                    // Exclusive: only one can be active
+                    group.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                } else {
+                    // Non-exclusive: toggle individual
+                    btn.classList.toggle('active');
+                }
+
+                // Handle diamond slider visibility
+                if (group.id === 'guilda-tier-toggles') {
+                    const sliderContainer = document.getElementById('diamante-slider-container');
+                    if (sliderContainer) {
+                        sliderContainer.style.display = btn.dataset.source === 'diamante' ? 'block' : 'none';
+                    }
+                }
+
+                // Handle golpe slider visibility
+                if (group.id === 'golpe-nivel-toggles') {
+                    const sliderContainer = document.getElementById('golpe-slider-container');
+                    if (sliderContainer) {
+                        sliderContainer.style.display = btn.dataset.source === 'custom' ? 'block' : 'none';
+                    }
+                }
+
+                // Handle astro slider visibility
+                if (group.id === 'astro-raridade-toggles') {
+                    const sliderContainer = document.getElementById('astro-slider-container');
+                    if (sliderContainer) {
+                        sliderContainer.style.display = btn.dataset.source === 'custom' ? 'block' : 'none';
+                    }
+                }
+            });
+        });
+    });
+
+    // Initial visibility checks
+    const checkSliderVisibility = (groupId, sliderId, triggerSource) => {
+        const group = document.getElementById(groupId);
+        const slider = document.getElementById(sliderId);
+        if (group && slider) {
+            const active = group.querySelector('.toggle-btn.active');
+            slider.style.display = active?.dataset.source === triggerSource ? 'block' : 'none';
+        }
+    };
+
+    checkSliderVisibility('guilda-tier-toggles', 'diamante-slider-container', 'diamante');
+    checkSliderVisibility('golpe-nivel-toggles', 'golpe-slider-container', 'custom');
+    checkSliderVisibility('astro-raridade-toggles', 'astro-slider-container', 'custom');
+}
+
+/**
+ * Update diamond slider display value
+ */
+export function updateDiamanteSlider(value) {
+    const display = document.getElementById('diamante-pontos-display');
+    if (display) {
+        display.textContent = parseInt(value).toLocaleString('pt-BR');
+    }
+}
+
+/**
+ * Get active toggle value from a group
+ */
+function getActiveToggle(groupId) {
+    const group = document.getElementById(groupId);
+    if (!group) return null;
+    const active = group.querySelector('.toggle-btn.active');
+    return active ? active.dataset.source : null;
+}
+
+/**
+ * Check if a toggle source is active (for non-exclusive groups)
+ */
+function isToggleActive(groupId, source) {
+    const group = document.getElementById(groupId);
+    if (!group) return false;
+    const btn = group.querySelector(`.toggle-btn[data-source="${source}"]`);
+    return btn ? btn.classList.contains('active') : false;
+}
+
+/**
+ * Calculate monthly earnings based on toggle inputs
  */
 export function calculateEarnings() {
     if (!statsData) {
@@ -283,86 +372,148 @@ export function calculateEarnings() {
         return;
     }
 
-    const dpMensal = document.getElementById('calc-dp-mensal')?.checked;
-    const dpPerso = document.getElementById('calc-dp-perso')?.checked;
-    const dpFaixa = document.getElementById('calc-dp-faixa')?.value || 'dima10';
-    const reinos = document.getElementById('calc-reinos')?.checked;
-    const reinosDif = document.getElementById('calc-reinos-dif')?.value || 'pesadeloMax';
-    const passe = document.getElementById('calc-passe')?.value || 'free';
-    const guilda = document.getElementById('calc-guilda')?.checked;
-
-    const cenarios = statsData.cenarios?.fontes || {};
+    const fixos = statsData.ganhosFixos || {};
+    const reinos = statsData.reinosParalelos || {};
+    const disputas = statsData.disputasPremiadas || {};
+    const guildas = statsData.guildas || {};
     const teonitas = statsData.teonitas?.fontesMensais || {};
 
     let totalCoins = 0;
     let totalTeonita = 0;
     const breakdown = [];
 
-    // Fixed monthly sources
-    totalTeonita += teonitas.calendario?.valor || 0;
-    breakdown.push({ nome: 'Calendário', teonita: teonitas.calendario?.valor || 0 });
+    // === FIXED SOURCES ===
+    // Diarias
+    if (isToggleActive('fixed-toggles', 'diarias')) {
+        const valor = (fixos.diarias?.valor || 0) * (fixos.diarias?.regra?.ocorrenciasMensais || 30);
+        totalCoins += valor;
+        totalTeonita += teonitas.diarias?.valor || 0;
+        breakdown.push({ nome: 'Eventos Diários', coins: valor, teonita: teonitas.diarias?.valor });
+    }
 
-    totalTeonita += teonitas.diarias?.valor || 0;
-    breakdown.push({ nome: 'Missões Diárias', teonita: teonitas.diarias?.valor || 0 });
+    // Calendario
+    if (isToggleActive('fixed-toggles', 'calendario')) {
+        totalCoins += fixos.calendario?.valor || 0;
+        totalTeonita += fixos.calendario?.teonita || 0;
+        breakdown.push({ nome: 'Calendário', coins: fixos.calendario?.valor, teonita: fixos.calendario?.teonita });
+    }
 
-    // DP Mensal
-    if (dpMensal) {
-        totalCoins += cenarios.dpMensal?.mensal || 0;
-        totalTeonita += teonitas.dpMensal?.valor || 0;
+    // Site
+    if (isToggleActive('fixed-toggles', 'site')) {
+        totalCoins += fixos.site?.valor || 0;
+        totalTeonita += fixos.site?.teonita || 0;
+        breakdown.push({ nome: 'Site', coins: fixos.site?.valor, teonita: fixos.site?.teonita });
+    }
+
+    // Missões Diárias de Guilda (teonita only)
+    if (isToggleActive('fixed-toggles', 'guildaDiaria')) {
+        const guildaTeonita = teonitas.guilda?.valor || 0;
+        totalTeonita += guildaTeonita;
+        breakdown.push({ nome: 'Missões Guilda', teonita: guildaTeonita });
+    }
+
+    // === PASSE ===
+    const passeType = getActiveToggle('passe-toggles');
+    if (passeType && fixos.passe?.[passeType]) {
+        totalCoins += fixos.passe[passeType].valor || 0;
+        totalTeonita += fixos.passe[passeType].teonita || 0;
         breakdown.push({
-            nome: 'DP Mensal',
-            coins: cenarios.dpMensal?.mensal,
-            teonita: teonitas.dpMensal?.valor
+            nome: `Passe (${passeType === 'gratis' ? 'Grátis' : 'Premium'})`,
+            coins: fixos.passe[passeType].valor,
+            teonita: fixos.passe[passeType].teonita
         });
     }
 
-    // DP Personagem
-    if (dpPerso) {
-        const dpMap = {
-            'dima10': { coins: 'dpPersonagemDima10', teonita: 'dpPersonagemDiamante' },
-            'dima30': { coins: 'dpPersonagemDima30', teonita: 'dpPersonagemDiamante' },
-            'ouro': { coins: 'dpPersonagemOuro', teonita: 'dpPersonagemOuro' }
-        };
-        const dp = dpMap[dpFaixa];
-        totalCoins += cenarios[dp.coins]?.mensal || 0;
-        totalTeonita += teonitas[dp.teonita]?.valor || 0;
+    // === DP PERSONAGEM ===
+    const dpFaixa = getActiveToggle('dp-faixa-toggles');
+    const dpRank = getActiveToggle('dp-rank-toggles');
+    if (dpFaixa && dpFaixa !== 'nenhum' && dpRank) {
+        // Padrão = base reward for completing, Ranking = bonus for placement
+        const dpPadrao = disputas.personagem?.[dpFaixa]?.rankings?.padrao?.canopyCoins || 0;
+        const dpRankBonus = disputas.personagem?.[dpFaixa]?.rankings?.[dpRank]?.canopyCoins || 0;
+        const dpFreq = disputas.personagem?.regra?.ocorrenciasMensais || 9;
+        const dpTotal = (dpPadrao + dpRankBonus) * dpFreq;
+        totalCoins += dpTotal;
+
+        // Teonita from DP (padrão + ranking teonita)
+        const dpPadraoTeonita = disputas.personagem?.[dpFaixa]?.rankings?.padrao?.teonita || 0;
+        const dpRankTeonita = disputas.personagem?.[dpFaixa]?.rankings?.[dpRank]?.teonita || 0;
+        const dpTeonitaTotal = (dpPadraoTeonita + dpRankTeonita) * dpFreq;
+        totalTeonita += dpTeonitaTotal;
+
         breakdown.push({
-            nome: `DP Personagem (${dpFaixa === 'ouro' ? 'Ouro' : dpFaixa === 'dima10' ? 'Dima 10%' : 'Dima 30%'})`,
-            coins: cenarios[dp.coins]?.mensal,
-            teonita: teonitas[dp.teonita]?.valor
+            nome: `DP Personagem (${disputas.personagem?.[dpFaixa]?.nome || dpFaixa})`,
+            coins: dpTotal,
+            teonita: dpTeonitaTotal
         });
     }
 
-    // Reinos
-    if (reinos) {
-        const reinosMap = {
-            'pesadeloMax': 'reinosPesadeloMax',
-            'pesadeloMin': 'reinosPesadeloMin',
-            'semdoMax': 'reinosSemDoMax',
-            'semdoMin': 'reinosSemDoMin'
-        };
-        totalCoins += cenarios[reinosMap[reinosDif]]?.mensal || 0;
-        breakdown.push({
-            nome: `Reinos (${reinosDif.includes('pesadelo') ? 'Pesadelo' : 'Sem Dó'})`,
-            coins: cenarios[reinosMap[reinosDif]]?.mensal
-        });
+    // === DP MENSAL ===
+    if (isToggleActive('dp-mensal-toggles', 'mensal')) {
+        const mensalCoins = disputas.mensal?.rankings?.padrao?.canopyCoins || 0;
+        const mensalTeonita = disputas.mensal?.rankings?.padrao?.teonita || 0;
+        totalCoins += mensalCoins;
+        totalTeonita += mensalTeonita;
+        breakdown.push({ nome: 'DP Mensal', coins: mensalCoins, teonita: mensalTeonita });
     }
 
-    // Passe
-    const passeMap = { 'free': 'passeFree', 'premium': 'passePremium', 'premiumPlus': 'passePremiumPlus' };
-    totalTeonita += teonitas[passeMap[passe]]?.valor || 0;
-    breakdown.push({
-        nome: `Passe (${passe === 'free' ? 'Grátis' : passe === 'premium' ? 'Premium' : 'Premium+'})`,
-        teonita: teonitas[passeMap[passe]]?.valor
-    });
-
-    // Guilda
-    if (guilda) {
-        totalTeonita += teonitas.guilda?.valor || 0;
-        breakdown.push({ nome: 'Guilda', teonita: teonitas.guilda?.valor });
+    // === DP MEDICIS ===
+    const dpMedicisRank = getActiveToggle('dp-medicis-toggles');
+    if (dpMedicisRank && dpMedicisRank !== 'nenhum') {
+        // Padrão = base reward, Ranking = bonus
+        const medicisPadrao = disputas.medicis?.rankings?.padrao?.canopyCoins || 0;
+        const medicisRankBonus = disputas.medicis?.rankings?.[dpMedicisRank]?.canopyCoins || 0;
+        const medicisFreq = disputas.medicis?.regra?.ocorrenciasMensais || 4;
+        const medicisTotal = (medicisPadrao + medicisRankBonus) * medicisFreq;
+        totalCoins += medicisTotal;
+        breakdown.push({ nome: 'DP Médicis', coins: medicisTotal });
     }
 
-    // Update UI
+    // === REINOS PARALELOS ===
+    const reinosDif = getActiveToggle('reinos-dif-toggles');
+    const reinosComp = getActiveToggle('reinos-comp-toggles');
+    if (reinosDif && reinosDif !== 'nenhum') {
+        const recompKey = reinosComp === 'max' ? 'recompensas-maximas' : 'recompensas-minimas';
+        const reinoReward = reinos.dificuldades?.[reinosDif]?.[recompKey]?.canopyCoins || 0;
+        const reinoFreq = reinos.regra?.ocorrenciasMensais || 9;
+        const reinoTotal = reinoReward * reinoFreq;
+        totalCoins += reinoTotal;
+        breakdown.push({ nome: `Reinos (${reinos.dificuldades?.[reinosDif]?.nome || reinosDif})`, coins: reinoTotal });
+    }
+
+    // === GUILDA ===
+    // Eventos de guilda
+    if (isToggleActive('guilda-eventos-toggles', 'eventos')) {
+        const guildaEventosReward = guildas.eventos?.recompensasEvento?.canopyCoins || 0;
+        const guildaEventosTotal = guildaEventosReward * 4; // 4 eventos por mês
+        totalCoins += guildaEventosTotal;
+        breakdown.push({ nome: 'Eventos de Guilda', coins: guildaEventosTotal });
+    }
+
+    // Batalha de guilda (tier)
+    const guildaTier = getActiveToggle('guilda-tier-toggles');
+    if (guildaTier && guildaTier !== 'nenhum') {
+        const tierData = guildas.batalha?.[guildaTier];
+        if (tierData) {
+            let tierReward = tierData.recompensas?.canopyCoins || 0;
+
+            // Diamante bonus: +25000 per 1000 points above 16000
+            if (guildaTier === 'diamante') {
+                const slider = document.getElementById('diamante-pontos-slider');
+                const pontos = parseInt(slider?.value || '16000');
+                const pontosBonus = Math.floor((pontos - 16000) / 1000);
+                tierReward += pontosBonus * 25000;
+            }
+
+            const tierTotal = tierReward * 4; // 4 batalhas semanais por mês
+            totalCoins += tierTotal;
+            breakdown.push({ nome: `Batalha Guilda (${tierData.nome})`, coins: tierTotal });
+        }
+    }
+
+    // Teonita de missões diárias de guilda (handled separately in fixed sources if toggle active)
+
+    // === UPDATE UI ===
     const resultBox = document.getElementById('earnings-result');
     if (resultBox) resultBox.classList.remove('hidden');
 
@@ -391,81 +542,187 @@ export function calculateEarnings() {
         `;
     }
 }
-
 /**
- * Calculate move evolution costs
+ * Calculate unified build cost - Golpes + Astros together
  */
-export function calculateGolpes() {
-    if (!statsData?.golpes) {
-        console.error('Golpes data not loaded');
+export function calculateBuildCost() {
+    if (!statsData?.golpes || !statsData?.astros) {
+        console.error('Stats data not loaded');
         return;
     }
 
-    const nivelIni = parseInt(document.getElementById('golpe-nivel-ini')?.value || '1');
-    const nivelFim = parseInt(document.getElementById('golpe-nivel-fim')?.value || '15');
-    const qtd = parseInt(document.getElementById('golpe-qtd')?.value || '1');
-    const shiny = document.getElementById('golpe-shiny')?.checked;
+    const golpesData = statsData.golpes;
+    const astrosData = statsData.astros;
 
-    const custoPorNivel = statsData.golpes.custoPorNivel;
+    // === GOLPES CALCULATION ===
+    const golpeRaridade = getActiveToggle('golpe-raridade-toggles') || 'diamante';
+    const golpeShiny = isToggleActive('golpe-shiny-toggle', 'shiny');
+    const golpeNivelSelection = getActiveToggle('golpe-nivel-toggles') || '15';
 
-    // Calculate cost from nivelIni to nivelFim
-    let custo = 0;
-    for (let i = nivelIni + 1; i <= nivelFim; i++) {
-        custo += custoPorNivel[String(i)] || 0;
+    let golpesResult = null;
+
+    if (golpeRaridade !== 'nenhum') {
+        let golpeNivelAlvo;
+        if (golpeNivelSelection === 'custom') {
+            golpeNivelAlvo = parseInt(document.getElementById('golpe-nivel-slider')?.value || '2');
+        } else {
+            golpeNivelAlvo = parseInt(golpeNivelSelection);
+        }
+
+        // Calculate accumulated cost
+        let custoAteNivel = 0;
+        for (let i = 2; i <= golpeNivelAlvo; i++) {
+            custoAteNivel += golpesData.custoPorNivel[String(i)] || 0;
+        }
+
+        const custoDoNivel = golpesData.custoPorNivel[String(golpeNivelAlvo)] || 0;
+        const multiplicador = golpeShiny ? 0.5 : 1;
+        const custoUmGolpe = Math.floor(custoAteNivel * multiplicador);
+        const custoBuild = custoUmGolpe * 5;
+        const custoDoNivelBuild = Math.floor(custoDoNivel * multiplicador) * 5;
+
+        // Reference cost from personagemCompleto
+        const shinyKey = golpeShiny ? 'shiny' : 'normal';
+        const custoPersonagem = golpesData.personagemCompleto?.[golpeRaridade]?.[shinyKey] || 0;
+
+        golpesResult = {
+            nivelAlvo: golpeNivelAlvo,
+            custoUmGolpe,
+            custoBuild,
+            custoDoNivelBuild,
+            custoPersonagem,
+            raridade: golpeRaridade,
+            isShiny: golpeShiny
+        };
     }
 
-    // Apply multipliers
-    custo *= qtd;
-    if (shiny) custo = Math.floor(custo / 2);
+    // === ASTROS CALCULATION ===
+    const astroRaridade = getActiveToggle('astro-raridade-toggles') || 'diamante';
+    const astroShiny = isToggleActive('astro-shiny-toggle', 'shiny');
 
-    // Update UI
-    const resultBox = document.getElementById('golpes-result');
+    let astrosResult = null;
+
+    if (astroRaridade !== 'nenhum') {
+        let astroNivelAlvo;
+        if (astroRaridade === 'custom') {
+            astroNivelAlvo = parseInt(document.getElementById('astro-nivel-slider')?.value || '2');
+        } else {
+            astroNivelAlvo = astrosData.nivelMaxPorRaridade?.[astroRaridade]?.nivelMax || 20;
+        }
+
+        // Calculate accumulated cost
+        let totalGold = 0;
+        let totalPo = 0;
+        for (let i = 2; i <= astroNivelAlvo; i++) {
+            const nivel = astrosData.custoPorNivel[String(i)];
+            if (nivel) {
+                totalGold += nivel.gold || 0;
+                totalPo += nivel.po || 0;
+            }
+        }
+
+        // Apply shiny discount (50%)
+        if (astroShiny) {
+            totalGold = Math.floor(totalGold * 0.5);
+            totalPo = Math.floor(totalPo * 0.5);
+        }
+
+        const custoDoNivel = astrosData.custoPorNivel[String(astroNivelAlvo)] || { gold: 0, po: 0 };
+
+        astrosResult = {
+            nivelAlvo: astroNivelAlvo,
+            gold: totalGold,
+            po: totalPo,
+            custoDoNivel,
+            raridade: astroRaridade === 'custom' ? 'Customizado' : astroRaridade.charAt(0).toUpperCase() + astroRaridade.slice(1),
+            isShiny: astroShiny
+        };
+    }
+
+    // === RENDER RESULTS ===
+    const resultBox = document.getElementById('build-cost-result');
     if (resultBox) resultBox.classList.remove('hidden');
 
-    document.getElementById('result-golpes').textContent = formatNumber(custo);
-}
+    const breakdownBox = document.getElementById('build-cost-breakdown');
+    if (!breakdownBox) return;
 
-/**
- * Calculate guest star evolution costs
- */
-export function calculateAstros() {
-    if (!statsData?.astros) {
-        console.error('Astros data not loaded');
-        return;
+    // Calculate totals
+    const totalCoins = (golpesResult?.custoBuild || 0) + (astrosResult?.gold || 0);
+    const totalPo = astrosResult?.po || 0;
+
+    let html = '<div class="build-cost-details">';
+
+    // Golpes section
+    if (golpesResult) {
+        const nivelAnterior = golpesResult.nivelAlvo - 1;
+        html += `
+            <div class="cost-section golpes">
+                <h5>⚔️ Golpes ${golpesResult.isShiny ? '✨' : ''}</h5>
+                <ul>
+                    <li>
+                        <span>1 golpe (Lv1→${golpesResult.nivelAlvo})</span>
+                        <span class="value">${formatNumber(golpesResult.custoUmGolpe)}</span>
+                    </li>
+                    <li>
+                        <span>5 golpes (Lv1→${golpesResult.nivelAlvo})</span>
+                        <span class="value">${formatNumber(golpesResult.custoBuild)}</span>
+                    </li>
+                    <li>
+                        <span>5 golpes (Lv${nivelAnterior}→${golpesResult.nivelAlvo})</span>
+                        <span class="value">${formatNumber(golpesResult.custoDoNivelBuild)}</span>
+                    </li>
+                    ${golpesResult.custoPersonagem ? `
+                    <li>
+                        <span>Personagem ${golpesResult.raridade}${golpesResult.isShiny ? ' shiny' : ''}</span>
+                        <span class="value">${formatNumber(golpesResult.custoPersonagem)}</span>
+                    </li>
+                    ` : ''}
+                </ul>
+            </div>
+        `;
     }
 
-    const raridade = document.getElementById('astro-raridade')?.value || 'ouro';
-    const qtd = parseInt(document.getElementById('astro-qtd')?.value || '1');
-
-    const totalPorRaridade = statsData.astros.totalPorRaridade;
-    const data = totalPorRaridade[raridade];
-
-    if (!data) {
-        console.error('Invalid raridade:', raridade);
-        return;
+    // Astros section
+    if (astrosResult) {
+        html += `
+            <div class="cost-section astros">
+                <h5>⭐ Astro ${astrosResult.raridade} ${astrosResult.isShiny ? '✨' : ''}</h5>
+                <ul>
+                    <li>
+                        <span>1 astro (Lv1→${astrosResult.nivelAlvo})</span>
+                        <span class="value">${formatNumber(astrosResult.gold)}${astrosResult.po > 0 ? ` <span class="po">+${formatNumber(astrosResult.po)} pó</span>` : ''}</span>
+                    </li>
+                </ul>
+            </div>
+        `;
     }
 
-    const gold = data.gold * qtd;
-    const po = data.po * qtd;
+    // Total section
+    html += `
+        <div class="cost-total">
+            <div class="total-row">
+                <span class="total-label">💰 Total em Coins</span>
+                <span class="total-value coins">${formatNumber(totalCoins)}</span>
+            </div>
+            ${totalPo > 0 ? `
+            <div class="total-row">
+                <span class="total-label">🔮 Total em Pó de Evolução</span>
+                <span class="total-value po">${formatNumber(totalPo)}</span>
+            </div>
+            ` : ''}
+        </div>
+    `;
 
-    // Update UI
-    const resultBox = document.getElementById('astros-result');
-    if (resultBox) resultBox.classList.remove('hidden');
+    // Shiny notes only
+    const shinyNotes = [];
+    if (golpesResult?.isShiny) shinyNotes.push('Golpes shiny (50%)');
+    if (astrosResult?.isShiny) shinyNotes.push('Astro shiny (50%)');
+    if (shinyNotes.length > 0) {
+        html += `<p class="cost-notes">✨ ${shinyNotes.join(' • ')}</p>`;
+    }
 
-    document.getElementById('result-astros-gold').textContent = formatNumber(gold);
-    document.getElementById('result-astros-po').textContent = formatNumber(po);
-}
-
-/**
- * Switch calculator tabs
- */
-export function switchCalcTab(tab) {
-    document.querySelectorAll('.calc-tab-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.tab === tab);
-    });
-    document.querySelectorAll('.calc-tab-content').forEach(content => {
-        content.classList.toggle('active', content.dataset.tab === tab);
-    });
+    html += '</div>';
+    breakdownBox.innerHTML = html;
 }
 
 // Global handlers
@@ -473,15 +730,15 @@ export function handleCalculateEarnings() {
     calculateEarnings();
 }
 
-export function handleCalculateCosts() {
-    // Legacy handler - now split into golpes and astros
-    calculateGolpes();
+export function handleCalculateBuildCost() {
+    calculateBuildCost();
 }
 
+// Legacy handlers (kept for compatibility)
 export function handleCalculateGolpes() {
-    calculateGolpes();
+    calculateBuildCost();
 }
 
 export function handleCalculateAstros() {
-    calculateAstros();
+    calculateBuildCost();
 }
