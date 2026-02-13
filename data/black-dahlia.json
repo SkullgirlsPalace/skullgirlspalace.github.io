@@ -1,366 +1,366 @@
 {
-  "character": "Dália Negra",
-  "version": "1.0",
-  "variants": {
-    "diamante": [
-      {
-        "name": "Hóstia Profana",
-        "title_formatted": "> Hóstia Profana <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102178516860939/1000.png?ex=681dd56f&is=681c83ef&hm=a43e606db8fc9cfbdd21569013a1c190c21d8c4bf65d60ae08fb580b3d54702b&"
-        },
-        "stats": {
-          "attack": "10,004",
-          "health": "88,052",
-          "power": "29,162"
-        },
-        "signature_ability": {
-          "name": "STATUS OCULTO",
-          "description": "[HAB 1]: Quando Dália Negra ou o oponente ENTRAM NA ASSIST., **ela remove todos** os EF. POS. do inimigo e inflige MALDIÇÃO por 20 s.\n\n[HAB 2]: DRENE 2% de VIDA por segundo do oponente se ele estiver sofrendo **uma MALDIÇÃO.**"
-        },
-        "marquee_ability": "Não Há Tempo Para Morrer (Defesa)",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:GolpeEspecial:1434999859768987748> Deslizando, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici, <:GolpeEspecial:1434999859768987748> Te Vejo por Aí (Expulsão)"
-      },
-      {
-        "name": "Pele Elegante",
-        "title_formatted": "> Pele Elegante <:Fogo:1389703188525092934><:diamante:1407839264779141140>",
-        "element": "Fogo",
-        "color_hex": "#ef2e2d",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102216785694750/1000.png?ex=681dd578&is=681c83f8&hm=7e80ee379033807cfdbe879110570fd68188040a2fcd22ba5250a20f29b024e7&"
-        },
-        "stats": {
-          "attack": "13,556",
-          "health": "72,058",
-          "power": "30,209"
-        },
-        "signature_ability": {
-          "name": "VESTIDA PARA MATAR",
-          "description": "[HAB 1]: 100% de chance de ganhar **FÚRIA, ESPINHOS ou REGENERAÇÃO quando DISPARAR um TIRO.** Esses EF. POS. **são removidos quando NOCAUTEADA.**\n\n[HAB 2]: Todos os TIROS causam 15% de **dano extra por cada EF. POS. aplicado a Dália Negra.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte "
-      },
-      {
-        "name": "Calibre Mágico",
-        "title_formatted": "> Calibre Mágico <:Luz:1389703315167907902><:diamante:1407839264779141140>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102255193067641/1000.png?ex=681dd581&is=681c8401&hm=0f06eedb72cd9d3554eb9bbe93a05c932607ec1aa7f46b4453f83932436c4e97&"
-        },
-        "stats": {
-          "attack": "11,770",
-          "health": "80,045",
-          "power": "29,671"
-        },
-        "signature_ability": {
-          "name": "Atração Fatal",
-          "description": "[HAB 1]: Cada 10º GOLPE DE COMBO que atinge Dália Negra ou o oponente concede INABALÁVEL por 10 segundos. Também dá PRECISÃO permanente **enquanto se beneficiar** desse INABALÁVEL.\n\n[HAB 2]: TODOS OS TIROS são INDEFENSÁVEIS e concedem IMUNIDADE por 10 segundos **enquanto estiver se beneficiando de PRECISÃO.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Presente de Despedida, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      },
-      {
-        "name": "Carregada",
-        "title_formatted": "Carregada <:Ar:1389703277532287066><:diamante:1407839264779141140>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1456704749440340053/bf4d2175-0c86-42b4-8afd-5df85bb4ea82.webp?ex=69595584&is=69580404&hm=1be2ab693af618b26936e0d8c4ba2074f8e79687c2b2b6e144c64860fd30e680&"
-        },
-        "stats": {
-          "attack": "11,770",
-          "health": "80,045",
-          "power": "29,671"
-        },
-        "signature_ability": {
-          "name": "Drenagem de Vida",
-          "description": "[HAB 1]: Ao DISPARAR um TIRO, Black Dahlia sacrifica 3% da VIDA MÁXIMA para aplicar DEFINHAR e ganhar 8% do MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: Ao usar um BLOCKBUSTER, drena 5% da VIDA MÁXIMA do oponente por acúmulo de DEFINHAR e converte todos os acúmulos de DEFINHAR em POLARIDADE INVERSA por 3 segundos cada."
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, , <:Blockbuster:1434999898385944606> Capacho, , <:Blockbuster:1434999898385944606> Perigo no Cenário, , <:GolpeEspecial:1434999859768987748> Massacre, , <:GolpeEspecial:1434999859768987748> Pêndulo da Morte "
-      }
-    ],
-    "ouro": [
-      {
-        "name": "Agente Corrosiva",
-        "title_formatted": "> Agente Corrosiva <:Agua:1389703224210231437><:ouro:1407839155785826306>",
-        "element": "Água",
-        "color_hex": "#1095d5",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101901550321905/1000.png"
-        },
-        "stats": {
-          "attack": "9,293",
-          "health": "81,773",
-          "power": "27,085"
-        },
-        "signature_ability": {
-          "name": "CÁLICE DE VENENO",
-          "description": "[HAB 1]: Remova todos os EF. NEG. e ganhe 3 camada(s) de BARREIRA quando qualquer lutador usar um BLOCKBUSTER.\n\n[HAB 2]: Com 5 camadas de BARREIRA, todos os TIROS são INDEFENSÁVEIS e infligem GOSMA por 10 segundos ao GOLPEAR."
-        },
-        "marquee_ability": "Não Há Tempo Para Morrer (Defesa) / Descontrole Metálico (Ataque)",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Capacho,, <:Blockbuster:1434999898385944606> Presente de Despedida,, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte "
-      },
-      {
-        "name": "Fora-da-Lei Marcial",
-        "title_formatted": "> Fora-da-Lei Marcial <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#076314",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101955669168289/1000.png"
-        },
-        "stats": {
-          "attack": "12,576",
-          "health": "66,874",
-          "power": "28,030"
-        },
-        "signature_ability": {
-          "name": "TÁTICAS DE INTIMIDAÇÃO",
-          "description": "[HAB 1]: Os GOLPES DE ATAQUE DE CARGA de qualquer aliado dão ACELERAÇÃO por 12 segundos.\n\n[HAB 2]: Ao GOLPEAR, todos os aliados têm 25% de chance de infligir QUEBRA DE ARMADURA e SANGRAMENTO FORTE por 10 s cada, enquanto estiverem com ACELERAÇÃO."
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:GolpeEspecial:1434999859768987748> Deslizando, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici, <:GolpeEspecial:1434999859768987748> Te Vejo por Aí (Expulsão)"
-      },
-      {
-        "name": "Imperturbável",
-        "title_formatted": "> Imperturbável <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102001773084782/1000.png"
-        },
-        "stats": {
-          "attack": "10,925",
-          "health": "74,324",
-          "power": "25,445"
-        },
-        "signature_ability": {
-          "name": "CÂMARAS DE ECO",
-          "description": "[HAB 1]: Ganhe INABALÁVEL e 3 camada(s) de ESPINHOS por 10 segundos cada quando qualquer lutador QUICAR em uma parede.\n\n[HAB 2]: Ganhe MIASMA por 10 segundos a cada 2 segundos enquanto estiver se beneficiando de ESPINHOS."
-        },
-        "marquee_ability": "Descontrole Metálico (Opcional)",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, , <:Blockbuster:1434999898385944606> Capacho, , <:Blockbuster:1434999898385944606> Perigo no Cenário, , <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte,  "
-      },
-      {
-        "name": "Psicomandante",
-        "title_formatted": "> Psicomandante <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
-        "element": "Fogo",
-        "color_hex": "#bc0e0e",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102044718432358/1000.png"
-        },
-        "stats": {
-          "attack": "12,576",
-          "health": "66,874",
-          "power": "28,030"
-        },
-        "signature_ability": {
-          "name": "MEDIDAS DESPÓTICAS",
-          "description": "[HAB 1]: Ao DISPARAR seu último TIRO restante, ganhe RESISTÊNCIA FINAL e 5 camadas de FÚRIA por 10 segundos cada.\n\n[HAB 2]: Ganhe OLHO-MORTO e 3 camada(s) de ESQUIVA por 10 segundos cada ao usar um GOLPE ESPECIAL enquanto se beneficia de FÚRIA."
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte"
-      },
-      {
-        "name": "Estelar",
-        "title_formatted": "> Estelar <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102119070990436/1000.png"
-        },
-        "stats": {
-          "attack": "9,293",
-          "health": "81,773",
-          "power": "27,085"
-        },
-        "signature_ability": {
-          "name": "CRESCENDO MATADOR",
-          "description": "[HAB 1]: Ao RECARREGAR com 3 TIROS ou menos restantes, ganhe 3 TIROS RELÂMPAGO. TIROS RELÂMPAGO DESATIVAM ENTRADAS NA ASSISTÊNCIA e têm 10% de chance de DESATIVAR BLOCKBUSTERS por 15 s cada.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo de ASSIST. DESATIVADA, TIROS RELÂMPAGO tiram 1.5% da VIDA MÁX. como dano extra dos aliados do oponente. Enquanto o oponente estiver sofrendo de BLOCKB. DESATIVADOS, tira mais 1.5% da VIDA MÁX. de todos os oponentes."
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      },
-      {
-        "name": "Violência Vermelha",
-        "title_formatted": "> Violência Vermelha <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
-        "element": "Fogo",
-        "color_hex": "#ff4848",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361102073180983436/1000.png"
-        },
-        "stats": {
-          "attack": "10,925",
-          "health": "74,324",
-          "power": "27,546"
-        },
-        "signature_ability": {
-          "name": "PERSEGUIÇÃO",
-          "description": "[HAB 1]: TIROS COMUNS infligem DEFINHAR e BLOQUEIO DE CURA por 15 segundos cada enquanto perto de um oponente.\n\n[HAB 2]: 50% de todo o dano infligido é recuperado como VIDA enquanto o oponente estiver sofrendo BLOQUEIO DE CURA."
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Capacho, , <:GolpeEspecial:1434999859768987748> Deslizando, , <:GolpeEspecial:1434999859768987748> Massacre,  <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      }
-    ],
-    "prata": [
-      {
-        "name": "Máquina Mortífera",
-        "title_formatted": "> Máquina Mortífera <:Agua:1389703224210231437><:prata:1407839105169227957>",
-        "element": "Água",
-        "color_hex": "#1095d5",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101675460432175/1000.png?ex=681dd4f7&is=681c8377&hm=19507a928b87389e72ed6c8e19e32a755af98ae222b14115c6a22aadc31ca8f6&"
-        },
-        "stats": {
-          "attack": "8,602",
-          "health": "75,936",
-          "power": "25,119"
-        },
-        "signature_ability": {
-          "name": "ALIMENTADA POR SANGUE",
-          "description": "[HAB 1]: **TODOS OS TIROS têm 100% de chance de infligir SANGRAMENTO por 10 segundos ao GOLPEAR.**\n\n[HAB 2]: Ganhe 3% no MEDIDOR e 1% de VIDA por segundo **enquanto estiver perto de um oponente sofrendo SANGRAMENTO.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      },
-      {
-        "name": "Esmaga-Alma",
-        "title_formatted": "> Esmaga-Alma <:Luz:1389703315167907902><:prata:1407839105169227957>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101729990443008/1000.png?ex=681dd504&is=681c8384&hm=ae258240705bcd570589b2adc003eeca3310a9936708dcb58bdc0fabdfdd0de3&"
-        },
-        "stats": {
-          "attack": "11,674",
-          "health": "62,074",
-          "power": "26,019"
-        },
-        "signature_ability": {
-          "name": "SINFONIA CALAMITOSA",
-          "description": "[HAB 1]: Ganhe OLHO-MORTO e inflija QUEBRA DE GUARDA por 10 segundos cada, **sempre que o oponente ganhar um EFEITO POSITIVO.**\n\n[HAB 2]: Cause 10% de **dano extra por cada EF. POS. ou EF. NEG. aplicado ao oponente.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Presente de Despedida, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      },
-      {
-        "name": "Dame Slayer",
-        "title_formatted": "> Dame Slayer <:Ar:1389703277532287066><:prata:1407839105169227957>",
-        "element": "Ar",
-        "color_hex": "#076314",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101836974821476/1000.png?ex=681dd51d&is=681c839d&hm=3b3fde2b3155c568acc5fab4ea1f7f0e757d499b68fbef3cd325668516dc4700&"
-        },
-        "stats": {
-          "attack": "10,138",
-          "health": "69,005",
-          "power": "25,569"
-        },
-        "signature_ability": {
-          "name": "CARREGADO COM PLASMA",
-          "description": "[HAB 1]: **Uma vez por luta**, ao RECARREGAR sem TIROS restantes, ganhe 6 TIROS RELÂMPAGO e inflija DESTRUIÇÃO por 20 segundos. A DESTRUIÇÃO é removida se Dália Negra SAIR DA ASSISTÊNCIA ou for derrotada.\n\n[HAB 2]: TIROS RELÂMPAGO causam 100% de dano extra e fazem o oponente perder 15% do MEDIDOR DE BLOCKBUSTER ao GOLPEAR **(também se aplica a golpes bloqueados).**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      },
-      {
-        "name": "Perigo Biológico",
-        "title_formatted": "> Perigo Biológico <:Trevas:1389703142848991364><:prata:1407839105169227957>",
-        "element": "Trevas",
-        "color_hex": "#8000ff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025790802464848/Biohazard.png?ex=68decf8b&is=68dd7e0b&hm=7b174d04fb20e2caf1b41ab8831274431e703e8f08a1c8cf0f923e17a1eebec8&"
-        },
-        "stats": {
-          "attack": "10,138",
-          "health": "69,005",
-          "power": "25,569"
-        },
-        "signature_ability": {
-          "name": "SANDUÍCHE DE ESPECIALISTA",
-          "description": "[HAB 1]: **Enquanto tiver mais de 50% de VIDA**, ganha 6 CHUMBOS GROSSOS ao recarregar sem tiror restantes. CHUMBOS GROSSOS causam 50% dano extra e removem 1 EF. POS. do oponente ao acertar.\n\n[HAB 2]: Enquanto tiver menos de 50% de VIDA, recupere 100% da VIDA MÁXIMA **da Dália Negra ao recarregar sem TIROS restantes.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      }
-    ],
-    "bronze": [
-      {
-        "name": "Gatilho Nervoso",
-        "title_formatted": "> Gatilho Nervoso <:Trevas:1389703142848991364><:bronze:1407839009664798801>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101579830300702/1000.png?ex=681dd4e0&is=681c8360&hm=0fe62b8cd68051399b700e1190a151fe085da9f4a6c88b9d6e474d69c9ad16af&"
-        },
-        "stats": {
-          "attack": "9,428",
-          "health": "64,090",
-          "power": "23,762"
-        },
-        "signature_ability": {
-          "name": "DANO COLATERAL",
-          "description": "[HAB 1]: 100% do dano causado por TIROS PADRÃO também é **sofrido pelos aliados do oponente.**\n\n[HAB 2]: Ganhe FÚRIA por 15 segundos **sempre que os aliados do oponente sofrerem dano.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Perigo no Cenário, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      },
-      {
-        "name": "Pistola Dourada",
-        "title_formatted": "> Pistola Dourada <:Luz:1389703315167907902><:bronze:1407839009664798801>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d&is=68a635fd&hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361101613179343080/1000.png?ex=681dd4e8&is=681c8368&hm=4d5d7375c3b6c04cfb72159f90b96f010d6be988e32903487ce42beb603dbc97&"
-        },
-        "stats": {
-          "attack": "10,676",
-          "health": "57,658",
-          "power": "23,970"
-        },
-        "signature_ability": {
-          "name": "TIRO DE UM MILHÃO DE DÓLARES",
-          "description": "[HAB 1]: Ganhe 5 camada(s) de PRECISÃO quando **RECARREGAR sem TIROS restantes.**\n\n[HAB 2]: **Com pelo menos 3 camadas de PRECISÃO, todos os TIROS são INDEFENSÁVEIS e causam 100% de dano extra.**"
-        },
-        "marquee_ability": "Descontrole Metálico",
-        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Empoderar, <:Blockbuster:1434999898385944606> Presente de Despedida, <:GolpeEspecial:1434999859768987748> Massacre, <:GolpeEspecial:1434999859768987748> Pêndulo da Morte, <:GolpeEspecial:1434999859768987748> Ratoeira dos Medici"
-      }
-    ]
-  }
+    "character":  "Dália Negra",
+    "version":  "1.0",
+    "variants":  {
+                     "diamante":  [
+                                      {
+                                          "name":  "Hóstia Profana",
+                                          "title_formatted":  "\u003e Hóstia Profana \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Trevas",
+                                          "color_hex":  "#6426a8",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102178516860939/1000.png?ex=681dd56f\u0026is=681c83ef\u0026hm=a43e606db8fc9cfbdd21569013a1c190c21d8c4bf65d60ae08fb580b3d54702b\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "10,004",
+                                                        "health":  "88,052",
+                                                        "power":  "29,162"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "STATUS OCULTO",
+                                                                    "description":  "[HAB 1]: Quando Dália Negra ou o oponente ENTRAM NA ASSIST., **ela remove todos** os EF. POS. do inimigo e inflige MALDIÇÃO por 20 s.\n\n[HAB 2]: DRENE 2% de VIDA por segundo do oponente se ele estiver sofrendo **uma MALDIÇÃO.**"
+                                                                },
+                                          "marquee_ability":  "Descontrole Metálico (Ataque/Suporte)",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:GolpeEspecial:1434999859768987748\u003e Deslizando, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici, \u003c:GolpeEspecial:1434999859768987748\u003e Te Vejo por Aí (Expulsão)"
+                                      },
+                                      {
+                                          "name":  "Pele Elegante",
+                                          "title_formatted":  "\u003e Pele Elegante \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Fogo",
+                                          "color_hex":  "#ef2e2d",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102216785694750/1000.png?ex=681dd578\u0026is=681c83f8\u0026hm=7e80ee379033807cfdbe879110570fd68188040a2fcd22ba5250a20f29b024e7\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "13,556",
+                                                        "health":  "72,058",
+                                                        "power":  "30,209"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "VESTIDA PARA MATAR",
+                                                                    "description":  "[HAB 1]: 100% de chance de ganhar **FÚRIA, ESPINHOS ou REGENERAÇÃO quando DISPARAR um TIRO.** Esses EF. POS. **são removidos quando NOCAUTEADA.**\n\n[HAB 2]: Todos os TIROS causam 15% de **dano extra por cada EF. POS. aplicado a Dália Negra.**"
+                                                                },
+                                          "marquee_ability":  "Descontrole Metálico",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte "
+                                      },
+                                      {
+                                          "name":  "Calibre Mágico",
+                                          "title_formatted":  "\u003e Calibre Mágico \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Luz",
+                                          "color_hex":  "#dfd173",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102255193067641/1000.png?ex=681dd581\u0026is=681c8401\u0026hm=0f06eedb72cd9d3554eb9bbe93a05c932607ec1aa7f46b4453f83932436c4e97\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,770",
+                                                        "health":  "80,045",
+                                                        "power":  "29,671"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "Atração Fatal",
+                                                                    "description":  "[HAB 1]: Cada 10º GOLPE DE COMBO que atinge Dália Negra ou o oponente concede INABALÁVEL por 10 segundos. Também dá PRECISÃO permanente **enquanto se beneficiar** desse INABALÁVEL.\n\n[HAB 2]: TODOS OS TIROS são INDEFENSÁVEIS e concedem IMUNIDADE por 10 segundos **enquanto estiver se beneficiando de PRECISÃO.**"
+                                                                },
+                                          "marquee_ability":  "Descontrole Metálico",
+                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Presente de Despedida, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                      },
+                                      {
+                                          "name":  "Carregada",
+                                          "title_formatted":  "Carregada \u003c:Ar:1389703277532287066\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Ar",
+                                          "color_hex":  "#00ff00",
+                                          "images":  {
+                                                         "icon_url":  "",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1456704749440340053/bf4d2175-0c86-42b4-8afd-5df85bb4ea82.webp?ex=69595584\u0026is=69580404\u0026hm=1be2ab693af618b26936e0d8c4ba2074f8e79687c2b2b6e144c64860fd30e680\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,770",
+                                                        "health":  "80,045",
+                                                        "power":  "29,671"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "Drenagem de Vida",
+                                                                    "description":  "[HAB 1]: Ao DISPARAR um TIRO, Black Dahlia sacrifica 3% da VIDA MÁXIMA para aplicar DEFINHAR e ganhar 8% do MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: Ao usar um BLOCKBUSTER, drena 5% da VIDA MÁXIMA do oponente por acúmulo de DEFINHAR e converte todos os acúmulos de DEFINHAR em POLARIDADE INVERSA por 3 segundos cada."
+                                                                },
+                                          "marquee_ability":  "Descontrole Metálico",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, , \u003c:Blockbuster:1434999898385944606\u003e Capacho, , \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, , \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, , \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte "
+                                      }
+                                  ],
+                     "ouro":  [
+                                  {
+                                      "name":  "Agente Corrosiva",
+                                      "title_formatted":  "\u003e Agente Corrosiva \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Água",
+                                      "color_hex":  "#1095d5",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101901550321905/1000.png"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,293",
+                                                    "health":  "81,773",
+                                                    "power":  "27,085"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "CÁLICE DE VENENO",
+                                                                "description":  "[HAB 1]: Remova todos os EF. NEG. e ganhe 3 camada(s) de BARREIRA quando qualquer lutador usar um BLOCKBUSTER.\n\n[HAB 2]: Com 5 camadas de BARREIRA, todos os TIROS são INDEFENSÁVEIS e infligem GOSMA por 10 segundos ao GOLPEAR."
+                                                            },
+                                      "marquee_ability":  "Não Há Tempo Para Morrer (Defesa) / Descontrole Metálico (Ataque)",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Capacho,, \u003c:Blockbuster:1434999898385944606\u003e Presente de Despedida,, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte "
+                                  },
+                                  {
+                                      "name":  "Fora-da-Lei Marcial",
+                                      "title_formatted":  "\u003e Fora-da-Lei Marcial \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#076314",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101955669168289/1000.png"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "12,576",
+                                                    "health":  "66,874",
+                                                    "power":  "28,030"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "TÁTICAS DE INTIMIDAÇÃO",
+                                                                "description":  "[HAB 1]: Os GOLPES DE ATAQUE DE CARGA de qualquer aliado dão ACELERAÇÃO por 12 segundos.\n\n[HAB 2]: Ao GOLPEAR, todos os aliados têm 25% de chance de infligir QUEBRA DE ARMADURA e SANGRAMENTO FORTE por 10 s cada, enquanto estiverem com ACELERAÇÃO."
+                                                            },
+                                      "marquee_ability":  "Descontrole Metálico",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:GolpeEspecial:1434999859768987748\u003e Deslizando, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici, \u003c:GolpeEspecial:1434999859768987748\u003e Te Vejo por Aí (Expulsão)"
+                                  },
+                                  {
+                                      "name":  "Imperturbável",
+                                      "title_formatted":  "\u003e Imperturbável \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#6426a8",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102001773084782/1000.png"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "10,925",
+                                                    "health":  "74,324",
+                                                    "power":  "25,445"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "CÂMARAS DE ECO",
+                                                                "description":  "[HAB 1]: Ganhe INABALÁVEL e 3 camada(s) de ESPINHOS por 10 segundos cada quando qualquer lutador QUICAR em uma parede.\n\n[HAB 2]: Ganhe MIASMA por 10 segundos a cada 2 segundos enquanto estiver se beneficiando de ESPINHOS."
+                                                            },
+                                      "marquee_ability":  "Descontrole Metálico (Opcional)",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, , \u003c:Blockbuster:1434999898385944606\u003e Capacho, , \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, , \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte,  "
+                                  },
+                                  {
+                                      "name":  "Psicomandante",
+                                      "title_formatted":  "\u003e Psicomandante \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Fogo",
+                                      "color_hex":  "#bc0e0e",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102044718432358/1000.png"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "12,576",
+                                                    "health":  "66,874",
+                                                    "power":  "28,030"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MEDIDAS DESPÓTICAS",
+                                                                "description":  "[HAB 1]: Ao DISPARAR seu último TIRO restante, ganhe RESISTÊNCIA FINAL e 5 camadas de FÚRIA por 10 segundos cada.\n\n[HAB 2]: Ganhe OLHO-MORTO e 3 camada(s) de ESQUIVA por 10 segundos cada ao usar um GOLPE ESPECIAL enquanto se beneficia de FÚRIA."
+                                                            },
+                                      "marquee_ability":  "Descontrole Metálico",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte"
+                                  },
+                                  {
+                                      "name":  "Estelar",
+                                      "title_formatted":  "\u003e Estelar \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#6426a8",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102119070990436/1000.png"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,293",
+                                                    "health":  "81,773",
+                                                    "power":  "27,085"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "CRESCENDO MATADOR",
+                                                                "description":  "[HAB 1]: Ao RECARREGAR com 3 TIROS ou menos restantes, ganhe 3 TIROS RELÂMPAGO. TIROS RELÂMPAGO DESATIVAM ENTRADAS NA ASSISTÊNCIA e têm 10% de chance de DESATIVAR BLOCKBUSTERS por 15 s cada.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo de ASSIST. DESATIVADA, TIROS RELÂMPAGO tiram 1.5% da VIDA MÁX. como dano extra dos aliados do oponente. Enquanto o oponente estiver sofrendo de BLOCKB. DESATIVADOS, tira mais 1.5% da VIDA MÁX. de todos os oponentes."
+                                                            },
+                                      "marquee_ability":  "Descontrole Metálico",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                  },
+                                  {
+                                      "name":  "Violência Vermelha",
+                                      "title_formatted":  "\u003e Violência Vermelha \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Fogo",
+                                      "color_hex":  "#ff4848",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361102073180983436/1000.png"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "10,925",
+                                                    "health":  "74,324",
+                                                    "power":  "27,546"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "PERSEGUIÇÃO",
+                                                                "description":  "[HAB 1]: TIROS COMUNS infligem DEFINHAR e BLOQUEIO DE CURA por 15 segundos cada enquanto perto de um oponente.\n\n[HAB 2]: 50% de todo o dano infligido é recuperado como VIDA enquanto o oponente estiver sofrendo BLOQUEIO DE CURA."
+                                                            },
+                                      "marquee_ability":  "Descontrole Metálico",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Capacho, , \u003c:GolpeEspecial:1434999859768987748\u003e Deslizando, , \u003c:GolpeEspecial:1434999859768987748\u003e Massacre,  \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                  }
+                              ],
+                     "prata":  [
+                                   {
+                                       "name":  "Máquina Mortífera",
+                                       "title_formatted":  "\u003e Máquina Mortífera \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Água",
+                                       "color_hex":  "#1095d5",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101675460432175/1000.png?ex=681dd4f7\u0026is=681c8377\u0026hm=19507a928b87389e72ed6c8e19e32a755af98ae222b14115c6a22aadc31ca8f6\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "8,602",
+                                                     "health":  "75,936",
+                                                     "power":  "25,119"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "ALIMENTADA POR SANGUE",
+                                                                 "description":  "[HAB 1]: **TODOS OS TIROS têm 100% de chance de infligir SANGRAMENTO por 10 segundos ao GOLPEAR.**\n\n[HAB 2]: Ganhe 3% no MEDIDOR e 1% de VIDA por segundo **enquanto estiver perto de um oponente sofrendo SANGRAMENTO.**"
+                                                             },
+                                       "marquee_ability":  "Descontrole Metálico",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                   },
+                                   {
+                                       "name":  "Esmaga-Alma",
+                                       "title_formatted":  "\u003e Esmaga-Alma \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Luz",
+                                       "color_hex":  "#dfd173",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101729990443008/1000.png?ex=681dd504\u0026is=681c8384\u0026hm=ae258240705bcd570589b2adc003eeca3310a9936708dcb58bdc0fabdfdd0de3\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "11,674",
+                                                     "health":  "62,074",
+                                                     "power":  "26,019"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "SINFONIA CALAMITOSA",
+                                                                 "description":  "[HAB 1]: Ganhe OLHO-MORTO e inflija QUEBRA DE GUARDA por 10 segundos cada, **sempre que o oponente ganhar um EFEITO POSITIVO.**\n\n[HAB 2]: Cause 10% de **dano extra por cada EF. POS. ou EF. NEG. aplicado ao oponente.**"
+                                                             },
+                                       "marquee_ability":  "Descontrole Metálico",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Presente de Despedida, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                   },
+                                   {
+                                       "name":  "Dame Slayer",
+                                       "title_formatted":  "\u003e Dame Slayer \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Ar",
+                                       "color_hex":  "#076314",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101836974821476/1000.png?ex=681dd51d\u0026is=681c839d\u0026hm=3b3fde2b3155c568acc5fab4ea1f7f0e757d499b68fbef3cd325668516dc4700\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,138",
+                                                     "health":  "69,005",
+                                                     "power":  "25,569"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "CARREGADO COM PLASMA",
+                                                                 "description":  "[HAB 1]: **Uma vez por luta**, ao RECARREGAR sem TIROS restantes, ganhe 6 TIROS RELÂMPAGO e inflija DESTRUIÇÃO por 20 segundos. A DESTRUIÇÃO é removida se Dália Negra SAIR DA ASSISTÊNCIA ou for derrotada.\n\n[HAB 2]: TIROS RELÂMPAGO causam 100% de dano extra e fazem o oponente perder 15% do MEDIDOR DE BLOCKBUSTER ao GOLPEAR **(também se aplica a golpes bloqueados).**"
+                                                             },
+                                       "marquee_ability":  "Descontrole Metálico",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                   },
+                                   {
+                                       "name":  "Perigo Biológico",
+                                       "title_formatted":  "\u003e Perigo Biológico \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Trevas",
+                                       "color_hex":  "#8000ff",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1423025790802464848/Biohazard.png?ex=68decf8b\u0026is=68dd7e0b\u0026hm=7b174d04fb20e2caf1b41ab8831274431e703e8f08a1c8cf0f923e17a1eebec8\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,138",
+                                                     "health":  "69,005",
+                                                     "power":  "25,569"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "SANDUÍCHE DE ESPECIALISTA",
+                                                                 "description":  "[HAB 1]: **Enquanto tiver mais de 50% de VIDA**, ganha 6 CHUMBOS GROSSOS ao recarregar sem tiror restantes. CHUMBOS GROSSOS causam 50% dano extra e removem 1 EF. POS. do oponente ao acertar.\n\n[HAB 2]: Enquanto tiver menos de 50% de VIDA, recupere 100% da VIDA MÁXIMA **da Dália Negra ao recarregar sem TIROS restantes.**"
+                                                             },
+                                       "marquee_ability":  "Descontrole Metálico",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                   }
+                               ],
+                     "bronze":  [
+                                    {
+                                        "name":  "Gatilho Nervoso",
+                                        "title_formatted":  "\u003e Gatilho Nervoso \u003c:Trevas:1389703142848991364\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Trevas",
+                                        "color_hex":  "#6426a8",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101579830300702/1000.png?ex=681dd4e0\u0026is=681c8360\u0026hm=0fe62b8cd68051399b700e1190a151fe085da9f4a6c88b9d6e474d69c9ad16af\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "9,428",
+                                                      "health":  "64,090",
+                                                      "power":  "23,762"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "DANO COLATERAL",
+                                                                  "description":  "[HAB 1]: 100% do dano causado por TIROS PADRÃO também é **sofrido pelos aliados do oponente.**\n\n[HAB 2]: Ganhe FÚRIA por 15 segundos **sempre que os aliados do oponente sofrerem dano.**"
+                                                              },
+                                        "marquee_ability":  "Descontrole Metálico",
+                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Perigo no Cenário, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                    },
+                                    {
+                                        "name":  "Pistola Dourada",
+                                        "title_formatted":  "\u003e Pistola Dourada \u003c:Luz:1389703315167907902\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Luz",
+                                        "color_hex":  "#dfd173",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018199366926478/Icon-Black_Dahlia.png?ex=68a7877d\u0026is=68a635fd\u0026hm=985b76e20472a13be4e55a917dc75e34adc8e69725c7652abaf71dfdc68018ab\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361101613179343080/1000.png?ex=681dd4e8\u0026is=681c8368\u0026hm=4d5d7375c3b6c04cfb72159f90b96f010d6be988e32903487ce42beb603dbc97\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "10,676",
+                                                      "health":  "57,658",
+                                                      "power":  "23,970"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "TIRO DE UM MILHÃO DE DÓLARES",
+                                                                  "description":  "[HAB 1]: Ganhe 5 camada(s) de PRECISÃO quando **RECARREGAR sem TIROS restantes.**\n\n[HAB 2]: **Com pelo menos 3 camadas de PRECISÃO, todos os TIROS são INDEFENSÁVEIS e causam 100% de dano extra.**"
+                                                              },
+                                        "marquee_ability":  "Descontrole Metálico",
+                                        "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Empoderar, \u003c:Blockbuster:1434999898385944606\u003e Presente de Despedida, \u003c:GolpeEspecial:1434999859768987748\u003e Massacre, \u003c:GolpeEspecial:1434999859768987748\u003e Pêndulo da Morte, \u003c:GolpeEspecial:1434999859768987748\u003e Ratoeira dos Medici"
+                                    }
+                                ]
+                 }
 }

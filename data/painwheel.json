@@ -1,372 +1,372 @@
 {
-  "character": "Painwheel", 
-  "version": "1.0",
-  "variants": {
-    "diamante": [
-      {
-        "name": "Escaladora de Paredes",
-        "title_formatted": "> Escaladora de Paredes <:Agua:1389703224210231437><:diamante:1407839264779141140>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683452977483848/1000.png?ex=681df88a&is=681ca70a&hm=05d66c3416a7e5c2dd1a436ba916c8b57a10cbb8099d287169e892f17cf5fef7&"
-        },
-        "stats": {
-          "attack": "12,384",
-          "health": "58,676",
-          "power": "26,189"
-        },
-        "signature_ability": {
-          "name": "SÓ PENDURADA AQUI",
-          "description": "[HAB 1]: **Depois que Painwheel ficar no ar por 1.5 segundos,** ela ganha OLHO-MORTO por 10 segundos e inflige QUEBRA de GUARDA por 8 segundos.\n\n[HAB 2]: 15% de chance **ao GOLPEAR **de remover 1 EF. POS. do oponente e ganhar ESQUIVA por 10 seg. **enquanto perto de um oponente sofrendo de QUEBRA DE GUARDA.**"
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Ameaça Mascarada",
-        "title_formatted": "> Ameaça Mascarada <:Luz:1389703315167907902><:diamante:1407839264779141140>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683477132738810/1000.png?ex=681df88f&is=681ca70f&hm=5087e5a2e0f4963a405feed760586925cbf5b7c5eda7754140aa699faee96cca&"
-        },
-        "stats": {
-          "attack": "12,384",
-          "health": "58,676",
-          "power": "26,189"
-        },
-        "signature_ability": {
-          "name": "DESTRUIÇÃO IMINENTE",
-          "description": "[HAB 1]: **Enquanto estiver perto de um oponente,** inflige MALDIÇÃO e QUIETUS por 2 segundos a cada 1 segundo(s).\n\n[HAB 2]: **Com o oponente sofrendo QUIETUS, acertar uma EXPLOSÃO** inflige DESTRUIÇÃO permanente por 15 s e cura 15% da VIDA. **DESTRUIÇÃO é removida quando o oponente ganha um EF. POS. ou a Painwheel morre.***"
-        },
-        "marquee_ability": "Sangue Maculado",
-        "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Neuromancer",
-        "title_formatted": "> Neuromancer <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683513715462286/1000.png?ex=681df898&is=681ca718&hm=be164a5a9ac07606ae49aebd620c7c574d2212fc4ade4df8a644f73e1ebbe6c1&"
-        },
-        "stats": {
-          "attack": "14,554",
-          "health": "53,338",
-          "power": "27,702"
-        },
-        "signature_ability": {
-          "name": "FAZER A CABEÇA",
-          "description": "[HAB 1]: Drene 10% do MEDIDOR DE BLOCKBUSTER **a cada GOLPE não BLOCKBUSTER bloqueado pelo oponente.**\n\n[HAB 2]: 15% do dano causado **por um BLOCKBUSTER** também é sofrido pelos aliados do oponente."
-        },
-        "marquee_ability": [
-          "Rancor (Ataque) ",
-          "Sangue Maculado (Defesa/Ataque)"
-        ],
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Papa-moscas",
-        "title_formatted": "> Papa-moscas <:Ar:1389703277532287066><:diamante:1407839264779141140>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683549438218383/1000.png?ex=681df8a1&is=681ca721&hm=a40f0a6849e5f335bb236cd1801f8041a031a3c74447e1a6158615ef59d83700&"
-        },
-        "stats": {
-          "attack": "16,743",
-          "health": "48,020",
-          "power": "29,241"
-        },
-        "signature_ability": {
-          "name": "PEQUENA HÉLICE DOS HORRORES",
-          "description": "[HAB 1]: Causa 25% de dano extra **para cada lutador, aliado ou oponente derrotado.**\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO **após derrotar um oponente.**"
-        },
-        "marquee_ability": [
-          "Rancor (Ataque)",
-          "Sangue Maculado (Defesa/Ataque)"
-        ],
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Explosão"
-      }
-    ],
-    "ouro": [
-      {
-        "name": "VAGALUME",
-        "title_formatted": "> VAGALUME <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683280843247876/1000.png?ex=681df861&is=681ca6e1&hm=1b5f4d9b8f58a54c48543f6b11cfcd921a06d018e9705f6f4b376d1974b2af16&"
-        },
-        "stats": {
-          "attack": "11,501",
-          "health": "54,471",
-          "power": "24,317"
-        },
-        "signature_ability": {
-          "name": "SERENIDADE",
-          "description": "[HAB 1]: **Ao BLOQUEAR com menos de 50% de VIDA,** ganhe 8% de VIDA por segundo.\n\n[HAB 2]: **Ganhe também 8% no MEDIDOR DE BLOCKBUSTER por segundo.**"
-        },
-        "marquee_ability": "Sangue Maculado",
-        "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Frio Mordente",
-        "title_formatted": "> Frio Mordente <:Agua:1389703224210231437><:ouro:1407839155785826306>",
-        "element": "Água",
-        "color_hex": "#00ffff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683316863930479/1000.png?ex=681df869&is=681ca6e9&hm=78e5d778f567e802ad166f0d0fa711125e63fa26f6614c4d3bc4452fab3c57ef&"
-        },
-        "stats": {
-          "attack": "11,501",
-          "health": "54,471",
-          "power": "24,317"
-        },
-        "signature_ability": {
-          "name": "NECRÓVORA",
-          "description": "[HAB 1]: Ganhe 1 camada de BARREIRA e ESPINHOS por 10 segundos a cada 3 segundos **enquanto estiver perto de um cadáver.**\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO por 10 segundos e 50% no MEDIDOR DE BLOCKBUSTER **ao derrotar um oponente. Oponentes derrotados não podem ser revivido.**"
-        },
-        "marquee_ability": "Sangue Maculado",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Gênese",
-        "title_formatted": "> Gênese <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683339613831329/1000.png?ex=681df86f&is=681ca6ef&hm=89c0ad04f0696b596570696adb9b9f29f0f0a06249d831c477cb32d1cb4a54fd&"
-        },
-        "stats": {
-          "attack": "13,817",
-          "health": "49,536",
-          "power": "26,727"
-        },
-        "signature_ability": {
-          "name": "PORTA DA MORTE",
-          "description": "[HAB 1]: Ganhe RESISTÊNCIA FINAL por 15 s e inflija MARCA DA MORTE permanente** quando sua VIDA cair abaixo de 50%.**\n\n[HAB 2]: **Ao se beneficiar de RES. FINAL,** tem 10% de chance de ganhar FÚRIA **ao golpear** e 50% do dano causado é recuperado como VIDA."
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Festa Macabra",
-        "title_formatted": "> Festa Macabra <:Luz:1389703315167907902><:ouro:1407839155785826306>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683384031510610/1000.png?ex=681df879&is=681ca6f9&hm=bd0cafeb842308ff91b8045c5eeff8b5ebf0dec76c90f17723ca4f42d76d3815&"
-        },
-        "stats": {
-          "attack": "13,817",
-          "health": "49,536",
-          "power": "26,727"
-        },
-        "signature_ability": {
-          "name": "DANÇA DOS ESQUELETOS",
-          "description": "[HAB 1]: **Uma vez por luta,** ganhe INABALÁVEL e IMUNIDADE por 15 segundos **quando a VIDA cair abaixo de 50%.**\n\n[HAB 2]: **Quando o INABALÁVEL da Painwheel expirar,** RESSUSSITE aliados com 30% de VIDA."
-        },
-        "marquee_ability": "Sangue Maculado",
-        "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Tirania",
-        "title_formatted": "> Tirania <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1368627433397293158/Tyrannical_TEMP.png?ex=681e2f1f&is=681cdd9f&hm=768132756d9a17f208be85b61957ea5d6973e2a6b5acb03c46b6ff04b1f497db&"
-        },
-        "stats": {
-          "attack": "15,533",
-          "health": "44,583",
-          "power": "27,134"
-        },
-        "signature_ability": {
-          "name": "MORDIDA INFECCIOSA",
-          "description": "[HAB 1]: **GOLPES CRÍTICOS** têm 35% de chance de causar SANGRAMENTO e conceder MIASMA por 6 segundos.\n\n[HAB 2]: **Enquanto estiver com pelo menos 3 acúmulos de MIASMA, ou o oponente estiver sob pelo menos 3 acúmulos de SANGRAMENTO, GOLPES CRÍTICOS** têm 50% de chance de remover 1 EF. POS. do oponente."
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Corta-diversão",
-        "title_formatted": "> Corta-diversão <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683412267827482/1000.png?ex=681df880&is=681ca700&hm=5bb5c4da016e5fa69e88e794c1aa76823e87f87829f0415d359b131d9b4047b4&"
-        },
-        "stats": {
-          "attack": "15,533",
-          "health": "44,583",
-          "power": "27,134"
-        },
-        "signature_ability": {
-          "name": "HEMORRAGIA",
-          "description": "[HAB 1]: 10% de chance de infligir SANGRAMENTO FORTE por 10 segundos **ao GOLPEAR.**\n\n[HAB 2]: Ganhe FÚRIA permanente **quando a VIDA do oponente cair abaixo de 25%.**"
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      }
-    ],
-    "prata": [
-      {
-        "name": "Jovem Fúria",
-        "title_formatted": "> Jovem Fúria <:Agua:1389703224210231437><:prata:1407839105169227957>",
-        "element": "Água",
-        "color_hex": "#00ffff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683158533279754/1000.png?ex=681df843&is=681ca6c3&hm=0737541a4e72cabb1266ab00b863d2f2e0fe6bee791a045ff1a22c26f81a5295&"
-        },
-        "stats": {
-          "attack": "10,616",
-          "health": "50,573",
-          "power": "22,575"
-        },
-        "signature_ability": {
-          "name": "CASCA FINA",
-          "description": "[HAB 1]: Ganhe FÚRIA permanente **ao sofrer um GOLPE (inclusive golpes bloqueados) que tire mais de 5% da VIDA MÁX.**\n\n[HAB 2]: **Cada 10º GOLPE DE COMBO** concede REGENERAÇÃO FORTE e 2 camadas de ARMADURA por 10 s cada."
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Motor de Sangue",
-        "title_formatted": "> Motor de Sangue <:Fogo:1389703188525092934><:prata:1407839105169227957>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683189885698229/1000.png?ex=681df84b&is=681ca6cb&hm=2aacb024811dc40188d88b9b0219427840d139ec8f35bd7d3e1ee0baa077f4e9&"
-        },
-        "stats": {
-          "attack": "12,538",
-          "health": "45,984",
-          "power": "23,871"
-        },
-        "signature_ability": {
-          "name": "TRANSFUSÃO",
-          "description": "[HAB 1]: **Ao GOLPEAR,** 15% de chance de infligir SANGRAM. **em si mesmo** e SANGRAM. FORTE no oponente por 10 s cada.\n\n[HAB 2]: **Ao usar um GOLPE ESPECIAL ou BLOCKBUSTER, **remova todos os SANGRAMENTOS e ganhe FÚRIA por 10 segundos por SANGRAMENTO removido."
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Sexta Esquisita",
-        "title_formatted": "> Sexta Esquisita <:Trevas:1389703142848991364><:prata:1407839105169227957>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f&is=68a635df&hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683235653812460/1000.png?ex=681df856&is=681ca6d6&hm=5441f231741b77988f83b975a09a53e35b6d6b38331e5efc27e3b4655ffa187f&"
-        },
-        "stats": {
-          "attack": "14,458",
-          "health": "41,145",
-          "power": "25,240"
-        },
-        "signature_ability": {
-          "name": "MADAME MATADORA",
-          "description": "[HAB 1]: **GOLPES CRÍTICOS** infligem SANGRAMENTO e MARCA DA MORTE por 5 seg cada.\n\n[HAB 2]: Ganhe ACELERAÇÃO por 10 seg e 5 camadas de PRECISÃO. **ao derrotar um oponente com um só GOLPE que tire ao menos 10% de VIDA.**"
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Serrada ao Meio",
-        "title_formatted": "> Serrada ao Meio <:Trevas:1389703142848991364><:prata:1407839105169227957>",
-        "element": "Trevas",
-        "color_hex": "#8000ff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1370159377910337576/1369756149351714826.png?ex=681e7bdc&is=681d2a5c&hm=eb1e90cff46e36d9925ce362ae577389102da0851534795bad63e9a14026e989&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025905789571215/Sawed_Apart.png?ex=68decfa6&is=68dd7e26&hm=85b18aab32fd1ef3994be2fd3a6b7289b677bb2a8fcf8b20145ae11d15305194&"
-        },
-        "stats": {
-          "attack": "12,538",
-          "health": "45,984",
-          "power": "23,871"
-        },
-        "signature_ability": {
-          "name": "VIVER OU MORRER",
-          "description": "[HAB 1]: GOLPES de MOVIMENTOS ESPECIAIS e BLOCKBUSTERS têm 35% de chance de aplicar um EF. NEG. aleatória por 10 segundos. Esses EF. NEG. **são removidos se a Painwheel for derrotada.**\n\n[HAB 2]: **Enquanto a Painwheel for a Lutadora ativa**, sempre que um EF. NEG. no oponente expirar, cause dano igual a 3% da VIDA MÁXIMA DELE."
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      }
-    ],
-    "bronze": [
-      {
-        "name": "Enferrujada",
-        "title_formatted": "> Enferrujada <:Luz:1389703315167907902><:bronze:1407839009664798801>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1370159377910337576/1369756149351714826.png?ex=681e7bdc&is=681d2a5c&hm=eb1e90cff46e36d9925ce362ae577389102da0851534795bad63e9a14026e989&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683069068902562/1000.png?ex=681df82e&is=681ca6ae&hm=9c62b65774c7e0e01d797fe785098e8eb323122ccda2cdd3f2e77543b5d5a9f7&"
-        },
-        "stats": {
-          "attack": "11,674",
-          "health": "42,720",
-          "power": "22,207"
-        },
-        "signature_ability": {
-          "name": "SANGRE PRA MIM",
-          "description": "[HAB 1]: **Ao GOLPEAR,** tem 10% de chance de infligir SANGRAMENTO por 3 segundos.\n\n[HAB 2]: Também converte 3 dos EFEITOS POSITIVOS do oponente **em SANGRAMENTO.**"
-        },
-        "marquee_ability": "Rancor",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Colheita de Buer, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga"
-      },
-      {
-        "name": "Pura Coragem",
-        "title_formatted": "> Pura Coragem <:Agua:1389703224210231437><:bronze:1407839009664798801>",
-        "element": "Água",
-        "color_hex": "#00ffff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1370159377910337576/1369756149351714826.png?ex=681e7bdc&is=681d2a5c&hm=eb1e90cff46e36d9925ce362ae577389102da0851534795bad63e9a14026e989&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683125008076810/1000.png?ex=681df83b&is=681ca6bb&hm=a40cdfa274f3db0f730df2aed3b1fbe212dad902900cc5873deafae5b683c1ba&"
-        },
-        "stats": {
-          "attack": "9,927",
-          "health": "47,021",
-          "power": "20,990"
-        },
-        "signature_ability": {
-          "name": "PONTA AFIADA",
-          "description": "[HAB 1]: **Ao sofrer um CRÍTICO,** inflige SANGRAMENTO por 15 segundos.\n\n[HAB 2]: 50% de chance de infligir SANGRAMENTO por 3 s **ao GOLPEAR se o oponente estiver SANGRANDO.**"
-        },
-        "marquee_ability": "Sangue Maculado",
-        "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Sobrecarga de Buer **BB3**, <:Blockbuster:1434999898385944606> Morte Rastejante, <:GolpeEspecial:1434999859768987748> Eixo de Corrida, <:GolpeEspecial:1434999859768987748> Ferrão Gae Bolga, <:GolpeEspecial:1434999859768987748> Explosão"
-      }
-    ]
-  }
+    "character":  "Painwheel",
+    "version":  "1.0",
+    "variants":  {
+                     "diamante":  [
+                                      {
+                                          "name":  "Escaladora de Paredes",
+                                          "title_formatted":  "\u003e Escaladora de Paredes \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Água",
+                                          "color_hex":  "#000000",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683452977483848/1000.png?ex=681df88a\u0026is=681ca70a\u0026hm=05d66c3416a7e5c2dd1a436ba916c8b57a10cbb8099d287169e892f17cf5fef7\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "12,384",
+                                                        "health":  "58,676",
+                                                        "power":  "26,189"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "SÓ PENDURADA AQUI",
+                                                                    "description":  "[HAB 1]: **Depois que Painwheel ficar no ar por 1.5 segundos,** ela ganha OLHO-MORTO por 10 segundos e inflige QUEBRA de GUARDA por 8 segundos.\n\n[HAB 2]: 15% de chance **ao GOLPEAR **de remover 1 EF. POS. do oponente e ganhar ESQUIVA por 10 seg. **enquanto perto de um oponente sofrendo de QUEBRA DE GUARDA.**"
+                                                                },
+                                          "marquee_ability":  "Rancor",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                      },
+                                      {
+                                          "name":  "Ameaça Mascarada",
+                                          "title_formatted":  "\u003e Ameaça Mascarada \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Luz",
+                                          "color_hex":  "#ffff00",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683477132738810/1000.png?ex=681df88f\u0026is=681ca70f\u0026hm=5087e5a2e0f4963a405feed760586925cbf5b7c5eda7754140aa699faee96cca\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "12,384",
+                                                        "health":  "58,676",
+                                                        "power":  "26,189"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "DESTRUIÇÃO IMINENTE",
+                                                                    "description":  "[HAB 1]: **Enquanto estiver perto de um oponente,** inflige MALDIÇÃO e QUIETUS por 2 segundos a cada 1 segundo(s).\n\n[HAB 2]: **Com o oponente sofrendo QUIETUS, acertar uma EXPLOSÃO** inflige DESTRUIÇÃO permanente por 15 s e cura 15% da VIDA. **DESTRUIÇÃO é removida quando o oponente ganha um EF. POS. ou a Painwheel morre.***"
+                                                                },
+                                          "marquee_ability":  "Sangue Maculado",
+                                          "recommended_build":  "VD%, Defesa, Resistência e Reat. Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                      },
+                                      {
+                                          "name":  "Neuromancer",
+                                          "title_formatted":  "\u003e Neuromancer \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Trevas",
+                                          "color_hex":  "#800080",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683513715462286/1000.png?ex=681df898\u0026is=681ca718\u0026hm=be164a5a9ac07606ae49aebd620c7c574d2212fc4ade4df8a644f73e1ebbe6c1\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "14,554",
+                                                        "health":  "53,338",
+                                                        "power":  "27,702"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "FAZER A CABEÇA",
+                                                                    "description":  "[HAB 1]: Drene 10% do MEDIDOR DE BLOCKBUSTER **a cada GOLPE não BLOCKBUSTER bloqueado pelo oponente.**\n\n[HAB 2]: 15% do dano causado **por um BLOCKBUSTER** também é sofrido pelos aliados do oponente."
+                                                                },
+                                          "marquee_ability":  [
+                                                                  "Rancor (Ataque) ",
+                                                                  "Sangue Maculado (Defesa/Ataque)"
+                                                              ],
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                      },
+                                      {
+                                          "name":  "Papa-moscas",
+                                          "title_formatted":  "\u003e Papa-moscas \u003c:Ar:1389703277532287066\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Ar",
+                                          "color_hex":  "#00ff00",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683549438218383/1000.png?ex=681df8a1\u0026is=681ca721\u0026hm=a40f0a6849e5f335bb236cd1801f8041a031a3c74447e1a6158615ef59d83700\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "16,743",
+                                                        "health":  "48,020",
+                                                        "power":  "29,241"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "PEQUENA HÉLICE DOS HORRORES",
+                                                                    "description":  "[HAB 1]: Causa 25% de dano extra **para cada lutador, aliado ou oponente derrotado.**\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO **após derrotar um oponente.**"
+                                                                },
+                                          "marquee_ability":  [
+                                                                  "Rancor (Ataque)",
+                                                                  "Sangue Maculado (Defesa/Ataque)"
+                                                              ],
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                      }
+                                  ],
+                     "ouro":  [
+                                  {
+                                      "name":  "VAGALUME",
+                                      "title_formatted":  "\u003e VAGALUME \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Fogo",
+                                      "color_hex":  "#ff0000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683280843247876/1000.png?ex=681df861\u0026is=681ca6e1\u0026hm=1b5f4d9b8f58a54c48543f6b11cfcd921a06d018e9705f6f4b376d1974b2af16\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,501",
+                                                    "health":  "54,471",
+                                                    "power":  "24,317"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "SERENIDADE",
+                                                                "description":  "[HAB 1]: **Ao BLOQUEAR com menos de 50% de VIDA,** ganhe 8% de VIDA por segundo.\n\n[HAB 2]: **Ganhe também 8% no MEDIDOR DE BLOCKBUSTER por segundo.**"
+                                                            },
+                                      "marquee_ability":  "Sangue Maculado",
+                                      "recommended_build":  "VD%, Defesa, Resistência e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  },
+                                  {
+                                      "name":  "Frio Mordente",
+                                      "title_formatted":  "\u003e Frio Mordente \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Água",
+                                      "color_hex":  "#00ffff",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683316863930479/1000.png?ex=681df869\u0026is=681ca6e9\u0026hm=78e5d778f567e802ad166f0d0fa711125e63fa26f6614c4d3bc4452fab3c57ef\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,501",
+                                                    "health":  "54,471",
+                                                    "power":  "24,317"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "NECRÓVORA",
+                                                                "description":  "[HAB 1]: Ganhe 1 camada de BARREIRA e ESPINHOS por 10 segundos a cada 3 segundos **enquanto estiver perto de um cadáver.**\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO por 10 segundos e 50% no MEDIDOR DE BLOCKBUSTER **ao derrotar um oponente. Oponentes derrotados não podem ser revivido.**"
+                                                            },
+                                      "marquee_ability":  "Sangue Maculado",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                  },
+                                  {
+                                      "name":  "Gênese",
+                                      "title_formatted":  "\u003e Gênese \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#800080",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683339613831329/1000.png?ex=681df86f\u0026is=681ca6ef\u0026hm=89c0ad04f0696b596570696adb9b9f29f0f0a06249d831c477cb32d1cb4a54fd\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "13,817",
+                                                    "health":  "49,536",
+                                                    "power":  "26,727"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "PORTA DA MORTE",
+                                                                "description":  "[HAB 1]: Ganhe RESISTÊNCIA FINAL por 15 s e inflija MARCA DA MORTE permanente** quando sua VIDA cair abaixo de 50%.**\n\n[HAB 2]: **Ao se beneficiar de RES. FINAL,** tem 10% de chance de ganhar FÚRIA **ao golpear** e 50% do dano causado é recuperado como VIDA."
+                                                            },
+                                      "marquee_ability":  "Rancor",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                  },
+                                  {
+                                      "name":  "Festa Macabra",
+                                      "title_formatted":  "\u003e Festa Macabra \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Luz",
+                                      "color_hex":  "#ffff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683384031510610/1000.png?ex=681df879\u0026is=681ca6f9\u0026hm=bd0cafeb842308ff91b8045c5eeff8b5ebf0dec76c90f17723ca4f42d76d3815\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "13,817",
+                                                    "health":  "49,536",
+                                                    "power":  "26,727"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "DANÇA DOS ESQUELETOS",
+                                                                "description":  "[HAB 1]: **Uma vez por luta,** ganhe INABALÁVEL e IMUNIDADE por 15 segundos **quando a VIDA cair abaixo de 50%.**\n\n[HAB 2]: **Quando o INABALÁVEL da Painwheel expirar,** RESSUSSITE aliados com 30% de VIDA."
+                                                            },
+                                      "marquee_ability":  "Sangue Maculado",
+                                      "recommended_build":  "VD%, Defesa, Resistência e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  },
+                                  {
+                                      "name":  "Tirania",
+                                      "title_formatted":  "\u003e Tirania \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#800080",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1368627433397293158/Tyrannical_TEMP.png?ex=681e2f1f\u0026is=681cdd9f\u0026hm=768132756d9a17f208be85b61957ea5d6973e2a6b5acb03c46b6ff04b1f497db\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "15,533",
+                                                    "health":  "44,583",
+                                                    "power":  "27,134"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MORDIDA INFECCIOSA",
+                                                                "description":  "[HAB 1]: **GOLPES CRÍTICOS** têm 35% de chance de causar SANGRAMENTO e conceder MIASMA por 6 segundos.\n\n[HAB 2]: **Enquanto estiver com pelo menos 3 acúmulos de MIASMA, ou o oponente estiver sob pelo menos 3 acúmulos de SANGRAMENTO, GOLPES CRÍTICOS** têm 50% de chance de remover 1 EF. POS. do oponente."
+                                                            },
+                                      "marquee_ability":  "Rancor",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                  },
+                                  {
+                                      "name":  "Corta-diversão",
+                                      "title_formatted":  "\u003e Corta-diversão \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#00ff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683412267827482/1000.png?ex=681df880\u0026is=681ca700\u0026hm=5bb5c4da016e5fa69e88e794c1aa76823e87f87829f0415d359b131d9b4047b4\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "15,533",
+                                                    "health":  "44,583",
+                                                    "power":  "27,134"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "HEMORRAGIA",
+                                                                "description":  "[HAB 1]: 10% de chance de infligir SANGRAMENTO FORTE por 10 segundos **ao GOLPEAR.**\n\n[HAB 2]: Ganhe FÚRIA permanente **quando a VIDA do oponente cair abaixo de 25%.**"
+                                                            },
+                                      "marquee_ability":  "Rancor",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                  }
+                              ],
+                     "prata":  [
+                                   {
+                                       "name":  "Jovem Fúria",
+                                       "title_formatted":  "\u003e Jovem Fúria \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Água",
+                                       "color_hex":  "#00ffff",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683158533279754/1000.png?ex=681df843\u0026is=681ca6c3\u0026hm=0737541a4e72cabb1266ab00b863d2f2e0fe6bee791a045ff1a22c26f81a5295\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,616",
+                                                     "health":  "50,573",
+                                                     "power":  "22,575"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "CASCA FINA",
+                                                                 "description":  "[HAB 1]: Ganhe FÚRIA permanente **ao sofrer um GOLPE (inclusive golpes bloqueados) que tire mais de 5% da VIDA MÁX.**\n\n[HAB 2]: **Cada 10º GOLPE DE COMBO** concede REGENERAÇÃO FORTE e 2 camadas de ARMADURA por 10 s cada."
+                                                             },
+                                       "marquee_ability":  "Rancor",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                   },
+                                   {
+                                       "name":  "Motor de Sangue",
+                                       "title_formatted":  "\u003e Motor de Sangue \u003c:Fogo:1389703188525092934\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Fogo",
+                                       "color_hex":  "#ff0000",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683189885698229/1000.png?ex=681df84b\u0026is=681ca6cb\u0026hm=2aacb024811dc40188d88b9b0219427840d139ec8f35bd7d3e1ee0baa077f4e9\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "12,538",
+                                                     "health":  "45,984",
+                                                     "power":  "23,871"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "TRANSFUSÃO",
+                                                                 "description":  "[HAB 1]: **Ao GOLPEAR,** 15% de chance de infligir SANGRAM. **em si mesmo** e SANGRAM. FORTE no oponente por 10 s cada.\n\n[HAB 2]: **Ao usar um GOLPE ESPECIAL ou BLOCKBUSTER, **remova todos os SANGRAMENTOS e ganhe FÚRIA por 10 segundos por SANGRAMENTO removido."
+                                                             },
+                                       "marquee_ability":  "Rancor",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                   },
+                                   {
+                                       "name":  "Sexta Esquisita",
+                                       "title_formatted":  "\u003e Sexta Esquisita \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Trevas",
+                                       "color_hex":  "#800080",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018074154500238/Icon-Painwheel.png?ex=68a7875f\u0026is=68a635df\u0026hm=98820f74a7a4ad88f62b82c9e6d366ed1ba0ce558e5328e1c13ea6ba96c26234\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683235653812460/1000.png?ex=681df856\u0026is=681ca6d6\u0026hm=5441f231741b77988f83b975a09a53e35b6d6b38331e5efc27e3b4655ffa187f\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "14,458",
+                                                     "health":  "41,145",
+                                                     "power":  "25,240"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "MADAME MATADORA",
+                                                                 "description":  "[HAB 1]: **GOLPES CRÍTICOS** infligem SANGRAMENTO e MARCA DA MORTE por 5 seg cada.\n\n[HAB 2]: Ganhe ACELERAÇÃO por 10 seg e 5 camadas de PRECISÃO. **ao derrotar um oponente com um só GOLPE que tire ao menos 10% de VIDA.**"
+                                                             },
+                                       "marquee_ability":  "Rancor",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                   },
+                                   {
+                                       "name":  "Serrada ao Meio",
+                                       "title_formatted":  "\u003e Serrada ao Meio \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Trevas",
+                                       "color_hex":  "#8000ff",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1370159377910337576/1369756149351714826.png?ex=681e7bdc\u0026is=681d2a5c\u0026hm=eb1e90cff46e36d9925ce362ae577389102da0851534795bad63e9a14026e989\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1423025905789571215/Sawed_Apart.png?ex=68decfa6\u0026is=68dd7e26\u0026hm=85b18aab32fd1ef3994be2fd3a6b7289b677bb2a8fcf8b20145ae11d15305194\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "12,538",
+                                                     "health":  "45,984",
+                                                     "power":  "23,871"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "VIVER OU MORRER",
+                                                                 "description":  "[HAB 1]: GOLPES de MOVIMENTOS ESPECIAIS e BLOCKBUSTERS têm 35% de chance de aplicar um EF. NEG. aleatória por 10 segundos. Esses EF. NEG. **são removidos se a Painwheel for derrotada.**\n\n[HAB 2]: **Enquanto a Painwheel for a Lutadora ativa**, sempre que um EF. NEG. no oponente expirar, cause dano igual a 3% da VIDA MÁXIMA DELE."
+                                                             },
+                                       "marquee_ability":  "Rancor",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                   }
+                               ],
+                     "bronze":  [
+                                    {
+                                        "name":  "Enferrujada",
+                                        "title_formatted":  "\u003e Enferrujada \u003c:Luz:1389703315167907902\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Luz",
+                                        "color_hex":  "#ffff00",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1370159377910337576/1369756149351714826.png?ex=681e7bdc\u0026is=681d2a5c\u0026hm=eb1e90cff46e36d9925ce362ae577389102da0851534795bad63e9a14026e989\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683069068902562/1000.png?ex=681df82e\u0026is=681ca6ae\u0026hm=9c62b65774c7e0e01d797fe785098e8eb323122ccda2cdd3f2e77543b5d5a9f7\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "11,674",
+                                                      "health":  "42,720",
+                                                      "power":  "22,207"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "SANGRE PRA MIM",
+                                                                  "description":  "[HAB 1]: **Ao GOLPEAR,** tem 10% de chance de infligir SANGRAMENTO por 3 segundos.\n\n[HAB 2]: Também converte 3 dos EFEITOS POSITIVOS do oponente **em SANGRAMENTO.**"
+                                                              },
+                                        "marquee_ability":  "Rancor",
+                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Colheita de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga"
+                                    },
+                                    {
+                                        "name":  "Pura Coragem",
+                                        "title_formatted":  "\u003e Pura Coragem \u003c:Agua:1389703224210231437\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Água",
+                                        "color_hex":  "#00ffff",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1370159377910337576/1369756149351714826.png?ex=681e7bdc\u0026is=681d2a5c\u0026hm=eb1e90cff46e36d9925ce362ae577389102da0851534795bad63e9a14026e989\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683125008076810/1000.png?ex=681df83b\u0026is=681ca6bb\u0026hm=a40cdfa274f3db0f730df2aed3b1fbe212dad902900cc5873deafae5b683c1ba\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "9,927",
+                                                      "health":  "47,021",
+                                                      "power":  "20,990"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "PONTA AFIADA",
+                                                                  "description":  "[HAB 1]: **Ao sofrer um CRÍTICO,** inflige SANGRAMENTO por 15 segundos.\n\n[HAB 2]: 50% de chance de infligir SANGRAMENTO por 3 s **ao GOLPEAR se o oponente estiver SANGRANDO.**"
+                                                              },
+                                        "marquee_ability":  "Sangue Maculado",
+                                        "recommended_build":  "VD%, Defesa, Resistência e Reat. Especial",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Sobrecarga de Buer, \u003c:Blockbuster:1434999898385944606\u003e Morte Rastejante, \u003c:GolpeEspecial:1434999859768987748\u003e Eixo de Corrida, \u003c:GolpeEspecial:1434999859768987748\u003e Ferrão Gae Bolga, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                    }
+                                ]
+                 }
 }

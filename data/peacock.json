@@ -1,344 +1,344 @@
 {
-  "character": "Peacock", 
-  "version": "1.0",
-  "variants": {
-    "diamante": [
-      {
-        "name": "Fica Frio",
-        "title_formatted": "> Fica Frio <:Agua:1389703224210231437><:diamante:1407839264779141140>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684724812091422/1000.png?ex=681ea279&is=681d50f9&hm=13a82e2ba4055fac876ce9f5c6d10d813049178636ecd888c343f6410752ea27&"
-        },
-        "stats": {
-          "attack": "11,981",
-          "health": "68,468",
-          "power": "27,641"
-        },
-        "signature_ability": {
-          "name": "CONGELAMENTO",
-          "description": "[HAB 1]: **Projéteis têm 50% de chance de infligir LENTIDÃO e DEFINHAR** por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.\n\n[HAB 2]: **Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 50% do ATAQUE da Peacock e fica ATORDOADO por 3 s.**"
-        },
-        "marquee_ability": "Episódio Especial",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> Liguem os Motores!<:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      },
-      {
-        "name": "Apanhadora De Sonhos",
-        "title_formatted": "> Apanhadora De Sonhos <:Luz:1389703315167907902><:diamante:1407839264779141140>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684771746615378/1000.png?ex=681ea284&is=681d5104&hm=d3a1c4a379ec8d5076cdb0bc943d441c5f956125d33de7d6f7dec365865cad21&"
-        },
-        "stats": {
-          "attack": "13,152",
-          "health": "62,247",
-          "power": "27,799"
-        },
-        "signature_ability": {
-          "name": "O GRANDE SONO",
-          "description": "[HAB 1]: Ao GOLPEAR, G. ESPECIAIS e ASSISTÊNCIAS têm 25% de chance de ATORDOAR o oponente por 6 seg **(não afeta lutadores das Trevas).**\n\n[HAB 2]: **A cada 1 seg contra um oponente ATORDOADO**, Peacock ganha 1 camada de PRECISÃO, e seus aliados ganham 5% do MED. DE BLOCKBUSTER e 5% de VIDA."
-        },
-        "marquee_ability": "Festa do Elenco",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> Esquadrilha da Fumaça,, <:GolpeEspecial:1434999859768987748> Liguem os Motores!<:GolpeEspecial:1434999859768987748> Vai, George! <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!"
-      },
-      {
-        "name": "Quebra de Contrato",
-        "title_formatted": "> Quebra de Contrato <:Fogo:1389703188525092934><:diamante:1407839264779141140>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684791635873947/1000.png?ex=681ea289&is=681d5109&hm=e910bb80259daa4c4d290776bf4c11f371c87732081e4460dc7cdc5ec46f7afe&"
-        },
-        "stats": {
-          "attack": "15,130",
-          "health": "56,045",
-          "power": "28,915"
-        },
-        "signature_ability": {
-          "name": "NÃO ADIANTA",
-          "description": "[HAB 1]: **Concede IMUNIDADE, ACELERAÇÃO ou FÚRIA por 15 s quando um dos lutadores usa um BLOCKBUSTER**. Também inflige QUEBRA DE GUARDA e 2 EF. NEG. aleatórios por 10 s cada.\n\n[HAB 2]: 50% de chance de conceder INABALÁVEL, REGENERAÇÃO ou FÚRIA por 15 segundos **quando um EF. POS. ou EF. NEG. no oponente expirar.**"
-        },
-        "marquee_ability": "Episódio Especial",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, , <:Blockbuster:1434999898385944606> Multidão Enfurecida, , <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      }
-    ],
-    "ouro": [
-      {
-        "name": "Intocável",
-        "title_formatted": "> Intocável <:Agua:1389703224210231437><:ouro:1407839155785826306>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684589487325305/1000.png?ex=681ea259&is=681d50d9&hm=1c3fdf6d569e7a826756128a99d19b75e186e8ddf50253901b4d59b0e2fd39cf&"
-        },
-        "stats": {
-          "attack": "11,117",
-          "health": "63,572",
-          "power": "25,656"
-        },
-        "signature_ability": {
-          "name": "BLINDADA",
-          "description": "[HAB 1]: Tem 15% de chance **ao ser golpeada ou golpear** a PEACOCK ganha INABALÁVEL por 6 s e INVENCÍVEL por 2s.\n\n[HAB 2]: **Ao se beneficiar de INABALÁVEL ou INVENCÍVEL**, causa 50% de dano extra e recupera 50% do dano causado como VIDA."
-        },
-        "marquee_ability": "Episódio especial",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Bons Companheiros **BB3**, <:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> Vai, George!<:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Velhos Tempos",
-        "title_formatted": "> Velhos Tempos <:Luz:1389703315167907902><:ouro:1407839155785826306>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684609091244253/1000.png?ex=681ea25d&is=681d50dd&hm=3f7da3edadd489ba3825ee485b7c9d3ebec9d0984396b19a52c5504a74a37894&"
-        },
-        "stats": {
-          "attack": "13,212",
-          "health": "57,812",
-          "power": "25,815"
-        },
-        "signature_ability": {
-          "name": "PASTELÃO",
-          "description": "[HAB 1]: 15% de chance de infligir QUEBRA DE ARMAD. por 10 s e dar 5 camadas de PRECISÃO e 1 de ESQUIVA **quando GOLPEADA.**\n\n[HAB 2]: **Enquanto a Peacock está viva,** os oponentes têm CHANCE DE CRÍTICO 75% menor."
-        },
-        "marquee_ability": "Episódio Especial",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Aeroporto Mortal **BB3**, <:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> Vai, George!<:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Prodígio Primitivo",
-        "title_formatted": "> Prodígio Primitivo <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684636794753124/1000.png?ex=681ea264&is=681d50e4&hm=6f4c98d72c5052b9904581225fef164a50c7a65da8951cfed9c776517fe04984&"
-        },
-        "stats": {
-          "attack": "13,212",
-          "health": "57,812",
-          "power": "25,815"
-        },
-        "signature_ability": {
-          "name": "MACACO DOIDO",
-          "description": "[HAB 1]: Ganhe 1 EF. POS. aleatório por 10 segundos e 5% no MEDIDOR DE BLOCKBUSTER a cada 4 segundo **enquanto não sofrer um GOLPE (incluindo golpes bloqueados).**\n\n[HAB 2]: **Quando um EF. POS. em Peacock expirar,** inflige MALDIÇÃO e DESATIVA os GOLPES ESPECIAIS do oponente por 8 segundos cada."
-        },
-        "marquee_ability": "Episódio Especial ",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> Liguem os Motores!<:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      },
-      {
-        "name": "Ultraviolenta",
-        "title_formatted": "> Ultraviolenta <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684657350905936/1000.png?ex=681ea269&is=681d50e9&hm=1f5c05a3b8b4c1038d72d1d5e124fab67de652f1499406a721e759776c0eaedc&"
-        },
-        "stats": {
-          "attack": "14,036",
-          "health": "52,032",
-          "power": "26,832"
-        },
-        "signature_ability": {
-          "name": "ARREMESSO DA MORTE",
-          "description": "[HAB 1]: **GOLPES de Projétil** têm 50% de chance de conceder OLHO-MORTO e BARREIRA por 15 s cada.\n\n[HAB 2]: GOLPES de Projétil infligem 50% de dano extra e concedem ACELERAÇÃO por 10 s ao se beneficiar de OLHO-MORTO."
-        },
-        "marquee_ability": "Episódio Especial",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida,, <:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      },
-      {
-        "name": "A Malvada",
-        "title_formatted": "> A Malvada <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684699029831730/1000.png?ex=681ea273&is=681d50f3&hm=f9141eea1a1712d28007c8b62a032c677ec2d94613d924d1d8c8d77349d3ef1d&"
-        },
-        "stats": {
-          "attack": "14,036",
-          "health": "52,032",
-          "power": "26,832"
-        },
-        "signature_ability": {
-          "name": "ZOMBARIA FESTIVA",
-          "description": "[HAB 1]: Ganhe FÚRIA por 15 seg para cada EF. POSITIVO **ganho pelo oponente.**\n\n[HAB 2]: **GOLPES  de Projétil** têm 50% de chance de converter 1 EF. POSITIVO do oponente em um EF. NEGATIVO aleatório."
-        },
-        "marquee_ability": "Episódio Especial",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Aeroporto Mortal **BB3**, , <:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      },
-      {
-        "name": "Ícone Iônico",
-        "title_formatted": "> Ícone Iônico <:Luz:1389703315167907902><:ouro:1407839155785826306>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389701683113754647/1411354191846309888/74718ab7-19e0-40cf-aeb9-96152fa9959e.webp?ex=68b45985&is=68b30805&hm=0f1b1c83514204682222c6af0e38bd803c08dd0ca131ddf015a14e9985b5394f&"
-        },
-        "stats": {
-          "attack": "14,036",
-          "health": "52,032",
-          "power": "26,832"
-        },
-        "signature_ability": {
-          "name": "Presença Chocante",
-          "description": "[HAB 1]: **Todos os ataques de ASSISTÊNCIA dos aliados** aplicam MARCA DA MORTE por 20 seg e ATORDOAMENTO por 4s. Peacock também ganha 3 acúmulos de BARREIRA.\n\n[HAB 2]: **A cada 15 GOLPES de combo por um aliado de elemento Luz**, remove 1 EF. POS. do oponente e aplica OSCILAÇÃO DE ENERGIA por 10/12/15s."
-        },
-        "marquee_ability": "Festa do Elenco",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida,, <:Blockbuster:1434999898385944606> Agonia de Argo, <:Blockbuster:1434999898385944606> Dia do Julgamento, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      }
-    ],
-    "prata": [
-      {
-        "name": "Supercuringa",
-        "title_formatted": "> Supercuringa <:Fogo:1389703188525092934><:prata:1407839105169227957>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684426328768512/1000.png?ex=681ea232&is=681d50b2&hm=233bfddfb62baf10c6f0e5f73c75c84527d6119926ba47330772bbcfad1cef42&"
-        },
-        "stats": {
-          "attack": "9,620",
-          "health": "59,079",
-          "power": "23,002"
-        },
-        "signature_ability": {
-          "name": "PIADA MORTAL",
-          "description": "[HAB 1]: **Inflige um EFEITO NEGATIVO aleatório** por 5 segundos ao usar um GOLPE ESPECIAL.\n\n[HAB 2]:Se o oponente estiver **sofrendo um EFEITO NEGATIVO** quando a Peacock for derrotada, a VIDA dele será reduzida em 50%."
-        },
-        "marquee_ability": "Episódio Especial ",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> Esquadrilha da Fumaça, <:GolpeEspecial:1434999859768987748> Liguem os Motores!<:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      },
-      {
-        "name": "Plumagem Prismática",
-        "title_formatted": "> Plumagem Prismática <:Neutro:1389703364304175125><:prata:1407839105169227957>",
-        "element": "Neutro",
-        "color_hex": "#ff80c0",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684466409672896/1000.png?ex=681ea23b&is=681d50bb&hm=bddda2863f98772d244a855b5db5f19ae795f15b3c72bde58d06b2602bc4d07b&"
-        },
-        "stats": {
-          "attack": "9,620",
-          "health": "59,079",
-          "power": "23,002"
-        },
-        "signature_ability": {
-          "name": "ESPECTRO AMPLO",
-          "description": "[HAB 1]: **Todos os aliados ENTRAM NA ASSISTÊNCIA** com **2 EFEITOS POSITIVOS baseados nos seus ELEMENTOS** por 10 segundos (exceto depois da morte de um aliado).\n\n[HAB 2]: **Enquanto Peacock está viva, todos os projéteis têm** 10% de chance de infligir EF. NEG. com base no ELEMENTO do oponente por 10 s.\n\n[Efeitos Positivos e Negativos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Prism_Plumage)"
-        },
-        "marquee_ability": "Festa do Elenco",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!, <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão), , <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão)"
-      },
-      {
-        "name": "Cara Pintada",
-        "title_formatted": "> Cara Pintada <:Trevas:1389703142848991364><:prata:1407839105169227957>",
-        "element": "Trevas",
-        "color_hex": "#8000ff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684540518830180/1000.png?ex=681ea24d&is=681d50cd&hm=531d064e5bdb74bf5996f0df6486a64bcde22b2a69d8d9bb88b72ef3456a90a4&"
-        },
-        "stats": {
-          "attack": "11,309",
-          "health": "53,645",
-          "power": "23,928"
-        },
-        "signature_ability": {
-          "name": "SUPERIORIDADE NUMÉRICA",
-          "description": "[HAB 1]: Causa 25% de dano extra **por cada aliado vivo.**\n\n[HAB 2]: GOLPES ESPECIAIS têm 25% de chance de serem INDEFENSÁVEIS **enquanto a Peacock tem aliados vivos.**"
-        },
-        "marquee_ability": "Episódio Especial",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> Esquadrilha da Fumaça, <:GolpeEspecial:1434999859768987748> Liguem os Motores!<:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!"
-      },
-      {
-        "name": "Chumbinho",
-        "title_formatted": "> Chumbinho <:Ar:1389703277532287066><:prata:1407839105169227957>",
-        "element": "Ar",
-        "color_hex": "#008000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684566300954875/1000.png?ex=681ea253&is=681d50d3&hm=9627e442977aca80e5847768e9de58082c37ce5ecec052dca270a941de6b365e&"
-        },
-        "stats": {
-          "attack": "12,999",
-          "health": "48,269",
-          "power": "24,866"
-        },
-        "signature_ability": {
-          "name": "PROJETOR VINTAGE",
-          "description": "[HAB 1]: **Projéteis** causam 35% de dano extra **para todos os aliados.**\n\n[HAB 2]: **Todos os projéteis** têm 15% de chance de infligir QUEBRA DE ARMADURA por 6 segundos."
-        },
-        "marquee_ability": "Festa do Elenco",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!, <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão), , <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão)"
-      }
-    ],
-    "bronze": [
-      {
-        "name": "Reprise",
-        "title_formatted": "> Reprise <:Fogo:1389703188525092934><:bronze:1407839009664798801>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684363531518083/1000.png?ex=681ea223&is=681d50a3&hm=7c228645115c5bd8d6cb710a566d5a854249f79e97fa36088085e0c4f57766de&"
-        },
-        "stats": {
-          "attack": "10,522",
-          "health": "49,805",
-          "power": "22,242"
-        },
-        "signature_ability": {
-          "name": "TRABALHO EM EQUIPE",
-          "description": "[HAB 1]: **Todos os aliados** ENTRAM NA ASSISTÊNCIA com FÚRIA por 15 segundos.\n\n[HAB 2]: O tempo de REATIVAÇÃO das ASSISTÊNCIAS diminui em 50% **para todos os aliados.**"
-        },
-        "marquee_ability": "Festa do Elenco",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!, <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão), , <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão)"
-      },
-      {
-        "name": "Esboço",
-        "title_formatted": "> Esboço <:Ar:1389703277532287066><:bronze:1407839009664798801>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a&is=68a635da&hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684384444321913/1000.png?ex=681ea228&is=681d50a8&hm=3afdb55095d2134254c78f7c72bcc213de0b3f7f2291b1474a81bc68e56bb380&"
-        },
-        "stats": {
-          "attack": "12,135",
-          "health": "44,813",
-          "power": "23,164"
-        },
-        "signature_ability": {
-          "name": "PIADA RECORRENTE",
-          "description": "[HAB 1]: **Enquanto a Peacock está viva,** todos os aliados ENTRAM NA ASSISTÊNCIA com ACELERAÇÃO e IMUNIDADE por 10 segundos (exceto após a morte de um aliado).\n\n[HAB 2]: **Enquanto a Peacock está viva,** todos os oponentes ENTRAM NA ASSISTÊNCIA com LENTIDÃO e MALDIÇÃO por 10 segundos (exceto após a morte de um aliado)."
-        },
-        "marquee_ability": "Festa do Elenco",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Multidão Enfurecida, <:GolpeEspecial:1434999859768987748> BANG, BANG, BANG!, <:GolpeEspecial:1434999859768987748> Vai, George!, <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão), , <:GolpeEspecial:1434999859768987748> Quem Vem Agora? (Expulsão)"
-      }
-    ]
-  }
+    "character":  "Peacock",
+    "version":  "1.0",
+    "variants":  {
+                     "diamante":  [
+                                      {
+                                          "name":  "Fica Frio",
+                                          "title_formatted":  "\u003e Fica Frio \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Água",
+                                          "color_hex":  "#000000",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684724812091422/1000.png?ex=681ea279\u0026is=681d50f9\u0026hm=13a82e2ba4055fac876ce9f5c6d10d813049178636ecd888c343f6410752ea27\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,981",
+                                                        "health":  "68,468",
+                                                        "power":  "27,641"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "CONGELAMENTO",
+                                                                    "description":  "[HAB 1]: **Projéteis têm 50% de chance de infligir LENTIDÃO e DEFINHAR** por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.\n\n[HAB 2]: **Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 50% do ATAQUE da Peacock e fica ATORDOADO por 3 s.**"
+                                                                },
+                                          "marquee_ability":  "Episódio Especial",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e Liguem os Motores!\u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                      },
+                                      {
+                                          "name":  "Apanhadora De Sonhos",
+                                          "title_formatted":  "\u003e Apanhadora De Sonhos \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Luz",
+                                          "color_hex":  "#ffff00",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684771746615378/1000.png?ex=681ea284\u0026is=681d5104\u0026hm=d3a1c4a379ec8d5076cdb0bc943d441c5f956125d33de7d6f7dec365865cad21\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "13,152",
+                                                        "health":  "62,247",
+                                                        "power":  "27,799"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "O GRANDE SONO",
+                                                                    "description":  "[HAB 1]: Ao GOLPEAR, G. ESPECIAIS e ASSISTÊNCIAS têm 25% de chance de ATORDOAR o oponente por 6 seg **(não afeta lutadores das Trevas).**\n\n[HAB 2]: **A cada 1 seg contra um oponente ATORDOADO**, Peacock ganha 1 camada de PRECISÃO, e seus aliados ganham 5% do MED. DE BLOCKBUSTER e 5% de VIDA."
+                                                                },
+                                          "marquee_ability":  "Festa do Elenco",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Esquadrilha da Fumaça,, \u003c:GolpeEspecial:1434999859768987748\u003e Liguem os Motores!\u003c:GolpeEspecial:1434999859768987748\u003e Vai, George! \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!"
+                                      },
+                                      {
+                                          "name":  "Quebra de Contrato",
+                                          "title_formatted":  "\u003e Quebra de Contrato \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Fogo",
+                                          "color_hex":  "#ff0000",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684791635873947/1000.png?ex=681ea289\u0026is=681d5109\u0026hm=e910bb80259daa4c4d290776bf4c11f371c87732081e4460dc7cdc5ec46f7afe\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "15,130",
+                                                        "health":  "56,045",
+                                                        "power":  "28,915"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "NÃO ADIANTA",
+                                                                    "description":  "[HAB 1]: **Concede IMUNIDADE, ACELERAÇÃO ou FÚRIA por 15 s quando um dos lutadores usa um BLOCKBUSTER**. Também inflige QUEBRA DE GUARDA e 2 EF. NEG. aleatórios por 10 s cada.\n\n[HAB 2]: 50% de chance de conceder INABALÁVEL, REGENERAÇÃO ou FÚRIA por 15 segundos **quando um EF. POS. ou EF. NEG. no oponente expirar.**"
+                                                                },
+                                          "marquee_ability":  "Episódio Especial",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, , \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, , \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                      }
+                                  ],
+                     "ouro":  [
+                                  {
+                                      "name":  "Intocável",
+                                      "title_formatted":  "\u003e Intocável \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Água",
+                                      "color_hex":  "#000000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684589487325305/1000.png?ex=681ea259\u0026is=681d50d9\u0026hm=1c3fdf6d569e7a826756128a99d19b75e186e8ddf50253901b4d59b0e2fd39cf\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,117",
+                                                    "health":  "63,572",
+                                                    "power":  "25,656"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "BLINDADA",
+                                                                "description":  "[HAB 1]: Tem 15% de chance **ao ser golpeada ou golpear** a PEACOCK ganha INABALÁVEL por 6 s e INVENCÍVEL por 2s.\n\n[HAB 2]: **Ao se beneficiar de INABALÁVEL ou INVENCÍVEL**, causa 50% de dano extra e recupera 50% do dano causado como VIDA."
+                                                            },
+                                      "marquee_ability":  "Episódio especial",
+                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Bons Companheiros, \u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!\u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  },
+                                  {
+                                      "name":  "Velhos Tempos",
+                                      "title_formatted":  "\u003e Velhos Tempos \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Luz",
+                                      "color_hex":  "#ffff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684609091244253/1000.png?ex=681ea25d\u0026is=681d50dd\u0026hm=3f7da3edadd489ba3825ee485b7c9d3ebec9d0984396b19a52c5504a74a37894\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "13,212",
+                                                    "health":  "57,812",
+                                                    "power":  "25,815"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "PASTELÃO",
+                                                                "description":  "[HAB 1]: 15% de chance de infligir QUEBRA DE ARMAD. por 10 s e dar 5 camadas de PRECISÃO e 1 de ESQUIVA **quando GOLPEADA.**\n\n[HAB 2]: **Enquanto a Peacock está viva,** os oponentes têm CHANCE DE CRÍTICO 75% menor."
+                                                            },
+                                      "marquee_ability":  "Episódio Especial",
+                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Aeroporto Mortal, \u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!\u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  },
+                                  {
+                                      "name":  "Prodígio Primitivo",
+                                      "title_formatted":  "\u003e Prodígio Primitivo \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#00ff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684636794753124/1000.png?ex=681ea264\u0026is=681d50e4\u0026hm=6f4c98d72c5052b9904581225fef164a50c7a65da8951cfed9c776517fe04984\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "13,212",
+                                                    "health":  "57,812",
+                                                    "power":  "25,815"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MACACO DOIDO",
+                                                                "description":  "[HAB 1]: Ganhe 1 EF. POS. aleatório por 10 segundos e 5% no MEDIDOR DE BLOCKBUSTER a cada 4 segundo **enquanto não sofrer um GOLPE (incluindo golpes bloqueados).**\n\n[HAB 2]: **Quando um EF. POS. em Peacock expirar,** inflige MALDIÇÃO e DESATIVA os GOLPES ESPECIAIS do oponente por 8 segundos cada."
+                                                            },
+                                      "marquee_ability":  "Episódio Especial ",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e Liguem os Motores!\u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                  },
+                                  {
+                                      "name":  "Ultraviolenta",
+                                      "title_formatted":  "\u003e Ultraviolenta \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#800080",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684657350905936/1000.png?ex=681ea269\u0026is=681d50e9\u0026hm=1f5c05a3b8b4c1038d72d1d5e124fab67de652f1499406a721e759776c0eaedc\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "14,036",
+                                                    "health":  "52,032",
+                                                    "power":  "26,832"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "ARREMESSO DA MORTE",
+                                                                "description":  "[HAB 1]: **GOLPES de Projétil** têm 50% de chance de conceder OLHO-MORTO e BARREIRA por 15 s cada.\n\n[HAB 2]: GOLPES de Projétil infligem 50% de dano extra e concedem ACELERAÇÃO por 10 s ao se beneficiar de OLHO-MORTO."
+                                                            },
+                                      "marquee_ability":  "Episódio Especial",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida,, \u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                  },
+                                  {
+                                      "name":  "A Malvada",
+                                      "title_formatted":  "\u003e A Malvada \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Fogo",
+                                      "color_hex":  "#ff0000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684699029831730/1000.png?ex=681ea273\u0026is=681d50f3\u0026hm=f9141eea1a1712d28007c8b62a032c677ec2d94613d924d1d8c8d77349d3ef1d\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "14,036",
+                                                    "health":  "52,032",
+                                                    "power":  "26,832"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "ZOMBARIA FESTIVA",
+                                                                "description":  "[HAB 1]: Ganhe FÚRIA por 15 seg para cada EF. POSITIVO **ganho pelo oponente.**\n\n[HAB 2]: **GOLPES  de Projétil** têm 50% de chance de converter 1 EF. POSITIVO do oponente em um EF. NEGATIVO aleatório."
+                                                            },
+                                      "marquee_ability":  "Episódio Especial",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Aeroporto Mortal, , \u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                  },
+                                  {
+                                      "name":  "Ícone Iônico",
+                                      "title_formatted":  "\u003e Ícone Iônico \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Luz",
+                                      "color_hex":  "#ffff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1389701683113754647/1411354191846309888/74718ab7-19e0-40cf-aeb9-96152fa9959e.webp?ex=68b45985\u0026is=68b30805\u0026hm=0f1b1c83514204682222c6af0e38bd803c08dd0ca131ddf015a14e9985b5394f\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "14,036",
+                                                    "health":  "52,032",
+                                                    "power":  "26,832"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "Presença Chocante",
+                                                                "description":  "[HAB 1]: **Todos os ataques de ASSISTÊNCIA dos aliados** aplicam MARCA DA MORTE por 20 seg e ATORDOAMENTO por 4s. Peacock também ganha 3 acúmulos de BARREIRA.\n\n[HAB 2]: **A cada 15 GOLPES de combo por um aliado de elemento Luz**, remove 1 EF. POS. do oponente e aplica OSCILAÇÃO DE ENERGIA por 10/12/15s."
+                                                            },
+                                      "marquee_ability":  "Festa do Elenco",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida,, \u003c:Blockbuster:1434999898385944606\u003e Agonia de Argo, \u003c:Blockbuster:1434999898385944606\u003e Dia do Julgamento, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                  }
+                              ],
+                     "prata":  [
+                                   {
+                                       "name":  "Supercuringa",
+                                       "title_formatted":  "\u003e Supercuringa \u003c:Fogo:1389703188525092934\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Fogo",
+                                       "color_hex":  "#ff0000",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684426328768512/1000.png?ex=681ea232\u0026is=681d50b2\u0026hm=233bfddfb62baf10c6f0e5f73c75c84527d6119926ba47330772bbcfad1cef42\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "9,620",
+                                                     "health":  "59,079",
+                                                     "power":  "23,002"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "PIADA MORTAL",
+                                                                 "description":  "[HAB 1]: **Inflige um EFEITO NEGATIVO aleatório** por 5 segundos ao usar um GOLPE ESPECIAL.\n\n[HAB 2]:Se o oponente estiver **sofrendo um EFEITO NEGATIVO** quando a Peacock for derrotada, a VIDA dele será reduzida em 50%."
+                                                             },
+                                       "marquee_ability":  "Episódio Especial ",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Esquadrilha da Fumaça, \u003c:GolpeEspecial:1434999859768987748\u003e Liguem os Motores!\u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                   },
+                                   {
+                                       "name":  "Plumagem Prismática",
+                                       "title_formatted":  "\u003e Plumagem Prismática \u003c:Neutro:1389703364304175125\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Neutro",
+                                       "color_hex":  "#ff80c0",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684466409672896/1000.png?ex=681ea23b\u0026is=681d50bb\u0026hm=bddda2863f98772d244a855b5db5f19ae795f15b3c72bde58d06b2602bc4d07b\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "9,620",
+                                                     "health":  "59,079",
+                                                     "power":  "23,002"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "ESPECTRO AMPLO",
+                                                                 "description":  "[HAB 1]: **Todos os aliados ENTRAM NA ASSISTÊNCIA** com **2 EFEITOS POSITIVOS baseados nos seus ELEMENTOS** por 10 segundos (exceto depois da morte de um aliado).\n\n[HAB 2]: **Enquanto Peacock está viva, todos os projéteis têm** 10% de chance de infligir EF. NEG. com base no ELEMENTO do oponente por 10 s.\n\n[Efeitos Positivos e Negativos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Prism_Plumage)"
+                                                             },
+                                       "marquee_ability":  "Festa do Elenco",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!, \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão), , \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão)"
+                                   },
+                                   {
+                                       "name":  "Cara Pintada",
+                                       "title_formatted":  "\u003e Cara Pintada \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Trevas",
+                                       "color_hex":  "#8000ff",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684540518830180/1000.png?ex=681ea24d\u0026is=681d50cd\u0026hm=531d064e5bdb74bf5996f0df6486a64bcde22b2a69d8d9bb88b72ef3456a90a4\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "11,309",
+                                                     "health":  "53,645",
+                                                     "power":  "23,928"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "SUPERIORIDADE NUMÉRICA",
+                                                                 "description":  "[HAB 1]: Causa 25% de dano extra **por cada aliado vivo.**\n\n[HAB 2]: GOLPES ESPECIAIS têm 25% de chance de serem INDEFENSÁVEIS **enquanto a Peacock tem aliados vivos.**"
+                                                             },
+                                       "marquee_ability":  "Episódio Especial",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Esquadrilha da Fumaça, \u003c:GolpeEspecial:1434999859768987748\u003e Liguem os Motores!\u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!"
+                                   },
+                                   {
+                                       "name":  "Chumbinho",
+                                       "title_formatted":  "\u003e Chumbinho \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Ar",
+                                       "color_hex":  "#008000",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684566300954875/1000.png?ex=681ea253\u0026is=681d50d3\u0026hm=9627e442977aca80e5847768e9de58082c37ce5ecec052dca270a941de6b365e\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "12,999",
+                                                     "health":  "48,269",
+                                                     "power":  "24,866"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "PROJETOR VINTAGE",
+                                                                 "description":  "[HAB 1]: **Projéteis** causam 35% de dano extra **para todos os aliados.**\n\n[HAB 2]: **Todos os projéteis** têm 15% de chance de infligir QUEBRA DE ARMADURA por 6 segundos."
+                                                             },
+                                       "marquee_ability":  "Festa do Elenco",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!, \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão), , \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão)"
+                                   }
+                               ],
+                     "bronze":  [
+                                    {
+                                        "name":  "Reprise",
+                                        "title_formatted":  "\u003e Reprise \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Fogo",
+                                        "color_hex":  "#ff0000",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684363531518083/1000.png?ex=681ea223\u0026is=681d50a3\u0026hm=7c228645115c5bd8d6cb710a566d5a854249f79e97fa36088085e0c4f57766de\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "10,522",
+                                                      "health":  "49,805",
+                                                      "power":  "22,242"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "TRABALHO EM EQUIPE",
+                                                                  "description":  "[HAB 1]: **Todos os aliados** ENTRAM NA ASSISTÊNCIA com FÚRIA por 15 segundos.\n\n[HAB 2]: O tempo de REATIVAÇÃO das ASSISTÊNCIAS diminui em 50% **para todos os aliados.**"
+                                                              },
+                                        "marquee_ability":  "Festa do Elenco",
+                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!, \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão), , \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão)"
+                                    },
+                                    {
+                                        "name":  "Esboço",
+                                        "title_formatted":  "\u003e Esboço \u003c:Ar:1389703277532287066\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Ar",
+                                        "color_hex":  "#00ff00",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018053430317210/Icon-Peacock.png?ex=68a7875a\u0026is=68a635da\u0026hm=38919df23f79db264edd64b9d151e8643421dd346dd8c4eb877b41c2cfacee17\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684384444321913/1000.png?ex=681ea228\u0026is=681d50a8\u0026hm=3afdb55095d2134254c78f7c72bcc213de0b3f7f2291b1474a81bc68e56bb380\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "12,135",
+                                                      "health":  "44,813",
+                                                      "power":  "23,164"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "PIADA RECORRENTE",
+                                                                  "description":  "[HAB 1]: **Enquanto a Peacock está viva,** todos os aliados ENTRAM NA ASSISTÊNCIA com ACELERAÇÃO e IMUNIDADE por 10 segundos (exceto após a morte de um aliado).\n\n[HAB 2]: **Enquanto a Peacock está viva,** todos os oponentes ENTRAM NA ASSISTÊNCIA com LENTIDÃO e MALDIÇÃO por 10 segundos (exceto após a morte de um aliado)."
+                                                              },
+                                        "marquee_ability":  "Festa do Elenco",
+                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e BANG, BANG, BANG!, \u003c:GolpeEspecial:1434999859768987748\u003e Vai, George!, \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão), , \u003c:GolpeEspecial:1434999859768987748\u003e Quem Vem Agora? (Expulsão)"
+                                    }
+                                ]
+                 }
 }

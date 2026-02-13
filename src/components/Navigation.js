@@ -47,7 +47,7 @@ export function createAboutDrawer() {
                     <h1>Skullgirls Mobile Wiki</h1>
                     <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
                     <div class="hero-buttons">
-                        <a href="https://discord.gg/nsGXabuCSe" target="_blank" class="btn btn-primary">
+                        <a href="https://discord.gg/9dZqtVz6pz" target="_blank" class="btn btn-primary">
                             💬 Discord
                         </a>
                         <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank" class="btn btn-secondary">
@@ -83,7 +83,7 @@ export function createAboutDrawer() {
                             <p>Todos os assets pertencem aos seus respectivos proprietários.</p>
                         </div>
                     </div>
-                    <p style="font-size: 0.85rem; margin-top: 15px;">Encontrou um erro? Reporte no servidor <a href="https://discord.gg/nsGXabuCSe" target="_blank">Palácio Branco</a>.</p>
+                    <p style="font-size: 0.85rem; margin-top: 15px;">Encontrou um erro? Reporte no servidor <a href="https://discord.gg/9dZqtVz6pz" target="_blank">Palácio Branco</a>.</p>
                 </div>
             </div>
         </aside>
