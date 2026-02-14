@@ -5,14 +5,18 @@
 
 const MOVE_IMAGES = {
     "annie": {
-        "Explosão": "img/annie/Annie_18.png",
-        "Corte Crescente": "img/annie/Annie_19.png",
-        "Pilar da Destruição": "img/annie/Annie_20.png",
-        "Chuva de Meteoros": "img/annie/Annie_21.png",
-        "Estilingue Gravitacional": "img/annie/Annie_22.png",
-        "Foto Bop": "img/annie/Annie_23.png",
-        "Pilar da Criação": "img/annie/Annie_24.png",
-        "Raio Sagan": "img/annie/Annie_25.png",
+        "Explosão": "img/annie/Annie_19.png",
+        "Corte Crescente": "img/annie/Annie_21.png",
+        "Pilar da Destruição": "img/annie/Annie_22.png",
+        "Chuva de Meteoros": "img/annie/Annie_25.png",
+        "Estilingue Gravitacional": "img/annie/Annie_28.png",
+        "Foto Bop": "img/annie/Annie_29.png",
+        "Pilar da Criação": "img/annie/Annie_27.png",
+        "Raio Sagan": "img/annie/Annie_26.png",
+        "Reentrada": "img/annie/Annie_24.png",
+        "Punho do Norte": "img/annie/Annie_23.png",
+        "Corte Saturno (Expulsão)": "img/annie/Annie_20.png",
+        "Nebulosa Refletora (Provocar)": "img/annie/Annie_18.png",
     },
     "beowulf": {
         "Aroo Ready? (Provocar)": "img/beowulf/Beowulf_17.png",

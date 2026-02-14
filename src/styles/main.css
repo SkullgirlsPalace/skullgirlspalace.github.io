@@ -96,6 +96,18 @@
     font-display: swap;
 }
 
+html[lang='ja'] .cinematic {
+    font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
+html[lang='ko'] .cinematic {
+    font-family: 'Washington', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
+html[lang='zh-cn'] .cinematic {
+    font-family: 'Washington', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
 /* ========== RESET & BASE ========== */
 *,
 *::before,
@@ -378,6 +390,7 @@ main {
 }
 
 .hub-hero p {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.25rem;
     color: var(--text-secondary);
     max-width: 500px;
@@ -520,6 +533,7 @@ main {
 }
 
 .hero p {
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.15rem;
     color: var(--text-secondary);
     max-width: 600px;
@@ -539,8 +553,11 @@ main {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     border-radius: var(--border-radius-sm);
     transition: all var(--transition-normal);
 }
@@ -573,6 +590,7 @@ main {
     color: var(--text-secondary);
     padding: 10px 24px;
     border-radius: var(--border-radius-pill);
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
     display: flex;
@@ -590,10 +608,13 @@ main {
 .cta-button {
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
     color: #000;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-weight: 600;
     padding: 14px 32px;
     border-radius: var(--border-radius-sm);
     font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: all var(--transition-normal);
     box-shadow: var(--shadow-md);
 }
@@ -627,6 +648,7 @@ main {
 }
 
 .card-link h3 {
+    font-family: 'Washington', sans-serif;
     color: var(--accent-gold);
     font-size: 1.1rem;
     margin-bottom: 12px;
@@ -636,6 +658,7 @@ main {
 }
 
 .card-link p {
+    font-family: 'Roboto Condensed', sans-serif;
     color: var(--text-secondary);
     font-size: 0.95rem;
     margin-bottom: 16px;
@@ -1172,6 +1195,7 @@ main {
     gap: 8px;
     padding: 6px 12px;
     border-radius: 20px;
+    font-family: 'Washington', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1188,6 +1212,7 @@ main {
     gap: 6px;
     padding: 6px 14px;
     border-radius: 20px;
+    font-family: 'Washington', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1232,6 +1257,7 @@ main {
     padding: 6px 10px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: var(--border-radius-sm);
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.95rem;
 }
 
@@ -1289,7 +1315,7 @@ main {
 }
 
 .ability-box p {
-    font-family: 'Dodam', 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', 'Dodam', sans-serif;
     color: var(--text-secondary);
     font-size: 0.92rem;
     line-height: 1.6;
@@ -1324,6 +1350,7 @@ main {
 }
 
 .arsenal-box h4 {
+    font-family: 'Washington', sans-serif;
     color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 700;
@@ -1402,6 +1429,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-muted);
     padding: 10px 18px;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1474,6 +1502,7 @@ main {
     background: rgba(255, 200, 50, 0.08);
     border: 1px solid rgba(255, 200, 50, 0.2);
     border-radius: var(--border-radius-sm);
+    font-family: 'Roboto Condensed', sans-serif;
     color: var(--text-secondary);
     font-size: 0.9rem;
     margin-bottom: 24px;
@@ -3540,5 +3569,289 @@ input:checked+.slider:before {
 
     .calc-tabs {
         flex-direction: column;
+    }
+}
+
+/* =====================================================
+   ATTRIBUTE TOOLTIP & DETAIL MODAL
+   Hover tooltips + click detail modals for build attributes
+   ===================================================== */
+
+/* Highlighted attribute name in build text */
+.attr-highlight {
+    color: var(--accent-gold, #f0c040);
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px dashed rgba(240, 192, 64, 0.5);
+    padding: 0 2px;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.attr-highlight:hover {
+    background: rgba(240, 192, 64, 0.15);
+    border-bottom-color: var(--accent-gold, #f0c040);
+    text-shadow: 0 0 8px rgba(240, 192, 64, 0.4);
+}
+
+/* Floating tooltip (hover) */
+.attr-tooltip {
+    position: absolute;
+    z-index: 9999;
+    max-width: 320px;
+    min-width: 240px;
+    padding: 14px 16px;
+    background: rgba(20, 20, 30, 0.97);
+    border: 1px solid rgba(240, 192, 64, 0.3);
+    border-radius: 12px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.6),
+        0 0 12px rgba(240, 192, 64, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    color: #e0e0e0;
+}
+
+.attr-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.attr-tooltip.below {
+    transform: translateY(-4px);
+}
+
+.attr-tooltip.below.visible {
+    transform: translateY(0);
+}
+
+.attr-tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attr-tooltip-header strong {
+    color: var(--accent-gold, #f0c040);
+    font-size: 0.9rem;
+}
+
+.attr-tooltip-max {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+
+.attr-tooltip-summary {
+    margin: 0 0 6px;
+    color: #ccc;
+    font-size: 0.82rem;
+}
+
+.attr-tooltip-tip {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    color: #a8d8a8;
+}
+
+.attr-tooltip-hint {
+    display: block;
+    font-size: 0.7rem;
+    color: rgba(240, 192, 64, 0.6);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Detail Modal Overlay */
+.attr-detail-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.attr-detail-overlay.visible {
+    opacity: 1;
+}
+
+.attr-detail-modal {
+    position: relative;
+    max-width: 520px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    background: linear-gradient(145deg, rgba(25, 25, 40, 0.98), rgba(18, 18, 28, 0.99));
+    border: 1px solid rgba(240, 192, 64, 0.25);
+    border-radius: 16px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(240, 192, 64, 0.08);
+    transform: scale(0.95) translateY(10px);
+    transition: transform 0.3s ease;
+    overflow-x: hidden;
+}
+
+.attr-detail-overlay.visible .attr-detail-modal {
+    transform: scale(1) translateY(0);
+}
+
+.attr-detail-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #aaa;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 1;
+    line-height: 1;
+}
+
+.attr-detail-close:hover {
+    background: rgba(255, 80, 80, 0.2);
+    border-color: rgba(255, 80, 80, 0.4);
+    color: #ff6b6b;
+}
+
+.attr-detail-header {
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.attr-detail-header h3 {
+    margin: 0;
+    color: var(--accent-gold, #f0c040);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.attr-detail-max {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.attr-detail-body {
+    padding: 16px 24px 24px;
+}
+
+.attr-detail-section {
+    margin-bottom: 16px;
+}
+
+.attr-detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.attr-detail-section h4 {
+    margin: 0 0 6px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.attr-detail-section p {
+    margin: 0;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.attr-detail-section.detailed {
+    background: rgba(240, 192, 64, 0.04);
+    border: 1px solid rgba(240, 192, 64, 0.12);
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 8px;
+}
+
+.attr-detail-section.detailed h4 {
+    color: var(--accent-gold, #f0c040);
+}
+
+.attr-detail-section.detailed p {
+    color: #e0e0e0;
+    font-size: 0.88rem;
+}
+
+/* Inactivity timer bar */
+.attr-detail-timer {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
+
+.attr-detail-timer-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--accent-gold, #f0c040), #ff9800);
+    border-radius: 0 0 16px 16px;
+    transition: width 20s linear;
+}
+
+/* Mobile responsive for tooltip/modal */
+@media (max-width: 768px) {
+    .attr-tooltip {
+        max-width: 280px;
+        min-width: 200px;
+        font-size: 0.8rem;
+    }
+
+    .attr-detail-modal {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .attr-detail-header {
+        padding: 18px 18px 12px;
+    }
+
+    .attr-detail-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .attr-detail-body {
+        padding: 12px 18px 18px;
+    }
+
+    .attr-detail-section p {
+        font-size: 0.85rem;
     }
 }

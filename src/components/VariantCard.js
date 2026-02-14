@@ -5,7 +5,7 @@
 
 import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { formatText, formatArsenal } from '../utils/formatters.js';
+import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -106,7 +106,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                         
                         ${variant.marquee_ability ? `
                             <div class="ability-box marquee">
-                                <h4>SUPERIOR RECOMENDADA: ${variant.marquee_ability.toUpperCase()}</h4>
+                                <h4>SUPERIOR RECOMENDADA: ${String(variant.marquee_ability).toUpperCase()}</h4>
                             </div>
                         ` : ''}
                     </div>
@@ -117,7 +117,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                             ${buildText ? `
                                 <div class="ability-box build">
                                     <h4>BUILD RECOMENDADA</h4>
-                                    <p>${buildText}</p>
+                                    <p>${formatBuildText(buildText)}</p>
                                 </div>
                             ` : ''}
                             

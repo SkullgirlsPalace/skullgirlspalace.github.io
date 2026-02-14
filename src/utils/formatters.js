@@ -101,3 +101,51 @@ export function getMasteryIcon(charKey) {
 export function formatNumber(num) {
     return new Intl.NumberFormat('pt-BR').format(num);
 }
+
+import { getAttributePatterns } from '../data/attributeData.js';
+
+/**
+ * Format build text by wrapping attribute keywords in interactive spans
+ * that power the tooltip/disclaimer system.
+ * @param {string} text - Raw build text (e.g. "ATQ%, Perfuração, Dano Crítico")
+ * @returns {string} HTML string with attribute names wrapped in .attr-highlight spans
+ */
+export function formatBuildText(text) {
+    if (!text) return '';
+    // Ensure text is a string to prevent .replace errors
+    if (typeof text !== 'string') text = String(text);
+
+    const patterns = getAttributePatterns();
+
+    // Track which ranges are already replaced to avoid overlapping
+    // We'll work with a simple left-to-right scan approach
+    let result = text;
+
+    // Replace each pattern. We use a marker approach to avoid double-replacing.
+    // Phase 1: replace with unique markers
+    const replacements = [];
+    let workingText = result;
+
+    for (const { pattern, attrKey } of patterns) {
+        // Use word boundary-aware matching to avoid partial matches
+        // Escape special regex characters in the pattern
+        const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(?<![\\wÀ-ÿ])${escaped}(?![\\wÀ-ÿ])`, 'g');
+
+        workingText = workingText.replace(regex, (match) => {
+            const marker = `\x00ATTR_${replacements.length}\x00`;
+            replacements.push({
+                marker,
+                html: `<span class="attr-highlight" data-attr-key="${attrKey}">${match}</span>`
+            });
+            return marker;
+        });
+    }
+
+    // Phase 2: replace markers with HTML
+    for (const { marker, html } of replacements) {
+        workingText = workingText.replace(marker, html);
+    }
+
+    return workingText;
+}
