@@ -18,239 +18,262 @@ export function initCalculator(data) {
 }
 
 /**
- * Create earnings calculator HTML with toggle buttons
+ * Create unified calculator with tabs (Ganhos | Custos)
+ * Side-by-side layout: controls left, results right
  * @returns {string} HTML string
  */
-export function createEarningsCalculator() {
+export function createCalculator() {
     return `
-        <div class="calculator-box earnings-calc">
-            <h3>💰 Simulador de Ganhos Mensais</h3>
-            <p class="calc-subtitle">Configure seu perfil para calcular ganhos em coins e teonita</p>
+        <div class="calculator-box">
+            <!-- TAB BAR -->
+            <div class="calc-tab-bar">
+                <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')">💰 Ganhos Mensais</button>
+                <button class="calc-tab" data-tab="custos" onclick="switchCalcTab('custos')">📈 Custos de Evolução</button>
+            </div>
 
-            <div class="calc-form">
-                <!-- Fixed Earnings Section -->
-                <div class="calc-section">
-                    <h4>📅 Fontes Fixas</h4>
-                    <div class="toggle-group" id="fixed-toggles">
-                        <button class="toggle-btn active" data-source="diarias" data-type="fixed">
-                            Eventos Diários
-                        </button>
-                        <button class="toggle-btn active" data-source="calendario" data-type="fixed">
-                            Calendário
-                        </button>
-                        <button class="toggle-btn active" data-source="site" data-type="fixed">
-                            Site
-                        </button>
-                        <button class="toggle-btn active" data-source="guildaDiaria" data-type="fixed">
-                            Missões de Guilda
-                        </button>
-                    </div>
-                </div>
+            <!-- ========== TAB: GANHOS ========== -->
+            <div class="calc-tab-content active" id="tab-ganhos">
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-form">
+                            <!-- Fixed Earnings Section -->
+                            <div class="calc-section">
+                                <h4>📅 Fontes Fixas</h4>
+                                <div class="toggle-group" id="fixed-toggles">
+                                    <button class="toggle-btn active" data-source="diarias" data-type="fixed">
+                                        Eventos Diários
+                                    </button>
+                                    <button class="toggle-btn active" data-source="calendario" data-type="fixed">
+                                        Calendário
+                                    </button>
+                                    <button class="toggle-btn active" data-source="site" data-type="fixed">
+                                        Site
+                                    </button>
+                                    <button class="toggle-btn active" data-source="guildaDiaria" data-type="fixed">
+                                        Missões de Guilda
+                                    </button>
+                                </div>
+                            </div>
 
-                <!-- Battle Pass Section -->
-                <div class="calc-section">
-                    <h4>🎫 Passe de Batalha</h4>
-                    <div class="toggle-group exclusive" id="passe-toggles">
-                        <button class="toggle-btn active" data-source="gratis" data-type="passe">Grátis</button>
-                        <button class="toggle-btn" data-source="premium" data-type="passe">Premium</button>
-                    </div>
-                </div>
+                            <!-- Battle Pass Section -->
+                            <div class="calc-section">
+                                <h4>🎫 Passe de Batalha</h4>
+                                <div class="toggle-group exclusive" id="passe-toggles">
+                                    <button class="toggle-btn active" data-source="gratis" data-type="passe">Grátis</button>
+                                    <button class="toggle-btn" data-source="premium" data-type="passe">Premium</button>
+                                </div>
+                            </div>
 
-                <!-- Prize Fights Section -->
-                <div class="calc-section">
-                    <h4>📊 Disputa Premiada (DP)</h4>
-                    
-                    <span class="toggle-label">DP Personagem (Faixa):</span>
-                    <div class="toggle-group exclusive" id="dp-faixa-toggles">
-                        <button class="toggle-btn" data-source="bronze" data-type="dpFaixa">Bronze</button>
-                        <button class="toggle-btn" data-source="prata" data-type="dpFaixa">Prata</button>
-                        <button class="toggle-btn" data-source="ouro" data-type="dpFaixa">Ouro</button>
-                        <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa">Diamante</button>
-                        <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">Não faço</button>
+                            <!-- Prize Fights Section -->
+                            <div class="calc-section">
+                                <h4>📊 Disputa Premiada (DP)</h4>
+                                
+                                <span class="toggle-label">DP Personagem (Faixa):</span>
+                                <div class="toggle-group exclusive" id="dp-faixa-toggles">
+                                    <button class="toggle-btn" data-source="bronze" data-type="dpFaixa">Bronze</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="dpFaixa">Prata</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="dpFaixa">Ouro</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa">Diamante</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">Não faço</button>
+                                </div>
+
+                                <span class="toggle-label">DP Personagem (Ranking):</span>
+                                <div class="toggle-group exclusive" id="dp-rank-toggles">
+                                    <button class="toggle-btn" data-source="top10percent" data-type="dpRank">Top 10%</button>
+                                    <button class="toggle-btn active" data-source="top30percent" data-type="dpRank">Top 30%</button>
+                                    <button class="toggle-btn" data-source="top60percent" data-type="dpRank">Top 60%</button>
+                                </div>
+
+                                <span class="toggle-label">DP Mensal:</span>
+                                <div class="toggle-group" id="dp-mensal-toggles">
+                                    <button class="toggle-btn active" data-source="mensal" data-type="dpMensal">
+                                        Participar
+                                    </button>
+                                </div>
+                                
+                                <span class="toggle-label">DP Médicis:</span>
+                                <div class="toggle-group exclusive" id="dp-medicis-toggles">
+                                    <button class="toggle-btn" data-source="top100" data-type="dpMedicis">Top 100</button>
+                                    <button class="toggle-btn active" data-source="top10percent" data-type="dpMedicis">Top 10%</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="dpMedicis">Não faço</button>
+                                </div>
+                            </div>
+
+                            <!-- Parallel Realms Section -->
+                            <div class="calc-section">
+                                <h4>🏰 Reinos Paralelos</h4>
+                                <span class="toggle-label">Dificuldade:</span>
+                                <div class="toggle-group exclusive" id="reinos-dif-toggles">
+                                    <button class="toggle-btn" data-source="basico" data-type="reinosDif">Básico</button>
+                                    <button class="toggle-btn" data-source="avancado" data-type="reinosDif">Avançado</button>
+                                    <button class="toggle-btn" data-source="especialista" data-type="reinosDif">Especialista</button>
+                                    <button class="toggle-btn" data-source="mestre" data-type="reinosDif">Mestre</button>
+                                    <button class="toggle-btn" data-source="pesadelo" data-type="reinosDif">Pesadelo</button>
+                                    <button class="toggle-btn active" data-source="semDo" data-type="reinosDif">Sem Dó</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="reinosDif">Não faço</button>
+                                </div>
+                                <span class="toggle-label">Completude:</span>
+                                <div class="toggle-group exclusive" id="reinos-comp-toggles">
+                                    <button class="toggle-btn" data-source="min" data-type="reinosComp">Mínimo</button>
+                                    <button class="toggle-btn active" data-source="max" data-type="reinosComp">Máximo</button>
+                                </div>
+                            </div>
+
+                            <!-- Guilds Section -->
+                            <div class="calc-section">
+                                <h4>👥 Guilda</h4>
+                                <div class="toggle-group" id="guilda-eventos-toggles">
+                                    <button class="toggle-btn active" data-source="eventos" data-type="guildaEventos">
+                                        Eventos de Guilda
+                                    </button>
+                                </div>
+
+                                <span class="toggle-label">Tier de Batalha:</span>
+                                <div class="toggle-group exclusive" id="guilda-tier-toggles">
+                                    <button class="toggle-btn" data-source="bronze" data-type="guildaTier">Bronze</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="guildaTier">Prata</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="guildaTier">Ouro</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="guildaTier">Diamante</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">Não participo</button>
+                                </div>
+
+                                <div id="diamante-slider-container" class="slider-container">
+                                    <span class="toggle-label">Pontos da Guilda (Diamante): <span id="diamante-pontos-display">16000</span></span>
+                                    <input type="range" id="diamante-pontos-slider" min="16000" max="30000" step="1000" value="16000" oninput="updateDiamanteSlider(this.value)">
+                                    <div class="slider-labels">
+                                        <span>16k</span>
+                                        <span>30k</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <span class="toggle-label">DP Personagem (Ranking):</span>
-                    <div class="toggle-group exclusive" id="dp-rank-toggles">
-                        <button class="toggle-btn" data-source="top10percent" data-type="dpRank">Top 10%</button>
-                        <button class="toggle-btn active" data-source="top30percent" data-type="dpRank">Top 30%</button>
-                        <button class="toggle-btn" data-source="top60percent" data-type="dpRank">Top 60%</button>
-                        <button class="toggle-btn" data-source="outros" data-type="dpRank">Outros</button>
-                    </div>
+                    <div class="calc-divider"></div>
 
-                    <span class="toggle-label">DP Mensal:</span>
-                    <div class="toggle-group" id="dp-mensal-toggles">
-                        <button class="toggle-btn active" data-source="mensal" data-type="dpMensal">
-                            Participar
-                        </button>
-                    </div>
-                    
-                    <span class="toggle-label">DP Médicis:</span>
-                    <div class="toggle-group exclusive" id="dp-medicis-toggles">
-                        <button class="toggle-btn" data-source="top100" data-type="dpMedicis">Top 100</button>
-                        <button class="toggle-btn" data-source="top10percent" data-type="dpMedicis">Top 10%</button>
-                        <button class="toggle-btn active" data-source="outros" data-type="dpMedicis">Outros</button>
-                        <button class="toggle-btn off" data-source="nenhum" data-type="dpMedicis">Não faço</button>
-                    </div>
-                </div>
-
-                <!-- Parallel Realms Section -->
-                <div class="calc-section">
-                    <h4>🏰 Reinos Paralelos</h4>
-                    <span class="toggle-label">Dificuldade:</span>
-                    <div class="toggle-group exclusive" id="reinos-dif-toggles">
-                        <button class="toggle-btn" data-source="basico" data-type="reinosDif">Básico</button>
-                        <button class="toggle-btn" data-source="avancado" data-type="reinosDif">Avançado</button>
-                        <button class="toggle-btn" data-source="especialista" data-type="reinosDif">Especialista</button>
-                        <button class="toggle-btn" data-source="mestre" data-type="reinosDif">Mestre</button>
-                        <button class="toggle-btn" data-source="pesadelo" data-type="reinosDif">Pesadelo</button>
-                        <button class="toggle-btn active" data-source="semDo" data-type="reinosDif">Sem Dó</button>
-                        <button class="toggle-btn off" data-source="nenhum" data-type="reinosDif">Não faço</button>
-                    </div>
-                    <span class="toggle-label">Completude:</span>
-                    <div class="toggle-group exclusive" id="reinos-comp-toggles">
-                        <button class="toggle-btn" data-source="min" data-type="reinosComp">Mínimo</button>
-                        <button class="toggle-btn active" data-source="max" data-type="reinosComp">Máximo</button>
-                    </div>
-                </div>
-
-                <!-- Guilds Section -->
-                <div class="calc-section">
-                    <h4>👥 Guilda</h4>
-                    <div class="toggle-group" id="guilda-eventos-toggles">
-                        <button class="toggle-btn active" data-source="eventos" data-type="guildaEventos">
-                            Eventos de Guilda
-                        </button>
-                    </div>
-
-                    <span class="toggle-label">Tier de Batalha:</span>
-                    <div class="toggle-group exclusive" id="guilda-tier-toggles">
-                        <button class="toggle-btn" data-source="bronze" data-type="guildaTier">Bronze</button>
-                        <button class="toggle-btn" data-source="prata" data-type="guildaTier">Prata</button>
-                        <button class="toggle-btn" data-source="ouro" data-type="guildaTier">Ouro</button>
-                        <button class="toggle-btn active" data-source="diamante" data-type="guildaTier">Diamante</button>
-                        <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">Não participo</button>
-                    </div>
-
-                    <div id="diamante-slider-container" class="slider-container">
-                        <span class="toggle-label">Pontos da Guilda (Diamante): <span id="diamante-pontos-display">16000</span></span>
-                        <input type="range" id="diamante-pontos-slider" min="16000" max="30000" step="1000" value="16000" oninput="updateDiamanteSlider(this.value)">
-                        <div class="slider-labels">
-                            <span>16k</span>
-                            <span>30k</span>
+                    <div class="calc-results">
+                        <div id="earnings-result" class="result-box">
+                            <h4>💎 Resultado Estimado</h4>
+                            <div class="result-grid">
+                                <div class="result-card coins">
+                                    <span class="result-label">Coins Mensais</span>
+                                    <span class="result-value" id="result-coins">-</span>
+                                    <span class="result-sub">≈ <span id="result-coins-week">-</span>/semana</span>
+                                </div>
+                                <div class="result-card teonita">
+                                    <span class="result-label">Teonita Mensal</span>
+                                    <span class="result-value" id="result-teonita">-</span>
+                                    <span class="result-sub">≈ <span id="result-teonita-week">-</span>/semana</span>
+                                </div>
+                            </div>
+                            <div id="earnings-breakdown" class="breakdown-box"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <button class="calc-btn" onclick="handleCalculateEarnings()">
-                🧮 Calcular Ganhos
-            </button>
+            <!-- ========== TAB: CUSTOS ========== -->
+            <div class="calc-tab-content" id="tab-custos">
+                <div class="calc-layout">
+                    <div class="calc-controls">
+                        <div class="calc-form">
+                            <!-- GOLPES SECTION -->
+                            <div class="calc-section">
+                                <h4>⚔️ Golpes (5 por Build)</h4>
+                                
+                                <span class="toggle-label">Raridade do Personagem:</span>
+                                <div class="toggle-group exclusive" id="golpe-raridade-toggles">
+                                    <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade">Bronze</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade">Prata</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade">Ouro</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade">Diamante</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">Sem Golpes</button>
+                                </div>
 
-            <div id="earnings-result" class="result-box hidden">
-                <h4>💎 Resultado Estimado</h4>
-                <div class="result-grid">
-                    <div class="result-card coins">
-                        <span class="result-label">Coins Mensais</span>
-                        <span class="result-value" id="result-coins">-</span>
-                        <span class="result-sub">≈ <span id="result-coins-week">-</span>/semana</span>
+                                <div class="toggle-group" id="golpe-shiny-toggle">
+                                    <button class="toggle-btn" data-source="shiny" data-type="golpeShiny">✨ Shiny (50% desconto)</button>
+                                </div>
+
+                                <span class="toggle-label">Nível Alvo:</span>
+                                <div class="toggle-group exclusive" id="golpe-nivel-toggles">
+                                    <button class="toggle-btn" data-source="9" data-type="golpeNivel">Lv 9</button>
+                                    <button class="toggle-btn" data-source="12" data-type="golpeNivel">Lv 12</button>
+                                    <button class="toggle-btn active" data-source="15" data-type="golpeNivel">Lv 15</button>
+                                    <button class="toggle-btn" data-source="custom" data-type="golpeNivel">Customizado</button>
+                                </div>
+
+                                <div id="golpe-slider-container" class="slider-container" style="display: none;">
+                                    <span class="toggle-label">Nível: <span id="golpe-nivel-display">2</span></span>
+                                    <input type="range" id="golpe-nivel-slider" min="2" max="15" step="1" value="2" oninput="updateGolpeSlider(this.value)">
+                                    <div class="slider-labels">
+                                        <span>2</span>
+                                        <span>15</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ASTROS SECTION -->
+                            <div class="calc-section">
+                                <h4>⭐ Astros Convidados (1 por Build)</h4>
+
+                                <span class="toggle-label">Raridade do Astro:</span>
+                                <div class="toggle-group exclusive" id="astro-raridade-toggles">
+                                    <button class="toggle-btn" data-source="bronze" data-type="astroRaridade">Bronze (Lv 5)</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade">Prata (Lv 10)</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade">Ouro (Lv 15)</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade">Diamante (Lv 20)</button>
+                                    <button class="toggle-btn" data-source="custom" data-type="astroRaridade">Customizado</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">Sem Astro</button>
+                                </div>
+
+                                <div class="toggle-group" id="astro-shiny-toggle">
+                                    <button class="toggle-btn" data-source="shiny" data-type="astroShiny">✨ Shiny (50% desconto)</button>
+                                </div>
+
+                                <div id="astro-slider-container" class="slider-container" style="display: none;">
+                                    <span class="toggle-label">Nível: <span id="astro-nivel-display">2</span></span>
+                                    <input type="range" id="astro-nivel-slider" min="2" max="20" step="1" value="2" oninput="updateAstroSlider(this.value)">
+                                    <div class="slider-labels">
+                                        <span>2</span>
+                                        <span>20</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="result-card teonita">
-                        <span class="result-label">Teonita Mensal</span>
-                        <span class="result-value" id="result-teonita">-</span>
-                        <span class="result-sub">≈ <span id="result-teonita-week">-</span>/semana</span>
+
+                    <div class="calc-divider"></div>
+
+                    <div class="calc-results">
+                        <div id="build-cost-result" class="result-box">
+                            <h4>💰 Custo Total da Build</h4>
+                            <div id="build-cost-breakdown" class="breakdown-box styled"></div>
+                        </div>
                     </div>
                 </div>
-                <div id="earnings-breakdown" class="breakdown-box"></div>
             </div>
         </div>
     `;
 }
 
 /**
- * Create costs calculator HTML - Unified version
- * @returns {string} HTML string
+ * Switch between calculator tabs
  */
-export function createCostsCalculator() {
-    return `
-        <div class="calculator-box costs-calc">
-            <h3>📈 Custos de Evolução</h3>
-            <p class="calc-subtitle">Calcule quanto custa evoluir uma build completa</p>
-
-            <!-- GOLPES SECTION -->
-            <div class="calc-section">
-                <h4>⚔️ Golpes (5 por Build)</h4>
-                
-                <span class="toggle-label">Raridade do Personagem:</span>
-                <div class="toggle-group exclusive" id="golpe-raridade-toggles">
-                    <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade">Bronze</button>
-                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade">Prata</button>
-                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade">Ouro</button>
-                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade">Diamante</button>
-                    <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">Sem Golpes</button>
-                </div>
-
-                <div class="toggle-group" id="golpe-shiny-toggle">
-                    <button class="toggle-btn" data-source="shiny" data-type="golpeShiny">✨ Shiny (50% desconto)</button>
-                </div>
-
-                <span class="toggle-label">Nível Alvo:</span>
-                <div class="toggle-group exclusive" id="golpe-nivel-toggles">
-                    <button class="toggle-btn" data-source="9" data-type="golpeNivel">Lv 9</button>
-                    <button class="toggle-btn" data-source="12" data-type="golpeNivel">Lv 12</button>
-                    <button class="toggle-btn active" data-source="15" data-type="golpeNivel">Lv 15</button>
-                    <button class="toggle-btn" data-source="custom" data-type="golpeNivel">Customizado</button>
-                </div>
-
-                <div id="golpe-slider-container" class="slider-container" style="display: none;">
-                    <span class="toggle-label">Nível: <span id="golpe-nivel-display">2</span></span>
-                    <input type="range" id="golpe-nivel-slider" min="2" max="15" step="1" value="2" oninput="updateGolpeSlider(this.value)">
-                    <div class="slider-labels">
-                        <span>2</span>
-                        <span>15</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ASTROS SECTION -->
-            <div class="calc-section">
-                <h4>⭐ Astros Convidados (1 por Build)</h4>
-
-                <span class="toggle-label">Raridade do Astro:</span>
-                <div class="toggle-group exclusive" id="astro-raridade-toggles">
-                    <button class="toggle-btn" data-source="bronze" data-type="astroRaridade">Bronze (Lv 5)</button>
-                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade">Prata (Lv 10)</button>
-                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade">Ouro (Lv 15)</button>
-                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade">Diamante (Lv 20)</button>
-                    <button class="toggle-btn" data-source="custom" data-type="astroRaridade">Customizado</button>
-                    <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">Sem Astro</button>
-                </div>
-
-                <div class="toggle-group" id="astro-shiny-toggle">
-                    <button class="toggle-btn" data-source="shiny" data-type="astroShiny">✨ Shiny (50% desconto)</button>
-                </div>
-
-                <div id="astro-slider-container" class="slider-container" style="display: none;">
-                    <span class="toggle-label">Nível: <span id="astro-nivel-display">2</span></span>
-                    <input type="range" id="astro-nivel-slider" min="2" max="20" step="1" value="2" oninput="updateAstroSlider(this.value)">
-                    <div class="slider-labels">
-                        <span>2</span>
-                        <span>20</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UNIFIED CALCULATE BUTTON -->
-            <button class="calc-btn primary" onclick="handleCalculateBuildCost()">
-                🧮 Calcular Custo da Build
-            </button>
-
-            <!-- UNIFIED RESULTS -->
-            <div id="build-cost-result" class="result-box hidden">
-                <h4>💰 Custo Total da Build</h4>
-                <div id="build-cost-breakdown" class="breakdown-box styled"></div>
-            </div>
-        </div>
-    `;
+export function switchCalcTab(tabName) {
+    // Update tab buttons
+    document.querySelectorAll('.calc-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.tab === tabName);
+    });
+    // Update tab content
+    document.querySelectorAll('.calc-tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === `tab-${tabName}`);
+    });
+    // Trigger calculation for the newly visible tab
+    if (tabName === 'ganhos') {
+        calculateEarnings();
+    } else if (tabName === 'custos') {
+        calculateBuildCost();
+    }
 }
 
 /**
@@ -261,6 +284,7 @@ export function updateGolpeSlider(value) {
     if (display) {
         display.textContent = value;
     }
+    calculateBuildCost();
 }
 
 /**
@@ -271,12 +295,18 @@ export function updateAstroSlider(value) {
     if (display) {
         display.textContent = value;
     }
+    calculateBuildCost();
 }
 
 /**
- * Initialize toggle button event listeners
+ * Initialize toggle button event listeners with real-time calculation
  */
 export function initToggleButtons() {
+    // Determine which calculator a toggle belongs to
+    const getCalcType = (group) => {
+        return group.closest('#tab-custos') ? 'custos' : 'ganhos';
+    };
+
     document.querySelectorAll('.toggle-group').forEach(group => {
         const isExclusive = group.classList.contains('exclusive');
 
@@ -314,6 +344,14 @@ export function initToggleButtons() {
                         sliderContainer.style.display = btn.dataset.source === 'custom' ? 'block' : 'none';
                     }
                 }
+
+                // Real-time calculation
+                const calcType = getCalcType(group);
+                if (calcType === 'custos') {
+                    calculateBuildCost();
+                } else {
+                    calculateEarnings();
+                }
             });
         });
     });
@@ -341,6 +379,7 @@ export function updateDiamanteSlider(value) {
     if (display) {
         display.textContent = parseInt(value).toLocaleString('pt-BR');
     }
+    calculateEarnings();
 }
 
 /**

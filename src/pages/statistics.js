@@ -4,14 +4,12 @@
 // =====================================================
 
 import {
-    createEarningsCalculator,
-    createCostsCalculator,
+    createCalculator,
     initCalculator,
     initToggleButtons,
     handleCalculateEarnings,
     handleCalculateBuildCost,
-    handleCalculateGolpes,
-    handleCalculateAstros,
+    switchCalcTab,
     updateDiamanteSlider,
     updateGolpeSlider,
     updateAstroSlider
@@ -41,12 +39,7 @@ export function render() {
             </div>
 
             <div class="calculators-container">
-                <div class="calc-column">
-                    ${createEarningsCalculator()}
-                </div>
-                <div class="calc-column">
-                    ${createCostsCalculator()}
-                </div>
+                ${createCalculator()}
             </div>
         </section>
     `;
@@ -63,15 +56,17 @@ export async function init() {
         // Initialize calculator with data
         initCalculator(statsData);
 
-        // Initialize toggle button listeners
+        // Initialize toggle button listeners (with real-time calculation)
         initToggleButtons();
+
+        // Auto-calculate earnings on page load
+        handleCalculateEarnings();
     }
 
     // Register global handlers
     window.handleCalculateEarnings = handleCalculateEarnings;
     window.handleCalculateBuildCost = handleCalculateBuildCost;
-    window.handleCalculateGolpes = handleCalculateGolpes;
-    window.handleCalculateAstros = handleCalculateAstros;
+    window.switchCalcTab = switchCalcTab;
     window.updateDiamanteSlider = updateDiamanteSlider;
     window.updateGolpeSlider = updateGolpeSlider;
     window.updateAstroSlider = updateAstroSlider;
