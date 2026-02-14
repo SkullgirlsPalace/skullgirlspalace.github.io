@@ -13,23 +13,23 @@
             "po": 0
         },
         "4": {
-            "gold": 100000,
+            "gold": 75000,
             "po": 0
         },
         "5": {
-            "gold": 200000,
+            "gold": 100000,
             "po": 0
         },
         "6": {
-            "gold": 0,
+            "gold": 125000,
             "po": 500
         },
         "7": {
-            "gold": 50000,
+            "gold": 150000,
             "po": 0
         },
         "8": {
-            "gold": 100000,
+            "gold": 175000,
             "po": 0
         },
         "9": {
@@ -37,19 +37,19 @@
             "po": 0
         },
         "10": {
-            "gold": 400000,
+            "gold": 225000,
             "po": 0
         },
         "11": {
-            "gold": 0,
+            "gold": 250000,
             "po": 1000
         },
         "12": {
-            "gold": 125000,
+            "gold": 275000,
             "po": 0
         },
         "13": {
-            "gold": 250000,
+            "gold": 300000,
             "po": 0
         },
         "14": {
@@ -57,42 +57,35 @@
             "po": 0
         },
         "15": {
-            "gold": 1000000,
+            "gold": 750000,
             "po": 0
         },
         "16": {
-            "gold": 0,
-            "po": 2500
-        },
-        "17": {
-            "gold": 125000,
-            "po": 0
-        },
-        "18": {
-            "gold": 250000,
-            "po": 0
-        },
-        "19": {
-            "gold": 500000,
-            "po": 0
-        },
-        "20": {
             "gold": 1000000,
-            "po": 0
+            "po": 2500
         }
     },
-    "nivelMaxPorRaridade": {
+    "totalPorRaridade": {
         "bronze": {
-            "nivelMax": 5
+            "nivelMax": 6,
+            "gold": 375000,
+            "po": 500
         },
         "prata": {
-            "nivelMax": 10
+            "nivelMax": 11,
+            "gold": 750000,
+            "po": 1000
         },
         "ouro": {
-            "nivelMax": 15
+            "nivelMax": 16,
+            "gold": 1875000,
+            "po": 2500
         },
         "diamante": {
-            "nivelMax": 20
+            "nivelMax": 16,
+            "gold": 1875000,
+            "po": 0,
+            "nota": "Diamantes não precisam de pó de evolução"
         }
     },
     "descricao": {

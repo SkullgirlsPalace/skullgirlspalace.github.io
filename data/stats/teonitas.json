@@ -22,39 +22,27 @@
             "tipo": "fixo",
             "descricao": "Teonita acumulada das missões diárias (61/dia x 30 dias)"
         },
-        "dpPersonagemBronze": {
-            "nome": "DP Personagem (Bronze)",
-            "valor": 495,
-            "tipo": "variavel",
-            "descricao": "Média mensal nas DPs de personagem faixa Bronze"
-        },
-        "dpPersonagemPrata": {
-            "nome": "DP Personagem (Prata)",
-            "valor": 495,
-            "tipo": "variavel",
-            "descricao": "Média mensal nas DPs de personagem faixa Prata"
-        },
         "dpPersonagemOuro": {
             "nome": "DP Personagem (Ouro)",
-            "valor": 495,
+            "valor": 465,
             "tipo": "variavel",
             "descricao": "Média mensal nas DPs de personagem faixa Ouro"
         },
         "dpPersonagemDiamante": {
             "nome": "DP Personagem (Diamante)",
-            "valor": 900,
+            "valor": 930,
             "tipo": "variavel",
             "descricao": "Média mensal nas DPs de personagem faixa Diamante"
         },
         "passeFree": {
             "nome": "Passe de Batalha (Free)",
-            "valor": 100,
+            "valor": 0,
             "tipo": "passe",
             "descricao": "Versão gratuita do passe"
         },
         "passePremium": {
             "nome": "Passe de Batalha (Premium)",
-            "valor": 400,
+            "valor": 200,
             "tipo": "passe",
             "descricao": "Versão premium do passe"
         },
@@ -65,10 +53,48 @@
             "descricao": "Versão premium+ do passe"
         },
         "guilda": {
-            "nome": "missoes diárias de Guilda",
+            "nome": "Recompensas de Guilda",
             "valor": 1180,
             "tipo": "variavel",
             "descricao": "Teonita de guilda ativa (raids + missões)"
+        }
+    },
+    "cenarios": {
+        "f2pAtivo": {
+            "nome": "F2P Ativo",
+            "total": 4675,
+            "fontes": [
+                "calendario",
+                "dpMensal",
+                "diarias",
+                "dpPersonagemDiamante",
+                "passeFree",
+                "guilda"
+            ]
+        },
+        "premiumAtivo": {
+            "nome": "Premium Ativo",
+            "total": 4875,
+            "fontes": [
+                "calendario",
+                "dpMensal",
+                "diarias",
+                "dpPersonagemDiamante",
+                "passePremium",
+                "guilda"
+            ]
+        },
+        "premiumPlusAtivo": {
+            "nome": "Premium+ Ativo",
+            "total": 5075,
+            "fontes": [
+                "calendario",
+                "dpMensal",
+                "diarias",
+                "dpPersonagemDiamante",
+                "passePremiumPlus",
+                "guilda"
+            ]
         }
     }
 }

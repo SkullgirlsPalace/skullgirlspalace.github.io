@@ -6,15 +6,13 @@
 import {
     createEarningsCalculator,
     createCostsCalculator,
+    createScenariosTable,
     initCalculator,
-    initToggleButtons,
+    renderScenarios,
     handleCalculateEarnings,
-    handleCalculateBuildCost,
     handleCalculateGolpes,
     handleCalculateAstros,
-    updateDiamanteSlider,
-    updateGolpeSlider,
-    updateAstroSlider
+    switchCalcTab
 } from '../components/Calculator.js';
 import { loadStatistics } from '../services/dataService.js';
 
@@ -48,6 +46,10 @@ export function render() {
                     ${createCostsCalculator()}
                 </div>
             </div>
+
+            <div class="scenarios-section" id="scenarios-section">
+                ${createScenariosTable()}
+            </div>
         </section>
     `;
 }
@@ -63,16 +65,13 @@ export async function init() {
         // Initialize calculator with data
         initCalculator(statsData);
 
-        // Initialize toggle button listeners
-        initToggleButtons();
+        // Render scenarios comparison table
+        renderScenarios();
     }
 
     // Register global handlers
     window.handleCalculateEarnings = handleCalculateEarnings;
-    window.handleCalculateBuildCost = handleCalculateBuildCost;
     window.handleCalculateGolpes = handleCalculateGolpes;
     window.handleCalculateAstros = handleCalculateAstros;
-    window.updateDiamanteSlider = updateDiamanteSlider;
-    window.updateGolpeSlider = updateGolpeSlider;
-    window.updateAstroSlider = updateAstroSlider;
+    window.switchCalcTab = switchCalcTab;
 }
