@@ -9,7 +9,7 @@ import { loadAllCharacters, loadTierData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleCycleRank, handleToggleCompactMode, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
-import { handleCalculateEarnings, handleCalculateCosts } from './components/Calculator.js';
+import { handleCalculateEarnings } from './components/Calculator.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 
@@ -41,9 +41,8 @@ window.handleToggleCompactMode = handleToggleCompactMode;
 window.handleToggleEditorMode = handleToggleEditorMode;
 window.handleSaveTierData = handleSaveTierData;
 
-// Calculator handlers
+// Calculator handlers (specific handlers registered by statistics.js init)
 window.handleCalculateEarnings = handleCalculateEarnings;
-window.handleCalculateCosts = handleCalculateCosts;
 
 // ========== VARIANT CARD TAB HANDLER ==========
 /**

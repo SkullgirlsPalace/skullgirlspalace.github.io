@@ -1,0 +1,41 @@
+{
+    "meta": {
+        "description": "Dados de Guildas (Guilds) - Eventos e Batalhas",
+        "lastUpdated": "2026-02-04"
+    },
+    "eventos": {
+        "recompensasEvento": {
+            "canopyCoins": 78500
+        }
+    },
+    "batalha": {
+        "bronze": {
+            "nome": "Bronze",
+            "recompensas": {
+                "canopyCoins": 50000
+            }
+        },
+        "prata": {
+            "nome": "Prata",
+            "recompensas": {
+                "canopyCoins": 100000
+            }
+        },
+        "ouro": {
+            "nome": "Ouro",
+            "recompensas": {
+                "canopyCoins": 200000
+            }
+        },
+        "diamante": {
+            "nome": "Diamante",
+            "recompensas": {
+                "canopyCoins": 400000
+            },
+            "bonus": {
+                "descricao": "Cálculo extra para aumento de ouro",
+                "fator": 25000
+            }
+        }
+    }
+}
