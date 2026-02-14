@@ -172,6 +172,9 @@ function setupStaticUI() {
 
     // Initialize attribute tooltip system (delegated events)
     initAttributeTooltips();
+
+    // Initialize attribute tooltip system (delegated events)
+    initAttributeTooltips();
 }
 
 /**

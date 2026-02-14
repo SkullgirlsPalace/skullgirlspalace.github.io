@@ -18,38 +18,22 @@ const INACTIVITY_TIMEOUT = 20000; // 20 seconds
 /**
  * Show a tooltip near the target element
  * @param {HTMLElement} target - The .attr-highlight element
- * @param {string} key - Key in ATTRIBUTE_DATA or EFFECT_DATA
+ * @param {string} attrKey - Attribute key in ATTRIBUTE_DATA
  */
-function showTooltip(target, key) {
+function showTooltip(target, attrKey) {
     hideTooltip(); // remove any existing
-
-    // Check both data sources
-    const data = ATTRIBUTE_DATA[key] || EFFECT_DATA[key];
-    if (!data) return;
+    const attr = ATTRIBUTE_DATA[attrKey];
+    if (!attr) return;
 
     const tooltip = document.createElement('div');
     tooltip.className = 'attr-tooltip';
-
-    // Customize header based on type
-    let headerHTML = '';
-    if (data.max) {
-        // Attribute
-        headerHTML = `<strong>${data.name}</strong> <span class="attr-tooltip-max">Máx: ${data.max}</span>`;
-    } else if (data.type === 'buff' || data.type === 'debuff') {
-        // Effect
-        const typeLabel = data.type === 'buff' ? 'Efeito Positivo' : 'Efeito Negativo';
-        const typeClass = data.type;
-        headerHTML = `<strong>${data.name}</strong> <span class="attr-tooltip-type ${typeClass}">${typeLabel}</span>`;
-    } else {
-        // Technical Term
-        headerHTML = `<strong>${data.name}</strong>`;
-    }
-
     tooltip.innerHTML = `
         <div class="attr-tooltip-header">
-            ${headerHTML}
+            <strong>${attr.name}</strong>
+            <span class="attr-tooltip-max">Máx: ${attr.max}</span>
         </div>
-        ${data.quickTip ? `<p class="attr-tooltip-tip">💡 ${data.quickTip}</p>` : ''}
+        <p class="attr-tooltip-summary">${attr.summary}</p>
+        <p class="attr-tooltip-tip">💡 ${attr.quickTip}</p>
         <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
     `;
 
@@ -98,54 +82,38 @@ function hideTooltip() {
 // ========== DETAIL MODAL (click) ==========
 
 /**
- * Show the detail modal for an attribute or effect
- * @param {string} key - Data key
+ * Show the detail modal for an attribute
+ * @param {string} attrKey - Attribute key
  */
-function showDetailModal(key) {
+function showDetailModal(attrKey) {
     hideTooltip();
     hideDetailModal();
 
-    const data = ATTRIBUTE_DATA[key] || EFFECT_DATA[key];
-    if (!data) return;
+    const attr = ATTRIBUTE_DATA[attrKey];
+    if (!attr) return;
 
     const overlay = document.createElement('div');
     overlay.className = 'attr-detail-overlay';
-
-    // Type specific header info
-    let subHeader = '';
-    if (data.max) {
-        subHeader = `<span class="attr-detail-max">Máximo: ${data.max}</span>`;
-    } else if (data.stacks) {
-        subHeader = `<span class="attr-detail-max">Máx.Acúmulos: ${data.stacks}x</span>`;
-    }
-
     overlay.innerHTML = `
         <div class="attr-detail-modal">
             <button class="attr-detail-close" aria-label="Fechar">&times;</button>
             <div class="attr-detail-header">
-                ${data.icon ? `<img src="${data.icon}" class="attr-detail-icon" alt="">` : ''}
-                <div class="attr-detail-title-group">
-                    <h3>${data.name}</h3>
-                    ${subHeader}
-                </div>
+                <h3>${attr.name}</h3>
+                <span class="attr-detail-max">Máximo: ${attr.max}</span>
             </div>
             <div class="attr-detail-body">
-                ${data.quickTip ? `
+                <div class="attr-detail-section">
+                    <h4>📋 Resumo do Jogo</h4>
+                    <p>${attr.summary}</p>
+                </div>
                 <div class="attr-detail-section">
                     <h4>⚡ Resumo Rápido</h4>
-                    <p>${data.quickTip}</p>
+                    <p>${attr.quickTip}</p>
                 </div>
-                ` : ''}
                 <div class="attr-detail-section detailed">
                     <h4>📖 Explicação Detalhada</h4>
-                    <p>${data.detailed}</p>
+                    <p>${attr.detailed}</p>
                 </div>
-                ${data.scaling ? `
-                <div class="attr-detail-section scaling">
-                    <h4>⚖️ Escalonamento de Acúmulos</h4>
-                    <p class="scaling-values">${data.scaling}</p>
-                </div>
-                ` : ''}
             </div>
             <div class="attr-detail-timer">
                 <div class="attr-detail-timer-bar"></div>

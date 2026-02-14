@@ -96,19 +96,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'DMFT';
-    src: url('../../font/DMFT-chsimp.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-.cinematic {
-    font-family: 'Washington', 'Roboto', 'Trebuchet MS', 'Arial Narrow', sans-serif;
-    text-transform: uppercase;
-}
-
 html[lang='ja'] .cinematic {
     font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
@@ -663,7 +650,7 @@ main {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    font-family: 'Cinema', 'Roboto', sans-serif;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -700,7 +687,7 @@ main {
     color: var(--text-secondary);
     padding: 10px 24px;
     border-radius: var(--border-radius-pill);
-    font-family: 'Cinema', 'Roboto', sans-serif;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
     display: flex;
@@ -718,7 +705,7 @@ main {
 .cta-button {
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
     color: #000;
-    font-family: 'Cinema', 'Roboto', sans-serif;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-weight: 600;
     padding: 14px 32px;
     border-radius: var(--border-radius-sm);
@@ -1539,7 +1526,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-muted);
     padding: 10px 18px;
-    font-family: 'Cinema', 'Roboto', sans-serif;
+    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
