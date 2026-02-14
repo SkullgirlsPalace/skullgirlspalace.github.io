@@ -9,6 +9,7 @@ import * as characterDetail from './pages/character-detail.js';
 import * as catalysts from './pages/catalysts.js';
 import * as tierlist from './pages/tierlist.js';
 import * as statistics from './pages/statistics.js';
+import * as guide from './pages/guide.js';
 import { updateNavbarVisibility, updateActiveNavLink } from './components/Navigation.js';
 import { setCurrentSection } from './state/store.js';
 
@@ -18,7 +19,8 @@ const routes = {
     'characters': characters,
     'catalysts': catalysts,
     'tierlist': tierlist,
-    'stats': statistics
+    'stats': statistics,
+    'guide': guide
 };
 
 // Current route state

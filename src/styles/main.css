@@ -73,7 +73,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto Condensed';
+    font-family: 'Roboto';
     src: url('../../font/RobotoCondensed-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -81,7 +81,7 @@
 }
 
 @font-face {
-    font-family: 'TBCinema';
+    font-family: 'Cinema';
     src: url('../../font/TBCinemaRGothic-M.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -96,6 +96,19 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'DMFT';
+    src: url('../../font/DMFT-chsimp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.cinematic {
+    font-family: 'Washington', 'Roboto', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+}
+
 html[lang='ja'] .cinematic {
     font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
@@ -107,6 +120,103 @@ html[lang='ko'] .cinematic {
 html[lang='zh-cn'] .cinematic {
     font-family: 'Washington', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
+
+/* Numerical Values Styling */
+.number {
+    font-family: 'Roboto', sans-serif;
+    color: #00ff00;
+    /* Standardized green for numbers */
+    font-weight: 500;
+}
+
+/* Rarity Gradients */
+.bronze-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #843 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #b76;
+}
+
+.silver-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #889 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #aab;
+}
+
+.gold-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #da2 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fd8;
+}
+
+.diamond-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #d9d 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fcf;
+}
+
+.glowing {
+    filter: drop-shadow(0 0 6px white);
+}
+
+/* =====================================================
+   DYNAMIC COLORING FILTERS
+   Used to colorize grayscale/sepia icons dynamically
+   ===================================================== */
+
+/* Rarity-based Filters (applied to .rarity-icon or card symbols) */
+.bronze .move-icon,
+.bronze .rarity-icon {
+    filter: sepia(1) hue-rotate(330deg) saturate(1.5) brightness(1.2);
+}
+
+.silver .move-icon,
+.silver .rarity-icon {
+    filter: sepia(1) hue-rotate(190deg) saturate(0.5) brightness(1.2);
+}
+
+.gold .move-icon,
+.gold .rarity-icon {
+    filter: sepia(1) hue-rotate(15deg) saturate(2) brightness(1.1);
+}
+
+.diamante .move-icon,
+.diamante .rarity-icon {
+    filter: sepia(1) hue-rotate(270deg) saturate(1.5) brightness(1);
+}
+
+/* Element-based Filters (for consistency if icons are grayscale) */
+.element-badge.fire img {
+    filter: sepia(1) hue-rotate(330deg) saturate(3) brightness(1);
+}
+
+.element-badge.water img {
+    filter: sepia(1) hue-rotate(180deg) saturate(3) brightness(1);
+}
+
+.element-badge.wind img {
+    filter: sepia(1) hue-rotate(60deg) saturate(3) brightness(1.1);
+}
+
+.element-badge.dark img {
+    filter: sepia(1) hue-rotate(240deg) saturate(3) brightness(0.8);
+}
+
+.element-badge.light img {
+    filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(1.2);
+}
+
+.element-badge.neutral img {
+    filter: grayscale(1) brightness(1.2);
+}
+
 
 /* ========== RESET & BASE ========== */
 *,
@@ -122,7 +232,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto Condensed', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: 'Roboto', 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
@@ -224,7 +334,7 @@ select {
     align-items: center;
     gap: 6px;
     color: var(--text-secondary);
-    font-family: 'TBCinema', sans-serif;
+    font-family: 'Cinema', sans-serif;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -434,7 +544,7 @@ main {
 }
 
 .hub-btn span {
-    font-family: 'Washington', 'Inter', sans-serif;
+    font-family: 'Washington', sans-serif;
     font-size: 1.2rem;
     color: var(--text-primary);
     position: relative;
@@ -553,7 +663,7 @@ main {
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
+    font-family: 'Cinema', 'Roboto', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -590,7 +700,7 @@ main {
     color: var(--text-secondary);
     padding: 10px 24px;
     border-radius: var(--border-radius-pill);
-    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
+    font-family: 'Cinema', 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
     display: flex;
@@ -608,7 +718,7 @@ main {
 .cta-button {
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
     color: #000;
-    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
+    font-family: 'Cinema', 'Roboto', sans-serif;
     font-weight: 600;
     padding: 14px 32px;
     border-radius: var(--border-radius-sm);
@@ -1429,7 +1539,7 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-muted);
     padding: 10px 18px;
-    font-family: 'TBCinema', 'Roboto Condensed', sans-serif;
+    font-family: 'Cinema', 'Roboto', sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -3854,4 +3964,272 @@ input:checked+.slider:before {
     .attr-detail-section p {
         font-size: 0.85rem;
     }
+}
+/* ========== GUIDE PAGE ========== */
+.guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.guide-header {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: var(--border-subtle);
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.guide-header h1 {
+    font-family: 'Washington', sans-serif;
+    color: var(--accent-gold);
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.guide-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Guide Tabs */
+.guide-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.guide-tab-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 12px 24px;
+    border-radius: var(--border-radius-pill);
+    font-family: 'Cinema', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition-fast);
+}
+
+.guide-tab-btn:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+}
+
+.guide-tab-btn.active {
+    background: rgba(212, 168, 75, 0.15);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.tab-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Guide Content */
+.guide-tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.guide-tab-content.active {
+    display: block;
+}
+
+/* Effects Table */
+.effects-table-container {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: var(--border-subtle);
+}
+
+.effects-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.effects-table th,
+.effects-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.effects-table th {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--accent-gold);
+    font-family: 'Cinema', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.effect-row:last-child td {
+    border-bottom: none;
+}
+
+.effect-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.effect-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.effect-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.effect-name {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.effect-desc-cell p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.effect-scaling {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.effect-stacks-cell {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--accent-gold-light);
+}
+
+/* Tutorial Grid */
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.tutorial-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorial-card.placeholder {
+    border-style: dashed;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .effects-table th:nth-child(4),
+    .effects-table td:nth-child(4) {
+        display: none; /* Hide Stacks column on mobile */
+    }
+    
+    .guide-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ========== FORMATTED TEXT HIGHLIGHTS ========== */
+.attr-highlight {
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+    position: relative;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.attr-highlight:hover {
+    text-shadow: 0 0 8px currentColor;
+    border-bottom-style: solid;
+}
+
+/* SGM Style Colors */
+.attr-highlight.buff {
+    color: #e5c15d; /* SGM Gold/Yellow for buffs in text */
+}
+
+.attr-highlight.debuff {
+     color: #e5c15d; /* SGM also uses Gold/Yellow for keywords in descriptions, or sometimes Red. User asked for Gold look. */
+}
+
+.attr-highlight.term {
+    color: #e5c15d; /* Consistent Gold for all keywords */
+}
+
+/* Numbers in description */
+.number {
+    color: #4cd137; /* Green for numbers */
+    font-weight: 700;
+}
+
+/* ========== INLINE EFFECT ICONS ========== */
+.inline-effect-icon {
+    width: 18px; /* Slightly larger */
+    height: 18px;
+    margin-right: 6px;
+    display: inline-block;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+    flex-shrink: 0;
+}
+
+.attr-highlight {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: baseline; /* Better baseline alignment with surrounding text */
+    gap: 2px;
+}
+
+/* Modal Icon Styling */
+.attr-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.attr-detail-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attr-detail-title-group {
+    display: flex;
+    flex-direction: column;
 }

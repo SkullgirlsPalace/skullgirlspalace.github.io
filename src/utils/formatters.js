@@ -3,6 +3,8 @@
 // Text formatting, parsing, and display helpers
 // =====================================================
 
+import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
+
 /**
  * Format ability/description text
  * Removes Discord formatting, converts markdown-like syntax
@@ -21,10 +23,41 @@ export function formatText(text) {
     // Convert Discord emoji format to simple text
     text = text.replace(/<:[^:]+:\d+>/g, '');
 
-    // Convert \n to <br>
-    text = text.replace(/\\n/g, '<br>').replace(/\n/g, '<br>');
+    // Highlight game effects (Buffs, Debuffs, Terms)
+    const patterns = getEffectPatterns();
+    const replacements = [];
+    let workingText = text;
 
-    return text;
+    for (const { pattern, effectKey } of patterns) {
+        const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(?<![\\wÀ-ÿ])${escaped}(?![\\wÀ-ÿ])`, 'gi'); // Case-insensitive for terms
+
+        workingText = workingText.replace(regex, (match) => {
+            const marker = `\x00EFF_${replacements.length}\x00`;
+            // Determine type for styling
+            const effect = EFFECT_DATA[effectKey];
+            const typeClass = effect ? effect.type : 'term';
+            const iconHtml = (effect && effect.icon) ? `<img src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
+
+            replacements.push({
+                marker,
+                html: `<span class="attr-highlight ${typeClass}" data-attr-key="${effectKey}">${iconHtml}${match}</span>`
+            });
+            return marker;
+        });
+    }
+
+    for (const { marker, html } of replacements) {
+        workingText = workingText.replace(marker, html);
+    }
+
+    // Convert numbers to highlighted spans
+    workingText = workingText.replace(/((?:\?\?\?|\d+(?:\.\d+)?%?))/g, '<span class="number">$1</span>');
+
+    // Convert \n to <br>
+    workingText = workingText.replace(/\\n/g, '<br>').replace(/\n/g, '<br>');
+
+    return workingText;
 }
 
 import { getMoveImage } from '../data/movesimages.js';
