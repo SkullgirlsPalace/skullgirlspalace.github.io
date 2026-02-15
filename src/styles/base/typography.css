@@ -1,0 +1,220 @@
+/* ========== FONTS ========== */
+@font-face {
+    font-family: 'Washington';
+    src: url('../../font/WashingtonBoldDynamic.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../font/RobotoCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cinema';
+    src: url('../../font/TBCinemaRGothic-M.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dodam';
+    src: url('../../font/Typo_DodamM.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html[lang='ja'] .cinematic {
+    font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
+html[lang='ko'] .cinematic {
+    font-family: 'Washington', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
+html[lang='zh-cn'] .cinematic {
+    font-family: 'Washington', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+}
+
+/* Numerical Values Styling */
+.number {
+    font-family: 'Roboto', sans-serif;
+    color: #00ff00;
+    /* Standardized green for numbers */
+    font-weight: 500;
+}
+
+/* Rarity Gradients */
+.bronze-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #843 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #b76;
+}
+
+.silver-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #889 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #aab;
+}
+
+.gold-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #da2 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fd8;
+}
+
+.diamond-gradient {
+    background-image: -webkit-linear-gradient(white 10%, #d9d 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fcf;
+}
+
+.glowing {
+    filter: drop-shadow(0 0 6px white);
+}
+
+/* =====================================================
+   DYNAMIC COLORING FILTERS
+   Used to colorize grayscale/sepia icons dynamically
+   ===================================================== */
+
+/* Rarity-based Filters (applied to .rarity-icon or card symbols) */
+.bronze .move-icon,
+.bronze .rarity-icon {
+    filter: sepia(1) hue-rotate(330deg) saturate(1.5) brightness(1.2);
+}
+
+.silver .move-icon,
+.silver .rarity-icon {
+    filter: sepia(1) hue-rotate(190deg) saturate(0.5) brightness(1.2);
+}
+
+.gold .move-icon,
+.gold .rarity-icon {
+    filter: sepia(1) hue-rotate(15deg) saturate(2) brightness(1.1);
+}
+
+.diamante .move-icon,
+.diamante .rarity-icon {
+    filter: sepia(1) hue-rotate(270deg) saturate(1.5) brightness(1);
+}
+
+/* Element-based Filters (for consistency if icons are grayscale) */
+.element-badge.fire img {
+    filter: sepia(1) hue-rotate(330deg) saturate(3) brightness(1);
+}
+
+.element-badge.water img {
+    filter: sepia(1) hue-rotate(180deg) saturate(3) brightness(1);
+}
+
+.element-badge.wind img {
+    filter: sepia(1) hue-rotate(60deg) saturate(3) brightness(1.1);
+}
+
+.element-badge.dark img {
+    filter: sepia(1) hue-rotate(240deg) saturate(3) brightness(0.8);
+}
+
+.element-badge.light img {
+    filter: sepia(1) hue-rotate(10deg) saturate(3) brightness(1.2);
+}
+
+.element-badge.neutral img {
+    filter: grayscale(1) brightness(1.2);
+}
+
+
+/* ========== FORMATTED TEXT HIGHLIGHTS ========== */
+.attr-highlight {
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s, text-shadow 0.2s;
+    position: relative;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.attr-highlight:hover {
+    text-shadow: 0 0 8px currentColor;
+    border-bottom-style: solid;
+}
+
+/* SGM Style Colors */
+.attr-highlight.buff {
+    color: #e5c15d;
+    /* SGM Gold/Yellow for buffs in text */
+}
+
+.attr-highlight.debuff {
+    color: #e5c15d;
+    /* SGM also uses Gold/Yellow for keywords in descriptions, or sometimes Red. User asked for Gold look. */
+}
+
+.attr-highlight.term {
+    color: #e5c15d;
+    /* Consistent Gold for all keywords */
+}
+
+/* Numbers in description */
+.number {
+    color: #4cd137;
+    /* Green for numbers */
+    font-weight: 700;
+}
+
+/* ========== INLINE EFFECT ICONS ========== */
+.inline-effect-icon {
+    width: 18px;
+    /* Slightly larger */
+    height: 18px;
+    margin-right: 6px;
+    display: inline-block;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+    flex-shrink: 0;
+}
+
+.attr-highlight {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: baseline;
+    /* Better baseline alignment with surrounding text */
+    gap: 2px;
+}
+
+/* Modal Icon Styling */
+.attr-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.attr-detail-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.attr-detail-title-group {
+    display: flex;
+    flex-direction: column;
+}

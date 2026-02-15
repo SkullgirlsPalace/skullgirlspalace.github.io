@@ -1,0 +1,61 @@
+/* ========== SCROLL NAVIGATION ========== */
+.scroll-nav {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 9999;
+}
+
+.scroll-nav button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    opacity: 0.9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.scroll-nav button::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 4px solid #1a1a1a;
+    border-left: 4px solid #1a1a1a;
+    transform: rotate(45deg);
+    margin-top: 6px;
+}
+
+.scroll-nav button#scrollToBottomBtn::before {
+    transform: rotate(225deg);
+    margin-top: -6px;
+}
+
+.scroll-nav button:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: var(--accent-gold-light);
+    box-shadow: var(--shadow-glow);
+}
+
+.scroll-nav button#scrollTopBtn {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.scroll-nav button#scrollTopBtn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+

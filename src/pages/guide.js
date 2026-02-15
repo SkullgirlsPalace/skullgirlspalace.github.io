@@ -19,13 +19,9 @@ export function render() {
                 <button class="guide-tab-btn active" onclick="switchGuideTab('tutorials')">
                     📚 Tutoriais
                 </button>
-                <button class="guide-tab-btn" onclick="switchGuideTab('buffs')">
-                    <img src="img/modifiers/buffs/Regen.png" alt="Buffs" class="tab-icon">
-                    Efeitos Positivos
-                </button>
-                <button class="guide-tab-btn" onclick="switchGuideTab('debuffs')">
-                    <img src="img/modifiers/debuffs/Bleed.png" alt="Debuffs" class="tab-icon">
-                    Efeitos Negativos
+                <button class="guide-tab-btn" onclick="switchGuideTab('modifiers')">
+                    <img src="img/modifiers/buffs/Regen.png" alt="Modificadores" class="tab-icon">
+                    Modificadores
                 </button>
             </div>
 
@@ -40,41 +36,55 @@ export function render() {
                     </div>
                 </div>
 
-                <!-- BUFFS TAB -->
-                <div id="tab-buffs" class="guide-tab-content">
-                    <div class="effects-table-container">
-                        <table class="effects-table">
-                            <thead>
-                                <tr>
-                                    <th>Ícone</th>
-                                    <th>Nome</th>
-                                    <th>Efeito / Descrição</th>
-                                    <th>Máx.</th>
-                                </tr>
-                            </thead>
-                            <tbody id="buffs-list">
-                                <!-- Populated by JS -->
-                            </tbody>
-                        </table>
+                <!-- MODIFIERS TAB (Unified) -->
+                <div id="tab-modifiers" class="guide-tab-content">
+                    
+                    <!-- BUFFS SECTION -->
+                    <div class="modifiers-section">
+                        <h2 class="section-title" style="color: var(--accent-green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            <img src="img/modifiers/buffs/Regen.png" style="width: 24px; height: 24px;"> 
+                            Efeitos Positivos
+                        </h2>
+                        <div class="effects-table-container">
+                            <table class="effects-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ícone</th>
+                                        <th>Nome</th>
+                                        <th>Efeito / Descrição</th>
+                                        <th>Máx.</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="buffs-list">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
 
-                <!-- DEBUFFS TAB -->
-                <div id="tab-debuffs" class="guide-tab-content">
-                    <div class="effects-table-container">
-                        <table class="effects-table">
-                            <thead>
-                                <tr>
-                                    <th>Ícone</th>
-                                    <th>Nome</th>
-                                    <th>Efeito / Descrição</th>
-                                    <th>Máx.</th>
-                                </tr>
-                            </thead>
-                            <tbody id="debuffs-list">
-                                <!-- Populated by JS -->
-                            </tbody>
-                        </table>
+                    <div style="height: 40px;"></div> <!-- Spacer -->
+
+                    <!-- DEBUFFS SECTION -->
+                    <div class="modifiers-section">
+                        <h2 class="section-title" style="color: var(--accent-red); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            <img src="img/modifiers/debuffs/Bleed.png" style="width: 24px; height: 24px;">
+                            Efeitos Negativos
+                        </h2>
+                        <div class="effects-table-container">
+                            <table class="effects-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ícone</th>
+                                        <th>Nome</th>
+                                        <th>Efeito / Descrição</th>
+                                        <th>Máx.</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="debuffs-list">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

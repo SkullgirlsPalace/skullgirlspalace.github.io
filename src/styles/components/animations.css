@@ -1,0 +1,54 @@
+/* ========== ANIMATIONS ========== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: slideUp 0.4s ease forwards;
+}
+
+/* Staggered animations for grid items */
+.character-card:nth-child(1) {
+    animation-delay: 0.02s;
+}
+
+.character-card:nth-child(2) {
+    animation-delay: 0.04s;
+}
+
+.character-card:nth-child(3) {
+    animation-delay: 0.06s;
+}
+
+.character-card:nth-child(4) {
+    animation-delay: 0.08s;
+}
+
+.character-card:nth-child(5) {
+    animation-delay: 0.10s;
+}
+
+.character-card:nth-child(6) {
+    animation-delay: 0.12s;
+}
+
+.character-card:nth-child(7) {
+    animation-delay: 0.14s;
+}
+
+.character-card:nth-child(8) {
+    animation-delay: 0.16s;
+}
+
+.character-card:nth-child(9) {
+    animation-delay: 0.18s;
+}
+

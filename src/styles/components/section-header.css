@@ -1,0 +1,26 @@
+/* ========== SECTION HEADER ========== */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    font-family: 'Washington', sans-serif;
+    font-size: 1.75rem;
+    color: var(--accent-gold);
+}
+
+.section-header h2::before {
+    display: none;
+}
+
+.mastery-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+

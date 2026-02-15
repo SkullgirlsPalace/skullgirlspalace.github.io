@@ -1,0 +1,198 @@
+/* ========== GUIDE PAGE ========== */
+.guide-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.guide-header {
+    margin-bottom: 32px;
+    padding: 24px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: var(--border-subtle);
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.guide-header h1 {
+    font-family: 'Washington', sans-serif;
+    color: var(--accent-gold);
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.guide-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Guide Tabs */
+.guide-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.guide-tab-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    padding: 12px 24px;
+    border-radius: var(--border-radius-pill);
+    font-family: 'Cinema', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition-fast);
+}
+
+.guide-tab-btn:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+}
+
+.guide-tab-btn.active {
+    background: rgba(212, 168, 75, 0.15);
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.tab-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Guide Content */
+.guide-tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.guide-tab-content.active {
+    display: block;
+}
+
+/* Effects Table */
+.effects-table-container {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: var(--border-subtle);
+}
+
+.effects-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.effects-table th,
+.effects-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.effects-table th {
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--accent-gold);
+    font-family: 'Cinema', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.effect-row:last-child td {
+    border-bottom: none;
+}
+
+.effect-row:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.effect-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.effect-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.effect-name {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.effect-desc-cell p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.effect-scaling {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.effect-stacks-cell {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--accent-gold-light);
+}
+
+/* Tutorial Grid */
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.tutorial-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorial-card.placeholder {
+    border-style: dashed;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
+    .effects-table th:nth-child(4),
+    .effects-table td:nth-child(4) {
+        display: none;
+        /* Hide Stacks column on mobile */
+    }
+
+    .guide-header h1 {
+        font-size: 2rem;
+    }
+}
+

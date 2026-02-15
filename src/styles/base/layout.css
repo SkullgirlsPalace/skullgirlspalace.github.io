@@ -1,0 +1,37 @@
+/* ========== MAIN CONTENT ========== */
+main {
+    flex: 1;
+    padding: 24px;
+    padding-top: calc(var(--navbar-height) + 24px);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ========== SECTIONS ========== */
+.hidden-section {
+    display: none !important;
+}
+
+.active-section {
+    display: block !important;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Ensure hub can remain flex if active */
+#landing-hub.active-section {
+    display: flex !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
