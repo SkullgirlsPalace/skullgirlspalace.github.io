@@ -97,18 +97,21 @@ export function createVariantCard(variant, charKey, index = 0) {
                 </div>
                 
                 <div class="variant-tab-contents" id="${cardId}-contents">
-                    <!-- Habilidade Tab (Signature + Marquee) -->
+                    <!-- Habilidade Tab (Signature + Marquee Unified) -->
                     <div class="variant-tab-content active" data-tab="habilidade">
                         <div class="ability-box">
-                            <h4>${variant.signature_ability?.name || 'Habilidade Especial'}</h4>
-                            <p>${abilityDesc}</p>
+                            <h4 style="color: var(--accent-gold); margin-bottom: 8px;">
+                                ${variant.signature_ability?.name || 'Habilidade Especial'}
+                            </h4>
+                            <p style="margin-bottom: 16px;">${abilityDesc}</p>
+                            
+                            ${variant.marquee_ability ? `
+                                <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
+                                <h4 style="color: var(--rarity-diamond); font-size: 0.85rem; margin-bottom: 0;">
+                                    SUPERIOR RECOMENDADA: <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
+                                </h4>
+                            ` : ''}
                         </div>
-                        
-                        ${variant.marquee_ability ? `
-                            <div class="ability-box marquee">
-                                <h4>SUPERIOR RECOMENDADA: ${String(variant.marquee_ability).toUpperCase()}</h4>
-                            </div>
-                        ` : ''}
                     </div>
                     
                     <!-- Build Tab (Build + Arsenal) -->
