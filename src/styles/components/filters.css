@@ -1,0 +1,358 @@
+/* ========== FILTERS ========== */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    border: var(--border-subtle);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filter-group label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-group select {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: var(--border-subtle);
+    padding: 10px 16px;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    min-width: 150px;
+    transition: border-color var(--transition-fast);
+}
+
+.filter-group select:hover,
+.filter-group select:focus {
+    border-color: var(--accent-gold);
+    outline: none;
+}
+
+/* ========== FILTER BAR ========== */
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal alignment */
+    align-items: center;
+    background: var(--bg-card);
+    /* Always visible */
+    border: var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 12px 24px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-sm);
+    gap: 0;
+    width: 100%;
+    min-width: 0;
+    transition: all 0.4s ease;
+}
+
+/* Active state (kept for backwards compatibility) */
+.filter-bar.active {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    padding: 12px 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.filter-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    /* Reduced from 16px */
+    margin-right: 8px;
+    /* Reduced from 16px */
+    flex-shrink: 0;
+}
+
+.filter-section.right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.filter-label {
+    font-family: 'TBCinema', 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-label img {
+    height: 24px;
+    width: auto;
+    opacity: 0.9;
+}
+
+/* Filter Toggle Button */
+.filter-toggle-btn {
+    font-family: 'TBCinema', 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--text-primary);
+    font-weight: 800;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: inset 0 0 0 0 rgba(212, 168, 75, 0.1);
+    height: auto;
+    min-width: 80px;
+}
+
+.filter-toggle-btn:hover,
+.filter-toggle-btn.active {
+    background: rgba(212, 168, 75, 0.1);
+    box-shadow: 0 0 10px rgba(212, 168, 75, 0.2);
+    transform: translateY(-1px);
+}
+
+.filter-toggle-btn img {
+    height: 24px;
+    width: auto;
+    filter: brightness(1.2);
+}
+
+.filter-toggle-btn span {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Filter Content - Always Visible */
+.filter-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    overflow: visible;
+    max-width: 1400px;
+    /* Always expanded */
+    opacity: 1;
+    transition: max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-out;
+    margin-top: 0;
+    padding-left: 8px;
+    border-left: none;
+}
+
+/* Active state now just keeps it visible */
+.filter-content.active {
+    max-width: 1400px;
+    opacity: 1;
+    padding-left: 8px;
+    border-left: none;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.filter-content.hidden {
+    /* Kept for backward compat but overridden by above if we switch class logic */
+    display: none;
+}
+
+.sort-header {
+    font-family: 'TBCinema', 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 16px;
+    /* Added spacing */
+}
+
+.sort-header img {
+    height: 20px;
+    width: auto;
+    opacity: 0.9;
+}
+
+.clear-filters-btn {
+    background: rgba(255, 50, 50, 0.05);
+    border: 1px solid rgba(255, 50, 50, 0.3);
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-10px);
+    /* Slide in effect */
+}
+
+.clear-filters-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.clear-filters-btn:hover {
+    background: rgba(255, 50, 50, 0.15);
+    border-color: rgba(255, 50, 50, 0.5);
+    box-shadow: 0 0 8px rgba(255, 50, 50, 0.2);
+}
+
+.clear-filters-btn img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+}
+
+.vertical-separator {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 4px;
+}
+
+/* Grids */
+.filter-grid {
+    display: grid;
+    gap: 6px;
+}
+
+.rarity-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.element-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Buttons */
+.filter-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 6px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    opacity: 0.5;
+    position: relative;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.filter-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1) brightness(0.7);
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    opacity: 0.8;
+}
+
+.filter-btn.active {
+    opacity: 1;
+    background: rgba(212, 168, 75, 0.1);
+    border-color: rgba(212, 168, 75, 0.4);
+    box-shadow: 0 0 10px rgba(212, 168, 75, 0.1);
+}
+
+.filter-btn.active img {
+    filter: grayscale(0) brightness(1.1);
+}
+
+/* Sort Badge */
+.sort-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.sort-btn {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.sort-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sort-btn.active {
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.1), rgba(212, 168, 75, 0.2));
+    color: var(--accent-gold);
+    border-color: rgba(212, 168, 75, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide builds-only sort buttons when on tier tab */
+.character-detail[data-current-tab="tier"] .sort-btn.builds-only {
+    display: none;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1100px) {
+    .filter-bar {
+        justify-content: center;
+    }
+
+    .filter-section.right {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 12px;
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 16px;
+    }
+
+    .vertical-separator {
+        display: none;
+    }
+}
+

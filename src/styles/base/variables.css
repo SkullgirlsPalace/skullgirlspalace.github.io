@@ -1,0 +1,65 @@
+/* =====================================================
+   SKULLGIRLS MOBILE WIKI - PALÁCIO BRANCO
+   Premium Dark Theme with Golden Accents
+   ===================================================== */
+
+/* ========== CSS VARIABLES ========== */
+:root {
+    /* Colors */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a24;
+    --bg-card-hover: #22222e;
+
+    --text-primary: #f0f0f5;
+    --text-secondary: #a0a0b0;
+    --text-muted: #606070;
+
+    --accent-gold: #d4a84b;
+    --accent-gold-light: #f0c860;
+    --accent-gold-dark: #a07830;
+
+    /* Element Colors */
+    --element-fire: #ff4444;
+    --element-water: #4488ff;
+    --element-wind: #44cc66;
+    --element-light: #ffdd44;
+    --element-dark: #aa44dd;
+    --element-neutral: #888899;
+
+    /* Rarity Colors */
+    --rarity-bronze: #cd7f32;
+    --rarity-silver: #c0c0c0;
+    --rarity-gold: #ffd700;
+    --rarity-diamond: #F1A2F2;
+
+    /* Tier Colors */
+    --tier-s: #ff4444;
+    --tier-a: #ff8844;
+    --tier-b: #ffcc44;
+    --tier-c: #44cc44;
+    --tier-d: #4488ff;
+
+    /* Shadows & Effects */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(212, 168, 75, 0.3);
+
+    /* Borders */
+    --border-subtle: 1px solid rgba(255, 255, 255, 0.06);
+    --border-accent: 1px solid rgba(212, 168, 75, 0.3);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Sizing */
+    --navbar-height: 60px;
+    --max-width: 1400px;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --border-radius-pill: 50px;
+}
+

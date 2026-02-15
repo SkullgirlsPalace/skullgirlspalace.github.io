@@ -1,0 +1,48 @@
+/* ========== HERO SECTION (Legacy / About) ========== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 48px;
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.08) 0%, rgba(10, 10, 15, 0.5) 100%);
+    border-radius: var(--border-radius);
+    border: var(--border-accent);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.hero h1 {
+    font-family: 'Washington', sans-serif;
+    font-size: 2.75rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+

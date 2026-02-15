@@ -1,0 +1,731 @@
+/* ========== TIER LIST PAGE ========== */
+.tierlist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tier-row {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.tier-label {
+    width: 60px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: var(--border-radius-sm);
+    flex-shrink: 0;
+}
+
+.tier-label.tier-s {
+    background: var(--tier-s);
+    color: #fff;
+}
+
+.tier-label.tier-a {
+    background: var(--tier-a);
+    color: #000;
+}
+
+.tier-label.tier-b {
+    background: var(--tier-b);
+    color: #000;
+}
+
+.tier-label.tier-c {
+    background: var(--tier-c);
+    color: #000;
+}
+
+.tier-label.tier-d {
+    background: var(--tier-d);
+    color: #fff;
+}
+
+.tier-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px;
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius-sm);
+    min-height: 100px;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.tier-character {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tier-character img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tier-placeholder {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    padding: 12px;
+}
+
+/* ========== TIER LIST DETAIL STYLES ========== */
+.tier-intro-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 32px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.rank-explanations {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.rank-explanations h3 {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.rank-exp-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.rank-exp-item:last-child {
+    margin-bottom: 0;
+}
+
+.rank-exp-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.rank-badge {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+/* Rank Colors */
+.rank-ss {
+    background-color: #b01a61;
+}
+
+.rank-s {
+    background-color: #34a853;
+}
+
+.rank-a {
+    background-color: #fbbc05;
+    color: #000;
+}
+
+.rank-b {
+    background-color: #a2845e;
+    color: #000;
+}
+
+.rank-c {
+    background-color: #4285f4;
+}
+
+.rank-u {
+    background-color: #444;
+    color: #aaa;
+}
+
+.rank-tbd {
+    background-color: #475569;
+    color: #cbd5e1;
+    font-size: 0.7rem !important;
+}
+
+.rank-badge {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+    user-select: none;
+    cursor: default;
+}
+
+.tier-table.editing .rank-badge {
+    cursor: pointer;
+}
+
+.tier-table.editing .rank-badge:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.tier-table.editing .rank-badge:active {
+    transform: scale(0.95);
+}
+
+/* Azul */
+
+/* Tier Table Styles */
+/* ========== EDITOR CONTROL BAR ========== */
+.editor-control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10, 10, 15, 0.6);
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    border: 1px solid var(--border-subtle);
+}
+
+.editor-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.editor-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.save-data-btn {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.save-data-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--accent-gold);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.tier-table-wrapper {
+    overflow-x: auto;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.tier-table {
+    width: auto;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tier-table th {
+    text-align: center;
+    padding: 20px 12px;
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tier-table th:last-child {
+    border-right: none;
+}
+
+.tier-table td {
+    padding: 20px 12px;
+    border-bottom: 1px solid var(--border-subtle);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.tier-table td:last-child {
+    border-right: none;
+}
+
+.text-center {
+    text-align: center !important;
+    width: 170px;
+    min-width: 170px;
+}
+
+.tier-table tr:last-child td {
+    border-bottom: none;
+}
+
+.tier-char-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 280px;
+}
+
+.tier-char-cell img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.tier-char-cell span {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.rank-cell-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tier-table .rank-badge {
+    width: 82px;
+    height: 82px;
+    font-size: 2.4rem;
+}
+
+/* Hide only stat-based sorts in Tier mode */
+.tier-list-mode .sort-btn[data-sort="score"],
+.tier-list-mode .sort-btn[data-sort="atk"],
+.tier-list-mode .sort-btn[data-sort="hp"] {
+    display: none;
+}
+
+/* Character Navigator Dropdown */
+.character-nav {
+    position: relative;
+    width: 280px;
+    flex: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.char-dropdown {
+    width: auto;
+    min-width: 200px;
+    position: relative;
+}
+
+.char-dropdown-btn {
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-sm);
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.char-dropdown-btn .dropdown-arrow {
+    margin-left: auto;
+}
+
+.char-dropdown-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-gold);
+}
+
+.char-dropdown-btn span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+    color: var(--text-muted);
+}
+
+.char-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.char-dropdown-content {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    max-height: 350px;
+    background: #16161e;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--border-radius-sm);
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.char-dropdown-content.active {
+    display: block;
+    animation: fadeInDown 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.char-dropdown-item {
+    width: 100%;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.char-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.char-dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+.char-dropdown-item.active {
+    background: rgba(212, 168, 75, 0.1);
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.char-dropdown-item img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Compact Mode Overrides */
+.tier-table.compact-mode th,
+.tier-table.compact-mode td {
+    padding: 10px 12px !important;
+}
+
+.tier-table.compact-mode .tier-char-cell {
+    width: auto;
+    padding: 2px 0;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.tier-table.compact-mode .tier-char-cell img {
+    display: none;
+}
+
+.tier-table.compact-mode .tier-char-cell span {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.tier-table.compact-mode .rank-badge {
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 1.3rem !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0;
+    font-weight: 900;
+}
+
+/* Specific text colors for compact mode ranks */
+.tier-table.compact-mode .rank-ss {
+    color: #fe01fe !important;
+}
+
+/* Pure pink-magenta */
+.tier-table.compact-mode .rank-s {
+    color: #00e676 !important;
+}
+
+/* Vibrant green */
+.tier-table.compact-mode .rank-a {
+    color: #ffeb3b !important;
+}
+
+/* Bright yellow */
+.tier-table.compact-mode .rank-b {
+    color: #a2845e !important;
+}
+
+/* Muted brown-gold */
+.tier-table.compact-mode .rank-c {
+    color: #2196f3 !important;
+}
+
+/* Clear blue */
+.tier-table.compact-mode .rank-u {
+    color: #666 !important;
+}
+
+.tier-table.compact-mode .rank-tbd {
+    color: #888 !important;
+}
+
+/* In compact mode, remove horizontal borders to huddle text closer to headers */
+.tier-table.compact-mode td {
+    border-right: none;
+}
+
+.tier-table.compact-mode th {
+    border-right: none;
+}
+
+
+/* ========== TEMPORARY EDITOR NOTICE ========== */
+.temp-notice {
+    background: linear-gradient(135deg, #c0392b 0%, #8e44ad 100%);
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 24px;
+    border: 2px solid var(--accent-gold);
+    box-shadow: var(--shadow-glow);
+    text-align: center;
+    font-weight: 700;
+}
+
+.temp-notice strong {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.temp-notice p {
+    font-size: 1rem;
+    opacity: 0.95;
+    margin: 0;
+}
+
+/* ========== RANK DICTIONARY ========== */
+.rank-dictionary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    background: rgba(10, 10, 15, 0.4);
+    padding: 20px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dict-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dict-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ========== RANK SELECTION MENU (EDITOR) ========== */
+.rank-menu-overlay {
+    position: fixed;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    display: flex;
+    gap: 8px;
+}
+
+.rank-menu-overlay.hidden {
+    display: none;
+}
+
+.rank-menu-content {
+    display: flex;
+    gap: 8px;
+}
+
+.rank-menu-content button {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.rank-menu-content button:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Specific colors for menu buttons */
+.rank-menu-content button:nth-child(1) {
+    background: #b01a61;
+}
+
+/* SS */
+.rank-menu-content button:nth-child(2) {
+    background: #34a853;
+}
+
+/* S */
+.rank-menu-content button:nth-child(3) {
+    background: #fbbc05;
+    color: #000;
+}
+
+/* A */
+.rank-menu-content button:nth-child(4) {
+    background: #a2845e;
+    color: #000;
+}
+
+/* B */
+.rank-menu-content button:nth-child(5) {
+    background: #4285f4;
+}
+
+/* C */

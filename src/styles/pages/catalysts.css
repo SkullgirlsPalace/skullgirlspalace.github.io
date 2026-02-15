@@ -1,0 +1,179 @@
+/* ========== CATALYSTS PAGE ========== */
+.catalysts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.catalyst-category-card {
+    background: var(--bg-card);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    transition: all var(--transition-normal);
+}
+
+.catalyst-category-card:hover {
+    border-color: rgba(212, 168, 75, 0.2);
+}
+
+.catalyst-category-card h3 {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: var(--border-subtle);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.catalyst-category-card.strong h3::before {
+    content: '🔥';
+}
+
+.catalyst-category-card.good h3::before {
+    content: '✅';
+}
+
+.catalyst-category-card.medium h3::before {
+    content: '⚖️';
+}
+
+.catalyst-category-card.weak h3::before {
+    content: '⬇️';
+}
+
+.catalyst-category-card ul {
+    list-style: none;
+}
+
+.catalyst-category-card li {
+    padding: 10px 0;
+    border-bottom: var(--border-subtle);
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.catalyst-category-card li:last-child {
+    border-bottom: none;
+}
+
+/* ========== CATALYST CATEGORIES CARDS ========== */
+.catalyst-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.catalyst-category {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    border-left: 4px solid var(--accent-gold);
+    transition: all var(--transition-normal);
+}
+
+.catalyst-category:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.catalyst-category h4 {
+    font-family: 'Washington', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.catalyst-category.cat-strong {
+    border-left-color: #4ade80;
+    background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), var(--bg-card));
+}
+
+.catalyst-category.cat-strong h4 {
+    color: #4ade80;
+}
+
+.catalyst-category.cat-good {
+    border-left-color: #60a5fa;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), var(--bg-card));
+}
+
+.catalyst-category.cat-good h4 {
+    color: #60a5fa;
+}
+
+.catalyst-category.cat-medium {
+    border-left-color: #fbbf24;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), var(--bg-card));
+}
+
+.catalyst-category.cat-medium h4 {
+    color: #fbbf24;
+}
+
+.catalyst-category.cat-weak {
+    border-left-color: #f87171;
+    background: linear-gradient(135deg, rgba(248, 113, 113, 0.1), var(--bg-card));
+}
+
+.catalyst-category.cat-weak h4 {
+    color: #f87171;
+}
+
+.catalyst-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalyst-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.catalyst-list li:last-child {
+    border-bottom: none;
+}
+
+.catalyst-list li strong {
+    color: var(--text-primary);
+}
+
+.notation {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.notation-\+ {
+    color: #4ade80;
+}
+
+.notation-\= {
+    color: #fbbf24;
+}
+
+.notation-\- {
+    color: #f87171;
+}
+
+.catalysts-intro {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    border: var(--border-subtle);
+}
+
+.catalysts-intro p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* =====================================================
