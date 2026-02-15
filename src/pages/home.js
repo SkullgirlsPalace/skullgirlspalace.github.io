@@ -29,6 +29,9 @@ export function render() {
                     <button class="hub-btn" onclick="navigateTo('catalysts')">
                         <span>CATALISADORES</span>
                     </button>
+                    <button class="hub-btn" onclick="navigateTo('guide')">
+                        <span>GUIA</span>
+                    </button>
                     <button class="hub-btn" onclick="navigateTo('stats')">
                         <span>ESTATÍSTICAS</span>
                     </button>

@@ -170,6 +170,7 @@ function showDetailModal(attrKey) {
         `;
     }
 
+
     overlay.innerHTML = `
         <div class="attr-detail-modal">
             <button class="attr-detail-close" aria-label="Fechar">&times;</button>
@@ -179,9 +180,7 @@ function showDetailModal(attrKey) {
             <div class="attr-detail-body">
                 ${bodyHtml}
             </div>
-            <div class="attr-detail-timer">
-                <div class="attr-detail-timer-bar"></div>
-            </div>
+            <!-- Timer bar removed -->
         </div>
     `;
 
@@ -199,13 +198,6 @@ function showDetailModal(attrKey) {
         if (e.target === overlay) hideDetailModal();
     });
 
-    // Reset timer on any interaction inside the modal
-    const modalEl = overlay.querySelector('.attr-detail-modal');
-    const resetEvents = ['mousemove', 'touchstart', 'scroll', 'click'];
-    resetEvents.forEach(evt => {
-        modalEl.addEventListener(evt, resetInactivityTimer, { passive: true });
-    });
-
     // Keyboard close
     const escHandler = (e) => {
         if (e.key === 'Escape') {
@@ -214,53 +206,17 @@ function showDetailModal(attrKey) {
         }
     };
     document.addEventListener('keydown', escHandler);
-
-    // Start inactivity timer
-    startInactivityTimer();
 }
 
 /**
  * Hide the detail modal
  */
 function hideDetailModal() {
-    clearInactivityTimer();
     if (activeModal) {
         activeModal.classList.remove('visible');
         const modal = activeModal;
         setTimeout(() => modal.remove(), 300);
         activeModal = null;
-    }
-}
-
-// ========== INACTIVITY TIMER ==========
-
-function startInactivityTimer() {
-    clearInactivityTimer();
-    // Animate timer bar
-    if (activeModal) {
-        const bar = activeModal.querySelector('.attr-detail-timer-bar');
-        if (bar) {
-            bar.style.transition = 'none';
-            bar.style.width = '100%';
-            requestAnimationFrame(() => {
-                bar.style.transition = `width ${INACTIVITY_TIMEOUT}ms linear`;
-                bar.style.width = '0%';
-            });
-        }
-    }
-    inactivityTimer = setTimeout(hideDetailModal, INACTIVITY_TIMEOUT);
-}
-
-function resetInactivityTimer() {
-    if (activeModal) {
-        startInactivityTimer();
-    }
-}
-
-function clearInactivityTimer() {
-    if (inactivityTimer) {
-        clearTimeout(inactivityTimer);
-        inactivityTimer = null;
     }
 }
 
