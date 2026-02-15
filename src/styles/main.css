@@ -899,7 +899,6 @@ main {
 }
 
 /* ========== FILTER BAR ========== */
-/* ========== FILTER BAR ========== */
 .filter-bar {
     display: flex;
     flex-direction: row;
@@ -4109,6 +4108,13 @@ input:checked+.slider:before {
     font-size: 0.9rem;
 }
 
+.attr-tooltip-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .attr-tooltip-max {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.5);
@@ -4317,6 +4323,7 @@ input:checked+.slider:before {
         font-size: 0.85rem;
     }
 }
+
 /* ========== GUIDE PAGE ========== */
 .guide-container {
     max-width: 1200px;
@@ -4503,11 +4510,13 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 768px) {
+
     .effects-table th:nth-child(4),
     .effects-table td:nth-child(4) {
-        display: none; /* Hide Stacks column on mobile */
+        display: none;
+        /* Hide Stacks column on mobile */
     }
-    
+
     .guide-header h1 {
         font-size: 2rem;
     }
@@ -4529,30 +4538,35 @@ input:checked+.slider:before {
 
 /* SGM Style Colors */
 .attr-highlight.buff {
-    color: #e5c15d; /* SGM Gold/Yellow for buffs in text */
+    color: #e5c15d;
+    /* SGM Gold/Yellow for buffs in text */
 }
 
 .attr-highlight.debuff {
-     color: #e5c15d; /* SGM also uses Gold/Yellow for keywords in descriptions, or sometimes Red. User asked for Gold look. */
+    color: #e5c15d;
+    /* SGM also uses Gold/Yellow for keywords in descriptions, or sometimes Red. User asked for Gold look. */
 }
 
 .attr-highlight.term {
-    color: #e5c15d; /* Consistent Gold for all keywords */
+    color: #e5c15d;
+    /* Consistent Gold for all keywords */
 }
 
 /* Numbers in description */
 .number {
-    color: #4cd137; /* Green for numbers */
+    color: #4cd137;
+    /* Green for numbers */
     font-weight: 700;
 }
 
 /* ========== INLINE EFFECT ICONS ========== */
 .inline-effect-icon {
-    width: 18px; /* Slightly larger */
+    width: 18px;
+    /* Slightly larger */
     height: 18px;
     margin-right: 6px;
     display: inline-block;
-    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
     flex-shrink: 0;
 }
 
@@ -4560,7 +4574,8 @@ input:checked+.slider:before {
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
-    vertical-align: baseline; /* Better baseline alignment with surrounding text */
+    vertical-align: baseline;
+    /* Better baseline alignment with surrounding text */
     gap: 2px;
 }
 

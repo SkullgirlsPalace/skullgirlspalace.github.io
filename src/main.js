@@ -9,12 +9,8 @@ import { loadAllCharacters, loadTierData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleCycleRank, handleToggleCompactMode, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
-<<<<<<< HEAD
-import { handleCalculateEarnings, handleCalculateCosts } from './components/Calculator.js';
-import { initAttributeTooltips } from './components/AttributeTooltip.js';
-=======
 import { handleCalculateEarnings } from './components/Calculator.js';
->>>>>>> 1072119 (feat: statistics page completed, now make it pretty)
+import { initAttributeTooltips } from './components/AttributeTooltip.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 
@@ -169,9 +165,6 @@ function setupStaticUI() {
 
     // Setup scroll listener for navbar visibility
     setupScrollListener();
-
-    // Initialize attribute tooltip system (delegated events)
-    initAttributeTooltips();
 
     // Initialize attribute tooltip system (delegated events)
     initAttributeTooltips();
