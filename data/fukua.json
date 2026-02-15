@@ -1,366 +1,366 @@
 {
-  "character": "Fukua",
-  "version": "1.0",
-  "variants": {
-    "diamante": [
-      {
-        "name": "Imagem Dividida",
-        "title_formatted": "> Imagem Dividida <:Luz:1389703315167907902><:diamante:1407839264779141140>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681808890265691/1000.png?ex=681df702&is=681ca582&hm=0f9933f7a3a9da9b3742a5b6b7b6c3ac2c4952f4f8347402d8311b146ed3ab32&"
-        },
-        "stats": {
-          "attack": "10,004",
-          "health": "68,506",
-          "power": "25,312"
-        },
-        "signature_ability": {
-          "name": "AUTORREFLEXÃO",
-          "description": "[HAB 1]: **Enquanto a % de VIDA for menor que a do oponente**, ganhe IMUNIDADE permanente e recupere 2% de VIDA por seg.\n\n[HAB 2]: Ganhe 5% do MEDIDOR DE BLOCKBUSTER e 1 camadas de PRECISÃO após cada 3 seg **ao enfrentar Fukua, Filia ou um oponente do Elemento Luz.**"
-        },
-        "marquee_ability": "Ira da Aparição",
-        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, , <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Complexo de Pico",
-        "title_formatted": "> Complexo de Pico <:Neutro:1389703364304175125><:diamante:1407839264779141140>",
-        "element": "Neutro",
-        "color_hex": "#ff80c0",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681868193267842/1000.png?ex=681df710&is=681ca590&hm=5e40f4b72ad62392d93adcca13b8f55283855dea80e9943428e4b1741a595120&"
-        },
-        "stats": {
-          "attack": "13,556",
-          "health": "56,045",
-          "power": "27,055"
-        },
-        "signature_ability": {
-          "name": "ATAQUE DE PÂNICO",
-          "description": "[HAB 1]: **Enquanto a VIDA do oponente estiver acima de** 35%, ATAQUES DE ARRANCADA infligem MALDIÇÃO e concedem ACELERAÇÃO por 15 segundos cada **ao GOLPEAR.**\n\n[HAB 2]: Inflija DEFINHAR por 5 segundos e cause dano igual a 5% da VIDA MÁX. do oponente a cada 2 segundos **enquanto estiver perto do oponente e se beneficiando de ACELERAÇÃO.**"
-        },
-        "marquee_ability": "**Maldade Spectral** (Opcional, o ideal é ser Critless)",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Fantoche Sombrio",
-        "title_formatted": "> Fantoche Sombrio <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681898757161210/1000.png?ex=681df717&is=681ca597&hm=61e5a39716d93668fc79b3339dc5da8f60ca13a879683422e2394abd317b34fc&"
-        },
-        "stats": {
-          "attack": "15,591",
-          "health": "50,439",
-          "power": "28,356"
-        },
-        "signature_ability": {
-          "name": "CONTROLE DE CAOS",
-          "description": "[HAB 1]: 5% de **chance de redefinir os cronômetros de todos os EF. POSITIVOS de Fukua e todos os EF. NEGATIVOS do oponente ao GOLPEAR.**\n\n[HAB 2]: **Uma vez por partida, ao ser GOLPEADO fatalmente, congele o tempo** por 7 seg e ganhe 5 camadas de MIASMA por 7 seg. O tempo recomeça se Fukua atacar."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Demônio dos Sonhos",
-        "title_formatted": "> Demônio dos Sonhos <:Fogo:1389703188525092934><:diamante:1407839264779141140>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681835427500133/1000.png?ex=681df708&is=681ca588&hm=6010f013efe6dd92e21b4b0651b01567ddd29b5ac81acaa42ec32aa503ceb85b&"
-        },
-        "stats": {
-          "attack": "13,556",
-          "health": "56,045",
-          "power": "27,055"
-        },
-        "signature_ability": {
-          "name": "INTENÇÕES ASSASSINAS",
-          "description": "[HAB 1]: Inflige MARCA DA MORTE permanente e ganha FÚRIA a cada 15 segundos enquanto estiver enfrentando o mesmo oponente. **A FÚRIA é removida ao SAIR DA ASSISTÊNCIA.**\n\n[HAB 2]: 100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS **se o oponente estiver sofrendo de MARCA DA MORTE.**"
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Conchinha Inevitável, , <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Brocamizade"
-      },
-      {
-        "name": "Eco de Estrela",
-        "title_formatted": "> Eco de Estrela <:Fogo:1389703188525092934><:diamante:1407839264779141140>",
-        "element": "Fogo",
-        "color_hex": "#ff8080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707531229560915/Idol_Echo.png?ex=6909f7c3&is=6908a643&hm=36203abbfb3c80dc4bf5f4293aad47a1ccb0d4274acbcc0715d159dce98bf853&"
-        },
-        "stats": {
-          "attack": "11,770",
-          "health": "62,247",
-          "power": "26,166"
-        },
-        "signature_ability": {
-          "name": "Hipnotizador ",
-          "description": "[HAB 1]: **Durante um combo**, ganhe 1 EF. POSITIVO(S) aleatório(s) e aplique 1 EF. NEGETIVO(S) aleatório(s) a cada 1 segundos. Todos os EF. POSITIVOS e EF. NEGATIVOS são removidos no final do combo.\n\n[HAB 2]: Fukua causa 10% a mais de DANO **para cada EF. POSITIVO. aplicado nela**. Ao receber 10 ou mais EF. POSITIVO., todos os EF. POSITIVOS do oponente são removidos."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Conchinha Inevitável, , <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Brocamizade"
-      }
-    ],
-    "ouro": [
-      {
-        "name": "Bordas Forradas",
-        "title_formatted": "> Bordas Forradas <:Agua:1389703224210231437><:ouro:1407839155785826306>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681621211807875/1000.png?ex=681df6d5&is=681ca555&hm=db6be09cca0bd98a3f8a829a9e4f70457c73ded0b7a8afdd3c1b07692ac461b7&"
-        },
-        "stats": {
-          "attack": "9,293",
-          "health": "62,572",
-          "power": "23,501"
-        },
-        "signature_ability": {
-          "name": "FANTASMA DA FUKUA",
-          "description": "[HAB 1]: **Um BLOQUEIO no momento certo** dá 3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: **Enquanto Fukua está se beneficiando de BARREIRA**, ela não reage aos ataques de projéteis do oponente e 200% do dano do projétil é refletido de volta."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Terror Noturno",
-        "title_formatted": "> Terror Noturno <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681672231321600/1000.png?ex=681df6e1&is=681ca561&hm=263c7e0a9e175c818851b887d018e51c814baa0af7daead87dd29a0c7a74f779&"
-        },
-        "stats": {
-          "attack": "10,925",
-          "health": "57,812",
-          "power": "24,295"
-        },
-        "signature_ability": {
-          "name": "PARALISIA DO SONO",
-          "description": "[HAB 1]: Ganhe 2 camadas de MIASMA por 10 s a cada 2 s **enquanto estiver longe do oponente.**\n\n[HAB 2]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 2 s **enquanto estiver próximo ao oponente.**"
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Megera Vaporwave",
-        "title_formatted": "> Megera Vaporwave <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681644842647633/1000.png?ex=681df6da&is=681ca55a&hm=e48f275b9fd230113109249afbad0fb057b0c1e4569db190e650e1f5d800bd84&"
-        },
-        "stats": {
-          "attack": "10,925",
-          "health": "57,812",
-          "power": "24,295"
-        },
-        "signature_ability": {
-          "name": "VIBRAÇÕES",
-          "description": "[HAB 1]: Após ficar INATIVO ou ANDAR por 1 segundo(s) **sem ser golpeado**, ganhe INABALÁVEL.\n\n[HAB 2]: **Depois que Fukua não sofrer GOLPES (inclui golpes bloqueados)** por 2 seg, ganhe ESPINHOS e MIASMA por 10 seg."
-        },
-        "marquee_ability": "Ira da Aparição",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Conchinha Inevitável, , <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Brocamizade"
-      },
-      {
-        "name": "Bela do Inferno",
-        "title_formatted": "> Bela do Inferno <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681745174597855/1000.png?ex=681df6f2&is=681ca572&hm=93fefa32ab5bbc045fcc8ce5bdb2cadfd69e8a1213c054b62835de759a6f1e66&"
-        },
-        "stats": {
-          "attack": "10,925",
-          "health": "57,812",
-          "power": "24,295"
-        },
-        "signature_ability": {
-          "name": "DEVOÇÃO DEMONÍACA",
-          "description": "[HAB 1]: **Enquanto a VIDA do oponente estiver acima de** 35%, tem 15% de chance ao GOLPEAR de infligir SANGR. por 5 s e um EF. NEG. aleatório.\n\n[HAB 2]: A cada 10 s **como lutadora ativa, Fukua concede aos seus aliados** MIASMA por 15 s e ESQUIVA."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Conchinha Inevitável, , <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor "
-      },
-      {
-        "name": "Fios Fantasmas",
-        "title_formatted": "> Fios Fantasmas <:Luz:1389703315167907902><:ouro:1407839155785826306>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681772181590150/1000.png?ex=681df6f9&is=681ca579&hm=6da70b0be1f39eb8bf0a7eaf75dc3c2b1e7d7b57427d0cf1c20bdbc9f20a3483&"
-        },
-        "stats": {
-          "attack": "12,576",
-          "health": "51,032",
-          "power": "25,107"
-        },
-        "signature_ability": {
-          "name": "EGO STRIP",
-          "description": "[HAB 1]: **Quando o oponente é NOCAUTEADO**, Fukua ganha BÊNÇÃO por 20 seg e remove 1 EF. POSITIVO do oponente.\n\n[HAB 2]: Ao usar um BLOCKBUSTER, remova todas as BÊNÇÃOS e ganhe FÚRIA por 10 seg, e recupere 10% DE VIDA por **BÊNÇÃO removida.**"
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      }
-    ],
-    "prata": [
-      {
-        "name": "Virada do Camaleão",
-        "title_formatted": "> Virada do Camaleão <:Ar:1389703277532287066><:prata:1407839105169227957>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681517658771617/1000.png?ex=681df6bc&is=681ca53c&hm=6b22c8ae65ba734ee632feae6e950944016562caafb4a5a505cf702b0d7d7e81&"
-        },
-        "stats": {
-          "attack": "8,602",
-          "health": "59,079",
-          "power": "21,799"
-        },
-        "signature_ability": {
-          "name": "REFLEXO ÁCIDO",
-          "description": "[HAB 1]: Ganhe MIASMA por 10 seg **ao GOLPEAR um oponente que estiver atacando.**\n\n[HAB 2]: 5% de chance de obter EVASÃO e MIASMA por 10 seg **quando é GOLPEADO enquanto um BLOCKBUSTER é carregado.**"
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Conchinha Inevitável, , <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Brocamizade"
-      },
-      {
-        "name": "Chuva Sombria",
-        "title_formatted": "> Chuva Sombria <:Agua:1389703224210231437><:prata:1407839105169227957>",
-        "element": "Água",
-        "color_hex": "#0080c0",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681551020261406/1000.png?ex=681df6c4&is=681ca544&hm=7a294238ab2ae0274c9d3a2b2dcb95cae5af2767b4c4f650213905e94f2dd1e1&"
-        },
-        "stats": {
-          "attack": "10,138",
-          "health": "53,645",
-          "power": "22,344"
-        },
-        "signature_ability": {
-          "name": "CHUVA FANTASMA",
-          "description": "[HAB 1]: 15% de chance de causar QUEBRA DE ARMADURA e OSCILAÇÃO DE ENERGIA por 15 seg cada **quando acertar um GOLPE BLOQUEADO.**\n\n[HAB 2]: Após 5 seg **ao lado da Fukua e não ATORDOADOS, os oponentes perdem os EF. POSITIVOS** e sofrem FADIGA por 10 seg."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Irmãs de Alma",
-        "title_formatted": "> Irmãs de Alma <:Fogo:1389703188525092934><:prata:1407839105169227957>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681583630975207/1000.png?ex=681df6cc&is=681ca54c&hm=ff67da42e7f7a0bf3912ddc1cdfdf572503ac8628a2e41d394f0301d41b493cf&"
-        },
-        "stats": {
-          "attack": "11,674",
-          "health": "48,269",
-          "power": "23,300"
-        },
-        "signature_ability": {
-          "name": "MAGNETISMO ANIMA",
-          "description": "[HAB 1]: Ganhe 3% do MEDIDOR DE BLOCKBUSTER por segundo **enquanto estiver longe do oponente.**\n\n[HAB 2]: Ganhe FÚRIA por 10 seg **após acertar um GOLPE enquanto estiver longe do oponente.**"
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Beijo de Boa Noite, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Falsa Temida",
-        "title_formatted": "> Falsa Temida <:Trevas:1389703142848991364><:prata:1407839105169227957>",
-        "element": "Trevas",
-        "color_hex": "#400080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707343572074571/Feared_Faux.png?ex=6909f796&is=6908a616&hm=7680ed7c9f5516e372d480574a90d7eeeef594c9fd19d3042af8c5cf45aa35cc&"
-        },
-        "stats": {
-          "attack": "11,674",
-          "health": "48,269",
-          "power": "23,300"
-        },
-        "signature_ability": {
-          "name": "Misericórdia de Novato",
-          "description": "[HAB 1]: **Enquanto o clone sombrio da Fukua estiver ativo**, os GOLPES ESPECIAIS aplicam MALDIÇÃO por 10 segundos.\n\n[HAB 2]: **Enquanto o clone sombrio da Fukua estiver ativo**, os GOLPES de MOVIMENTOS ESPECIAIS causam 100% de DANO extra."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Clone Solitário"
-      }
-    ],
-    "bronze": [
-      {
-        "name": "Cópia Aproximada",
-        "title_formatted": "> Cópia Aproximada <:Ar:1389703277532287066><:bronze:1407839009664798801>",
-        "element": "Ar",
-        "color_hex": "#008000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681439334338590/1000.png?ex=681df6a9&is=681ca529&hm=8ac3cd5584e59f2102fe09d234139198ffa109d51fb9f45519e3be931bc698fe&"
-        },
-        "stats": {
-          "attack": "9,428",
-          "health": "49,805",
-          "power": "20,949"
-        },
-        "signature_ability": {
-          "name": "",
-          "description": "[HAB 1]: **Qualquer aliado ganha ACELERAÇÃO permanente depois de enfrentar um oponente com o mesmo ELEMENTO** por 5 segundos.\n\n[HAB 2]: **Qualquer aliado inflige LENTIDÃO permanente depois de enfrentar um oponente do mesmo TIPO DE PERSONAGEM** por 5 segundos."
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Uma Vez Mordido... **BB3**, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      },
-      {
-        "name": "Gêmeo Infernal",
-        "title_formatted": "> Gêmeo Infernal <:Fogo:1389703188525092934><:bronze:1407839009664798801>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f&is=68a635ef&hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681482715889895/1000.png?ex=681df6b4&is=681ca534&hm=9c011b3be4ce3235a9c820d71600339791c2ac375351eb3f2bc4e8f5aed0bebf&"
-        },
-        "stats": {
-          "attack": "10,676",
-          "health": "44,813",
-          "power": "21,440"
-        },
-        "signature_ability": {
-          "name": "PONTO DE FUSÃO",
-          "description": "[HAB 1]: **Ao golpear um oponente atacando**, ganhe FÚRIA por 15 seg e atualize a duração de todas os FÚRIAS.\n\n[HAB 2]: Inflige FADIGA por 5 seg **ao ser GOLPEADO enquanto se beneficia de 3 camadas de FÚRIA.**"
-        },
-        "marquee_ability": "Maldade Spectral",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Melhores Amigos!, <:Blockbuster:1434999898385944606> Conchinha Inevitável, <:Blockbuster:1434999898385944606> Broca Sonhadora, <:GolpeEspecial:1434999859768987748> Tiros de Amor, <:GolpeEspecial:1434999859768987748> Tiros de Amor"
-      }
-    ]
-  }
+    "character":  "Fukua",
+    "version":  "1.0",
+    "variants":  {
+                     "diamante":  [
+                                      {
+                                          "name":  "Imagem Dividida",
+                                          "title_formatted":  "\u003e Imagem Dividida \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Luz",
+                                          "color_hex":  "#ffff00",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681808890265691/1000.png?ex=681df702\u0026is=681ca582\u0026hm=0f9933f7a3a9da9b3742a5b6b7b6c3ac2c4952f4f8347402d8311b146ed3ab32\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "10,004",
+                                                        "health":  "68,506",
+                                                        "power":  "25,312"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "AUTORREFLEXÃO",
+                                                                    "description":  "[HAB 1]: **Enquanto a % de VIDA for menor que a do oponente**, ganhe IMUNIDADE permanente e recupere 2% de VIDA por seg.\n\n[HAB 2]: Ganhe 5% do MEDIDOR DE BLOCKBUSTER e 1 camadas de PRECISÃO após cada 3 seg **ao enfrentar Fukua, Filia ou um oponente do Elemento Luz.**"
+                                                                },
+                                          "marquee_ability":  "Ira da Aparição",
+                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., , \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                      },
+                                      {
+                                          "name":  "Complexo de Pico",
+                                          "title_formatted":  "\u003e Complexo de Pico \u003c:Neutro:1389703364304175125\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Neutro",
+                                          "color_hex":  "#ff80c0",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681868193267842/1000.png?ex=681df710\u0026is=681ca590\u0026hm=5e40f4b72ad62392d93adcca13b8f55283855dea80e9943428e4b1741a595120\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "13,556",
+                                                        "health":  "56,045",
+                                                        "power":  "27,055"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "ATAQUE DE PÂNICO",
+                                                                    "description":  "[HAB 1]: **Enquanto a VIDA do oponente estiver acima de** 35%, ATAQUES DE ARRANCADA infligem MALDIÇÃO e concedem ACELERAÇÃO por 15 segundos cada **ao GOLPEAR.**\n\n[HAB 2]: Inflija DEFINHAR por 5 segundos e cause dano igual a 5% da VIDA MÁX. do oponente a cada 2 segundos **enquanto estiver perto do oponente e se beneficiando de ACELERAÇÃO.**"
+                                                                },
+                                          "marquee_ability":  "**Maldade Spectral** (Opcional, o ideal é ser Critless)",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                      },
+                                      {
+                                          "name":  "Fantoche Sombrio",
+                                          "title_formatted":  "\u003e Fantoche Sombrio \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Trevas",
+                                          "color_hex":  "#800080",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681898757161210/1000.png?ex=681df717\u0026is=681ca597\u0026hm=61e5a39716d93668fc79b3339dc5da8f60ca13a879683422e2394abd317b34fc\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "15,591",
+                                                        "health":  "50,439",
+                                                        "power":  "28,356"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "CONTROLE DE CAOS",
+                                                                    "description":  "[HAB 1]: 5% de **chance de redefinir os cronômetros de todos os EF. POSITIVOS de Fukua e todos os EF. NEGATIVOS do oponente ao GOLPEAR.**\n\n[HAB 2]: **Uma vez por partida, ao ser GOLPEADO fatalmente, congele o tempo** por 7 seg e ganhe 5 camadas de MIASMA por 7 seg. O tempo recomeça se Fukua atacar."
+                                                                },
+                                          "marquee_ability":  "Maldade Spectral",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                      },
+                                      {
+                                          "name":  "Demônio dos Sonhos",
+                                          "title_formatted":  "\u003e Demônio dos Sonhos \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Fogo",
+                                          "color_hex":  "#ff0000",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681835427500133/1000.png?ex=681df708\u0026is=681ca588\u0026hm=6010f013efe6dd92e21b4b0651b01567ddd29b5ac81acaa42ec32aa503ceb85b\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "13,556",
+                                                        "health":  "56,045",
+                                                        "power":  "27,055"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "INTENÇÕES ASSASSINAS",
+                                                                    "description":  "[HAB 1]: Inflige MARCA DA MORTE permanente e ganha FÚRIA a cada 15 segundos enquanto estiver enfrentando o mesmo oponente. **A FÚRIA é removida ao SAIR DA ASSISTÊNCIA.**\n\n[HAB 2]: 100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS **se o oponente estiver sofrendo de MARCA DA MORTE.**"
+                                                                },
+                                          "marquee_ability":  "Maldade Spectral",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, , \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Brocamizade"
+                                      },
+                                      {
+                                          "name":  "Eco de Estrela",
+                                          "title_formatted":  "\u003e Eco de Estrela \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Fogo",
+                                          "color_hex":  "#ff8080",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1434707531229560915/Idol_Echo.png?ex=6909f7c3\u0026is=6908a643\u0026hm=36203abbfb3c80dc4bf5f4293aad47a1ccb0d4274acbcc0715d159dce98bf853\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,770",
+                                                        "health":  "62,247",
+                                                        "power":  "26,166"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "Hipnotizador ",
+                                                                    "description":  "[HAB 1]: **Durante um combo**, ganhe 1 EF. POSITIVO(S) aleatório(s) e aplique 1 EF. NEGETIVO(S) aleatório(s) a cada 1 segundos. Todos os EF. POSITIVOS e EF. NEGATIVOS são removidos no final do combo.\n\n[HAB 2]: Fukua causa 10% a mais de DANO **para cada EF. POSITIVO. aplicado nela**. Ao receber 10 ou mais EF. POSITIVO., todos os EF. POSITIVOS do oponente são removidos."
+                                                                },
+                                          "marquee_ability":  "Maldade Spectral",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, , \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Brocamizade"
+                                      }
+                                  ],
+                     "ouro":  [
+                                  {
+                                      "name":  "Bordas Forradas",
+                                      "title_formatted":  "\u003e Bordas Forradas \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Água",
+                                      "color_hex":  "#000000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681621211807875/1000.png?ex=681df6d5\u0026is=681ca555\u0026hm=db6be09cca0bd98a3f8a829a9e4f70457c73ded0b7a8afdd3c1b07692ac461b7\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,293",
+                                                    "health":  "62,572",
+                                                    "power":  "23,501"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "FANTASMA DA FUKUA",
+                                                                "description":  "[HAB 1]: **Um BLOQUEIO no momento certo** dá 3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: **Enquanto Fukua está se beneficiando de BARREIRA**, ela não reage aos ataques de projéteis do oponente e 200% do dano do projétil é refletido de volta."
+                                                            },
+                                      "marquee_ability":  "Maldade Spectral",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                  },
+                                  {
+                                      "name":  "Terror Noturno",
+                                      "title_formatted":  "\u003e Terror Noturno \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#800080",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681672231321600/1000.png?ex=681df6e1\u0026is=681ca561\u0026hm=263c7e0a9e175c818851b887d018e51c814baa0af7daead87dd29a0c7a74f779\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "10,925",
+                                                    "health":  "57,812",
+                                                    "power":  "24,295"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "PARALISIA DO SONO",
+                                                                "description":  "[HAB 1]: Ganhe 2 camadas de MIASMA por 10 s a cada 2 s **enquanto estiver longe do oponente.**\n\n[HAB 2]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 2 s **enquanto estiver próximo ao oponente.**"
+                                                            },
+                                      "marquee_ability":  "Maldade Spectral",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                  },
+                                  {
+                                      "name":  "Megera Vaporwave",
+                                      "title_formatted":  "\u003e Megera Vaporwave \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#00ff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681644842647633/1000.png?ex=681df6da\u0026is=681ca55a\u0026hm=e48f275b9fd230113109249afbad0fb057b0c1e4569db190e650e1f5d800bd84\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "10,925",
+                                                    "health":  "57,812",
+                                                    "power":  "24,295"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "VIBRAÇÕES",
+                                                                "description":  "[HAB 1]: Após ficar INATIVO ou ANDAR por 1 segundo(s) **sem ser golpeado**, ganhe INABALÁVEL.\n\n[HAB 2]: **Depois que Fukua não sofrer GOLPES (inclui golpes bloqueados)** por 2 seg, ganhe ESPINHOS e MIASMA por 10 seg."
+                                                            },
+                                      "marquee_ability":  "Ira da Aparição",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, , \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Brocamizade"
+                                  },
+                                  {
+                                      "name":  "Bela do Inferno",
+                                      "title_formatted":  "\u003e Bela do Inferno \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Fogo",
+                                      "color_hex":  "#ff0000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681745174597855/1000.png?ex=681df6f2\u0026is=681ca572\u0026hm=93fefa32ab5bbc045fcc8ce5bdb2cadfd69e8a1213c054b62835de759a6f1e66\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "10,925",
+                                                    "health":  "57,812",
+                                                    "power":  "24,295"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "DEVOÇÃO DEMONÍACA",
+                                                                "description":  "[HAB 1]: **Enquanto a VIDA do oponente estiver acima de** 35%, tem 15% de chance ao GOLPEAR de infligir SANGR. por 5 s e um EF. NEG. aleatório.\n\n[HAB 2]: A cada 10 s **como lutadora ativa, Fukua concede aos seus aliados** MIASMA por 15 s e ESQUIVA."
+                                                            },
+                                      "marquee_ability":  "Maldade Spectral",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, , \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor "
+                                  },
+                                  {
+                                      "name":  "Fios Fantasmas",
+                                      "title_formatted":  "\u003e Fios Fantasmas \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Luz",
+                                      "color_hex":  "#ffff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681772181590150/1000.png?ex=681df6f9\u0026is=681ca579\u0026hm=6da70b0be1f39eb8bf0a7eaf75dc3c2b1e7d7b57427d0cf1c20bdbc9f20a3483\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "12,576",
+                                                    "health":  "51,032",
+                                                    "power":  "25,107"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "EGO STRIP",
+                                                                "description":  "[HAB 1]: **Quando o oponente é NOCAUTEADO**, Fukua ganha BÊNÇÃO por 20 seg e remove 1 EF. POSITIVO do oponente.\n\n[HAB 2]: Ao usar um BLOCKBUSTER, remova todas as BÊNÇÃOS e ganhe FÚRIA por 10 seg, e recupere 10% DE VIDA por **BÊNÇÃO removida.**"
+                                                            },
+                                      "marquee_ability":  "Maldade Spectral",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                  }
+                              ],
+                     "prata":  [
+                                   {
+                                       "name":  "Virada do Camaleão",
+                                       "title_formatted":  "\u003e Virada do Camaleão \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Ar",
+                                       "color_hex":  "#00ff00",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681517658771617/1000.png?ex=681df6bc\u0026is=681ca53c\u0026hm=6b22c8ae65ba734ee632feae6e950944016562caafb4a5a505cf702b0d7d7e81\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "8,602",
+                                                     "health":  "59,079",
+                                                     "power":  "21,799"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "REFLEXO ÁCIDO",
+                                                                 "description":  "[HAB 1]: Ganhe MIASMA por 10 seg **ao GOLPEAR um oponente que estiver atacando.**\n\n[HAB 2]: 5% de chance de obter EVASÃO e MIASMA por 10 seg **quando é GOLPEADO enquanto um BLOCKBUSTER é carregado.**"
+                                                             },
+                                       "marquee_ability":  "Maldade Spectral",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, , \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Brocamizade"
+                                   },
+                                   {
+                                       "name":  "Chuva Sombria",
+                                       "title_formatted":  "\u003e Chuva Sombria \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Água",
+                                       "color_hex":  "#0080c0",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681551020261406/1000.png?ex=681df6c4\u0026is=681ca544\u0026hm=7a294238ab2ae0274c9d3a2b2dcb95cae5af2767b4c4f650213905e94f2dd1e1\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,138",
+                                                     "health":  "53,645",
+                                                     "power":  "22,344"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "CHUVA FANTASMA",
+                                                                 "description":  "[HAB 1]: 15% de chance de causar QUEBRA DE ARMADURA e OSCILAÇÃO DE ENERGIA por 15 seg cada **quando acertar um GOLPE BLOQUEADO.**\n\n[HAB 2]: Após 5 seg **ao lado da Fukua e não ATORDOADOS, os oponentes perdem os EF. POSITIVOS** e sofrem FADIGA por 10 seg."
+                                                             },
+                                       "marquee_ability":  "Maldade Spectral",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                   },
+                                   {
+                                       "name":  "Irmãs de Alma",
+                                       "title_formatted":  "\u003e Irmãs de Alma \u003c:Fogo:1389703188525092934\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Fogo",
+                                       "color_hex":  "#ff0000",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681583630975207/1000.png?ex=681df6cc\u0026is=681ca54c\u0026hm=ff67da42e7f7a0bf3912ddc1cdfdf572503ac8628a2e41d394f0301d41b493cf\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "11,674",
+                                                     "health":  "48,269",
+                                                     "power":  "23,300"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "MAGNETISMO ANIMA",
+                                                                 "description":  "[HAB 1]: Ganhe 3% do MEDIDOR DE BLOCKBUSTER por segundo **enquanto estiver longe do oponente.**\n\n[HAB 2]: Ganhe FÚRIA por 10 seg **após acertar um GOLPE enquanto estiver longe do oponente.**"
+                                                             },
+                                       "marquee_ability":  "Maldade Spectral",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Beijo de Boa Noite, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                   },
+                                   {
+                                       "name":  "Falsa Temida",
+                                       "title_formatted":  "\u003e Falsa Temida \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Trevas",
+                                       "color_hex":  "#400080",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1434707343572074571/Feared_Faux.png?ex=6909f796\u0026is=6908a616\u0026hm=7680ed7c9f5516e372d480574a90d7eeeef594c9fd19d3042af8c5cf45aa35cc\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "11,674",
+                                                     "health":  "48,269",
+                                                     "power":  "23,300"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "Misericórdia de Novato",
+                                                                 "description":  "[HAB 1]: **Enquanto o clone sombrio da Fukua estiver ativo**, os GOLPES ESPECIAIS aplicam MALDIÇÃO por 10 segundos.\n\n[HAB 2]: **Enquanto o clone sombrio da Fukua estiver ativo**, os GOLPES de MOVIMENTOS ESPECIAIS causam 100% de DANO extra."
+                                                             },
+                                       "marquee_ability":  "Maldade Spectral",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Clone Solitário"
+                                   }
+                               ],
+                     "bronze":  [
+                                    {
+                                        "name":  "Cópia Aproximada",
+                                        "title_formatted":  "\u003e Cópia Aproximada \u003c:Ar:1389703277532287066\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Ar",
+                                        "color_hex":  "#008000",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681439334338590/1000.png?ex=681df6a9\u0026is=681ca529\u0026hm=8ac3cd5584e59f2102fe09d234139198ffa109d51fb9f45519e3be931bc698fe\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "9,428",
+                                                      "health":  "49,805",
+                                                      "power":  "20,949"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "",
+                                                                  "description":  "[HAB 1]: **Qualquer aliado ganha ACELERAÇÃO permanente depois de enfrentar um oponente com o mesmo ELEMENTO** por 5 segundos.\n\n[HAB 2]: **Qualquer aliado inflige LENTIDÃO permanente depois de enfrentar um oponente do mesmo TIPO DE PERSONAGEM** por 5 segundos."
+                                                              },
+                                        "marquee_ability":  "Maldade Spectral",
+                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Uma Vez Mordido..., \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                    },
+                                    {
+                                        "name":  "Gêmeo Infernal",
+                                        "title_formatted":  "\u003e Gêmeo Infernal \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Fogo",
+                                        "color_hex":  "#ff0000",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018142781702204/icon-fukua.png?ex=68a7876f\u0026is=68a635ef\u0026hm=51d74ffc048ad79ef6d3c608d9e357b272440d4a0e80c74f3cffcabde8ba7be7\u0026",
+                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681482715889895/1000.png?ex=681df6b4\u0026is=681ca534\u0026hm=9c011b3be4ce3235a9c820d71600339791c2ac375351eb3f2bc4e8f5aed0bebf\u0026"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "10,676",
+                                                      "health":  "44,813",
+                                                      "power":  "21,440"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "PONTO DE FUSÃO",
+                                                                  "description":  "[HAB 1]: **Ao golpear um oponente atacando**, ganhe FÚRIA por 15 seg e atualize a duração de todas os FÚRIAS.\n\n[HAB 2]: Inflige FADIGA por 5 seg **ao ser GOLPEADO enquanto se beneficia de 3 camadas de FÚRIA.**"
+                                                              },
+                                        "marquee_ability":  "Maldade Spectral",
+                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Melhores Amigos!, \u003c:Blockbuster:1434999898385944606\u003e Conchinha Inevitável, \u003c:Blockbuster:1434999898385944606\u003e Broca Sonhadora, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor, \u003c:GolpeEspecial:1434999859768987748\u003e Tiros de Amor"
+                                    }
+                                ]
+                 }
 }

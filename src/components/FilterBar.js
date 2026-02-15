@@ -261,5 +261,15 @@ export function handleToggleCharDropdown() {
     if (dropdown && content) {
         dropdown.classList.toggle('active');
         content.classList.toggle('active');
+
+        // Scroll to active item if opening
+        if (content.classList.contains('active')) {
+            const activeItem = content.querySelector('.char-dropdown-item.active');
+            if (activeItem) {
+                setTimeout(() => {
+                    activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                }, 50);
+            }
+        }
     }
 }

@@ -1,79 +1,79 @@
 {
- "content": null,
- "embeds": [
-  {
-   "description": [
-    "O intuito é ajudar e priorizar investimentos nestes catalisadores e também ter atenção ao lidar com eles. Está em ordem Alfabetica.",
-    "",
-    "### Notas: Os sinais ao lado do nome representam isso: ",
-    "",
-    "### **(+)**. Forte, pode ser útil em mais situações. ",
-    "",
-    "### **(=)**. Bom, cumpre sua função e pode ser usado em certas ocasiões.",
-    "",
-    "### **(-)**. Mediano ou Ruim, pouco usável na maioria das situações, pode funcionar em alguns casos."
-   ],
-   "title": "Catalisadores para Batalhas da Fenda.",
-   "color": "#333333",
-   "author": {
-    "name": "SGM - Versão do Jogo: 8.0"
-   },
-   "fields": [
-    {
-     "name": "Forte ⬇️",
-     "value": [
-      "* +AutoImune (Ambos), +Blockbusted (Ambos)",
-      "* =Hora de Enfeitiçar (Ambos), +Luta Final (Ambos)",
-      "* +Maldição do Conhecimento (Ambos), =No Ar Rarefeito (Def. Ar)",
-      "* +O Vacilão Nervoso (Ambos), +Previsão Definhante (Ambos),",
-      "* +Resistência Fútil (Big Band)"
-     ],
-     "inline": false
-    },
-    {
-     "name": "Bom ⬇️",
-     "value": [
-      "* =Armadura de Gelo (Def. Água), -Boa Vida (Marie)",
-      "* -É Fazer Ou Morrer (Beowulf), =Exceção Especial (Ambos)",
-      "* =Incapacitador (Ambos), =Máquina da Destruição (Ambos)",
-      "* =Não Cutuque O Buer (Painwheel), =Últimas Palavras (Def. Luz)"
-     ],
-     "inline": false
-    },
-    {
-     "name": "Mediano ⬇️",
-     "value": [
-      "* =Águas Altas (Def. Água), -Altas Temperaturas (Def. Fogo)",
-      "* =Arranhador (Ms. Fortune), =Campo Eletrostático (Robo Fortune)",
-      "* =Darknut (Def. Trevas), -Devolver ao Remetente (Squigly)",
-      "* =Elemento Corrosivo (Double), -Faraomônios (Eliza)",
-      "* =Grande Fuga (Filia), =Iluminados (Def. Luz)",
-      "* =Incendiário (Def. Fogo), -Marca da Exclusão (Personagem)",
-      "* =Pontas Ocas (Peacock), =Sem Salto Alto (Ambos)",
-      "* =Sobrecarregado (Def. Ar), =Super Câmera Lenta (Ambos)",
-      "* =Tiro No Escuro (Def. Trevas)"
-     ],
-     "inline": false
-    },
-    {
-     "name": "Ruim ⬇️",
-     "value": [
-      "* -Ameaça Iminente (Parasoul), -Armada Invencível (Ambos)",
-      "* -Batedor de Recordes (Ambos), -Classificação de Armadura (Ambos)",
-      "* -Fortemente Armado (Cerebella), -Fúria Primitiva (Ambos)",
-      "* -Granada Atordoante (Ambos), -Marca da Exclusão",
-      "* -Megalixir (Valentine), -Para Ser Preciso (Ambos)",
-      "* -Período Orbital (Annie), =Pó do Sono (Fukua)",
-      "* =Regeneração X (Ambos), -Ritmo e Gosma (Umbrella)",
-      "* -Sangramento Culposo (Ambos), -Velocidade Máxima (Ambos)"
-     ],
-     "inline": false
-    }
-   ],
-   "thumbnail": {
-    
-   }
-  }
- ],
- "components": null
+    "content":  null,
+    "embeds":  [
+                   {
+                       "description":  [
+                                           "O intuito é ajudar e priorizar investimentos nestes catalisadores e também ter atenção ao lidar com eles. Está em ordem Alfabetica.",
+                                           "",
+                                           "### Notas: Os sinais ao lado do nome representam isso: ",
+                                           "",
+                                           "### **(+)**. Forte, pode ser útil em mais situações. ",
+                                           "",
+                                           "### **(=)**. Bom, cumpre sua função e pode ser usado em certas ocasiões.",
+                                           "",
+                                           "### **(-)**. Mediano ou Ruim, pouco usável na maioria das situações, pode funcionar em alguns casos."
+                                       ],
+                       "title":  "Catalisadores para Batalhas da Fenda.",
+                       "color":  "#333333",
+                       "author":  {
+                                      "name":  "SGM - Versão do Jogo: 8.0"
+                                  },
+                       "fields":  [
+                                      {
+                                          "name":  "Forte ⬇️",
+                                          "value":  [
+                                                        "* +AutoImune (Ambos), +Blockbusted (Ambos)",
+                                                        "* =Hora de Enfeitiçar (Ambos), +Luta Final (Ambos)",
+                                                        "* +Maldição do Conhecimento (Ambos), =No Ar Rarefeito (Def. Ar)",
+                                                        "* +O Vacilão Nervoso (Ambos), +Previsão Definhante (Ambos),",
+                                                        "* +Resistência Fútil (Big Band)"
+                                                    ],
+                                          "inline":  false
+                                      },
+                                      {
+                                          "name":  "Bom ⬇️",
+                                          "value":  [
+                                                        "* =Armadura de Gelo (Def. Água), -Boa Vida (Marie)",
+                                                        "* -É Fazer Ou Morrer (Beowulf), =Exceção Especial (Ambos)",
+                                                        "* =Incapacitador (Ambos), =Máquina da Destruição (Ambos)",
+                                                        "* =Não Cutuque O Buer (Painwheel), =Últimas Palavras (Def. Luz)"
+                                                    ],
+                                          "inline":  false
+                                      },
+                                      {
+                                          "name":  "Mediano ⬇️",
+                                          "value":  [
+                                                        "* =Águas Altas (Def. Água), -Altas Temperaturas (Def. Fogo)",
+                                                        "* =Arranhador (Ms. Fortune), =Campo Eletrostático (Robo Fortune)",
+                                                        "* =Darknut (Def. Trevas), -Devolver ao Remetente (Squigly)",
+                                                        "* =Elemento Corrosivo (Double), -Faraomônios (Eliza)",
+                                                        "* =Grande Fuga (Filia), =Iluminados (Def. Luz)",
+                                                        "* =Incendiário (Def. Fogo), -Marca da Exclusão (Personagem)",
+                                                        "* =Pontas Ocas (Peacock), =Sem Salto Alto (Ambos)",
+                                                        "* =Sobrecarregado (Def. Ar), =Super Câmera Lenta (Ambos)",
+                                                        "* =Tiro No Escuro (Def. Trevas)"
+                                                    ],
+                                          "inline":  false
+                                      },
+                                      {
+                                          "name":  "Ruim ⬇️",
+                                          "value":  [
+                                                        "* -Ameaça Iminente (Parasoul), -Armada Invencível (Ambos)",
+                                                        "* -Batedor de Recordes (Ambos), -Classificação de Armadura (Ambos)",
+                                                        "* -Fortemente Armado (Cerebella), -Fúria Primitiva (Ambos)",
+                                                        "* -Granada Atordoante (Ambos), -Marca da Exclusão",
+                                                        "* -Megalixir (Valentine), -Para Ser Preciso (Ambos)",
+                                                        "* -Período Orbital (Annie), =Pó do Sono (Fukua)",
+                                                        "* =Regeneração X (Ambos), -Ritmo e Gosma (Umbrella)",
+                                                        "* -Sangramento Culposo (Ambos), -Velocidade Máxima (Ambos)"
+                                                    ],
+                                          "inline":  false
+                                      }
+                                  ],
+                       "thumbnail":  {
+
+                                     }
+                   }
+               ],
+    "components":  null
 }

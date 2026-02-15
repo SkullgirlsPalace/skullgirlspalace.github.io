@@ -1,270 +1,272 @@
 {
-    "scenarios": [
-        {
-            "name": "cenário dima + pesadelo",
-            "items": [
-                {
-                    "item": "reinos",
-                    "base_value": 415,
-                    "monthly_value": 3735,
-                    "weekly_value": 933.75
-                },
-                {
-                    "item": "diaria",
-                    "base_value": 310,
-                    "monthly_value": 9455,
-                    "weekly_value": 2363.75
-                },
-                {
-                    "item": "dp dima 30%",
-                    "base_value": 575,
-                    "monthly_value": 5175,
-                    "weekly_value": 1293.75
-                },
-                {
-                    "item": "dp médici",
-                    "base_value": 1055,
-                    "monthly_value": 4220,
-                    "weekly_value": 1055
-                },
-                {
-                    "item": "dp mensal",
-                    "base_value": 0,
-                    "monthly_value": 4965,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "passe",
-                    "base_value": 0,
-                    "monthly_value": 1385,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "guilda top 100",
-                    "base_value": 10,
-                    "monthly_value": 3454,
-                    "weekly_value": 863.5
-                }
-            ],
-            "totals": {
-                "total_base": 2365000,
-                "total_monthly": 32389000,
-                "total_weekly": 6509750
-            }
-        },
-        {
-            "name": "cenário ouro + mestre",
-            "items": [
-                {
-                    "item": "reinos",
-                    "base_value": 415,
-                    "monthly_value": 3735,
-                    "weekly_value": 933.75
-                },
-                {
-                    "item": "diaria",
-                    "base_value": 310,
-                    "monthly_value": 9455,
-                    "weekly_value": 2363.75
-                },
-                {
-                    "item": "dp ouro",
-                    "base_value": 355,
-                    "monthly_value": 3195,
-                    "weekly_value": 798.75
-                },
-                {
-                    "item": "dp médici",
-                    "base_value": 1055,
-                    "monthly_value": 4220,
-                    "weekly_value": 1055
-                },
-                {
-                    "item": "dp mensal",
-                    "base_value": 0,
-                    "monthly_value": 4965,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "passe",
-                    "base_value": 0,
-                    "monthly_value": 1385,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "guilda top 100",
-                    "base_value": 10,
-                    "monthly_value": 3454,
-                    "weekly_value": 863.5
-                }
-            ],
-            "totals": {}
-        },
-        {
-            "name": "cenário dima + pesadelo",
-            "items": [
-                {
-                    "item": "reinos",
-                    "base_value": 415,
-                    "monthly_value": 3735,
-                    "weekly_value": 933.75
-                },
-                {
-                    "item": "diaria",
-                    "base_value": 310,
-                    "monthly_value": 9455,
-                    "weekly_value": 2363.75
-                },
-                {
-                    "item": "dp dima 10%",
-                    "base_value": 645,
-                    "monthly_value": 5805,
-                    "weekly_value": 1451.25
-                },
-                {
-                    "item": "dp médici",
-                    "base_value": 1055,
-                    "monthly_value": 4220,
-                    "weekly_value": 1055
-                },
-                {
-                    "item": "dp mensal",
-                    "base_value": 0,
-                    "monthly_value": 4965,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "passe",
-                    "base_value": 0,
-                    "monthly_value": 1385,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "guilda top 100",
-                    "base_value": 10,
-                    "monthly_value": 3454,
-                    "weekly_value": 863.5
-                }
-            ],
-            "totals": {
-                "total_base": 2435000,
-                "total_monthly": 33019000,
-                "total_weekly": 6667250
-            }
-        },
-        {
-            "name": "cenário dima + sem dó",
-            "items": [
-                {
-                    "item": "reinos",
-                    "base_value": 475,
-                    "monthly_value": 4275,
-                    "weekly_value": 1068.75
-                },
-                {
-                    "item": "diaria",
-                    "base_value": 310,
-                    "monthly_value": 9455,
-                    "weekly_value": 2363.75
-                },
-                {
-                    "item": "dp dima 10%",
-                    "base_value": 645,
-                    "monthly_value": 5805,
-                    "weekly_value": 1451.25
-                },
-                {
-                    "item": "dp médici",
-                    "base_value": 1055,
-                    "monthly_value": 4220,
-                    "weekly_value": 1055
-                },
-                {
-                    "item": "dp mensal",
-                    "base_value": 0,
-                    "monthly_value": 4965,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "passe",
-                    "base_value": 0,
-                    "monthly_value": 1385,
-                    "weekly_value": 0
-                },
-                {
-                    "item": "guilda top 100",
-                    "base_value": 10,
-                    "monthly_value": 3454,
-                    "weekly_value": 863.5
-                }
-            ],
-            "totals": {
-                "total_base": 2495000,
-                "total_monthly": 33559000,
-                "total_weekly": 6802250
-            }
-        }
-    ],
-    "constants": {
-        "dp_dima": 525,
-        "dp_ouro": 355,
-        "dp_mensal_nova": 2032.5,
-        "dp_mensal_novissima": 2482.5,
-        "dp_mensal_novissima_2_val1": 4065,
-        "dp_mensal_novissima_2_val2": 4965,
-        "passe_free_old": 175,
-        "passe_full_old": 1300
-    },
-    "performance_stats": [
-        {
-            "metric": "diária",
-            "values": [
-                210,
-                301.6,
-                297.6,
-                321.6,
-                321.6
-            ]
-        },
-        {
-            "metric": "fixo",
-            "values": [
-                25,
-                45.4,
-                45.4,
-                45.4,
-                45.4
-            ]
-        },
-        {
-            "metric": "qtidade média de golpes",
-            "values": [
-                5.5,
-                6,
-                "7 (2 pratas)",
-                7,
-                7
-            ]
-        },
-        {
-            "metric": "variável",
-            "values": [
-                27.5,
-                30,
-                29,
-                35,
-                35
-            ]
-        },
-        {
-            "metric": "total 16/05",
-            "values": [
-                310.6,
-                null,
-                null,
-                null,
-                null
-            ]
-        }
-    ]
+    "scenarios":  [
+                      {
+                          "name":  "cenário dima + pesadelo",
+                          "items":  [
+                                        {
+                                            "item":  "reinos",
+                                            "base_value":  415,
+                                            "monthly_value":  3735,
+                                            "weekly_value":  933.75
+                                        },
+                                        {
+                                            "item":  "diaria",
+                                            "base_value":  310,
+                                            "monthly_value":  9455,
+                                            "weekly_value":  2363.75
+                                        },
+                                        {
+                                            "item":  "dp dima 30%",
+                                            "base_value":  575,
+                                            "monthly_value":  5175,
+                                            "weekly_value":  1293.75
+                                        },
+                                        {
+                                            "item":  "dp médici",
+                                            "base_value":  1055,
+                                            "monthly_value":  4220,
+                                            "weekly_value":  1055
+                                        },
+                                        {
+                                            "item":  "dp mensal",
+                                            "base_value":  0,
+                                            "monthly_value":  4965,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "passe",
+                                            "base_value":  0,
+                                            "monthly_value":  1385,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "guilda top 100",
+                                            "base_value":  10,
+                                            "monthly_value":  3454,
+                                            "weekly_value":  863.5
+                                        }
+                                    ],
+                          "totals":  {
+                                         "total_base":  2365000,
+                                         "total_monthly":  32389000,
+                                         "total_weekly":  6509750
+                                     }
+                      },
+                      {
+                          "name":  "cenário ouro + mestre",
+                          "items":  [
+                                        {
+                                            "item":  "reinos",
+                                            "base_value":  415,
+                                            "monthly_value":  3735,
+                                            "weekly_value":  933.75
+                                        },
+                                        {
+                                            "item":  "diaria",
+                                            "base_value":  310,
+                                            "monthly_value":  9455,
+                                            "weekly_value":  2363.75
+                                        },
+                                        {
+                                            "item":  "dp ouro",
+                                            "base_value":  355,
+                                            "monthly_value":  3195,
+                                            "weekly_value":  798.75
+                                        },
+                                        {
+                                            "item":  "dp médici",
+                                            "base_value":  1055,
+                                            "monthly_value":  4220,
+                                            "weekly_value":  1055
+                                        },
+                                        {
+                                            "item":  "dp mensal",
+                                            "base_value":  0,
+                                            "monthly_value":  4965,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "passe",
+                                            "base_value":  0,
+                                            "monthly_value":  1385,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "guilda top 100",
+                                            "base_value":  10,
+                                            "monthly_value":  3454,
+                                            "weekly_value":  863.5
+                                        }
+                                    ],
+                          "totals":  {
+
+                                     }
+                      },
+                      {
+                          "name":  "cenário dima + pesadelo",
+                          "items":  [
+                                        {
+                                            "item":  "reinos",
+                                            "base_value":  415,
+                                            "monthly_value":  3735,
+                                            "weekly_value":  933.75
+                                        },
+                                        {
+                                            "item":  "diaria",
+                                            "base_value":  310,
+                                            "monthly_value":  9455,
+                                            "weekly_value":  2363.75
+                                        },
+                                        {
+                                            "item":  "dp dima 10%",
+                                            "base_value":  645,
+                                            "monthly_value":  5805,
+                                            "weekly_value":  1451.25
+                                        },
+                                        {
+                                            "item":  "dp médici",
+                                            "base_value":  1055,
+                                            "monthly_value":  4220,
+                                            "weekly_value":  1055
+                                        },
+                                        {
+                                            "item":  "dp mensal",
+                                            "base_value":  0,
+                                            "monthly_value":  4965,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "passe",
+                                            "base_value":  0,
+                                            "monthly_value":  1385,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "guilda top 100",
+                                            "base_value":  10,
+                                            "monthly_value":  3454,
+                                            "weekly_value":  863.5
+                                        }
+                                    ],
+                          "totals":  {
+                                         "total_base":  2435000,
+                                         "total_monthly":  33019000,
+                                         "total_weekly":  6667250
+                                     }
+                      },
+                      {
+                          "name":  "cenário dima + sem dó",
+                          "items":  [
+                                        {
+                                            "item":  "reinos",
+                                            "base_value":  475,
+                                            "monthly_value":  4275,
+                                            "weekly_value":  1068.75
+                                        },
+                                        {
+                                            "item":  "diaria",
+                                            "base_value":  310,
+                                            "monthly_value":  9455,
+                                            "weekly_value":  2363.75
+                                        },
+                                        {
+                                            "item":  "dp dima 10%",
+                                            "base_value":  645,
+                                            "monthly_value":  5805,
+                                            "weekly_value":  1451.25
+                                        },
+                                        {
+                                            "item":  "dp médici",
+                                            "base_value":  1055,
+                                            "monthly_value":  4220,
+                                            "weekly_value":  1055
+                                        },
+                                        {
+                                            "item":  "dp mensal",
+                                            "base_value":  0,
+                                            "monthly_value":  4965,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "passe",
+                                            "base_value":  0,
+                                            "monthly_value":  1385,
+                                            "weekly_value":  0
+                                        },
+                                        {
+                                            "item":  "guilda top 100",
+                                            "base_value":  10,
+                                            "monthly_value":  3454,
+                                            "weekly_value":  863.5
+                                        }
+                                    ],
+                          "totals":  {
+                                         "total_base":  2495000,
+                                         "total_monthly":  33559000,
+                                         "total_weekly":  6802250
+                                     }
+                      }
+                  ],
+    "constants":  {
+                      "dp_dima":  525,
+                      "dp_ouro":  355,
+                      "dp_mensal_nova":  2032.5,
+                      "dp_mensal_novissima":  2482.5,
+                      "dp_mensal_novissima_2_val1":  4065,
+                      "dp_mensal_novissima_2_val2":  4965,
+                      "passe_free_old":  175,
+                      "passe_full_old":  1300
+                  },
+    "performance_stats":  [
+                              {
+                                  "metric":  "diária",
+                                  "values":  [
+                                                 210,
+                                                 301.6,
+                                                 297.6,
+                                                 321.6,
+                                                 321.6
+                                             ]
+                              },
+                              {
+                                  "metric":  "fixo",
+                                  "values":  [
+                                                 25,
+                                                 45.4,
+                                                 45.4,
+                                                 45.4,
+                                                 45.4
+                                             ]
+                              },
+                              {
+                                  "metric":  "qtidade média de golpes",
+                                  "values":  [
+                                                 5.5,
+                                                 6,
+                                                 "7 (2 pratas)",
+                                                 7,
+                                                 7
+                                             ]
+                              },
+                              {
+                                  "metric":  "variável",
+                                  "values":  [
+                                                 27.5,
+                                                 30,
+                                                 29,
+                                                 35,
+                                                 35
+                                             ]
+                              },
+                              {
+                                  "metric":  "total 16/05",
+                                  "values":  [
+                                                 310.6,
+                                                 null,
+                                                 null,
+                                                 null,
+                                                 null
+                                             ]
+                              }
+                          ]
 }

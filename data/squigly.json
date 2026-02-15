@@ -1,366 +1,366 @@
 {
-  "character": "Squigly",
-  "version": "1.0",
-  "variants": {
-    "diamante": [
-      {
-        "name": "Reviravolta",
-        "title_formatted": "> Reviravolta <:Agua:1389703224210231437><:diamante:1407839264779141140>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685894037242027/1000.png?ex=681ea390&is=681d5210&hm=96ba04a96a764d45fb2b4c3bf0dba68e33f9ceeee1d5d13e4959941d4010afc1&"
-        },
-        "stats": {
-          "attack": "10,330",
-          "health": "80,045",
-          "power": "27,970"
-        },
-        "signature_ability": {
-          "name": "O RETORNO DA LOUCURA",
-          "description": "[HAB 1]: RESSUSCITE com 50% de VIDA **uma vez por luta.** Ganhe também 5 EF. NEGATIVOS aleatórios por 10 seg e 5 camadas de ESPINHOS por 20 seg.\n\n[HAB 2]: Causa 50% de dano bônus **por cada camada de EF. NEGATIVO aplicada à Squigly.**"
-        },
-        "marquee_ability": "Morta-Viva",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do dragão **BB3**, <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:GolpeEspecial:1434999859768987748> Arrastar e morder, <:GolpeEspecial:1434999859768987748> O acorde de prata, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Lovecraftiana",
-        "title_formatted": "> Lovecraftiana <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685948114403560/1000.png?ex=681ea39c&is=681d521c&hm=3f70901c5648ecc14a6724da4fb4f4cd984f05e3847e4857f06c5080f3ce4471&"
-        },
-        "stats": {
-          "attack": "11,847",
-          "health": "72,058",
-          "power": "28,190"
-        },
-        "signature_ability": {
-          "name": "TENTACULOSA",
-          "description": "[HAB 1]: **Enquanto está perto de um oponente,** DESATIVA BLOCKBUSTERS e inflige BLOQUEIO DE CURA após 1 s.\n\n[HAB 2]: **Cada 10º GOLPE DE COMBO** será um CRÍTICO e infligirá MARCA DA MORTE e SANGRAMENTO FORTE por 15 segundos."
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Perigo Mortal",
-        "title_formatted": "> Perigo Mortal <:Ar:1389703277532287066><:diamante:1407839264779141140>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685974718877938/1000.png?ex=681ea3a3&is=681d5223&hm=5087689a872b52fb16bd8b158b3f407dbe4ff58992fa435e9c9726be37db3a12&"
-        },
-        "stats": {
-          "attack": "11,847",
-          "health": "72,058",
-          "power": "28,190"
-        },
-        "signature_ability": {
-          "name": "LETRA-MORTA",
-          "description": "[HAB 1]: **Ao usar um BLOCKBUSTER Carregado,** converte todos os EF. NEG. em 10% do MEDIDOR DE BLOCKBUSTER por EF. NEG. e ganha REGENERAÇÃO FORTE por 15 s.\n\n[HAB 2]: **Enquanto estiver do lado do oponente do cenário,** ganhe OLHO-MORTO e inflija QUIETUS por 15 s cada **ao usar um BLOCKBUSTER.**"
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Ghoul Glacial",
-        "title_formatted": "> Ghoul Glacial <:Agua:1389703224210231437><:diamante:1407839264779141140>",
-        "element": "Água",
-        "color_hex": "#0080ff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685918649684071/latest.png?ex=681ea395&is=681d5215&hm=963ff84d66a68190dd9a13727e9b239a388c9fe83eea93022bf1cd0eb525c09a&"
-        },
-        "stats": {
-          "attack": "10,330",
-          "health": "80,045",
-          "power": "27,970"
-        },
-        "signature_ability": {
-          "name": "FICA FRIO",
-          "description": "[HAB 1]: Ganhe BARREIRA **ao ganhar uma CARGA DO DRAGÃO. O uso de sua última C. DO DRAGÃO **converte todas as camadas de BARREIRA em 10% de VIDA cada.\n\n[HAB 2]: **Enquanto estiver CARREGADA e se beneficiar de BARREIRA,** ganhe FÚRIA permanente a cada 6 s e IMUNIDADE permanente **após cada 12 s. Remove ambos os EF. POSITIVOS quando o oponente é derrotado.**"
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      }
-    ],
-    "ouro": [
-      {
-        "name": "Frio de Matar",
-        "title_formatted": "> Frio de Matar <:Agua:1389703224210231437><:ouro:1407839155785826306>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685733898977392/1000.png?ex=681ea369&is=681d51e9&hm=2ee3fa28d943ac17191a14b0b718a830715679ffe2feeecc9c476e4e70dda679&"
-        },
-        "stats": {
-          "attack": "8,160",
-          "health": "81,773",
-          "power": "25,746"
-        },
-        "signature_ability": {
-          "name": "NEVASCA FANTASMA",
-          "description": "[HAB 1]: RESSUSCITA com 25% de VIDA e 5 camadas de ARMADURA **depois de ficar morta por 30 segundos. Uma camada de ARMADURA é removida depois de cada GOLPE sofrido.**\n\n[HAB 2]: Causa 100% de dano extra **enquanto se beneficia de ARMADURA.**"
-        },
-        "marquee_ability": "Morta-Viva",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do dragão **BB3**, <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:GolpeEspecial:1434999859768987748> Arrastar e morder, <:GolpeEspecial:1434999859768987748> O acorde de prata, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Bioexorcista",
-        "title_formatted": "> Bioexorcista <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#800080",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685756187246612/1000.png?ex=681ea36f&is=681d51ef&hm=af520b5b0f850da61ffe1832e253b08d210de5113348175ca26a017f9b22ec17&"
-        },
-        "stats": {
-          "attack": "9,581",
-          "health": "74,324",
-          "power": "25,958"
-        },
-        "signature_ability": {
-          "name": "DECAIMENTO EXISTENCIAL",
-          "description": "[HAB 1]: **Enquanto está CARREGADO e sem BLOQUEAR**, DRENA 2% da VIDA de um oponente próximo a cada segundo.\n\n[HAB 2]: **Enquanto está CARREGADO**, DRENA 25% de VIDA de cada aliado vivo **ao sofrer um GOLPE que seria fatal.**"
-        },
-        "marquee_ability": "Morta do Mal ou Morta-Viva",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Thriller",
-        "title_formatted": "> Thriller <:Fogo:1389703188525092934><:ouro:1407839155785826306>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685784914296922/1000.png?ex=681ea376&is=681d51f6&hm=5ace415f80e5e678ff88fb35391b3f4d346fd11e970679182548271ea9d51d82&"
-        },
-        "stats": {
-          "attack": "11,002",
-          "health": "66,912",
-          "power": "26,178"
-        },
-        "signature_ability": {
-          "name": "DANÇA MACABRA",
-          "description": "[HAB 1]: 100% de chance de ganhar FÚRIA **ao ganhar uma CARGA DO DRAGÃO. Cada FÚRIA é removida ao gastar uma carga.**\n\n[HAB 2]: O oponente sofre dano igual a 50% de sua VIDA atual **ao SAIR DA ASSISTÊNCIA enquanto a Squigly está com FÚRIA.**"
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Sopro da Morte",
-        "title_formatted": "> Sopro da Morte <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685810306355270/1000.png?ex=681ea37c&is=681d51fc&hm=3293000b911c63acb468ea1311ed2d0912da5b8183f464ca08ac16dec6b32ca8&"
-        },
-        "stats": {
-          "attack": "11,002",
-          "health": "66,912",
-          "power": "26,178"
-        },
-        "signature_ability": {
-          "name": "ECTOPLASMA",
-          "description": "[HAB 1]: BLOCKBUSTERS causam 100% de dano extra nos oponentes **com um BLOCKBUSTER totalmente carregado.**\n\n[HAB 2]: **Quando um EFEITO POSITIVO na Squigly ou no oponente expirar,** ganhe 25% no MEDIDOR DE BLOCKBUSTER."
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do Dragão **BB3**, , <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Artista Demônio",
-        "title_formatted": "> Artista Demônio <:Neutro:1389703364304175125><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#ff80c0",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685839326744676/1000.png?ex=681ea382&is=681d5202&hm=2ec910203bcbcce2262973d4b600a47730e4d5e55b0f58f55075eff85010ca36&"
-        },
-        "stats": {
-          "attack": "11,002",
-          "health": "66,912",
-          "power": "26,178"
-        },
-        "signature_ability": {
-          "name": "MONSTRO INTERIOR",
-          "description": "[HAB 1]: **Enquanto CARREGADO**, inflige SANGRAMENTO por 10 segundos **para cada 15% de VIDA perdidos por um dos lutadores.**\n\n[HAB 2]: Ganhe FÚRIA e REGENERAÇÃO por 12 segundos cada **quando usar um BLOCKBUSTER enquanto o oponente estiver sofrendo SANGRAMENTO.**"
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do dragão **BB3**, <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:GolpeEspecial:1434999859768987748> Arrastar e morder, <:GolpeEspecial:1434999859768987748> O acorde de prata, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Roendo as Unhas",
-        "title_formatted": "> Roendo as Unhas <:Neutro:1389703364304175125><:ouro:1407839155785826306>",
-        "element": "Neutro",
-        "color_hex": "#ffffff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423007320467701861/7b933d52-6dd6-49f3-81eb-0c9bcb259c56.png?ex=68debe57&is=68dd6cd7&hm=6b77837c541f0666aa637fcd72d5f30e77d9c738c476fddb77f2b66a237044c3&"
-        },
-        "stats": {
-          "attack": "11,002",
-          "health": "66,912",
-          "power": "26,178"
-        },
-        "signature_ability": {
-          "name": "Chuva de Cavaleiro",
-          "description": "[HAB 1]: Ganhe MIASMA ou BARREIRA por 15 s cada (a cada 0.25 s) ao carregar CAUDA DE DRAGÃO. **Esses efeitos são removidos se você for DERRUBADO**\n\n[HAB 2]: **Quando estiver totalmente CARREGADO**, ESQUIVE-SE de todos os ataques **ao usar ARRANCADA**, ATAQUES de ARRANCADA bem-sucedidas infligem 3 EF. NEG. aleatório (exceto ATORDOAMENTO e DESTRUIÇÃO) por 10 segundos."
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do dragão **BB3**, <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:GolpeEspecial:1434999859768987748> Arrastar e morder, <:GolpeEspecial:1434999859768987748> O acorde de prata, <:GolpeEspecial:1434999859768987748> Explosão"
-      }
-    ],
-    "prata": [
-      {
-        "name": "Verde Gangrena",
-        "title_formatted": "> Verde Gangrena <:Ar:1389703277532287066><:prata:1407839105169227957>",
-        "element": "Ar",
-        "color_hex": "#00ff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685636427284650/1000.png?ex=681ea352&is=681d51d2&hm=7eeff4defc1fd2828a8026840ee1e7110af146860cd54c9b917b462b7b61afc8&"
-        },
-        "stats": {
-          "attack": "7,604",
-          "health": "75,936",
-          "power": "22,910"
-        },
-        "signature_ability": {
-          "name": "ROLO DA MORTE",
-          "description": "[HAB 1]: A Squigly ganha MEDIDOR DE BLOCKBUSTER **igual a 3% da sua VEL. DE MOVIMENTO.**\n\n[HAB 2]: Ganhe 1 camada de MIASMA por 5 segundos a cada 1 segundo(s) **enquanto não estiver BLOQUEANDO perto de um corpo morto.**"
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Semimorta",
-        "title_formatted": "> Semimorta <:Luz:1389703315167907902><:prata:1407839105169227957>",
-        "element": "Luz",
-        "color_hex": "#ffff62",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685658716082380/1000.png?ex=681ea357&is=681d51d7&hm=f03b8a037db5c244d8a1db2fd5497f3c786cdb437e22fe9404c7c55224718fb5&"
-        },
-        "stats": {
-          "attack": "8,909",
-          "health": "69,005",
-          "power": "24,117"
-        },
-        "signature_ability": {
-          "name": "ABRACADÁVER",
-          "description": "[HAB 1]: **Ao usar um BLOCKBUSTER com CONTAGEM DE COMBO ÍMPAR**, ganhe INVENCIBILIDADE por 8 seg\n\n[HAB 2]: Também RESSUSCITA aliados com 25% de VIDA **se a Squigly tiver menos de 50% de VIDA.**"
-        },
-        "marquee_ability": "Morta-Viva",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Morta de Calor",
-        "title_formatted": "> Morta de Calor <:Fogo:1389703188525092934><:prata:1407839105169227957>",
-        "element": "Fogo",
-        "color_hex": "#ff0000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685680417145006/1000.png?ex=681ea35d&is=681d51dd&hm=d9795a11c123eb0de856945a5c821a7dab07f7c9546ff602173610c5269ebcfe&"
-        },
-        "stats": {
-          "attack": "10,215",
-          "health": "62,112",
-          "power": "24,302"
-        },
-        "signature_ability": {
-          "name": "IMOLAÇÃO",
-          "description": "[HAB 1]: Ganhe 2 camadas de FÚRIA por 5 segundos a cada 10 segundos **enquanto estiver com menos de 50% de VIDA.**\n\n[HAB 2]: 100% de chance dos GOLPES ESPECIAIS serem INDEFENSÁVEIS **ao se beneficiar de FÚRIA.**"
-        },
-        "marquee_ability": "Morta do Mal",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Quebra-Morto",
-        "title_formatted": "> Quebra-Morto <:Luz:1389703315167907902><:prata:1407839105169227957>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361685567028465664/1000.png?ex=681ea342&is=681d51c2&hm=6d667ca7b5a426db99058965d13057196ae49b6c1e524e94bf83bc2e6ebce352&"
-        },
-        "stats": {
-          "attack": "7,604",
-          "health": "75,936",
-          "power": "22,910"
-        },
-        "signature_ability": {
-          "name": "PIXEL MÁGICO",
-          "description": "[HAB 1]: **Uma vez por luta, ao sofrer um GOLPE que seria fatal, **ganhe RESISTÊNCIA FINAL por 15 segundos.\n\n[HAB 2]: Ganhe 7% de VIDA por segundo **enquanto estiver carregando a CAUDA DE DRAGÃO.**"
-        },
-        "marquee_ability": "Morta-Viva",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do dragão **BB3**, <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:GolpeEspecial:1434999859768987748> Arrastar e morder, <:GolpeEspecial:1434999859768987748> O acorde de prata, <:GolpeEspecial:1434999859768987748> Explosão"
-      }
-    ],
-    "bronze": [
-      {
-        "name": "Medo do Palco",
-        "title_formatted": "> Medo do Palco <:Trevas:1389703142848991364><:bronze:1407839009664798801>",
-        "element": "Trevas",
-        "color_hex": "#8000ff",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://static.wikia.nocookie.net/skullgirlsmobile/images/f/f9/Stage_Fright.png/revision/latest?cb=20181019153831"
-        },
-        "stats": {
-          "attack": "8,237",
-          "health": "64,090",
-          "power": "22,355"
-        },
-        "signature_ability": {
-          "name": "MEMENTO MORI",
-          "description": "O oponente sofre MALDIÇÃO e FEITIÇO por 15 segundos quando a VIDA **dele** cai abaixo de 25%.\n\nInflige DESTRUIÇÃO por 20 segundos **quando derrotada** com um BLOCKBUSTER."
-        },
-        "marquee_ability": "",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Inferno do Leviatã, <:Blockbuster:1434999898385944606> Ópera de Batalha, <:GolpeEspecial:1434999859768987748> Soco de Dragão, <:GolpeEspecial:1434999859768987748> Arrastar e Morder, <:GolpeEspecial:1434999859768987748> O Acorde de Prata"
-      },
-      {
-        "name": "Branca de Medo",
-        "title_formatted": "> Branca de Medo <:Luz:1389703315167907902><:bronze:1407839009664798801>",
-        "element": "Luz",
-        "color_hex": "#ffff00",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767&is=68a635e7&hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4&",
-          "portrait_url": "https://static.wikia.nocookie.net/skullgirlsmobile/images/5/56/Scared_Stiff.png/revision/latest?cb=20181019153830"
-        },
-        "stats": {
-          "attack": "7,008",
-          "health": "70,464",
-          "power": "22,158"
-        },
-        "signature_ability": {
-          "name": "RIGOR MORTIS",
-          "description": "Ganhe INABALÁVEL **após enfrentar o mesmo oponente** por 15 s. É removido quando o oponente SAI DA ASSISTÊNCIA ou morre.\n\n**Não pode perder mais de** 5% de sua VIDA MÁXIMA com um único GOLPE."
-        },
-        "marquee_ability": "",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Fúria do dragão **BB3**, <:Blockbuster:1434999898385944606> Inferno do Leviatã, <:GolpeEspecial:1434999859768987748> Arrastar e morder, <:GolpeEspecial:1434999859768987748> O acorde de prata, <:GolpeEspecial:1434999859768987748> Explosão"
-      }
-    ]
-  }
+    "character":  "Squigly",
+    "version":  "1.0",
+    "variants":  {
+                     "diamante":  [
+                                      {
+                                          "name":  "Reviravolta",
+                                          "title_formatted":  "\u003e Reviravolta \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Água",
+                                          "color_hex":  "#000000",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685894037242027/1000.png?ex=681ea390\u0026is=681d5210\u0026hm=96ba04a96a764d45fb2b4c3bf0dba68e33f9ceeee1d5d13e4959941d4010afc1\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "10,330",
+                                                        "health":  "80,045",
+                                                        "power":  "27,970"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "O RETORNO DA LOUCURA",
+                                                                    "description":  "[HAB 1]: RESSUSCITE com 50% de VIDA **uma vez por luta.** Ganhe também 5 EF. NEGATIVOS aleatórios por 10 seg e 5 camadas de ESPINHOS por 20 seg.\n\n[HAB 2]: Causa 50% de dano bônus **por cada camada de EF. NEGATIVO aplicada à Squigly.**"
+                                                                },
+                                          "marquee_ability":  "Morta-Viva",
+                                          "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do dragão, \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e morder, \u003c:GolpeEspecial:1434999859768987748\u003e O acorde de prata, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                      },
+                                      {
+                                          "name":  "Lovecraftiana",
+                                          "title_formatted":  "\u003e Lovecraftiana \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Trevas",
+                                          "color_hex":  "#800080",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685948114403560/1000.png?ex=681ea39c\u0026is=681d521c\u0026hm=3f70901c5648ecc14a6724da4fb4f4cd984f05e3847e4857f06c5080f3ce4471\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,847",
+                                                        "health":  "72,058",
+                                                        "power":  "28,190"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "TENTACULOSA",
+                                                                    "description":  "[HAB 1]: **Enquanto está perto de um oponente,** DESATIVA BLOCKBUSTERS e inflige BLOQUEIO DE CURA após 1 s.\n\n[HAB 2]: **Cada 10º GOLPE DE COMBO** será um CRÍTICO e infligirá MARCA DA MORTE e SANGRAMENTO FORTE por 15 segundos."
+                                                                },
+                                          "marquee_ability":  "Morta do Mal",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                      },
+                                      {
+                                          "name":  "Perigo Mortal",
+                                          "title_formatted":  "\u003e Perigo Mortal \u003c:Ar:1389703277532287066\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Ar",
+                                          "color_hex":  "#00ff00",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685974718877938/1000.png?ex=681ea3a3\u0026is=681d5223\u0026hm=5087689a872b52fb16bd8b158b3f407dbe4ff58992fa435e9c9726be37db3a12\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,847",
+                                                        "health":  "72,058",
+                                                        "power":  "28,190"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "LETRA-MORTA",
+                                                                    "description":  "[HAB 1]: **Ao usar um BLOCKBUSTER Carregado,** converte todos os EF. NEG. em 10% do MEDIDOR DE BLOCKBUSTER por EF. NEG. e ganha REGENERAÇÃO FORTE por 15 s.\n\n[HAB 2]: **Enquanto estiver do lado do oponente do cenário,** ganhe OLHO-MORTO e inflija QUIETUS por 15 s cada **ao usar um BLOCKBUSTER.**"
+                                                                },
+                                          "marquee_ability":  "Morta do Mal",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                      },
+                                      {
+                                          "name":  "Ghoul Glacial",
+                                          "title_formatted":  "\u003e Ghoul Glacial \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Água",
+                                          "color_hex":  "#0080ff",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685918649684071/latest.png?ex=681ea395\u0026is=681d5215\u0026hm=963ff84d66a68190dd9a13727e9b239a388c9fe83eea93022bf1cd0eb525c09a\u0026"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "10,330",
+                                                        "health":  "80,045",
+                                                        "power":  "27,970"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "FICA FRIO",
+                                                                    "description":  "[HAB 1]: Ganhe BARREIRA **ao ganhar uma CARGA DO DRAGÃO. O uso de sua última C. DO DRAGÃO **converte todas as camadas de BARREIRA em 10% de VIDA cada.\n\n[HAB 2]: **Enquanto estiver CARREGADA e se beneficiar de BARREIRA,** ganhe FÚRIA permanente a cada 6 s e IMUNIDADE permanente **após cada 12 s. Remove ambos os EF. POSITIVOS quando o oponente é derrotado.**"
+                                                                },
+                                          "marquee_ability":  "Morta do Mal",
+                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                      }
+                                  ],
+                     "ouro":  [
+                                  {
+                                      "name":  "Frio de Matar",
+                                      "title_formatted":  "\u003e Frio de Matar \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Água",
+                                      "color_hex":  "#000000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685733898977392/1000.png?ex=681ea369\u0026is=681d51e9\u0026hm=2ee3fa28d943ac17191a14b0b718a830715679ffe2feeecc9c476e4e70dda679\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "8,160",
+                                                    "health":  "81,773",
+                                                    "power":  "25,746"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "NEVASCA FANTASMA",
+                                                                "description":  "[HAB 1]: RESSUSCITA com 25% de VIDA e 5 camadas de ARMADURA **depois de ficar morta por 30 segundos. Uma camada de ARMADURA é removida depois de cada GOLPE sofrido.**\n\n[HAB 2]: Causa 100% de dano extra **enquanto se beneficia de ARMADURA.**"
+                                                            },
+                                      "marquee_ability":  "Morta-Viva",
+                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do dragão, \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e morder, \u003c:GolpeEspecial:1434999859768987748\u003e O acorde de prata, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  },
+                                  {
+                                      "name":  "Bioexorcista",
+                                      "title_formatted":  "\u003e Bioexorcista \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#800080",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685756187246612/1000.png?ex=681ea36f\u0026is=681d51ef\u0026hm=af520b5b0f850da61ffe1832e253b08d210de5113348175ca26a017f9b22ec17\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,581",
+                                                    "health":  "74,324",
+                                                    "power":  "25,958"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "DECAIMENTO EXISTENCIAL",
+                                                                "description":  "[HAB 1]: **Enquanto está CARREGADO e sem BLOQUEAR**, DRENA 2% da VIDA de um oponente próximo a cada segundo.\n\n[HAB 2]: **Enquanto está CARREGADO**, DRENA 25% de VIDA de cada aliado vivo **ao sofrer um GOLPE que seria fatal.**"
+                                                            },
+                                      "marquee_ability":  "Morta do Mal ou Morta-Viva",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                  },
+                                  {
+                                      "name":  "Thriller",
+                                      "title_formatted":  "\u003e Thriller \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Fogo",
+                                      "color_hex":  "#ff0000",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685784914296922/1000.png?ex=681ea376\u0026is=681d51f6\u0026hm=5ace415f80e5e678ff88fb35391b3f4d346fd11e970679182548271ea9d51d82\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,002",
+                                                    "health":  "66,912",
+                                                    "power":  "26,178"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "DANÇA MACABRA",
+                                                                "description":  "[HAB 1]: 100% de chance de ganhar FÚRIA **ao ganhar uma CARGA DO DRAGÃO. Cada FÚRIA é removida ao gastar uma carga.**\n\n[HAB 2]: O oponente sofre dano igual a 50% de sua VIDA atual **ao SAIR DA ASSISTÊNCIA enquanto a Squigly está com FÚRIA.**"
+                                                            },
+                                      "marquee_ability":  "Morta do Mal",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                  },
+                                  {
+                                      "name":  "Sopro da Morte",
+                                      "title_formatted":  "\u003e Sopro da Morte \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#00ff00",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685810306355270/1000.png?ex=681ea37c\u0026is=681d51fc\u0026hm=3293000b911c63acb468ea1311ed2d0912da5b8183f464ca08ac16dec6b32ca8\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,002",
+                                                    "health":  "66,912",
+                                                    "power":  "26,178"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "ECTOPLASMA",
+                                                                "description":  "[HAB 1]: BLOCKBUSTERS causam 100% de dano extra nos oponentes **com um BLOCKBUSTER totalmente carregado.**\n\n[HAB 2]: **Quando um EFEITO POSITIVO na Squigly ou no oponente expirar,** ganhe 25% no MEDIDOR DE BLOCKBUSTER."
+                                                            },
+                                      "marquee_ability":  "Morta do Mal",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do Dragão, , \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                  },
+                                  {
+                                      "name":  "Artista Demônio",
+                                      "title_formatted":  "\u003e Artista Demônio \u003c:Neutro:1389703364304175125\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#ff80c0",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685839326744676/1000.png?ex=681ea382\u0026is=681d5202\u0026hm=2ec910203bcbcce2262973d4b600a47730e4d5e55b0f58f55075eff85010ca36\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,002",
+                                                    "health":  "66,912",
+                                                    "power":  "26,178"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MONSTRO INTERIOR",
+                                                                "description":  "[HAB 1]: **Enquanto CARREGADO**, inflige SANGRAMENTO por 10 segundos **para cada 15% de VIDA perdidos por um dos lutadores.**\n\n[HAB 2]: Ganhe FÚRIA e REGENERAÇÃO por 12 segundos cada **quando usar um BLOCKBUSTER enquanto o oponente estiver sofrendo SANGRAMENTO.**"
+                                                            },
+                                      "marquee_ability":  "Morta do Mal",
+                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do dragão, \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e morder, \u003c:GolpeEspecial:1434999859768987748\u003e O acorde de prata, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  },
+                                  {
+                                      "name":  "Roendo as Unhas",
+                                      "title_formatted":  "\u003e Roendo as Unhas \u003c:Neutro:1389703364304175125\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Neutro",
+                                      "color_hex":  "#ffffff",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1423007320467701861/7b933d52-6dd6-49f3-81eb-0c9bcb259c56.png?ex=68debe57\u0026is=68dd6cd7\u0026hm=6b77837c541f0666aa637fcd72d5f30e77d9c738c476fddb77f2b66a237044c3\u0026"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,002",
+                                                    "health":  "66,912",
+                                                    "power":  "26,178"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "Chuva de Cavaleiro",
+                                                                "description":  "[HAB 1]: Ganhe MIASMA ou BARREIRA por 15 s cada (a cada 0.25 s) ao carregar CAUDA DE DRAGÃO. **Esses efeitos são removidos se você for DERRUBADO**\n\n[HAB 2]: **Quando estiver totalmente CARREGADO**, ESQUIVE-SE de todos os ataques **ao usar ARRANCADA**, ATAQUES de ARRANCADA bem-sucedidas infligem 3 EF. NEG. aleatório (exceto ATORDOAMENTO e DESTRUIÇÃO) por 10 segundos."
+                                                            },
+                                      "marquee_ability":  "Morta do Mal",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do dragão, \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e morder, \u003c:GolpeEspecial:1434999859768987748\u003e O acorde de prata, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                  }
+                              ],
+                     "prata":  [
+                                   {
+                                       "name":  "Verde Gangrena",
+                                       "title_formatted":  "\u003e Verde Gangrena \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Ar",
+                                       "color_hex":  "#00ff00",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685636427284650/1000.png?ex=681ea352\u0026is=681d51d2\u0026hm=7eeff4defc1fd2828a8026840ee1e7110af146860cd54c9b917b462b7b61afc8\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "7,604",
+                                                     "health":  "75,936",
+                                                     "power":  "22,910"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "ROLO DA MORTE",
+                                                                 "description":  "[HAB 1]: A Squigly ganha MEDIDOR DE BLOCKBUSTER **igual a 3% da sua VEL. DE MOVIMENTO.**\n\n[HAB 2]: Ganhe 1 camada de MIASMA por 5 segundos a cada 1 segundo(s) **enquanto não estiver BLOQUEANDO perto de um corpo morto.**"
+                                                             },
+                                       "marquee_ability":  "Morta do Mal",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                   },
+                                   {
+                                       "name":  "Semimorta",
+                                       "title_formatted":  "\u003e Semimorta \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Luz",
+                                       "color_hex":  "#ffff62",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685658716082380/1000.png?ex=681ea357\u0026is=681d51d7\u0026hm=f03b8a037db5c244d8a1db2fd5497f3c786cdb437e22fe9404c7c55224718fb5\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "8,909",
+                                                     "health":  "69,005",
+                                                     "power":  "24,117"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "ABRACADÁVER",
+                                                                 "description":  "[HAB 1]: **Ao usar um BLOCKBUSTER com CONTAGEM DE COMBO ÍMPAR**, ganhe INVENCIBILIDADE por 8 seg\n\n[HAB 2]: Também RESSUSCITA aliados com 25% de VIDA **se a Squigly tiver menos de 50% de VIDA.**"
+                                                             },
+                                       "marquee_ability":  "Morta-Viva",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                   },
+                                   {
+                                       "name":  "Morta de Calor",
+                                       "title_formatted":  "\u003e Morta de Calor \u003c:Fogo:1389703188525092934\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Fogo",
+                                       "color_hex":  "#ff0000",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685680417145006/1000.png?ex=681ea35d\u0026is=681d51dd\u0026hm=d9795a11c123eb0de856945a5c821a7dab07f7c9546ff602173610c5269ebcfe\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,215",
+                                                     "health":  "62,112",
+                                                     "power":  "24,302"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "IMOLAÇÃO",
+                                                                 "description":  "[HAB 1]: Ganhe 2 camadas de FÚRIA por 5 segundos a cada 10 segundos **enquanto estiver com menos de 50% de VIDA.**\n\n[HAB 2]: 100% de chance dos GOLPES ESPECIAIS serem INDEFENSÁVEIS **ao se beneficiar de FÚRIA.**"
+                                                             },
+                                       "marquee_ability":  "Morta do Mal",
+                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                   },
+                                   {
+                                       "name":  "Quebra-Morto",
+                                       "title_formatted":  "\u003e Quebra-Morto \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Luz",
+                                       "color_hex":  "#ffff00",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361685567028465664/1000.png?ex=681ea342\u0026is=681d51c2\u0026hm=6d667ca7b5a426db99058965d13057196ae49b6c1e524e94bf83bc2e6ebce352\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "7,604",
+                                                     "health":  "75,936",
+                                                     "power":  "22,910"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "PIXEL MÁGICO",
+                                                                 "description":  "[HAB 1]: **Uma vez por luta, ao sofrer um GOLPE que seria fatal, **ganhe RESISTÊNCIA FINAL por 15 segundos.\n\n[HAB 2]: Ganhe 7% de VIDA por segundo **enquanto estiver carregando a CAUDA DE DRAGÃO.**"
+                                                             },
+                                       "marquee_ability":  "Morta-Viva",
+                                       "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do dragão, \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e morder, \u003c:GolpeEspecial:1434999859768987748\u003e O acorde de prata, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                   }
+                               ],
+                     "bronze":  [
+                                    {
+                                        "name":  "Medo do Palco",
+                                        "title_formatted":  "\u003e Medo do Palco \u003c:Trevas:1389703142848991364\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Trevas",
+                                        "color_hex":  "#8000ff",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                       "portrait_url":  "https://static.wikia.nocookie.net/skullgirlsmobile/images/f/f9/Stage_Fright.png/revision/latest?cb=20181019153831"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "8,237",
+                                                      "health":  "64,090",
+                                                      "power":  "22,355"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "MEMENTO MORI",
+                                                                  "description":  "O oponente sofre MALDIÇÃO e FEITIÇO por 15 segundos quando a VIDA **dele** cai abaixo de 25%.\n\nInflige DESTRUIÇÃO por 20 segundos **quando derrotada** com um BLOCKBUSTER."
+                                                              },
+                                        "marquee_ability":  "",
+                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:Blockbuster:1434999898385944606\u003e Ópera de Batalha, \u003c:GolpeEspecial:1434999859768987748\u003e Soco de Dragão, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e Morder, \u003c:GolpeEspecial:1434999859768987748\u003e O Acorde de Prata"
+                                    },
+                                    {
+                                        "name":  "Branca de Medo",
+                                        "title_formatted":  "\u003e Branca de Medo \u003c:Luz:1389703315167907902\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Luz",
+                                        "color_hex":  "#ffff00",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018109214822514/icon-squigly.png?ex=68a78767\u0026is=68a635e7\u0026hm=e09c4f797e77f7ae4aa891ed3a095faaa5c4513e45a0320cad600eba8da1fbd4\u0026",
+                                                       "portrait_url":  "https://static.wikia.nocookie.net/skullgirlsmobile/images/5/56/Scared_Stiff.png/revision/latest?cb=20181019153830"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "7,008",
+                                                      "health":  "70,464",
+                                                      "power":  "22,158"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "RIGOR MORTIS",
+                                                                  "description":  "Ganhe INABALÁVEL **após enfrentar o mesmo oponente** por 15 s. É removido quando o oponente SAI DA ASSISTÊNCIA ou morre.\n\n**Não pode perder mais de** 5% de sua VIDA MÁXIMA com um único GOLPE."
+                                                              },
+                                        "marquee_ability":  "",
+                                        "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Fúria do dragão, \u003c:Blockbuster:1434999898385944606\u003e Inferno do Leviatã, \u003c:GolpeEspecial:1434999859768987748\u003e Arrastar e morder, \u003c:GolpeEspecial:1434999859768987748\u003e O acorde de prata, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                    }
+                                ]
+                 }
 }

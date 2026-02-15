@@ -1,344 +1,344 @@
 {
-  "character": "Marie",
-  "version": "1.0",
-  "variants": {
-    "diamante": [
-      {
-        "name": "Megalomaníaca",
-        "title_formatted": "> Megalomaníaca <:Agua:1389703224210231437><:diamante:1407839264779141140>",
-        "element": "Água",
-        "color_hex": "#000000",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682423351345202/1000.png?ex=67ffa514&is=67fe5394&hm=202179b42dc364403787d3d5cc8bb9337e55f6f127ee264f40f4156296cd1d84&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "8,775",
-          "health": "88,052",
-          "power": "27,709"
-        },
-        "signature_ability": {
-          "name": "Desconhecida",
-          "description": "Habilidade Características: **DIA DO JULGAMENTO**\n\n[HAB 1]: Enquanto a **Marie estiver viva**, ganha ARMADURA e ESQUIVA permanentes por 10 s para cada 30% de** VIDA perdida por qualquer aliado**. Uma camada de **ARMADURA é removida sempre que o oponente usa um BLOCKBUSTER.**\n\n[HAB 2]: **Enquanto a Marie for a lutadora ativa e tiver ao menos 3 camadas de ARMADURA**, inflige ATORDOAMENTO por 4 s a cada 15 s e DRENA 10% do MEDIDOR DE BLOCKBUSTER a cada 5 s."
-        },
-        "marquee_ability": "Ressureição Reforçada",
-        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Impacto Esquelético Repetido **BB3**, <:Blockbuster:1434999898385944606> Limpeza Geral, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Explosão"
-      },
-      {
-        "name": "Sem Coração",
-        "title_formatted": "> Sem Coração <:Trevas:1389703142848991364><:diamante:1407839264779141140>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682475016785960/1000.png?ex=67ffa520&is=67fe53a0&hm=ee34c691157ddc11074f7b1b90094c1fa8cdf435968d7b2c0cd52cebb66d9cb5&=&format=webp&quality=lossless&width=743&height=978"
-        },
-        "stats": {
-          "attack": "11,847",
-          "health": "72,058",
-          "power": "28,190"
-        },
-        "signature_ability": {
-          "name": "ASSALTO ABISSAL",
-          "description": "[HAB 1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 50% de DANO EXTRA. São INDEFENSÁVEIS **quando o oponente tiver menos de 50% de VIDA ou estiver com pelo menos 3 EF. NEG.**\n\n[HAB 2]: **Enquanto Marie estiver viva**, o último oponente sobrevivente ENTRA NA ASSISTÊNCIA com FEITIÇO, SANGRAMENTO FORTE e QUIETUS por 20 segundos cada."
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Desafio Formal (Expulsão), <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Maldade Insana",
-        "title_formatted": "> Maldade Insana <:Luz:1389703315167907902><:diamante:1407839264779141140>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1368627460169535488/Mad_Malice_TEMP.png?ex=6818e926&is=681797a6&hm=d5121bf7852cc01a844ad0a70649207bd1fbb13f19ffa69ac6650749195ecd42&=&format=webp&quality=lossless&width=258&height=377"
-        },
-        "stats": {
-          "attack": "11,847",
-          "health": "72,058",
-          "power": "28,190"
-        },
-        "signature_ability": {
-          "name": "Cortem as Cabeças! ",
-          "description": "[HAB 1]: **Enquanto Marie estiver viva**, os GOLPES CRÍTICOS de seus colegas de equipe têm 25% de chance de conceder FÚRIA por 15 segundos.\n\n[HAB 2]: **Marie ganha FÚRIA permanente a cada 30% de VIDA perdida por um aliado ou inimigo**. Ganha PRECISÃO permanente enquanto estiver com 5 acumulos dessa FÚRIA."
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      }
-    ],
-    "ouro": [
-      {
-        "name": "Octoplasma",
-        "title_formatted": "> Octoplasma <:Agua:1389703224210231437><:ouro:1407839155785826306>",
-        "element": "Água",
-        "color_hex": "#1095d5",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682166987227146/1000.png?ex=67ffa4d7&is=67fe5357&hm=8150166f76aafceda68cdc328d5eb5c310a535a49e99e8b28b5f99594b53db79&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "8,160",
-          "health": "81,773",
-          "power": "25,746"
-        },
-        "signature_ability": {
-          "name": "MORTA NA ÁGUA",
-          "description": "[HAB 1]: **Ao usar ASSITÊNCIA de ou para a Marie**, o lutador que entra em campo recebe 2 acúmulos de REGENERAÇÃO por 15 segundos e ganham 15% de MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: **Enquanto Marie estiver viva, golpes de aliados de ÁGUA** têm 25% de chance de aplicar SANGRAMENTO, GOSMA ou QUIETUS por 15 segundos, enquanto tiver REGENERAÇÃO."
-        },
-        "marquee_ability": "Ressureição Reforçada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Desafio Formal (Expulsão), <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Coveira",
-        "title_formatted": "> Coveira <:Luz:1389703315167907902><:ouro:1407839155785826306>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682273413627956/1000.png?ex=67ffa4f0&is=67fe5370&hm=e0aa623cd0709d1a3a97a1a6e492ca79674cd8281ed82b2153b203b7f048a330&=&format=webp&quality=lossless&width=743&height=978"
-        },
-        "stats": {
-          "attack": "9,581",
-          "health": "74,324",
-          "power": "25,958"
-        },
-        "signature_ability": {
-          "name": "PÉS NO CHÃO",
-          "description": "[HAB 1]: Dá IMUNIDADE e INABALÁVEL por 15 segundos cada **quando o oponente é NOCAUTEADO.**\n\n[HAB 2]: Dá PRECISÃO a cada 2 segundos **enquanto estiver se beneficiando de IMUNIDADE ou INABALÁVEL.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Aspiradora de Fantasmas",
-        "title_formatted": "> Aspiradora de Fantasmas <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#076314",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682232695066776/1000.png?ex=67ffa4e7&is=67fe5367&hm=e553857ffc29f1c7e7d6726c0a738c95bfc1c4d3168233b2541da3aebb89ece3&=&format=webp&quality=lossless&width=743&height=978"
-        },
-        "stats": {
-          "attack": "9,581",
-          "health": "74,324",
-          "power": "25,958"
-        },
-        "signature_ability": {
-          "name": "MANSÃO IMPOSSÍVEL",
-          "description": "[HAB 1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 35% de DANO EXTRA e TRANSFEREM até 3 Efeito(s) Positivo(s) **do oponente para você.**\n\n[HAB 2]: **Enquanto CARREGADA, GOLPES de ATAQUE DE CARGA ** convertem todos os EF. POS. e NEG. em você em BARREIRA, MIASMA ou FÚRIA por 35 segundos."
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "A Todo Custo",
-        "title_formatted": "> A Todo Custo <:Luz:1389703315167907902><:ouro:1407839155785826306>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682208380682240/1000.png?ex=67ffa4e1&is=67fe5361&hm=521a717e4623381cc912a289f13ca293bfd95ca155bc53f4d12f665c8b8ecb57&=&format=webp&quality=lossless&width=743&height=978"
-        },
-        "stats": {
-          "attack": "9,581",
-          "health": "74,324",
-          "power": "25,958"
-        },
-        "signature_ability": {
-          "name": "MANAFESTAÇÃO",
-          "description": "[HAB 1]: **GOLPES com INVOCAÇÃO ESQUELÉTICA concedem REGENERAÇÃO por 15 segundos ou BARREIRA.**\n\n[HAB 2]: **Enquanto se beneficiar de REGENERAÇÃO e BARREIRA**, GOLPES de INVOCAÇÃO ESQUELÉTICA tiram mais 2% da VIDA MÁX. do oponente e DRENAM 3% do MEDIDOR DE BLOCKBUSTER."
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Ceifadora Sorridente",
-        "title_formatted": "> Ceifadora Sorridente <:Ar:1389703277532287066><:ouro:1407839155785826306>",
-        "element": "Ar",
-        "color_hex": "#076314",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682346377482251/1000.png?ex=67ffa502&is=67fe5382&hm=8a7614b1ba706c5b37d4f268725d818d178f1876bbbf7d45e9cfa1a1b5e34630&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "11,002",
-          "health": "66,912",
-          "power": "26,178"
-        },
-        "signature_ability": {
-          "name": "Acabe com Eles",
-          "description": "[HAB 1]: Recupera 15% do MEDIDOR DE BLOCKBUSTER e inflige POLARIDADE INVERSA por 15 segundos **quando um dos lutadores usa um BLOCKBUSTER.**\n\n[HAB 2]: Dá uma CARGA MORTUÁRIA e 2 camadas de MIASMA por 12 **segundos ao derrotar um oponente.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Cavalo Sombrio",
-        "title_formatted": "> Cavalo Sombrio <:Trevas:1389703142848991364><:ouro:1407839155785826306>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682398986637393/1000.png?ex=67ffa50e&is=67fe538e&hm=c5e4453a43493c7fe0977eea7b42735b53fcd7cb40e4c38b8d6f0ede595e8f1b&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "11,002",
-          "health": "66,912",
-          "power": "26,178"
-        },
-        "signature_ability": {
-          "name": "LUA DE MAU AGOURO",
-          "description": "[HAB 1]: Inflige MALDIÇÃO e dá ACELERAÇÃO permanente **depois de enfrentar o mesmo oponente por 10 segundos.**\n\n[HAB 2]: **Enquanto Marie estiver viva e se beneficiando de ACELERAÇÃO**, todos os aliados das Trevas causam 50% de DANO EXTRA."
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      }
-    ],
-    "prata": [
-      {
-        "name": "Dama de Honra",
-        "title_formatted": "> Dama de Honra <:Luz:1389703315167907902><:prata:1407839105169227957>",
-        "element": "Luz",
-        "color_hex": "#dfd173",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682047160029184/1000.png?ex=67ffa4ba&is=67fe533a&hm=9a167d5b99ecb5548952b4fec86ed799053f3b966f9a4d57dcc4372c252a0496&=&format=webp&quality=lossless&width=743&height=978"
-        },
-        "stats": {
-          "attack": "7,604",
-          "health": "75,936",
-          "power": "22,910"
-        },
-        "signature_ability": {
-          "name": "VALOR MORTIS",
-          "description": "[HAB 1]: **Enquanto Marie estiver viva**, GOLPES bloqueados por todos os aliados têm uma chance de 50% de converter 1 EF. NEG. em uma camada de BARREIRA.\n\n[HAB 2]: **Enquanto Marie estiver viva**, todos os aliados recuperam 2% de VIDA por segundo enquanto se beneficia de BARREIRA."
-        },
-        "marquee_ability": "Ressureição Reforçada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Desafio Formal (Expulsão), <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Encantadora de Serpentes",
-        "title_formatted": "> Encantadora de Serpentes <:Ar:1389703277532287066><:prata:1407839105169227957>",
-        "element": "Ar",
-        "color_hex": "#076314",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682107981762661/1000.png?ex=67ffa4c9&is=67fe5349&hm=d947ad6c7eba5baa2623179030a094c394d5f0f949873567fd16a84fd291d836&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "8,909",
-          "health": "69,005",
-          "power": "24,117"
-        },
-        "signature_ability": {
-          "name": "FAVOR INFERNAL",
-          "description": "[HAB 1]: **Com a CARGA em pelo menos 50%**, usar um GOLPE ESPECIAL inflige IMOBILIZAÇÃO e DESATIVA BLOCKBUSTERS por 10 segundos cada.\n\n[HAB 2]: **Ao usar uma CARGA MORTUÁRIA**, todos os aliados ganham 50% no MEDIDOR DE BLOCKBUSTER e FÚRIA permanente."
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Abóbora Fantasma",
-        "title_formatted": "> Abóbora Fantasma",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025858041610351/Jack-O-Specter.png?ex=68decf9b&is=68dd7e1b&hm=9af024eacff142e32b9605e9b88b3f55833217ae1c58110b8763ab94206e860b&"
-        },
-        "stats": {
-          "attack": "10,215",
-          "health": "62,112",
-          "power": "24,302"
-        },
-        "signature_ability": {
-          "name": "GOSTOSURAS OU TRAVESSURAS",
-          "description": "[HAB 1]: Ganhe um EF. POS. por 15 s **quando qualquer Lutador usar um GOLPE ESPECIAL.**\n\n[HAB 2]: Inflinge 3 EF. NEG. aleatórios no oponente por 15 segundos cada **quando qualquer lutador usar um BLOCKBUSTER.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Domadora de Fantasmas",
-        "title_formatted": "> Domadora de Fantasmas <:Fogo:1389703188525092934><:prata:1407839105169227957>",
-        "element": "Fogo",
-        "color_hex": "#ef2e2d",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682141561356458/1000.png?ex=67ffa4d1&is=67fe5351&hm=856aca9f66cbe00da937779e9dea7aed3f5466d57670d3f009adadff7e12919f&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "10,215",
-          "health": "62,112",
-          "power": "24,302"
-        },
-        "signature_ability": {
-          "name": "VAI PASTAR",
-          "description": "[HAB 1]: **GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 30% de DANO EXTRA** e têm uma chance de 50% de infligir GOSMA por 15 segundos.\n\n[HAB 2]: Usar um BLOCKBUSTER inflige QUIETUS por 15 segundos **se o oponente estiver sofrendo com GOSMA.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      }
-    ],
-    "bronze": [
-      {
-        "name": "Osso Puro",
-        "title_formatted": "> Osso Puro <:Trevas:1389703142848991364><:bronze:1407839009664798801>",
-        "element": "Trevas",
-        "color_hex": "#6426a8",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361681977740230956/1000.png?ex=67ffa4aa&is=67fe532a&hm=7d2f3add8b8fe8a5afa3bb518ac5eaf5b5257484cf6678f6a7d04e99a31ab083&=&format=webp&quality=lossless&width=743&height=978"
-        },
-        "stats": {
-          "attack": "8,237",
-          "health": "64,090",
-          "power": "22,355"
-        },
-        "signature_ability": {
-          "name": "ENCARNADA",
-          "description": "[HAB 1]: **Ganhe ESPINHOS por 12 segundos ao usar um GOLPE ESPECIAL.**\n\n[HAB 2]: Ao alcançar 3 camada(s) de ESPINHOS, **remove todos os ESPINHOS e dá MIASMA por 15 segundos.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Reat. Especial e Precisão",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      },
-      {
-        "name": "Maga Marrenta",
-        "title_formatted": "> Maga Marrenta <:Fogo:1389703188525092934><:bronze:1407839009664798801>",
-        "element": "Fogo",
-        "color_hex": "#ef2e2d",
-        "images": {
-          "icon_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780&is=68a63600&hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852&",
-          "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682008044208228/1000.png?ex=67ffa4b1&is=67fe5331&hm=49e97bb2e9bd0aca9530a3da19ef92a226e2f9d915dd6f93887f3332a4850ff8&=&format=webp&quality=lossless&width=200&height=263"
-        },
-        "stats": {
-          "attack": "9,293",
-          "health": "57,658",
-          "power": "22,336"
-        },
-        "signature_ability": {
-          "name": "MEXER O CALDEIRÃO",
-          "description": "[HAB 1]: Dá um EF. POS. aleatório por 30 segundos **quando um oponente é derrotado ou CARGA MORTUÁRIA for usada.**\n\n[HAB 2]: Ganhe 2% no MEDIDOR DE BLOCKBUSTER por segundo **enquanto estiver se beneficiando de um EF. POS.**"
-        },
-        "marquee_ability": "Incineração Melhorada",
-        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-        "recommended_arsenal": "<:Blockbuster:1434999898385944606> Esmurrar Até Cansar, <:GolpeEspecial:1434999859768987748> Carrossel da Marie, <:GolpeEspecial:1434999859768987748> Fazedor de Feno de Hilgard, <:GolpeEspecial:1434999859768987748> Pula-Pula, <:GolpeEspecial:1434999859768987748> Obstrução da Sucção"
-      }
-    ]
-  }
+    "character":  "Marie",
+    "version":  "1.0",
+    "variants":  {
+                     "diamante":  [
+                                      {
+                                          "name":  "Megalomaníaca",
+                                          "title_formatted":  "\u003e Megalomaníaca \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Água",
+                                          "color_hex":  "#000000",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                         "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682423351345202/1000.png?ex=67ffa514\u0026is=67fe5394\u0026hm=202179b42dc364403787d3d5cc8bb9337e55f6f127ee264f40f4156296cd1d84\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "8,775",
+                                                        "health":  "88,052",
+                                                        "power":  "27,709"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "Desconhecida",
+                                                                    "description":  "Habilidade Características: **DIA DO JULGAMENTO**\n\n[HAB 1]: Enquanto a **Marie estiver viva**, ganha ARMADURA e ESQUIVA permanentes por 10 s para cada 30% de** VIDA perdida por qualquer aliado**. Uma camada de **ARMADURA é removida sempre que o oponente usa um BLOCKBUSTER.**\n\n[HAB 2]: **Enquanto a Marie for a lutadora ativa e tiver ao menos 3 camadas de ARMADURA**, inflige ATORDOAMENTO por 4 s a cada 15 s e DRENA 10% do MEDIDOR DE BLOCKBUSTER a cada 5 s."
+                                                                },
+                                          "marquee_ability":  "Ressureição Reforçada",
+                                          "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Impacto Esquelético Repetido, \u003c:Blockbuster:1434999898385944606\u003e Limpeza Geral, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
+                                      },
+                                      {
+                                          "name":  "Sem Coração",
+                                          "title_formatted":  "\u003e Sem Coração \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Trevas",
+                                          "color_hex":  "#6426a8",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                         "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682475016785960/1000.png?ex=67ffa520\u0026is=67fe53a0\u0026hm=ee34c691157ddc11074f7b1b90094c1fa8cdf435968d7b2c0cd52cebb66d9cb5\u0026=\u0026format=webp\u0026quality=lossless\u0026width=743\u0026height=978"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,847",
+                                                        "health":  "72,058",
+                                                        "power":  "28,190"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "ASSALTO ABISSAL",
+                                                                    "description":  "[HAB 1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 50% de DANO EXTRA. São INDEFENSÁVEIS **quando o oponente tiver menos de 50% de VIDA ou estiver com pelo menos 3 EF. NEG.**\n\n[HAB 2]: **Enquanto Marie estiver viva**, o último oponente sobrevivente ENTRA NA ASSISTÊNCIA com FEITIÇO, SANGRAMENTO FORTE e QUIETUS por 20 segundos cada."
+                                                                },
+                                          "marquee_ability":  "Incineração Melhorada",
+                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Desafio Formal (Expulsão), \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                      },
+                                      {
+                                          "name":  "Maldade Insana",
+                                          "title_formatted":  "\u003e Maldade Insana \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
+                                          "element":  "Luz",
+                                          "color_hex":  "#dfd173",
+                                          "images":  {
+                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                         "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1368627460169535488/Mad_Malice_TEMP.png?ex=6818e926\u0026is=681797a6\u0026hm=d5121bf7852cc01a844ad0a70649207bd1fbb13f19ffa69ac6650749195ecd42\u0026=\u0026format=webp\u0026quality=lossless\u0026width=258\u0026height=377"
+                                                     },
+                                          "stats":  {
+                                                        "attack":  "11,847",
+                                                        "health":  "72,058",
+                                                        "power":  "28,190"
+                                                    },
+                                          "signature_ability":  {
+                                                                    "name":  "Cortem as Cabeças! ",
+                                                                    "description":  "[HAB 1]: **Enquanto Marie estiver viva**, os GOLPES CRÍTICOS de seus colegas de equipe têm 25% de chance de conceder FÚRIA por 15 segundos.\n\n[HAB 2]: **Marie ganha FÚRIA permanente a cada 30% de VIDA perdida por um aliado ou inimigo**. Ganha PRECISÃO permanente enquanto estiver com 5 acumulos dessa FÚRIA."
+                                                                },
+                                          "marquee_ability":  "Incineração Melhorada",
+                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                      }
+                                  ],
+                     "ouro":  [
+                                  {
+                                      "name":  "Octoplasma",
+                                      "title_formatted":  "\u003e Octoplasma \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Água",
+                                      "color_hex":  "#1095d5",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                     "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682166987227146/1000.png?ex=67ffa4d7\u0026is=67fe5357\u0026hm=8150166f76aafceda68cdc328d5eb5c310a535a49e99e8b28b5f99594b53db79\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "8,160",
+                                                    "health":  "81,773",
+                                                    "power":  "25,746"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MORTA NA ÁGUA",
+                                                                "description":  "[HAB 1]: **Ao usar ASSITÊNCIA de ou para a Marie**, o lutador que entra em campo recebe 2 acúmulos de REGENERAÇÃO por 15 segundos e ganham 15% de MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: **Enquanto Marie estiver viva, golpes de aliados de ÁGUA** têm 25% de chance de aplicar SANGRAMENTO, GOSMA ou QUIETUS por 15 segundos, enquanto tiver REGENERAÇÃO."
+                                                            },
+                                      "marquee_ability":  "Ressureição Reforçada",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Desafio Formal (Expulsão), \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                  },
+                                  {
+                                      "name":  "Coveira",
+                                      "title_formatted":  "\u003e Coveira \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Luz",
+                                      "color_hex":  "#dfd173",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                     "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682273413627956/1000.png?ex=67ffa4f0\u0026is=67fe5370\u0026hm=e0aa623cd0709d1a3a97a1a6e492ca79674cd8281ed82b2153b203b7f048a330\u0026=\u0026format=webp\u0026quality=lossless\u0026width=743\u0026height=978"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,581",
+                                                    "health":  "74,324",
+                                                    "power":  "25,958"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "PÉS NO CHÃO",
+                                                                "description":  "[HAB 1]: Dá IMUNIDADE e INABALÁVEL por 15 segundos cada **quando o oponente é NOCAUTEADO.**\n\n[HAB 2]: Dá PRECISÃO a cada 2 segundos **enquanto estiver se beneficiando de IMUNIDADE ou INABALÁVEL.**"
+                                                            },
+                                      "marquee_ability":  "Incineração Melhorada",
+                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                  },
+                                  {
+                                      "name":  "Aspiradora de Fantasmas",
+                                      "title_formatted":  "\u003e Aspiradora de Fantasmas \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#076314",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                     "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682232695066776/1000.png?ex=67ffa4e7\u0026is=67fe5367\u0026hm=e553857ffc29f1c7e7d6726c0a738c95bfc1c4d3168233b2541da3aebb89ece3\u0026=\u0026format=webp\u0026quality=lossless\u0026width=743\u0026height=978"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,581",
+                                                    "health":  "74,324",
+                                                    "power":  "25,958"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MANSÃO IMPOSSÍVEL",
+                                                                "description":  "[HAB 1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 35% de DANO EXTRA e TRANSFEREM até 3 Efeito(s) Positivo(s) **do oponente para você.**\n\n[HAB 2]: **Enquanto CARREGADA, GOLPES de ATAQUE DE CARGA ** convertem todos os EF. POS. e NEG. em você em BARREIRA, MIASMA ou FÚRIA por 35 segundos."
+                                                            },
+                                      "marquee_ability":  "Incineração Melhorada",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                  },
+                                  {
+                                      "name":  "A Todo Custo",
+                                      "title_formatted":  "\u003e A Todo Custo \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Luz",
+                                      "color_hex":  "#dfd173",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                     "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682208380682240/1000.png?ex=67ffa4e1\u0026is=67fe5361\u0026hm=521a717e4623381cc912a289f13ca293bfd95ca155bc53f4d12f665c8b8ecb57\u0026=\u0026format=webp\u0026quality=lossless\u0026width=743\u0026height=978"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "9,581",
+                                                    "health":  "74,324",
+                                                    "power":  "25,958"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "MANAFESTAÇÃO",
+                                                                "description":  "[HAB 1]: **GOLPES com INVOCAÇÃO ESQUELÉTICA concedem REGENERAÇÃO por 15 segundos ou BARREIRA.**\n\n[HAB 2]: **Enquanto se beneficiar de REGENERAÇÃO e BARREIRA**, GOLPES de INVOCAÇÃO ESQUELÉTICA tiram mais 2% da VIDA MÁX. do oponente e DRENAM 3% do MEDIDOR DE BLOCKBUSTER."
+                                                            },
+                                      "marquee_ability":  "Incineração Melhorada",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                  },
+                                  {
+                                      "name":  "Ceifadora Sorridente",
+                                      "title_formatted":  "\u003e Ceifadora Sorridente \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Ar",
+                                      "color_hex":  "#076314",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                     "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682346377482251/1000.png?ex=67ffa502\u0026is=67fe5382\u0026hm=8a7614b1ba706c5b37d4f268725d818d178f1876bbbf7d45e9cfa1a1b5e34630\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,002",
+                                                    "health":  "66,912",
+                                                    "power":  "26,178"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "Acabe com Eles",
+                                                                "description":  "[HAB 1]: Recupera 15% do MEDIDOR DE BLOCKBUSTER e inflige POLARIDADE INVERSA por 15 segundos **quando um dos lutadores usa um BLOCKBUSTER.**\n\n[HAB 2]: Dá uma CARGA MORTUÁRIA e 2 camadas de MIASMA por 12 **segundos ao derrotar um oponente.**"
+                                                            },
+                                      "marquee_ability":  "Incineração Melhorada",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                  },
+                                  {
+                                      "name":  "Cavalo Sombrio",
+                                      "title_formatted":  "\u003e Cavalo Sombrio \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
+                                      "element":  "Trevas",
+                                      "color_hex":  "#6426a8",
+                                      "images":  {
+                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                     "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682398986637393/1000.png?ex=67ffa50e\u0026is=67fe538e\u0026hm=c5e4453a43493c7fe0977eea7b42735b53fcd7cb40e4c38b8d6f0ede595e8f1b\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                 },
+                                      "stats":  {
+                                                    "attack":  "11,002",
+                                                    "health":  "66,912",
+                                                    "power":  "26,178"
+                                                },
+                                      "signature_ability":  {
+                                                                "name":  "LUA DE MAU AGOURO",
+                                                                "description":  "[HAB 1]: Inflige MALDIÇÃO e dá ACELERAÇÃO permanente **depois de enfrentar o mesmo oponente por 10 segundos.**\n\n[HAB 2]: **Enquanto Marie estiver viva e se beneficiando de ACELERAÇÃO**, todos os aliados das Trevas causam 50% de DANO EXTRA."
+                                                            },
+                                      "marquee_ability":  "Incineração Melhorada",
+                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                  }
+                              ],
+                     "prata":  [
+                                   {
+                                       "name":  "Dama de Honra",
+                                       "title_formatted":  "\u003e Dama de Honra \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Luz",
+                                       "color_hex":  "#dfd173",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                      "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682047160029184/1000.png?ex=67ffa4ba\u0026is=67fe533a\u0026hm=9a167d5b99ecb5548952b4fec86ed799053f3b966f9a4d57dcc4372c252a0496\u0026=\u0026format=webp\u0026quality=lossless\u0026width=743\u0026height=978"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "7,604",
+                                                     "health":  "75,936",
+                                                     "power":  "22,910"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "VALOR MORTIS",
+                                                                 "description":  "[HAB 1]: **Enquanto Marie estiver viva**, GOLPES bloqueados por todos os aliados têm uma chance de 50% de converter 1 EF. NEG. em uma camada de BARREIRA.\n\n[HAB 2]: **Enquanto Marie estiver viva**, todos os aliados recuperam 2% de VIDA por segundo enquanto se beneficia de BARREIRA."
+                                                             },
+                                       "marquee_ability":  "Ressureição Reforçada",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Desafio Formal (Expulsão), \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                   },
+                                   {
+                                       "name":  "Encantadora de Serpentes",
+                                       "title_formatted":  "\u003e Encantadora de Serpentes \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Ar",
+                                       "color_hex":  "#076314",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                      "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682107981762661/1000.png?ex=67ffa4c9\u0026is=67fe5349\u0026hm=d947ad6c7eba5baa2623179030a094c394d5f0f949873567fd16a84fd291d836\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "8,909",
+                                                     "health":  "69,005",
+                                                     "power":  "24,117"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "FAVOR INFERNAL",
+                                                                 "description":  "[HAB 1]: **Com a CARGA em pelo menos 50%**, usar um GOLPE ESPECIAL inflige IMOBILIZAÇÃO e DESATIVA BLOCKBUSTERS por 10 segundos cada.\n\n[HAB 2]: **Ao usar uma CARGA MORTUÁRIA**, todos os aliados ganham 50% no MEDIDOR DE BLOCKBUSTER e FÚRIA permanente."
+                                                             },
+                                       "marquee_ability":  "Incineração Melhorada",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                   },
+                                   {
+                                       "name":  "Abóbora Fantasma",
+                                       "title_formatted":  "\u003e Abóbora Fantasma",
+                                       "element":  "Trevas",
+                                       "color_hex":  "#6426a8",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1423025858041610351/Jack-O-Specter.png?ex=68decf9b\u0026is=68dd7e1b\u0026hm=9af024eacff142e32b9605e9b88b3f55833217ae1c58110b8763ab94206e860b\u0026"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,215",
+                                                     "health":  "62,112",
+                                                     "power":  "24,302"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "GOSTOSURAS OU TRAVESSURAS",
+                                                                 "description":  "[HAB 1]: Ganhe um EF. POS. por 15 s **quando qualquer Lutador usar um GOLPE ESPECIAL.**\n\n[HAB 2]: Inflinge 3 EF. NEG. aleatórios no oponente por 15 segundos cada **quando qualquer lutador usar um BLOCKBUSTER.**"
+                                                             },
+                                       "marquee_ability":  "Incineração Melhorada",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                   },
+                                   {
+                                       "name":  "Domadora de Fantasmas",
+                                       "title_formatted":  "\u003e Domadora de Fantasmas \u003c:Fogo:1389703188525092934\u003e\u003c:prata:1407839105169227957\u003e",
+                                       "element":  "Fogo",
+                                       "color_hex":  "#ef2e2d",
+                                       "images":  {
+                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                      "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682141561356458/1000.png?ex=67ffa4d1\u0026is=67fe5351\u0026hm=856aca9f66cbe00da937779e9dea7aed3f5466d57670d3f009adadff7e12919f\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                  },
+                                       "stats":  {
+                                                     "attack":  "10,215",
+                                                     "health":  "62,112",
+                                                     "power":  "24,302"
+                                                 },
+                                       "signature_ability":  {
+                                                                 "name":  "VAI PASTAR",
+                                                                 "description":  "[HAB 1]: **GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 30% de DANO EXTRA** e têm uma chance de 50% de infligir GOSMA por 15 segundos.\n\n[HAB 2]: Usar um BLOCKBUSTER inflige QUIETUS por 15 segundos **se o oponente estiver sofrendo com GOSMA.**"
+                                                             },
+                                       "marquee_ability":  "Incineração Melhorada",
+                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
+                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                   }
+                               ],
+                     "bronze":  [
+                                    {
+                                        "name":  "Osso Puro",
+                                        "title_formatted":  "\u003e Osso Puro \u003c:Trevas:1389703142848991364\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Trevas",
+                                        "color_hex":  "#6426a8",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                       "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361681977740230956/1000.png?ex=67ffa4aa\u0026is=67fe532a\u0026hm=7d2f3add8b8fe8a5afa3bb518ac5eaf5b5257484cf6678f6a7d04e99a31ab083\u0026=\u0026format=webp\u0026quality=lossless\u0026width=743\u0026height=978"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "8,237",
+                                                      "health":  "64,090",
+                                                      "power":  "22,355"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "ENCARNADA",
+                                                                  "description":  "[HAB 1]: **Ganhe ESPINHOS por 12 segundos ao usar um GOLPE ESPECIAL.**\n\n[HAB 2]: Ao alcançar 3 camada(s) de ESPINHOS, **remove todos os ESPINHOS e dá MIASMA por 15 segundos.**"
+                                                              },
+                                        "marquee_ability":  "Incineração Melhorada",
+                                        "recommended_build":  "ATQ%, Perfuração, Reat. Especial e Precisão",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                    },
+                                    {
+                                        "name":  "Maga Marrenta",
+                                        "title_formatted":  "\u003e Maga Marrenta \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
+                                        "element":  "Fogo",
+                                        "color_hex":  "#ef2e2d",
+                                        "images":  {
+                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018214265098300/Icon-Marie.png?ex=68a78780\u0026is=68a63600\u0026hm=8e29c7ff0c6f66b8d569c609ed510b6562d5f792cfb405c05503061aa7a80852\u0026",
+                                                       "portrait_url":  "https://media.discordapp.net/attachments/1360911582938534114/1361682008044208228/1000.png?ex=67ffa4b1\u0026is=67fe5331\u0026hm=49e97bb2e9bd0aca9530a3da19ef92a226e2f9d915dd6f93887f3332a4850ff8\u0026=\u0026format=webp\u0026quality=lossless\u0026width=200\u0026height=263"
+                                                   },
+                                        "stats":  {
+                                                      "attack":  "9,293",
+                                                      "health":  "57,658",
+                                                      "power":  "22,336"
+                                                  },
+                                        "signature_ability":  {
+                                                                  "name":  "MEXER O CALDEIRÃO",
+                                                                  "description":  "[HAB 1]: Dá um EF. POS. aleatório por 30 segundos **quando um oponente é derrotado ou CARGA MORTUÁRIA for usada.**\n\n[HAB 2]: Ganhe 2% no MEDIDOR DE BLOCKBUSTER por segundo **enquanto estiver se beneficiando de um EF. POS.**"
+                                                              },
+                                        "marquee_ability":  "Incineração Melhorada",
+                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Esmurrar Até Cansar, \u003c:GolpeEspecial:1434999859768987748\u003e Carrossel da Marie, \u003c:GolpeEspecial:1434999859768987748\u003e Fazedor de Feno de Hilgard, \u003c:GolpeEspecial:1434999859768987748\u003e Pula-Pula, \u003c:GolpeEspecial:1434999859768987748\u003e Obstrução da Sucção"
+                                    }
+                                ]
+                 }
 }

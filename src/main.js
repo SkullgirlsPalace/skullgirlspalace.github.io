@@ -10,6 +10,7 @@ import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollTo
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleCycleRank, handleToggleCompactMode, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
+import { initAttributeTooltips } from './components/AttributeTooltip.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 
@@ -164,6 +165,9 @@ function setupStaticUI() {
 
     // Setup scroll listener for navbar visibility
     setupScrollListener();
+
+    // Initialize attribute tooltip system (delegated events)
+    initAttributeTooltips();
 }
 
 /**
