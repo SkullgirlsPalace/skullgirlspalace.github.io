@@ -1,302 +1,302 @@
 {
-    "annie":  {
-                  "Rosa Estelar":  {
-                                       "pf":  "S",
-                                       "riftOff":  "S",
-                                       "riftDef":  "A",
-                                       "parallel":  "SS"
-                                   },
-                  "Modelo Submarina":  {
-                                           "pf":  "A",
-                                           "riftOff":  "A",
-                                           "riftDef":  "S",
-                                           "parallel":  "A"
-                                       },
-                  "Brilho das Estrelas":  {
-                                              "pf":  "S",
-                                              "riftOff":  "A",
-                                              "riftDef":  "B",
-                                              "parallel":  "S"
-                                          },
-                  "Marcas de Fogo":  {
-                                         "pf":  "SS",
-                                         "riftOff":  "S",
-                                         "riftDef":  "C",
-                                         "parallel":  "S"
-                                     },
-                  "Vínculo de Alma":  {
-                                           "pf":  "S",
-                                           "riftOff":  "A",
-                                           "riftDef":  "B",
-                                           "parallel":  "A"
-                                       },
-                  "Maravilha Eterna":  {
-                                           "pf":  "A",
-                                           "riftOff":  "B",
-                                           "riftDef":  "A",
-                                           "parallel":  "B"
-                                       },
-                  "Ondina":  {
-                                 "pf":  "A",
-                                 "riftOff":  "B",
-                                 "riftDef":  "B",
-                                 "parallel":  "A"
-                             },
-                  "Heroína do Tempo":  {
-                                            "pf":  "B",
-                                            "riftOff":  "C",
-                                            "riftDef":  "C",
-                                            "parallel":  "B"
-                                        },
-                  "Garota Material":  {
-                                          "pf":  "B",
-                                          "riftOff":  "B",
-                                          "riftDef":  "B",
-                                          "parallel":  "B"
-                                      },
-                  "Rebelde Cósmica":  {
-                                           "pf":  "A",
-                                           "riftOff":  "A",
-                                           "riftDef":  "B",
-                                           "parallel":  "B"
-                                       },
-                  "Princesa da Lua":  {
-                                          "pf":  "B",
-                                          "riftOff":  "B",
-                                          "riftDef":  "A",
-                                          "parallel":  "B"
-                                      },
-                  "Ameaça Tripla":  {
-                                         "pf":  "B",
-                                         "riftOff":  "B",
-                                         "riftDef":  "B",
-                                         "parallel":  "B"
-                                     },
-                  "Glamour Galático":  {
-                                            "pf":  "C",
-                                            "riftOff":  "C",
-                                            "riftDef":  "B",
-                                            "parallel":  "C"
-                                        },
-                  "Estrela Ninja":  {
-                                        "pf":  "S",
-                                        "riftOff":  "A",
-                                        "riftDef":  "C",
-                                        "parallel":  "B"
-                                    },
-                  "Srta. Mercúrio":  {
-                                          "pf":  "B",
-                                          "riftOff":  "B",
-                                          "riftDef":  "B",
-                                          "parallel":  "B"
-                                      },
-                  "Criança Estelar":  {
-                                           "pf":  "B",
-                                           "riftOff":  "C",
-                                           "riftDef":  "C",
-                                           "parallel":  "C"
-                                       },
-                  "Chama Solar":  {
-                                      "pf":  "C",
-                                      "riftOff":  "C",
-                                      "riftDef":  "C",
-                                      "parallel":  "C"
-                                  }
-              },
-    "beowulf":  {
-                    "Rei das Feras":  {
-                                          "pf":  "SS",
-                                          "riftOff":  "SS",
-                                          "riftDef":  "B",
-                                          "parallel":  "SS"
-                                      },
-                    "Poder Sombrio":  {
-                                          "pf":  "S",
-                                          "riftOff":  "S",
-                                          "riftDef":  "A",
-                                          "parallel":  "S"
-                                      },
-                    "Picada de Cobra":  {
-                                            "pf":  "S",
-                                            "riftOff":  "S",
-                                            "riftDef":  "B",
-                                            "parallel":  "S"
-                                        },
-                    "Ogros Têm Camadas":  {
-                                               "pf":  "A",
-                                               "riftOff":  "S",
-                                               "riftDef":  "A",
-                                               "parallel":  "A"
-                                           },
-                    "Combatente da Liberdade":  {
-                                                    "pf":  "B",
-                                                    "riftOff":  "B",
-                                                    "riftDef":  "S",
-                                                    "parallel":  "B"
-                                                },
-                    "Dragão Brigão":  {
-                                            "pf":  "A",
-                                            "riftOff":  "A",
-                                            "riftDef":  "B",
-                                            "parallel":  "A"
-                                        },
-                    "Praga do Lobo":  {
-                                          "pf":  "S",
-                                          "riftOff":  "A",
-                                          "riftDef":  "B",
-                                          "parallel":  "A"
-                                      },
-                    "Pico Bola":  {
-                                      "pf":  "A",
-                                      "riftOff":  "A",
-                                      "riftDef":  "B",
-                                      "parallel":  "A"
-                                  },
-                    "Último Lutador":  {
-                                            "pf":  "B",
-                                            "riftOff":  "B",
-                                            "riftDef":  "B",
-                                            "parallel":  "B"
-                                        },
-                    "Homem de Gelo":  {
-                                          "pf":  "B",
-                                          "riftOff":  "C",
-                                          "riftDef":  "C",
-                                          "parallel":  "B"
-                                      },
-                    "Lutador X":  {
-                                      "pf":  "B",
-                                      "riftOff":  "B",
-                                      "riftDef":  "B",
-                                      "parallel":  "B"
-                                  },
-                    "Número Um":  {
-                                       "pf":  "C",
-                                       "riftOff":  "C",
-                                       "riftDef":  "C",
-                                       "parallel":  "B"
-                                   },
-                    "Promotor":  {
-                                     "pf":  "B",
-                                     "riftOff":  "B",
-                                     "riftDef":  "B",
-                                     "parallel":  "B"
-                                 },
-                    "Favorito dos Fãs":  {
-                                              "pf":  "C",
-                                              "riftOff":  "C",
-                                              "riftDef":  "C",
-                                              "parallel":  "C"
-                                          },
-                    "Alma de Pedra":  {
-                                          "pf":  "C",
-                                          "riftOff":  "C",
-                                          "riftDef":  "C",
-                                          "parallel":  "C"
-                                      },
-                    "Lobo Azarão":  {
-                                         "pf":  "B",
-                                         "riftOff":  "C",
-                                         "riftDef":  "C",
-                                         "parallel":  "C"
-                                     }
-                },
-    "big-band":  {
-                     "Bandido de Bronze":  {
-                                               "pf":  "S",
-                                               "riftOff":  "B",
-                                               "riftDef":  "A",
-                                               "parallel":  "B"
-                                           },
-                     "Banda dos Sonhos":  {
-                                              "pf":  "A",
-                                              "riftOff":  "C",
-                                              "riftDef":  "SS",
-                                              "parallel":  "B"
-                                          },
-                     "Heavy Metal":  {
-                                         "pf":  "B",
-                                         "riftOff":  "C",
-                                         "riftDef":  "S",
-                                         "parallel":  "B"
-                                     },
-                     "G.I. JAZZ":  {
-                                       "pf":  "C",
-                                       "riftOff":  "C",
-                                       "riftDef":  "A",
-                                       "parallel":  "C"
-                                   },
-                     "Megassônico":  {
-                                          "pf":  "A",
-                                          "riftOff":  "B",
-                                          "riftDef":  "S",
-                                          "parallel":  "A"
-                                      },
-                     "Pânico na Cidade":  {
-                                               "pf":  "B",
-                                               "riftOff":  "C",
-                                               "riftDef":  "B",
-                                               "parallel":  "B"
-                                           },
-                     "Rodas Rítmicas":  {
-                                             "pf":  "B",
-                                             "riftOff":  "C",
-                                             "riftDef":  "B",
-                                             "parallel":  "B"
-                                         },
-                     "Detetive \"Dick\"":  {
-                                               "pf":  "C",
-                                               "riftOff":  "C",
-                                               "riftDef":  "B",
-                                               "parallel":  "C"
-                                           },
-                     "Big Baddy":  {
-                                       "pf":  "C",
-                                       "riftOff":  "C",
-                                       "riftDef":  "C",
-                                       "parallel":  "C"
-                                   },
-                     "Ganhando Vantagem":  {
-                                               "pf":  "B",
-                                               "riftOff":  "B",
-                                               "riftDef":  "B",
-                                               "parallel":  "B"
-                                           },
-                     "Virtuoso Vintage":  {
-                                              "pf":  "C",
-                                              "riftOff":  "C",
-                                              "riftDef":  "C",
-                                              "parallel":  "C"
-                                          },
-                     "Robocópia":  {
-                                        "pf":  "C",
-                                        "riftOff":  "C",
-                                        "riftDef":  "B",
-                                        "parallel":  "C"
-                                    },
-                     "Resonant Evil":  {
-                                           "pf":  "B",
-                                           "riftOff":  "C",
-                                           "riftDef":  "S",
-                                           "parallel":  "C"
-                                       },
-                     "Desarmonizador":  {
-                                            "pf":  "B",
-                                            "riftOff":  "B",
-                                            "riftDef":  "B",
-                                            "parallel":  "B"
-                                        },
-                     "Batidas Rítmicas":  {
-                                               "pf":  "C",
-                                               "riftOff":  "C",
-                                               "riftDef":  "C",
-                                               "parallel":  "C"
-                                           },
-                     "Superjazz":  {
-                                       "pf":  "C",
-                                       "riftOff":  "C",
-                                       "riftDef":  "C",
-                                       "parallel":  "C"
-                                   }
-                 }
+    "annie": {
+        "Rosa Estelar": {
+            "pf": "S",
+            "riftOff": "S",
+            "riftDef": "A",
+            "parallel": "SS"
+        },
+        "Modelo Submarina": {
+            "pf": "A",
+            "riftOff": "A",
+            "riftDef": "S",
+            "parallel": "A"
+        },
+        "Brilho das Estrelas": {
+            "pf": "S",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "S"
+        },
+        "Marcas de Fogo": {
+            "pf": "SS",
+            "riftOff": "S",
+            "riftDef": "C",
+            "parallel": "S"
+        },
+        "Vínculo de Alma": {
+            "pf": "S",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "A"
+        },
+        "Maravilha Eterna": {
+            "pf": "A",
+            "riftOff": "B",
+            "riftDef": "A",
+            "parallel": "B"
+        },
+        "Ondina": {
+            "pf": "A",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "A"
+        },
+        "Heroína do Tempo": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "B"
+        },
+        "Garota Material": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Rebelde Cósmica": {
+            "pf": "A",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Princesa da Lua": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "A",
+            "parallel": "B"
+        },
+        "Ameaça Tripla": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Glamour Galático": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "B",
+            "parallel": "C"
+        },
+        "Estrela Ninja": {
+            "pf": "S",
+            "riftOff": "A",
+            "riftDef": "C",
+            "parallel": "B"
+        },
+        "Srta. Mercúrio": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Criança Estelar": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        },
+        "Chama Solar": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        }
+    },
+    "beowulf": {
+        "Rei das Feras": {
+            "pf": "SS",
+            "riftOff": "SS",
+            "riftDef": "B",
+            "parallel": "SS"
+        },
+        "Poder Sombrio": {
+            "pf": "S",
+            "riftOff": "S",
+            "riftDef": "A",
+            "parallel": "S"
+        },
+        "Picada de Cobra": {
+            "pf": "S",
+            "riftOff": "S",
+            "riftDef": "B",
+            "parallel": "S"
+        },
+        "Ogros Têm Camadas": {
+            "pf": "A",
+            "riftOff": "S",
+            "riftDef": "A",
+            "parallel": "A"
+        },
+        "Combatente da Liberdade": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "S",
+            "parallel": "B"
+        },
+        "Dragão Brigão": {
+            "pf": "A",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "A"
+        },
+        "Praga do Lobo": {
+            "pf": "S",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "A"
+        },
+        "Pico Bola": {
+            "pf": "A",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "A"
+        },
+        "Último Lutador": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Homem de Gelo": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "B"
+        },
+        "Lutador X": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Número Um": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "B"
+        },
+        "Promotor": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Favorito dos Fãs": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        },
+        "Alma de Pedra": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        },
+        "Lobo Azarão": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        }
+    },
+    "big-band": {
+        "Bandido de Bronze": {
+            "pf": "S",
+            "riftOff": "B",
+            "riftDef": "A",
+            "parallel": "B"
+        },
+        "Banda dos Sonhos": {
+            "pf": "A",
+            "riftOff": "C",
+            "riftDef": "SS",
+            "parallel": "B"
+        },
+        "Heavy Metal": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "S",
+            "parallel": "B"
+        },
+        "G.I. JAZZ": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "A",
+            "parallel": "C"
+        },
+        "Megassônico": {
+            "pf": "A",
+            "riftOff": "B",
+            "riftDef": "S",
+            "parallel": "A"
+        },
+        "Pânico na Cidade": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Rodas Rítmicas": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Detetive \"Dick\"": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "B",
+            "parallel": "C"
+        },
+        "Big Baddy": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        },
+        "Ganhando Vantagem": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Virtuoso Vintage": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        },
+        "Robocópia": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "B",
+            "parallel": "C"
+        },
+        "Resonant Evil": {
+            "pf": "B",
+            "riftOff": "C",
+            "riftDef": "S",
+            "parallel": "C"
+        },
+        "Desarmonizador": {
+            "pf": "B",
+            "riftOff": "B",
+            "riftDef": "B",
+            "parallel": "B"
+        },
+        "Batidas Rítmicas": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        },
+        "Superjazz": {
+            "pf": "C",
+            "riftOff": "C",
+            "riftDef": "C",
+            "parallel": "C"
+        }
+    }
 }

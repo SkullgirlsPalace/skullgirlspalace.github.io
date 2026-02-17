@@ -147,6 +147,18 @@ export function setTierData(tierData) {
     notifySubscribers();
 }
 
+/**
+ * Update specific character data in state
+ * @param {string} charKey - Character key
+ * @param {Function} updateFn - Function that takes character object and returns updated object
+ */
+export function updateCharacterData(charKey, updateFn) {
+    if (state.characters[charKey]) {
+        state.characters[charKey] = updateFn(state.characters[charKey]);
+        notifySubscribers();
+    }
+}
+
 export function updateTierRank(charKey, variantName, mode, newRank) {
     if (!state.tierData[charKey]) {
         state.tierData[charKey] = {};

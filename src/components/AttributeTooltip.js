@@ -43,7 +43,9 @@ function showTooltip(target, attrKey) {
     if (source === 'attr') {
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
-                <strong>${data.name}</strong>
+                <div class="attr-tooltip-title-group">
+                    <strong>${data.name}</strong>
+                </div>
                 <span class="attr-tooltip-max">Máx: ${data.max}</span>
             </div>
             <p class="attr-tooltip-summary">${data.summary}</p>
@@ -53,15 +55,26 @@ function showTooltip(target, attrKey) {
     } else {
         // Effect (buff/debuff/term)
         const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
-        const stacksHtml = data.stacks ? `<span class="attr-tooltip-max">Acúmulo: ${data.stacks}x</span>` : '';
+
+        let disclaimerHtml = '';
+        if (data.stacks || data.scaling) {
+            disclaimerHtml = `
+                <div class="attr-tooltip-disclaimer">
+                    ${data.stacks ? `<span>Acúmulo: ${data.stacks}x</span>` : ''}
+                    ${data.scaling ? `<span>Escalonamento: ${data.scaling}</span>` : ''}
+                </div>
+            `;
+        }
+
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
-                ${iconHtml}
-                <strong>${data.name}</strong>
-                ${stacksHtml}
+                <div class="attr-tooltip-title-group">
+                    ${iconHtml}
+                    <strong>${data.name}</strong>
+                </div>
             </div>
             <p class="attr-tooltip-summary">${data.detailed}</p>
-            ${data.scaling ? `<p class="attr-tooltip-tip">📊 ${data.scaling}</p>` : ''}
+            ${disclaimerHtml}
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     }
@@ -93,8 +106,8 @@ function positionTooltip(tooltip, target) {
     // Clamp horizontal
     left = Math.max(padding, Math.min(left, window.innerWidth - tooltipRect.width - padding));
 
-    tooltip.style.top = `${top + window.scrollY} px`;
-    tooltip.style.left = `${left} px`;
+    tooltip.style.top = `${top + window.scrollY}px`;
+    tooltip.style.left = `${left}px`;
     tooltip.classList.add('visible');
 }
 

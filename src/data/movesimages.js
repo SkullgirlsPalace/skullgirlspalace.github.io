@@ -126,6 +126,14 @@ const MOVE_IMAGES = {
         "Die Verwandlung": "img/filia/Filia_21.png",
         "Senta a Pua!": "img/filia/Filia_22.png",
         "Tricobezoar": "img/filia/Filia_23.png",
+
+
+
+
+
+
+        "Corte Saturno (Expulsão)": "img/filia/Filia_20.png",
+        "Nebulosa Refletora (Provocar)": "img/filia/Filia_18.png",
     },
     "fukua": {
         "Explosão": "img/fukua/Fukua_17.png",

@@ -290,6 +290,32 @@
     border-color: rgba(255, 255, 255, 0.15);
 }
 
+.ability-box.editing {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px dashed var(--accent-gold);
+    position: relative;
+}
+
+.ability-box.editing:hover {
+    background: rgba(255, 215, 0, 0.05);
+    border-style: solid;
+}
+
+.ability-box.editing::after {
+    content: '✎ Editar';
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 0.7rem;
+    color: var(--accent-gold);
+    opacity: 0.6;
+}
+
+.ability-box.editing:hover::after {
+    opacity: 1;
+}
+
 .ability-box h4 {
     font-family: 'Washington', 'Inter', sans-serif;
     color: var(--accent-gold);
@@ -480,4 +506,3 @@
 .variant-tab-content .ability-box+.ability-box {
     margin-top: 12px;
 }
-

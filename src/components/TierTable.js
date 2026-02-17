@@ -137,9 +137,9 @@ export function createTierView(charKey, charData) {
     return `
         <!-- Temporary Editor Notice -->
         <div class="temp-notice">
-            <strong>MODO EDITOR ATIVO (TEMPORÁRIO)</strong>
+            <strong>MODO EDITOR ATIVO</strong>
             <p>Ative o modo edição abaixo para mudar as notas clicando nelas. <br>
-                <em>Lembre-se de salvar suas alterações antes de sair!</em>
+                <em>Suas mudanças ficam salvas no navegador e podem ser exportadas para o código.</em>
             </p>
         </div>
 
@@ -185,7 +185,7 @@ export function createTierView(charKey, charData) {
                 </label>
                 <span class="editor-label">Modo Edição (Apenas para você)</span>
             </div>
-            <button class="save-data-btn" onclick="handleSaveTierData()">Confirmar & Salvar Alterações</button>
+            <button class="save-data-btn" onclick="handleSaveTierData()">Gerar JSON para o Código</button>
         </div>
 
         ${createTierTable(charKey, charData)}
@@ -196,6 +196,7 @@ export function createTierView(charKey, charData) {
 export function handleCycleRank(charKey, variantName, mode) {
     cycleRank(charKey, variantName, mode);
 }
+
 
 export function handleToggleCompactMode() {
     const checked = document.getElementById('compact-mode-toggle')?.checked || false;
@@ -212,12 +213,25 @@ export function handleToggleEditorMode() {
     if (table) {
         table.classList.toggle('editing', checked);
     }
+    // Re-render to show/hide note cell editing styles
+    if (window.onTierDataChanged) {
+        window.onTierDataChanged();
+    }
 }
 
 export function handleSaveTierData() {
     const state = getState();
     localStorage.setItem('TIER_DATA_PERSISTED', JSON.stringify(state.tierData));
-    console.log('--- DADOS PARA O CÓDIGO FINAL ---');
-    console.log(JSON.stringify(state.tierData, null, 4));
-    alert('Alterações salvas no seu navegador! \n\nPara que fiquem fixas para todos no futuro, os dados precisam ser atualizados no arquivo tier-data.json.');
+
+    const jsonString = JSON.stringify(state.tierData, null, 4);
+    console.log('--- DADOS PARA O ARQUIVO DATA/TIER-DATA.JSON ---');
+    console.log(jsonString);
+
+    // Simple copy to clipboard attempt
+    navigator.clipboard.writeText(jsonString).then(() => {
+        alert('Dados copiados para a área de transferência! \n\nAgora você pode me enviar (Antigravity) esse conteúdo JSON aqui no chat para que eu salve permanentemente nos arquivos do projeto.');
+    }).catch(err => {
+        console.error('Erro ao copiar:', err);
+        alert('Alterações salvas no seu navegador! \n\nConfira o console do desenvolvedor (F12) para o JSON completo. Envie esse JSON para mim (Antigravity) para salvar permanentemente.');
+    });
 }
