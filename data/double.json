@@ -1,366 +1,366 @@
 {
-    "character":  "Double",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Criatura de Hábito",
-                                          "title_formatted":  "\u003e Criatura de Hábito \u003c:Ar:1389703277532287066\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Ar",
-                                          "color_hex":  "#076314",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679901635121324/1000.png?ex=681df53b\u0026is=681ca3bb\u0026hm=b19c4cc6c4a75bf0a2b8ec2172f00d4ef1a38a59fcba35fc6b7c96296ad74d26\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,152",
-                                                        "health":  "53,338",
-                                                        "power":  "26,045"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "BEBIDA MONSTRO",
-                                                                    "description":  "[HAB 1]: **Se nenhum dos BLOCKBUSTERS da Double estiver totalmente CARREGADO**, ganhe 1 camada de MIASMA por 10 segundos a cada 5 segundos enquanto não estiver BLOQUEANDO.\n\n[HAB 2]: **Ganhe 1 camada de FÚRIA a cada 2 segundos enquanto um BLOCKBUSTER estiver totalmente carregado**. A FÚRIA é removida quando você usa um BLOCKBUSTER."
-                                                                },
-                                          "marquee_ability":  "Caos",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                      },
-                                      {
-                                          "name":  "Coração da Escuridão",
-                                          "title_formatted":  "\u003e Coração da Escuridão \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#6426a8",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679860753498362/1000.png?ex=681df531\u0026is=681ca3b1\u0026hm=b3105042b0a3ba407c3c3000a3af06d4c8a148fddc8a4cd137385e8ae1853cbd\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,152",
-                                                        "health":  "53,338",
-                                                        "power":  "26,045"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "DESEJO CORROMPIDO",
-                                                                    "description":  "[HAB 1]: **Uma vez por luta, ao TRANSMUTAR para o elemento do oponente**, copie permanentemente sua Habilidade Característica, remova os EF. POS. dele e inflija FEITIÇO por 30 s.\n\n[HAB 2]: **Ao derrotar um oponente sofrendo de um EF. NEG**, ganhe 3 camadas de MIASMA e inflija 3 EF. NEGATIVOS aleatórios no próximo oponente por 20 s cada."
-                                                                },
-                                          "marquee_ability":  "Caos",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                      },
-                                      {
-                                          "name":  "Quebra-Queixo",
-                                          "title_formatted":  "\u003e Quebra-Queixo \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#dfd173",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679940109467669/1000.png?ex=681df544\u0026is=681ca3c4\u0026hm=60ba61904f5bfa2deb6d30e0cbac3dfccca0bdf980e3fb3fe78a3bdfadabdb63\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "15,130",
-                                                        "health":  "48,020",
-                                                        "power":  "27,335"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "SABOR MISTERIOSO",
-                                                                    "description":  "[HAB 1]: **Ao TRANSMUTAR**, ganhe um EFEITO POSITIVO aleatório por 7 segundos.\n\n[HAB 2]: Causa 20% de dano extra **para cada EFEITO POSITIVO aplicado à Double**."
-                                                                },
-                                          "marquee_ability":  "Caos ou Volatilidade",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                      },
-                                      {
-                                          "name":  "Altar Ego",
-                                          "title_formatted":  "\u003e Altar Ego \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Fogo",
-                                          "color_hex":  "#ef2e2d",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679986519441760/1000.png?ex=681df54f\u0026is=681ca3cf\u0026hm=df939702d06b28aea9dbf164c5c315cc80eda574213b688a3d99f9d058277054\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "15,130",
-                                                        "health":  "48,020",
-                                                        "power":  "27,335"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "MAQUINAÇÕES INFERNAIS",
-                                                                    "description":  "[HAB 1]: **Enquanto estiver perto de um oponente e sem BLOQUEAR**, inflige um EF. NEG. aleatório por 10 segundos a cada 2 segundos.\n\n[HAB 2]: **Ao PROVOCAR**, remove todos os EF. NEG. do oponente. **Para cada EF. NEG. removido**, causa dano igual a 25% do ATAQUE da Double. **Oponentes derrotados durante a PROVOCAÇÃO** não podem ser revividos."
-                                                                },
-                                          "marquee_ability":  "Caos",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, , \u003c:GolpeEspecial:1434999859768987748\u003e Falsas intenções (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "Teoria do Caos",
-                                      "title_formatted":  "\u003e Teoria do Caos \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#6426a8",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679741253324861/1000.png?ex=681df515\u0026is=681ca395\u0026hm=311b4ab50f62019e61355d2580dc08fb248a0e8757616d7049a0fa5d48123b2e\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,117",
-                                                    "health":  "54,471",
-                                                    "power":  "23,864"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "BÊNÇÃOS DISFARÇADAS",
-                                                                "description":  "[HAB 1]: **Ao TRANSMUTAR**, inflige SANGRAMENTO em si mesma e dá FÚRIA por 10 s cada. Além disso, **ao TRANSMUTAR para o elemento LUZ**, ganha BÊNÇÃO.\n\n[HAB 2]: **ATAQUES DE ARRANCADA** removem todos os SANGRAMENTOS. DRENA 5% da VIDA por SANGRAMENTO removido."
-                                                            },
-                                      "marquee_ability":  "Caos",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                  },
-                                  {
-                                      "name":  "Maldade Eterna",
-                                      "title_formatted":  "\u003e Maldade Eterna \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#076314",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679703253192794/1000.png?ex=681df50c\u0026is=681ca38c\u0026hm=06ec10a9ea44f984b8dae9ef5bef604c3292e5edd6c4ca2d8032a713729b9afa\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,117",
-                                                    "health":  "54,471",
-                                                    "power":  "23,864"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "PERIGO PRESENTE",
-                                                                "description":  "[HAB 1]: **Quando GOLPEADO sem DESVANTAGEM ELEMENTAL**, tem 10% de chance de ganhar REGENERAÇÃO e ESPINHOS por 5 seg e remover todos os EF. NEGATIVOS.\n\n[HAB 2]: **Quando a Double ou um aliado ganha um EF. POSITIVO**, a duração aumenta em 5 seg e ela ganha 5% do MEDIDOR DE BLOCKBUSTER."
-                                                            },
-                                      "marquee_ability":  "Volatidade",
-                                      "recommended_build":  "VD%, Precisão, Defesa e Resistência",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Megacaótico, \u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:GolpeEspecial:1434999859768987748\u003e Luger Cover, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Fibra Forte",
-                                      "title_formatted":  "\u003e Fibra Forte \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ef2e2d",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679676787134584/1000.png?ex=681df505\u0026is=681ca385\u0026hm=f65e1ef80b5d511952681caa26a4abbc4310da2f87cc98b1392ce3ffe3a48ae6\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,117",
-                                                    "health":  "54,471",
-                                                    "power":  "23,864"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "COLHER E COSTURAR",
-                                                                "description":  "[HAB 1]: **Quando derrotada**, causa dano equivalente a 50% de sua VIDA MÁXIMA\n\n[HAB 2]: **Quando derrotada**, cura todos os aliados em 50% de sua VIDA MÁXIMA."
-                                                            },
-                                      "marquee_ability":  "Volatidade",
-                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Megacaótico, \u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:GolpeEspecial:1434999859768987748\u003e Luger Cover, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Íris-Color",
-                                      "title_formatted":  "\u003e Íris-Color \u003c:Neutro:1389703364304175125\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Neutro",
-                                      "color_hex":  "#efaae8",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679771322290176/1000.png?ex=681df51c\u0026is=681ca39c\u0026hm=04bb3b9b57cd171b836eb264ad7e59d03b9934499aa798709edf7c2b375943c2\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,212",
-                                                    "health":  "49,536",
-                                                    "power":  "24,185"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "PENTAGLAM",
-                                                                "description":  "[HAB 1]: **Ao TRANSMUTAR**, ganha EFEITOS POSITIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[HAB 2]: **Ao TRANSMUTAR**, inflige EFEITOS NEGATIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[Efeitos Positivos e Negativos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Rainbow_Blight)"
-                                                            },
-                                      "marquee_ability":  "Caos",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                  },
-                                  {
-                                      "name":  "Xenamorfa",
-                                      "title_formatted":  "\u003e Xenamorfa \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#6426a8",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679800866967772/1000.png?ex=681df523\u0026is=681ca3a3\u0026hm=99981b404d9fa4c0a5294c33744a37b608f867e08ea6174ebefe85427e507ce0\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "14,038",
-                                                    "health":  "44,583",
-                                                    "power":  "26,346"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "FIM DE JOGO",
-                                                                "description":  "[HAB 1]: **Ao TRANSMUTAR para o elemento TREVAS**, 100% de chance de infligir DESTRUIÇÃO permanente, matando o oponente após 30 s. A DESTRUIÇÃO será removida se a Double for derrotada.\n\n[HAB 2]: **Quando derrotada**, inflige 3 camada(s) de SANGRAMENTO permanente."
-                                                            },
-                                      "marquee_ability":  "Volatidade",
-                                      "recommended_build":  "Vida%, Defesa, Resistência e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Megacaótico, \u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:GolpeEspecial:1434999859768987748\u003e Luger Cover, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Bruxa do Mar",
-                                      "title_formatted":  "\u003e Bruxa do Mar \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#0080c0",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1379099601365241928/Sea_Witch_TEMP.png?ex=683f0217\u0026is=683db097\u0026hm=02d13d751ac916b69d474357e8c0ec70e93ac936b9fff77ed98bcfa59c68fa5a\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "14,038",
-                                                    "health":  "44,583",
-                                                    "power":  "26,346"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "Agora, cantem!",
-                                                                "description":  "[HAB 1]: **Usar BLOCKBUSTER** causa MALDIÇÃO e QUEBRA DE GUARDA por 10 segundos cada.\n\n[HAB 2]: **Usar um GOLPE ESPECIAL** dá ACELERAÇÃO e OLHO-MORTO por 10 segundos."
-                                                            },
-                                      "marquee_ability":  "Caos",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Tirana do Templo",
-                                       "title_formatted":  "\u003e Tirana do Templo \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Água",
-                                       "color_hex":  "#1095d5",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679535569113281/1000.png?ex=681df4e4\u0026is=681ca364\u0026hm=f14c4555da8ad30a51b7b53525332052357d1d516c44c3ac737ac87bd0839c3f\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "9,620",
-                                                     "health":  "50,573",
-                                                     "power":  "21,327"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "MORPHA",
-                                                                 "description":  "[HAB 1]: **Ao TRANSMUTAR para uma VANTAGEM ELEMENTAL**, cura 25% de VIDA.\n\n[HAB 2]: Ganhe 50% de chance de CONVERTER qualquer EFEITO NEGATIVO em ARMADURA e REGENERAÇÃO por 10 segundos **quando em VANTAGEM ELEMENTAL.**"
-                                                             },
-                                       "marquee_ability":  "Volatidade",
-                                       "recommended_build":  "VD%, Precisão, Defesa e Resistência",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Megacaótico, \u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:GolpeEspecial:1434999859768987748\u003e Luger Cover, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                   },
-                                   {
-                                       "name":  "Chicleteira",
-                                       "title_formatted":  "\u003e Chicleteira \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#dfd173",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679606020571226/1000.png?ex=681df4f4\u0026is=681ca374\u0026hm=7b8b454fdd041bc17f6178eec474e1591930e652f693c6686e8cc3a6c4772cf3\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,309",
-                                                     "health":  "45,984",
-                                                     "power":  "22,419"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "DEDOS PEGAJOSOS",
-                                                                 "description":  "[HAB 1]: **Ao GOLPEAR**, tem 25% de chance de TRANSFERIR 1 EFEITO POSITIVO do oponente para si mesmo.\n\n[HAB 2]: **Quando golpeada**, tem 25% de chance de TRANSFERIR 1 EFEITO NEGATIVO de si mesmo para o oponente."
-                                                             },
-                                       "marquee_ability":  "Caos",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                   },
-                                   {
-                                       "name":  "Misticatástrofe",
-                                       "title_formatted":  "\u003e Misticatástrofe \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Água",
-                                       "color_hex":  "#1095d5",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679635171119314/1000.png?ex=681df4fb\u0026is=681ca37b\u0026hm=b0558be00a4dc31d8b1e1388ce713cfd9cab59e1b27c02c5ecfd59f91844c285\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "12,999",
-                                                     "health":  "61,465",
-                                                     "power":  "23,516"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "A RAIVA DA ÁGUA",
-                                                                 "description":  "[HAB 1]: **Enquanto tiver o mesmo elemento do oponente**, ganhe 100% de chance de REFLETIR todos os EF. POS. de um oponente sempre que ele ganhar um EF. POS.\n\n[HAB 2]: Ganhe 3 camada(s) de PRECISÃO **quando um EFEITO POSITIVO expirar.**"
-                                                             },
-                                       "marquee_ability":  "Caos",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico/Taxa de Atq Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                   },
-                                   {
-                                       "name":  "Pecado da Serpente",
-                                       "title_formatted":  "\u003e Pecado da Serpente \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#008000",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1434707438245908500/Serpent_Sin.png?ex=6909f7ac\u0026is=6908a62c\u0026hm=068c10be10b30fd08c004a489ee329c6752a1e61ac865579a6787cc88e233e84\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "9,620",
-                                                     "health":  "50,573",
-                                                     "power":  "21,327"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "Ciclo Avarento",
-                                                                 "description":  "[HAB 1]: **GOLPES ESPECIAIS curam 10% da VIDA MÁXIMA de Double.**\n\n[HAB 2]: **Se a VIDA de Double for maior que a do oponente** e ele ganhar um EF. POSITIVO ou sofrer um EF. NEGATIVO a Double ganha MIASMA por 5 segundos."
-                                                             },
-                                       "marquee_ability":  "CAOS",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Freirarteira",
-                                        "title_formatted":  "\u003e Freirarteira \u003c:Ar:1389703277532287066\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Ar",
-                                        "color_hex":  "#076314",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679431201980606/1000.png?ex=681df4cb\u0026is=681ca34b\u0026hm=2030f5cfc503b761947e611cf56d39b227b3096c4d25c5d6c95886f1e263ec5f\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "10,522",
-                                                      "health":  "42,720",
-                                                      "power":  "20,846"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "FALSIFICAÇÃO",
-                                                                  "description":  "[HAB 1]: **Quando em VANTAGEM ELEMENTAL**, ganhe 3 EFEITOS POSITIVOS aleatórios por 10 segundos sempre que o oponente ganhar um EFEITO POSITIVO.\n\n[HAB 2]: **Quando em VANTAGEM ELEMENTAL**, inflija 3 EFEITOS NEGATIVOS aleatórios por 10 segundos após sofrer qualquer EFEITO NEGATIVO."
-                                                              },
-                                        "marquee_ability":  "Caos",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                    },
-                                    {
-                                        "name":  "Sorvescola",
-                                        "title_formatted":  "\u003e Sorvescola \u003c:Agua:1389703224210231437\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Água",
-                                        "color_hex":  "#1095d5",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018098103844934/Icon-Double.png?ex=68a78765\u0026is=68a635e5\u0026hm=61f5c865494bc688ac81700c6111fef1a3e193837baf0bc92108937ebb85c305\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361679474319556746/1000.png?ex=681df4d5\u0026is=681ca355\u0026hm=ba54072001074ddfce12b2e6808e1a5125e3981818c0cb643df1cb57e44a1683\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "10,522",
-                                                      "health":  "42,720",
-                                                      "power":  "20,846"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "PONTO DE FUSÃO",
-                                                                  "description":  "[HAB 1]: **Quando algum aliado inflige um EFEITO NEGATIVO** (exceto ATORDOAMENTO), aumenta sua duração em 3 s.\n\n[HAB 2]: **Quando algum aliado sofre um EFEITO NEGATIVO** (exceto ATORDOAMENTO), reduz sua duração em 3 s."
-                                                              },
-                                        "marquee_ability":  "Caos",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gatélites, \u003c:Blockbuster:1434999898385944606\u003e Multidão Enfurecida, \u003c:GolpeEspecial:1434999859768987748\u003e Fim da Picada, \u003c:GolpeEspecial:1434999859768987748\u003e Fakesabiá, \u003c:GolpeEspecial:1434999859768987748\u003e Pelinhoslide"
-                                    }
-                                ]
-                 }
+    "character": "Double",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Criatura de Hábito",
+                "title_formatted": "Criatura de Hábito - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679901635121324/1000.png?ex=681df53b&is=681ca3bb&hm=b19c4cc6c4a75bf0a2b8ec2172f00d4ef1a38a59fcba35fc6b7c96296ad74d26&"
+                },
+                "stats": {
+                    "attack": "13,152",
+                    "health": "53,338",
+                    "power": "26,045"
+                },
+                "signature_ability": {
+                    "name": "BEBIDA MONSTRO",
+                    "description": "[HAB 1]: **Se nenhum dos BLOCKBUSTERS da Double estiver totalmente CARREGADO**, ganhe 1 camada de MIASMA por 10 segundos a cada 5 segundos enquanto não estiver BLOQUEANDO.\n\n[HAB 2]: **Ganhe 1 camada de FÚRIA a cada 2 segundos enquanto um BLOCKBUSTER estiver totalmente carregado**. A FÚRIA é removida quando você usa um BLOCKBUSTER."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Coração da Escuridão",
+                "title_formatted": "Coração da Escuridão - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679860753498362/1000.png?ex=681df531&is=681ca3b1&hm=b3105042b0a3ba407c3c3000a3af06d4c8a148fddc8a4cd137385e8ae1853cbd&"
+                },
+                "stats": {
+                    "attack": "13,152",
+                    "health": "53,338",
+                    "power": "26,045"
+                },
+                "signature_ability": {
+                    "name": "DESEJO CORROMPIDO",
+                    "description": "[HAB 1]: **Uma vez por luta, ao TRANSMUTAR para o elemento do oponente**, copie permanentemente sua Habilidade Característica, remova os EF. POS. dele e inflija FEITIÇO por 30 s.\n\n[HAB 2]: **Ao derrotar um oponente sofrendo de um EF. NEG**, ganhe 3 camadas de MIASMA e inflija 3 EF. NEGATIVOS aleatórios no próximo oponente por 20 s cada."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Quebra-Queixo",
+                "title_formatted": "Quebra-Queixo - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679940109467669/1000.png?ex=681df544&is=681ca3c4&hm=60ba61904f5bfa2deb6d30e0cbac3dfccca0bdf980e3fb3fe78a3bdfadabdb63&"
+                },
+                "stats": {
+                    "attack": "15,130",
+                    "health": "48,020",
+                    "power": "27,335"
+                },
+                "signature_ability": {
+                    "name": "SABOR MISTERIOSO",
+                    "description": "[HAB 1]: **Ao TRANSMUTAR**, ganhe um EFEITO POSITIVO aleatório por 7 segundos.\n\n[HAB 2]: Causa 20% de dano extra **para cada EFEITO POSITIVO aplicado à Double**."
+                },
+                "marquee_ability": "Caos ou Volatilidade",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Altar Ego",
+                "title_formatted": "Altar Ego - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679986519441760/1000.png?ex=681df54f&is=681ca3cf&hm=df939702d06b28aea9dbf164c5c315cc80eda574213b688a3d99f9d058277054&"
+                },
+                "stats": {
+                    "attack": "15,130",
+                    "health": "48,020",
+                    "power": "27,335"
+                },
+                "signature_ability": {
+                    "name": "MAQUINAÇÕES INFERNAIS",
+                    "description": "[HAB 1]: **Enquanto estiver perto de um oponente e sem BLOQUEAR**, inflige um EF. NEG. aleatório por 10 segundos a cada 2 segundos.\n\n[HAB 2]: **Ao PROVOCAR**, remove todos os EF. NEG. do oponente. **Para cada EF. NEG. removido**, causa dano igual a 25% do ATAQUE da Double. **Oponentes derrotados durante a PROVOCAÇÃO** não podem ser revividos."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, , Falsas intenções (Provocar), Fim da Picada, Fakesabiá, Pelinhoslide"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "Teoria do Caos",
+                "title_formatted": "Teoria do Caos - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679741253324861/1000.png?ex=681df515&is=681ca395&hm=311b4ab50f62019e61355d2580dc08fb248a0e8757616d7049a0fa5d48123b2e&"
+                },
+                "stats": {
+                    "attack": "11,117",
+                    "health": "54,471",
+                    "power": "23,864"
+                },
+                "signature_ability": {
+                    "name": "BÊNÇÃOS DISFARÇADAS",
+                    "description": "[HAB 1]: **Ao TRANSMUTAR**, inflige SANGRAMENTO em si mesma e dá FÚRIA por 10 s cada. Além disso, **ao TRANSMUTAR para o elemento LUZ**, ganha BÊNÇÃO.\n\n[HAB 2]: **ATAQUES DE ARRANCADA** removem todos os SANGRAMENTOS. DRENA 5% da VIDA por SANGRAMENTO removido."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Maldade Eterna",
+                "title_formatted": "Maldade Eterna - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679703253192794/1000.png?ex=681df50c&is=681ca38c&hm=06ec10a9ea44f984b8dae9ef5bef604c3292e5edd6c4ca2d8032a713729b9afa&"
+                },
+                "stats": {
+                    "attack": "11,117",
+                    "health": "54,471",
+                    "power": "23,864"
+                },
+                "signature_ability": {
+                    "name": "PERIGO PRESENTE",
+                    "description": "[HAB 1]: **Quando GOLPEADO sem DESVANTAGEM ELEMENTAL**, tem 10% de chance de ganhar REGENERAÇÃO e ESPINHOS por 5 seg e remover todos os EF. NEGATIVOS.\n\n[HAB 2]: **Quando a Double ou um aliado ganha um EF. POSITIVO**, a duração aumenta em 5 seg e ela ganha 5% do MEDIDOR DE BLOCKBUSTER."
+                },
+                "marquee_ability": "Volatidade",
+                "recommended_build": "VD%, Precisão, Defesa e Resistência",
+                "recommended_arsenal": "Megacaótico, Gatélites, Luger Cover, Pelinhoslide, Explosão"
+            },
+            {
+                "name": "Fibra Forte",
+                "title_formatted": "Fibra Forte - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679676787134584/1000.png?ex=681df505&is=681ca385&hm=f65e1ef80b5d511952681caa26a4abbc4310da2f87cc98b1392ce3ffe3a48ae6&"
+                },
+                "stats": {
+                    "attack": "11,117",
+                    "health": "54,471",
+                    "power": "23,864"
+                },
+                "signature_ability": {
+                    "name": "COLHER E COSTURAR",
+                    "description": "[HAB 1]: **Quando derrotada**, causa dano equivalente a 50% de sua VIDA MÁXIMA\n\n[HAB 2]: **Quando derrotada**, cura todos os aliados em 50% de sua VIDA MÁXIMA."
+                },
+                "marquee_ability": "Volatidade",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Megacaótico, Gatélites, Luger Cover, Pelinhoslide, Explosão"
+            },
+            {
+                "name": "Íris-Color",
+                "title_formatted": "Íris-Color - Neutro - Ouro",
+                "element": "Neutro",
+                "color_hex": "#efaae8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679771322290176/1000.png?ex=681df51c&is=681ca39c&hm=04bb3b9b57cd171b836eb264ad7e59d03b9934499aa798709edf7c2b375943c2&"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "49,536",
+                    "power": "24,185"
+                },
+                "signature_ability": {
+                    "name": "PENTAGLAM",
+                    "description": "[HAB 1]: **Ao TRANSMUTAR**, ganha EFEITOS POSITIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[HAB 2]: **Ao TRANSMUTAR**, inflige EFEITOS NEGATIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[Efeitos Positivos e Negativos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Rainbow_Blight)"
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Xenamorfa",
+                "title_formatted": "Xenamorfa - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679800866967772/1000.png?ex=681df523&is=681ca3a3&hm=99981b404d9fa4c0a5294c33744a37b608f867e08ea6174ebefe85427e507ce0&"
+                },
+                "stats": {
+                    "attack": "14,038",
+                    "health": "44,583",
+                    "power": "26,346"
+                },
+                "signature_ability": {
+                    "name": "FIM DE JOGO",
+                    "description": "[HAB 1]: **Ao TRANSMUTAR para o elemento TREVAS**, 100% de chance de infligir DESTRUIÇÃO permanente, matando o oponente após 30 s. A DESTRUIÇÃO será removida se a Double for derrotada.\n\n[HAB 2]: **Quando derrotada**, inflige 3 camada(s) de SANGRAMENTO permanente."
+                },
+                "marquee_ability": "Volatidade",
+                "recommended_build": "Vida%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Megacaótico, Gatélites, Luger Cover, Pelinhoslide, Explosão"
+            },
+            {
+                "name": "Bruxa do Mar",
+                "title_formatted": "Bruxa do Mar - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#0080c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1379099601365241928/Sea_Witch_TEMP.png?ex=683f0217&is=683db097&hm=02d13d751ac916b69d474357e8c0ec70e93ac936b9fff77ed98bcfa59c68fa5a&"
+                },
+                "stats": {
+                    "attack": "14,038",
+                    "health": "44,583",
+                    "power": "26,346"
+                },
+                "signature_ability": {
+                    "name": "Agora, cantem!",
+                    "description": "[HAB 1]: **Usar BLOCKBUSTER** causa MALDIÇÃO e QUEBRA DE GUARDA por 10 segundos cada.\n\n[HAB 2]: **Usar um GOLPE ESPECIAL** dá ACELERAÇÃO e OLHO-MORTO por 10 segundos."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Tirana do Templo",
+                "title_formatted": "Tirana do Templo - Água - Prata",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679535569113281/1000.png?ex=681df4e4&is=681ca364&hm=f14c4555da8ad30a51b7b53525332052357d1d516c44c3ac737ac87bd0839c3f&"
+                },
+                "stats": {
+                    "attack": "9,620",
+                    "health": "50,573",
+                    "power": "21,327"
+                },
+                "signature_ability": {
+                    "name": "MORPHA",
+                    "description": "[HAB 1]: **Ao TRANSMUTAR para uma VANTAGEM ELEMENTAL**, cura 25% de VIDA.\n\n[HAB 2]: Ganhe 50% de chance de CONVERTER qualquer EFEITO NEGATIVO em ARMADURA e REGENERAÇÃO por 10 segundos **quando em VANTAGEM ELEMENTAL.**"
+                },
+                "marquee_ability": "Volatidade",
+                "recommended_build": "VD%, Precisão, Defesa e Resistência",
+                "recommended_arsenal": "Megacaótico, Gatélites, Luger Cover, Pelinhoslide, Explosão"
+            },
+            {
+                "name": "Chicleteira",
+                "title_formatted": "Chicleteira - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679606020571226/1000.png?ex=681df4f4&is=681ca374&hm=7b8b454fdd041bc17f6178eec474e1591930e652f693c6686e8cc3a6c4772cf3&"
+                },
+                "stats": {
+                    "attack": "11,309",
+                    "health": "45,984",
+                    "power": "22,419"
+                },
+                "signature_ability": {
+                    "name": "DEDOS PEGAJOSOS",
+                    "description": "[HAB 1]: **Ao GOLPEAR**, tem 25% de chance de TRANSFERIR 1 EFEITO POSITIVO do oponente para si mesmo.\n\n[HAB 2]: **Quando golpeada**, tem 25% de chance de TRANSFERIR 1 EFEITO NEGATIVO de si mesmo para o oponente."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Misticatástrofe",
+                "title_formatted": "Misticatástrofe - Água - Prata",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679635171119314/1000.png?ex=681df4fb&is=681ca37b&hm=b0558be00a4dc31d8b1e1388ce713cfd9cab59e1b27c02c5ecfd59f91844c285&"
+                },
+                "stats": {
+                    "attack": "12,999",
+                    "health": "61,465",
+                    "power": "23,516"
+                },
+                "signature_ability": {
+                    "name": "A RAIVA DA ÁGUA",
+                    "description": "[HAB 1]: **Enquanto tiver o mesmo elemento do oponente**, ganhe 100% de chance de REFLETIR todos os EF. POS. de um oponente sempre que ele ganhar um EF. POS.\n\n[HAB 2]: Ganhe 3 camada(s) de PRECISÃO **quando um EFEITO POSITIVO expirar.**"
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico/Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Pecado da Serpente",
+                "title_formatted": "Pecado da Serpente - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#008000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707438245908500/Serpent_Sin.png?ex=6909f7ac&is=6908a62c&hm=068c10be10b30fd08c004a489ee329c6752a1e61ac865579a6787cc88e233e84&"
+                },
+                "stats": {
+                    "attack": "9,620",
+                    "health": "50,573",
+                    "power": "21,327"
+                },
+                "signature_ability": {
+                    "name": "Ciclo Avarento",
+                    "description": "[HAB 1]: **GOLPES ESPECIAIS curam 10% da VIDA MÁXIMA de Double.**\n\n[HAB 2]: **Se a VIDA de Double for maior que a do oponente** e ele ganhar um EF. POSITIVO ou sofrer um EF. NEGATIVO a Double ganha MIASMA por 5 segundos."
+                },
+                "marquee_ability": "CAOS",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Freirarteira",
+                "title_formatted": "Freirarteira - Ar - Bronze",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679431201980606/1000.png?ex=681df4cb&is=681ca34b&hm=2030f5cfc503b761947e611cf56d39b227b3096c4d25c5d6c95886f1e263ec5f&"
+                },
+                "stats": {
+                    "attack": "10,522",
+                    "health": "42,720",
+                    "power": "20,846"
+                },
+                "signature_ability": {
+                    "name": "FALSIFICAÇÃO",
+                    "description": "[HAB 1]: **Quando em VANTAGEM ELEMENTAL**, ganhe 3 EFEITOS POSITIVOS aleatórios por 10 segundos sempre que o oponente ganhar um EFEITO POSITIVO.\n\n[HAB 2]: **Quando em VANTAGEM ELEMENTAL**, inflija 3 EFEITOS NEGATIVOS aleatórios por 10 segundos após sofrer qualquer EFEITO NEGATIVO."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Sorvescola",
+                "title_formatted": "Sorvescola - Água - Bronze",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361679474319556746/1000.png?ex=681df4d5&is=681ca355&hm=ba54072001074ddfce12b2e6808e1a5125e3981818c0cb643df1cb57e44a1683&"
+                },
+                "stats": {
+                    "attack": "10,522",
+                    "health": "42,720",
+                    "power": "20,846"
+                },
+                "signature_ability": {
+                    "name": "PONTO DE FUSÃO",
+                    "description": "[HAB 1]: **Quando algum aliado inflige um EFEITO NEGATIVO** (exceto ATORDOAMENTO), aumenta sua duração em 3 s.\n\n[HAB 2]: **Quando algum aliado sofre um EFEITO NEGATIVO** (exceto ATORDOAMENTO), reduz sua duração em 3 s."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
+            }
+        ]
+    }
 }

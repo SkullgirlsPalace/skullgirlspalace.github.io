@@ -1,388 +1,388 @@
 {
-    "character":  "Annie",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Rosa Estelar",
-                                          "title_formatted":  "\u003e Rosa Estelar \u003c:Neutro:1389703364304175125\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Neutro",
-                                          "color_hex":  "#ff80c0",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360941160356515922/1000.png?ex=681de839\u0026is=681c96b9\u0026hm=4d4fb8540bd28c384e1bf2ca9f986fbf7205dfdf4a3c4f5d8e9107eb0b8ab6da\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "10,004",
-                                                        "health":  "78,221",
-                                                        "power":  "27,226"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "POLIMENTO DE GEMA",
-                                                                    "description":  "[HAB 1]: **Com a Annie viva**, todos os BLOQUEIOS bem sincronizados dos aliados **removem até 2 EF. NEG. e dão BARREIRA por 15 s.**\n\n[HAB 2]: **Com a Annie viva**, todos os **aliados ganham FÚRIA e REGENERAÇÃO por 7 segundos a cada 3 segundos** enquanto se **beneficiarem de BARREIRA.**"
-                                                                },
-                                          "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Pilar da Criação, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                      },
-                                      {
-                                          "name":  "Modelo Submarina",
-                                          "title_formatted":  "\u003e Modelo Submarina  \u003c:Agua:1389703224210231437\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Água",
-                                          "color_hex":  "#0080c0",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360942336195952864/1000.png?ex=681de952\u0026is=681c97d2\u0026hm=fd3f80b7af1cadb66acce073b06eb0bfda902fbc1d2102682a60add3384e9eda\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "10,004",
-                                                        "health":  "78,221",
-                                                        "power":  "27,226"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "CORAGEM LÍQUIDA",
-                                                                    "description":  "[HAB 1]: **Enquanto Annie estiver viva**, ela limpa os EFEITOS NEGATIVOS de todos os aliados e concede ARMADURA por 15 segundos a cada 20 segundos. Todos os aliados de ÁGUA também recebem 2 camadas de FÚRIA por 15 segundos.\n\n[HAB 2]: Ganha BLOQUEIO AUTOMÁTICO PERMANENTE por cada 25/20/15% de vida perdida. Todos os aliados que se beneficiam de ARMADURA ou BLOQ. AUTOMÁTICO recebem 6% de MEDIDOR BLOCKBUSTER **ao usar um GOLPE ESPECIAL.**"
-                                                                },
-                                          "marquee_ability":  "DESVIO PARA O AZUL",
-                                          "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Foto Bop, \u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Pilar da Criação, \u003c:Blockbuster:1434999898385944606\u003e Chuva de Meteoros, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                      },
-                                      {
-                                          "name":  "Brilho das Estrelas",
-                                          "title_formatted":  "\u003e Brilho das Estrelas  \u003c:Luz:1389703315167907902\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#ffff00",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360942581541900369/1000.png?ex=681de98c\u0026is=681c980c\u0026hm=7647592fa29e072cccda922c2831a3dc7bc7a79b653542d63e63ae2a4173ac13\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,770",
-                                                        "health":  "71,117",
-                                                        "power":  "27,913"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "EFEITO BORBOLETA",
-                                                                    "description":  "[HAB 1]: Receba um EF. POS. aleatório por 12 segundos a cada 4 segundos. Também **ganhe 10% de PODER ESTELAR para cada EF. POS por qualquer lutador fora do MODO POEIRA ESTELAR.**\n\n[HAB 2]: Remova todos os EFEITOS NEGATIVOS e ganhe IMUNIDADE por 10 segundos e PRECISÃO permanente **ao ativar o MODO PODER ESTELAR com barra cheia**. A PRECISÃO permanente é removida ao derrotar um oponente."
-                                                                },
-                                          "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                      },
-                                      {
-                                          "name":  "Marcas de Fogo",
-                                          "title_formatted":  "\u003e Marcas de Fogo  \u003c:Fogo:1389703188525092934\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Fogo",
-                                          "color_hex":  "#ff0000",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                         "portrait_url":  "img/annie/Annie_14.png"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,556",
-                                                        "health":  "64,032",
-                                                        "power":  "28,628"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "ESTRELAS ABRASADORAS",
-                                                                    "description":  "[HAB 1]: Ganha FÚRIA por 15 s e **remove 1 EF. POS. do oponente ao usar** um GOLPE ESPECIAL ou BLOCKBUSTER.\n\n[HAB 2]: Enquanto tiver no modo PODER ESTELAR, ATAQUES DE CARGA **consomem todas as camadas de FÚRIA**, causando ATORDOAMENTO, FEITIÇO E MALDIÇÃO por 2 s por acúmulo consumida."
-                                                                },
-                                          "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                      },
-                                      {
-                                          "name":  "Vínculo de Alma",
-                                          "title_formatted":  "\u003e Vínculo de Alma \u003c:Luz:1389703315167907902\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#ffff80",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,556",
-                                                        "health":  "64,032",
-                                                        "power":  "28,628"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "Ruptura de Alma",
-                                                                    "description":  "[HAB 1]: **Quando não estiver em PODER ESTELAR nem sob efeito de EVASÃO**, BLOQUEIOS bem sucedidos concedem 50% de PODER ESTELAR, 3 acúmulo(s) de BARREIRA e permitem que Annie DESVIE de todos os ataques por 3 segundos.\n\n[HAB 2]: **Ao ativar o PODER ESTELAR, sacrifique 35% da VIDA MÁXIMA para ganhar OLHO-MORTO** por 15 segundos. **Enquanto estiver em PODER ESTELAR, inimigos na reserva** sofrem FEITIÇO e TODOS os inimigos 3% de VIDA por segundo."
-                                                                },
-                                          "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "Maravilha Eterna",
-                                      "title_formatted":  "\u003e Maravilha Eterna  \u003c:Luz:1389703315167907902\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#ffff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360923014857883822/1000.png?ex=681dd753\u0026is=681c85d3\u0026hm=8e74f379b3c2cebb2c371e47697f5da28d6e77eda4b30fe8b115f798575bf2f5\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,293",
-                                                    "health":  "72,634",
-                                                    "power":  "25,285"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ESCUDO CELESTIAL",
-                                                                "description":  "[HAB 1]: **BLOQUEIOS no tempo certo** dão BLOQUEIO AUTOM., RESIST. FINAL e IMUNIDADE por 10 s cada.\n\n[HAB 2]: Inflige IMOBILIZAR por 10 s e dá 5 camadas de PRECISÃO **quando qualquer lutador bloquear um projétil.**"
-                                                            },
-                                      "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                  },
-                                  {
-                                      "name":  "Ondina",
-                                      "title_formatted":  "\u003e Ondina  \u003c:Agua:1389703224210231437\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#0080ff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360939281106993203/latest.png?ex=681de679\u0026is=681c94f9\u0026hm=5d698b5106daf7cb8909b3a60817c5809c74db10479b86edd55701f984c72104\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "66,048",
-                                                    "power":  "25,917"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "DINÂMICA DOS FLUIDOS",
-                                                                "description":  "[HAB 1]: A cada **15º GOLPE DE COMBO, transfira até 2 EF. POSITIVOS do oponente para você** e **reduza o M. DE BLOCKBUSTER dele em 25%.**\n\n[HAB 2]: **Enquanto Annie tiver aliados vivos**, ganhar um **EF. POS. aumenta permanentemente o DANO em 10%** e **cura todos os aliados em 5% da VIDA.**"
-                                                            },
-                                      "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                  },
-                                  {
-                                      "name":  "Heroína do Tempo",
-                                      "title_formatted":  "\u003e Heroína do Tempo  \u003c:Ar:1389703277532287066\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#00ff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360924020395999352/1000.png?ex=681dd843\u0026is=681c86c3\u0026hm=596ca11fdad14f0fb0a7d9d6e5bcba93749c81b8a46c43267eaa84ce4ae47edf\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "66,048",
-                                                    "power":  "25,917"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "MESTRE DA ESPADA",
-                                                                "description":  "[HAB 1]: Dá FÚRIA, BLOQUEIO AUTOMÁTICO ou REGENERAÇÃO a cada 20 GOLPES DE COMBO. **Todos os EFEITOS POSITIVOS são removidos quando você sofre um GOLPE.**\n\n[HAB 2]: **Uma vez por luta**, ao obter todos os EF. POSITIVOS acima, ganhe 100% no MEDIDOR DE BLOCKBUSTER e PODER ESTELAR infinito."
-                                                            },
-                                      "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Corte Crescente, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                  },
-                                  {
-                                      "name":  "Garota Material",
-                                      "title_formatted":  "\u003e Garota Material  \u003c:Agua:1389703224210231437\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#4040ff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360938826670932109/1000.png?ex=681de60d\u0026is=681c948d\u0026hm=f2b68981dd70fea1c81fddc59e88727defb9046cd5ad593affdeff7fdc13d1ca\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "66,048",
-                                                    "power":  "25,917"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "QUEBRA DE LIMITE",
-                                                                "description":  "[HAB 1]: **20% de chance de ganhar 10% no med. de PODER ESTELAR se um dos lutadores for GOLPEADO (inclui bloqueio).**\n\n[HAB 2]: No MODO PODER ESTELAR, ganhe PRECISÃO, OLHO-MORTO ou ACELERAÇÃO permanente e 5% no M. DE BLOCKBUSTER por seg. **O EF. POS. permanente é removido ao sair do PODER ESTELAR.**"
-                                                            },
-                                      "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                  },
-                                  {
-                                      "name":  "Rebelde Cósmica",
-                                      "title_formatted":  "\u003e Rebelde Cósmica  \u003c:Fogo:1389703188525092934\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ff0000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360940529180999760/1000.png?ex=681de7a3\u0026is=681c9623\u0026hm=cd9b94e4f7047e5a7c6faea485c5e503ce5dd1d9f5ce54537cb8722717e9a61b\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "59,463",
-                                                    "power":  "26,571"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "FORÇA DE VONTADE",
-                                                                "description":  "[HAB 1]: **O 10 º GOLPE DE COMBO que não seja projétil** inflige MARCA DA MORTE por 15 segundos e FADIGA por 15 segundos.\n\n[HAB 2]: **CRÍTICOS** concedem **IMUNIDADE por 5 segundos, INVENCÍVEL por 1 segundo** e DANO DE CRÍTICO 25% maior enquanto estiver **perto de um oponente sofrendo de MARCA DA MORTE.**"
-                                                            },
-                                      "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                  },
-                                  {
-                                      "name":  "Princesa da Lua",
-                                      "title_formatted":  "\u003e Princesa da Lua  \u003c:Trevas:1389703142848991364\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#800080",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360939971787358388/1000.png?ex=681de71e\u0026is=681c959e\u0026hm=382fb88a2e48cb1f9aa5e639155d2e361cbdc82e749aba94125c8115b20968c9\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "59,463",
-                                                    "power":  "26,571"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ECLIPSE TOTAL",
-                                                                "description":  "[HAB 1]: Inflija DEFINHAR por 10 s e ganhe 15% no medidor de PODER ESTELAR **ao acertar um GOLPE CRÍTICO com um projétil.**\n\n[HAB 2]: **UMA VEZ por LUTA**, ao **ATIVAR o PODER ESTELAR com o Medidor Cheio, REVIVA e CURE os aliados** em 100% da VIDA faltando da Annie."
-                                                            },
-                                      "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Ameaça Tripla",
-                                       "title_formatted":  "\u003e Ameaça Tripla \u003c:Luz:1389703315167907902\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#ffff00",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360915573097103550/1000.png?ex=681dd065\u0026is=681c7ee5\u0026hm=13e651e68f16b2156f867da17d9a2f74ffb4c29f992e5031c99b9da1b3c171b2\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "8,602",
-                                                     "health":  "67,469",
-                                                     "power":  "23,452"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "PROBLEMA DE TRÊS CORPOS",
-                                                                 "description":  "[HAB 1]: **Ganhe IMUNIDADE, INABALÁVEL ou INVENCÍVEL por 15 seg. ao ativar o PODER ESTELAR.** O EF. POS. é removido ao sair do PODER ESTELAR.\n\n[HAB 2]: **33% de chance de redefinir todos os tempos dos EF. POS. e ganhar 30% no medidor de PODER ESTELAR ao usar um GOLPE ESPECIAL.**"
-                                                             },
-                                       "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                   },
-                                   {
-                                       "name":  "Glamour Galático",
-                                       "title_formatted":  "\u003e Glamour Galático \u003c:Ar:1389703277532287066\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#00ff00",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360918268562640986/1000.png?ex=681dd2e7\u0026is=681c8167\u0026hm=d71e54f5a53f5dec6d05f2bccd5d7d75b33ac592e4184fa7017f51e0c872b32b\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,138",
-                                                     "health":  "61,325",
-                                                     "power":  "24,056"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "EM PERFEITO EQUILÍBRIO",
-                                                                 "description":  "[HAB 1]: **50% de chance de causar QUEBRA DE GUARDA por 10 s ao acertar** um GOLPE CRÍTICO.\n\n[HAB 2]: 50% de chance de ganhar BLOQUEIO AUTOM. por 10 s **ao sofrer um GOLPE CRÍTICO.**"
-                                                             },
-                                       "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                   },
-                                   {
-                                       "name":  "Estrela Ninja",
-                                       "title_formatted":  "\u003e Estrela Ninja  \u003c:Trevas:1389703142848991364\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#800080",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360914544930721874/1000.png?ex=681dcf70\u0026is=681c7df0\u0026hm=832037157f3d7414e4c52bda097cf9ef036940e73f7274b326fece0f16e77849\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,674",
-                                                     "health":  "55,181",
-                                                     "power":  "24,661"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "ESPADA SÔNICA",
-                                                                 "description":  "[HAB 1]: 100% de chance de remover 1 EF. POS. do oponente e infligir QUEBRA DE GUARDA por 10 s **ao atingir um oponente atacando.**\n\n[HAB 2]: **Projéteis** causam 50% de dano extra por cada camada de EF. NEG. **aplicado ao oponente.**"
-                                                             },
-                                       "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Corte Crescente, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                   },
-                                   {
-                                       "name":  "Srta. Mercúrio",
-                                       "title_formatted":  "\u003e Srta. Mercúrio  \u003c:Trevas:1389703142848991364\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#400080",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1434707386744049785/Miss_Mercury.png?ex=6909f7a0\u0026is=6908a620\u0026hm=1e6da7d871760565d68154b4353a25386a9517630216b73eca6420e8b14327f5\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,138",
-                                                     "health":  "61,325",
-                                                     "power":  "24,056"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "Dança Morta",
-                                                                 "description":  "[HAB 1]: 13% de chance **ao ACERTAR GOLPES** de ganhar 13% de PODER ESTELAR e aplicar QUIETUS por 13 segundos.\n\n[HAB 2]: Ao ativar o PODER ESTELAR, **esvazie-o instantaneamente para converter 3 EF. POSITIVOS do oponente em EF. NEGATIVOS aleatórios** por 13 segundos. Ao ativar com a barra cheia, também aplica MALDIÇÃO por 13 segundos."
-                                                             },
-                                       "marquee_ability":  "DESVIO PARA O VERMELHO",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Corte Crescente, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Criança Estelar",
-                                        "title_formatted":  "\u003e Criança Estelar  \u003c:Ar:1389703277532287066\u003e \u003c:bronze:1407839009664798801\u003e ",
-                                        "element":  "Ar",
-                                        "color_hex":  "#00ff00",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360911604581007523/1000.png?ex=681dccb3\u0026is=681c7b33\u0026hm=c23b9fafac34a9780de12214c80a453b4d4b2981ab27f4276ed4d4c382e6e44c\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "10,676",
-                                                      "health":  "51,264",
-                                                      "power":  "22,711"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "POEIRA ESTELAR",
-                                                                  "description":  "[HAB 1]: No MODO POEIRA ESTELAR, **cada GOLPE bloqueado pelo oponente** tem 10% de chance de infligir QUEBRA DE GUARDA e LENTIDÃO por 15 s.\n\n[HAB 2]: **BLOCKBUSTERS causam 50% de dano extra no MODO POEIRA ESTELAR.**"
-                                                              },
-                                        "marquee_ability":  "Desvio para o Vermelho",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                    },
-                                    {
-                                        "name":  "Chama Solar",
-                                        "title_formatted":  "\u003e Chama Solar  \u003c:Fogo:1389703188525092934\u003e \u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Fogo",
-                                        "color_hex":  "#ff0000",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775\u0026is=68a635f5\u0026hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360912973312557236/1000.png?ex=681dcdf9\u0026is=681c7c79\u0026hm=e844de2c1d2076648a5503c47b38b8ed8e055f3014752aa80043329e5d383789\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "9,428",
-                                                      "health":  "56,948",
-                                                      "power":  "22,356"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "DRAGON INSTALL",
-                                                                  "description":  "[HAB 1]: **O medidor de PODER ESTELAR enche 50% mais rápido.**\n\n[HAB 2]: Ao **ativar o PODER ESTELAR com o medidor cheio**, ganhe ACELERAÇÃO permanente e 5 camadas de FÚRIA permanente, **mas sofra FADIGA** por 5 s. Todos os efeitos são removidos ao sair do PODER ESTELAR."
-                                                              },
-                                        "marquee_ability":  "Desvio para o Vermelho",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Estilingue Gravitacional, \u003c:Blockbuster:1434999898385944606\u003e Raio Sagan, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição, \u003c:GolpeEspecial:1434999859768987748\u003e Pilar da Destruição"
-                                    }
-                                ]
-                 }
+    "character": "Annie",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Rosa Estelar",
+                "title_formatted": "Rosa Estelar - Neutro - Diamante",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360941160356515922/1000.png?ex=681de839&is=681c96b9&hm=4d4fb8540bd28c384e1bf2ca9f986fbf7205dfdf4a3c4f5d8e9107eb0b8ab6da&"
+                },
+                "stats": {
+                    "attack": "10,004",
+                    "health": "78,221",
+                    "power": "27,226"
+                },
+                "signature_ability": {
+                    "name": "POLIMENTO DE GEMA",
+                    "description": "[HAB 1]: **Com a Annie viva**, todos os BLOQUEIOS bem sincronizados dos aliados **removem até 2 EF. NEG. e dão BARREIRA por 15 s.**\n\n[HAB 2]: **Com a Annie viva**, todos os **aliados ganham FÚRIA e REGENERAÇÃO por 7 segundos a cada 3 segundos** enquanto se **beneficiarem de BARREIRA.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Pilar da Criação, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Modelo Submarina",
+                "title_formatted": "Modelo Submarina - Água - Diamante",
+                "element": "Água",
+                "color_hex": "#0080c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360942336195952864/1000.png?ex=681de952&is=681c97d2&hm=fd3f80b7af1cadb66acce073b06eb0bfda902fbc1d2102682a60add3384e9eda&"
+                },
+                "stats": {
+                    "attack": "10,004",
+                    "health": "78,221",
+                    "power": "27,226"
+                },
+                "signature_ability": {
+                    "name": "CORAGEM LÍQUIDA",
+                    "description": "[HAB 1]: **Enquanto Annie estiver viva**, ela limpa os EFEITOS NEGATIVOS de todos os aliados e concede ARMADURA por 15 segundos a cada 20 segundos. Todos os aliados de ÁGUA também recebem 2 camadas de FÚRIA por 15 segundos.\n\n[HAB 2]: Ganha BLOQUEIO AUTOMÁTICO PERMANENTE por cada 25/20/15% de vida perdida. Todos os aliados que se beneficiam de ARMADURA ou BLOQ. AUTOMÁTICO recebem 6% de MEDIDOR BLOCKBUSTER **ao usar um GOLPE ESPECIAL.**"
+                },
+                "marquee_ability": "DESVIO PARA O AZUL",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Foto Bop, Estilingue Gravitacional, Pilar da Criação, Chuva de Meteoros, Explosão"
+            },
+            {
+                "name": "Brilho das Estrelas",
+                "title_formatted": "Brilho das Estrelas - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360942581541900369/1000.png?ex=681de98c&is=681c980c&hm=7647592fa29e072cccda922c2831a3dc7bc7a79b653542d63e63ae2a4173ac13&"
+                },
+                "stats": {
+                    "attack": "11,770",
+                    "health": "71,117",
+                    "power": "27,913"
+                },
+                "signature_ability": {
+                    "name": "EFEITO BORBOLETA",
+                    "description": "[HAB 1]: Receba um EF. POS. aleatório por 12 segundos a cada 4 segundos. Também **ganhe 10% de PODER ESTELAR para cada EF. POS por qualquer lutador fora do MODO POEIRA ESTELAR.**\n\n[HAB 2]: Remova todos os EFEITOS NEGATIVOS e ganhe IMUNIDADE por 10 segundos e PRECISÃO permanente **ao ativar o MODO PODER ESTELAR com barra cheia**. A PRECISÃO permanente é removida ao derrotar um oponente."
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Marcas de Fogo",
+                "title_formatted": "Marcas de Fogo - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/annie/Annie_14.png"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "64,032",
+                    "power": "28,628"
+                },
+                "signature_ability": {
+                    "name": "ESTRELAS ABRASADORAS",
+                    "description": "[HAB 1]: Ganha FÚRIA por 15 s e **remove 1 EF. POS. do oponente ao usar** um GOLPE ESPECIAL ou BLOCKBUSTER.\n\n[HAB 2]: Enquanto tiver no modo PODER ESTELAR, ATAQUES DE CARGA **consomem todas as camadas de FÚRIA**, causando ATORDOAMENTO, FEITIÇO E MALDIÇÃO por 2 s por acúmulo consumida."
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Vínculo de Alma",
+                "title_formatted": "Vínculo de Alma - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#ffff80",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1406018166957543544/icon-annie.png?ex=68a78775&is=68a635f5&hm=65f6c5d50e3076cd1f9d859dff7cf87ae7e5331ffc746eaa0d730c0a05af59e3&"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "64,032",
+                    "power": "28,628"
+                },
+                "signature_ability": {
+                    "name": "Ruptura de Alma",
+                    "description": "[HAB 1]: **Quando não estiver em PODER ESTELAR nem sob efeito de EVASÃO**, BLOQUEIOS bem sucedidos concedem 50% de PODER ESTELAR, 3 acúmulo(s) de BARREIRA e permitem que Annie DESVIE de todos os ataques por 3 segundos.\n\n[HAB 2]: **Ao ativar o PODER ESTELAR, sacrifique 35% da VIDA MÁXIMA para ganhar OLHO-MORTO** por 15 segundos. **Enquanto estiver em PODER ESTELAR, inimigos na reserva** sofrem FEITIÇO e TODOS os inimigos 3% de VIDA por segundo."
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "Maravilha Eterna",
+                "title_formatted": "Maravilha Eterna - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360923014857883822/1000.png?ex=681dd753&is=681c85d3&hm=8e74f379b3c2cebb2c371e47697f5da28d6e77eda4b30fe8b115f798575bf2f5&"
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "72,634",
+                    "power": "25,285"
+                },
+                "signature_ability": {
+                    "name": "ESCUDO CELESTIAL",
+                    "description": "[HAB 1]: **BLOQUEIOS no tempo certo** dão BLOQUEIO AUTOM., RESIST. FINAL e IMUNIDADE por 10 s cada.\n\n[HAB 2]: Inflige IMOBILIZAR por 10 s e dá 5 camadas de PRECISÃO **quando qualquer lutador bloquear um projétil.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Ondina",
+                "title_formatted": "Ondina - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360939281106993203/latest.png?ex=681de679&is=681c94f9&hm=5d698b5106daf7cb8909b3a60817c5809c74db10479b86edd55701f984c72104&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "66,048",
+                    "power": "25,917"
+                },
+                "signature_ability": {
+                    "name": "DINÂMICA DOS FLUIDOS",
+                    "description": "[HAB 1]: A cada **15º GOLPE DE COMBO, transfira até 2 EF. POSITIVOS do oponente para você** e **reduza o M. DE BLOCKBUSTER dele em 25%.**\n\n[HAB 2]: **Enquanto Annie tiver aliados vivos**, ganhar um **EF. POS. aumenta permanentemente o DANO em 10%** e **cura todos os aliados em 5% da VIDA.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Heroína do Tempo",
+                "title_formatted": "Heroína do Tempo - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360924020395999352/1000.png?ex=681dd843&is=681c86c3&hm=596ca11fdad14f0fb0a7d9d6e5bcba93749c81b8a46c43267eaa84ce4ae47edf&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "66,048",
+                    "power": "25,917"
+                },
+                "signature_ability": {
+                    "name": "MESTRE DA ESPADA",
+                    "description": "[HAB 1]: Dá FÚRIA, BLOQUEIO AUTOMÁTICO ou REGENERAÇÃO a cada 20 GOLPES DE COMBO. **Todos os EFEITOS POSITIVOS são removidos quando você sofre um GOLPE.**\n\n[HAB 2]: **Uma vez por luta**, ao obter todos os EF. POSITIVOS acima, ganhe 100% no MEDIDOR DE BLOCKBUSTER e PODER ESTELAR infinito."
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Corte Crescente, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Garota Material",
+                "title_formatted": "Garota Material - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#4040ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360938826670932109/1000.png?ex=681de60d&is=681c948d&hm=f2b68981dd70fea1c81fddc59e88727defb9046cd5ad593affdeff7fdc13d1ca&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "66,048",
+                    "power": "25,917"
+                },
+                "signature_ability": {
+                    "name": "QUEBRA DE LIMITE",
+                    "description": "[HAB 1]: **20% de chance de ganhar 10% no med. de PODER ESTELAR se um dos lutadores for GOLPEADO (inclui bloqueio).**\n\n[HAB 2]: No MODO PODER ESTELAR, ganhe PRECISÃO, OLHO-MORTO ou ACELERAÇÃO permanente e 5% no M. DE BLOCKBUSTER por seg. **O EF. POS. permanente é removido ao sair do PODER ESTELAR.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Rebelde Cósmica",
+                "title_formatted": "Rebelde Cósmica - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360940529180999760/1000.png?ex=681de7a3&is=681c9623&hm=cd9b94e4f7047e5a7c6faea485c5e503ce5dd1d9f5ce54537cb8722717e9a61b&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "59,463",
+                    "power": "26,571"
+                },
+                "signature_ability": {
+                    "name": "FORÇA DE VONTADE",
+                    "description": "[HAB 1]: **O 10 º GOLPE DE COMBO que não seja projétil** inflige MARCA DA MORTE por 15 segundos e FADIGA por 15 segundos.\n\n[HAB 2]: **CRÍTICOS** concedem **IMUNIDADE por 5 segundos, INVENCÍVEL por 1 segundo** e DANO DE CRÍTICO 25% maior enquanto estiver **perto de um oponente sofrendo de MARCA DA MORTE.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Princesa da Lua",
+                "title_formatted": "Princesa da Lua - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360939971787358388/1000.png?ex=681de71e&is=681c959e&hm=382fb88a2e48cb1f9aa5e639155d2e361cbdc82e749aba94125c8115b20968c9&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "59,463",
+                    "power": "26,571"
+                },
+                "signature_ability": {
+                    "name": "ECLIPSE TOTAL",
+                    "description": "[HAB 1]: Inflija DEFINHAR por 10 s e ganhe 15% no medidor de PODER ESTELAR **ao acertar um GOLPE CRÍTICO com um projétil.**\n\n[HAB 2]: **UMA VEZ por LUTA**, ao **ATIVAR o PODER ESTELAR com o Medidor Cheio, REVIVA e CURE os aliados** em 100% da VIDA faltando da Annie."
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Ameaça Tripla",
+                "title_formatted": "Ameaça Tripla - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360915573097103550/1000.png?ex=681dd065&is=681c7ee5&hm=13e651e68f16b2156f867da17d9a2f74ffb4c29f992e5031c99b9da1b3c171b2&"
+                },
+                "stats": {
+                    "attack": "8,602",
+                    "health": "67,469",
+                    "power": "23,452"
+                },
+                "signature_ability": {
+                    "name": "PROBLEMA DE TRÊS CORPOS",
+                    "description": "[HAB 1]: **Ganhe IMUNIDADE, INABALÁVEL ou INVENCÍVEL por 15 seg. ao ativar o PODER ESTELAR.** O EF. POS. é removido ao sair do PODER ESTELAR.\n\n[HAB 2]: **33% de chance de redefinir todos os tempos dos EF. POS. e ganhar 30% no medidor de PODER ESTELAR ao usar um GOLPE ESPECIAL.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Glamour Galático",
+                "title_formatted": "Glamour Galático - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360918268562640986/1000.png?ex=681dd2e7&is=681c8167&hm=d71e54f5a53f5dec6d05f2bccd5d7d75b33ac592e4184fa7017f51e0c872b32b&"
+                },
+                "stats": {
+                    "attack": "10,138",
+                    "health": "61,325",
+                    "power": "24,056"
+                },
+                "signature_ability": {
+                    "name": "EM PERFEITO EQUILÍBRIO",
+                    "description": "[HAB 1]: **50% de chance de causar QUEBRA DE GUARDA por 10 s ao acertar** um GOLPE CRÍTICO.\n\n[HAB 2]: 50% de chance de ganhar BLOQUEIO AUTOM. por 10 s **ao sofrer um GOLPE CRÍTICO.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Estrela Ninja",
+                "title_formatted": "Estrela Ninja - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360914544930721874/1000.png?ex=681dcf70&is=681c7df0&hm=832037157f3d7414e4c52bda097cf9ef036940e73f7274b326fece0f16e77849&"
+                },
+                "stats": {
+                    "attack": "11,674",
+                    "health": "55,181",
+                    "power": "24,661"
+                },
+                "signature_ability": {
+                    "name": "ESPADA SÔNICA",
+                    "description": "[HAB 1]: 100% de chance de remover 1 EF. POS. do oponente e infligir QUEBRA DE GUARDA por 10 s **ao atingir um oponente atacando.**\n\n[HAB 2]: **Projéteis** causam 50% de dano extra por cada camada de EF. NEG. **aplicado ao oponente.**"
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Corte Crescente, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Srta. Mercúrio",
+                "title_formatted": "Srta. Mercúrio - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#400080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1434707386744049785/Miss_Mercury.png?ex=6909f7a0&is=6908a620&hm=1e6da7d871760565d68154b4353a25386a9517630216b73eca6420e8b14327f5&"
+                },
+                "stats": {
+                    "attack": "10,138",
+                    "health": "61,325",
+                    "power": "24,056"
+                },
+                "signature_ability": {
+                    "name": "Dança Morta",
+                    "description": "[HAB 1]: 13% de chance **ao ACERTAR GOLPES** de ganhar 13% de PODER ESTELAR e aplicar QUIETUS por 13 segundos.\n\n[HAB 2]: Ao ativar o PODER ESTELAR, **esvazie-o instantaneamente para converter 3 EF. POSITIVOS do oponente em EF. NEGATIVOS aleatórios** por 13 segundos. Ao ativar com a barra cheia, também aplica MALDIÇÃO por 13 segundos."
+                },
+                "marquee_ability": "DESVIO PARA O VERMELHO",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Corte Crescente, Pilar da Destruição, Pilar da Destruição"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Criança Estelar",
+                "title_formatted": "Criança Estelar - Ar - Bronze",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360911604581007523/1000.png?ex=681dccb3&is=681c7b33&hm=c23b9fafac34a9780de12214c80a453b4d4b2981ab27f4276ed4d4c382e6e44c&"
+                },
+                "stats": {
+                    "attack": "10,676",
+                    "health": "51,264",
+                    "power": "22,711"
+                },
+                "signature_ability": {
+                    "name": "POEIRA ESTELAR",
+                    "description": "[HAB 1]: No MODO POEIRA ESTELAR, **cada GOLPE bloqueado pelo oponente** tem 10% de chance de infligir QUEBRA DE GUARDA e LENTIDÃO por 15 s.\n\n[HAB 2]: **BLOCKBUSTERS causam 50% de dano extra no MODO POEIRA ESTELAR.**"
+                },
+                "marquee_ability": "Desvio para o Vermelho",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            },
+            {
+                "name": "Chama Solar",
+                "title_formatted": "Chama Solar - Fogo - Bronze",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360912973312557236/1000.png?ex=681dcdf9&is=681c7c79&hm=e844de2c1d2076648a5503c47b38b8ed8e055f3014752aa80043329e5d383789&"
+                },
+                "stats": {
+                    "attack": "9,428",
+                    "health": "56,948",
+                    "power": "22,356"
+                },
+                "signature_ability": {
+                    "name": "DRAGON INSTALL",
+                    "description": "[HAB 1]: **O medidor de PODER ESTELAR enche 50% mais rápido.**\n\n[HAB 2]: Ao **ativar o PODER ESTELAR com o medidor cheio**, ganhe ACELERAÇÃO permanente e 5 camadas de FÚRIA permanente, **mas sofra FADIGA** por 5 s. Todos os efeitos são removidos ao sair do PODER ESTELAR."
+                },
+                "marquee_ability": "Desvio para o Vermelho",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar da Destruição, Pilar da Destruição, Pilar da Destruição"
+            }
+        ]
+    }
 }

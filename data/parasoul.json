@@ -1,388 +1,388 @@
 {
-    "character":  "Parasoul",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Ruiva Fatal",
-                                          "title_formatted":  "\u003e Ruiva Fatal \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Fogo",
-                                          "color_hex":  "#ff0000",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684264940474408/1000.png?ex=681ea20b\u0026is=681d508b\u0026hm=a08aff99e94dda211285cd1165c641797ba112ec98e05d7a39d9b582f737f2f6\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,770",
-                                                        "health":  "71,117",
-                                                        "power":  "27,913"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "BOCA NA BOTIJA",
-                                                                    "description":  "[HAB 1]: Inflija MARCA DA MORTE por 15 seg e ganhe FÚRIA **ao GOLPEAR um oponente que estiver atacando. Um acúmulo de FÚRIA é removido após cada GOLPE BLOQUEADO.**\n\n[HAB 2]: **Com ao menos 3 camadas de FÚRIA**, os BLOCKBUSTERS se tornam INDEFENSÁVEIS."
-                                                                },
-                                          "marquee_ability":  "MASSA CRÍTICA",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                      },
-                                      {
-                                          "name":  "Atração Fatal",
-                                          "title_formatted":  "\u003e Atração Fatal \u003c:Neutro:1389703364304175125\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Neutro",
-                                          "color_hex":  "#ff80c0",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684285232251002/1000.png?ex=681ea210\u0026is=681d5090\u0026hm=20229906ab80dee34f822e35b32d5a90c2df981f8637f077eebc1de159266980\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,770",
-                                                        "health":  "71,117",
-                                                        "power":  "27,913"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "DE PARAR O SHOW",
-                                                                    "description":  "[HAB 1]: Ganhe FÚRIA, BARREIRA ou REGENERAÇÃO por 15 segundos ao **gerar uma LÁGRIMA.**\n\n[HAB 2]: **Ao DETONAR pelo menos 3 LÁGRIMAS de uma vez, as LÁGRIMAS ficam INDEFENSÁVEIS** e Parasoul troca de roupa. DETONAR 5 LÁGRIMAS de uma vez inflige ATORDOAMENTO por 2 segundos ao GOLPEAR."
-                                                                },
-                                          "marquee_ability":  "MASSA CRÍTICA",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                      },
-                                      {
-                                          "name":  "Salgada",
-                                          "title_formatted":  "\u003e Salgada \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#ffff00",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684306476404868/1000.png?ex=681ea215\u0026is=681d5095\u0026hm=35b15408d6d9f06d8004f981de390a965910d6c4a1813983f2f3bebeaf03eebd\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,556",
-                                                        "health":  "64,032",
-                                                        "power":  "28,628"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "RIFLE DE SAL",
-                                                                    "description":  "[HAB 1]: Os oponentes perdem 1 EFEITO POSITIVO e 3% de VIDA a cada 2 s **enquanto estão perto de uma LÁGRIMA.**\n\n[HAB 2]: **Ao DETONAR pelo menos 3 LÁGRIMAS de uma vez, REMOVE todos os EF. NEGATIVOS** e ganha 5 camadas de PRECISÃO. As LÁGRIMAS detonadas também causam 100% de dano extra."
-                                                                },
-                                          "marquee_ability":  "MASSA CRÍTICA",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                      },
-                                      {
-                                          "name":  "Bela do Bar",
-                                          "title_formatted":  "\u003e Bela do Bar \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#800080",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684328517603468/1000.png?ex=681ea21a\u0026is=681d509a\u0026hm=1b37a17099fba02b5523c6bd47bbb23f83a7f5c4096774f67fc89b595695858d\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,770",
-                                                        "health":  "71,117",
-                                                        "power":  "27,913"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "HORA DO PODER",
-                                                                    "description":  "[HAB 1]: **Enquanto perto de uma LÁGRIMA,** 100% de chance de GOLPES ESPECIAIS concederem ACELERAÇÃO por 15 s e removerem 1 EF. POS. do oponente.\n\n[HAB 2]: **Se houver pelo menos 1 LÁGRIMA no cenário,** GOLPES CRÍTICOS concedem INVENCÍVEL por 1 s e 10% de todo o DANO CRÍTICO é recuperado como VIDA."
-                                                                },
-                                          "marquee_ability":  "MASSA CRÍTICA",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Brigada Infernal, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "The Legend of Parasol",
-                                      "title_formatted":  "\u003e The Legend of Parasol \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#ffff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684147440976013/1000.png?ex=681ea1ef\u0026is=681d506f\u0026hm=a585874a5fafa153cb7f92391da16410b319cb131ea61b36fdd27e550db10b5a\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,293",
-                                                    "health":  "72,634",
-                                                    "power":  "25,285"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "SELO SOBERANO",
-                                                                "description":  "[HAB 1]: Os oponentes têm seus BLOCKBUSTERS e ASSISTÊNCIAS DESATIVADOS após 1 s **enquanto estão perto de uma LÁGRIMA.**\n\n[HAB 2]: **LÁGRIMAS detonadas** infligem MALDIÇÃO e FEITIÇO por 10 segundos ao GOLPEAR. Lutadores das Trevas também sofrem FADIGA por 5 seg."
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Brigada Motorizada, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Gatilho de napalm, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                  },
-                                  {
-                                      "name":  "Indômita",
-                                      "title_formatted":  "\u003e Indômita \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ff0000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684070068785333/1000.png?ex=681ea1dd\u0026is=681d505d\u0026hm=a15fbb8299ed181259d59ea2feebe7c56cdc27e54f7720b74cd3444763d3c4fd\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,293",
-                                                    "health":  "72,634",
-                                                    "power":  "25,285"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "JUNTO!",
-                                                                "description":  "[HAB 1]: Concede OLHO-MORTO e inflige BLOQUEIO DE CURA quando a VIDA do oponente cai abaixo de 80%. **Os dois efeitos são removidos se Parasoul for NOCAUTEADA.**\n\n[HAB 2]: Transfira 1 EF. POS. do oponente e ganhe MIASMA por 7 segundos a cada 3 segundos **enquanto estiver do lado do oponente do cenário e se beneficiando de OLHO-MORTO.**"
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Brigada Infernal, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                  },
-                                  {
-                                      "name":  "Orgulho Real",
-                                      "title_formatted":  "\u003e Orgulho Real \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#ffff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684048853991536/1000.png?ex=681ea1d8\u0026is=681d5058\u0026hm=20dd2b74d5ddfc4589d2cbe230034eb82cfef9b995c207e4bc16c50eaa489ed9\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,293",
-                                                    "health":  "72,634",
-                                                    "power":  "25,285"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "LÁGRIMAS DE ALEGRIA",
-                                                                "description":  "[HAB 1]: Ganhe REGENERAÇÃO por 6 segundos, e BARREIRA **ao gerar uma LÁGRIMA.**\n\n[HAB 2]: **Na EXPLOSÃO DE LÁGRIMAS, consome todos os acúmulos de BARREIRA** e recupera imediatamente 6% de VIDA **por LÁGRIMA ativa**. As LÁGRIMAS detonadas também causam 20% de **dano extra por acúmulo consumido.**"
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                  },
-                                  {
-                                      "name":  "Má Sorte",
-                                      "title_formatted":  "\u003e Má Sorte \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#008000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684168488259664/1000.png?ex=681ea1f4\u0026is=681d5074\u0026hm=f98b15b6392443081f5f131592e4ddad110875c9f865727a630aaf850d6b173f\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "66,048",
-                                                    "power":  "25,917"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "RIPOSTE-APOCALÍPTICO",
-                                                                "description":  "[HAB 1]: Um BLOQUEIO no **momento certo contra ataques comuns** tem 50% de chance de ATORDOAR o oponente por 3 s.\n\n[HAB 2]: **BLOCKBUSTERS** causam 100% de dano extra contra oponentes ATORDOADOS."
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                  },
-                                  {
-                                      "name":  "Loura Real",
-                                      "title_formatted":  "\u003e Loura Real \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#0080ff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684197801984151/1000.png?ex=681ea1fb\u0026is=681d507b\u0026hm=2da47ff2edf6e3d08acd3e4b4f2a1c7d2a37bc739346a60f41c4d6136cd7b5ce\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "66,048",
-                                                    "power":  "25,917"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "NA GELADEIRA",
-                                                                "description":  "[HAB 1]: 50% de chance de infligir INCAPAC. e reduzir o MED. DE BLOCKB. do oponente em 50% **quando um lutador usa um BLOCKBUSTER.**\n\n[HAB 2]: **Perto do oponente,** DESATIVA os GOLPES ESPECIAIS dele e dá BLOQUEIO AUTOM. a cada 2 s. **Os efeitos são removidos ao se afastar do oponente.**"
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  ""
-                                  },
-                                  {
-                                      "name":  "Varia",
-                                      "title_formatted":  "\u003e Varia \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#800080",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684220958736634/1000.png?ex=681ea201\u0026is=681d5081\u0026hm=6a87529cf0cd5bf3853de74345ff3768ffac24bbb869871963c74927f675ade9\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "59,458",
-                                                    "power":  "26,579"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "LÁGRIMAS DE DOR",
-                                                                "description":  "[HAB 1]: Ganhe FÚRIA por 10 segundos **ao gerar uma LÁGRIMA.**\n\n[HAB 2}: LÁGRIMAS detonadas infligem SANGRAMENTO por 5 segundos **ao GOLPEAR.**"
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                  },
-                                  {
-                                      "name":  "Matrona de Ferro",
-                                      "title_formatted":  "\u003e Matrona de Ferro \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ff0000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1389363426157133985/505a3467-5142-4e0e-ba87-e0026a8455c7.webp?ex=68645905\u0026is=68630785\u0026hm=f16401a1ba6322959328eb56078d844b920b7266c72b9765733b81d387c24d5c\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "59,458",
-                                                    "power":  "26,579"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "cutucadinha",
-                                                                "description":  "[HAB 1]: **Lágrimas Detonadas** concedem 1 acúmulo de FÚRIA por 15 segundos **ao GOLPEAR**.\n\n[HAB 2]: ATAQUES DE ARRANCADA são INDEFENSÁVEIS **enquanto tiver pelo menos 3 acúmulos de FÚRIA ativas**. ATAQUES DE ARRANCADA bem-sucedidos concedem MIASMA e aplicam QUEBRA DE ARMADURA por 5 segundos cada."
-                                                            },
-                                      "marquee_ability":  "MASSA CRÍTICA",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Operações Sombrias",
-                                       "title_formatted":  "\u003e Operações Sombrias \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#800080",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683978456924472/1000.png?ex=681ea1c7\u0026is=681d5047\u0026hm=94213c4d14896a845c23b5cc1cafe1badc4527d4a1ed5b26be2e265d620d3798\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "8,602",
-                                                     "health":  "67,469",
-                                                     "power":  "23,452"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "ENERGIA NEGATIVA",
-                                                                 "description":  "[HAB 1]: Oponentes sofrem MALDIÇÃO após 1 s **enquanto estão perto de uma LÁGRIMA.**\n\n[HAB 2]: Ganhe ESPINHOS a cada 1 s **enquanto estiver perto de uma LÁGRIMA.**"
-                                                             },
-                                       "marquee_ability":  "MASSA CRÍTICA",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                   },
-                                   {
-                                       "name":  "Voo da Garça",
-                                       "title_formatted":  "\u003e Voo da Garça \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Água",
-                                       "color_hex":  "#0080ff",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683999675650169/1000.png?ex=681ea1cc\u0026is=681d504c\u0026hm=a4aed5d4762b29f979b7ef93b56514d51eeb49f56b2f167072d111909106f086\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,138",
-                                                     "health":  "61,326",
-                                                     "power":  "24,056"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "LEI MARCIAL",
-                                                                 "description":  "[HAB 1]: **CRÍTICOS** DESATIVAM os BLOCKBUSTERS do oponente por 4 segundos.\n\n[HAB 2]: **Também DESATIVA os GOLPES ESPECIAIS e ASSISTÊNCIAS do oponente** por 4 segundos."
-                                                             },
-                                       "marquee_ability":  "MASSA CRÍTICA",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                   },
-                                   {
-                                       "name":  "Hera Uma Vez",
-                                       "title_formatted":  "\u003e Hera Uma Vez \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#008000",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361684021620510751/1000.png?ex=681ea1d1\u0026is=681d5051\u0026hm=2f550ede0cd0424e5a6b02854a497e822aadd0d381eba9ff90799bdc90ac21c0\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,674",
-                                                     "health":  "55,181",
-                                                     "power":  "24,661"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "CERCAR",
-                                                                 "description":  "[HAB 1]: Inflige LENTIDÃO por 10 segundos **ao gerar uma LÁGRIMA.**\n\n[HAB 2]: Na EXPLOSÃO DE LÁGRIMAS, inflige DEFINHAR por 10 segundos **por cada LÁGRIMA ativa.**"
-                                                             },
-                                       "marquee_ability":  "MASSA CRÍTICA",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                   },
-                                   {
-                                       "name":  "Fã do Perigo",
-                                       "title_formatted":  "\u003e Fã do Perigo \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#00ff80",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1433603742695030856/IMG_3873.png?ex=69054b07\u0026is=6903f987\u0026hm=6c8ecb50ad41f472011703c45b519d4cc8867032b58959edb4405f97e290ae8\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,674",
-                                                     "health":  "55,181",
-                                                     "power":  "24,661"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "Sem Esconderijo",
-                                                                 "description":  "[HAB 1]: **Arrancadas para trás** concedem ACELERAÇÃO e infligem QUEBRA DE ARMADURA no oponente por 10 segundos cada.\n\n[HAB 2]: **Enquanto se beneficiam de ACELERAÇÃO**, os dois Lutadores ganham 100% de DANO CRÍTICO aumentado."
-                                                             },
-                                       "marquee_ability":  "Massa Crítica",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Brigada Infernal, \u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Resguardada",
-                                        "title_formatted":  "\u003e Resguardada \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Fogo",
-                                        "color_hex":  "#ff0000",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683931920994504/1000.png?ex=681ea1bc\u0026is=681d503c\u0026hm=43c69297909e5da08f7a1168dbcb941892b8327efa8025223741de76edf1613b\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "9,428",
-                                                      "health":  "56,948",
-                                                      "power":  "22,356"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "CRÍTICA DEMAIS",
-                                                                  "description":  "[HAB 1]: Aumenta a CHANCE DE CRÍTICO em 20% **para todos os aliados.**\n\n[HAB 2]: Ganhe FÚRIA por 7 segundos **ao acertar um CRÍTICO.**"
-                                                              },
-                                        "marquee_ability":  "MASSA CRÍTICA",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tiro Silencioso, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                    },
-                                    {
-                                        "name":  "Reinado Duro",
-                                        "title_formatted":  "\u003e Reinado Duro \u003c:Ar:1389703277532287066\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Ar",
-                                        "color_hex":  "#80ff00",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018059482955886/Icon-Parasoul.png?ex=68a7875b\u0026is=68a635db\u0026hm=ed1eb80424db29ee65cb7364ac44be2949244c3f69486fe8cd59b593ee5b0531\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683956935688252/1000.png?ex=681ea1c2\u0026is=681d5042\u0026hm=15092129d9f4bf2588737891ef3ad110188b9ce21a41dd47d95185c201b7926b\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "9,428",
-                                                      "health":  "56,948",
-                                                      "power":  "22,356"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "NUBLADO",
-                                                                  "description":  "[HAB 1]: 50% de **chance de um CRÍTICO** ganhar 15% no MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: 50% de chance de ganhar 15% no MEDIDOR DE BLOCKBUSTER **ao sofrer um CRÍTICO.**"
-                                                              },
-                                        "marquee_ability":  "MASSA CRÍTICA",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Brigada Infernal, \u003c:Blockbuster:1434999898385944606\u003e Quicando no Dossel, \u003c:GolpeEspecial:1434999859768987748\u003e Bâillement (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Chamado da Garça, \u003c:GolpeEspecial:1434999859768987748\u003e Tiro de Napalm"
-                                    }
-                                ]
-                 }
+    "character": "Parasoul",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Ruiva Fatal",
+                "title_formatted": "Ruiva Fatal - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684264940474408/1000.png?ex=681ea20b&is=681d508b&hm=a08aff99e94dda211285cd1165c641797ba112ec98e05d7a39d9b582f737f2f6&"
+                },
+                "stats": {
+                    "attack": "11,770",
+                    "health": "71,117",
+                    "power": "27,913"
+                },
+                "signature_ability": {
+                    "name": "BOCA NA BOTIJA",
+                    "description": "[HAB 1]: Inflija MARCA DA MORTE por 15 seg e ganhe FÚRIA **ao GOLPEAR um oponente que estiver atacando. Um acúmulo de FÚRIA é removido após cada GOLPE BLOQUEADO.**\n\n[HAB 2]: **Com ao menos 3 camadas de FÚRIA**, os BLOCKBUSTERS se tornam INDEFENSÁVEIS."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Atração Fatal",
+                "title_formatted": "Atração Fatal - Neutro - Diamante",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684285232251002/1000.png?ex=681ea210&is=681d5090&hm=20229906ab80dee34f822e35b32d5a90c2df981f8637f077eebc1de159266980&"
+                },
+                "stats": {
+                    "attack": "11,770",
+                    "health": "71,117",
+                    "power": "27,913"
+                },
+                "signature_ability": {
+                    "name": "DE PARAR O SHOW",
+                    "description": "[HAB 1]: Ganhe FÚRIA, BARREIRA ou REGENERAÇÃO por 15 segundos ao **gerar uma LÁGRIMA.**\n\n[HAB 2]: **Ao DETONAR pelo menos 3 LÁGRIMAS de uma vez, as LÁGRIMAS ficam INDEFENSÁVEIS** e Parasoul troca de roupa. DETONAR 5 LÁGRIMAS de uma vez inflige ATORDOAMENTO por 2 segundos ao GOLPEAR."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Salgada",
+                "title_formatted": "Salgada - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684306476404868/1000.png?ex=681ea215&is=681d5095&hm=35b15408d6d9f06d8004f981de390a965910d6c4a1813983f2f3bebeaf03eebd&"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "64,032",
+                    "power": "28,628"
+                },
+                "signature_ability": {
+                    "name": "RIFLE DE SAL",
+                    "description": "[HAB 1]: Os oponentes perdem 1 EFEITO POSITIVO e 3% de VIDA a cada 2 s **enquanto estão perto de uma LÁGRIMA.**\n\n[HAB 2]: **Ao DETONAR pelo menos 3 LÁGRIMAS de uma vez, REMOVE todos os EF. NEGATIVOS** e ganha 5 camadas de PRECISÃO. As LÁGRIMAS detonadas também causam 100% de dano extra."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Bela do Bar",
+                "title_formatted": "Bela do Bar - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684328517603468/1000.png?ex=681ea21a&is=681d509a&hm=1b37a17099fba02b5523c6bd47bbb23f83a7f5c4096774f67fc89b595695858d&"
+                },
+                "stats": {
+                    "attack": "11,770",
+                    "health": "71,117",
+                    "power": "27,913"
+                },
+                "signature_ability": {
+                    "name": "HORA DO PODER",
+                    "description": "[HAB 1]: **Enquanto perto de uma LÁGRIMA,** 100% de chance de GOLPES ESPECIAIS concederem ACELERAÇÃO por 15 s e removerem 1 EF. POS. do oponente.\n\n[HAB 2]: **Se houver pelo menos 1 LÁGRIMA no cenário,** GOLPES CRÍTICOS concedem INVENCÍVEL por 1 s e 10% de todo o DANO CRÍTICO é recuperado como VIDA."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Brigada Infernal, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "The Legend of Parasol",
+                "title_formatted": "The Legend of Parasol - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684147440976013/1000.png?ex=681ea1ef&is=681d506f&hm=a585874a5fafa153cb7f92391da16410b319cb131ea61b36fdd27e550db10b5a&"
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "72,634",
+                    "power": "25,285"
+                },
+                "signature_ability": {
+                    "name": "SELO SOBERANO",
+                    "description": "[HAB 1]: Os oponentes têm seus BLOCKBUSTERS e ASSISTÊNCIAS DESATIVADOS após 1 s **enquanto estão perto de uma LÁGRIMA.**\n\n[HAB 2]: **LÁGRIMAS detonadas** infligem MALDIÇÃO e FEITIÇO por 10 segundos ao GOLPEAR. Lutadores das Trevas também sofrem FADIGA por 5 seg."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Brigada Motorizada, Quicando no Dossel, Bâillement (Provocar), Gatilho de napalm, Tiro de Napalm"
+            },
+            {
+                "name": "Indômita",
+                "title_formatted": "Indômita - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684070068785333/1000.png?ex=681ea1dd&is=681d505d&hm=a15fbb8299ed181259d59ea2feebe7c56cdc27e54f7720b74cd3444763d3c4fd&"
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "72,634",
+                    "power": "25,285"
+                },
+                "signature_ability": {
+                    "name": "JUNTO!",
+                    "description": "[HAB 1]: Concede OLHO-MORTO e inflige BLOQUEIO DE CURA quando a VIDA do oponente cai abaixo de 80%. **Os dois efeitos são removidos se Parasoul for NOCAUTEADA.**\n\n[HAB 2]: Transfira 1 EF. POS. do oponente e ganhe MIASMA por 7 segundos a cada 3 segundos **enquanto estiver do lado do oponente do cenário e se beneficiando de OLHO-MORTO.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Brigada Infernal, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Orgulho Real",
+                "title_formatted": "Orgulho Real - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684048853991536/1000.png?ex=681ea1d8&is=681d5058&hm=20dd2b74d5ddfc4589d2cbe230034eb82cfef9b995c207e4bc16c50eaa489ed9&"
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "72,634",
+                    "power": "25,285"
+                },
+                "signature_ability": {
+                    "name": "LÁGRIMAS DE ALEGRIA",
+                    "description": "[HAB 1]: Ganhe REGENERAÇÃO por 6 segundos, e BARREIRA **ao gerar uma LÁGRIMA.**\n\n[HAB 2]: **Na EXPLOSÃO DE LÁGRIMAS, consome todos os acúmulos de BARREIRA** e recupera imediatamente 6% de VIDA **por LÁGRIMA ativa**. As LÁGRIMAS detonadas também causam 20% de **dano extra por acúmulo consumido.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Má Sorte",
+                "title_formatted": "Má Sorte - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#008000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684168488259664/1000.png?ex=681ea1f4&is=681d5074&hm=f98b15b6392443081f5f131592e4ddad110875c9f865727a630aaf850d6b173f&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "66,048",
+                    "power": "25,917"
+                },
+                "signature_ability": {
+                    "name": "RIPOSTE-APOCALÍPTICO",
+                    "description": "[HAB 1]: Um BLOQUEIO no **momento certo contra ataques comuns** tem 50% de chance de ATORDOAR o oponente por 3 s.\n\n[HAB 2]: **BLOCKBUSTERS** causam 100% de dano extra contra oponentes ATORDOADOS."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Loura Real",
+                "title_formatted": "Loura Real - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684197801984151/1000.png?ex=681ea1fb&is=681d507b&hm=2da47ff2edf6e3d08acd3e4b4f2a1c7d2a37bc739346a60f41c4d6136cd7b5ce&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "66,048",
+                    "power": "25,917"
+                },
+                "signature_ability": {
+                    "name": "NA GELADEIRA",
+                    "description": "[HAB 1]: 50% de chance de infligir INCAPAC. e reduzir o MED. DE BLOCKB. do oponente em 50% **quando um lutador usa um BLOCKBUSTER.**\n\n[HAB 2]: **Perto do oponente,** DESATIVA os GOLPES ESPECIAIS dele e dá BLOQUEIO AUTOM. a cada 2 s. **Os efeitos são removidos ao se afastar do oponente.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": ""
+            },
+            {
+                "name": "Varia",
+                "title_formatted": "Varia - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684220958736634/1000.png?ex=681ea201&is=681d5081&hm=6a87529cf0cd5bf3853de74345ff3768ffac24bbb869871963c74927f675ade9&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "59,458",
+                    "power": "26,579"
+                },
+                "signature_ability": {
+                    "name": "LÁGRIMAS DE DOR",
+                    "description": "[HAB 1]: Ganhe FÚRIA por 10 segundos **ao gerar uma LÁGRIMA.**\n\n[HAB 2}: LÁGRIMAS detonadas infligem SANGRAMENTO por 5 segundos **ao GOLPEAR.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Matrona de Ferro",
+                "title_formatted": "Matrona de Ferro - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389363426157133985/505a3467-5142-4e0e-ba87-e0026a8455c7.webp?ex=68645905&is=68630785&hm=f16401a1ba6322959328eb56078d844b920b7266c72b9765733b81d387c24d5c&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "59,458",
+                    "power": "26,579"
+                },
+                "signature_ability": {
+                    "name": "cutucadinha",
+                    "description": "[HAB 1]: **Lágrimas Detonadas** concedem 1 acúmulo de FÚRIA por 15 segundos **ao GOLPEAR**.\n\n[HAB 2]: ATAQUES DE ARRANCADA são INDEFENSÁVEIS **enquanto tiver pelo menos 3 acúmulos de FÚRIA ativas**. ATAQUES DE ARRANCADA bem-sucedidos concedem MIASMA e aplicam QUEBRA DE ARMADURA por 5 segundos cada."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Operações Sombrias",
+                "title_formatted": "Operações Sombrias - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683978456924472/1000.png?ex=681ea1c7&is=681d5047&hm=94213c4d14896a845c23b5cc1cafe1badc4527d4a1ed5b26be2e265d620d3798&"
+                },
+                "stats": {
+                    "attack": "8,602",
+                    "health": "67,469",
+                    "power": "23,452"
+                },
+                "signature_ability": {
+                    "name": "ENERGIA NEGATIVA",
+                    "description": "[HAB 1]: Oponentes sofrem MALDIÇÃO após 1 s **enquanto estão perto de uma LÁGRIMA.**\n\n[HAB 2]: Ganhe ESPINHOS a cada 1 s **enquanto estiver perto de uma LÁGRIMA.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Voo da Garça",
+                "title_formatted": "Voo da Garça - Água - Prata",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683999675650169/1000.png?ex=681ea1cc&is=681d504c&hm=a4aed5d4762b29f979b7ef93b56514d51eeb49f56b2f167072d111909106f086&"
+                },
+                "stats": {
+                    "attack": "10,138",
+                    "health": "61,326",
+                    "power": "24,056"
+                },
+                "signature_ability": {
+                    "name": "LEI MARCIAL",
+                    "description": "[HAB 1]: **CRÍTICOS** DESATIVAM os BLOCKBUSTERS do oponente por 4 segundos.\n\n[HAB 2]: **Também DESATIVA os GOLPES ESPECIAIS e ASSISTÊNCIAS do oponente** por 4 segundos."
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Hera Uma Vez",
+                "title_formatted": "Hera Uma Vez - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#008000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361684021620510751/1000.png?ex=681ea1d1&is=681d5051&hm=2f550ede0cd0424e5a6b02854a497e822aadd0d381eba9ff90799bdc90ac21c0&"
+                },
+                "stats": {
+                    "attack": "11,674",
+                    "health": "55,181",
+                    "power": "24,661"
+                },
+                "signature_ability": {
+                    "name": "CERCAR",
+                    "description": "[HAB 1]: Inflige LENTIDÃO por 10 segundos **ao gerar uma LÁGRIMA.**\n\n[HAB 2]: Na EXPLOSÃO DE LÁGRIMAS, inflige DEFINHAR por 10 segundos **por cada LÁGRIMA ativa.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Fã do Perigo",
+                "title_formatted": "Fã do Perigo - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#00ff80",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1433603742695030856/IMG_3873.png?ex=69054b07&is=6903f987&hm=6c8ecb50ad41f472011703c45b519d4cc8867032b58959edb4405f97e290ae8&"
+                },
+                "stats": {
+                    "attack": "11,674",
+                    "health": "55,181",
+                    "power": "24,661"
+                },
+                "signature_ability": {
+                    "name": "Sem Esconderijo",
+                    "description": "[HAB 1]: **Arrancadas para trás** concedem ACELERAÇÃO e infligem QUEBRA DE ARMADURA no oponente por 10 segundos cada.\n\n[HAB 2]: **Enquanto se beneficiam de ACELERAÇÃO**, os dois Lutadores ganham 100% de DANO CRÍTICO aumentado."
+                },
+                "marquee_ability": "Massa Crítica",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Brigada Infernal, Tiro Silencioso, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Resguardada",
+                "title_formatted": "Resguardada - Fogo - Bronze",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683931920994504/1000.png?ex=681ea1bc&is=681d503c&hm=43c69297909e5da08f7a1168dbcb941892b8327efa8025223741de76edf1613b&"
+                },
+                "stats": {
+                    "attack": "9,428",
+                    "health": "56,948",
+                    "power": "22,356"
+                },
+                "signature_ability": {
+                    "name": "CRÍTICA DEMAIS",
+                    "description": "[HAB 1]: Aumenta a CHANCE DE CRÍTICO em 20% **para todos os aliados.**\n\n[HAB 2]: Ganhe FÚRIA por 7 segundos **ao acertar um CRÍTICO.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                "recommended_arsenal": "Tiro Silencioso, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            },
+            {
+                "name": "Reinado Duro",
+                "title_formatted": "Reinado Duro - Ar - Bronze",
+                "element": "Ar",
+                "color_hex": "#80ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683956935688252/1000.png?ex=681ea1c2&is=681d5042&hm=15092129d9f4bf2588737891ef3ad110188b9ce21a41dd47d95185c201b7926b&"
+                },
+                "stats": {
+                    "attack": "9,428",
+                    "health": "56,948",
+                    "power": "22,356"
+                },
+                "signature_ability": {
+                    "name": "NUBLADO",
+                    "description": "[HAB 1]: 50% de **chance de um CRÍTICO** ganhar 15% no MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: 50% de chance de ganhar 15% no MEDIDOR DE BLOCKBUSTER **ao sofrer um CRÍTICO.**"
+                },
+                "marquee_ability": "MASSA CRÍTICA",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",
+                "recommended_arsenal": "Brigada Infernal, Quicando no Dossel, Bâillement (Provocar), Chamado da Garça, Tiro de Napalm"
+            }
+        ]
+    }
 }
