@@ -4,6 +4,8 @@
 // =====================================================
 
 import { EFFECT_DATA } from '../data/effectData.js';
+import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
+import { loadCatalysts } from '../services/dataService.js';
 
 export function render() {
     return `
@@ -20,8 +22,11 @@ export function render() {
                     📚 Tutoriais
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('modifiers')">
-                    <img src="img/modifiers/buffs/Regen.png" alt="Modificadores" class="tab-icon">
+                    <img src="img/icones/Button_Modifiers.png" alt="Modificadores" class="tab-icon">
                     Modificadores
+                </button>
+                <button class="guide-tab-btn" onclick="switchGuideTab('catalysts')">
+                    ⚡ Catalisadores
                 </button>
             </div>
 
@@ -38,6 +43,18 @@ export function render() {
 
                 <!-- MODIFIERS TAB (Unified) -->
                 <div id="tab-modifiers" class="guide-tab-content">
+
+                    <!-- Export Button -->
+                    <div class="export-trigger-section">
+                        <button class="export-trigger-btn" onclick="toggleModifierExportModal()">
+                            <span class="btn-icon">📥</span>
+                            Exportar Modificadores
+                        </button>
+                    </div>
+
+                    <!-- Export Modal (hidden by default) -->
+                    ${renderModifierExportModal()}
+
                     
                     <!-- BUFFS SECTION -->
                     <div class="modifiers-section">
@@ -87,6 +104,17 @@ export function render() {
                         </div>
                     </div>
                 </div>
+                
+                <!-- CATALYSTS TAB -->
+                <div id="tab-catalysts" class="guide-tab-content">
+                    <div class="catalysts-intro">
+                        <p>Catalisadores são modificadores que o Jogador pode aplicar em seus nós de Batalha na sua Base em Batalhas da Fenda, esses modificadores são essênciais para dificultar o ataque contra sua base, além dos modificadores da semana.</p>
+                    </div>
+                    <div class="catalyst-categories" id="catalyst-container">
+                        <!-- Populated by JS -->
+                        <div class="loading-state">Carregando catalisadores...</div>
+                    </div>
+                </div>
             </div>
         </div>
     `;
@@ -95,9 +123,13 @@ export function render() {
 export function init() {
     renderEffects('buff', 'buffs-list');
     renderEffects('debuff', 'debuffs-list');
+    initCatalysts();
 
     // Register global tab switcher
     window.switchGuideTab = switchGuideTab;
+
+    // Initialize modifier export modal listeners
+    initModifierExportModal();
 
     // Trigger lazy loading if needed (though we use direct src for icons here mostly)
     if (window.setupLazyLoading) window.setupLazyLoading();
@@ -144,8 +176,9 @@ function renderEffects(type, containerId) {
                     <span class="effect-name">${effect.name}</span>
                 </td>
                 <td class="effect-desc-cell">
-                    <p>${effect.detailed}</p>
-                    ${effect.scaling ? `<small class="effect-scaling">Escalonamento: ${effect.scaling}</small>` : ''}
+                    <p><strong>Descrição do Jogo:</strong> ${effect.detailed}</p>
+                    ${effect.explicacao ? `<p style="margin-top: 6px;"><strong>Explicação:</strong> ${effect.explicacao}</p>` : ''}
+                    ${effect.scaling ? `<small class="effect-scaling" style="display: block; margin-top: 6px;">Escalonamento: ${effect.scaling}</small>` : ''}
                 </td>
                 <td class="effect-stacks-cell">${stacks}</td>
             </tr>
@@ -153,4 +186,111 @@ function renderEffects(type, containerId) {
     });
 
     container.innerHTML = html;
+}
+
+// =====================================================
+// CATALYST RENDERING LOGIC
+// =====================================================
+
+async function initCatalysts() {
+    const container = document.getElementById('catalyst-container');
+    if (!container) return;
+
+    const catalysts = await loadCatalysts();
+    if (!catalysts) {
+        container.innerHTML = '<p class="error-state">Erro ao carregar catalisadores.</p>';
+        return;
+    }
+
+    // Handle Discord embed format
+    if (catalysts.embeds && Array.isArray(catalysts.embeds)) {
+        const embed = catalysts.embeds[0];
+        if (embed) {
+            let html = '';
+
+            // Title
+            if (embed.title) {
+                html += `<h3 class="catalyst-title">${embed.title}</h3>`;
+            }
+
+            // Description (array of strings)
+            if (embed.description && Array.isArray(embed.description)) {
+                html += `<div class="catalyst-description">${embed.description.map(line =>
+                    line ? `<p>${formatCatalystText(line)}</p>` : '<br>'
+                ).join('')}</div>`;
+            }
+
+            // Fields (categories of catalysts)
+            if (embed.fields && Array.isArray(embed.fields)) {
+                html += '<div class="catalyst-fields">';
+                embed.fields.forEach(field => {
+                    const categoryClass = getCategoryClass(field.name);
+                    html += `
+                        <div class="catalyst-category ${categoryClass}">
+                            <h4>${field.name}</h4>
+                            <ul class="catalyst-list">
+                                ${(Array.isArray(field.value) ? field.value : [field.value]).map(item =>
+                        `<li>${formatCatalystText(item)}</li>`
+                    ).join('')}
+                            </ul>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            container.innerHTML = html;
+            return;
+        }
+    }
+
+    // Fallback for other formats
+    if (Array.isArray(catalysts)) {
+        container.innerHTML = `
+            <div class="catalyst-grid">
+                ${catalysts.map(cat => renderCatalystCard(cat)).join('')}
+            </div>
+        `;
+    } else if (catalysts.categories) {
+        container.innerHTML = Object.entries(catalysts.categories).map(([category, items]) => `
+            <div class="catalyst-category">
+                <h3>${category}</h3>
+                <div class="catalyst-grid">
+                    ${items.map(cat => renderCatalystCard(cat)).join('')}
+                </div>
+            </div>
+        `).join('');
+    } else {
+        container.innerHTML = '<p class="info-state">Dados de catalisadores carregados.</p>';
+    }
+}
+
+function getCategoryClass(name) {
+    if (name.toLowerCase().includes('forte')) return 'cat-strong';
+    if (name.toLowerCase().includes('bom')) return 'cat-good';
+    if (name.toLowerCase().includes('mediano')) return 'cat-medium';
+    if (name.toLowerCase().includes('ruim')) return 'cat-weak';
+    return '';
+}
+
+function formatCatalystText(text) {
+    if (!text) return '';
+    text = text.replace(/^\*\s*/, '');
+    text = text.replace(/^###\s*/, '');
+    text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    text = text.replace(/\(\+\)/g, '<span class="notation notation-plus" style="color: #4ade80;">(+)</span>');
+    text = text.replace(/\(=\)/g, '<span class="notation notation-equal" style="color: #fbbf24;">(=)</span>');
+    text = text.replace(/\(-\)/g, '<span class="notation notation-minus" style="color: #f87171;">(-)</span>');
+    return text;
+}
+
+function renderCatalystCard(catalyst) {
+    return `
+        <div class="catalyst-card">
+            ${catalyst.icon ? `<img src="${catalyst.icon}" alt="${catalyst.name}" class="catalyst-icon">` : ''}
+            <h4>${catalyst.name || 'Catalisador'}</h4>
+            <p>${catalyst.description || ''}</p>
+            ${catalyst.rarity ? `<span class="catalyst-rarity ${catalyst.rarity}">${catalyst.rarity.toUpperCase()}</span>` : ''}
+        </div>
+    `;
 }

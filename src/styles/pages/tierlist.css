@@ -164,12 +164,12 @@
     background-color: #4285f4;
 }
 
-.rank-u {
+.rank-i {
     background-color: #444;
     color: #aaa;
 }
 
-.rank-tbd {
+.rank-na {
     background-color: #475569;
     color: #cbd5e1;
     font-size: 0.7rem !important;
@@ -543,9 +543,40 @@ input:checked+.slider:before {
     gap: 0;
 }
 
-.tier-table.compact-mode .tier-char-cell img {
+.tier-table.compact-mode .tier-char-cell>img {
     display: none;
 }
+
+.compact-char-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
+/* Você pode alterar os valores de 24px abaixo para o tamanho que desejar (ex: 30px, 40px) */
+
+.tier-table.compact-mode .tier-char-cell .compact-mastery-icon {
+    display: block !important;
+    width: 24px !important;
+    /* Ajuste aqui o tamanho da Maestria */
+    height: 24px !important;
+    object-fit: contain;
+    border-radius: 0;
+    filter: none;
+}
+
+.tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
+    display: block !important;
+    width: 20px !important;
+    /* Ajuste aqui o tamanho da Raridade */
+    height: 20px !important;
+    object-fit: contain;
+    border-radius: 0;
+    filter: none;
+}
+
+/* =============================================== */
 
 .tier-table.compact-mode .tier-char-cell span {
     font-size: 0.95rem;
@@ -590,11 +621,11 @@ input:checked+.slider:before {
 }
 
 /* Clear blue */
-.tier-table.compact-mode .rank-u {
+.tier-table.compact-mode .rank-i {
     color: #666 !important;
 }
 
-.tier-table.compact-mode .rank-tbd {
+.tier-table.compact-mode .rank-na {
     color: #888 !important;
 }
 

@@ -46,10 +46,9 @@ function showTooltip(target, attrKey) {
                 <div class="attr-tooltip-title-group">
                     <strong>${data.name}</strong>
                 </div>
-                <span class="attr-tooltip-max">Máx: ${data.max}</span>
+                ${data.max ? `<span class="attr-tooltip-max">Máx: ${data.max}</span>` : ''}
             </div>
             <p class="attr-tooltip-summary">${data.summary}</p>
-            <p class="attr-tooltip-tip">💡 ${data.quickTip}</p>
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     } else {
@@ -144,19 +143,15 @@ function showDetailModal(attrKey) {
     if (source === 'attr') {
         headerHtml = `
             <h3>${data.name}</h3>
-            <span class="attr-detail-max">Máximo: ${data.max}</span>
+            ${data.max ? `<span class="attr-detail-max">Máximo: ${data.max}</span>` : ''}
         `;
         bodyHtml = `
             <div class="attr-detail-section">
-                <h4>📋 Resumo do Jogo</h4>
+                <h4>📋 Resumo</h4>
                 <p>${data.summary}</p>
             </div>
-            <div class="attr-detail-section">
-                <h4>⚡ Resumo Rápido</h4>
-                <p>${data.quickTip}</p>
-            </div>
             <div class="attr-detail-section detailed">
-                <h4>📖 Explicação Detalhada</h4>
+                <h4>📖 Explicação</h4>
                 <p>${data.detailed}</p>
             </div>
         `;

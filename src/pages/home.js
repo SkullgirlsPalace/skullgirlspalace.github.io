@@ -26,9 +26,6 @@ export function render() {
                     <button class="hub-btn" onclick="navigateTo('characters')">
                         <span>PERSONAGENS</span>
                     </button>
-                    <button class="hub-btn" onclick="navigateTo('catalysts')">
-                        <span>CATALISADORES</span>
-                    </button>
                     <button class="hub-btn" onclick="navigateTo('guide')">
                         <span>GUIA</span>
                     </button>

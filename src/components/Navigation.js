@@ -22,7 +22,6 @@ export function createNavbar() {
             <ul class="nav-links" id="navLinks">
                 <li><a href="javascript:void(0)" onclick="navigateTo('')">Inicio</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('characters')">Personagens</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('catalysts')">Catalisadores</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('guide')">Guia</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Estatísticas</a></li>
             </ul>

@@ -1,7 +1,7 @@
 /* ========== FONTS ========== */
 @font-face {
     font-family: 'Washington';
-    src: url('../../font/WashingtonBoldDynamic.otf') format('opentype');
+    src: url('/font/WashingtonBoldDynamic.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../font/RobotoCondensed-Regular.ttf') format('truetype');
+    src: url('/font/RobotoCondensed-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'Cinema';
-    src: url('../../font/TBCinemaRGothic-M.ttf') format('truetype');
+    src: url('/font/TBCinemaRGothic-M.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
     font-family: 'Dodam';
-    src: url('../../font/Typo_DodamM.ttf') format('truetype');
+    src: url('/font/Typo_DodamM.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

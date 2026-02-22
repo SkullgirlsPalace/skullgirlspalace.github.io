@@ -112,8 +112,8 @@ export function createVariantCard(variant, charKey, index = 0) {
                             
                             ${variant.marquee_ability ? `
                                 <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
-                                <h4 style="color: var(--rarity-diamond); font-size: 0.85rem; margin-bottom: 0;">
-                                    SUPERIOR RECOMENDADA: <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
+                                <h4 style="color: var(--rarity-${rarityKey}); font-size: 0.85rem; margin-bottom: 0;">
+                                    SUPERIOR RECOMENDADA: <span style="color: inherit; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
                                 </h4>
                             ` : ''}
                         </div>
@@ -257,24 +257,3 @@ export function handleEditVariantField(charKey, variantName, field) {
         }
     }
 }
-
-export function handleExportCharacterJSON(charKey) {
-    const state = getState();
-    const charData = state.characters[charKey];
-    if (!charData) return;
-
-    const jsonString = JSON.stringify(charData, null, 4);
-    console.log(`--- DADOS PARA O ARQUIVO DATA/${charKey}.JSON ---`);
-    console.log(jsonString);
-
-    navigator.clipboard.writeText(jsonString).then(() => {
-        alert(`Dados de ${charData.character} copiados! \n\nEnvie esse JSON para mim (Antigravity) aqui no chat para que eu salve permanentemente no arquivo data/${charKey}.json.`);
-    }).catch(err => {
-        alert(`Dados salvos no console (F12). Envie o conteúdo para mim (Antigravity) para salvar em data/${charKey}.json.`);
-    });
-}
-
-// Keep globals
-window.switchVariantTab = switchVariantTab;
-window.handleEditVariantField = handleEditVariantField;
-window.handleExportCharacterJSON = handleExportCharacterJSON;

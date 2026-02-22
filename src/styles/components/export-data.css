@@ -1,0 +1,374 @@
+/* ========== EXPORT CHARACTER DATA MODAL ========== */
+
+/* Overlay */
+.export-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.25s ease;
+}
+
+.export-modal-overlay.active {
+    display: flex;
+}
+
+/* Modal Container */
+.export-modal {
+    background: var(--bg-card, #1a1a2e);
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    border-radius: 16px;
+    max-width: 700px;
+    width: 92%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(212, 168, 75, 0.08);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Header */
+.export-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.export-modal-header h2 {
+    font-family: 'Cinema', 'Inter', sans-serif;
+    color: var(--accent-gold, #d4a84b);
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.export-modal-close {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary, #999);
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.export-modal-close:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary, #fff);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Body */
+.export-modal-body {
+    padding: 20px 24px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Controls */
+.export-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.export-select-all-btn,
+.export-deselect-all-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary, #999);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.export-select-all-btn:hover {
+    background: rgba(212, 168, 75, 0.15);
+    border-color: var(--accent-gold, #d4a84b);
+    color: var(--accent-gold, #d4a84b);
+}
+
+.export-deselect-all-btn:hover {
+    background: rgba(255, 80, 80, 0.12);
+    border-color: rgba(255, 80, 80, 0.4);
+    color: #ff6060;
+}
+
+.export-count {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--text-muted, #666);
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Character Grid */
+.export-char-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+    margin-bottom: 20px;
+    max-height: 260px;
+    overflow-y: auto;
+    padding: 4px;
+}
+
+.export-char-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.export-char-grid::-webkit-scrollbar-thumb {
+    background: rgba(212, 168, 75, 0.3);
+    border-radius: 3px;
+}
+
+.export-char-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.export-char-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.export-char-item:has(.export-char-checkbox:checked) {
+    background: rgba(212, 168, 75, 0.1);
+    border-color: rgba(212, 168, 75, 0.4);
+}
+
+.export-char-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--accent-gold, #d4a84b);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.export-char-icon-wrapper {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.export-char-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.export-char-name {
+    font-size: 0.82rem;
+    color: var(--text-primary, #eee);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Format Section */
+.export-format-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 16px;
+}
+
+.export-format-section h3 {
+    color: var(--text-secondary, #999);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Cinema', sans-serif;
+}
+
+.export-format-options {
+    display: flex;
+    gap: 12px;
+}
+
+.export-format-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 14px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.export-format-option:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.export-format-option.active {
+    background: rgba(212, 168, 75, 0.1);
+    border-color: rgba(212, 168, 75, 0.4);
+}
+
+.export-format-option input[type="radio"] {
+    display: none;
+}
+
+.format-icon {
+    font-size: 1.5rem;
+    display: block;
+}
+
+.format-label {
+    font-weight: 700;
+    color: var(--text-primary, #eee);
+    font-size: 0.95rem;
+}
+
+.format-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted, #666);
+}
+
+/* Footer */
+.export-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.export-download-btn {
+    width: 100%;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #d4a84b, #b8892e);
+    border: none;
+    border-radius: 12px;
+    color: #1a1a2e;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    font-family: 'Cinema', 'Inter', sans-serif;
+}
+
+.export-download-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #e0b85c, #c9973a);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(212, 168, 75, 0.3);
+}
+
+.export-download-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.export-btn-icon {
+    font-size: 1.1rem;
+}
+
+/* ===== Export Trigger Button (in guide page) ===== */
+.export-trigger-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.export-trigger-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.12), rgba(212, 168, 75, 0.04));
+    border: 1px solid rgba(212, 168, 75, 0.3);
+    border-radius: var(--border-radius-pill, 20px);
+    color: var(--accent-gold, #d4a84b);
+    font-family: 'Cinema', 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.export-trigger-btn:hover {
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.2), rgba(212, 168, 75, 0.08));
+    border-color: var(--accent-gold, #d4a84b);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(212, 168, 75, 0.2);
+}
+
+.export-trigger-btn .btn-icon {
+    font-size: 1.1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .export-modal {
+        width: 96%;
+        max-height: 90vh;
+        border-radius: 12px;
+    }
+
+    .export-modal-header {
+        padding: 16px;
+    }
+
+    .export-modal-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .export-modal-body {
+        padding: 16px;
+    }
+
+    .export-char-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        max-height: 200px;
+    }
+
+    .export-format-options {
+        flex-direction: column;
+    }
+}

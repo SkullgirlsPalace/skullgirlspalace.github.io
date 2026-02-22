@@ -1,0 +1,238 @@
+/* =====================================================
+   ATTRIBUTES & EFFECTS TOOLTIPS
+   Used by AttributeTooltip.js
+   ===================================================== */
+
+/* Tooltip Base */
+.attr-tooltip {
+    position: absolute;
+    z-index: 1000;
+    background: rgba(18, 18, 26, 0.95);
+    border: var(--border-accent);
+    border-radius: var(--border-radius-sm);
+    padding: 12px;
+    width: 280px;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+    transform: translateY(10px);
+}
+
+.attr-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.attr-tooltip.below {
+    transform: translateY(-10px);
+}
+
+.attr-tooltip.below.visible {
+    transform: translateY(0);
+}
+
+.attr-tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: var(--border-subtle);
+    padding-bottom: 6px;
+}
+
+.attr-tooltip-title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.attr-tooltip-title-group strong {
+    color: var(--accent-gold-light);
+    font-size: 0.95rem;
+}
+
+.attr-tooltip-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.attr-tooltip-max {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.attr-tooltip-summary {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.attr-tooltip-hint {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.attr-tooltip-disclaimer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.75rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: var(--element-wind);
+    /* Standard green for bonuses */
+    font-weight: 600;
+}
+
+/* Detail Modal Overlay */
+.attr-detail-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.attr-detail-overlay.visible {
+    opacity: 1;
+}
+
+.attr-detail-modal {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border: var(--border-accent);
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    transform: scale(0.95);
+    transition: transform var(--transition-normal);
+}
+
+.attr-detail-overlay.visible .attr-detail-modal {
+    transform: scale(1);
+}
+
+.attr-detail-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: var(--text-primary);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: background var(--transition-fast);
+}
+
+.attr-detail-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.attr-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    border-bottom: var(--border-subtle);
+    padding-bottom: 20px;
+}
+
+.attr-detail-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius-sm);
+    padding: 6px;
+    border: var(--border-subtle);
+}
+
+.attr-detail-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent-gold-light);
+    font-family: 'Washington', sans-serif;
+}
+
+.attr-detail-max {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.attr-detail-body {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Custom Scrollbar */
+.attr-detail-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.attr-detail-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.attr-detail-body::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 10px;
+}
+
+.attr-detail-section {
+    margin-bottom: 24px;
+}
+
+.attr-detail-section h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent-gold-dark);
+    margin: 0 0 10px 0;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+.attr-detail-section p {
+    margin: 0;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.attr-detail-section.detailed p {
+    color: var(--text-primary);
+}

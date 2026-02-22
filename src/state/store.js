@@ -206,18 +206,3 @@ export function toggleFilterBar() {
     notifySubscribers();
 }
 
-// Persistence for tier data
-export function saveTierDataToStorage() {
-    localStorage.setItem('TIER_DATA_PERSISTED', JSON.stringify(state.tierData));
-}
-
-export function loadTierDataFromStorage() {
-    try {
-        const persisted = localStorage.getItem('TIER_DATA_PERSISTED');
-        if (persisted) {
-            state.tierData = { ...state.tierData, ...JSON.parse(persisted) };
-        }
-    } catch (e) {
-        console.error('Error loading persisted tier data', e);
-    }
-}

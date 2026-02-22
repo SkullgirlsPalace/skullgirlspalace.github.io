@@ -41,7 +41,7 @@
                 },
                 "signature_ability": {
                     "name": "CORAGEM LÍQUIDA",
-                    "description": "[HAB 1]: **Enquanto Annie estiver viva**, ela limpa os EFEITOS NEGATIVOS de todos os aliados e concede ARMADURA por 15 segundos a cada 20 segundos. Todos os aliados de ÁGUA também recebem 2 camadas de FÚRIA por 15 segundos.\n\n[HAB 2]: Ganha BLOQUEIO AUTOMÁTICO PERMANENTE por cada 25/20/15% de vida perdida. Todos os aliados que se beneficiam de ARMADURA ou BLOQ. AUTOMÁTICO recebem 6% de MEDIDOR BLOCKBUSTER **ao usar um GOLPE ESPECIAL.**"
+                    "description": "[HAB 1]: **Enquanto Annie estiver viva**, ela limpa os EFEITOS NEGATIVOS de todos os aliados e concede ARMADURA por 15 segundos. Todos os aliados de ÁGUA também recebem 2 camadas de FÚRIA por 15 segundos.\n\n[HAB 2]: Ganha BLOQUEIO AUTOMÁTICO PERMANENTE por cada 25/20/15% de vida perdida. Todos os aliados que se beneficiam de ARMADURA ou BLOQ. AUTOMÁTICO recebem 6% de MEDIDOR BLOCKBUSTER **ao usar um GOLPE ESPECIAL.**"
                 },
                 "marquee_ability": "DESVIO PARA O AZUL",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
