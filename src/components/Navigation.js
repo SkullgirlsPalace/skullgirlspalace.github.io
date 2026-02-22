@@ -13,7 +13,7 @@ export function createNavbar() {
     return `
         <nav class="navbar hidden-nav" id="navbar">
             <div class="navbar-brand">
-                <div class="logo" onclick="navigateTo('')">SG MOBILE WIKI</div>
+                <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
                 <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="about-link">
                     <img src="img/icones/IconInfo.png" alt="">
                     <span>sobre</span>
@@ -44,7 +44,7 @@ export function createAboutDrawer() {
             </div>
             <div class="drawer-content">
                 <div class="hero">
-                    <h1>Skullgirls Mobile Wiki</h1>
+                    <h1>Skullgirls Palace</h1>
                     <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
                     <div class="hero-buttons">
                         <a href="https://discord.gg/9dZqtVz6pz" target="_blank" class="btn btn-primary">
