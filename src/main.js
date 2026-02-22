@@ -115,7 +115,7 @@ window.onTierDataChanged = () => {
  * Initialize the application
  */
 async function init() {
-    console.log('🚀 Skullgirls Mobile Wiki - init() started');
+    console.log('Skullgirls Palace - init() started');
 
     try {
         console.log('🏗️ Setting up static UI...');
