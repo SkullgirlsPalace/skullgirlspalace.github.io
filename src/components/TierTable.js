@@ -176,14 +176,7 @@ export function createTierView(charKey, charData) {
     const editorChecked = state.isEditorMode ? 'checked' : '';
 
     return `
-        <!-- Temporary Editor Notice -->
-        ${state.isEditorMode ? `
-        <div class="temp-notice fade-in">
-            <strong>MODO EDITOR ATIVO</strong>
-            <p>Clique nas notas para alternar entre SS, S, A, B, C, I e N/A. <br>
-                <em>Suas mudanças ficam salvas no navegador e podem ser exportadas para o código.</em>
-            </p>
-        </div>` : ''}
+
 
 
         <!-- Rank Explanations Dictionary -->
@@ -212,7 +205,7 @@ export function createTierView(charKey, charData) {
         </div>
 
         <!-- Display Control Bar -->
-        <div class="editor-control-bar">
+        <div class="editor-control-bar" style="justify-content: center;">
             <div class="editor-toggle">
                 <label class="switch">
                     <input type="checkbox" id="compact-mode-toggle" ${compactChecked} onchange="handleToggleCompactMode()">
@@ -220,15 +213,6 @@ export function createTierView(charKey, charData) {
                 </label>
                 <span class="editor-label">Modo Compacto</span>
             </div>
-
-            <div class="editor-toggle">
-                <label class="switch">
-                    <input type="checkbox" id="editor-mode-toggle" ${editorChecked} onchange="handleToggleEditorMode()">
-                    <span class="slider round"></span>
-                </label>
-                <span class="editor-label">Modo Edição (Apenas para você)</span>
-            </div>
-            <button class="save-data-btn" onclick="handleSaveTierData()">Gerar JSON para o Código</button>
         </div>
 
         ${createTierTable(charKey, charData)}
@@ -260,23 +244,39 @@ export function handleToggleEditorMode() {
     }
 }
 
-export function handleSaveTierData() {
+export async function handleSaveTierData() {
     const state = getState();
+
+    // Always persist to localStorage for safety
     localStorage.setItem('TIER_DATA_PERSISTED', JSON.stringify(state.tierData));
 
-    const jsonString = JSON.stringify(state.tierData, null, 4);
-    console.log('--- DADOS PARA O ARQUIVO DATA/TIER-DATA.JSON ---');
-    console.log(jsonString);
-
-    // Simple copy to clipboard attempt
-    if (navigator.clipboard) {
-        navigator.clipboard.writeText(jsonString).then(() => {
-            alert('Dados copiados para a área de transferência! \n\nAgora você pode me enviar (Antigravity) esse conteúdo JSON aqui no chat para que eu salve permanentemente nos arquivos do projeto.');
-        }).catch(err => {
-            console.error('Erro ao copiar:', err);
-            alert('Erro ao copiar. O JSON foi impresso no Console (F12).');
+    try {
+        const response = await fetch('http://localhost:3000/save-tier-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(state.tierData)
         });
-    } else {
-        alert('Cópia automática não disponível. O JSON foi impresso no Console (F12).');
+
+        if (response.ok) {
+            alert('✅ Dados salvos com sucesso no arquivo data/tier-data.json!');
+        } else {
+            throw new Error('Falha ao salvar no servidor');
+        }
+    } catch (error) {
+        console.error('Erro ao salvar:', error);
+
+        // Detailed error message if server is likely not running
+        const jsonString = JSON.stringify(state.tierData, null, 4);
+        console.log('--- DADOS PARA O ARQUIVO DATA/TIER-DATA.JSON ---');
+        console.log(jsonString);
+
+        alert('❌ Erro ao salvar diretamente no arquivo.\n\nCERTIFIQUE-SE QUE O SERVIDOR ESTÁ RODANDO:\n1. Abra um terminal na pasta do projeto\n2. Digite: node scripts/server.js\n\nComo contingência, o JSON foi copiado para sua área de transferência.');
+
+        // Fallback to clipboard
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(jsonString);
+        }
     }
 }

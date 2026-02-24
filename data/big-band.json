@@ -153,7 +153,7 @@
                 },
                 "signature_ability": {
                     "name": "AMPLIFICADO E PRONTO",
-                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo**, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 10 s depois de cada 15 s\n\n[HAB 2]: **Ao se beneficiar** de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. **Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO**, a duração dela aumenta em 5 s."
+                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo**, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 10 s a cada 15 s\n\n[HAB 2]: **Ao se beneficiar** de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. **Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO**, a duração dela aumenta em 5 s."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho medidor",
