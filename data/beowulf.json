@@ -1,366 +1,366 @@
 {
-    "character":  "Beowulf",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Rei das Feras",
-                                          "title_formatted":  " \u003e Rei das Feras  \u003c:Fogo:1389703188525092934\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Fogo",
-                                          "color_hex":  "#ef2e2d",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360948069507535049/1000.png?ex=681deea8\u0026is=681c9d28\u0026hm=06ded5f57788eb81a4e4f1abf79bde884e48a43d80900c5055abbbedc15077a9\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,152",
-                                                        "health":  "71,117",
-                                                        "power":  "29,546"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "PODER CORROMPIDO",
-                                                                    "description":  "[HAB 1]: Inflija DEFINHAR e MALDIÇÃO por 10 segundos cada **quando causar dano igual a pelo menos 10% da VIDA MÁX. com um único GOLPE**.\n\n[HAB 2]:  Inflija 25% de dano extra por cada acúmulo de EF. NEGATIVO **aplicada a um dos lutadores.**"
-                                                                },
-                                          "marquee_ability":  "Defensor do Título",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                      },
-                                      {
-                                          "name":  "Poder Sombrio",
-                                          "title_formatted":  "\u003e Poder Sombrio  \u003c:Trevas:1389703142848991364\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#6426a8",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360948130853425434/1000.png?ex=681deeb7\u0026is=681c9d37\u0026hm=560775d722d7f42f939330f36165c277c5501f15959a403a2b2de9fad78a1894\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,152",
-                                                        "health":  "71,117",
-                                                        "power":  "29,546"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "GRAVE INJUSTIÇA",
-                                                                    "description":  "[HAB 1]: **Quando um aliado perde com Beowulf vivo**, todos os EF. POS. do oponente são removidos. Inflige 3 camadas de OSC. DE ENERGIA e MALDIÇÃO permanentes.\n\n[HAB 2]: **Quando o oponente está com MALDIÇÃO**, os ACERTOS DE GOLPES ESPECIAIS e BLOCKBUSTERS têm 100% de chance de serem INDEFENSÁVEIS e conceder INABALÁVEL por 10 s."
-                                                                },
-                                          "marquee_ability":  "Desafiante",
-                                          "recommended_build":  "",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Three Wulf Moonsault, \u003c:GolpeEspecial:1434999859768987748\u003e Gigant Arm,  , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                      },
-                                      {
-                                          "name":  "Picada de Cobra",
-                                          "title_formatted":  "\u003e Picada de Cobra  \u003c:Ar:1389703277532287066\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Ar",
-                                          "color_hex":  "#076314",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360948257475399831/1000.png?ex=681deed5\u0026is=681c9d55\u0026hm=32fbde828ad5af386113d4afb3f70139aab55be499dea081ba51759310419acf\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "15,130",
-                                                        "health":  "64,032",
-                                                        "power":  "30,488"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "ATAQUE FURTIVO",
-                                                                    "description":  "[HAB 1]: Ganhe 3 acúmulos de EVASÃO e 25% do MEDIDOR DE BLOCKBUSTER **ao ativar o MODO HYPE.**\n\n[HAB 2]: Ganhe ACELERAÇÃO permanente e 5 acúmulos de BARREIRA **ao derrotar um oponente no MODO HYPE.**"
-                                                                },
-                                          "marquee_ability":  "Defensor do Título",
-                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Aroo Ready? (Provocar)"
-                                      },
-                                      {
-                                          "name":  "Ogros Têm Camadas",
-                                          "title_formatted":  " \u003e Ogros Têm Camadas \u003c:Luz:1389703315167907902\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#dfd173",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360948328665448650/1000.png?ex=681deee6\u0026is=681c9d66\u0026hm=2edd517cb1f94da3dfa16b0687f0b6c7f90a0e092be7d6a5746a7af05ce358ec\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,175",
-                                                        "health":  "78,221",
-                                                        "power":  "28,609"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "FAMINTOS E FURIOSOS",
-                                                                    "description":  "[HAB 1]: **Quando o oponente tenta ganhar um EF. POS., Beowulf tem 50% de chance de impedi-lo** e ganhar IMUNIDADE por 15 segundos.\n\n[HAB 2]: **Enquanto estiver no MODO HYPE**, os BLOCKBUSTERS têm 100% de chance de de conceder FÚRIA permanente e curar 10% da VIDA."
-                                                                },
-                                          "marquee_ability":  "Defensor do Título",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Aroo Ready? (Provocar)"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "Combatente da Liberdade",
-                                      "title_formatted":  "\u003e Combatente da Liberdade  \u003c:Agua:1389703224210231437\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#1095d5",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947648793673850/1000.png?ex=681dee44\u0026is=681c9cc4\u0026hm=49c334f8a5a88a1bb4d2883ac5ca15e365c7eaef75fa016eb909e72fc061eac6\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "14,036",
-                                                    "health":  "59,463",
-                                                    "power":  "28,296"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "CAP\u0027S LOCK",
-                                                                "description":  "[HAB 1]: 10% de chance de infligir QUEBRA DE ARMADURA e ganhar BLOQUEIO AUTOMÁTICO por 10 segundos cada **quando qualquer lutador for GOLPEADO (inclui Bloquear).**\n\n[HAB 2]: **Ao BLOQUEAR um ataque BLOCKBUSTER ou GOLPE ESPECIAL, DESATIVA os BLOCKBUSTERS do oponente** por 15 seg inflige ATORDOAMENTO por 4 seg."
-                                                            },
-                                      "marquee_ability":  "Desafiante",
-                                      "recommended_build":  "",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Three Wulf Moonsault, \u003c:GolpeEspecial:1434999859768987748\u003e Gigant Arm,  , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Dragão Brigão",
-                                      "title_formatted":  "\u003e Dragão Brigão  \u003c:Fogo:1389703188525092934\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ef2e2d",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947721619640380/1000.png?ex=681dee56\u0026is=681c9cd6\u0026hm=1299af641c89d2ad5edf706c589c071403fe9891a9f5cee9900f6b020b0d1af8\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,212",
-                                                    "health":  "66,048",
-                                                    "power":  "27,437"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "PUNHO DO LOBO SELVAGEM",
-                                                                "description":  "[HAB 1]: Ganhe 5 acúmulos de PRECISÃO **ao ativar o HYPE e um aumento de 100% no DANO CRÍTICO durante o MODO HYPE.**\n\n[HAB 2]: Ganha 2 acúmulos de FÚRIA e 50% no MEDIDOR DE BLOCKBUSTER **ao derrotar um oponente enquanto estiver no MODO HYPE.**"
-                                                            },
-                                      "marquee_ability":  "Defensor do Título",
-                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Three Wulf Moonsault, \u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                  },
-                                  {
-                                      "name":  "Praga do Lobo",
-                                      "title_formatted":  "\u003e Praga do Lobo  \u003c:Trevas:1389703142848991364\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#6426a8",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947809779712080/1000.png?ex=681dee6b\u0026is=681c9ceb\u0026hm=9bf7608825883cf9ce2e975d88a486cac9c0048ffef9cd62be93abfd74045547\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "14,036",
-                                                    "health":  "59,463",
-                                                    "power":  "28,296"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ESTRANGULAMENTO",
-                                                                "description":  "[HAB 1]: **ARREMESSOS** têm 50% de chance de infligir INCAPACITAÇÃO e BLOQUEIO DE CURA por 10 segundos.\n\n[HAB 2]: Causa 50% de **dano extra contra oponentes sofrendo um EFEITO NEGATIVO.**"
-                                                            },
-                                      "marquee_ability":  "Defensor do Título",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                  },
-                                  {
-                                      "name":  "Pico Bola",
-                                      "title_formatted":  "\u003e Pico Bola  \u003c:Ar:1389703277532287066\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#076314",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947906542178395/1000.png?ex=681dee82\u0026is=681c9d02\u0026hm=c4f5f65504096addcccc321dd1ee7944788724f249b71f5b4e74b6f06592df20\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,212",
-                                                    "health":  "66,048",
-                                                    "power":  "27,437"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "Olho na Pancadaria",
-                                                                "description":  "[HAB 1]: **Enquanto Beowulf estiver vivo**, o lutador ativo ganha ESQUIVA por 7 s e 5% no MEDIDOR DE BLOCKBUSTER quando o oponente está NOCAUTEADO.\n\n[HAB 2]: **Quando um aliado se ESQUIVA de um ataque**, concede REGENERAÇÃO por 10 segundos e 2 acúmulos de PRECISÃO."
-                                                            },
-                                      "marquee_ability":  "Defensor do Título",
-                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                  },
-                                  {
-                                      "name":  "Último Lutador",
-                                      "title_formatted":  "\u003e Último Lutador  \u003c:Luz:1389703315167907902\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#dfd173",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360948003468345587/1000.png?ex=681dee99\u0026is=681c9d19\u0026hm=fa2961b221bfddacacd0104a563b7e14cb62a0da4aaf3da5941579d2eec2c342\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,368",
-                                                    "health":  "72,634",
-                                                    "power":  "26,555"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ÚLTIMA CHAMADA",
-                                                                "description":  "[HAB 1]: **Consiga o HYPE máximo e ganhe ACELERAÇÃO por 10 segundos quando a VIDA do Beowulf cair abaixo de** 50% pela primeira vez.\n\n[HAB 2]: **Ao ativar o MODO HYPE, remova todos os EFEITOS NEGATIVOS** e ganhe IMUNIDADE, RESISTÊNCIA FINAL e REGENERAÇÃO FORTE por 15 segundos."
-                                                            },
-                                      "marquee_ability":  "Defensor do Título",
-                                      "recommended_build":  "ATQ%, Perfuração, Reat. Especial e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:GolpeEspecial:1434999859768987748\u003e Geatish Trepak, , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot,  \u003c:GolpeEspecial:1434999859768987748\u003e Aroo Ready? (Provocar)"
-                                  },
-                                  {
-                                      "name":  "Homem de Gelo",
-                                      "title_formatted":  "\u003e Homem de Gelo  \u003c:Agua:1389703224210231437\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#0080ff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1389701683113754647/1400823172919726150/af2799b5-8e24-4e6b-9329-155918eb0753.webp?ex=688e09be\u0026is=688cb83e\u0026hm=b240a78a6d0e61b1744304123056c196df3a934f28f7fd933b0d27fc4a53543d\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,368",
-                                                    "health":  "72,634",
-                                                    "power":  "26,555"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "Fica Frio",
-                                                                "description":  "[HAB 1]: **Ao bloquear um GOLPE**, aplica 1 acúmulo de LENTIDÃO por 15 s. Quando um oponente obtém 5 acúmulos de LENTIDÃO, remove todas as CAMADAS de LENTIDÃO e ATORDOA o oponente por 6 s.\n\n[HAB 2]: Quando **qualquer aliado** GOLPEAR um **oponente atordoado**, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por 15 s."
-                                                            },
-                                      "marquee_ability":  "Defensor do Título",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Lutador X",
-                                       "title_formatted":  "\u003e Lutador X  \u003c:Luz:1389703315167907902\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#dfd173",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947207658016978/1000.png?ex=681deddb\u0026is=681c9c5b\u0026hm=2da0aa1e077b74659de93a68f8484603b0aa035a41fb57318f9d352f084341aa\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "12,999",
-                                                     "health":  "55,181",
-                                                     "power":  "26,227"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "FATOR X",
-                                                                 "description":  "[HAB 1]: Beowulf começa a luta com 3 acúmulos de REGENERAÇÃO **permanente.**\n\n[HAB 2]: **Enquanto estiver no MODO HYPE**, todos os GOLPES têm 25% de chance de infligir SANGRAMENTO por 10 segundos."
-                                                             },
-                                       "marquee_ability":  "Defensor do Título",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:Blockbuster:1434999898385944606\u003e Gigant Arm Sweep, , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, "
-                                   },
-                                   {
-                                       "name":  "Número Um",
-                                       "title_formatted":  "\u003e Número Um \u003c:Fogo:1389703188525092934\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Fogo",
-                                       "color_hex":  "#ef2e2d",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947353254887485/1000.png?ex=681dedfe\u0026is=681c9c7e\u0026hm=8ad3061b643bad2ea9746c08e7cbb81c1c046cf78d908e5058d77bc9856f14b2\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "9,620",
-                                                     "health":  "47,469",
-                                                     "power":  "24,464"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "ALERTA VERMELHO",
-                                                                 "description":  "[HAB 1]: Ganha OLHO-MORTO e ACELERAÇÃO por 10 s cada **quando ativar o MODO HYPE.**\n\n[HAB 2]: Ao GOLPEAR, tem 25% de chance de ganhar FÚRIA por 10 segundos **quando estiver se beneficiando de ACELERAÇÃO.**"
-                                                             },
-                                       "marquee_ability":  "Defensor do Título",
-                                       "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Aroo Ready? (Provocar)"
-                                   },
-                                   {
-                                       "name":  "Promotor",
-                                       "title_formatted":  "\u003e Promotor \u003c:Ar:1389703277532287066\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#076314",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947451724304414/1000.png?ex=681dee15\u0026is=681c9c95\u0026hm=3bc5ab03e736a77c91bb68013044705cd0dab33cbfad7054401d976ac14a7594\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,309",
-                                                     "health":  "46,328",
-                                                     "power":  "26,440"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "TREM HYPE DA ALEGRIA",
-                                                                 "description":  "[HAB 1]: **No MODO HYPE, DRENA o MEDIDOR DE BLOCKBUSTER do oponente em 10% a cada GOLPE acertado.**\n\n[HAB 2]: Ao ativar o MODO HYPE, **aliados na reserva ganham 50% no MEDIDOR DE BLOCKBUSTER.**"
-                                                             },
-                                       "marquee_ability":  "Defensor do Título",
-                                       "recommended_build":  "ATQ%, Perfuração, Reat. Especial e Precisão",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:Blockbuster:1434999898385944606\u003e Wulf Shoot, , \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Aroo Ready? (Provocar)"
-                                   },
-                                   {
-                                       "name":  "Favorito dos Fãs",
-                                       "title_formatted":  "\u003e Favorito dos Fãs  \u003c:Luz:1389703315167907902\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#dfd173",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947561137176809/1000.png?ex=681dee2f\u0026is=681c9caf\u0026hm=acf7844ee21b97fcbbcc45a50c064bcb08b36e26c9c04f4f3d042511a9880dec\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "12,999",
-                                                     "health":  "55,181",
-                                                     "power":  "26,227"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "SUPORTE IMORTAL",
-                                                                 "description":  "[HAB 1]: **Com Beowulf vivo**, os aliados ganham RESISTÊNCIA FINAL por 10 s a cada 30 s.\n\n[HAB 2]: Inflija MARCA DA MORTE e ganhe 2 acúmulos de FÚRIA por 10 s cada ao ativar o MODO HYPE **enquanto Beowulf tiver aliados vivos.**"
-                                                             },
-                                       "marquee_ability":  "Defensor do Título",
-                                       "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Alma de Pedra",
-                                        "title_formatted":  "\u003e Alma de Pedra  \u003c:Agua:1389703224210231437\u003e \u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Água",
-                                        "color_hex":  "#1095d5",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360943963955007568/1000.png?ex=681dead6\u0026is=681c9956\u0026hm=24896a74fd9398d40782bf6cf4f5613bb80aa60e156a0eff059a49d18ac3d2dd\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "12,135",
-                                                      "health":  "51,264",
-                                                      "power":  "24,435"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "PEDRADA",
-                                                                  "description":  "[HAB 1]: **ARREMESSOS têm 20% de chance de infligir ATORDOAMENTO por 6 segundos.**\n\n[HAB 2]: **Causa 50% de dano extra contra oponentes ATORDOADOS.**"
-                                                              },
-                                        "marquee_ability":  "Defensor do Título",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Gigant Arm, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                    },
-                                    {
-                                        "name":  "Lobo Azarão",
-                                        "title_formatted":  "\u003e Lobo Azarão  \u003c:Trevas:1389703142848991364\u003e \u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Trevas",
-                                        "color_hex":  "#6426a8",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018153154084894/icon-beowulf.png?ex=68a78772\u0026is=68a635f2\u0026hm=be81d941542fbe53c45ff50510e3d2228a4bcd81d9b134326ac9d7e608dc0bc7\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360947045288120522/1000.png?ex=681dedb4\u0026is=681c9c34\u0026hm=ae5b69bd54edcd95fdb5d04ead314d1b75d00091c8ad8470d6f5b349a37d9617\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "10,522",
-                                                      "health":  "56,948",
-                                                      "power":  "23,648"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "CONTRA AS CORDAS",
-                                                                  "description":  "[HAB 1]: Ganha ARMADURA e ACELERAÇÃO por 15 s cada **ao sofrer um EFEITO NEGATIVO.**\n\n[HAB 2]: **Quando Beowulf ganha um EF. POS.,** também ganha 10% de MEDIDOR DE BLOCKBUSTER."
-                                                              },
-                                        "marquee_ability":  "Defensor do Título",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lupine Pummel, \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), , \u003c:GolpeEspecial:1434999859768987748\u003e Hurting Hurdle (Cadeira), \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot, \u003c:GolpeEspecial:1434999859768987748\u003e Wulf Shoot"
-                                    }
-                                ]
-                 }
+    "character": "Beowulf",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Rei das Feras",
+                "title_formatted": "Rei das Feras - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360948069507535049/1000.png?ex=681deea8&is=681c9d28&hm=06ded5f57788eb81a4e4f1abf79bde884e48a43d80900c5055abbbedc15077a9&"
+                },
+                "stats": {
+                    "attack": "13,152",
+                    "health": "71,117",
+                    "power": "29,546"
+                },
+                "signature_ability": {
+                    "name": "PODER CORROMPIDO",
+                    "description": "[HAB 1]: Inflija DEFINHAR e MALDIÇÃO por 10 segundos cada **quando causar dano igual a pelo menos 10% da VIDA MÁX. com um único GOLPE**.\n\n[HAB 2]:  Inflija 25% de dano extra por cada acúmulo de EF. NEGATIVO **aplicada a um dos lutadores.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            },
+            {
+                "name": "Poder Sombrio",
+                "title_formatted": "Poder Sombrio - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360948130853425434/1000.png?ex=681deeb7&is=681c9d37&hm=560775d722d7f42f939330f36165c277c5501f15959a403a2b2de9fad78a1894&"
+                },
+                "stats": {
+                    "attack": "13,152",
+                    "health": "71,117",
+                    "power": "29,546"
+                },
+                "signature_ability": {
+                    "name": "GRAVE INJUSTIÇA",
+                    "description": "[HAB 1]: **Quando um aliado perde com Beowulf vivo**, todos os EF. POS. do oponente são removidos. Inflige 3 camadas de OSC. DE ENERGIA e MALDIÇÃO permanentes.\n\n[HAB 2]: **Quando o oponente está com MALDIÇÃO**, os ACERTOS DE GOLPES ESPECIAIS e BLOCKBUSTERS têm 100% de chance de serem INDEFENSÁVEIS e conceder INABALÁVEL por 10 s."
+                },
+                "marquee_ability": "Desafiante",
+                "recommended_build": "",
+                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm,  , Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
+            },
+            {
+                "name": "Picada de Cobra",
+                "title_formatted": "Picada de Cobra - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360948257475399831/1000.png?ex=681deed5&is=681c9d55&hm=32fbde828ad5af386113d4afb3f70139aab55be499dea081ba51759310419acf&"
+                },
+                "stats": {
+                    "attack": "15,130",
+                    "health": "64,032",
+                    "power": "30,488"
+                },
+                "signature_ability": {
+                    "name": "ATAQUE FURTIVO",
+                    "description": "[HAB 1]: Ganhe 3 acúmulos de EVASÃO e 25% do MEDIDOR DE BLOCKBUSTER **ao ativar o MODO HYPE.**\n\n[HAB 2]: Ganhe ACELERAÇÃO permanente e 5 acúmulos de BARREIRA **ao derrotar um oponente no MODO HYPE.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm, , Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
+            },
+            {
+                "name": "Ogros Têm Camadas",
+                "title_formatted": "Ogros Têm Camadas - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360948328665448650/1000.png?ex=681deee6&is=681c9d66&hm=2edd517cb1f94da3dfa16b0687f0b6c7f90a0e092be7d6a5746a7af05ce358ec&"
+                },
+                "stats": {
+                    "attack": "11,175",
+                    "health": "78,221",
+                    "power": "28,609"
+                },
+                "signature_ability": {
+                    "name": "FAMINTOS E FURIOSOS",
+                    "description": "[HAB 1]: **Quando o oponente tenta ganhar um EF. POS., Beowulf tem 50% de chance de impedi-lo** e ganhar IMUNIDADE por 15 segundos.\n\n[HAB 2]: **Enquanto estiver no MODO HYPE**, os BLOCKBUSTERS têm 100% de chance de de conceder FÚRIA permanente e curar 10% da VIDA."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm, , Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "Combatente da Liberdade",
+                "title_formatted": "Combatente da Liberdade - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947648793673850/1000.png?ex=681dee44&is=681c9cc4&hm=49c334f8a5a88a1bb4d2883ac5ca15e365c7eaef75fa016eb909e72fc061eac6&"
+                },
+                "stats": {
+                    "attack": "14,036",
+                    "health": "59,463",
+                    "power": "28,296"
+                },
+                "signature_ability": {
+                    "name": "CAP'S LOCK",
+                    "description": "[HAB 1]: 10% de chance de infligir QUEBRA DE ARMADURA e ganhar BLOQUEIO AUTOMÁTICO por 10 segundos cada **quando qualquer lutador for GOLPEADO (inclui Bloquear).**\n\n[HAB 2]: **Ao BLOQUEAR um ataque BLOCKBUSTER ou GOLPE ESPECIAL, DESATIVA os BLOCKBUSTERS do oponente** por 15 seg inflige ATORDOAMENTO por 4 seg."
+                },
+                "marquee_ability": "Desafiante",
+                "recommended_build": "",
+                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm,  , Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
+            },
+            {
+                "name": "Dragão Brigão",
+                "title_formatted": "Dragão Brigão - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947721619640380/1000.png?ex=681dee56&is=681c9cd6&hm=1299af641c89d2ad5edf706c589c071403fe9891a9f5cee9900f6b020b0d1af8&"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "66,048",
+                    "power": "27,437"
+                },
+                "signature_ability": {
+                    "name": "PUNHO DO LOBO SELVAGEM",
+                    "description": "[HAB 1]: Ganhe 5 acúmulos de PRECISÃO **ao ativar o HYPE e um aumento de 100% no DANO CRÍTICO durante o MODO HYPE.**\n\n[HAB 2]: Ganha 2 acúmulos de FÚRIA e 50% no MEDIDOR DE BLOCKBUSTER **ao derrotar um oponente enquanto estiver no MODO HYPE.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm, , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            },
+            {
+                "name": "Praga do Lobo",
+                "title_formatted": "Praga do Lobo - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947809779712080/1000.png?ex=681dee6b&is=681c9ceb&hm=9bf7608825883cf9ce2e975d88a486cac9c0048ffef9cd62be93abfd74045547&"
+                },
+                "stats": {
+                    "attack": "14,036",
+                    "health": "59,463",
+                    "power": "28,296"
+                },
+                "signature_ability": {
+                    "name": "ESTRANGULAMENTO",
+                    "description": "[HAB 1]: **ARREMESSOS** têm 50% de chance de infligir INCAPACITAÇÃO e BLOQUEIO DE CURA por 10 segundos.\n\n[HAB 2]: Causa 50% de **dano extra contra oponentes sofrendo um EFEITO NEGATIVO.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            },
+            {
+                "name": "Pico Bola",
+                "title_formatted": "Pico Bola - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947906542178395/1000.png?ex=681dee82&is=681c9d02&hm=c4f5f65504096addcccc321dd1ee7944788724f249b71f5b4e74b6f06592df20&"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "66,048",
+                    "power": "27,437"
+                },
+                "signature_ability": {
+                    "name": "Olho na Pancadaria",
+                    "description": "[HAB 1]: **Enquanto Beowulf estiver vivo**, o lutador ativo ganha ESQUIVA por 7 s e 5% no MEDIDOR DE BLOCKBUSTER quando o oponente está NOCAUTEADO.\n\n[HAB 2]: **Quando um aliado se ESQUIVA de um ataque**, concede REGENERAÇÃO por 10 segundos e 2 acúmulos de PRECISÃO."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            },
+            {
+                "name": "Último Lutador",
+                "title_formatted": "Último Lutador - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360948003468345587/1000.png?ex=681dee99&is=681c9d19&hm=fa2961b221bfddacacd0104a563b7e14cb62a0da4aaf3da5941579d2eec2c342&"
+                },
+                "stats": {
+                    "attack": "10,368",
+                    "health": "72,634",
+                    "power": "26,555"
+                },
+                "signature_ability": {
+                    "name": "ÚLTIMA CHAMADA",
+                    "description": "[HAB 1]: **Consiga o HYPE máximo e ganhe ACELERAÇÃO por 10 segundos quando a VIDA do Beowulf cair abaixo de** 50% pela primeira vez.\n\n[HAB 2]: **Ao ativar o MODO HYPE, remova todos os EFEITOS NEGATIVOS** e ganhe IMUNIDADE, RESISTÊNCIA FINAL e REGENERAÇÃO FORTE por 15 segundos."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Reat. Especial e Dano Crítico",
+                "recommended_arsenal": "Lupine Pummel, Geatish Trepak, , Wulf Shoot, Wulf Shoot,  Aroo Ready? (Provocar)"
+            },
+            {
+                "name": "Homem de Gelo",
+                "title_formatted": "Homem de Gelo - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389701683113754647/1400823172919726150/af2799b5-8e24-4e6b-9329-155918eb0753.webp?ex=688e09be&is=688cb83e&hm=b240a78a6d0e61b1744304123056c196df3a934f28f7fd933b0d27fc4a53543d&"
+                },
+                "stats": {
+                    "attack": "10,368",
+                    "health": "72,634",
+                    "power": "26,555"
+                },
+                "signature_ability": {
+                    "name": "Fica Frio",
+                    "description": "[HAB 1]: **Ao bloquear um GOLPE**, aplica 1 acúmulo de LENTIDÃO por 15 s. Quando um oponente obtém 5 acúmulos de LENTIDÃO, remove todas as CAMADAS de LENTIDÃO e ATORDOA o oponente por 6 s.\n\n[HAB 2]: Quando **qualquer aliado** GOLPEAR um **oponente atordoado**, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por 15 s."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Lutador X",
+                "title_formatted": "Lutador X - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947207658016978/1000.png?ex=681deddb&is=681c9c5b&hm=2da0aa1e077b74659de93a68f8484603b0aa035a41fb57318f9d352f084341aa&"
+                },
+                "stats": {
+                    "attack": "12,999",
+                    "health": "55,181",
+                    "power": "26,227"
+                },
+                "signature_ability": {
+                    "name": "FATOR X",
+                    "description": "[HAB 1]: Beowulf começa a luta com 3 acúmulos de REGENERAÇÃO **permanente.**\n\n[HAB 2]: **Enquanto estiver no MODO HYPE**, todos os GOLPES têm 25% de chance de infligir SANGRAMENTO por 10 segundos."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm Sweep, , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot, "
+            },
+            {
+                "name": "Número Um",
+                "title_formatted": "Número Um - Fogo - Prata",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947353254887485/1000.png?ex=681dedfe&is=681c9c7e&hm=8ad3061b643bad2ea9746c08e7cbb81c1c046cf78d908e5058d77bc9856f14b2&"
+                },
+                "stats": {
+                    "attack": "9,620",
+                    "health": "47,469",
+                    "power": "24,464"
+                },
+                "signature_ability": {
+                    "name": "ALERTA VERMELHO",
+                    "description": "[HAB 1]: Ganha OLHO-MORTO e ACELERAÇÃO por 10 s cada **quando ativar o MODO HYPE.**\n\n[HAB 2]: Ao GOLPEAR, tem 25% de chance de ganhar FÚRIA por 10 segundos **quando estiver se beneficiando de ACELERAÇÃO.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm, , Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
+            },
+            {
+                "name": "Promotor",
+                "title_formatted": "Promotor - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947451724304414/1000.png?ex=681dee15&is=681c9c95&hm=3bc5ab03e736a77c91bb68013044705cd0dab33cbfad7054401d976ac14a7594&"
+                },
+                "stats": {
+                    "attack": "11,309",
+                    "health": "46,328",
+                    "power": "26,440"
+                },
+                "signature_ability": {
+                    "name": "TREM HYPE DA ALEGRIA",
+                    "description": "[HAB 1]: **No MODO HYPE, DRENA o MEDIDOR DE BLOCKBUSTER do oponente em 10% a cada GOLPE acertado.**\n\n[HAB 2]: Ao ativar o MODO HYPE, **aliados na reserva ganham 50% no MEDIDOR DE BLOCKBUSTER.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Reat. Especial e Precisão",
+                "recommended_arsenal": "Lupine Pummel, Wulf Shoot, , Wulf Shoot, Wulf Shoot, Aroo Ready? (Provocar)"
+            },
+            {
+                "name": "Favorito dos Fãs",
+                "title_formatted": "Favorito dos Fãs - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947561137176809/1000.png?ex=681dee2f&is=681c9caf&hm=acf7844ee21b97fcbbcc45a50c064bcb08b36e26c9c04f4f3d042511a9880dec&"
+                },
+                "stats": {
+                    "attack": "12,999",
+                    "health": "55,181",
+                    "power": "26,227"
+                },
+                "signature_ability": {
+                    "name": "SUPORTE IMORTAL",
+                    "description": "[HAB 1]: **Com Beowulf vivo**, os aliados ganham RESISTÊNCIA FINAL por 10 s a cada 30 s.\n\n[HAB 2]: Inflija MARCA DA MORTE e ganhe 2 acúmulos de FÚRIA por 10 s cada ao ativar o MODO HYPE **enquanto Beowulf tiver aliados vivos.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Alma de Pedra",
+                "title_formatted": "Alma de Pedra - Água - Bronze",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360943963955007568/1000.png?ex=681dead6&is=681c9956&hm=24896a74fd9398d40782bf6cf4f5613bb80aa60e156a0eff059a49d18ac3d2dd&"
+                },
+                "stats": {
+                    "attack": "12,135",
+                    "health": "51,264",
+                    "power": "24,435"
+                },
+                "signature_ability": {
+                    "name": "PEDRADA",
+                    "description": "[HAB 1]: **ARREMESSOS têm 20% de chance de infligir ATORDOAMENTO por 6 segundos.**\n\n[HAB 2]: **Causa 50% de dano extra contra oponentes ATORDOADOS.**"
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+            },
+            {
+                "name": "Lobo Azarão",
+                "title_formatted": "Lobo Azarão - Trevas - Bronze",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360947045288120522/1000.png?ex=681dedb4&is=681c9c34&hm=ae5b69bd54edcd95fdb5d04ead314d1b75d00091c8ad8470d6f5b349a37d9617&"
+                },
+                "stats": {
+                    "attack": "10,522",
+                    "health": "56,948",
+                    "power": "23,648"
+                },
+                "signature_ability": {
+                    "name": "CONTRA AS CORDAS",
+                    "description": "[HAB 1]: Ganha ARMADURA e ACELERAÇÃO por 15 s cada **ao sofrer um EFEITO NEGATIVO.**\n\n[HAB 2]: **Quando Beowulf ganha um EF. POS.,** também ganha 10% de MEDIDOR DE BLOCKBUSTER."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+            }
+        ]
+    }
 }

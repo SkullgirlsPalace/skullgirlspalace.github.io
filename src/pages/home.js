@@ -17,7 +17,7 @@ export function render() {
                         <img src="img/icones/IconInfo.png" alt="">
                         <span>SOBRE</span>
                     </a>
-                    <h1>Skullgirls Mobile Wiki</h1>
+                    <h1>Skullgirls Palace</h1>
                     <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile.</p>
                 </div>
 
@@ -25,9 +25,6 @@ export function render() {
                 <div class="hub-menu">
                     <button class="hub-btn" onclick="navigateTo('characters')">
                         <span>PERSONAGENS</span>
-                    </button>
-                    <button class="hub-btn" onclick="navigateTo('catalysts')">
-                        <span>CATALISADORES</span>
                     </button>
                     <button class="hub-btn" onclick="navigateTo('guide')">
                         <span>GUIA</span>

@@ -8,9 +8,10 @@ import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switch
 import { loadAllCharacters, loadTierData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
-import { handleCycleRank, handleToggleCompactMode, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
+import { handleToggleCompactMode, handleCycleRank, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
+import { toggleExportModal } from './components/ExportCharacterData.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 
@@ -37,13 +38,16 @@ window.handleToggleFilter = handleToggleFilter;
 window.handleToggleCharDropdown = handleToggleCharDropdown;
 
 // Tier table handlers
-window.handleCycleRank = handleCycleRank;
 window.handleToggleCompactMode = handleToggleCompactMode;
+window.handleCycleRank = handleCycleRank;
 window.handleToggleEditorMode = handleToggleEditorMode;
 window.handleSaveTierData = handleSaveTierData;
 
 // Calculator handlers (specific handlers registered by statistics.js init)
 window.handleCalculateEarnings = handleCalculateEarnings;
+
+// Export handlers
+window.toggleExportModal = toggleExportModal;
 
 // ========== VARIANT CARD TAB HANDLER ==========
 /**
@@ -111,24 +115,24 @@ window.onTierDataChanged = () => {
  * Initialize the application
  */
 async function init() {
-    console.log('🎮 Skullgirls Mobile Wiki - Initializing...');
+    console.log('Skullgirls Palace - init() started');
 
     try {
-        // Setup static UI elements
+        console.log('🏗️ Setting up static UI...');
         setupStaticUI();
 
-        // Load essential data
-        console.log('📦 Loading character data...');
+        console.log('📦 Loading characters...');
         await loadAllCharacters();
+        console.log('✅ Characters loaded');
 
         console.log('📊 Loading tier data...');
         await loadTierData();
+        console.log('✅ Tier data loaded');
 
-        // Initialize router (handles initial route)
         console.log('🧭 Initializing router...');
         initRouter();
 
-        console.log('✅ Application initialized successfully!');
+        console.log('✨ Application initialization complete!');
     } catch (error) {
         console.error('❌ Failed to initialize application:', error);
         document.getElementById('app').innerHTML = `

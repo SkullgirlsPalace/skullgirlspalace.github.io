@@ -1,5 +1,5 @@
 /* =====================================================
-   SKULLGIRLS MOBILE WIKI - PALÁCIO BRANCO
+   Skullgirls Palace
    Premium Dark Theme with Golden Accents
    ===================================================== */
 
@@ -25,6 +25,7 @@
 @import 'components/animations.css';
 @import 'components/scroll-nav.css';
 @import 'components/refactored.css';
+@import 'components/export-data.css';
 
 /* Pages */
 @import 'pages/home.css';

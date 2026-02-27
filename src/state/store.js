@@ -147,6 +147,18 @@ export function setTierData(tierData) {
     notifySubscribers();
 }
 
+/**
+ * Update specific character data in state
+ * @param {string} charKey - Character key
+ * @param {Function} updateFn - Function that takes character object and returns updated object
+ */
+export function updateCharacterData(charKey, updateFn) {
+    if (state.characters[charKey]) {
+        state.characters[charKey] = updateFn(state.characters[charKey]);
+        notifySubscribers();
+    }
+}
+
 export function updateTierRank(charKey, variantName, mode, newRank) {
     if (!state.tierData[charKey]) {
         state.tierData[charKey] = {};
@@ -194,18 +206,3 @@ export function toggleFilterBar() {
     notifySubscribers();
 }
 
-// Persistence for tier data
-export function saveTierDataToStorage() {
-    localStorage.setItem('TIER_DATA_PERSISTED', JSON.stringify(state.tierData));
-}
-
-export function loadTierDataFromStorage() {
-    try {
-        const persisted = localStorage.getItem('TIER_DATA_PERSISTED');
-        if (persisted) {
-            state.tierData = { ...state.tierData, ...JSON.parse(persisted) };
-        }
-    } catch (e) {
-        console.error('Error loading persisted tier data', e);
-    }
-}

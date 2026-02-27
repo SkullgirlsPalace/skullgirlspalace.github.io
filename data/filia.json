@@ -1,373 +1,373 @@
 {
-    "character":  "Filia",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Cisalhamento",
-                                          "title_formatted":  "\u003e Cisalhamento \u003c:Ar:1389703277532287066\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Ar",
-                                          "color_hex":  "#008000",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681229401034874/1000.png?ex=681df677\u0026is=681ca4f7\u0026hm=87a9bb7e043eaef13f017dbe13d65fe485e08a755d2ab41d13ff9415f1ef3cfd\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "10,004",
-                                                        "health":  "68,506",
-                                                        "power":  "25,312"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "INDO ALÉM",
-                                                                    "description":  "[HAB 1]: **Quando um dos lutadores sofrer um EF. NEG.**, ganhe 10% no MEDIDOR DE BLOCKBUSTER, BÊNÇÃO e BLOQUEIO AUTOMÁTICO por 15 segundos cada.\n\n[HAB 2]: **Ao usar um BLOCKBUSTER**, inflija QUIETUS por 15 s e cause 15% de dano extra por EF. POS. aplicado a Filia. **Além disso, os oponentes derrotados por BLOCKBUSTERS NÃO PODEM REVIVER.**"
-                                                                },
-                                          "marquee_ability":  "Sanguessuga",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tricobezoar, \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                      },
-                                      {
-                                          "name":  "Matadora de Aula",
-                                          "title_formatted":  "\u003e Matadora de Aula \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#800080",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681284459528242/1000.png?ex=681df685\u0026is=681ca505\u0026hm=da3eb19f983f04dfb3d51967b95fa43d03408988bc1a677a257debd9ada21403\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,556",
-                                                        "health":  "56,045",
-                                                        "power":  "27,055"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "CATANDO PIOLHO",
-                                                                    "description":  "[HAB 1]: **Todos os GOLPES de um BLOCKBUSTER ou GOLPE ESPECIAL têm 10% de chance de serem INDEFENSÁVEIS** e infligirem MARCA DA MORTE por 15 segundos.\n\n[HAB 2]: Inflige SANGRAMENTO FORTE e BLOQUEIO DE CURA por 10 s **ao tirar ao menos 5% da VIDA MÁX. do oponente com um único GOLPE.**"
-                                                                },
-                                          "marquee_ability":  "Sanguessuga",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                      },
-                                      {
-                                          "name":  "Borrão Azul",
-                                          "title_formatted":  "\u003e Borrão Azul \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Água",
-                                          "color_hex":  "#0000ff",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681319532433508/1000.png?ex=681df68d\u0026is=681ca50d\u0026hm=c092c0d4b9b951a3183a510587ec68fd94d36621a395bee523875873f544606e\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,556",
-                                                        "health":  "56,045",
-                                                        "power":  "27,055"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "TENHO QUE CORRER",
-                                                                    "description":  "[HAB 1]: Dá OLHO-MORTO e ACELERAÇÃO **enquanto Filia tem ao menos 95% de VIDA**. Os EF. POS. **são removidos quando a VIDA cai abaixo de 95%.**\n\n[HAB 2]: Ganhe IMUNIDADE, RES. FINAL e INABALÁVEL por 7 s cada ao usar um BLOCKBUSTER **enquanto se beneficia de OLHO-MORTO.** Ganhe também 3 camadas de PRECISÃO."
-                                                                },
-                                          "marquee_ability":  "Sanguessuga",
-                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tricobezoar, \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                      },
-                                      {
-                                          "name":  "Djinn Frizz",
-                                          "title_formatted":  "\u003e Djinn Frizz \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Fogo",
-                                          "color_hex":  "#ff0000",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681360539877556/1000.png?ex=681df697\u0026is=681ca517\u0026hm=b7b29894cf62d88b3596fc53f14b10fe1d1d432ef45e325b35afdb4abba834b2\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "15,591",
-                                                        "health":  "50,439",
-                                                        "power":  "28,356"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "TRÊS DESEJOS",
-                                                                    "description":  "[HAB 1]: **A cada 10 segundos ganhe 3 EF. POSITIVO(S) aleatório(s) por 5 segundos.**\n\n[HAB 2]: Ao usar um BLOCKBUSTER, tem **33% de chance de converter 3 EF. POSITIVO(S) em FÚRIA permanente.**"
-                                                                },
-                                          "marquee_ability":  "Sanguessuga",
-                                          "recommended_build":  [
-                                                                    "\u003c:Blockbuster:1434999898385944606\u003e Tricobezoar, \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, ",
-                                                                    "\u003c:Blockbuster:1434999898385944606\u003e Die Verwandlung,  \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                                                ],
-                                          "recommended_arsenal":  ""
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "Escoteira",
-                                      "title_formatted":  "\u003e Escoteira \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#000000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681077038612612/1000.png?ex=681df653\u0026is=681ca4d3\u0026hm=574967400b3d42a24b4194d160a98b9dfe59a11e6e1d9eacc286bd0db0a9d320\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "57,812",
-                                                    "power":  "24,295"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "Ouse Sonhar",
-                                                                "description":  "[HAB 1]: Para cada 5º GOLPE DE COMBO **que um Lutador sofrer**, remova 1 EF. NEG. e ganhe ARMADURA por 10 segundos.\n\n[HAB 2]: **Enquanto se beneficiar de ARMADURA** ganhe 1% de VIDA, 3% de MEDIDOR DE BLOCKBUSTER por segundo e inflinja DEFINHAR por 6 s a cada 4 s."
-                                                            },
-                                      "marquee_ability":  "Sanguessuga",
-                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Cuspida, , \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, , \u003c:Blockbuster:1434999898385944606\u003e Die Verwandlung, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Cachinhos Malvados",
-                                      "title_formatted":  "\u003e Cachinhos Malvados \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#ffff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681038815924285/1000.png?ex=681df64a\u0026is=681ca4ca\u0026hm=2612023c8cb2617d1ecf0c6e37d46d9dc5f96c475649b0dd0b3a76ea21d9f2ba\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,293",
-                                                    "health":  "62,572",
-                                                    "power":  "23,501"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "NINHO DE MAFAGAFO",
-                                                                "description":  "[HAB 1]: **Ao ser GOLPEADA,** reflete 35% do dano recebido.\n\n[HAB 2]: Inflige SANGRAMENTO FORTE por 10 segundos **quando o oponente acerta um CRÍTICO.**"
-                                                            },
-                                      "marquee_ability":  "Sanguessuga",
-                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Cuspida, , \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, , \u003c:Blockbuster:1434999898385944606\u003e Die Verwandlung, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Trança Parasita",
-                                      "title_formatted":  "\u003e Trança Parasita \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ff0000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681106562322602/1000.png?ex=681df65a\u0026is=681ca4da\u0026hm=20e1d277bf6104b105dc82214025b17b232e4d3d36f73a53a4433153967bd091\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "10,925",
-                                                    "health":  "57,812",
-                                                    "power":  "24,295"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "EMARANHAMENTO",
-                                                                "description":  "[HAB 1]: CRÍTICOS têm 50% de chance de infligir LENTIDÃO por 10 s e ATORDOAR por 3 s **se o oponente já não estiver sofrendo LENTIDÃO.**\n\n[HAB 2]: Ao GOLPEAR, tem 15% de chance de infligir SANGRAM. por 5 s **se o oponente estiver ATORDOADO.**"
-                                                            },
-                                      "marquee_ability":  "O Primeiro Corte",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                  },
-                                  {
-                                      "name":  "Estrela Virtual",
-                                      "title_formatted":  "\u003e Estrela Virtual \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#00ffff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681186421870797/1000.png?ex=681df66d\u0026is=681ca4ed\u0026hm=947b44eb33c09c62be0aa8da1f05f30e4906b6df85c938fb768f934bad128328\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "51,032",
-                                                    "power":  "25,107"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "O SHOW TEM QUE CONTINUAR",
-                                                                "description":  "[HAB 1]: **ESQUIVAR-SE de um ataque** dá RESISTÊNCIA FINAL e ARMADURA por 10 segundos.\n\n[HAB 2]: Inflige QUEBRA DE ARMADURA por 5 s **ao GOLPEAR um oponente que estiver atacando*, e 200% do dano causado é recuperado como VIDA."
-                                                            },
-                                      "marquee_ability":  "Sanguessuga",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                  },
-                                  {
-                                      "name":  "Cabelos ao Vento",
-                                      "title_formatted":  "\u003e Cabelos ao Vento \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#00ff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681155459518665/1000.png?ex=681df666\u0026is=681ca4e6\u0026hm=da6dc3b247530927c9adbde0798197aee3b917232642abd1f161f85bcd6f1502\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "51,032",
-                                                    "power":  "25,107"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "CONTRAGOLPE",
-                                                                "description":  "[HAB 1]: O 1° GOLPE DE COMBO **contra um oponente atacando ** concede FÚRIA por 10 s e ESQUIVA.\n\n[HAB 2]: Após ESQUIVAR, 100% de chance de ganhar PRECISÃO PERMANENTE, que **é removida quando um dos lutadores é NOCAUTEADO.**"
-                                                            },
-                                      "marquee_ability":  "Sanguessuga",
-                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tricobezoar, \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                  },
-                                  {
-                                      "name":  "Cacho Mágico",
-                                      "title_formatted":  "\u003e Cacho Mágico \u003c:Neutro:1389703364304175125\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Neutro",
-                                      "color_hex":  "#ff80c0",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1445036314201161849/3ea7c3dd-be5e-4982-a5d8-a5086752b06c.png?ex=692ee270\u0026is=692d90f0\u0026hm=ba6a9e34bf9698ac380e1e20d0ee6376dca635dfa80232c1a87101c86f04c744\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,576",
-                                                    "health":  "51,032",
-                                                    "power":  "25,107"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "MILAGRE DO SACRÍFICIO",
-                                                                "description":  "[HAB 1]: **Quando o lutador ativo estiver prestes a sofrer um EF. NEGATIVO**, Filia sacrifica 10% da VIDA MÁXIMA para conceder IMUNIDADE por 5 segundos. **Esse efeito só pode ser ativado uma vez a cada 10 segundos.**\n\n[HAB 2]: **Também causa 10% da VIDA MÁXIMA como dano ao inimigo** e aplica BLOQUEIO DE CURA por 10 segundos. Os GOLPES ESPECIAIS ou BLOCKBUSTERS da Filia têm 35% de chance de curá-la em 10% da VIDA MÁXIMA."
-                                                            },
-                                      "marquee_ability":  "Sanguessuga",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Quartzo Estelar",
-                                       "title_formatted":  "\u003e Quartzo Estelar \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#ffff00",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361680915549524179/1000.png?ex=681df62d\u0026is=681ca4ad\u0026hm=cc266cc291e747397eddc4a613a2b5a893030b8fd06fbc1af312e776c51fb5e9\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "8,602",
-                                                     "health":  "59,079",
-                                                     "power":  "21,799"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "ESCUDO DE GEMA",
-                                                                 "description":  "[HAB 1]: **Quando a Filia está viva,** os aliados ENTRAM NA ASSISTÊNCIA com 3 camada(s) de BARREIRA por 10 s.\n\n[HAB 2]: **Quando a BARREIRA de um Aliado expira,** ele ganha RESIST. FINAL por 10 s e 20% no MEDIDOR DE BLOCKBUSTER."
-                                                             },
-                                       "marquee_ability":  "Sanguessuga",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão,  \u003c:GolpeEspecial:1434999859768987748\u003e Mechas Soltas (Expulsão)"
-                                   },
-                                   {
-                                       "name":  "Frio Cortante",
-                                       "title_formatted":  "\u003e Frio Cortante \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Água",
-                                       "color_hex":  "#00ffff",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361680964459167825/1000.png?ex=681df638\u0026is=681ca4b8\u0026hm=9956709b08c8d88f51de061e04d8b67590abda3b34b8eef45a7f4e1dccacd710\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,138",
-                                                     "health":  "53,645",
-                                                     "power":  "22,344"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "DANDO UM GELO",
-                                                                 "description":  "[HAB 1]: **CRÍTICOS** têm 50% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 6 segundos.\n\n[HAB 2]: **Também inflige QUEBRA DE ARMADURA por 6 segundos.**"
-                                                             },
-                                       "marquee_ability":  "Sanguessuga",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                   },
-                                   {
-                                       "name":  "Cabelo Rebelde",
-                                       "title_formatted":  "\u003e Cabelo Rebelde \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#00ff00",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361681002199650537/1000.png?ex=681df641\u0026is=681ca4c1\u0026hm=eb880b19c7466568dfbc376b986ea929fc812bea2a7ed629698e40841ddc9d43\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,674",
-                                                     "health":  "48,269",
-                                                     "power":  "23,300"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "POR UM FIO",
-                                                                 "description":  "[HAB 1]: **Usar um GOLPE ESPECIAL** dá ACELERAÇÃO por 15 segundos.\n\n[HAB 2]: 100% de chance de **atualizar a REATIVAÇÃO de todos os GOLPES ESPECIAIS ao usar um BLOCKBUSTER.**"
-                                                             },
-                                       "marquee_ability":  "Sanguessuga",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tricobezoar, \u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                   },
-                                   {
-                                       "name":  "Investigadora",
-                                       "title_formatted":  "\u003e Investigadora \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#ffff80",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1423025818111836320/Clue_Chaser.png?ex=68decf91\u0026is=68dd7e11\u0026hm=e6a781c0e4fca38bdf9a2fbcc3aeb6dc519df5c379898b734a2b21dd011df8af\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,138",
-                                                     "health":  "53,645",
-                                                     "power":  "22,344"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "PERCEPÇÃO ESPIRITUOSA",
-                                                                 "description":  "[HAB 1]: **Enquanto Filia estiver viva**, a TAXA DE CRÍTICO do lutador ativo aumenta em 10% a cada 3 acertos em combo (até 100%).\n\n[HAB 2]: Os GOLPES CRÍTICOS da Filia **acima de 10 acertos em combo** ignoram a ARMADURA e a DEFESA do lutador oponente."
-                                                             },
-                                       "marquee_ability":  "Sanguessuga",
-                                       "recommended_build":  [
-                                                                 "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,",
-                                                                 "\u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, ",
-                                                                 "\u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                                             ],
-                                       "recommended_arsenal":  ""
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Descabelada",
-                                        "title_formatted":  "\u003e Descabelada \u003c:Trevas:1389703142848991364\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Trevas",
-                                        "color_hex":  "#800080",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361680842841395200/1000.png?ex=681df61b\u0026is=681ca49b\u0026hm=faa26c5e321fcbdf599d7cb68ca3b86c4998b6489cf6941fa2fb0b6d9b93749c\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "9,428",
-                                                      "health":  "49,805",
-                                                      "power":  "20,949"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "TESOURA AFIADA",
-                                                                  "description":  "[HAB 1]: **Ao GOLPEAR**, tem 10% de chance de infligir SANGRAMENTO por 7 segundos.\n\n[HAB 2]: CHANCE DE CRÍTICO 15% maior **quando o oponente está sofrendo SANGRAMENTO.**"
-                                                              },
-                                        "marquee_ability":  "O Primeiro Corte",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                    },
-                                    {
-                                        "name":  "Pontas Duplas",
-                                        "title_formatted":  "\u003e Pontas Duplas \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Fogo",
-                                        "color_hex":  "#ff0000",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018042189840474/Icon-Filia_1.png?ex=68a78757\u0026is=68a635d7\u0026hm=95266aabc9fbb58616a16eb5fcf833b4fdd753be70bdb18ad5dc42c3e2b7b5c6\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361680885027700907/1000.png?ex=681df625\u0026is=681ca4a5\u0026hm=8ec7541df9857990b81741d77afd58d8faf222403f85918176d6e841d2abe7fc\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "7,968",
-                                                      "health":  "54,816",
-                                                      "power":  "20,211"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "CORTA ESSA!",
-                                                                  "description":  "[HAB 1]: **Quando GOLPEADA**, tem 20% de chance de infligir SANGRAMENTO por 7 s.\n\n[HAB 2]: Causa 50% de dano extra **contra um oponente sofrendo SANGRAMENTO.**"
-                                                              },
-                                        "marquee_ability":  "O Primeiro Corte",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Senta a Pua!,, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, , \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado, \u003c:GolpeEspecial:1434999859768987748\u003e Espinho Trançado"
-                                    }
-                                ]
-                 }
+    "character": "Filia",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Cisalhamento",
+                "title_formatted": "Cisalhamento - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#008000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681229401034874/1000.png?ex=681df677&is=681ca4f7&hm=87a9bb7e043eaef13f017dbe13d65fe485e08a755d2ab41d13ff9415f1ef3cfd&"
+                },
+                "stats": {
+                    "attack": "10,004",
+                    "health": "68,506",
+                    "power": "25,312"
+                },
+                "signature_ability": {
+                    "name": "INDO ALÉM",
+                    "description": "[HAB 1]: **Quando um dos lutadores sofrer um EF. NEG.**, ganhe 10% no MEDIDOR DE BLOCKBUSTER, BÊNÇÃO e BLOQUEIO AUTOMÁTICO por 15 segundos cada.\n\n[HAB 2]: **Ao usar um BLOCKBUSTER**, inflija QUIETUS por 15 s e cause 15% de dano extra por EF. POS. aplicado a Filia. **Além disso, os oponentes derrotados por BLOCKBUSTERS NÃO PODEM REVIVER.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Tricobezoar, Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Matadora de Aula",
+                "title_formatted": "Matadora de Aula - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681284459528242/1000.png?ex=681df685&is=681ca505&hm=da3eb19f983f04dfb3d51967b95fa43d03408988bc1a677a257debd9ada21403&"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "56,045",
+                    "power": "27,055"
+                },
+                "signature_ability": {
+                    "name": "CATANDO PIOLHO",
+                    "description": "[HAB 1]: **Todos os GOLPES de um BLOCKBUSTER ou GOLPE ESPECIAL têm 10% de chance de serem INDEFENSÁVEIS** e infligirem MARCA DA MORTE por 15 segundos.\n\n[HAB 2]: Inflige SANGRAMENTO FORTE e BLOQUEIO DE CURA por 10 s **ao tirar ao menos 5% da VIDA MÁX. do oponente com um único GOLPE.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Senta a Pua!, , Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Borrão Azul",
+                "title_formatted": "Borrão Azul - Água - Diamante",
+                "element": "Água",
+                "color_hex": "#0000ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681319532433508/1000.png?ex=681df68d&is=681ca50d&hm=c092c0d4b9b951a3183a510587ec68fd94d36621a395bee523875873f544606e&"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "56,045",
+                    "power": "27,055"
+                },
+                "signature_ability": {
+                    "name": "TENHO QUE CORRER",
+                    "description": "[HAB 1]: Dá OLHO-MORTO e ACELERAÇÃO **enquanto Filia tem ao menos 95% de VIDA**. Os EF. POS. **são removidos quando a VIDA cai abaixo de 95%.**\n\n[HAB 2]: Ganhe IMUNIDADE, RES. FINAL e INABALÁVEL por 7 s cada ao usar um BLOCKBUSTER **enquanto se beneficia de OLHO-MORTO.** Ganhe também 3 camadas de PRECISÃO."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Tricobezoar, Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Djinn Frizz",
+                "title_formatted": "Djinn Frizz - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681360539877556/1000.png?ex=681df697&is=681ca517&hm=b7b29894cf62d88b3596fc53f14b10fe1d1d432ef45e325b35afdb4abba834b2&"
+                },
+                "stats": {
+                    "attack": "15,591",
+                    "health": "50,439",
+                    "power": "28,356"
+                },
+                "signature_ability": {
+                    "name": "TRÊS DESEJOS",
+                    "description": "[HAB 1]: **A cada 10 segundos ganhe 3 EF. POSITIVO(S) aleatório(s) por 5 segundos.**\n\n[HAB 2]: Ao usar um BLOCKBUSTER, tem **33% de chance de converter 3 EF. POSITIVO(S) em FÚRIA permanente.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": [
+                    "Tricobezoar, Senta a Pua!, ",
+                    "Die Verwandlung,  Espinho Trançado, Espinho Trançado"
+                ],
+                "recommended_arsenal": ""
+            }
+        ],
+        "ouro": [
+            {
+                "name": "Escoteira",
+                "title_formatted": "Escoteira - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#000000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681077038612612/1000.png?ex=681df653&is=681ca4d3&hm=574967400b3d42a24b4194d160a98b9dfe59a11e6e1d9eacc286bd0db0a9d320&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "57,812",
+                    "power": "24,295"
+                },
+                "signature_ability": {
+                    "name": "Ouse Sonhar",
+                    "description": "[HAB 1]: Para cada 5º GOLPE DE COMBO **que um Lutador sofrer**, remova 1 EF. NEG. e ganhe ARMADURA por 10 segundos.\n\n[HAB 2]: **Enquanto se beneficiar de ARMADURA** ganhe 1% de VIDA, 3% de MEDIDOR DE BLOCKBUSTER por segundo e inflinja DEFINHAR por 6 s a cada 4 s."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Cuspida, , Senta a Pua!, , Die Verwandlung, Espinho Trançado, Explosão"
+            },
+            {
+                "name": "Cachinhos Malvados",
+                "title_formatted": "Cachinhos Malvados - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681038815924285/1000.png?ex=681df64a&is=681ca4ca&hm=2612023c8cb2617d1ecf0c6e37d46d9dc5f96c475649b0dd0b3a76ea21d9f2ba&"
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "62,572",
+                    "power": "23,501"
+                },
+                "signature_ability": {
+                    "name": "NINHO DE MAFAGAFO",
+                    "description": "[HAB 1]: **Ao ser GOLPEADA,** reflete 35% do dano recebido.\n\n[HAB 2]: Inflige SANGRAMENTO FORTE por 10 segundos **quando o oponente acerta um CRÍTICO.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Cuspida, , Senta a Pua!, , Die Verwandlung, Espinho Trançado, Explosão"
+            },
+            {
+                "name": "Trança Parasita",
+                "title_formatted": "Trança Parasita - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681106562322602/1000.png?ex=681df65a&is=681ca4da&hm=20e1d277bf6104b105dc82214025b17b232e4d3d36f73a53a4433153967bd091&"
+                },
+                "stats": {
+                    "attack": "10,925",
+                    "health": "57,812",
+                    "power": "24,295"
+                },
+                "signature_ability": {
+                    "name": "EMARANHAMENTO",
+                    "description": "[HAB 1]: CRÍTICOS têm 50% de chance de infligir LENTIDÃO por 10 s e ATORDOAR por 3 s **se o oponente já não estiver sofrendo LENTIDÃO.**\n\n[HAB 2]: Ao GOLPEAR, tem 15% de chance de infligir SANGRAM. por 5 s **se o oponente estiver ATORDOADO.**"
+                },
+                "marquee_ability": "O Primeiro Corte",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Estrela Virtual",
+                "title_formatted": "Estrela Virtual - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#00ffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681186421870797/1000.png?ex=681df66d&is=681ca4ed&hm=947b44eb33c09c62be0aa8da1f05f30e4906b6df85c938fb768f934bad128328&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "51,032",
+                    "power": "25,107"
+                },
+                "signature_ability": {
+                    "name": "O SHOW TEM QUE CONTINUAR",
+                    "description": "[HAB 1]: **ESQUIVAR-SE de um ataque** dá RESISTÊNCIA FINAL e ARMADURA por 10 segundos.\n\n[HAB 2]: Inflige QUEBRA DE ARMADURA por 5 s **ao GOLPEAR um oponente que estiver atacando*, e 200% do dano causado é recuperado como VIDA."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Cabelos ao Vento",
+                "title_formatted": "Cabelos ao Vento - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681155459518665/1000.png?ex=681df666&is=681ca4e6&hm=da6dc3b247530927c9adbde0798197aee3b917232642abd1f161f85bcd6f1502&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "51,032",
+                    "power": "25,107"
+                },
+                "signature_ability": {
+                    "name": "CONTRAGOLPE",
+                    "description": "[HAB 1]: O 1° GOLPE DE COMBO **contra um oponente atacando ** concede FÚRIA por 10 s e ESQUIVA.\n\n[HAB 2]: Após ESQUIVAR, 100% de chance de ganhar PRECISÃO PERMANENTE, que **é removida quando um dos lutadores é NOCAUTEADO.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Tricobezoar, Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Cacho Mágico",
+                "title_formatted": "Cacho Mágico - Neutro - Ouro",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1445036314201161849/3ea7c3dd-be5e-4982-a5d8-a5086752b06c.png?ex=692ee270&is=692d90f0&hm=ba6a9e34bf9698ac380e1e20d0ee6376dca635dfa80232c1a87101c86f04c744&"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "51,032",
+                    "power": "25,107"
+                },
+                "signature_ability": {
+                    "name": "MILAGRE DO SACRÍFICIO",
+                    "description": "[HAB 1]: **Quando o lutador ativo estiver prestes a sofrer um EF. NEGATIVO**, Filia sacrifica 10% da VIDA MÁXIMA para conceder IMUNIDADE por 5 segundos. **Esse efeito só pode ser ativado uma vez a cada 10 segundos.**\n\n[HAB 2]: **Também causa 10% da VIDA MÁXIMA como dano ao inimigo** e aplica BLOQUEIO DE CURA por 10 segundos. Os GOLPES ESPECIAIS ou BLOCKBUSTERS da Filia têm 35% de chance de curá-la em 10% da VIDA MÁXIMA."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Quartzo Estelar",
+                "title_formatted": "Quartzo Estelar - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680915549524179/1000.png?ex=681df62d&is=681ca4ad&hm=cc266cc291e747397eddc4a613a2b5a893030b8fd06fbc1af312e776c51fb5e9&"
+                },
+                "stats": {
+                    "attack": "8,602",
+                    "health": "59,079",
+                    "power": "21,799"
+                },
+                "signature_ability": {
+                    "name": "ESCUDO DE GEMA",
+                    "description": "[HAB 1]: **Quando a Filia está viva,** os aliados ENTRAM NA ASSISTÊNCIA com 3 camada(s) de BARREIRA por 10 s.\n\n[HAB 2]: **Quando a BARREIRA de um Aliado expira,** ele ganha RESIST. FINAL por 10 s e 20% no MEDIDOR DE BLOCKBUSTER."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Explosão,  Mechas Soltas (Expulsão)"
+            },
+            {
+                "name": "Frio Cortante",
+                "title_formatted": "Frio Cortante - Água - Prata",
+                "element": "Água",
+                "color_hex": "#00ffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680964459167825/1000.png?ex=681df638&is=681ca4b8&hm=9956709b08c8d88f51de061e04d8b67590abda3b34b8eef45a7f4e1dccacd710&"
+                },
+                "stats": {
+                    "attack": "10,138",
+                    "health": "53,645",
+                    "power": "22,344"
+                },
+                "signature_ability": {
+                    "name": "DANDO UM GELO",
+                    "description": "[HAB 1]: **CRÍTICOS** têm 50% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 6 segundos.\n\n[HAB 2]: **Também inflige QUEBRA DE ARMADURA por 6 segundos.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Cabelo Rebelde",
+                "title_formatted": "Cabelo Rebelde - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361681002199650537/1000.png?ex=681df641&is=681ca4c1&hm=eb880b19c7466568dfbc376b986ea929fc812bea2a7ed629698e40841ddc9d43&"
+                },
+                "stats": {
+                    "attack": "11,674",
+                    "health": "48,269",
+                    "power": "23,300"
+                },
+                "signature_ability": {
+                    "name": "POR UM FIO",
+                    "description": "[HAB 1]: **Usar um GOLPE ESPECIAL** dá ACELERAÇÃO por 15 segundos.\n\n[HAB 2]: 100% de chance de **atualizar a REATIVAÇÃO de todos os GOLPES ESPECIAIS ao usar um BLOCKBUSTER.**"
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tricobezoar, Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Investigadora",
+                "title_formatted": "Investigadora - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#ffff80",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025818111836320/Clue_Chaser.png?ex=68decf91&is=68dd7e11&hm=e6a781c0e4fca38bdf9a2fbcc3aeb6dc519df5c379898b734a2b21dd011df8af&"
+                },
+                "stats": {
+                    "attack": "10,138",
+                    "health": "53,645",
+                    "power": "22,344"
+                },
+                "signature_ability": {
+                    "name": "PERCEPÇÃO ESPIRITUOSA",
+                    "description": "[HAB 1]: **Enquanto Filia estiver viva**, a TAXA DE CRÍTICO do lutador ativo aumenta em 10% a cada 3 acertos em combo (até 100%).\n\n[HAB 2]: Os GOLPES CRÍTICOS da Filia **acima de 10 acertos em combo** ignoram a ARMADURA e a DEFESA do lutador oponente."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": [
+                    "Senta a Pua!,",
+                    "Espinho Trançado, ",
+                    "Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                ],
+                "recommended_arsenal": ""
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Descabelada",
+                "title_formatted": "Descabelada - Trevas - Bronze",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680842841395200/1000.png?ex=681df61b&is=681ca49b&hm=faa26c5e321fcbdf599d7cb68ca3b86c4998b6489cf6941fa2fb0b6d9b93749c&"
+                },
+                "stats": {
+                    "attack": "9,428",
+                    "health": "49,805",
+                    "power": "20,949"
+                },
+                "signature_ability": {
+                    "name": "TESOURA AFIADA",
+                    "description": "[HAB 1]: **Ao GOLPEAR**, tem 10% de chance de infligir SANGRAMENTO por 7 segundos.\n\n[HAB 2]: CHANCE DE CRÍTICO 15% maior **quando o oponente está sofrendo SANGRAMENTO.**"
+                },
+                "marquee_ability": "O Primeiro Corte",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Pontas Duplas",
+                "title_formatted": "Pontas Duplas - Fogo - Bronze",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361680885027700907/1000.png?ex=681df625&is=681ca4a5&hm=8ec7541df9857990b81741d77afd58d8faf222403f85918176d6e841d2abe7fc&"
+                },
+                "stats": {
+                    "attack": "7,968",
+                    "health": "54,816",
+                    "power": "20,211"
+                },
+                "signature_ability": {
+                    "name": "CORTA ESSA!",
+                    "description": "[HAB 1]: **Quando GOLPEADA**, tem 20% de chance de infligir SANGRAMENTO por 7 s.\n\n[HAB 2]: Causa 50% de dano extra **contra um oponente sofrendo SANGRAMENTO.**"
+                },
+                "marquee_ability": "O Primeiro Corte",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            }
+        ]
+    }
 }

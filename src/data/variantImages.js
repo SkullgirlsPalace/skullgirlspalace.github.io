@@ -100,7 +100,7 @@ const VARIANT_IMAGES = {
         "Coração da Escuridão": "img/double/Double_14.png",
         "Quebra-Queixo": "img/double/Double_13.png",
         "Altar Ego": "img/double/Double_16.png",
-        "Teoria do Caos": "img/double/Double_12.png",
+        "Teoria do Caos": "img/double/Double_11.png",
         "Maldade Eterna": "img/double/Double_10.png",
         "Fibra Forte": "img/double/Double_7.png",
         "Íris-Color": "img/double/Double_9.png",

@@ -3,45 +3,54 @@
 // Renders tier list table with ranking badges
 // =====================================================
 
-import { ELEMENT_MAP, TIER_RANKS } from '../config/constants.js';
+import { ELEMENT_MAP, TIER_RANKS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { getState, updateTierRank, setCompactMode, setEditorMode } from '../state/store.js';
+import { getMasteryIcon } from '../utils/formatters.js';
+import { getState, setCompactMode, setEditorMode, updateTierRank } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
 
 /**
  * Create rank badge HTML
- * @param {string} rank - Rank value (SS, S, A, B, C, U, TBD)
+ * @param {string} rank - Rank value (SS, S, A, B, C, I, N/A)
  * @returns {string} HTML string
  */
 export function createRankBadge(rank) {
-    const rankClass = `rank-${rank.toLowerCase()}`;
-    return `<div class="rank-badge ${rankClass}">${rank}</div>`;
+    const safeRank = rank || 'B';
+    const cleanClass = safeRank.toLowerCase().replace(/[^a-z0-9]/g, ''); // Removes special chars like '/'
+    const rankClass = `rank-${cleanClass}`;
+    return `<div class="rank-badge ${rankClass}">${safeRank}</div>`;
 }
 
 /**
- * Cycle through rank values (for editor mode)
+ * Cycle through ranks SS -> S -> A -> B -> C -> I -> N/A
  * @param {string} charKey - Character key
  * @param {string} variantName - Variant name
  * @param {string} mode - Mode key (pf, riftOff, riftDef, parallel)
  */
-export function cycleRank(charKey, variantName, mode) {
+function cycleRank(charKey, variantName, mode) {
     const state = getState();
-    if (!state.isEditorMode) return;
+    const currentTierData = state.tierData[charKey] || {};
+    const variantRanks = currentTierData[variantName] || { pf: 'N/A', riftOff: 'N/A', riftDef: 'N/A', parallel: 'N/A' };
+    const currentRank = variantRanks[mode] || 'N/A';
 
-    const currentTierData = state.tierData[charKey]?.[variantName] ||
-        { pf: 'B', riftOff: 'B', riftDef: 'B', parallel: 'B' };
+    const currentIndex = TIER_RANKS.indexOf(currentRank);
+    const nextIndex = (currentIndex + 1) % TIER_RANKS.length;
+    const nextRank = TIER_RANKS[nextIndex];
 
-    const currentRank = currentTierData[mode];
-    const newRankIndex = (TIER_RANKS.indexOf(currentRank) + 1) % TIER_RANKS.length;
-    const newRank = TIER_RANKS[newRankIndex];
+    updateTierRank(charKey, variantName, mode, nextRank);
 
-    updateTierRank(charKey, variantName, mode, newRank);
+    // Save locally for immediate feedback
+    const updatedTierData = { ...state.tierData };
+    if (!updatedTierData[charKey]) updatedTierData[charKey] = {};
+    if (!updatedTierData[charKey][variantName]) updatedTierData[charKey][variantName] = {};
+    updatedTierData[charKey][variantName][mode] = nextRank;
 
-    // Re-render table
     if (window.onTierDataChanged) {
         window.onTierDataChanged();
     }
 }
+
+
 
 /**
  * Create tier table HTML
@@ -67,20 +76,49 @@ export function createTierTable(charKey, charData) {
         rowsHTML = `<tr><td colspan="5" class="text-center" style="padding: 40px; color: var(--text-muted);">Nenhuma variante encontrada com estes filtros.</td></tr>`;
     } else {
         rowsHTML = variants.map(variant => {
-            const ranks = tierData[variant.name] || { pf: 'B', riftOff: 'B', riftDef: 'B', parallel: 'B' };
+            const baseRanks = tierData[variant.name] || {};
+            const ranks = {
+                pf: baseRanks.pf || 'B',
+                riftOff: baseRanks.riftOff || 'B',
+                riftDef: baseRanks.riftDef || 'B',
+                parallel: baseRanks.parallel || 'B'
+            };
             const imgPath = getVariantImage(charKey, variant.name, 0);
+
+            const elementStr = variant.element || 'Neutro';
+            const elementInfo = ELEMENT_MAP[elementStr] || ELEMENT_MAP['Neutro'];
+            const elementClass = elementInfo.class;
+
+            const rarityKey = variant.rarityKey || 'diamante';
+            const rarityIcon = RARITY_ICONS[rarityKey];
+            const masteryIcon = getMasteryIcon(charKey);
+
+            const charCellContent = state.isCompactMode ? `
+                <div class="compact-char-info">
+                    <span style="font-weight: 800;">${variant.name}</span>
+                    <img src="${masteryIcon}" alt="" class="compact-mastery-icon">
+                    <img src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
+                </div>
+            ` : `
+                <img src="${imgPath}" alt="${variant.name}" onerror="this.src='img/icones/Annie_Icon.png'">
+                <span>${variant.name}</span>
+            `;
 
             return `
                 <tr>
                     <td>
                         <div class="tier-char-cell">
-                            <img src="${imgPath}" alt="${variant.name}" onerror="this.src='img/icones/Annie_Icon.png'">
-                            <span>${variant.name}</span>
+                            ${charCellContent}
                         </div>
                     </td>
                     <td class="text-center">
                         <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'pf')">
                             ${createRankBadge(ranks.pf)}
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'parallel')">
+                            ${createRankBadge(ranks.parallel)}
                         </div>
                     </td>
                     <td class="text-center">
@@ -91,11 +129,6 @@ export function createTierTable(charKey, charData) {
                     <td class="text-center">
                         <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'riftDef')">
                             ${createRankBadge(ranks.riftDef)}
-                        </div>
-                    </td>
-                    <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'parallel')">
-                            ${createRankBadge(ranks.parallel)}
                         </div>
                     </td>
                 </tr>
@@ -109,10 +142,18 @@ export function createTierTable(charKey, charData) {
                 <thead>
                     <tr>
                         <th>Variante</th>
-                        <th class="text-center">DP Ataque</th>
-                        <th class="text-center">Fenda Ataque</th>
-                        <th class="text-center">Fenda Defesa</th>
-                        <th class="text-center">Reinos Paralelos</th>
+                        <th class="text-center">
+                            <span class="attr-highlight" data-attr-key="tier_dp_ataque" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">DP Ataque</span>
+                        </th>
+                        <th class="text-center">
+                            <span class="attr-highlight" data-attr-key="tier_reinos_paralelos" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">Reinos Paralelos</span>
+                        </th>
+                        <th class="text-center">
+                            <span class="attr-highlight" data-attr-key="tier_fenda_ataque" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">Fenda Ataque</span>
+                        </th>
+                        <th class="text-center">
+                            <span class="attr-highlight" data-attr-key="tier_fenda_defesa" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">Fenda Defesa</span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody id="detail-tier-table-body">
@@ -135,13 +176,8 @@ export function createTierView(charKey, charData) {
     const editorChecked = state.isEditorMode ? 'checked' : '';
 
     return `
-        <!-- Temporary Editor Notice -->
-        <div class="temp-notice">
-            <strong>MODO EDITOR ATIVO (TEMPORÁRIO)</strong>
-            <p>Ative o modo edição abaixo para mudar as notas clicando nelas. <br>
-                <em>Lembre-se de salvar suas alterações antes de sair!</em>
-            </p>
-        </div>
+
+
 
         <!-- Rank Explanations Dictionary -->
         <div class="rank-dictionary">
@@ -160,16 +196,16 @@ export function createTierView(charKey, charData) {
             <div class="dict-item"><span class="rank-badge rank-c">C</span>
                 <p>Ruim; existem opções melhores.</p>
             </div>
-            <div class="dict-item"><span class="rank-badge rank-u">U</span>
+            <div class="dict-item"><span class="rank-badge rank-i">I</span>
                 <p>Inviável: Sem utilidade; Não Recomendado.</p>
             </div>
-            <div class="dict-item"><span class="rank-badge rank-tbd">TBD</span>
-                <p>Em Análise: Lutador Novo ou Alterado; Rank Pendente.</p>
+            <div class="dict-item"><span class="rank-badge rank-na">N/A</span>
+                <p>Não Avaliado/Em Análise: Lutador Novo ou Alterado; Rank Pendente.</p>
             </div>
         </div>
 
-        <!-- Editor Control Bar -->
-        <div class="editor-control-bar">
+        <!-- Display Control Bar -->
+        <div class="editor-control-bar" style="justify-content: center;">
             <div class="editor-toggle">
                 <label class="switch">
                     <input type="checkbox" id="compact-mode-toggle" ${compactChecked} onchange="handleToggleCompactMode()">
@@ -177,15 +213,6 @@ export function createTierView(charKey, charData) {
                 </label>
                 <span class="editor-label">Modo Compacto</span>
             </div>
-
-            <div class="editor-toggle">
-                <label class="switch">
-                    <input type="checkbox" id="editor-mode-toggle" ${editorChecked} onchange="handleToggleEditorMode()">
-                    <span class="slider round"></span>
-                </label>
-                <span class="editor-label">Modo Edição (Apenas para você)</span>
-            </div>
-            <button class="save-data-btn" onclick="handleSaveTierData()">Confirmar & Salvar Alterações</button>
         </div>
 
         ${createTierTable(charKey, charData)}
@@ -194,7 +221,10 @@ export function createTierView(charKey, charData) {
 
 // Global handlers
 export function handleCycleRank(charKey, variantName, mode) {
-    cycleRank(charKey, variantName, mode);
+    const state = getState();
+    if (state.isEditorMode) {
+        cycleRank(charKey, variantName, mode);
+    }
 }
 
 export function handleToggleCompactMode() {
@@ -208,16 +238,45 @@ export function handleToggleCompactMode() {
 export function handleToggleEditorMode() {
     const checked = document.getElementById('editor-mode-toggle')?.checked || false;
     setEditorMode(checked);
-    const table = document.querySelector('.tier-table');
-    if (table) {
-        table.classList.toggle('editing', checked);
+    // Re-render to show/hide notice and update table class
+    if (window.onTierDataChanged) {
+        window.onTierDataChanged();
     }
 }
 
-export function handleSaveTierData() {
+export async function handleSaveTierData() {
     const state = getState();
+
+    // Always persist to localStorage for safety
     localStorage.setItem('TIER_DATA_PERSISTED', JSON.stringify(state.tierData));
-    console.log('--- DADOS PARA O CÓDIGO FINAL ---');
-    console.log(JSON.stringify(state.tierData, null, 4));
-    alert('Alterações salvas no seu navegador! \n\nPara que fiquem fixas para todos no futuro, os dados precisam ser atualizados no arquivo tier-data.json.');
+
+    try {
+        const response = await fetch('http://localhost:3000/save-tier-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(state.tierData)
+        });
+
+        if (response.ok) {
+            alert('✅ Dados salvos com sucesso no arquivo data/tier-data.json!');
+        } else {
+            throw new Error('Falha ao salvar no servidor');
+        }
+    } catch (error) {
+        console.error('Erro ao salvar:', error);
+
+        // Detailed error message if server is likely not running
+        const jsonString = JSON.stringify(state.tierData, null, 4);
+        console.log('--- DADOS PARA O ARQUIVO DATA/TIER-DATA.JSON ---');
+        console.log(jsonString);
+
+        alert('❌ Erro ao salvar diretamente no arquivo.\n\nCERTIFIQUE-SE QUE O SERVIDOR ESTÁ RODANDO:\n1. Abra um terminal na pasta do projeto\n2. Digite: node scripts/server.js\n\nComo contingência, o JSON foi copiado para sua área de transferência.');
+
+        // Fallback to clipboard
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(jsonString);
+        }
+    }
 }

@@ -63,7 +63,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/buffs/Armor.png',
         stacks: 5,
         scaling: '20% > 40% > 60% > 80% > 100%',
-        detailed: 'Reduz dano em 20%. Removido por Quebra de Armadura.'
+        detailed: 'Reduz o dano sofrido em 20%.',
+        explicacao: 'Reduz dano em 20%. Removido por Quebra de Armadura.'
     },
     auto_block: {
         keys: ['Bloqueio Automático', 'Auto Block', 'Bloq. Automático'],
@@ -71,7 +72,9 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Auto_Block.png',
         stacks: 5,
-        detailed: '10% chance de Bloquear Automaticamente. Removido por Quebra de Guarda.'
+        scaling: '10% > 20% > 30% > 40% > 50%',
+        detailed: '10% de chance de BLOQUEAR automaticamente o próximo GOLPE.',
+        explicacao: '10% chance de Bloquear Automaticamente. Removido por Quebra de Guarda. Olho-Morto Anula este Efeito.'
     },
     barrier: {
         keys: ['Barreira', 'Barrier'],
@@ -80,7 +83,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/buffs/Barrier.png',
         stacks: 5,
         scaling: '10% > 20% > 30% > 40% > 50%',
-        detailed: 'Vida Temporária baseada em 10% da Vida Máxima, basicamente uma Vida adicional.'
+        detailed: 'Ganhe 10% de vida temporária.',
+        explicacao: 'Vida Temporária baseada em 10% da Vida Máxima, basicamente uma Vida adicional.'
     },
     blessing: {
         keys: ['Benção', 'Blessing'],
@@ -88,7 +92,9 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Blessing.png',
         stacks: 5,
-        detailed: 'Revive com 10% de Vida por acúmulo. Quietus anula este efeito.'
+        scaling: '20% > 20% > 30% > 40% > 50%',
+        detailed: 'RESSUSCITE com 20% de VIDA ao ser DERROTADO.',
+        explicacao: 'Revive com 10% de Vida por acúmulo. Quietus anula este efeito.'
     },
     deadeye: {
         keys: ['Olho-Morto', 'Deadeye'],
@@ -96,7 +102,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Deadeye.png',
         stacks: 1,
-        detailed: 'Ignora Defesa, Bloqueio Automático, Inabalável, Esquiva e Espinhos.'
+        detailed: 'Os Ataques ignoram a DEFESA do oponente e não ativam os efeitos de BLOQUEIO AUTOMÁTICO, INABALÁVEL, ESQUIVA e ESPINHOS.',
+        explicacao: 'Ignora Defesa, Bloqueio Automático, Inabalável, Esquiva e Espinhos.'
     },
     enrage: {
         keys: ['Fúria', 'Enrage'],
@@ -105,7 +112,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/buffs/Enrage.png',
         stacks: 5,
         scaling: '20% > 40% > 60% > 80% > 100%',
-        detailed: 'Aumenta dano em 20%. Remove Incapacitação.'
+        detailed: 'Aumenta o dano em 20%.',
+        explicacao: 'Aumenta o Dano em 20%. Remove Incapacitação.'
     },
     evasion: {
         keys: ['Evasão', 'Esquiva', 'Evasion'],
@@ -113,7 +121,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Evasion.png',
         stacks: 5,
-        detailed: 'Esquiva de qualquer Ataque. Não Esquiva de Blockbuster Indensável e Olho-Morto.'
+        detailed: 'O próximo GOLPE será esquivado.',
+        explicacao: 'Esquiva de qualquer Ataque. Não Esquiva de Blockbuster Indefensável e Olho-Morto.'
     },
     final_stand: {
         keys: ['Resistência Final', 'Final Stand'],
@@ -121,7 +130,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/FinalStand.png',
         stacks: 1,
-        detailed: 'Vida não cai abaixo de 1 Vida. Bloqueia Destruição, Quietus anula este Efeito.'
+        detailed: 'Impede a morte.',
+        explicacao: 'A Vida não cai abaixo de 1 Vida. Bloqueia Destruição, Quietus anula este Efeito.'
     },
     haste: {
         keys: ['Aceleração', 'Haste'],
@@ -129,7 +139,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Haste.png',
         stacks: 1,
-        detailed: '+100% ganho de medidor. Remove Lentidão.'
+        detailed: 'Aumenta a velocidade de ganho do MEDIDOR DE BLOCKBUSTER em 100%.',
+        explicacao: '+100% ganho de medidor. Remove Lentidão.'
     },
     heavy_regen: {
         keys: ['Regeneração Forte', 'Heavy Regen'],
@@ -137,7 +148,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/HeavyRegen.png',
         stacks: 1,
-        detailed: 'Cura 2% de Vida por segundo. Remove Sangramento.'
+        detailed: 'Regenera 2% da VIDA MÁXIMA a cada segundo.',
+        explicacao: 'Cura 2% de Vida por segundo. Remove Sangramento.'
     },
     immunity: {
         keys: ['Imunidade', 'Immunity'],
@@ -145,7 +157,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Immune.png',
         stacks: 1,
-        detailed: 'Impede o ganho de novos Efeitos Negativos, Efeitos Negativos já aplicados não serão removidos.'
+        detailed: 'Dá imunidade a todos os EFEITOS NEGATIVOS.',
+        explicacao: 'Impede o ganho de novos Efeitos Negativos, Efeitos Negativos já aplicados não serão removidos.'
     },
     invincible: {
         keys: ['Invencível', 'Invincible'],
@@ -153,7 +166,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Invincible.png',
         stacks: 1,
-        detailed: 'Impede dano de todos os golpes, sangramentos, drenagens e reflexão de dano. Não Anula Destruição.'
+        detailed: 'Reduz o dano sofrido em 100%.',
+        explicacao: 'Impede dano de todos os golpes, sangramentos, drenagens e reflexão de dano. Não Anula Destruição.'
     },
     miasma: {
         keys: ['Miasma'],
@@ -162,7 +176,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/buffs/Miasma.png',
         stacks: 5,
         scaling: '1% > 2% > 3% > 4% > 5%',
-        detailed: 'Drena 1% de Vida e Medidor do oponente. Bloqueio de Cura impede a Cura mais continua Drenando Vida, Polaridade Inversa Inverte sua Cura mais Continua Drenando também.'
+        detailed: 'Drena 2% de VIDA e MEDIDOR por seg de oponentes próximos.',
+        explicacao: 'Drena 1% de Vida e Medidor do oponente. Bloqueio de Cura e Polaridade Inversa não impedem a Drenagem de Vida e Blockbuster.'
     },
     precision: {
         keys: ['Precisão', 'Precision'],
@@ -170,7 +185,8 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Precision.png',
         stacks: 5,
-        detailed: 'Acerto Crítico garantido e não ativa Habilidades Características.'
+        detailed: 'Garante que o próximo GOLPE seja CRÍTICO. GOLPES DE PRECISÃO não ativam as HABILIDADES CARACTERÍSTICAS do oponente.',
+        explicacao: 'Acerto Crítico garantido e não ativa Habilidades Características.'
     },
     regen: {
         keys: ['Regeneração', 'Regen'],
@@ -178,7 +194,9 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Regen.png',
         stacks: 5,
-        detailed: 'Cura 1% de Vida por segundo. Remove Sangramento.'
+        scaling: '1% > 2% > 3% > 4% > 5%',
+        detailed: 'Regenera 1% da VIDA MÁXIMA a cada segundo.',
+        explicacao: 'Cura 1% de Vida por segundo. Remove Sangramento.'
     },
     thorns: {
         keys: ['Espinhos', 'Thorns'],
@@ -187,7 +205,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/buffs/Thorns.png',
         stacks: 5,
         scaling: '20% > 40% > 60% > 80% > 100%',
-        detailed: 'Reflete 20% do dano por acúmulo. Olho-Morto ignora este efeito.'
+        detailed: 'Reflita 20% do dano ao agressor.',
+        explicacao: 'Reflete 20% do dano por acúmulo. Olho-Morto ignora este efeito.'
     },
     unflinching: {
         keys: ['Inabalável', 'Unflinching'],
@@ -195,17 +214,19 @@ export const EFFECT_DATA = {
         type: 'buff',
         icon: 'img/modifiers/buffs/Unflinching.png',
         stacks: 1,
-        detailed: 'O personagem não será derrubado por ataques normais ou a maioria dos golpes especiais, golpes Blockbusters e Agarrões ainda podem derrubar, Olho-Morto Ignora este Efeito.'
+        detailed: 'Não reaja a golpes.',
+        explicacao: 'O personagem não será derrubado por ataques normais ou a maioria dos golpes especiais, golpes Blockbusters e Agarrões ainda podem derrubar. Olho-Morto Ignora este Efeito.'
     },
 
     // --- EFEITOS NEGATIVOS (DEBUFFS) ---
     armor_break: {
-        keys: ['Quebra de Armadura', 'Armor Break'],
+        keys: ['Quebra de Armadura', 'Armor Break', 'Quebra de Arm.'],
         name: 'Quebra de Armadura',
         type: 'debuff',
         icon: 'img/modifiers/debuffs/ArmorBreak.png',
         stacks: 1,
-        detailed: '+20% dano recebido. Remove Armadura.'
+        detailed: 'Aumenta o dano sofrido em 20%.',
+        explicacao: '+20% dano recebido. Remove Armadura.'
     },
     bleed: {
         keys: ['Sangramento', 'Bleed'],
@@ -214,7 +235,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/debuffs/Bleed.png',
         stacks: 5,
         scaling: '1% > 2% > 3% > 4% > 5%',
-        detailed: 'Remove 1% da Vida Máxima por Segundo até 1 de Vida. Remove Regeneração.'
+        detailed: 'Drena 1% da VIDA MÁXIMA da vítima a cada segundo.',
+        explicacao: 'Remove 1% da Vida Máxima por Segundo até 1 de Vida. Remove Regeneração.'
     },
     cripple: {
         keys: ['Incapacitação', 'Cripple'],
@@ -222,7 +244,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Cripple.png',
         stacks: 1,
-        detailed: '-20% dano causado. Remove Fúria.'
+        detailed: 'Reduz o dano infligido em 20%.',
+        explicacao: '-20% dano causado. Remove Fúria.'
     },
     curse: {
         keys: ['Maldição', 'Curse'],
@@ -230,7 +253,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Curse.png',
         stacks: 1,
-        detailed: 'Impede o ganho de novos Efeitos Positivos.'
+        detailed: 'Impede de ganhar EFEITOS POSITIVOS.',
+        explicacao: 'Impede o ganho de novos Efeitos Positivos.'
     },
     death_mark: {
         keys: ['Marca da Morte', 'Death Mark'],
@@ -238,7 +262,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/DeathMark.png',
         stacks: 1,
-        detailed: 'Aumenta em +50% o Dano Sofrido por Críticos e reduz em 50% a Capacidade de Bloqueio.'
+        detailed: 'Aumenta em 50% o dano sofrido por CRÍTICOS e reduz em 50% a CAPACIDADE DE BLOQUEIO.',
+        explicacao: 'Aumenta em +50% o Dano Sofrido por Críticos e reduz em 50% a Capacidade de Bloqueio.'
     },
     doom: {
         keys: ['Destruição', 'Doom'],
@@ -246,7 +271,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Doom.png',
         stacks: 1,
-        detailed: 'Morte instantânea ao expirar. Ignora Invencibilidade.'
+        detailed: 'APÓS X segundos, o lutador afetado é morto.',
+        explicacao: 'Morte instantânea ao expirar. Ignora Invencibilidade.'
     },
     fatigue: {
         keys: ['Fadiga', 'Fatigue'],
@@ -254,7 +280,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Fatigue.png',
         stacks: 1,
-        detailed: 'Recarga de Golpes Especiais e Assistência 50% mais lenta, ao expirar tem 50% de chance infligir Atordoamento.'
+        detailed: 'ASSISTÊNCIAS E GOLPES ESPECIAIS levem o dobro do tempo para reativar. Após X segundos, o Lutador atingido tem 50% de chance de ficar ATORDOADO por 2 seg.',
+        explicacao: 'Recarga de Golpes Especiais e Assistência 50% mais lenta, ao expirar tem 50% de chance infligir Atordoamento.'
     },
     guard_break: {
         keys: ['Quebra de Guarda', 'Guard Break'],
@@ -262,7 +289,9 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Guard_Break.png',
         stacks: 5,
-        detailed: '10% chance de falhar a Guarda. Remove Bloqueio Automático.'
+        scaling: '10% > 20% > 30% > 40% > 50%',
+        detailed: '10% de chance do bloqueio falhar durante um BLOQUEIO.',
+        explicacao: '10% chance de falhar a Guarda. Remove Bloqueio Automático.'
     },
     heavy_bleed: {
         keys: ['Sangramento Forte', 'Heavy Bleed'],
@@ -270,7 +299,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/HeavyBleed.png',
         stacks: 1,
-        detailed: 'Remove 2% da Vida Máxima por Segundo. Remove Regeneração.'
+        detailed: 'Drena 2% da VIDA MÁXIMA da vítima a cada segundo.',
+        explicacao: 'Remove 2% da Vida Máxima por Segundo. Remove Regeneração.'
     },
     hex: {
         keys: ['Feitiço', 'Hex'],
@@ -278,7 +308,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Hex.png',
         stacks: 1,
-        detailed: 'Desativa Habilidades Características.'
+        detailed: 'HABILIDADES CARACTERÍSTICAS desativadas.',
+        explicacao: 'Desativa Habilidades Características.'
     },
     immobilize: {
         keys: ['Imobilização', 'Immobilize'],
@@ -286,7 +317,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Immobilize.png',
         stacks: 1,
-        detailed: 'Impede o personagem de se mover (dash).'
+        detailed: 'Impede o personagem de se mover.',
+        explicacao: 'Impede o personagem de se mover.'
     },
     inverse_polarity: {
         keys: ['Polaridade Inversa', 'Inverse Polarity'],
@@ -294,15 +326,26 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/InversePolarity.png',
         stacks: 1,
-        detailed: 'Cura causa dano.'
+        detailed: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.',
+        explicacao: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.'
+    },
+    heal_block: {
+        keys: ['Bloqueio de Cura', 'Heal Block'],
+        name: 'Bloqueio de Cura',
+        type: 'debuff',
+        icon: 'img/modifiers/debuffs/HealBlock.png',
+        stacks: 1,
+        detailed: 'Bloqueia todo tipo de cura.',
+        explicacao: 'Impede o personagem de ser curado.'
     },
     lock_block: {
-        keys: ['Desativar Blockbusters', 'Lock Block Buster'],
+        keys: ['Desativar Blockbusters', 'Lock Block Buster', 'Desativar Blockbuster'],
         name: 'Desativar Blockbusters',
         type: 'debuff',
         icon: 'img/modifiers/debuffs/LockBlock.png',
         stacks: 1,
-        detailed: 'Bloqueia o uso de Blockbusters e não permite carregar Blockbusters pendentes.'
+        detailed: 'Desativa BLOCKBUSTER.',
+        explicacao: 'Bloqueia o uso de Blockbusters e não permite carregar Blockbusters pendentes.'
     },
     lock_special: {
         keys: ['Desativar Especiais', 'Lock Special'],
@@ -310,15 +353,17 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/LockSpecial.png',
         stacks: 1,
-        detailed: 'Bloqueia o uso de Golpes Especiais, desativa a Recarga dos Golpes Especiais também.'
+        detailed: 'Desativa GOLPES ESPECIAIS.',
+        explicacao: 'Bloqueia o uso de Golpes Especiais e desativa a Recarga dos Golpes Especiais.'
     },
     lock_tag: {
-        keys: ['Desativar Assistência', 'Lock Tag'],
-        name: 'Desativar Assistência',
+        keys: ['Desativar Assistências', 'Lock Tag', 'Desativar Assistência'],
+        name: 'Desativar Assistências',
         type: 'debuff',
         icon: 'img/modifiers/debuffs/LockTag.png',
         stacks: 1,
-        detailed: 'Bloqueia Assistências e impede a recarga da Assistência.'
+        detailed: 'Desativa ASSISTÊNCIAS.',
+        explicacao: 'Bloqueia Assistências e impede a recarga da Assistência.'
     },
     power_surge: {
         keys: ['Oscilação de Energia', 'Power Surge'],
@@ -327,7 +372,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/debuffs/PowerSurge.png',
         stacks: 5,
         scaling: '5% > 10% > 15% > 20% > 25%',
-        detailed: 'Sofre 5% de dano igual a sua Vida Máxima ao usar Blockbuster.'
+        detailed: 'Sofra dano igual a 5% da VIDA MÁXIMA ao usar um BLOCKBUSTER.',
+        explicacao: 'Sofre 5% de dano igual a sua Vida Máxima ao usar Blockbuster.'
     },
     quietus: {
         keys: ['Quietus'],
@@ -335,7 +381,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Quietus.png',
         stacks: 1,
-        detailed: 'Ignora Resistência, Resistência Final e Benção.'
+        detailed: 'A RESITÊNCIA da vítima é ignorada e os efeitos de RESISTÊNCIA FINAL e BENÇÃO são contornados.',
+        explicacao: 'Ignora Resistência, Resistência Final e Benção.'
     },
     slime: {
         keys: ['Gosma', 'Slime'],
@@ -344,7 +391,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/debuffs/Slime.png',
         stacks: 5,
         scaling: '2% > 4% > 6% > 8% > 10%',
-        detailed: 'Sofre 2% de dano igual a sua Vida Máxima ao ganhar EF. POS.'
+        detailed: 'Sofra dano igual a 2% VIDA MÁXIMA sempre que um EF. POSITIVO for recebido.',
+        explicacao: 'Sofre 2% de dano igual a sua Vida Máxima ao ganhar EF. POS.'
     },
     slow: {
         keys: ['Lentidão', 'Slow'],
@@ -352,8 +400,9 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Slow.png',
         stacks: 5,
-        scaling: '-50% > -100% (Acúmulos extras são reserva contra Aceleração)',
-        detailed: 'Seus Blockbuster demoram -50% para carregar. Remove Aceleração.'
+        scaling: '50% > 100% > 150% > 200% > 250%',
+        detailed: 'Diminui a velocidade de ganho do MEDIDOR DE BLOCKBUSTER em 50%.',
+        explicacao: 'Seus Blockbuster demoram -50% para carregar. Remove Aceleração.'
     },
     stun: {
         keys: ['Atordoamento', 'Stun'],
@@ -361,7 +410,8 @@ export const EFFECT_DATA = {
         type: 'debuff',
         icon: 'img/modifiers/debuffs/Stun.png',
         stacks: 1,
-        detailed: 'Atordoamento impede todas as ações até o efeito expirar.'
+        detailed: 'Atordoa a vítima.',
+        explicacao: 'Atordoamento impede todas as ações até o efeito expirar.'
     },
     wither: {
         keys: ['Definhar', 'Wither'],
@@ -370,7 +420,8 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/debuffs/Wither.png',
         stacks: 5,
         scaling: '5% > 10% > 15% > 20% > 25%',
-        detailed: 'Remove 5% de Medidor de Blockbuster por segundo.'
+        detailed: 'Perca 10% a cada segundo no MEDIDOR DE BLOCKBUSTER.',
+        explicacao: 'Remove 5% de Medidor de Blockbuster por segundo.'
     }
 };
 

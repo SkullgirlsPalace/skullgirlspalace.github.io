@@ -1,366 +1,366 @@
 {
-    "character":  "Big Band",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Bandido de Bronze",
-                                          "title_formatted":  "\u003e Bandido de Bronze \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#6426a8",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962946812874842/1000.png?ex=681dfc83\u0026is=681cab03\u0026hm=52e72081e7d37ea452bd7b7fec83e992e01f2b83acc48f02512698dddcb76efd\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,847",
-                                                        "health":  "80,045",
-                                                        "power":  "29,762"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "Riff Furioso",
-                                                                    "description":  "[HAB 1]: Remove 1 EF. POS. do oponente, dá FÚRIA por 10 segundos e DRENA 3% de VIDA **a cada 10 GOLPES DE COMBO.**\n\n[HAB 2]: Zera os temporizadores de todos os EF. POS. ativos para cada 20% de **VIDA perdida por qualquer um dos lutadores.**"
-                                                                },
-                                          "marquee_ability":  "Solista",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:Blockbuster:1434999898385944606\u003e Solo de Soalha, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                      },
-                                      {
-                                          "name":  "Banda dos Sonhos",
-                                          "title_formatted":  "\u003e Banda dos Sonhos \u003c:Luz:1389703315167907902\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#dfd173",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360963004929282178/1000.png?ex=681dfc91\u0026is=681cab11\u0026hm=b0b38bcddff20d47a435616a54daaa047a77f9d42ffa5c0050c7c64211217dd7\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "8,775",
-                                                        "health":  "97,805",
-                                                        "power":  "29,630"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "ENGULA!",
-                                                                    "description":  "[HAB 1]: REFLETE 1 EF. POSITIVOS do oponente e **reinicia o tempo dele** a cada 10 GOLPES DE COMBO.\n\n[HAB 2]: Quando qualquer um dos lutadores for NOCAUTEADO, **reinicia o tempo de todos** os EFEITOS POSITIVOS ativos e ganha IMUNIDADE por 15 segundos."
-                                                                },
-                                          "marquee_ability":  "Líder da Banda",
-                                          "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                      },
-                                      {
-                                          "name":  "Heavy Metal",
-                                          "title_formatted":  "\u003e Heavy Metal \u003c:Agua:1389703224210231437\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Água",
-                                          "color_hex":  "#1095d5",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360963056271888604/1000.png?ex=681dfc9e\u0026is=681cab1e\u0026hm=5e3de759fe57d4e224b26624496901283b19a3622878ff4514eb9b5d0ca07c28\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "10,330",
-                                                        "health":  "88,916",
-                                                        "power":  "29,717"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "DISCO DE PLATINA",
-                                                                    "description":  "[HAB 1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por  um **ataque de curta distância (inclusive bloqueando).**\n\n[HAB 2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra."
-                                                                },
-                                          "marquee_ability":  "Líder da Banda",
-                                          "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor ou Precisão",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "G.I. JAZZ",
-                                      "title_formatted":  "\u003e G.I. JAZZ \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#076314",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962534210928821/1000.png?ex=681dfc21\u0026is=681caaa1\u0026hm=50c6c47b58e1771800003f2d1ed580cc4d4334c9d25dbc59248e5335ab3a1008\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "8,410",
-                                                    "health":  "90,816",
-                                                    "power":  "27,531"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "TANQUE RESERVA",
-                                                                "description":  "[HAB 1]: **Uma vez por luta**, ganhe 5 camadas de REGENERAÇÃO e 3 de ARMADURA por 10 s quando sua VIDA estiver abaixo de 25%.\n\n[HAB 2]: Ganhe 1 camada(s) de ARMADURA permanente **enquanto a VIDA estiver acima de 50%.**"
-                                                            },
-                                      "marquee_ability":  "Líder da Banda",
-                                      "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Megassônico",
-                                      "title_formatted":  "\u003e Megassônico \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#6426a8",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962651202785470/1000.png?ex=681dfc3d\u0026is=681caabd\u0026hm=e8d7df4a11167e47d06c61821296217a5cb713bfe8a9786ba5cd2dc1ba2a602e\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,002",
-                                                    "health":  "74,324",
-                                                    "power":  "27,837"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "CHIP-TUNE",
-                                                                "description":  "[HAB 1]: **Quando um GOLPE é bloqueado**, **reduz o dano sofrido em 75%** e dá FÚRIA e ESPINHOS por 10 segundos. Um acúmulo de FÚRIA é removido a cada 5 GOLPES de combo.\n\n[HAB 2]: Enquanto estiver se beneficiando de FÚRIA, 50% do **dano causado é recuperado como VIDA.**"
-                                                            },
-                                      "marquee_ability":  "Solista",
-                                      "recommended_build":  "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:Blockbuster:1434999898385944606\u003e Solo de Soalha, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                  },
-                                  {
-                                      "name":  "Pânico na Cidade",
-                                      "title_formatted":  "\u003e Pânico na Cidade \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#dfd173",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962707607781497/1000.png?ex=681dfc4a\u0026is=681caaca\u0026hm=88f2b291cae28e6f00b6675efd754de19aba90e48c00f4140c25f33b1814f108\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,002",
-                                                    "health":  "74,324",
-                                                    "power":  "27,837"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "RESPIRAÇÃO CIRCULAR",
-                                                                "description":  "[HAB 1]: **Causa 3% de dano extra por GOLPE DE COMBO**\n\n[HAB 2]: **Ganhe um EFEITO POSITIVO aleatório a cada 10 GOLPES DE COMBO.**"
-                                                            },
-                                      "marquee_ability":  "Solista",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:Blockbuster:1434999898385944606\u003e Solo de Soalha, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                  },
-                                  {
-                                      "name":  "Rodas Rítmicas",
-                                      "title_formatted":  "\u003e Rodas Rítmicas \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#076314",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962754894364692/1000.png?ex=681dfc56\u0026is=681caad6\u0026hm=8e66b1804d38643aa3ef09805bafe6343e69c09b2eb6443235ba33ed36798ec9\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,581",
-                                                    "health":  "82,560",
-                                                    "power":  "27,580"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "AMPLIFICADO E PRONTO",
-                                                                "description":  "[HAB 1]: **Enquanto Big Band estiver vivo**, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 10 s depois de cada 15 s\n\n[HAB 2]: **Ao se beneficiar** de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. **Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO**, a duração dela aumenta em 5 s."
-                                                            },
-                                      "marquee_ability":  "Solista",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:Blockbuster:1434999898385944606\u003e Solo de Soalha, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                  },
-                                  {
-                                      "name":  "Detetive \"Dick\"",
-                                      "title_formatted":  "\u003e Detetive \"Dick\" \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ef2e2d",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962830202961980/1000.png?ex=681dfc68\u0026is=681caae8\u0026hm=1fbee947458f2aa95dd38234de26ba9d0d7ae8cec610adfed818e61cdc4ddc80\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,581",
-                                                    "health":  "82,560",
-                                                    "power":  "27,580"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "PERFORMANCE ATORDOANTE",
-                                                                "description":  "[HAB 1]: 5% de chance de ATORDOAR o oponente por 3 s **ao GOLPEAR.** BLOCKBUSTERS causam 50% de DANO EXTRA a oponentes ATORDOADOS.\n\n[HAB 2]: Quando o **Big Band estiver para sofrer um EF. NEG., ele tem 50% de chance de impedi-lo** e ganhar FÚRIA por 8 s."
-                                                            },
-                                      "marquee_ability":  "Solista",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:Blockbuster:1434999898385944606\u003e Solo de Soalha, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                  },
-                                  {
-                                      "name":  "Big Baddy",
-                                      "title_formatted":  "Big Baddy \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#0080ff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1444875271755927683/120_Sem_Titulo_20251130225122.png?ex=692e4c75\u0026is=692cfaf5\u0026hm=e8d189cee4123f96d096c315d39ac00b80187de5e31d3552a9e6cdcf76a72c64\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "8,410",
-                                                    "health":  "90,816",
-                                                    "power":  "27,531"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "Quicando e Quebrando",
-                                                                "description":  "[HAB 1]: **Quando Big Band estiver vivo**, os oponentes causam 35% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER\n\n[HAB 2]: **Quando Big Band realizar uma ARRANCADA DE ATAQUE bem-sucedida, drene 5% de VIDA do inimigo**. Quando Big Band sofre um GOLPE durante a ARRANCADA, ele ganha 2 acúmulos de ESPINHOS por 10 s."
-                                                            },
-                                      "marquee_ability":  "Líder da Banda",
-                                      "recommended_build":  "",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Ganhando Vantagem",
-                                      "title_formatted":  "Ganhando Vantagem \u003c:Neutro:1389703364304175125\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Neutro",
-                                      "color_hex":  "#ffffff",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1456704727009202267/e9c55bde-4f79-4e98-bf45-b77388290bec.webp?ex=6959557f\u0026is=695803ff\u0026hm=9733f4f3904370e6aeab55fffe205c12482a28e0dd4356cb14960107e726c4e6\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "9,581",
-                                                    "health":  "82,560",
-                                                    "power":  "27,580"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "Sucesso de 8 Bits",
-                                                                "description":  "[HAB 1]: **A cada 8 GOLPES DE COMBO realizados**, ganhe OLHO-MORTO por 10 s e BARREIRA.\n\n[HAB 2]: Ao realizar 8, 16, 32 e 64 GOLPES DE COMBO, reduz em 1% a VIDA ATUAL e o MEDIDOR DE BLOCKBUSTER do oponente **para cada GOLPE DE COMBO atual.**"
-                                                            },
-                                      "marquee_ability":  "Solista",
-                                      "recommended_build":  "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                                      "recommended_arsenal":  ""
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Virtuoso Vintage",
-                                       "title_formatted":  "\u003e Virtuoso Vintage \u003c:Fogo:1389703188525092934\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Fogo",
-                                       "color_hex":  "#ef2e2d",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962285203488811/1000.png?ex=681dfbe6\u0026is=681caa66\u0026hm=fa1e9de87c53890bac7201b6d1c68da7fe9370ead9b1a4c0dceb2aba1bd80ecd\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "8,909",
-                                                     "health":  "76,685",
-                                                     "power":  "23,629"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "TREINO CLÁSSICO",
-                                                                 "description":  "[HAB 1]: Ganhe 1 camada de PRECISÃO a cada 10 **golpes de combo.**\n\n[HAB 2]: **GOLPES DE PRECISÃO** dão FÚRIA e infligem QUEBRA DE GUARDA por 10 segundos."
-                                                             },
-                                       "marquee_ability":  "Solista",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Soco Labrosone, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                   },
-                                   {
-                                       "name":  "Robocópia",
-                                       "title_formatted":  "\u003e Robocópia \u003c:Agua:1389703224210231437\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Água",
-                                       "color_hex":  "#1095d5",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962357765079101/1000.png?ex=681dfbf7\u0026is=681caa77\u0026hm=26fe62b47a2de421e420c680e2f1f0899a20950ac19c76ef31a53bfaaacdc6ad\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,215",
-                                                     "health":  "69,005",
-                                                     "power":  "25,660"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "VIVO OU MORTO",
-                                                                 "description":  "[HAB 1]: **Uma vez por luta**, ao sofrer um GOLPE que seria fatal, ganhe 3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.\n\n[HAB 2]: **Ao derrotar um oponente**, ganhe 2 camadas de FÚRIA por 30 s e 50% no MEDIDOR DE BLOCKBUSTER."
-                                                             },
-                                       "marquee_ability":  "Solista",
-                                       "recommended_build":  "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:Blockbuster:1434999898385944606\u003e Solo de Soalha, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos"
-                                   },
-                                   {
-                                       "name":  "Resonant Evil",
-                                       "title_formatted":  "\u003e Resonant Evil \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#6426a8",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962404422389900/1000.png?ex=681dfc02\u0026is=681caa82\u0026hm=3492c8866cd6a970df7f2b10f7ac384b9ed2e4336b896faef6d09c72628b5f1f\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "7,604",
-                                                     "health":  "84,308",
-                                                     "power":  "23,588"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "DESCONGESTIONADO",
-                                                                 "description":  "[HAB 1]: 10% de chance de dar ARMADURA por 10 segundos **ao ser GOLPEADO.**\n\n[HAB 2]: **Ao ser GOLPEADO**, tem 5% de chance de ATORDOAR o oponente por 4 segundos **se estiver com ARMADURA.**"
-                                                             },
-                                       "marquee_ability":  "Líder da Banda",
-                                       "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                   },
-                                   {
-                                       "name":  "Desarmonizador",
-                                       "title_formatted":  "\u003e Desarmonizador \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#dfd173",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360962456603595114/1000.png?ex=681dfc0f\u0026is=681caa8f\u0026hm=9512846a8c3eb0f1304d32982e57ded32a0387e9b2f4f8627042c62c2d5395fe\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "8,909",
-                                                     "health":  "76,685",
-                                                     "power":  "23,629"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "TIMBRE E CASTIGO",
-                                                                 "description":  "[HAB 1]: Recupere 10% da sua VIDA MÁXIMA após cada 10º **GOLPE DE COMBO sofrido.**\n\n[HAB 2]: **Quando GOLPEADO** com mais de 50% de VIDA, reflete 35% do dano recebido."
-                                                             },
-                                       "marquee_ability":  "Líder da Banda",
-                                       "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Batidas Rítmicas",
-                                        "title_formatted":  "\u003e Batidas Rítmicas \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Fogo",
-                                        "color_hex":  "#ef2e2d",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360958863867908187/1000.png?ex=681df8b6\u0026is=681ca736\u0026hm=37e6599fe915bf7305c50a84fedeaa8b87add6284416ff24b2858950ba57d692\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "9,428",
-                                                      "health":  "64,090",
-                                                      "power":  "23,762"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "ESTILO LIVRE",
-                                                                  "description":  "[HAB 1]: **Ganhe FÚRIA por 5 segundos ao usar um GOLPE ESPECIAL.**\n\n[HAB 2]: **Ganha 25% no MEDIDOR DE BLOCKBUSTER ao usar um GOLPE ESPECIAL.**"
-                                                              },
-                                        "marquee_ability":  "Solista",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:GolpeEspecial:1434999859768987748\u003e Soco Labrosone, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                    },
-                                    {
-                                        "name":  "Superjazz",
-                                        "title_formatted":  "\u003e Superjazz \u003c:Ar:1389703277532287066\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Ar",
-                                        "color_hex":  "#076314",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018119721291837/icon-big-band.png?ex=68a7876a\u0026is=68a635ea\u0026hm=5ed2ddb4fe074a0cd3b992a2dd0e70fa003cd7393d1a4e14ad0def33f7550e92\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1360959438923632760/1000.png?ex=681df93f\u0026is=681ca7bf\u0026hm=282656559a9e4f36290e1636dcc30e782f5dbb08f1591ca6ee7c13fd94745245\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "8,237",
-                                                      "health":  "71,175",
-                                                      "power":  "23,750"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "SEGUNDO FÔLEGO",
-                                                                  "description":  "[HAB 1]: **Na ASSISTÊNCIA, ganhe REGENERAÇÃO FORTE e ARMADURA por 10 segundos.**\n\n[HAB 2]: **Na ASSISTÊNCIA**, ganhe 35% no MEDIDOR DE BLOCKBUSTER."
-                                                              },
-                                        "marquee_ability":  "Líder da Banda",
-                                        "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Tuba Tuba, \u003c:Blockbuster:1434999898385944606\u003e Trompa Supersônica, \u003c:GolpeEspecial:1434999859768987748\u003e Pedalada Gigante, \u003c:GolpeEspecial:1434999859768987748\u003e Porrada de Pratos,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                    }
-                                ]
-                 }
+    "character": "Big Band",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Bandido de Bronze",
+                "title_formatted": "Bandido de Bronze - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962946812874842/1000.png?ex=681dfc83&is=681cab03&hm=52e72081e7d37ea452bd7b7fec83e992e01f2b83acc48f02512698dddcb76efd&"
+                },
+                "stats": {
+                    "attack": "11,847",
+                    "health": "80,045",
+                    "power": "29,762"
+                },
+                "signature_ability": {
+                    "name": "Riff Furioso",
+                    "description": "[HAB 1]: Remove 1 EF. POS. do oponente, dá FÚRIA por 10 segundos e DRENA 3% de VIDA **a cada 10 GOLPES DE COMBO.**\n\n[HAB 2]: Zera os temporizadores de todos os EF. POS. ativos para cada 20% de **VIDA perdida por qualquer um dos lutadores.**"
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Banda dos Sonhos",
+                "title_formatted": "Banda dos Sonhos - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360963004929282178/1000.png?ex=681dfc91&is=681cab11&hm=b0b38bcddff20d47a435616a54daaa047a77f9d42ffa5c0050c7c64211217dd7&"
+                },
+                "stats": {
+                    "attack": "8,775",
+                    "health": "97,805",
+                    "power": "29,630"
+                },
+                "signature_ability": {
+                    "name": "ENGULA!",
+                    "description": "[HAB 1]: REFLETE 1 EF. POSITIVOS do oponente e **reinicia o tempo dele** a cada 10 GOLPES DE COMBO.\n\n[HAB 2]: Quando qualquer um dos lutadores for NOCAUTEADO, **reinicia o tempo de todos** os EFEITOS POSITIVOS ativos e ganha IMUNIDADE por 15 segundos."
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            },
+            {
+                "name": "Heavy Metal",
+                "title_formatted": "Heavy Metal - Água - Diamante",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360963056271888604/1000.png?ex=681dfc9e&is=681cab1e&hm=5e3de759fe57d4e224b26624496901283b19a3622878ff4514eb9b5d0ca07c28&"
+                },
+                "stats": {
+                    "attack": "10,330",
+                    "health": "88,916",
+                    "power": "29,717"
+                },
+                "signature_ability": {
+                    "name": "DISCO DE PLATINA",
+                    "description": "[HAB 1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por  um **ataque de curta distância (inclusive bloqueando).**\n\n[HAB 2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra."
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor ou Precisão",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "G.I. JAZZ",
+                "title_formatted": "G.I. JAZZ - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962534210928821/1000.png?ex=681dfc21&is=681caaa1&hm=50c6c47b58e1771800003f2d1ed580cc4d4334c9d25dbc59248e5335ab3a1008&"
+                },
+                "stats": {
+                    "attack": "8,410",
+                    "health": "90,816",
+                    "power": "27,531"
+                },
+                "signature_ability": {
+                    "name": "TANQUE RESERVA",
+                    "description": "[HAB 1]: **Uma vez por luta**, ganhe 5 camadas de REGENERAÇÃO e 3 de ARMADURA por 10 s quando sua VIDA estiver abaixo de 25%.\n\n[HAB 2]: Ganhe 1 camada(s) de ARMADURA permanente **enquanto a VIDA estiver acima de 50%.**"
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            },
+            {
+                "name": "Megassônico",
+                "title_formatted": "Megassônico - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962651202785470/1000.png?ex=681dfc3d&is=681caabd&hm=e8d7df4a11167e47d06c61821296217a5cb713bfe8a9786ba5cd2dc1ba2a602e&"
+                },
+                "stats": {
+                    "attack": "11,002",
+                    "health": "74,324",
+                    "power": "27,837"
+                },
+                "signature_ability": {
+                    "name": "CHIP-TUNE",
+                    "description": "[HAB 1]: **Quando um GOLPE é bloqueado**, **reduz o dano sofrido em 75%** e dá FÚRIA e ESPINHOS por 10 segundos. Um acúmulo de FÚRIA é removido a cada 5 GOLPES de combo.\n\n[HAB 2]: Enquanto estiver se beneficiando de FÚRIA, 50% do **dano causado é recuperado como VIDA.**"
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Pânico na Cidade",
+                "title_formatted": "Pânico na Cidade - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962707607781497/1000.png?ex=681dfc4a&is=681caaca&hm=88f2b291cae28e6f00b6675efd754de19aba90e48c00f4140c25f33b1814f108&"
+                },
+                "stats": {
+                    "attack": "11,002",
+                    "health": "74,324",
+                    "power": "27,837"
+                },
+                "signature_ability": {
+                    "name": "RESPIRAÇÃO CIRCULAR",
+                    "description": "[HAB 1]: **Causa 3% de dano extra por GOLPE DE COMBO**\n\n[HAB 2]: **Ganhe um EFEITO POSITIVO aleatório a cada 10 GOLPES DE COMBO.**"
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Rodas Rítmicas",
+                "title_formatted": "Rodas Rítmicas - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962754894364692/1000.png?ex=681dfc56&is=681caad6&hm=8e66b1804d38643aa3ef09805bafe6343e69c09b2eb6443235ba33ed36798ec9&"
+                },
+                "stats": {
+                    "attack": "9,581",
+                    "health": "82,560",
+                    "power": "27,580"
+                },
+                "signature_ability": {
+                    "name": "AMPLIFICADO E PRONTO",
+                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo**, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 10 s a cada 15 s\n\n[HAB 2]: **Ao se beneficiar** de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. **Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO**, a duração dela aumenta em 5 s."
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Detetive \"Dick\"",
+                "title_formatted": "Detetive \"Dick\" - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962830202961980/1000.png?ex=681dfc68&is=681caae8&hm=1fbee947458f2aa95dd38234de26ba9d0d7ae8cec610adfed818e61cdc4ddc80&"
+                },
+                "stats": {
+                    "attack": "9,581",
+                    "health": "82,560",
+                    "power": "27,580"
+                },
+                "signature_ability": {
+                    "name": "PERFORMANCE ATORDOANTE",
+                    "description": "[HAB 1]: 5% de chance de ATORDOAR o oponente por 3 s **ao GOLPEAR.** BLOCKBUSTERS causam 50% de DANO EXTRA a oponentes ATORDOADOS.\n\n[HAB 2]: Quando o **Big Band estiver para sofrer um EF. NEG., ele tem 50% de chance de impedi-lo** e ganhar FÚRIA por 8 s."
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Big Baddy",
+                "title_formatted": "Big Baddy - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1444875271755927683/120_Sem_Titulo_20251130225122.png?ex=692e4c75&is=692cfaf5&hm=e8d189cee4123f96d096c315d39ac00b80187de5e31d3552a9e6cdcf76a72c64&"
+                },
+                "stats": {
+                    "attack": "8,410",
+                    "health": "90,816",
+                    "power": "27,531"
+                },
+                "signature_ability": {
+                    "name": "Quicando e Quebrando",
+                    "description": "[HAB 1]: **Quando Big Band estiver vivo**, os oponentes causam 35% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER\n\n[HAB 2]: **Quando Big Band realizar uma ARRANCADA DE ATAQUE bem-sucedida, drene 5% de VIDA do inimigo**. Quando Big Band sofre um GOLPE durante a ARRANCADA, ele ganha 2 acúmulos de ESPINHOS por 10 s."
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            },
+            {
+                "name": "Ganhando Vantagem",
+                "title_formatted": "Ganhando Vantagem - Neutro - Ouro",
+                "element": "Neutro",
+                "color_hex": "#ffffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1456704727009202267/e9c55bde-4f79-4e98-bf45-b77388290bec.webp?ex=6959557f&is=695803ff&hm=9733f4f3904370e6aeab55fffe205c12482a28e0dd4356cb14960107e726c4e6&"
+                },
+                "stats": {
+                    "attack": "9,581",
+                    "health": "82,560",
+                    "power": "27,580"
+                },
+                "signature_ability": {
+                    "name": "Sucesso de 8 Bits",
+                    "description": "[HAB 1]: **A cada 8 GOLPES DE COMBO realizados**, ganhe OLHO-MORTO por 10 s e BARREIRA.\n\n[HAB 2]: Ao realizar 8, 16, 32 e 64 GOLPES DE COMBO, reduz em 1% a VIDA ATUAL e o MEDIDOR DE BLOCKBUSTER do oponente **para cada GOLPE DE COMBO atual.**"
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+                "recommended_arsenal": ""
+            }
+        ],
+        "prata": [
+            {
+                "name": "Virtuoso Vintage",
+                "title_formatted": "Virtuoso Vintage - Fogo - Prata",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962285203488811/1000.png?ex=681dfbe6&is=681caa66&hm=fa1e9de87c53890bac7201b6d1c68da7fe9370ead9b1a4c0dceb2aba1bd80ecd&"
+                },
+                "stats": {
+                    "attack": "8,909",
+                    "health": "76,685",
+                    "power": "23,629"
+                },
+                "signature_ability": {
+                    "name": "TREINO CLÁSSICO",
+                    "description": "[HAB 1]: Ganhe 1 camada de PRECISÃO a cada 10 **golpes de combo.**\n\n[HAB 2]: **GOLPES DE PRECISÃO** dão FÚRIA e infligem QUEBRA DE GUARDA por 10 segundos."
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Soco Labrosone, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Robocópia",
+                "title_formatted": "Robocópia - Água - Prata",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962357765079101/1000.png?ex=681dfbf7&is=681caa77&hm=26fe62b47a2de421e420c680e2f1f0899a20950ac19c76ef31a53bfaaacdc6ad&"
+                },
+                "stats": {
+                    "attack": "10,215",
+                    "health": "69,005",
+                    "power": "25,660"
+                },
+                "signature_ability": {
+                    "name": "VIVO OU MORTO",
+                    "description": "[HAB 1]: **Uma vez por luta**, ao sofrer um GOLPE que seria fatal, ganhe 3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.\n\n[HAB 2]: **Ao derrotar um oponente**, ganhe 2 camadas de FÚRIA por 30 s e 50% no MEDIDOR DE BLOCKBUSTER."
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
+            },
+            {
+                "name": "Resonant Evil",
+                "title_formatted": "Resonant Evil - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962404422389900/1000.png?ex=681dfc02&is=681caa82&hm=3492c8866cd6a970df7f2b10f7ac384b9ed2e4336b896faef6d09c72628b5f1f&"
+                },
+                "stats": {
+                    "attack": "7,604",
+                    "health": "84,308",
+                    "power": "23,588"
+                },
+                "signature_ability": {
+                    "name": "DESCONGESTIONADO",
+                    "description": "[HAB 1]: 10% de chance de dar ARMADURA por 10 segundos **ao ser GOLPEADO.**\n\n[HAB 2]: **Ao ser GOLPEADO**, tem 5% de chance de ATORDOAR o oponente por 4 segundos **se estiver com ARMADURA.**"
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            },
+            {
+                "name": "Desarmonizador",
+                "title_formatted": "Desarmonizador - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360962456603595114/1000.png?ex=681dfc0f&is=681caa8f&hm=9512846a8c3eb0f1304d32982e57ded32a0387e9b2f4f8627042c62c2d5395fe&"
+                },
+                "stats": {
+                    "attack": "8,909",
+                    "health": "76,685",
+                    "power": "23,629"
+                },
+                "signature_ability": {
+                    "name": "TIMBRE E CASTIGO",
+                    "description": "[HAB 1]: Recupere 10% da sua VIDA MÁXIMA após cada 10º **GOLPE DE COMBO sofrido.**\n\n[HAB 2]: **Quando GOLPEADO** com mais de 50% de VIDA, reflete 35% do dano recebido."
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Batidas Rítmicas",
+                "title_formatted": "Batidas Rítmicas - Fogo - Bronze",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360958863867908187/1000.png?ex=681df8b6&is=681ca736&hm=37e6599fe915bf7305c50a84fedeaa8b87add6284416ff24b2858950ba57d692&"
+                },
+                "stats": {
+                    "attack": "9,428",
+                    "health": "64,090",
+                    "power": "23,762"
+                },
+                "signature_ability": {
+                    "name": "ESTILO LIVRE",
+                    "description": "[HAB 1]: **Ganhe FÚRIA por 5 segundos ao usar um GOLPE ESPECIAL.**\n\n[HAB 2]: **Ganha 25% no MEDIDOR DE BLOCKBUSTER ao usar um GOLPE ESPECIAL.**"
+                },
+                "marquee_ability": "Solista",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Tuba Tuba, Soco Labrosone, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            },
+            {
+                "name": "Superjazz",
+                "title_formatted": "Superjazz - Ar - Bronze",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1360959438923632760/1000.png?ex=681df93f&is=681ca7bf&hm=282656559a9e4f36290e1636dcc30e782f5dbb08f1591ca6ee7c13fd94745245&"
+                },
+                "stats": {
+                    "attack": "8,237",
+                    "health": "71,175",
+                    "power": "23,750"
+                },
+                "signature_ability": {
+                    "name": "SEGUNDO FÔLEGO",
+                    "description": "[HAB 1]: **Na ASSISTÊNCIA, ganhe REGENERAÇÃO FORTE e ARMADURA por 10 segundos.**\n\n[HAB 2]: **Na ASSISTÊNCIA**, ganhe 35% no MEDIDOR DE BLOCKBUSTER."
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+            }
+        ]
+    }
 }

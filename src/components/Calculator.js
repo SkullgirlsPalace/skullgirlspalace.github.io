@@ -27,8 +27,8 @@ export function createCalculator() {
         <div class="calculator-box">
             <!-- TAB BAR -->
             <div class="calc-tab-bar">
-                <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')">💰 Ganhos Mensais</button>
-                <button class="calc-tab" data-tab="custos" onclick="switchCalcTab('custos')">📈 Custos de Evolução</button>
+                <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')"><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> Ganhos Mensais</button>
+                <button class="calc-tab" data-tab="custos" onclick="switchCalcTab('custos')">📈 Custos de Build</button>
             </div>
 
             <!-- ========== TAB: GANHOS ========== -->
@@ -70,10 +70,10 @@ export function createCalculator() {
                                 
                                 <span class="toggle-label">DP Personagem (Faixa):</span>
                                 <div class="toggle-group exclusive" id="dp-faixa-toggles">
-                                    <button class="toggle-btn" data-source="bronze" data-type="dpFaixa">Bronze</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="dpFaixa">Prata</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="dpFaixa">Ouro</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa">Diamante</button>
+                                    <button class="toggle-btn" data-source="bronze" data-type="dpFaixa"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="dpFaixa"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="dpFaixa"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante</button>
                                     <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">Não faço</button>
                                 </div>
 
@@ -130,10 +130,10 @@ export function createCalculator() {
 
                                 <span class="toggle-label">Tier de Batalha:</span>
                                 <div class="toggle-group exclusive" id="guilda-tier-toggles">
-                                    <button class="toggle-btn" data-source="bronze" data-type="guildaTier">Bronze</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="guildaTier">Prata</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="guildaTier">Ouro</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="guildaTier">Diamante</button>
+                                    <button class="toggle-btn" data-source="bronze" data-type="guildaTier"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="guildaTier"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="guildaTier"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="guildaTier"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante</button>
                                     <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">Não participo</button>
                                 </div>
 
@@ -153,10 +153,10 @@ export function createCalculator() {
 
                     <div class="calc-results">
                         <div id="earnings-result" class="result-box">
-                            <h4>💎 Resultado Estimado</h4>
+                            <h4><img src="img/oficial/Theonite.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Teonita"> Resultado Estimado</h4>
                             <div class="result-grid">
                                 <div class="result-card coins">
-                                    <span class="result-label">Coins Mensais</span>
+                                    <span class="result-label">Moedas Mensais</span>
                                     <span class="result-value" id="result-coins">-</span>
                                     <span class="result-sub">≈ <span id="result-coins-week">-</span>/semana</span>
                                 </div>
@@ -183,10 +183,10 @@ export function createCalculator() {
                                 
                                 <span class="toggle-label">Raridade do Personagem:</span>
                                 <div class="toggle-group exclusive" id="golpe-raridade-toggles">
-                                    <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade">Bronze</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade">Prata</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade">Ouro</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade">Diamante</button>
+                                    <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante</button>
                                     <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">Sem Golpes</button>
                                 </div>
 
@@ -218,10 +218,10 @@ export function createCalculator() {
 
                                 <span class="toggle-label">Raridade do Astro:</span>
                                 <div class="toggle-group exclusive" id="astro-raridade-toggles">
-                                    <button class="toggle-btn" data-source="bronze" data-type="astroRaridade">Bronze (Lv 5)</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade">Prata (Lv 10)</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade">Ouro (Lv 15)</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade">Diamante (Lv 20)</button>
+                                    <button class="toggle-btn" data-source="bronze" data-type="astroRaridade"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze (Lv 5)</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata (Lv 10)</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro (Lv 15)</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante (Lv 20)</button>
                                     <button class="toggle-btn" data-source="custom" data-type="astroRaridade">Customizado</button>
                                     <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">Sem Astro</button>
                                 </div>
@@ -246,7 +246,7 @@ export function createCalculator() {
 
                     <div class="calc-results">
                         <div id="build-cost-result" class="result-box">
-                            <h4>💰 Custo Total da Build</h4>
+                            <h4><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> Custo Total da Build</h4>
                             <div id="build-cost-breakdown" class="breakdown-box styled"></div>
                         </div>
                     </div>
@@ -571,7 +571,7 @@ export function calculateEarnings() {
                     <li>
                         <span>${item.nome}</span>
                         <span>
-                            ${item.coins ? formatNumber(item.coins) + ' coins' : ''}
+                            ${item.coins ? formatNumber(item.coins) + ' moedas' : ''}
                             ${item.coins && item.teonita ? ' + ' : ''}
                             ${item.teonita ? formatNumber(item.teonita) + ' teonita' : ''}
                         </span>
@@ -615,10 +615,9 @@ export function calculateBuildCost() {
         }
 
         const custoDoNivel = golpesData.custoPorNivel[String(golpeNivelAlvo)] || 0;
-        const multiplicador = golpeShiny ? 0.5 : 1;
-        const custoUmGolpe = Math.floor(custoAteNivel * multiplicador);
+        const custoUmGolpe = custoAteNivel;
         const custoBuild = custoUmGolpe * 5;
-        const custoDoNivelBuild = Math.floor(custoDoNivel * multiplicador) * 5;
+        const custoDoNivelBuild = custoDoNivel * 5;
 
         // Reference cost from personagemCompleto
         const shinyKey = golpeShiny ? 'shiny' : 'normal';
@@ -740,7 +739,7 @@ export function calculateBuildCost() {
     html += `
         <div class="cost-total">
             <div class="total-row">
-                <span class="total-label">💰 Total em Coins</span>
+                <span class="total-label"><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> Total em Moedas</span>
                 <span class="total-value coins">${formatNumber(totalCoins)}</span>
             </div>
             ${totalPo > 0 ? `
@@ -754,7 +753,7 @@ export function calculateBuildCost() {
 
     // Shiny notes only
     const shinyNotes = [];
-    if (golpesResult?.isShiny) shinyNotes.push('Golpes shiny (50%)');
+    if (golpesResult?.isShiny && golpesResult?.custoPersonagem) shinyNotes.push('Personagem shiny (50%)');
     if (astrosResult?.isShiny) shinyNotes.push('Astro shiny (50%)');
     if (shinyNotes.length > 0) {
         html += `<p class="cost-notes">✨ ${shinyNotes.join(' • ')}</p>`;

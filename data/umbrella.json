@@ -1,344 +1,344 @@
 {
-    "character":  "Umbrella",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Desejo de Morte",
-                                          "title_formatted":  "\u003e Desejo de Morte  \u003c:Trevas:1389703142848991364\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#800080",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686463208489111/1000.png?ex=681ea417\u0026is=681d5297\u0026hm=822f37fc02797bd2a3c49440294358153db7bd5882b7d075859b73aacb180998\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,152",
-                                                        "health":  "56,045",
-                                                        "power":  "26,578"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "CICLO VORAZ",
-                                                                    "description":  "[HAB 1]: **Todo 7º GOLPE DE COMBO que acerta Umbrella ou o oponente** TRANSFERE até 3 EFEITO(S) POSITIVO(S) do inimigo para ela e inflige FEITIÇO por 10 s.\n\n[HAB 2]: **Uma vez por luta, ao ser derrotada**, REVIVE com 25% de VIDA e REVIVE todos os aliados derrotados com 25% de VIDA."
-                                                                },
-                                          "marquee_ability":  "Final Amargo",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:GolpeEspecial:1434999859768987748\u003e Soprando Bolhas, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                      },
-                                      {
-                                          "name":  "Campeã dos Campeões",
-                                          "title_formatted":  "\u003e Campeã dos Campeões  \u003c:Luz:1389703315167907902\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Luz",
-                                          "color_hex":  "#ffff00",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686541339988061/1000.png?ex=681ea42a\u0026is=681d52aa\u0026hm=7cad43875feb2050f9228eb0dda6f5e67b0765f3b5929b089fd4e1ab4a89c96e\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,981",
-                                                        "health":  "68,468",
-                                                        "power":  "27,641"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "VÍNCULO DE BATALHA",
-                                                                    "description":  "[HAB 1]: **Enquanto Umbrella estiver viva**, o lutador ativo ganha 1 camada de BENÇÃO e de INABALÁVEL por 15 s a cada 10 GOLPES DE COMBO.\n\n[HAB 2]: **Enquanto Umbrella estiver viva**, aumenta o ATAQUE de todos os aliados em 4% da VIDA ATUAL do lutador para cada camada de BÊNÇÃO no lutador."
-                                                                },
-                                          "marquee_ability":  "Final Amargo",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lente Projetora, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                      },
-                                      {
-                                          "name":  "Artista Ilusionista",
-                                          "title_formatted":  "\u003e Artista Ilusionista  \u003c:Neutro:1389703364304175125\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Ar",
-                                          "color_hex":  "#ff80c0",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686645958639757/1000.png?ex=681ea443\u0026is=681d52c3\u0026hm=b49788b3bbe60447855081ca5b7a3b754796e7118a37c00bfab86255d3407916\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "13,152",
-                                                        "health":  "62,247",
-                                                        "power":  "27,799"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "ILUSÕES DE GRANDEZA",
-                                                                    "description":  "[HAB 1]: **BLOQUEIOS no tempo certo tem** 100% de chance cada de dar 1 camada de ESQUIVA, BARREIRA E BÊNÇÃO.\n\n[HAB 2]: Tem 50% de **chance de converter 3 EF. POSITIVO(S) em FÚRIA permanente ao usar BLOCKBUSTER enquanto FAMINTO**. Ganha PRECISÃO permanente ao se beneficiar de 5 camadas de FÚRIA."
-                                                                },
-                                          "marquee_ability":  "Doce Vitória",
-                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Ganho Medidor",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, , \u003c:Blockbuster:1434999898385944606\u003e Tempo Ruim,  \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Lambe e Vai"
-                                      },
-                                      {
-                                          "name":  "Angelical",
-                                          "title_formatted":  "\u003e Angelical  \u003c:Agua:1389703224210231437\u003e \u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Água",
-                                          "color_hex":  "#0080ff",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1389363446662955051/a936faee-b424-4c46-a805-7a0ee98eea35_1.webp?ex=6864590a\u0026is=6863078a\u0026hm=7480214913ae924f2ba8b1e4ec29707327dcec83ef5142aca7fa7bcbf8747378\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "11,981",
-                                                        "health":  "68,468",
-                                                        "power":  "27,641"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "COLHEITA DE PODER/SIFÃO",
-                                                                    "description":  "[HAB 1]: **Ao usar a ASSITÊNCIA de Umbrella**, o próximo lutador ganha 3 acúmulos de FÚRIA, 3 camadas de MIASMA e IMUNIDADE por 20 segundos cada, **ao custo de até 25% da VIDA MÁXIMA da Umbrella.**\n\n[HAB 2]: **Quando a Umbrella ENTRA NA ASSISTÊNCIA**, ganha 3 acúmulos de ESQUIVA, 3 acúmulos de REGENERAÇÃO e IMUNIDADE por 15 segundos cada e DRENA 35% do MEDIDOR DE BLOCKBUSTER do oponente."
-                                                                },
-                                          "marquee_ability":  "Final Amargo",
-                                          "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "Maruja dos Sete Mares",
-                                      "title_formatted":  "\u003e Maruja dos Sete Mares    \u003c:Agua:1389703224210231437\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#000000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686341909479505/1000.png?ex=681ea3fa\u0026is=681d527a\u0026hm=e1f47dd352bbe7fd06dd00fea5799338df3e9f1b70d14a3e7f79c5cc4f07cfc0\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,117",
-                                                    "health":  "63,572",
-                                                    "power":  "25,651"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ESCOLHIDA PELO OCEANO",
-                                                                "description":  "[HAB 1]: **GOLPES com a Poça** concedem IMUNIDADE por 15 s.\n\n[HAB 2]: **Enquanto estiver com IMUNIDADE**, ataques de BOLHA causam 50% de dano extra. DESATIVA BLOCKBUSTERS e inflige QUEBRA DE ARMADURA por 15 s cada (também se aplica a golpes bloqueados)."
-                                                            },
-                                      "marquee_ability":  "Final Amargo",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                  },
-                                  {
-                                      "name":  "Visitante do Espaço",
-                                      "title_formatted":  "\u003e Visitante do Espaço  \u003c:Trevas:1389703142848991364\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#800080",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686368669007902/1000.png?ex=681ea401\u0026is=681d5281\u0026hm=04cb152c79dbd8187c06c234f3b322e3bf077e30ecbcb7fc1b0efcfb26b9ae9e\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,212",
-                                                    "health":  "57,812",
-                                                    "power":  "25,015"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "AUTÓPSIA ALIENÍGENA",
-                                                                "description":  "**Enquanto FAMINTO,** inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 50%. **A DESTRUIÇÃO é removida se a Umbrella SAI DO CAMPO DE BATALHA ou for derrotada.**\n\n**Ao derrotar um inimigo,** ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 15 s. [Efeitos Positivos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Space_Case)"
-                                                            },
-                                      "marquee_ability":  "Doce Vitória",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                  },
-                                  {
-                                      "name":  "Saqueadora do Palácio",
-                                      "title_formatted":  "\u003e Saqueadora do Palácio  \u003c:Ar:1389703277532287066\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#00ff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686397936730464/1000.png?ex=681ea408\u0026is=681d5288\u0026hm=8883ee39eb61bf34505c9852aaf8e8b9d5c07df49668a494d0b8f22407cbb21b\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "12,212",
-                                                    "health":  "57,812",
-                                                    "power":  "25,015"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "PARCEIROS NO CRIME",
-                                                                "description":  "[HAB 1]: Ganhe ESQUIVA por 7 s e conceda 3% de VIDA a todos os aliados por 5 s **enquanto não sofrer nenhum GOLPE (incluindo golpes bloqueados).**\n\n[HAB 2]: A cada 10 GOLPES DE COMBO **enquanto está com um EF. POS.,** transfere 1 EF. POS. do oponente para você e FÚRIA aos aliados por 30 s."
-                                                            },
-                                      "marquee_ability":  "Final Amargo",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                  },
-                                  {
-                                      "name":  "Wunderkind",
-                                      "title_formatted":  "\u003e Wunderkind   \u003c:Fogo:1389703188525092934\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ff0000",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686419202113667/1000.png?ex=681ea40d\u0026is=681d528d\u0026hm=8b53caac60015115122a572aa7d989fc140cec2c38befa4824c28db5755093c4\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "14,036",
-                                                    "health":  "52,032",
-                                                    "power":  "26,832"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "CHAMA ÔMEGA",
-                                                                "description":  "[HAB 1]: 50% de chance de infligir OSCILAÇÃO DE ENERGIA e receber BARREIRA por 15 segundos cada **ao GOLPEAR com BLOCKBUSTER** (também se aplica a golpes bloqueados).\n\n[HAB 2]: **Enquanto Umbrella estiver viva**, o lutador ativo DRENA 5% da VIDA do oponente a cada 3 segundos enquanto ele estiver sofrendo 3 ou mais camadas de OSCILAÇÃO DE ENERGIA."
-                                                            },
-                                      "marquee_ability":  "Doce Vitória",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lente Projetora, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                  },
-                                  {
-                                      "name":  "Psicriança",
-                                      "title_formatted":  "\u003e Psicriança  \u003c:Luz:1389703315167907902\u003e \u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#ffff00",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686440483881000/1000.png?ex=681ea412\u0026is=681d5292\u0026hm=8d37d5112aa210e7d10d46ccf6dca85626bd504ca5c7327d771561f0a81ebc3e\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "14,036",
-                                                    "health":  "52,032",
-                                                    "power":  "26,832"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "MENTE SOBRE MATÉRIA",
-                                                                "description":  "[HAB 1]: **Ao GOLPEAR um oponente atacando,** ganhe OLHO-MORTO e inflija POLARIDADE INVERSA por 15 segundos cada.\n\n[HAB 2]: 100% de **chance de zerar o tempo de todos os EF. POS. da Umbrella e EF. NEG. do oponente ao QUICAR na parede,** exceto ATORD. e DESTRUIÇÃO."
-                                                            },
-                                      "marquee_ability":  "Final Amargo",
-                                      "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Rosinha",
-                                       "title_formatted":  "Rosinha  \u003c:Fogo:1389703188525092934\u003e \u003c:prata:1407839105169227957\u003e ",
-                                       "element":  "Fogo",
-                                       "color_hex":  "#ff0000",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686184933326968/1000.png?ex=681ea3d5\u0026is=681d5255\u0026hm=3c5df3866337d339095eeb59d99ee22225333cc0bb3ce98a68bea198818a8f32\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "9,620",
-                                                     "health":  "59,079",
-                                                     "power":  "23,002"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "NOSSOS CORAÇÕES PERDURAM",
-                                                                 "description":  "[HAB 1]: **Enquanto Umbrella estiver viva**, os aliados ganham 1 camada de BARREIRA e ESPINHOS cada, por 10 s, para cada 25% de VIDA perdidos.\n\n[HAB 2]: **Enquanto Umbrella estiver viva, ela anula todos os EF. NEGATIVOS dos aliados a cada 20 segundos.**"
-                                                             },
-                                       "marquee_ability":  "Final Amargo",
-                                       "recommended_build":  "VD%, Defesa, Resistência e Ganho Medidor",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:GolpeEspecial:1434999859768987748\u003e Soprando Bolhas, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal,, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                   },
-                                   {
-                                       "name":  "Pirata de Poça",
-                                       "title_formatted":  "Pirata de Poça \u003c:Agua:1389703224210231437\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Água",
-                                       "color_hex":  "#0080ff",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686207763058890/1000.png?ex=681ea3da\u0026is=681d525a\u0026hm=4985a9f7fa2743205c26683602ed724f98d018c1eab5d10f4dfaf6a015b615a0\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,309",
-                                                     "health":  "53,645",
-                                                     "power":  "23,928"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "SAQUE E DIVERSÃO",
-                                                                 "description":  "[HAB 1]: O oponente perde 1 EF. POSITIVO a cada 2 segundos **enquanto estiver perto de uma POÇA.**\n\n[HAB 2]: **Com Hungern EMPANTURRADO**, a Umbrella ganha 5% de VIDA sempre que um oponente perder um EF. POSITIVO."
-                                                             },
-                                       "marquee_ability":  "Doce Vitória",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                   },
-                                   {
-                                       "name":  "Mordida Doce",
-                                       "title_formatted":  "Mordida Doce  \u003c:Ar:1389703277532287066\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#00ff00",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686252910411856/1000.png?ex=681ea3e5\u0026is=681d5265\u0026hm=8bd4469dd4f03817d9731048b3dcc642e432a3afac08417afd98b000b1033f46\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "11,309",
-                                                     "health":  "53,645",
-                                                     "power":  "23,928"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "ALTA DE AÇÚCAR",
-                                                                 "description":  "[HAB 1]: Ganhe REGENERAÇÃO a cada 3 segundos enquanto EMPANTURRADA. **Ela será removida ao ser NOCAUTEADA.**\n\n[HAB 2]: **Uma vez por luta,** ganhe ACELERAÇÃO permanente quando alcançar 3 camadas de REGENERAÇÃO."
-                                                             },
-                                       "marquee_ability":  "Doce Vitória",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Reat. Especial",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                   },
-                                   {
-                                       "name":  "Criança Selvagem",
-                                       "title_formatted":  "Criança Selvagem  \u003c:Trevas:1389703142848991364\u003e \u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#800080",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686311647449179/1000.png?ex=681ea3f3\u0026is=681d5273\u0026hm=44a604050a12cb53d10cbab709bda328f0e5c1cb3063e52cc32246987f7f37f7\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "12,999",
-                                                     "health":  "48,269",
-                                                     "power":  "24,866"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "DE UMA BOCADA SÓ",
-                                                                 "description":  "[HAB 1]: **Enquanto Hungern não estiver EMPANTURRADO, ARREMESSOS de Umbrella** têm 20% de chance de DRENAR 15% do MED. DE BLOCKBUSTER do oponente.\n\n[HAB 2]: Inflige 2 camadas de GOSMA por 15 s **quando o oponente é NOCAUTEADO.**"
-                                                             },
-                                       "marquee_ability":  "Doce Vitória",
-                                       "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Pitada de Raiva",
-                                        "title_formatted":  "Pitada de Raiva  \u003c:Luz:1389703315167907902\u003e \u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Luz",
-                                        "color_hex":  "#ffff00",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686131460014381/1000.png?ex=681ea3c8\u0026is=681d5248\u0026hm=597ef05091a03cf7d88012ee3c16c631f4f613183359c828f3a6981f2842ed8b\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "12,135",
-                                                      "health":  "44,813",
-                                                      "power":  "23,164"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "PIRRAÇA",
-                                                                  "description":  "[HAB 1]: **Uma vez por luta,** ganhe BENÇÃO e 3 camadas de FÚRIA por 10 segundos quando sua VIDA cair abaixo de 35%.\n\n[HAB 2]: **ARREMESSOS** têm 50% de chance de infligir SANGRAMENTO por 10 segundos **quando Umbrella estiver se beneficiando de FÚRIA.**"
-                                                              },
-                                        "marquee_ability":  "Doce Vitória",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Lente Projetora, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                    },
-                                    {
-                                        "name":  "Pitada de Raiva",
-                                        "title_formatted":  "Vento Ventania \u003c:Ar:1389703277532287066\u003e \u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Ar",
-                                        "color_hex":  "#00ff00",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018188998606864/icon-umbrella.png?ex=68a7877a\u0026is=68a635fa\u0026hm=b8202d6c739697004e500581343f646227c335cdf83948bdac93df057ed9e20d\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361686155317481715/1000.png?ex=681ea3ce\u0026is=681d524e\u0026hm=60fd0cf26826edaf07bb19aed4aedaa360579e7c3437fb422c1965541d2e71f8\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "10,522",
-                                                      "health":  "49,805",
-                                                      "power":  "22,242"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "VENTOS PREDOMINANTES",
-                                                                  "description":  "[HAB 1]: **ATAQUES DE ARRANCADA** têm 100% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 10 segundos.\n\n[HAB 2]: Ganhe 50% no MEDIDOR DE BLOCKBUSTER **ao derrotar um oponente cujos BLOCKBUSTERS estejam DESATIVADOS.**"
-                                                              },
-                                        "marquee_ability":  "Doce Vitória",
-                                        "recommended_build":  "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Hora do Rango, \u003c:Blockbuster:1434999898385944606\u003e Trava-Língua, \u003c:Blockbuster:1434999898385944606\u003e Refluxo Ácido, \u003c:GolpeEspecial:1434999859768987748\u003e Bolha Boba, \u003c:GolpeEspecial:1434999859768987748\u003e Moedor de Sal"
-                                    }
-                                ]
-                 }
+    "character": "Umbrella",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Desejo de Morte",
+                "title_formatted": "Desejo de Morte - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686463208489111/1000.png?ex=681ea417&is=681d5297&hm=822f37fc02797bd2a3c49440294358153db7bd5882b7d075859b73aacb180998&"
+                },
+                "stats": {
+                    "attack": "13,152",
+                    "health": "56,045",
+                    "power": "26,578"
+                },
+                "signature_ability": {
+                    "name": "CICLO VORAZ",
+                    "description": "[HAB 1]: **Todo 7º GOLPE DE COMBO que acerta Umbrella ou o oponente** TRANSFERE até 3 EFEITO(S) POSITIVO(S) do inimigo para ela e inflige FEITIÇO por 10 s.\n\n[HAB 2]: **Uma vez por luta, ao ser derrotada**, REVIVE com 25% de VIDA e REVIVE todos os aliados derrotados com 25% de VIDA."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Soprando Bolhas, Moedor de Sal,, Explosão"
+            },
+            {
+                "name": "Campeã dos Campeões",
+                "title_formatted": "Campeã dos Campeões - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686541339988061/1000.png?ex=681ea42a&is=681d52aa&hm=7cad43875feb2050f9228eb0dda6f5e67b0765f3b5929b089fd4e1ab4a89c96e&"
+                },
+                "stats": {
+                    "attack": "11,981",
+                    "health": "68,468",
+                    "power": "27,641"
+                },
+                "signature_ability": {
+                    "name": "VÍNCULO DE BATALHA",
+                    "description": "[HAB 1]: **Enquanto Umbrella estiver viva**, o lutador ativo ganha 1 camada de BENÇÃO e de INABALÁVEL por 15 s a cada 10 GOLPES DE COMBO.\n\n[HAB 2]: **Enquanto Umbrella estiver viva**, aumenta o ATAQUE de todos os aliados em 4% da VIDA ATUAL do lutador para cada camada de BÊNÇÃO no lutador."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Lente Projetora, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Artista Ilusionista",
+                "title_formatted": "Artista Ilusionista - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686645958639757/1000.png?ex=681ea443&is=681d52c3&hm=b49788b3bbe60447855081ca5b7a3b754796e7118a37c00bfab86255d3407916&"
+                },
+                "stats": {
+                    "attack": "13,152",
+                    "health": "62,247",
+                    "power": "27,799"
+                },
+                "signature_ability": {
+                    "name": "ILUSÕES DE GRANDEZA",
+                    "description": "[HAB 1]: **BLOQUEIOS no tempo certo tem** 100% de chance cada de dar 1 camada de ESQUIVA, BARREIRA E BÊNÇÃO.\n\n[HAB 2]: Tem 50% de **chance de converter 3 EF. POSITIVO(S) em FÚRIA permanente ao usar BLOCKBUSTER enquanto FAMINTO**. Ganha PRECISÃO permanente ao se beneficiar de 5 camadas de FÚRIA."
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Ganho Medidor",
+                "recommended_arsenal": "Trava-Língua, , Tempo Ruim,  Refluxo Ácido, Bolha Boba, Lambe e Vai"
+            },
+            {
+                "name": "Angelical",
+                "title_formatted": "Angelical - Água - Diamante",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1389363446662955051/a936faee-b424-4c46-a805-7a0ee98eea35_1.webp?ex=6864590a&is=6863078a&hm=7480214913ae924f2ba8b1e4ec29707327dcec83ef5142aca7fa7bcbf8747378&"
+                },
+                "stats": {
+                    "attack": "11,981",
+                    "health": "68,468",
+                    "power": "27,641"
+                },
+                "signature_ability": {
+                    "name": "COLHEITA DE PODER/SIFÃO",
+                    "description": "[HAB 1]: **Ao usar a ASSITÊNCIA de Umbrella**, o próximo lutador ganha 3 acúmulos de FÚRIA, 3 camadas de MIASMA e IMUNIDADE por 20 segundos cada, **ao custo de até 25% da VIDA MÁXIMA da Umbrella.**\n\n[HAB 2]: **Quando a Umbrella ENTRA NA ASSISTÊNCIA**, ganha 3 acúmulos de ESQUIVA, 3 acúmulos de REGENERAÇÃO e IMUNIDADE por 15 segundos cada e DRENA 35% do MEDIDOR DE BLOCKBUSTER do oponente."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "Maruja dos Sete Mares",
+                "title_formatted": "Maruja dos Sete Mares - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#000000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686341909479505/1000.png?ex=681ea3fa&is=681d527a&hm=e1f47dd352bbe7fd06dd00fea5799338df3e9f1b70d14a3e7f79c5cc4f07cfc0&"
+                },
+                "stats": {
+                    "attack": "11,117",
+                    "health": "63,572",
+                    "power": "25,651"
+                },
+                "signature_ability": {
+                    "name": "ESCOLHIDA PELO OCEANO",
+                    "description": "[HAB 1]: **GOLPES com a Poça** concedem IMUNIDADE por 15 s.\n\n[HAB 2]: **Enquanto estiver com IMUNIDADE**, ataques de BOLHA causam 50% de dano extra. DESATIVA BLOCKBUSTERS e inflige QUEBRA DE ARMADURA por 15 s cada (também se aplica a golpes bloqueados)."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Visitante do Espaço",
+                "title_formatted": "Visitante do Espaço - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686368669007902/1000.png?ex=681ea401&is=681d5281&hm=04cb152c79dbd8187c06c234f3b322e3bf077e30ecbcb7fc1b0efcfb26b9ae9e&"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "57,812",
+                    "power": "25,015"
+                },
+                "signature_ability": {
+                    "name": "AUTÓPSIA ALIENÍGENA",
+                    "description": "**Enquanto FAMINTO,** inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 50%. **A DESTRUIÇÃO é removida se a Umbrella SAI DO CAMPO DE BATALHA ou for derrotada.**\n\n**Ao derrotar um inimigo,** ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 15 s. [Efeitos Positivos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Space_Case)"
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Saqueadora do Palácio",
+                "title_formatted": "Saqueadora do Palácio - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686397936730464/1000.png?ex=681ea408&is=681d5288&hm=8883ee39eb61bf34505c9852aaf8e8b9d5c07df49668a494d0b8f22407cbb21b&"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "57,812",
+                    "power": "25,015"
+                },
+                "signature_ability": {
+                    "name": "PARCEIROS NO CRIME",
+                    "description": "[HAB 1]: Ganhe ESQUIVA por 7 s e conceda 3% de VIDA a todos os aliados por 5 s **enquanto não sofrer nenhum GOLPE (incluindo golpes bloqueados).**\n\n[HAB 2]: A cada 10 GOLPES DE COMBO **enquanto está com um EF. POS.,** transfere 1 EF. POS. do oponente para você e FÚRIA aos aliados por 30 s."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Wunderkind",
+                "title_formatted": "Wunderkind - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686419202113667/1000.png?ex=681ea40d&is=681d528d&hm=8b53caac60015115122a572aa7d989fc140cec2c38befa4824c28db5755093c4&"
+                },
+                "stats": {
+                    "attack": "14,036",
+                    "health": "52,032",
+                    "power": "26,832"
+                },
+                "signature_ability": {
+                    "name": "CHAMA ÔMEGA",
+                    "description": "[HAB 1]: 50% de chance de infligir OSCILAÇÃO DE ENERGIA e receber BARREIRA por 15 segundos cada **ao GOLPEAR com BLOCKBUSTER** (também se aplica a golpes bloqueados).\n\n[HAB 2]: **Enquanto Umbrella estiver viva**, o lutador ativo DRENA 5% da VIDA do oponente a cada 3 segundos enquanto ele estiver sofrendo 3 ou mais camadas de OSCILAÇÃO DE ENERGIA."
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Lente Projetora, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Psicriança",
+                "title_formatted": "Psicriança - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686440483881000/1000.png?ex=681ea412&is=681d5292&hm=8d37d5112aa210e7d10d46ccf6dca85626bd504ca5c7327d771561f0a81ebc3e&"
+                },
+                "stats": {
+                    "attack": "14,036",
+                    "health": "52,032",
+                    "power": "26,832"
+                },
+                "signature_ability": {
+                    "name": "MENTE SOBRE MATÉRIA",
+                    "description": "[HAB 1]: **Ao GOLPEAR um oponente atacando,** ganhe OLHO-MORTO e inflija POLARIDADE INVERSA por 15 segundos cada.\n\n[HAB 2]: 100% de **chance de zerar o tempo de todos os EF. POS. da Umbrella e EF. NEG. do oponente ao QUICAR na parede,** exceto ATORD. e DESTRUIÇÃO."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Rosinha",
+                "title_formatted": "Rosinha - Fogo - Prata",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686184933326968/1000.png?ex=681ea3d5&is=681d5255&hm=3c5df3866337d339095eeb59d99ee22225333cc0bb3ce98a68bea198818a8f32&"
+                },
+                "stats": {
+                    "attack": "9,620",
+                    "health": "59,079",
+                    "power": "23,002"
+                },
+                "signature_ability": {
+                    "name": "NOSSOS CORAÇÕES PERDURAM",
+                    "description": "[HAB 1]: **Enquanto Umbrella estiver viva**, os aliados ganham 1 camada de BARREIRA e ESPINHOS cada, por 10 s, para cada 25% de VIDA perdidos.\n\n[HAB 2]: **Enquanto Umbrella estiver viva, ela anula todos os EF. NEGATIVOS dos aliados a cada 20 segundos.**"
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Soprando Bolhas, Moedor de Sal,, Explosão"
+            },
+            {
+                "name": "Pirata de Poça",
+                "title_formatted": "Pirata de Poça - Água - Prata",
+                "element": "Água",
+                "color_hex": "#0080ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686207763058890/1000.png?ex=681ea3da&is=681d525a&hm=4985a9f7fa2743205c26683602ed724f98d018c1eab5d10f4dfaf6a015b615a0&"
+                },
+                "stats": {
+                    "attack": "11,309",
+                    "health": "53,645",
+                    "power": "23,928"
+                },
+                "signature_ability": {
+                    "name": "SAQUE E DIVERSÃO",
+                    "description": "[HAB 1]: O oponente perde 1 EF. POSITIVO a cada 2 segundos **enquanto estiver perto de uma POÇA.**\n\n[HAB 2]: **Com Hungern EMPANTURRADO**, a Umbrella ganha 5% de VIDA sempre que um oponente perder um EF. POSITIVO."
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Mordida Doce",
+                "title_formatted": "Mordida Doce - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686252910411856/1000.png?ex=681ea3e5&is=681d5265&hm=8bd4469dd4f03817d9731048b3dcc642e432a3afac08417afd98b000b1033f46&"
+                },
+                "stats": {
+                    "attack": "11,309",
+                    "health": "53,645",
+                    "power": "23,928"
+                },
+                "signature_ability": {
+                    "name": "ALTA DE AÇÚCAR",
+                    "description": "[HAB 1]: Ganhe REGENERAÇÃO a cada 3 segundos enquanto EMPANTURRADA. **Ela será removida ao ser NOCAUTEADA.**\n\n[HAB 2]: **Uma vez por luta,** ganhe ACELERAÇÃO permanente quando alcançar 3 camadas de REGENERAÇÃO."
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Criança Selvagem",
+                "title_formatted": "Criança Selvagem - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686311647449179/1000.png?ex=681ea3f3&is=681d5273&hm=44a604050a12cb53d10cbab709bda328f0e5c1cb3063e52cc32246987f7f37f7&"
+                },
+                "stats": {
+                    "attack": "12,999",
+                    "health": "48,269",
+                    "power": "24,866"
+                },
+                "signature_ability": {
+                    "name": "DE UMA BOCADA SÓ",
+                    "description": "[HAB 1]: **Enquanto Hungern não estiver EMPANTURRADO, ARREMESSOS de Umbrella** têm 20% de chance de DRENAR 15% do MED. DE BLOCKBUSTER do oponente.\n\n[HAB 2]: Inflige 2 camadas de GOSMA por 15 s **quando o oponente é NOCAUTEADO.**"
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Pitada de Raiva",
+                "title_formatted": "Pitada de Raiva - Luz - Bronze",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686131460014381/1000.png?ex=681ea3c8&is=681d5248&hm=597ef05091a03cf7d88012ee3c16c631f4f613183359c828f3a6981f2842ed8b&"
+                },
+                "stats": {
+                    "attack": "12,135",
+                    "health": "44,813",
+                    "power": "23,164"
+                },
+                "signature_ability": {
+                    "name": "PIRRAÇA",
+                    "description": "[HAB 1]: **Uma vez por luta,** ganhe BENÇÃO e 3 camadas de FÚRIA por 10 segundos quando sua VIDA cair abaixo de 35%.\n\n[HAB 2]: **ARREMESSOS** têm 50% de chance de infligir SANGRAMENTO por 10 segundos **quando Umbrella estiver se beneficiando de FÚRIA.**"
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Lente Projetora, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Vento Ventania",
+                "title_formatted": "Vento Ventania - Ar - Bronze",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361686155317481715/1000.png?ex=681ea3ce&is=681d524e&hm=60fd0cf26826edaf07bb19aed4aedaa360579e7c3437fb422c1965541d2e71f8&"
+                },
+                "stats": {
+                    "attack": "10,522",
+                    "health": "49,805",
+                    "power": "22,242"
+                },
+                "signature_ability": {
+                    "name": "VENTOS PREDOMINANTES",
+                    "description": "[HAB 1]: **ATAQUES DE ARRANCADA** têm 100% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 10 segundos.\n\n[HAB 2]: Ganhe 50% no MEDIDOR DE BLOCKBUSTER **ao derrotar um oponente cujos BLOCKBUSTERS estejam DESATIVADOS.**"
+                },
+                "marquee_ability": "Doce Vitória",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            }
+        ]
+    }
 }

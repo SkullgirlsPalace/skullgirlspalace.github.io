@@ -40,9 +40,10 @@ export function render(charKey, initialTab = 'builds') {
 
     return `
         <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
-            <div class="character-detail-header">
+            <!-- Header Content -->
+            <div class="character-detail-header fade-in">
                 <button class="btn-back pill" onclick="navigateTo('characters')">
-                    — Voltar
+                    <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                 </button>
                 
                 <div class="char-title-centered">

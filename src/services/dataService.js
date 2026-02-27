@@ -4,7 +4,7 @@
 // =====================================================
 
 import { CHARACTER_FILES } from '../config/constants.js';
-import { setCharacters, setTierData, setCatalysts, setStatistics, loadTierDataFromStorage } from '../state/store.js';
+import { setCharacters, setTierData, setCatalysts, setStatistics } from '../state/store.js';
 
 // Cache for loaded data
 const cache = {
@@ -96,8 +96,6 @@ export async function loadTierData() {
 
         cache.tierData = data;
 
-        // Merge with localStorage persisted data
-        loadTierDataFromStorage();
         setTierData(data);
 
         return data;

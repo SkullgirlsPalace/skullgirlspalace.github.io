@@ -1,369 +1,369 @@
 {
-    "character":  "Ms.Fortune",
-    "version":  "1.0",
-    "variants":  {
-                     "diamante":  [
-                                      {
-                                          "name":  "Stalker de Vento",
-                                          "title_formatted":  "\u003e Stalker de Vento \u003c:Ar:1389703277532287066\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Ar",
-                                          "color_hex":  "#076314",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682938525389010/1000.png?ex=681df80f\u0026is=681ca68f\u0026hm=ace0fc33335736883128e4e4363b3ae1ba87297dc65e7654dbaab3cb56827d37\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "12,384",
-                                                        "health":  "68,506",
-                                                        "power":  "28,125"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "PERSEGUINDO CABEÇAS",
-                                                                    "description":  "[HAB 1]: DRENA 5% do MEDIDOR DE BLOCKBUSTER por segundo **enquanto o oponente estiver perto da cabeça da Ms. Fortune.**\n\n[HAB 2]: Inflinge QUIETUS, MARCA DA MORTE, DESATIVA ASSISTÊNCIA, e DESTRUIÇÃO por 15 segundos **cada um quando a SAÚDE do oponente fica abaixo de 35%**. **DESTRUIÇÃO é removida quando o oponente usa um BLOCKBUSTER.**"
-                                                                },
-                                          "marquee_ability":  "BUP",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                      },
-                                      {
-                                          "name":  "Soldado de Infantaria",
-                                          "title_formatted":  "\u003e Soldado de Infantaria \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#6426a8",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682981105696849/1000.png?ex=681df819\u0026is=681ca699\u0026hm=4a369f59d4ec24730506db8db80fee39c59986f5d0653b3810c97a8cbad0bce8\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "12,384",
-                                                        "health":  "68,506",
-                                                        "power":  "28,125"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "OLHO NO ALVO",
-                                                                    "description":  "[HAB 1]: **GOLPES NA CABEÇA** têm uma chance de 100% de dar OLHO-MORTO e 1 EF. POS. aleatório por 7 segundos cada. Também remove 1 EF. NEG. de **si mesma.**\n\n[HAB 2]: Cause 10% de dano extra por cada EF. POS. **aplicado a um dos lutadores**"
-                                                                },
-                                          "marquee_ability":  "BUP",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e NHAM NHAM NHAM, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                      },
-                                      {
-                                          "name":  "Fúria Felpuda",
-                                          "title_formatted":  "\u003e Fúria Felpuda \u003c:Fogo:1389703188525092934\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Fogo",
-                                          "color_hex":  "#ef2e2d",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361683012957376714/1000.png?ex=681df821\u0026is=681ca6a1\u0026hm=d12fea6dd7daec69c549678fcb662f1d1f9c9a1d4ec3d9fd26fc30f627e5455b\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "14,592",
-                                                        "health":  "62,247",
-                                                        "power":  "29,501"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "CORTA E QUEIMA",
-                                                                    "description":  "[HAB 1]: Ao GOLPEAR, 20% de chance de infligir SANGR. e ganhar FÚRIA por 10 s cada **enquanto a % de vida da Ms. Fortune for maior que a do oponente.**\n\n[HAB 2]: Remova 1 EF. POS. de um oponente próximo a cada 1 s enquanto **tiver 3 ou mais camadas de FÚRIA.**"
-                                                                },
-                                          "marquee_ability":  "BLÉÉÉ",
-                                          "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                      },
-                                      {
-                                          "name":  "Biscoito da Sorte",
-                                          "title_formatted":  "\u003e Biscoito da Sorte \u003c:Trevas:1389703142848991364\u003e\u003c:diamante:1407839264779141140\u003e",
-                                          "element":  "Trevas",
-                                          "color_hex":  "#6426a8",
-                                          "images":  {
-                                                         "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                         "portrait_url":  "https://cdn.discordapp.com/attachments/1389701683113754647/1400823436086870016/2cdd650b-d7d3-4b9c-8cbd-acc3ea2c6ba6.webp?ex=688e09fd\u0026is=688cb87d\u0026hm=c625eb470e068ca652d1dfead0efa454ec3e9e8a92667285ef864d600fba74a0\u0026"
-                                                     },
-                                          "stats":  {
-                                                        "attack":  "16,743",
-                                                        "health":  "56,045",
-                                                        "power":  "30,821"
-                                                    },
-                                          "signature_ability":  {
-                                                                    "name":  "Inversão de Sorte",
-                                                                    "description":  "[HAB 1]: **Ao enfrentar o mesmo oponente por 10 s, Ms . Fortune sofre MALDIÇÃO por 10 s,** mas ganha PRECISÃO permanente, **ignorando todos os efeitos de prevenção de EF. POS.**\n\n[HAB 2]: Quando MALDIÇÃO é **aplicada a MS. Fortune**, ganha 1 camada de ESQUIVA e ACELERAÇÃO por 30 s, **ignorando todos os efeitos de prevenção de EF. POS.**"
-                                                                },
-                                          "marquee_ability":  "BUP",
-                                          "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                          "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e NHAM NHAM NHAM, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                      }
-                                  ],
-                     "ouro":  [
-                                  {
-                                      "name":  "Agora e Sempre",
-                                      "title_formatted":  "\u003e Agora e Sempre \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#dfd173",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682744538693712/1000.png?ex=681df7e1\u0026is=681ca661\u0026hm=df6d4173697d2f8522cfeddde081b375c883c4390e51a032f4185c80aa60f354\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,501",
-                                                    "health":  "63,610",
-                                                    "power":  "26,117"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "SETE VIDAS",
-                                                                "description":  "[HAB 1]: Ganhe RESISTÊNCIA FINAL por 10 segundos e 5 camadas de PRECISÃO para cada **10% de VIDA PERDIDA.**\n\n[HAB 2]: O oponente sofre MARCA DA MORTE por 15 segundos e ATORDOAMENTO por 4 segundos **quando a RESISTÊNCIA FINAL expira.**"
-                                                            },
-                                      "marquee_ability":  "BLÉÉÉ",
-                                      "recommended_build":  "VD%, Defesa, Resistência e ATQ%",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Cinco de desmembro, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada Felina, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato, \u003c:GolpeEspecial:1434999859768987748\u003e Explosão"
-                                  },
-                                  {
-                                      "name":  "Miau e Ordem",
-                                      "title_formatted":  "\u003e Miau e Ordem \u003c:Ar:1389703277532287066\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Ar",
-                                      "color_hex":  "#076314",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682812754726973/1000.png?ex=681df7f1\u0026is=681ca671\u0026hm=fcfb3f8d21c7a09ec723a030fdaa8ef06fd14f0baea19444aba4c9f6b6e23a83\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "13,556",
-                                                    "health":  "57,812",
-                                                    "power":  "27,413"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "DO CO-MIAU-ÇO",
-                                                                "description":  "[HAB 1]: CRÍTICOS têm 50% de chance de **reiniciar o tempo de todos os EF. NEGATIVOS do oponente**, exceto ATORD. e DESTRUIÇÃO.\n\n[HAB 2]: GOLPES que tiram **ao menos 5% da VIDA MÁX. do oponente ** colocam os G. ESPECIAIS dele em reativação e DESATIVAM os BLOCKBUSTERS por 15 s."
-                                                            },
-                                      "marquee_ability":  "BUP",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                  },
-                                  {
-                                      "name":  "Ladra de Tempo",
-                                      "title_formatted":  "\u003e Ladra de Tempo \u003c:Fogo:1389703188525092934\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Fogo",
-                                      "color_hex":  "#ef2e2d",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682712896999434/1000.png?ex=681df7d9\u0026is=681ca659\u0026hm=bf1df4ee91aa9408738a88de03ec10872e0b3578a99e938e9ecdcb2931569cbd\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "11,501",
-                                                    "health":  "63,610",
-                                                    "power":  "26,117"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ZOOMIES!",
-                                                                "description":  "[HAB 1]: A Ms. Fortune inflige MARCA DA MORTE por 10 segundos e **causa dano igual a 100% do seu ATAQUE quando joga a cabeça.**\n\n[HAB 2]: 100% do dano sofrido enquanto estiver no **MODO SEM CABEÇA é recuperado quando a Ms. fortune recupera a cabeça.**"
-                                                            },
-                                      "marquee_ability":  "BUP",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                  },
-                                  {
-                                      "name":  "Agente Trapaçeira",
-                                      "title_formatted":  "\u003e Agente Trapaçeira \u003c:Trevas:1389703142848991364\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Trevas",
-                                      "color_hex":  "#6426a8",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682837970878545/1000.png?ex=681df7f7\u0026is=681ca677\u0026hm=25f3fd418836003fa531f755ad1406953ff7057081183e7201525ad49c93245a\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "15,533",
-                                                    "health":  "52,032",
-                                                    "power":  "28,801"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "ATAQUE-SURPRESA",
-                                                                "description":  "[HAB 1]: Cada **GOLPE NA CABEÇA** tem 25% de **chance de TRANSFERIR 1 EF. POS. do opon. e converter em 3 cam. de PRECISÃO.**\n\n[HC 2]: **GOLPES PRECISOS** dão ESQUIVA e infligem MARCA DA MORTE por 10 s. Cada camada de ESQUIVA é removida após esquivar-se de um GOLPE."
-                                                            },
-                                      "marquee_ability":  "BUP",
-                                      "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Febre de gato, , \u003c:GolpeEspecial:1434999859768987748\u003e Gato sonolento (Provocar), , \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                  },
-                                  {
-                                      "name":  "Corta e Afoga",
-                                      "title_formatted":  "\u003e Corta e Afoga \u003c:Agua:1389703224210231437\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Água",
-                                      "color_hex":  "#1095d5",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682906912915497/1000.png?ex=681df807\u0026is=681ca687\u0026hm=57f3772060326f77a32bd9599d95b097329f46f98dbe26c5a0d1e10d783f6360\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "15,533",
-                                                    "health":  "52,032",
-                                                    "power":  "28,801"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "DANO DE ÁREA",
-                                                                "description":  "[HAB 1]: **BLOQUEIOS no tempo certo contra ataques comuns** dão 5 camadas de PRECISÃO e infligem INPACITAÇÃO e QUEBRA DE ARMAD. por 10 s.\n\n[HAB 2]: **CRÍTICOS com a CABEÇA da Ms. Fortune** tiram 3% a mais da VIDA MÁX. do oponente se ele estiver sofrendo INCAPACITAÇÃO."
-                                                            },
-                                      "marquee_ability":  "BUP",
-                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                  },
-                                  {
-                                      "name":  "Terripeluda",
-                                      "title_formatted":  "\u003e Terripeluda \u003c:Luz:1389703315167907902\u003e\u003c:ouro:1407839155785826306\u003e",
-                                      "element":  "Luz",
-                                      "color_hex":  "#dfd173",
-                                      "images":  {
-                                                     "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                     "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682779384975360/1000.png?ex=681df7e9\u0026is=681ca669\u0026hm=b7f56a371a84afb894c055ca7b3be4e1c90fc86b0a503a2c102d7fc07136b0f2\u0026"
-                                                 },
-                                      "stats":  {
-                                                    "attack":  "13,556",
-                                                    "health":  "57,812",
-                                                    "power":  "27,413"
-                                                },
-                                      "signature_ability":  {
-                                                                "name":  "NADA PESSOAL",
-                                                                "description":  "[HAB 1]: **GOLPES DE ATAQUE DE CARGA** concedem IMUNIDADE por 10 s e 5 camadas de PRECISÃO.\n\n[HAB 2]: **Enquanto estiver com IMUNIDADE, ACERTOS DE GOLPES ESPECIAIS são INDEFENSÁVEIS.** Enquanto estiver com PRECISÃO, eles infligem POLARIDADE INVERSA por 10 s."
-                                                            },
-                                      "marquee_ability":  "BUP",
-                                      "recommended_build":  "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                                      "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Febre de gato, , \u003c:GolpeEspecial:1434999859768987748\u003e Gato sonolento (Provocar), , \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                  }
-                              ],
-                     "prata":  [
-                                   {
-                                       "name":  "Gata Negra",
-                                       "title_formatted":  "\u003e Gata Negra \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#6426a8",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682686317559878/1000.png?ex=681df7d3\u0026is=681ca653\u0026hm=afdcb41c727c8b175d7a9b7241513327691e8928c25623687550d9d8fd08efb1\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "14,458",
-                                                     "health":  "48,327",
-                                                     "power":  "26,801"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "NADA PESSOAL",
-                                                                 "description":  "[HAB 1]: Depois de **enfrentar a Ms. Fortune por 10 segundos, o oponente sofre MARCA DA MORTE e MALDIÇÃO.**\n\n[HAB 2]: **GOLPES COM A CABEÇA** têm 10% de chance de derrotar oponentes instantaneamente se estiverem com MARCA DA MORTE e menos de 50% de VIDA."
-                                                             },
-                                       "marquee_ability":  "BUP",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico\"",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e NHAM NHAM NHAM, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                   },
-                                   {
-                                       "name":  "Sra. Jurada",
-                                       "title_formatted":  "\u003e Sra. Jurada \u003c:Ar:1389703277532287066\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Ar",
-                                       "color_hex":  "#076314",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682640729804940/1000.png?ex=681df7c8\u0026is=681ca648\u0026hm=36c45dbefed546403b39545b2631a719335ec19ca5595b50ed70ec1d6e04df8d\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "12,538",
-                                                     "health":  "53,645",
-                                                     "power":  "25,380"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "NEGADO",
-                                                                 "description":  "[HAB 1]: Ao **GOLPEAR um oponente que estiver atacando**, remova 1 EFEITO POSITIVO do oponente e ganhe 5 acúmulo(s) de PRECISÃO.\n\n[HAB 2]: GOLPES DE PRECISÃO têm **100% de chance de ignorar a DEFESA e a ARMADURA do oponente.**"
-                                                             },
-                                       "marquee_ability":  "BUP",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Febre de gato, , \u003c:GolpeEspecial:1434999859768987748\u003e Gato sonolento (Provocar), \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                   },
-                                   {
-                                       "name":  "Sorte Felina",
-                                       "title_formatted":  "\u003e Sorte Felina \u003c:Luz:1389703315167907902\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Luz",
-                                       "color_hex":  "#dfd173",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682615064858655/1000.png?ex=681df7c2\u0026is=681ca642\u0026hm=1c1a170af39e03b477b92f2bdfe475ebf2e4db1344e8229de253ede7f23babbc\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "10,616",
-                                                     "health":  "59,079",
-                                                     "power":  "24,250"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "JACKPOT",
-                                                                 "description":  "[HAB 1]: **Ganhe 3 camada(s) de PRECISÃO a cada 7 segundos.**\n\n[HAB 2]: 2% de chance de ganhar IMUNIDADE, INVENCIB., RESIST. FINAL e INABALÁVEL por 15 seg **quando qualquer lutador acertar um GOLPE CRÍTICO.**"
-                                                             },
-                                       "marquee_ability":  "BUP",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                   },
-                                   {
-                                       "name":  "Remendada",
-                                       "title_formatted":  "\u003e Remendada \u003c:Trevas:1389703142848991364\u003e\u003c:prata:1407839105169227957\u003e",
-                                       "element":  "Trevas",
-                                       "color_hex":  "#400080",
-                                       "images":  {
-                                                      "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                      "portrait_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1423025883148583103/Patched_Up.png?ex=68decfa1\u0026is=68dd7e21\u0026hm=8e257d6c8ed23cc89992d17d60046b46e19f14d397991d6eda8b483e56efcf73\u0026"
-                                                  },
-                                       "stats":  {
-                                                     "attack":  "12,538",
-                                                     "health":  "53,645",
-                                                     "power":  "25,380"
-                                                 },
-                                       "signature_ability":  {
-                                                                 "name":  "ESTÁ VIVA!",
-                                                                 "description":  "[HAB 1]: Tem 15% de chance, **quando qualquer um dos Lutadores for GOLPEADO** (inclui golpes bloqueados), de transferir 1 EF. POS. do oponente para a Ms. Fortune.\n\n[HAB 2]: **Ao se beneficiar de pelo menos 3 acúmulos de qualquer EF POS,** GOLPES (incluindo golpes bloqueados) infligem DEFINHAR E MALDIÇÃO por 10 segundos cada."
-                                                             },
-                                       "marquee_ability":  "BUP",
-                                       "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                       "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                   }
-                               ],
-                     "bronze":  [
-                                    {
-                                        "name":  "Brincadeirinha",
-                                        "title_formatted":  "\u003e Brincadeirinha \u003c:Agua:1389703224210231437\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Água",
-                                        "color_hex":  "#1095d5",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682518692204565/1000.png?ex=681df7ab\u0026is=681ca62b\u0026hm=06403fdf8f177e1476a8790889a7fe6ef9b32b452dc4ec4f2c5a2dc93395309f\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "11,674",
-                                                      "health":  "49,805",
-                                                      "power":  "23,603"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "AGILIDADE FELINA",
-                                                                  "description":  "[HAB 1]: Ao sofrer um EFEITO NEGATIVO, tem 50% de chance de **converter imediatamente esse efeito** em uma camada de PRECISÃO.\n\n[HAB 2]: 15% de chance de ganhar 1 acúmulo de ESQUIVA e ACELERAÇÃO por 10 s **quando qualquer lutador for atingido por um GOLPE que não seja projétil.**"
-                                                              },
-                                        "marquee_ability":  [
-                                                                "\u003e BLÉÉ (Defesa)",
-                                                                "\u003e BUP (Ataque)"
-                                                            ],
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                    },
-                                    {
-                                        "name":  "Gata do Inferno",
-                                        "title_formatted":  "\u003e Gata do Inferno \u003c:Fogo:1389703188525092934\u003e\u003c:bronze:1407839009664798801\u003e",
-                                        "element":  "Fogo",
-                                        "color_hex":  "#ef2e2d",
-                                        "images":  {
-                                                       "icon_url":  "https://cdn.discordapp.com/attachments/1389702388683899052/1406018064931098784/Icon-Ms._Fortune.png?ex=68a7875d\u0026is=68a635dd\u0026hm=0be8eb03e0286e7c5c454ab06c8c108da2ff1a3c6685fb2211c0fba1fbbcc249\u0026",
-                                                       "portrait_url":  "https://cdn.discordapp.com/attachments/1360911582938534114/1361682590901211217/1000.png?ex=681df7bc\u0026is=681ca63c\u0026hm=b53bf1f9a01c6edc73817bbefb74d88a5c0e5c178ee27975e6edf5c1a44351db\u0026"
-                                                   },
-                                        "stats":  {
-                                                      "attack":  "13,517",
-                                                      "health":  "44,813",
-                                                      "power":  "24,797"
-                                                  },
-                                        "signature_ability":  {
-                                                                  "name":  "PURRR-GATÓRIO",
-                                                                  "description":  "[HAB 1]: Ganhe FÚRIA após cada 8 s com VIDA acima de 50%. **A FÚRIA é removida quando a VIDA cai abaixo de 50%.**\n\n[HAB 2]: Ganhe 5 camadas de PRECISÃO **ao derrotar um oponente se beneficiando de FÚRIA.**"
-                                                              },
-                                        "marquee_ability":  "BLÉÉÉ",
-                                        "recommended_build":  "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                                        "recommended_arsenal":  "\u003c:Blockbuster:1434999898385944606\u003e Patadas, \u003c:Blockbuster:1434999898385944606\u003e Febre de gato, \u003c:GolpeEspecial:1434999859768987748\u003e Deslisada felina, \u003c:GolpeEspecial:1434999859768987748\u003e Fibrosa, \u003c:GolpeEspecial:1434999859768987748\u003e El Gato"
-                                    }
-                                ]
-                 }
+    "character": "Ms.Fortune",
+    "version": "1.0",
+    "variants": {
+        "diamante": [
+            {
+                "name": "Stalker de Vento",
+                "title_formatted": "Stalker de Vento - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682938525389010/1000.png?ex=681df80f&is=681ca68f&hm=ace0fc33335736883128e4e4363b3ae1ba87297dc65e7654dbaab3cb56827d37&"
+                },
+                "stats": {
+                    "attack": "12,384",
+                    "health": "68,506",
+                    "power": "28,125"
+                },
+                "signature_ability": {
+                    "name": "PERSEGUINDO CABEÇAS",
+                    "description": "[HAB 1]: DRENA 5% do MEDIDOR DE BLOCKBUSTER por segundo **enquanto o oponente estiver perto da cabeça da Ms. Fortune.**\n\n[HAB 2]: Inflinge QUIETUS, MARCA DA MORTE, DESATIVA ASSISTÊNCIA, e DESTRUIÇÃO por 15 segundos **cada um quando a SAÚDE do oponente fica abaixo de 35%**. **DESTRUIÇÃO é removida quando o oponente usa um BLOCKBUSTER.**"
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Soldado de Infantaria",
+                "title_formatted": "Soldado de Infantaria - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682981105696849/1000.png?ex=681df819&is=681ca699&hm=4a369f59d4ec24730506db8db80fee39c59986f5d0653b3810c97a8cbad0bce8&"
+                },
+                "stats": {
+                    "attack": "12,384",
+                    "health": "68,506",
+                    "power": "28,125"
+                },
+                "signature_ability": {
+                    "name": "OLHO NO ALVO",
+                    "description": "[HAB 1]: **GOLPES NA CABEÇA** têm uma chance de 100% de dar OLHO-MORTO e 1 EF. POS. aleatório por 7 segundos cada. Também remove 1 EF. NEG. de **si mesma.**\n\n[HAB 2]: Cause 10% de dano extra por cada EF. POS. **aplicado a um dos lutadores**"
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Fúria Felpuda",
+                "title_formatted": "Fúria Felpuda - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361683012957376714/1000.png?ex=681df821&is=681ca6a1&hm=d12fea6dd7daec69c549678fcb662f1d1f9c9a1d4ec3d9fd26fc30f627e5455b&"
+                },
+                "stats": {
+                    "attack": "14,592",
+                    "health": "62,247",
+                    "power": "29,501"
+                },
+                "signature_ability": {
+                    "name": "CORTA E QUEIMA",
+                    "description": "[HAB 1]: Ao GOLPEAR, 20% de chance de infligir SANGR. e ganhar FÚRIA por 10 s cada **enquanto a % de vida da Ms. Fortune for maior que a do oponente.**\n\n[HAB 2]: Remova 1 EF. POS. de um oponente próximo a cada 1 s enquanto **tiver 3 ou mais camadas de FÚRIA.**"
+                },
+                "marquee_ability": "BLÉÉÉ",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Biscoito da Sorte",
+                "title_formatted": "Biscoito da Sorte - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389701683113754647/1400823436086870016/2cdd650b-d7d3-4b9c-8cbd-acc3ea2c6ba6.webp?ex=688e09fd&is=688cb87d&hm=c625eb470e068ca652d1dfead0efa454ec3e9e8a92667285ef864d600fba74a0&"
+                },
+                "stats": {
+                    "attack": "16,743",
+                    "health": "56,045",
+                    "power": "30,821"
+                },
+                "signature_ability": {
+                    "name": "Inversão de Sorte",
+                    "description": "[HAB 1]: **Ao enfrentar o mesmo oponente por 10 s, Ms . Fortune sofre MALDIÇÃO por 10 s,** mas ganha PRECISÃO permanente, **ignorando todos os efeitos de prevenção de EF. POS.**\n\n[HAB 2]: Quando MALDIÇÃO é **aplicada a MS. Fortune**, ganha 1 camada de ESQUIVA e ACELERAÇÃO por 30 s, **ignorando todos os efeitos de prevenção de EF. POS.**"
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            }
+        ],
+        "ouro": [
+            {
+                "name": "Agora e Sempre",
+                "title_formatted": "Agora e Sempre - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682744538693712/1000.png?ex=681df7e1&is=681ca661&hm=df6d4173697d2f8522cfeddde081b375c883c4390e51a032f4185c80aa60f354&"
+                },
+                "stats": {
+                    "attack": "11,501",
+                    "health": "63,610",
+                    "power": "26,117"
+                },
+                "signature_ability": {
+                    "name": "SETE VIDAS",
+                    "description": "[HAB 1]: Ganhe RESISTÊNCIA FINAL por 10 segundos e 5 camadas de PRECISÃO para cada **10% de VIDA PERDIDA.**\n\n[HAB 2]: O oponente sofre MARCA DA MORTE por 15 segundos e ATORDOAMENTO por 4 segundos **quando a RESISTÊNCIA FINAL expira.**"
+                },
+                "marquee_ability": "BLÉÉÉ",
+                "recommended_build": "VD%, Defesa, Resistência e ATQ%",
+                "recommended_arsenal": "Cinco de desmembro, Febre de gato, Deslisada Felina, El Gato, Explosão"
+            },
+            {
+                "name": "Miau e Ordem",
+                "title_formatted": "Miau e Ordem - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682812754726973/1000.png?ex=681df7f1&is=681ca671&hm=fcfb3f8d21c7a09ec723a030fdaa8ef06fd14f0baea19444aba4c9f6b6e23a83&"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "57,812",
+                    "power": "27,413"
+                },
+                "signature_ability": {
+                    "name": "DO CO-MIAU-ÇO",
+                    "description": "[HAB 1]: CRÍTICOS têm 50% de chance de **reiniciar o tempo de todos os EF. NEGATIVOS do oponente**, exceto ATORD. e DESTRUIÇÃO.\n\n[HAB 2]: GOLPES que tiram **ao menos 5% da VIDA MÁX. do oponente ** colocam os G. ESPECIAIS dele em reativação e DESATIVAM os BLOCKBUSTERS por 15 s."
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Ladra de Tempo",
+                "title_formatted": "Ladra de Tempo - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682712896999434/1000.png?ex=681df7d9&is=681ca659&hm=bf1df4ee91aa9408738a88de03ec10872e0b3578a99e938e9ecdcb2931569cbd&"
+                },
+                "stats": {
+                    "attack": "11,501",
+                    "health": "63,610",
+                    "power": "26,117"
+                },
+                "signature_ability": {
+                    "name": "ZOOMIES!",
+                    "description": "[HAB 1]: A Ms. Fortune inflige MARCA DA MORTE por 10 segundos e **causa dano igual a 100% do seu ATAQUE quando joga a cabeça.**\n\n[HAB 2]: 100% do dano sofrido enquanto estiver no **MODO SEM CABEÇA é recuperado quando a Ms. fortune recupera a cabeça.**"
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Agente Trapaçeira",
+                "title_formatted": "Agente Trapaçeira - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682837970878545/1000.png?ex=681df7f7&is=681ca677&hm=25f3fd418836003fa531f755ad1406953ff7057081183e7201525ad49c93245a&"
+                },
+                "stats": {
+                    "attack": "15,533",
+                    "health": "52,032",
+                    "power": "28,801"
+                },
+                "signature_ability": {
+                    "name": "ATAQUE-SURPRESA",
+                    "description": "[HAB 1]: Cada **GOLPE NA CABEÇA** tem 25% de **chance de TRANSFERIR 1 EF. POS. do opon. e converter em 3 cam. de PRECISÃO.**\n\n[HC 2]: **GOLPES PRECISOS** dão ESQUIVA e infligem MARCA DA MORTE por 10 s. Cada camada de ESQUIVA é removida após esquivar-se de um GOLPE."
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Febre de gato, , Gato sonolento (Provocar), , Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Corta e Afoga",
+                "title_formatted": "Corta e Afoga - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682906912915497/1000.png?ex=681df807&is=681ca687&hm=57f3772060326f77a32bd9599d95b097329f46f98dbe26c5a0d1e10d783f6360&"
+                },
+                "stats": {
+                    "attack": "15,533",
+                    "health": "52,032",
+                    "power": "28,801"
+                },
+                "signature_ability": {
+                    "name": "DANO DE ÁREA",
+                    "description": "[HAB 1]: **BLOQUEIOS no tempo certo contra ataques comuns** dão 5 camadas de PRECISÃO e infligem INPACITAÇÃO e QUEBRA DE ARMAD. por 10 s.\n\n[HAB 2]: **CRÍTICOS com a CABEÇA da Ms. Fortune** tiram 3% a mais da VIDA MÁX. do oponente se ele estiver sofrendo INCAPACITAÇÃO."
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Terripeluda",
+                "title_formatted": "Terripeluda - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682779384975360/1000.png?ex=681df7e9&is=681ca669&hm=b7f56a371a84afb894c055ca7b3be4e1c90fc86b0a503a2c102d7fc07136b0f2&"
+                },
+                "stats": {
+                    "attack": "13,556",
+                    "health": "57,812",
+                    "power": "27,413"
+                },
+                "signature_ability": {
+                    "name": "NADA PESSOAL",
+                    "description": "[HAB 1]: **GOLPES DE ATAQUE DE CARGA** concedem IMUNIDADE por 10 s e 5 camadas de PRECISÃO.\n\n[HAB 2]: **Enquanto estiver com IMUNIDADE, ACERTOS DE GOLPES ESPECIAIS são INDEFENSÁVEIS.** Enquanto estiver com PRECISÃO, eles infligem POLARIDADE INVERSA por 10 s."
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "Febre de gato, , Gato sonolento (Provocar), , Deslisada Felina, Fibrosa, El Gato"
+            }
+        ],
+        "prata": [
+            {
+                "name": "Gata Negra",
+                "title_formatted": "Gata Negra - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#6426a8",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682686317559878/1000.png?ex=681df7d3&is=681ca653&hm=afdcb41c727c8b175d7a9b7241513327691e8928c25623687550d9d8fd08efb1&"
+                },
+                "stats": {
+                    "attack": "14,458",
+                    "health": "48,327",
+                    "power": "26,801"
+                },
+                "signature_ability": {
+                    "name": "NADA PESSOAL",
+                    "description": "[HAB 1]: Depois de **enfrentar a Ms. Fortune por 10 segundos, o oponente sofre MARCA DA MORTE e MALDIÇÃO.**\n\n[HAB 2]: **GOLPES COM A CABEÇA** têm 10% de chance de derrotar oponentes instantaneamente se estiverem com MARCA DA MORTE e menos de 50% de VIDA."
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico\"",
+                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Sra. Jurada",
+                "title_formatted": "Sra. Jurada - Ar - Prata",
+                "element": "Ar",
+                "color_hex": "#076314",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682640729804940/1000.png?ex=681df7c8&is=681ca648&hm=36c45dbefed546403b39545b2631a719335ec19ca5595b50ed70ec1d6e04df8d&"
+                },
+                "stats": {
+                    "attack": "12,538",
+                    "health": "53,645",
+                    "power": "25,380"
+                },
+                "signature_ability": {
+                    "name": "NEGADO",
+                    "description": "[HAB 1]: Ao **GOLPEAR um oponente que estiver atacando**, remova 1 EFEITO POSITIVO do oponente e ganhe 5 acúmulo(s) de PRECISÃO.\n\n[HAB 2]: GOLPES DE PRECISÃO têm **100% de chance de ignorar a DEFESA e a ARMADURA do oponente.**"
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Febre de gato, , Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Sorte Felina",
+                "title_formatted": "Sorte Felina - Luz - Prata",
+                "element": "Luz",
+                "color_hex": "#dfd173",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682615064858655/1000.png?ex=681df7c2&is=681ca642&hm=1c1a170af39e03b477b92f2bdfe475ebf2e4db1344e8229de253ede7f23babbc&"
+                },
+                "stats": {
+                    "attack": "10,616",
+                    "health": "59,079",
+                    "power": "24,250"
+                },
+                "signature_ability": {
+                    "name": "JACKPOT",
+                    "description": "[HAB 1]: **Ganhe 3 camada(s) de PRECISÃO a cada 7 segundos.**\n\n[HAB 2]: 2% de chance de ganhar IMUNIDADE, INVENCIB., RESIST. FINAL e INABALÁVEL por 15 seg **quando qualquer lutador acertar um GOLPE CRÍTICO.**"
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Remendada",
+                "title_formatted": "Remendada - Trevas - Prata",
+                "element": "Trevas",
+                "color_hex": "#400080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025883148583103/Patched_Up.png?ex=68decfa1&is=68dd7e21&hm=8e257d6c8ed23cc89992d17d60046b46e19f14d397991d6eda8b483e56efcf73&"
+                },
+                "stats": {
+                    "attack": "12,538",
+                    "health": "53,645",
+                    "power": "25,380"
+                },
+                "signature_ability": {
+                    "name": "ESTÁ VIVA!",
+                    "description": "[HAB 1]: Tem 15% de chance, **quando qualquer um dos Lutadores for GOLPEADO** (inclui golpes bloqueados), de transferir 1 EF. POS. do oponente para a Ms. Fortune.\n\n[HAB 2]: **Ao se beneficiar de pelo menos 3 acúmulos de qualquer EF POS,** GOLPES (incluindo golpes bloqueados) infligem DEFINHAR E MALDIÇÃO por 10 segundos cada."
+                },
+                "marquee_ability": "BUP",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Brincadeirinha",
+                "title_formatted": "Brincadeirinha - Água - Bronze",
+                "element": "Água",
+                "color_hex": "#1095d5",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682518692204565/1000.png?ex=681df7ab&is=681ca62b&hm=06403fdf8f177e1476a8790889a7fe6ef9b32b452dc4ec4f2c5a2dc93395309f&"
+                },
+                "stats": {
+                    "attack": "11,674",
+                    "health": "49,805",
+                    "power": "23,603"
+                },
+                "signature_ability": {
+                    "name": "AGILIDADE FELINA",
+                    "description": "[HAB 1]: Ao sofrer um EFEITO NEGATIVO, tem 50% de chance de **converter imediatamente esse efeito** em uma camada de PRECISÃO.\n\n[HAB 2]: 15% de chance de ganhar 1 acúmulo de ESQUIVA e ACELERAÇÃO por 10 s **quando qualquer lutador for atingido por um GOLPE que não seja projétil.**"
+                },
+                "marquee_ability": [
+                    "> BLÉÉ (Defesa)",
+                    "> BUP (Ataque)"
+                ],
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Gata do Inferno",
+                "title_formatted": "Gata do Inferno - Fogo - Bronze",
+                "element": "Fogo",
+                "color_hex": "#ef2e2d",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1360911582938534114/1361682590901211217/1000.png?ex=681df7bc&is=681ca63c&hm=b53bf1f9a01c6edc73817bbefb74d88a5c0e5c178ee27975e6edf5c1a44351db&"
+                },
+                "stats": {
+                    "attack": "13,517",
+                    "health": "44,813",
+                    "power": "24,797"
+                },
+                "signature_ability": {
+                    "name": "PURRR-GATÓRIO",
+                    "description": "[HAB 1]: Ganhe FÚRIA após cada 8 s com VIDA acima de 50%. **A FÚRIA é removida quando a VIDA cai abaixo de 50%.**\n\n[HAB 2]: Ganhe 5 camadas de PRECISÃO **ao derrotar um oponente se beneficiando de FÚRIA.**"
+                },
+                "marquee_ability": "BLÉÉÉ",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            }
+        ]
+    }
 }

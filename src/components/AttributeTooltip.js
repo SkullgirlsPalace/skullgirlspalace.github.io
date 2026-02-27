@@ -43,25 +43,37 @@ function showTooltip(target, attrKey) {
     if (source === 'attr') {
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
-                <strong>${data.name}</strong>
-                <span class="attr-tooltip-max">Máx: ${data.max}</span>
+                <div class="attr-tooltip-title-group">
+                    <strong>${data.name}</strong>
+                </div>
+                ${data.max ? `<span class="attr-tooltip-max">Máx: ${data.max}</span>` : ''}
             </div>
             <p class="attr-tooltip-summary">${data.summary}</p>
-            <p class="attr-tooltip-tip">💡 ${data.quickTip}</p>
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     } else {
         // Effect (buff/debuff/term)
         const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
-        const stacksHtml = data.stacks ? `<span class="attr-tooltip-max">Acúmulo: ${data.stacks}x</span>` : '';
+
+        let disclaimerHtml = '';
+        if (data.stacks || data.scaling) {
+            disclaimerHtml = `
+                <div class="attr-tooltip-disclaimer">
+                    ${data.stacks ? `<span>Acúmulo: ${data.stacks}x</span>` : ''}
+                    ${data.scaling ? `<span>Escalonamento: ${data.scaling}</span>` : ''}
+                </div>
+            `;
+        }
+
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
-                ${iconHtml}
-                <strong>${data.name}</strong>
-                ${stacksHtml}
+                <div class="attr-tooltip-title-group">
+                    ${iconHtml}
+                    <strong>${data.name}</strong>
+                </div>
             </div>
             <p class="attr-tooltip-summary">${data.detailed}</p>
-            ${data.scaling ? `<p class="attr-tooltip-tip">📊 ${data.scaling}</p>` : ''}
+            ${disclaimerHtml}
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     }
@@ -93,8 +105,8 @@ function positionTooltip(tooltip, target) {
     // Clamp horizontal
     left = Math.max(padding, Math.min(left, window.innerWidth - tooltipRect.width - padding));
 
-    tooltip.style.top = `${top + window.scrollY} px`;
-    tooltip.style.left = `${left} px`;
+    tooltip.style.top = `${top + window.scrollY}px`;
+    tooltip.style.left = `${left}px`;
     tooltip.classList.add('visible');
 }
 
@@ -131,19 +143,15 @@ function showDetailModal(attrKey) {
     if (source === 'attr') {
         headerHtml = `
             <h3>${data.name}</h3>
-            <span class="attr-detail-max">Máximo: ${data.max}</span>
+            ${data.max ? `<span class="attr-detail-max">Máximo: ${data.max}</span>` : ''}
         `;
         bodyHtml = `
             <div class="attr-detail-section">
-                <h4>📋 Resumo do Jogo</h4>
+                <h4>📋 Resumo</h4>
                 <p>${data.summary}</p>
             </div>
-            <div class="attr-detail-section">
-                <h4>⚡ Resumo Rápido</h4>
-                <p>${data.quickTip}</p>
-            </div>
             <div class="attr-detail-section detailed">
-                <h4>📖 Explicação Detalhada</h4>
+                <h4>📖 Explicação</h4>
                 <p>${data.detailed}</p>
             </div>
         `;

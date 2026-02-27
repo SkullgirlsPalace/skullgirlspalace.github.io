@@ -92,4 +92,4 @@ export const RARITY_ICONS = {
     'bronze': 'img/icones/icone_bronze.png'
 };
 
-export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'U', 'TBD'];
+export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'I', 'N/A'];

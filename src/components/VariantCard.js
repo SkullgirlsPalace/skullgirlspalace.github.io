@@ -1,11 +1,7 @@
-// =====================================================
-// VARIANT CARD COMPONENT
-// Renders a detailed variant card with stats and abilities
-// =====================================================
-
 import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
+import { getState, updateCharacterData } from '../state/store.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -15,10 +11,13 @@ import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.
  * @returns {string} HTML string
  */
 export function createVariantCard(variant, charKey, index = 0) {
+    const state = getState();
+    const editingClass = state.isEditorMode ? 'editing' : '';
+
     const elementInfo = ELEMENT_MAP[variant.element] || {
         icon: '⚪',
         class: 'neutral',
-        iconPath: 'img/icones/ElementalIconNeutral.png',
+        iconPath: 'img/icones/ElementalFireBackless.png',
         statIcon: 'img/icones/ElementalIconNeutral.png'
     };
 
@@ -94,12 +93,18 @@ export function createVariantCard(variant, charKey, index = 0) {
                             Build
                         </button>
                     ` : ''}
+                    ${state.isEditorMode ? `
+                        <button class="save-data-btn small" style="margin-left: auto; padding: 4px 10px; font-size: 0.7rem;" 
+                                onclick="handleExportCharacterJSON('${charKey}')">
+                            Export JSON
+                        </button>
+                    ` : ''}
                 </div>
                 
                 <div class="variant-tab-contents" id="${cardId}-contents">
                     <!-- Habilidade Tab (Signature + Marquee Unified) -->
                     <div class="variant-tab-content active" data-tab="habilidade">
-                        <div class="ability-box">
+                        <div class="ability-box ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'signature_ability')">
                             <h4 style="color: var(--accent-gold); margin-bottom: 8px;">
                                 ${variant.signature_ability?.name || 'Habilidade Especial'}
                             </h4>
@@ -107,8 +112,8 @@ export function createVariantCard(variant, charKey, index = 0) {
                             
                             ${variant.marquee_ability ? `
                                 <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
-                                <h4 style="color: var(--rarity-diamond); font-size: 0.85rem; margin-bottom: 0;">
-                                    SUPERIOR RECOMENDADA: <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
+                                <h4 style="color: var(--rarity-${rarityKey}); font-size: 0.85rem; margin-bottom: 0;">
+                                    SUPERIOR RECOMENDADA: <span style="color: inherit; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
                                 </h4>
                             ` : ''}
                         </div>
@@ -118,14 +123,14 @@ export function createVariantCard(variant, charKey, index = 0) {
                     ${hasBuildContent ? `
                         <div class="variant-tab-content" data-tab="build">
                             ${buildText ? `
-                                <div class="ability-box build">
+                                <div class="ability-box build ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'recommended_build')">
                                     <h4>BUILD RECOMENDADA</h4>
                                     <p>${formatBuildText(buildText)}</p>
                                 </div>
                             ` : ''}
                             
                             ${arsenalHTML ? `
-                                <div class="ability-box arsenal">
+                                <div class="ability-box arsenal ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'recommended_arsenal')">
                                     <h4>ARSENAL RECOMENDADO</h4>
                                     <div class="arsenal-list">${arsenalHTML}</div>
                                 </div>
@@ -192,5 +197,63 @@ function switchVariantTab(cardId, tabName) {
     });
 }
 
-// Keep global function for backwards compatibility
-window.switchVariantTab = switchVariantTab;
+export function handleEditVariantField(charKey, variantName, field) {
+    const state = getState();
+    if (!state.isEditorMode) return;
+
+    const charData = state.characters[charKey];
+    if (!charData) return;
+
+    // Find variant in charData
+    let targetVariant = null;
+    let targetRarity = null;
+    let targetIndex = -1;
+
+    for (const rarity in charData.variants) {
+        const idx = charData.variants[rarity].findIndex(v => v.name === variantName);
+        if (idx !== -1) {
+            targetVariant = charData.variants[rarity][idx];
+            targetRarity = rarity;
+            targetIndex = idx;
+            break;
+        }
+    }
+
+    if (!targetVariant) return;
+
+    let currentValue = '';
+    let promptMsg = '';
+
+    if (field === 'signature_ability') {
+        currentValue = targetVariant.signature_ability?.description || '';
+        promptMsg = `Editar descrição da habilidade para ${variantName}:`;
+    } else if (field === 'recommended_build') {
+        currentValue = targetVariant.recommended_build || '';
+        promptMsg = `Editar build recomendada para ${variantName}:`;
+    } else if (field === 'recommended_arsenal') {
+        currentValue = targetVariant.recommended_arsenal || '';
+        promptMsg = `Editar arsenal recomendado para ${variantName} (formato string):`;
+    }
+
+    const newValue = prompt(promptMsg, currentValue);
+
+    if (newValue !== null) {
+        updateCharacterData(charKey, (char) => {
+            const updatedChar = { ...char };
+            const updatedVariant = { ...updatedChar.variants[targetRarity][targetIndex] };
+
+            if (field === 'signature_ability') {
+                updatedVariant.signature_ability = { ...updatedVariant.signature_ability, description: newValue };
+            } else {
+                updatedVariant[field] = newValue;
+            }
+
+            updatedChar.variants[targetRarity][targetIndex] = updatedVariant;
+            return updatedChar;
+        });
+
+        if (window.onFiltersChanged) {
+            window.onFiltersChanged();
+        }
+    }
+}
