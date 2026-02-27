@@ -64,10 +64,7 @@
     filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
 }
 
-.logo::before {
-    content: '⚔️';
-    font-size: 1.4rem;
-}
+
 
 .nav-links {
     display: flex;
@@ -98,4 +95,3 @@
     cursor: pointer;
     padding: 8px;
 }
-
