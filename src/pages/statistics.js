@@ -12,6 +12,7 @@ import {
     switchCalcTab,
     updateDiamanteSlider,
     updateGolpeSlider,
+    updateGolpeInicialSlider,
     updateAstroSlider
 } from '../components/Calculator.js';
 import { loadStatistics } from '../services/dataService.js';
@@ -69,5 +70,6 @@ export async function init() {
     window.switchCalcTab = switchCalcTab;
     window.updateDiamanteSlider = updateDiamanteSlider;
     window.updateGolpeSlider = updateGolpeSlider;
+    window.updateGolpeInicialSlider = updateGolpeInicialSlider;
     window.updateAstroSlider = updateAstroSlider;
 }
