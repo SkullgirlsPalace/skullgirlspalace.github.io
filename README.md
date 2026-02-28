@@ -1,4 +1,4 @@
-# palacio-branco-entreprises
+# Skullgirls Palace
 Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso
 
 ## Arquitetura de Estilos (CSS)
