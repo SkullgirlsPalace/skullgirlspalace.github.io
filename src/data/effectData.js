@@ -131,7 +131,7 @@ export const EFFECT_DATA = {
         icon: 'img/modifiers/buffs/FinalStand.png',
         stacks: 1,
         detailed: 'Impede a morte.',
-        explicacao: 'A Vida não cai abaixo de 1 Vida. Bloqueia Destruição, Quietus anula este Efeito.'
+        explicacao: 'A Vida não cai abaixo de 1 Vida. Bloqueia Destruição. Quietus anula este Efeito.'
     },
     haste: {
         keys: ['Aceleração', 'Haste'],
