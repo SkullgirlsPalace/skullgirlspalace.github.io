@@ -139,12 +139,17 @@
     .character-detail-header {
         flex-direction: column;
         gap: 16px;
+        padding-top: 60px;
     }
 
     .character-detail-header .back-button {
-        position: static;
-        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 44px;
         justify-content: center;
+        font-weight: 900;
+        font-size: 1.5rem;
     }
 }
 

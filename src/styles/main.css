@@ -9,7 +9,6 @@
 @import 'base/reset.css';
 @import 'base/layout.css';
 @import 'base/utilities.css';
-@import 'base/responsive.css';
 
 /* Components */
 @import 'components/navbar.css';
@@ -34,3 +33,6 @@
 @import 'pages/catalysts.css';
 @import 'pages/tierlist.css';
 @import 'pages/guide.css';
+
+/* Responsive (must be last to override all above) */
+@import 'base/responsive.css';

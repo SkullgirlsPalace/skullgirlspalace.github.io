@@ -1,7 +1,34 @@
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
+
+    /* Global: prevent horizontal scroll on mobile */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ===== PHASE 1: NAVBAR & GLOBAL LAYOUT ===== */
+
     .navbar {
-        padding: 0 16px;
+        padding: 0 12px;
+    }
+
+    .navbar-brand {
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.05rem;
+        gap: 6px;
+    }
+
+    .logo img {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .about-link span {
+        display: none;
     }
 
     .nav-links {
@@ -9,16 +36,25 @@
         top: var(--navbar-height);
         left: 0;
         right: 0;
-        background: var(--bg-secondary);
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         flex-direction: column;
-        padding: 16px;
+        padding: 12px 16px;
         gap: 4px;
-        border-bottom: var(--border-subtle);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         display: none;
+        z-index: 999;
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links li a {
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: 8px;
     }
 
     .hamburger {
@@ -26,8 +62,8 @@
     }
 
     main {
-        padding: 16px;
-        padding-top: calc(var(--navbar-height) + 16px);
+        padding: 12px;
+        padding-top: calc(var(--navbar-height) + 12px);
     }
 
     .hero {
@@ -47,20 +83,165 @@
         align-items: center;
     }
 
+    /* ===== PHASE 2: CHARACTERS GRID ===== */
+
     .character-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 12px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
     .character-card {
-        padding: 12px;
+        padding: 10px 6px;
     }
 
     .character-card img {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
+    .character-card .name {
+        font-size: 0.7rem;
+        word-break: break-word;
+        line-height: 1.2;
+    }
+
+    /* Section header - title + export overlap fix */
+    .section-header {
+        flex-wrap: wrap;
+        position: relative;
+        gap: 8px;
+        padding: 0 4px;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        width: 100%;
+        order: 1;
+    }
+
+    .section-header .btn-back {
+        order: 0;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 900;
+        font-size: 1.5rem;
+        min-width: 44px;
+        width: 44px;
+        height: 36px;
+    }
+
+    .section-header .export-trigger-btn {
+        position: static !important;
+        transform: none !important;
+        order: 2;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    /* ===== PHASE 3: CHARACTER DETAIL & FILTER BAR ===== */
+
+    /* Detail header */
+    .char-title-centered h2 {
+        font-size: 1.3rem;
+    }
+
+    .char-title-centered .char-mastery-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Detail tabs */
+    .detail-tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    /* Filter bar */
+    .filter-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 6px 8px;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filter-controls {
+        flex-wrap: nowrap;
+        gap: 4px;
+        order: 3;
+    }
+
+    .filter-content {
+        display: contents;
+    }
+
+    .rarity-grid {
+        order: 1;
+    }
+
+    .element-grid {
+        order: 2;
+    }
+
+    .filter-label {
+        font-size: 0.85rem;
+    }
+
+    .filter-toggle-btn {
+        padding: 6px 10px;
+        min-width: auto;
+        font-size: 0.7rem;
+    }
+
+    .filter-toggle-btn span {
+        display: none;
+    }
+
+    .filter-toggle-btn img {
+        height: 20px;
+    }
+
+    .filter-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vertical-separator {
+        display: none;
+    }
+
+    .filter-section.right {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        order: 10;
+    }
+
+    .sort-group {
+        justify-content: center;
+    }
+
+    .sort-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+
+    /* Variant cards */
     .variant-card {
         grid-template-columns: 1fr;
         text-align: center;
@@ -69,6 +250,18 @@
     .variant-portrait {
         width: 100px;
         margin: 0 auto;
+    }
+
+    .variant-info {
+        align-items: center;
+    }
+
+    .variant-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .variant-meta {
+        justify-content: center;
     }
 
     .variant-stats {
@@ -84,10 +277,231 @@
         font-size: 0.75rem;
     }
 
+    .ability-box {
+        padding: 14px;
+    }
+
+    .ability-box p {
+        font-size: 0.85rem;
+    }
+
+    .arsenal-list {
+        justify-content: center;
+    }
+
+    .arsenal-move {
+        min-width: 70px;
+        padding: 8px;
+    }
+
+    .arsenal-move .move-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arsenal-move .move-name {
+        font-size: 0.7rem;
+    }
+
+    /* ===== PHASE 4: GUIDE PAGE ===== */
+
+    .guide-header {
+        padding: 16px;
+    }
+
+    .guide-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .guide-header p {
+        font-size: 0.95rem;
+    }
+
+    .guide-tabs {
+        gap: 8px;
+        margin-bottom: 20px;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .guide-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .guide-tab-btn {
+        padding: 8px 12px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+    }
+
+    /* Effects table */
+    .effects-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .effects-table th,
+    .effects-table td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+
+    .effect-icon-wrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .effect-icon-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .effect-name {
+        font-size: 0.95rem;
+    }
+
+    .effect-desc-cell p {
+        font-size: 0.82rem;
+    }
+
+    .effects-table th:nth-child(4),
+    .effects-table td:nth-child(4) {
+        display: none;
+        /* Hide Stacks column on mobile */
+    }
+
+    /* Tutorial grid */
+    .tutorial-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .tutorial-card {
+        padding: 20px;
+        min-height: 140px;
+    }
+
+    /* Catalysts */
+    .catalysts-intro p {
+        font-size: 0.9rem;
+    }
+
+    .catalyst-category h4 {
+        font-size: 1rem;
+    }
+
+    /* ===== PHASE 5: STATISTICS / CALCULATOR ===== */
+
+    .statistics-section {
+        padding-bottom: 20px;
+    }
+
+    .intro-card {
+        padding: 16px;
+    }
+
+    .calc-tab-bar {
+        flex-direction: column;
+    }
+
+    .calc-tab {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    .calc-tab-content {
+        padding: 16px;
+    }
+
+    .calc-layout {
+        flex-direction: column;
+    }
+
+    .calc-controls {
+        padding-right: 0;
+        padding-bottom: 16px;
+    }
+
+    .calc-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.12) 15%,
+                rgba(255, 255, 255, 0.12) 85%,
+                transparent 100%);
+    }
+
+    .calc-results {
+        padding-left: 0;
+        padding-top: 16px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-card .result-value {
+        font-size: 1.2rem;
+    }
+
+    .total-value {
+        font-size: 1.2rem;
+    }
+
+    .total-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .toggle-group {
+        gap: 6px;
+    }
+
+    .toggle-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    .slider-container {
+        padding: 12px;
+    }
+
+    .calc-btn {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .breakdown-box li {
+        font-size: 0.82rem;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .cost-section li {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+
+    .cost-section li span:first-child {
+        font-size: 0.82rem;
+    }
+
+    .cost-total {
+        padding: 14px;
+    }
+
+    .scenarios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats container (legacy) */
     .stats-container {
         grid-template-columns: 1fr;
     }
 
+    /* Filters legacy */
     .filters {
         flex-direction: column;
     }
@@ -96,6 +510,7 @@
         width: 100%;
     }
 
+    /* Tier list */
     .tier-row {
         flex-direction: column;
     }
@@ -105,5 +520,147 @@
         min-height: auto;
         padding: 12px;
     }
+
+    /* Export modal */
+    .export-modal-content {
+        max-width: 95vw;
+        padding: 16px;
+    }
+
+    /* Scroll nav */
+    .scroll-nav {
+        bottom: 16px;
+        right: 12px;
+    }
+
+    /* ===== TIER LIST MOBILE ===== */
+
+    .tier-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .tier-table {
+        min-width: 500px;
+    }
+
+    /* Sticky first column (character name + photo) */
+    .tier-table th:first-child,
+    .tier-table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        background: var(--bg-card);
+    }
+
+    .tier-table th:first-child {
+        background: rgba(10, 10, 15, 0.95);
+    }
+
+    .tier-table .tier-char-cell {
+        width: 120px;
+    }
+
+    .tier-table .tier-char-cell img {
+        width: 70px;
+    }
+
+    .tier-table .tier-char-cell span {
+        font-size: 0.8rem;
+    }
+
+    .tier-table .rank-badge {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.3rem !important;
+    }
+
+    .text-center {
+        width: 90px;
+        min-width: 90px;
+    }
+
+    .tier-table th {
+        padding: 12px 6px;
+        font-size: 0.7rem;
+    }
+
+    .tier-table td {
+        padding: 12px 6px;
+    }
+
+    .tier-intro-box {
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+
+    .rank-explanations {
+        padding: 16px;
+        margin-bottom: 24px;
+    }
+
+    .rank-exp-item {
+        gap: 10px;
+    }
+
+    .rank-exp-item p {
+        font-size: 0.85rem;
+    }
+
+    .editor-control-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .rank-dictionary {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    .dict-item p {
+        font-size: 0.82rem;
+    }
+
+    /* Character nav dropdown on mobile */
+    .character-nav {
+        width: 100%;
+    }
+
+    .char-dropdown {
+        min-width: 100%;
+    }
+
+    /* Back arrow for character detail header */
+    .character-detail-header .back-button {
+        position: absolute;
+        left: 0;
+        width: 44px;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
+    .btn-back {
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
 }
 
+/* ===== VERY SMALL SCREENS (< 360px) ===== */
+@media (max-width: 360px) {
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .hub-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hub-menu {
+        padding: 24px 16px;
+    }
+}

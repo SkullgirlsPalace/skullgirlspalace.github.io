@@ -120,6 +120,9 @@ async function handleRouteChange() {
 
     // Scroll to top
     window.scrollTo(0, 0);
+
+    // Close mobile hamburger menu on navigation
+    document.getElementById('navLinks')?.classList.remove('active');
 }
 
 /**

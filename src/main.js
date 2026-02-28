@@ -182,18 +182,31 @@ function setupScrollListener() {
     const scrollBottomBtn = document.getElementById('scrollToBottomBtn');
 
     if (scrollTopBtn || scrollBottomBtn) {
-        window.addEventListener('scroll', () => {
+        const updateScrollButtons = () => {
             const scrollY = window.scrollY;
             const docHeight = document.documentElement.scrollHeight;
             const windowHeight = window.innerHeight;
+            const hasScrollableContent = docHeight > windowHeight + 50;
 
             if (scrollTopBtn) {
                 scrollTopBtn.classList.toggle('visible', scrollY > 300);
             }
 
             if (scrollBottomBtn) {
-                scrollBottomBtn.classList.toggle('visible', scrollY < docHeight - windowHeight - 300);
+                // Show only when there's scrollable content AND not at the bottom
+                const atBottom = scrollY >= docHeight - windowHeight - 100;
+                scrollBottomBtn.classList.toggle('visible', hasScrollableContent && !atBottom);
             }
+        };
+
+        window.addEventListener('scroll', updateScrollButtons);
+
+        // Run initial check after a short delay (content may load async)
+        setTimeout(updateScrollButtons, 500);
+
+        // Also re-check whenever hash changes (page navigation)
+        window.addEventListener('hashchange', () => {
+            setTimeout(updateScrollButtons, 300);
         });
     }
 }

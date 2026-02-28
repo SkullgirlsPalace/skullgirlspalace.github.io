@@ -41,6 +41,19 @@
     margin-top: -6px;
 }
 
+.scroll-nav button#scrollToBottomBtn {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.scroll-nav button#scrollToBottomBtn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
 .scroll-nav button:hover {
     transform: translateY(-5px) scale(1.1);
     background: var(--accent-gold-light);
@@ -58,4 +71,3 @@
     pointer-events: auto;
     transform: translateY(0);
 }
-
