@@ -130,7 +130,7 @@ export const ATTRIBUTE_DATA = {
         keys: [],
         name: 'Reinos Paralelos',
         summary: 'Classificação para o modo Reinos Paralelos.',
-        detailed: 'Classifica o Desempenho para o Modo Reinos Paralelos (Sem Dó/Pesadelo), baseeando em suas Habilidades Caracterítiscas, já que o modo possui diversos modificadores difíceis de lidar.'
+        detailed: 'Classifica o Desempenho para o Modo Reinos Paralelos (Sem Dó/Pesadelo), baseando em suas Habilidades Caracterítiscas, já que o modo possui diversos modificadores difíceis de lidar.'
     },
     tier_fenda_ataque: {
         keys: [],
