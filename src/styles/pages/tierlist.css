@@ -552,17 +552,25 @@ input:checked+.slider:before {
 /* Portrait container logic */
 .compact-char-info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 2px;
     width: max-content;
     margin: 0 auto;
 }
 
+.compact-portrait-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
 .compact-portrait-img {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border-radius: 4px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
@@ -577,10 +585,10 @@ input:checked+.slider:before {
 }
 
 /* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
-.tier-table.compact-mode .tier-char-cell .compact-mastery-icon {
+.tier-table.compact-mode .tier-char-cell .compact-element-icon {
     display: block !important;
-    width: 18px !important;
-    height: 18px !important;
+    width: 32px !important;
+    height: 32px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -588,18 +596,52 @@ input:checked+.slider:before {
 
 .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
     display: block !important;
-    width: 20px !important;
-    height: 20px !important;
+    width: 34px !important;
+    height: 34px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
 }
 
+/* RESPONSIVE IMAGES */
+@media screen and (max-width: 768px) {
+    .compact-portrait-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-element-icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-variant-name {
+        max-width: 75px;
+        font-size: 0.84rem;
+    }
+}
+
 /* =============================================== */
 
-/* Remove text rendering config inside since we no longer use spans in compact mode. */
-.tier-table.compact-mode .tier-char-cell span {
-    display: none;
+/* Ensure the variant name wraps nicely and has a fixed max width so it doesn't break the layout. */
+.tier-table.compact-mode .tier-char-cell .compact-variant-name {
+    display: block;
+    /* Overrides the previous display: none if there was any */
+    font-size: 1.18rem;
+    font-weight: 700;
+    text-align: center;
+    max-width: 160px;
+    white-space: normal;
+    word-break: break-word;
+    /* Allows long names to break lines if needed */
+    line-height: 1.1;
+    color: #fff;
+    margin-top: 4px;
 }
 
 .tier-table.compact-mode .rank-badge {

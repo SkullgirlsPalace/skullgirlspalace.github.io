@@ -97,11 +97,14 @@ export function createTierTable(charKey, charData) {
 
             const charCellContent = state.isCompactMode ? `
                 <div class="compact-char-info">
-                    <img src="${portraitPath}" alt="${variant.name}" title="${variant.name}" class="compact-portrait-img">
-                    <div class="compact-badges">
-                        <img src="${masteryIcon}" alt="" class="compact-mastery-icon">
-                        <img src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
+                    <div class="compact-portrait-wrapper">
+                        <img src="${portraitPath}" alt="${variant.name}" title="${variant.name}" class="compact-portrait-img">
+                        <div class="compact-badges">
+                            <img src="${elementInfo.statIcon}" alt="${elementStr}" class="compact-element-icon">
+                            <img src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
+                        </div>
                     </div>
+                    <span class="compact-variant-name">${variant.name}</span>
                 </div>
             ` : `
                 <img src="${imgPath}" alt="${variant.name}" onerror="this.src='img/icones/Annie_Icon.png'">
