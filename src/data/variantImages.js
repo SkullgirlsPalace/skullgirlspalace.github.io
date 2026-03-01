@@ -207,7 +207,7 @@ const VARIANT_IMAGES = {
         "Ameaça Mascarada": "img/painwheel/Painwheel_16.png",
         "Neuromancer": "img/painwheel/Painwheel_14.png",
         "Papa-moscas": "img/painwheel/Painwheel_13.png",
-        "VAGALUME": "img/painwheel/Painwheel_9.png",
+        "Vagalume": "img/painwheel/Painwheel_9.png",
         "Frio Mordente": "img/painwheel/Painwheel_11.png",
         "Gênese": "img/painwheel/Painwheel_7.png",
         "Festa Macabra": "img/painwheel/Painwheel_10.png",
