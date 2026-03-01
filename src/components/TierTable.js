@@ -5,6 +5,7 @@
 
 import { ELEMENT_MAP, TIER_RANKS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
+import { getPortraitImage } from '../data/portraitMap.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getState, setCompactMode, setEditorMode, updateTierRank } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
@@ -84,6 +85,7 @@ export function createTierTable(charKey, charData) {
                 parallel: baseRanks.parallel || 'B'
             };
             const imgPath = getVariantImage(charKey, variant.name, 0);
+            const portraitPath = getPortraitImage(charKey, variant.name);
 
             const elementStr = variant.element || 'Neutro';
             const elementInfo = ELEMENT_MAP[elementStr] || ELEMENT_MAP['Neutro'];
@@ -95,9 +97,11 @@ export function createTierTable(charKey, charData) {
 
             const charCellContent = state.isCompactMode ? `
                 <div class="compact-char-info">
-                    <span style="font-weight: 800;">${variant.name}</span>
-                    <img src="${masteryIcon}" alt="" class="compact-mastery-icon">
-                    <img src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
+                    <img src="${portraitPath}" alt="${variant.name}" title="${variant.name}" class="compact-portrait-img">
+                    <div class="compact-badges">
+                        <img src="${masteryIcon}" alt="" class="compact-mastery-icon">
+                        <img src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
+                    </div>
                 </div>
             ` : `
                 <img src="${imgPath}" alt="${variant.name}" onerror="this.src='img/icones/Annie_Icon.png'">

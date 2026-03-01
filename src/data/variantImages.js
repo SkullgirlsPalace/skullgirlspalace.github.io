@@ -225,7 +225,7 @@ const VARIANT_IMAGES = {
         "Atração Fatal": "img/parasoul/Parasoul_16.png",
         "Salgada": "img/parasoul/Parasoul_14.png",
         "Bela do Bar": "img/parasoul/Parasoul_17.png",
-        "The Legend of Parasol": "img/parasoul/Parasoul_11.png",
+        "The Legend of Parasoul": "img/parasoul/Parasoul_11.png",
         "Indômita": "img/parasoul/Parasoul_12.png",
         "Orgulho Real": "img/parasoul/Parasoul_8.png",
         "Má Sorte": "img/parasoul/Parasoul_10.png",

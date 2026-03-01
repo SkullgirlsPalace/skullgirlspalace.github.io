@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portrait Mapper</title>
+    <style>
+        body { font-family: sans-serif; background: #111; color: #fff; padding: 20px; }
+        .character-section { border: 1px solid #333; margin-bottom: 20px; padding: 10px; }
+        h2 { text-transform: capitalize; color: #ffd700; }
+        .variant-row { display: flex; align-items: center; gap: 20px; margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px;}
+        .variant-name { width: 250px; font-weight: 800; font-size: 1.1rem; }
+        .current-portrait { width: 60px; height: 60px; object-fit: contain; background: #222; border-radius: 4px; box-shadow: 0 0 5px rgba(0,0,0,0.5); }
+        .portrait-options { display: flex; flex-wrap: wrap; gap: 8px; }
+        .portrait-option { cursor: pointer; border: 2px solid transparent; width: 50px; height: 50px; object-fit: contain; background: #222; border-radius: 4px;}
+        .portrait-option:hover { border-color: yellow; transform: scale(1.1); transition: 0.1s;}
+        .portrait-option.selected { border-color: lime; background: rgba(0,255,0,0.2); }
+        #export-btn { position: fixed; top: 10px; right: 10px; padding: 10px 20px; background: lime; color: black; font-weight: bold; cursor: pointer; z-index: 100;}
+        #output { width: 100%; height: 300px; margin-top: 20px; background: #000; color: #0f0; font-family: monospace; padding: 10px; font-size: 14px;}
+        .instructions { background: #333; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Mapeamento Visual de Retratos</h1>
+    
+    <div class="instructions">
+        <h3>Como usar:</h3>
+        <ol>
+            <li>Para cada nome de variante à esquerda, clique no retrato correto à direita.</li>
+            <li>O retrato selecionado ficará com borda verde e aparecerá ao lado do nome da variante.</li>
+            <li>Quando terminar, clique no botão <strong>Gerar Código JS</strong> no canto superior direito.</li>
+            <li>Copie o código verde que aparecerá na caixa no final da página e cole-o substituindo o conteúdo de <code>src/data/portraitMap.js</code>.</li>
+        </ol>
+    </div>
+
+    <button id="export-btn" onclick="exportMapping()">Gerar Código JS</button>
+    <div id="container"></div>
+    <textarea id="output" readonly></textarea>
+
+    <script>
+        let mappingData = {};
+        const currentMapping = {}; // char -> { variant: imgPath }
+
+        async function init() {
+            try {
+                const res = await fetch('tmp_mapping_prep.json');
+                mappingData = await res.json();
+                
+                const container = document.getElementById('container');
+                
+                for (const [char, data] of Object.entries(mappingData)) {
+                    currentMapping[char] = {};
+                    
+                    const sec = document.createElement('div');
+                    sec.className = 'character-section';
+                    sec.innerHTML = `<h2>${char.replace('-', ' ')}</h2>`;
+                    
+                    data.variants.forEach(variantName => {
+                        currentMapping[char][variantName] = '';
+
+                        const row = document.createElement('div');
+                        row.className = 'variant-row';
+                        
+                        const nameDiv = document.createElement('div');
+                        nameDiv.className = 'variant-name';
+                        nameDiv.textContent = variantName;
+                        
+                        const currentImg = document.createElement('img');
+                        currentImg.className = 'current-portrait';
+                        currentImg.id = `current-${char}-${variantName}`;
+                        
+                        const opts = document.createElement('div');
+                        opts.className = 'portrait-options';
+                        
+                        data.portraits.forEach(p => {
+                            const pImg = document.createElement('img');
+                            pImg.src = `img/portrait/${data.subfolder}/${p}`;
+                            pImg.title = p;
+                            pImg.className = 'portrait-option';
+                            pImg.onclick = () => {
+                                currentMapping[char][variantName] = `img/portrait/${data.subfolder}/${p}`;
+                                currentImg.src = `img/portrait/${data.subfolder}/${p}`;
+                                Array.from(opts.children).forEach(c => c.classList.remove('selected'));
+                                pImg.classList.add('selected');
+                            };
+                            opts.appendChild(pImg);
+                        });
+                        
+                        row.appendChild(nameDiv);
+                        row.appendChild(currentImg);
+                        row.appendChild(opts);
+                        sec.appendChild(row);
+                    });
+                    
+                    container.appendChild(sec);
+                }
+            } catch (e) {
+                document.getElementById('container').innerHTML = `<p style="color:red">Erro ao carregar tmp_mapping_prep.json: ${e.message}</p>`;
+            }
+        }
+
+        function exportMapping() {
+            let output = '// =====================================================\n// PORTRAIT MAPPING DATA\n// Maps Portuguese variant names to their respective portrait image paths\n// =====================================================\n\nexport const PORTRAIT_MAP = {\n';
+            for (const char in currentMapping) {
+                output += `    "${char}": {\n`;
+                for (const variant in currentMapping[char]) {
+                    const img = currentMapping[char][variant];
+                    if (img) {
+                        output += `        "${variant}": "${img}",\n`;
+                    }
+                }
+                output += `    },\n`;
+            }
+            output += '};\n\n/**\n * Returns the exact portrait image for a given variant, based on mapping\n */\nexport function getPortraitImage(charKey, variantName) {\n    if (PORTRAIT_MAP[charKey] && PORTRAIT_MAP[charKey][variantName]) {\n        return PORTRAIT_MAP[charKey][variantName];\n    }\n    // Fallback if mapping fails or new variant is not yet mapped\n    return `img/icones/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;\n}';
+            
+            const textarea = document.getElementById('output');
+            textarea.value = output;
+            textarea.scrollIntoView({ behavior: 'smooth' });
+            alert("Código gerado! Role até o final da página, copie o texto e cole-o em src/data/portraitMap.js");
+        }
+
+        init();
+    </script>
+</body>
+</html>

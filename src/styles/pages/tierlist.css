@@ -539,28 +539,48 @@ input:checked+.slider:before {
 .tier-table.compact-mode .tier-char-cell {
     width: auto;
     padding: 2px 0;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 0;
 }
 
 .tier-table.compact-mode .tier-char-cell>img {
     display: none;
+    /* Hide original full image in compact mode */
 }
 
+/* Portrait container logic */
 .compact-char-info {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 8px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.compact-portrait-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.compact-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 /* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
-/* Você pode alterar os valores de 24px abaixo para o tamanho que desejar (ex: 30px, 40px) */
-
 .tier-table.compact-mode .tier-char-cell .compact-mastery-icon {
     display: block !important;
-    width: 24px !important;
-    /* Ajuste aqui o tamanho da Maestria */
-    height: 24px !important;
+    width: 18px !important;
+    height: 18px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -569,7 +589,6 @@ input:checked+.slider:before {
 .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
     display: block !important;
     width: 20px !important;
-    /* Ajuste aqui o tamanho da Raridade */
     height: 20px !important;
     object-fit: contain;
     border-radius: 0;
@@ -578,10 +597,9 @@ input:checked+.slider:before {
 
 /* =============================================== */
 
+/* Remove text rendering config inside since we no longer use spans in compact mode. */
 .tier-table.compact-mode .tier-char-cell span {
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-align: left;
+    display: none;
 }
 
 .tier-table.compact-mode .rank-badge {
