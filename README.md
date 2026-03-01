@@ -35,9 +35,4 @@ Estilos que são específicos de uma única página.
 -   `tierlist.css`: Página e editor da Tier List.
 -   `catalysts.css`: Página de catalisadores.
 
-### Como funciona?
-O arquivo `src/styles/main.css` agora serve apenas como um ponto de entrada (entry point). Ele utiliza `@import` para carregar todos os módulos na ordem correta, garantindo que a especificidade do CSS (cascade) funcione como esperado.
 
-Para modificar um estilo, vá direto ao arquivo correspondente (ex: quer mudar a cor de um botão? Edite `components/buttons.css`).
-
-> **Nota:** O arquivo antigo foi preservado como `src/styles/main.css.legacy` para segurança, mas pode ser removido quando desejar.
