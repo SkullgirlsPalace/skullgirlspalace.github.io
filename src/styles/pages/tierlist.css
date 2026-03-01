@@ -539,28 +539,56 @@ input:checked+.slider:before {
 .tier-table.compact-mode .tier-char-cell {
     width: auto;
     padding: 2px 0;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 0;
 }
 
 .tier-table.compact-mode .tier-char-cell>img {
     display: none;
+    /* Hide original full image in compact mode */
 }
 
+/* Portrait container logic */
 .compact-char-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 2px;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.compact-portrait-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.compact-portrait-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.compact-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 /* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
-/* Você pode alterar os valores de 24px abaixo para o tamanho que desejar (ex: 30px, 40px) */
-
-.tier-table.compact-mode .tier-char-cell .compact-mastery-icon {
+.tier-table.compact-mode .tier-char-cell .compact-element-icon {
     display: block !important;
-    width: 24px !important;
-    /* Ajuste aqui o tamanho da Maestria */
-    height: 24px !important;
+    width: 32px !important;
+    height: 32px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -568,20 +596,52 @@ input:checked+.slider:before {
 
 .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
     display: block !important;
-    width: 20px !important;
-    /* Ajuste aqui o tamanho da Raridade */
-    height: 20px !important;
+    width: 34px !important;
+    height: 34px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
 }
 
+/* RESPONSIVE IMAGES */
+@media screen and (max-width: 768px) {
+    .compact-portrait-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-element-icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-variant-name {
+        max-width: 75px;
+        font-size: 0.84rem;
+    }
+}
+
 /* =============================================== */
 
-.tier-table.compact-mode .tier-char-cell span {
-    font-size: 0.95rem;
+/* Ensure the variant name wraps nicely and has a fixed max width so it doesn't break the layout. */
+.tier-table.compact-mode .tier-char-cell .compact-variant-name {
+    display: block;
+    /* Overrides the previous display: none if there was any */
+    font-size: 1.18rem;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
+    max-width: 160px;
+    white-space: normal;
+    word-break: break-word;
+    /* Allows long names to break lines if needed */
+    line-height: 1.1;
+    color: #fff;
+    margin-top: 4px;
 }
 
 .tier-table.compact-mode .rank-badge {

@@ -96,6 +96,7 @@
     padding: 16px;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
 }
 
 .effects-table th {
@@ -195,4 +196,3 @@
         font-size: 2rem;
     }
 }
-

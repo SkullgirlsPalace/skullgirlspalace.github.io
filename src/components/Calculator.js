@@ -194,7 +194,7 @@ export function createCalculator() {
                                     <button class="toggle-btn" data-source="shiny" data-type="golpeShiny">✨ Shiny (50% desconto)</button>
                                 </div>
 
-                                <span class="toggle-label">Nível Alvo:</span>
+                                <span class="toggle-label">Nível Desejado:</span>
                                 <div class="toggle-group exclusive" id="golpe-nivel-toggles">
                                     <button class="toggle-btn" data-source="9" data-type="golpeNivel">Lv 9</button>
                                     <button class="toggle-btn" data-source="12" data-type="golpeNivel">Lv 12</button>
@@ -208,6 +208,16 @@ export function createCalculator() {
                                     <div class="slider-labels">
                                         <span>2</span>
                                         <span>15</span>
+                                    </div>
+                                </div>
+
+                                <span class="toggle-label">Nível Inicial:</span>
+                                <div id="golpe-nivel-inicial-container" class="slider-container">
+                                    <span class="toggle-label">Nível: <span id="golpe-nivel-inicial-display">1</span></span>
+                                    <input type="range" id="golpe-nivel-inicial-slider" min="1" max="14" step="1" value="1" oninput="updateGolpeInicialSlider(this.value)">
+                                    <div class="slider-labels">
+                                        <span>1</span>
+                                        <span id="golpe-nivel-inicial-max-label">14</span>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +294,39 @@ export function updateGolpeSlider(value) {
     if (display) {
         display.textContent = value;
     }
+    syncGolpeInicialMax(parseInt(value));
     calculateBuildCost();
+}
+
+/**
+ * Update golpe initial level slider display value
+ */
+export function updateGolpeInicialSlider(value) {
+    const display = document.getElementById('golpe-nivel-inicial-display');
+    if (display) {
+        display.textContent = value;
+    }
+    calculateBuildCost();
+}
+
+/**
+ * Sync the max of the initial level slider with the desired level
+ * @param {number} nivelDesejado - The desired (target) level
+ */
+export function syncGolpeInicialMax(nivelDesejado) {
+    const slider = document.getElementById('golpe-nivel-inicial-slider');
+    const display = document.getElementById('golpe-nivel-inicial-display');
+    const maxLabel = document.getElementById('golpe-nivel-inicial-max-label');
+    if (!slider) return;
+
+    const newMax = Math.max(1, nivelDesejado - 1);
+    slider.max = newMax;
+    if (parseInt(slider.value) > newMax) {
+        slider.value = newMax;
+    }
+    // Always sync display text with actual slider value
+    if (display) display.textContent = slider.value;
+    if (maxLabel) maxLabel.textContent = newMax;
 }
 
 /**
@@ -329,12 +371,20 @@ export function initToggleButtons() {
                     }
                 }
 
-                // Handle golpe slider visibility
+                // Handle golpe slider visibility and sync initial level
                 if (group.id === 'golpe-nivel-toggles') {
                     const sliderContainer = document.getElementById('golpe-slider-container');
                     if (sliderContainer) {
                         sliderContainer.style.display = btn.dataset.source === 'custom' ? 'block' : 'none';
                     }
+                    // Sync initial level max with the newly selected desired level
+                    let nivelDesejado;
+                    if (btn.dataset.source === 'custom') {
+                        nivelDesejado = parseInt(document.getElementById('golpe-nivel-slider')?.value || '2');
+                    } else {
+                        nivelDesejado = parseInt(btn.dataset.source);
+                    }
+                    syncGolpeInicialMax(nivelDesejado);
                 }
 
                 // Handle astro slider visibility
@@ -369,6 +419,15 @@ export function initToggleButtons() {
     checkSliderVisibility('guilda-tier-toggles', 'diamante-slider-container', 'diamante');
     checkSliderVisibility('golpe-nivel-toggles', 'golpe-slider-container', 'custom');
     checkSliderVisibility('astro-raridade-toggles', 'astro-slider-container', 'custom');
+
+    // Initial sync of golpe-nivel-inicial max with the active desired level
+    const activeGolpeNivel = getActiveToggle('golpe-nivel-toggles');
+    if (activeGolpeNivel && activeGolpeNivel !== 'custom') {
+        syncGolpeInicialMax(parseInt(activeGolpeNivel));
+    } else if (activeGolpeNivel === 'custom') {
+        const sliderVal = parseInt(document.getElementById('golpe-nivel-slider')?.value || '2');
+        syncGolpeInicialMax(sliderVal);
+    }
 }
 
 /**
@@ -608,16 +667,17 @@ export function calculateBuildCost() {
             golpeNivelAlvo = parseInt(golpeNivelSelection);
         }
 
-        // Calculate accumulated cost
-        let custoAteNivel = 0;
-        for (let i = 2; i <= golpeNivelAlvo; i++) {
-            custoAteNivel += golpesData.custoPorNivel[String(i)] || 0;
+        // Get initial level from slider (default 1)
+        const golpeNivelInicial = parseInt(document.getElementById('golpe-nivel-inicial-slider')?.value || '1');
+
+        // Calculate accumulated cost for the interval (inicial+1 to alvo)
+        let custoIntervalo = 0;
+        for (let i = golpeNivelInicial + 1; i <= golpeNivelAlvo; i++) {
+            custoIntervalo += golpesData.custoPorNivel[String(i)] || 0;
         }
 
-        const custoDoNivel = golpesData.custoPorNivel[String(golpeNivelAlvo)] || 0;
-        const custoUmGolpe = custoAteNivel;
+        const custoUmGolpe = custoIntervalo;
         const custoBuild = custoUmGolpe * 5;
-        const custoDoNivelBuild = custoDoNivel * 5;
 
         // Reference cost from personagemCompleto
         const shinyKey = golpeShiny ? 'shiny' : 'normal';
@@ -625,9 +685,9 @@ export function calculateBuildCost() {
 
         golpesResult = {
             nivelAlvo: golpeNivelAlvo,
+            nivelInicial: golpeNivelInicial,
             custoUmGolpe,
             custoBuild,
-            custoDoNivelBuild,
             custoPersonagem,
             raridade: golpeRaridade,
             isShiny: golpeShiny
@@ -685,29 +745,24 @@ export function calculateBuildCost() {
     if (!breakdownBox) return;
 
     // Calculate totals
-    const totalCoins = (golpesResult?.custoBuild || 0) + (astrosResult?.gold || 0);
+    const totalCoins = (golpesResult?.custoBuild || 0) + (golpesResult?.custoPersonagem || 0) + (astrosResult?.gold || 0);
     const totalPo = astrosResult?.po || 0;
 
     let html = '<div class="build-cost-details">';
 
     // Golpes section
     if (golpesResult) {
-        const nivelAnterior = golpesResult.nivelAlvo - 1;
         html += `
             <div class="cost-section golpes">
                 <h5>⚔️ Golpes ${golpesResult.isShiny ? '✨' : ''}</h5>
                 <ul>
                     <li>
-                        <span>1 golpe (Lv1→${golpesResult.nivelAlvo})</span>
+                        <span>1 golpe (Lv${golpesResult.nivelInicial}→${golpesResult.nivelAlvo})</span>
                         <span class="value">${formatNumber(golpesResult.custoUmGolpe)}</span>
                     </li>
                     <li>
-                        <span>5 golpes (Lv1→${golpesResult.nivelAlvo})</span>
+                        <span>5 golpes (Lv${golpesResult.nivelInicial}→${golpesResult.nivelAlvo})</span>
                         <span class="value">${formatNumber(golpesResult.custoBuild)}</span>
-                    </li>
-                    <li>
-                        <span>5 golpes (Lv${nivelAnterior}→${golpesResult.nivelAlvo})</span>
-                        <span class="value">${formatNumber(golpesResult.custoDoNivelBuild)}</span>
                     </li>
                     ${golpesResult.custoPersonagem ? `
                     <li>

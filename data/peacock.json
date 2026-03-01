@@ -23,7 +23,7 @@
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Liguem os Motores!BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Liguem os Motores!, BANG, BANG, BANG!, Vai, George!"
             },
             {
                 "name": "Apanhadora De Sonhos",
@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Multidão Enfurecida, Esquadrilha da Fumaça,, Liguem os Motores!Vai, George! BANG, BANG, BANG!"
+                "recommended_arsenal": "Multidão Enfurecida, Esquadrilha da Fumaça, Liguem os Motores!, Vai, George!, BANG, BANG, BANG!"
             },
             {
                 "name": "Quebra de Contrato",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, , Multidão Enfurecida, , BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!"
             }
         ],
         "ouro": [
@@ -91,7 +91,7 @@
                 },
                 "marquee_ability": "Episódio especial",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Bons Companheiros, Agonia de Argo, Dia do Julgamento, Vai, George!Explosão"
+                "recommended_arsenal": "Bons Companheiros, Agonia de Argo, Dia do Julgamento, Vai, George!, Explosão"
             },
             {
                 "name": "Velhos Tempos",
@@ -113,7 +113,7 @@
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Aeroporto Mortal, Agonia de Argo, Dia do Julgamento, Vai, George!Explosão"
+                "recommended_arsenal": "Aeroporto Mortal, Agonia de Argo, Dia do Julgamento, Vai, George!, Explosão"
             },
             {
                 "name": "Prodígio Primitivo",
@@ -135,7 +135,7 @@
                 },
                 "marquee_ability": "Episódio Especial ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Liguem os Motores!BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Liguem os Motores!, BANG, BANG, BANG!, Vai, George!"
             },
             {
                 "name": "Ultraviolenta",
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Multidão Enfurecida,, Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Multidão Enfurecida, Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
             },
             {
                 "name": "A Malvada",
@@ -179,7 +179,7 @@
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Aeroporto Mortal, , Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Aeroporto Mortal, Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
             },
             {
                 "name": "Ícone Iônico",
@@ -201,7 +201,7 @@
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Multidão Enfurecida,, Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Multidão Enfurecida, Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
             }
         ],
         "prata": [
@@ -225,7 +225,7 @@
                 },
                 "marquee_ability": "Episódio Especial ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Multidão Enfurecida, Esquadrilha da Fumaça, Liguem os Motores!BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Multidão Enfurecida, Esquadrilha da Fumaça, Liguem os Motores!, BANG, BANG, BANG!, Vai, George!"
             },
             {
                 "name": "Plumagem Prismática",
@@ -247,7 +247,7 @@
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), , Quem Vem Agora? (Expulsão)"
+                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), Quem Vem Agora? (Expulsão)"
             },
             {
                 "name": "Cara Pintada",
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Multidão Enfurecida, Esquadrilha da Fumaça, Liguem os Motores!BANG, BANG, BANG!, Vai, George!"
+                "recommended_arsenal": "Multidão Enfurecida, Esquadrilha da Fumaça, Liguem os Motores!, BANG, BANG, BANG!, Vai, George!"
             },
             {
                 "name": "Chumbinho",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), , Quem Vem Agora? (Expulsão)"
+                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), Quem Vem Agora? (Expulsão)"
             }
         ],
         "bronze": [
@@ -315,7 +315,7 @@
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), , Quem Vem Agora? (Expulsão)"
+                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), Quem Vem Agora? (Expulsão)"
             },
             {
                 "name": "Esboço",
@@ -337,7 +337,7 @@
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), , Quem Vem Agora? (Expulsão)"
+                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), Quem Vem Agora? (Expulsão)"
             }
         ]
     }

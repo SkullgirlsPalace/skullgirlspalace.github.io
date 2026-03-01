@@ -26,7 +26,7 @@
                     "> DDOS (Defesa)"
                 ],
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, , Corte Rápido,, Raio de Calor, Raio de Teonita"
+                "recommended_arsenal": "ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Corte Rápido, Raio de Calor, Raio de Teonita"
             },
             {
                 "name": "X-Bot",
@@ -48,7 +48,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             },
             {
                 "name": "Replicada",
@@ -70,7 +70,7 @@
                 },
                 "marquee_ability": "DDOS",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita,, Explosão"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Explosão"
             },
             {
                 "name": "Pulso de Prótons",
@@ -92,7 +92,7 @@
                 },
                 "marquee_ability": "DDOS",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítica e Dano Crítico",
-                "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, , CANHÃO DRAMÁTICO ALFA, Raio de Teonita, , Fidget Spin"
+                "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Raio de Teonita, Fidget Spin"
             }
         ],
         "ouro": [
@@ -119,7 +119,7 @@
                     "> DDOS (Defesa)"
                 ],
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             },
             {
                 "name": "Tela Azul",
@@ -141,7 +141,7 @@
                 },
                 "marquee_ability": "DDOS",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita,, Explosão"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Explosão"
             },
             {
                 "name": "Terror Byte",
@@ -163,7 +163,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, , BATERIA DE ASSALTO, Rotação Perigosa!, , Fidget Spin"
+                "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, BATERIA DE ASSALTO, Rotação Perigosa!, Fidget Spin"
             },
             {
                 "name": "Persona Grata",
@@ -185,7 +185,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, , Corte Rápido,, Raio de Calor, Raio de Teonita"
+                "recommended_arsenal": "ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Corte Rápido, Raio de Calor, Raio de Teonita"
             },
             {
                 "name": "Caça-cabeças",
@@ -207,7 +207,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             },
             {
                 "name": "Tritura-Números",
@@ -229,7 +229,7 @@
                 },
                 "marquee_ability": "DDOS",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, , CANHÃO DRAMÁTICO ALFA, Raio de Teonita, , Fidget Spin"
+                "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Raio de Teonita, Fidget Spin"
             }
         ],
         "prata": [
@@ -253,7 +253,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             },
             {
                 "name": "Nyanotec",
@@ -275,7 +275,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             },
             {
                 "name": "Protetor Vetor",
@@ -297,7 +297,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             },
             {
                 "name": "Ronrominador",
@@ -319,7 +319,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítica e Dano Crítico",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, , ARMADILHA MAGNÉTICA,, CANHÃO DRAMÁTICO ALFA, , Raio de Teonita, , Fidget Spin"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Raio de Teonita, Fidget Spin"
             }
         ],
         "bronze": [
@@ -343,7 +343,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Ganho Medidor",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, , CANHÃO DRAMÁTICO ALFA,, BATERIA DE ASSALTO, , Raio de Calor,, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, BATERIA DE ASSALTO, Raio de Calor, Raio de Teonita"
             },
             {
                 "name": "M-1AU",
@@ -365,7 +365,7 @@
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, , Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
             }
         ]
     }

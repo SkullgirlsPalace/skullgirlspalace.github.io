@@ -23,7 +23,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
             },
             {
                 "name": "Poder Sombrio",
@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "Desafiante",
                 "recommended_build": "",
-                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm,  , Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
+                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
             },
             {
                 "name": "Picada de Cobra",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Lupine Pummel, Gigant Arm, , Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
             },
             {
                 "name": "Ogros Têm Camadas",
@@ -89,7 +89,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Lupine Pummel, Gigant Arm, , Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
             }
         ],
         "ouro": [
@@ -113,7 +113,7 @@
                 },
                 "marquee_ability": "Desafiante",
                 "recommended_build": "",
-                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm,  , Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
+                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
             },
             {
                 "name": "Dragão Brigão",
@@ -135,7 +135,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm, , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+                "recommended_arsenal": "Three Wulf Moonsault, Gigant Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
             },
             {
                 "name": "Praga do Lobo",
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
             },
             {
                 "name": "Pico Bola",
@@ -179,7 +179,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
             },
             {
                 "name": "Último Lutador",
@@ -201,7 +201,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Dano Crítico",
-                "recommended_arsenal": "Lupine Pummel, Geatish Trepak, , Wulf Shoot, Wulf Shoot,  Aroo Ready? (Provocar)"
+                "recommended_arsenal": "Lupine Pummel, Geatish Trepak, Wulf Shoot, Wulf Shoot,  Aroo Ready? (Provocar)"
             },
             {
                 "name": "Homem de Gelo",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+                "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
             }
         ],
         "prata": [
@@ -247,7 +247,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Lupine Pummel, Gigant Arm Sweep, , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot, "
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm Sweep, Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot, "
             },
             {
                 "name": "Número Um",
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Lupine Pummel, Gigant Arm, , Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
+                "recommended_arsenal": "Lupine Pummel, Gigant Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Aroo Ready? (Provocar)"
             },
             {
                 "name": "Promotor",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Precisão",
-                "recommended_arsenal": "Lupine Pummel, Wulf Shoot, , Wulf Shoot, Wulf Shoot, Aroo Ready? (Provocar)"
+                "recommended_arsenal": "Lupine Pummel, Wulf Shoot, Wulf Shoot, Wulf Shoot, Aroo Ready? (Provocar)"
             },
             {
                 "name": "Favorito dos Fãs",
@@ -313,7 +313,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
             }
         ],
         "bronze": [
@@ -337,7 +337,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+                "recommended_arsenal": "Gigant Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
             },
             {
                 "name": "Lobo Azarão",
@@ -359,7 +359,7 @@
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
-                "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), , Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+                "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
             }
         ]
     }

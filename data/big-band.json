@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             },
             {
                 "name": "Heavy Metal",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor ou Precisão",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             }
         ],
         "ouro": [
@@ -91,7 +91,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             },
             {
                 "name": "Megassônico",
@@ -201,7 +201,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             },
             {
                 "name": "Ganhando Vantagem",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             },
             {
                 "name": "Desarmonizador",
@@ -313,7 +313,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             }
         ],
         "bronze": [
@@ -337,7 +337,7 @@
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Tuba Tuba, Soco Labrosone, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Soco Labrosone, Pedalada Gigante, Porrada de Pratos, Explosão"
             },
             {
                 "name": "Superjazz",
@@ -359,7 +359,7 @@
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos,, Explosão"
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             }
         ]
     }
