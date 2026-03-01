@@ -108,18 +108,18 @@ export function createVariantCard(variant, charKey, index = 0) {
                     <!-- Habilidade Tab (Signature + Marquee Unified) -->
                     <div class="variant-tab-content active" data-tab="habilidade">
                         <div class="ability-box ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'signature_ability')">
-                            <h4 style="color: ${charColor}; margin-bottom: 8px;">
-                                ${saName}
+                            <h4 style="margin-bottom: 8px;">
+                                <span style="color: var(--accent-gold)">HABILIDADE CARACTERÍSTICA:</span>
+                                <span style="color: #fff; margin-left: 6px;">${saName.toUpperCase()}</span>
                             </h4>
                             <p style="margin-bottom: 16px;">${abilityDesc}</p>
                             
                             <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
-                            <h4 style="color: ${charColor}; font-size: 0.85rem; margin-bottom: 6px;">
-                                Habilidade Característica: <span style="color: inherit; margin-left: 6px;">${saName.toUpperCase()}</span>
-                            </h4>
+                            
                             ${variant.marquee_ability ? `
-                                <h4 style="color: ${charColor}; font-size: 0.85rem; margin-bottom: 0;">
-                                    SUPERIOR RECOMENDADA: <span style="color: inherit; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
+                                <h4 style="font-size: 0.85rem; margin-bottom: 0;">
+                                    <span style="color: var(--accent-gold)">SUPERIOR RECOMENDADA:</span>
+                                    <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
                                 </h4>
                             ` : ''}
                         </div>
