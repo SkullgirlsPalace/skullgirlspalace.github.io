@@ -179,7 +179,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Febre de gato, , Gato sonolento (Provocar), , Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
             },
             {
                 "name": "Corta e Afoga",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Febre de gato, , Gato sonolento (Provocar), , Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
             }
         ],
         "prata": [
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Febre de gato, , Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
             },
             {
                 "name": "Sorte Felina",

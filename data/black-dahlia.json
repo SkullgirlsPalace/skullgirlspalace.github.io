@@ -89,7 +89,7 @@
                 },
                 "marquee_ability": "Descontrole Metálico",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Empoderar, , Capacho, , Perigo no Cenário, , Massacre, , Pêndulo da Morte "
+                "recommended_arsenal": "Empoderar, Capacho, Perigo no Cenário, Massacre, Pêndulo da Morte "
             }
         ],
         "ouro": [
@@ -113,7 +113,7 @@
                 },
                 "marquee_ability": "Não Há Tempo Para Morrer (Defesa) / Descontrole Metálico (Ataque)",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Empoderar, Capacho,, Presente de Despedida,, Massacre, Pêndulo da Morte "
+                "recommended_arsenal": "Empoderar, Capacho, Presente de Despedida, Massacre, Pêndulo da Morte "
             },
             {
                 "name": "Fora-da-Lei Marcial",
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "Descontrole Metálico (Opcional)",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Empoderar, , Capacho, , Perigo no Cenário, , Massacre, Pêndulo da Morte,  "
+                "recommended_arsenal": "Empoderar, Capacho, Perigo no Cenário, Massacre, Pêndulo da Morte,  "
             },
             {
                 "name": "Psicomandante",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "Descontrole Metálico",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat Especial",
-                "recommended_arsenal": "Empoderar, Capacho, , Deslizando, , Massacre,  Ratoeira dos Medici"
+                "recommended_arsenal": "Empoderar, Capacho, Deslizando, Massacre,  Ratoeira dos Medici"
             }
         ],
         "prata": [

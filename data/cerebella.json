@@ -23,7 +23,7 @@
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Diamante Bruto, , Excelebella,, Dínamo Diamante, , Cerecóptero, Cavalo de Alça"
+                "recommended_arsenal": "Diamante Bruto, Excelebella, Dínamo Diamante, Cerecóptero, Cavalo de Alça"
             },
             {
                 "name": "Mão Pesada",
@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Mekastar",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Ciclone Carmesim",
@@ -113,7 +113,7 @@
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Arlequim",
@@ -135,7 +135,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Arremesso de Martelo (Expulsão), Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Arremesso de Martelo (Expulsão), Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Blitz e Glamour",
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Cérebro Gelado",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             }
         ],
         "prata": [
@@ -247,7 +247,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Arremesso de Martelo (Expulsão), Chifrada Montanhesa,  Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Arremesso de Martelo (Expulsão), Chifrada Montanhesa,  Gorilassel"
             },
             {
                 "name": "Guerreira Toad",
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Ressurgente",
@@ -337,7 +337,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             },
             {
                 "name": "Cabeça Dura",
@@ -359,7 +359,7 @@
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Rede de Segurança, , Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
             }
         ]
     }

@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "Centro de Traumas",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             },
             {
                 "name": "Negócio Sangrento",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             },
             {
                 "name": "Très Chic",
@@ -89,7 +89,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             },
             {
                 "name": "Perto da Morte",
@@ -111,7 +111,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             }
         ],
         "ouro": [
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             },
             {
                 "name": "Morro Quieto",
@@ -179,7 +179,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             },
             {
                 "name": "Presa Final",
@@ -201,7 +201,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             },
             {
                 "name": "Cirurgiã-General",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "Centro de Traumas",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             },
             {
                 "name": "Superluminal",
@@ -245,7 +245,7 @@
                 },
                 "marquee_ability": "Centro de Traumas",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             }
         ],
         "prata": [
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "UTI (Ataque) / Centro de Traumas (Suporte)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             },
             {
                 "name": "Matadora Joy",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "Centro de Traumas",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             },
             {
                 "name": "Mai-s O Quê?",
@@ -313,7 +313,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             },
             {
                 "name": "Hallow – Demônio",
@@ -335,7 +335,7 @@
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                "recommended_arsenal": "Laringectomia, Incisão Excessiva, , Contraveneno: Paralisia,, Contraveneno: Detox, Risco Biológico: Tipo A"
+                "recommended_arsenal": "Laringectomia, Incisão Excessiva, Contraveneno: Paralisia, Contraveneno: Detox, Risco Biológico: Tipo A"
             }
         ],
         "bronze": [
@@ -359,7 +359,7 @@
                 },
                 "marquee_ability": "Centro de Traumas",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             },
             {
                 "name": "Quente com Gelo",
@@ -381,7 +381,7 @@
                 },
                 "marquee_ability": "Centro de Traumas",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), , Risco Biológico: Tipo A"
+                "recommended_arsenal": "Ressuscitação Agressiva, Contraveneno: Detox, Contraveneno: Paralisia, Triagem! (Expulsão), Risco Biológico: Tipo A"
             }
         ]
     }

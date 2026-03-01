@@ -74,8 +74,36 @@ export function formatArsenal(arsenal, charKey = null) {
     // Remove Discord emoji codes
     arsenal = arsenal.replace(/<:[^:]+:\d+>/g, '');
 
+    // Known moves with commas
+    const SPECIAL_MOVES = [
+        "Contra, Ataque!",
+        "Nekhbet, a Abutre",
+        "Vai, George!",
+        "BANG, BANG, BANG!",
+        "Lenny, o Solitário"
+    ];
+
+    // Temporarily replace special moves with placeholders to prevent splitting
+    SPECIAL_MOVES.forEach((move, index) => {
+        // Use a safe placeholder that won't be in the text
+        const placeholder = `__SPECIAL_MOVE_${index}__`;
+        // Replace all occurrences (case-insensitive to be safe)
+        const regex = new RegExp(move.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+        arsenal = arsenal.replace(regex, placeholder);
+    });
+
     // Split by comma
-    const items = arsenal.split(/,\s*/).filter(item => item.trim());
+    let items = arsenal.split(/,\s*/).filter(item => item.trim());
+
+    // Restore special moves from placeholders
+    items = items.map(item => {
+        let restoredItem = item;
+        SPECIAL_MOVES.forEach((move, index) => {
+            const placeholder = `__SPECIAL_MOVE_${index}__`;
+            restoredItem = restoredItem.replace(placeholder, move);
+        });
+        return restoredItem;
+    });
 
     if (charKey) {
         return items.map(item => {

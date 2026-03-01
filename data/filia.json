@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Senta a Pua!, , Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             },
             {
                 "name": "Borrão Azul",
@@ -116,7 +116,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Cuspida, , Senta a Pua!, , Die Verwandlung, Espinho Trançado, Explosão"
+                "recommended_arsenal": "Cuspida, Senta a Pua!, Die Verwandlung, Espinho Trançado, Explosão"
             },
             {
                 "name": "Cachinhos Malvados",
@@ -138,7 +138,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                "recommended_arsenal": "Cuspida, , Senta a Pua!, , Die Verwandlung, Espinho Trançado, Explosão"
+                "recommended_arsenal": "Cuspida, Senta a Pua!, Die Verwandlung, Espinho Trançado, Explosão"
             },
             {
                 "name": "Trança Parasita",
@@ -160,7 +160,7 @@
                 },
                 "marquee_ability": "O Primeiro Corte",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             },
             {
                 "name": "Estrela Virtual",
@@ -182,7 +182,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             },
             {
                 "name": "Cabelos ao Vento",
@@ -226,7 +226,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             }
         ],
         "prata": [
@@ -250,7 +250,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Explosão,  Mechas Soltas (Expulsão)"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Explosão,  Mechas Soltas (Expulsão)"
             },
             {
                 "name": "Frio Cortante",
@@ -272,7 +272,7 @@
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             },
             {
                 "name": "Cabelo Rebelde",
@@ -344,7 +344,7 @@
                 },
                 "marquee_ability": "O Primeiro Corte",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             },
             {
                 "name": "Pontas Duplas",
@@ -366,7 +366,7 @@
                 },
                 "marquee_ability": "O Primeiro Corte",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Senta a Pua!,, Espinho Trançado, , Espinho Trançado, Espinho Trançado, Espinho Trançado"
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             }
         ]
     }
