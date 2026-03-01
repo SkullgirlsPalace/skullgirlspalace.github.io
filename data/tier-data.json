@@ -1,7 +1,7 @@
 {
     "annie": {
         "Rosa Estelar": {
-            "pf": "A",
+            "pf": "S",
             "riftOff": "S",
             "riftDef": "A",
             "parallel": "SS"
@@ -13,94 +13,94 @@
             "parallel": "A"
         },
         "Brilho das Estrelas": {
-            "pf": "S",
-            "riftOff": "A",
+            "pf": "SS",
+            "riftOff": "S",
             "riftDef": "B",
-            "parallel": "S"
+            "parallel": "SS"
         },
         "Marcas de Fogo": {
             "pf": "SS",
             "riftOff": "S",
             "riftDef": "C",
-            "parallel": "S"
+            "parallel": "SS"
         },
         "Vínculo de Alma": {
             "pf": "S",
-            "riftOff": "A",
-            "riftDef": "B",
-            "parallel": "A"
+            "riftOff": "S",
+            "riftDef": "C",
+            "parallel": "S"
         },
         "Maravilha Eterna": {
-            "pf": "A",
+            "pf": "B",
             "riftOff": "B",
-            "riftDef": "A",
+            "riftDef": "B",
             "parallel": "B"
         },
         "Ondina": {
-            "pf": "A",
+            "pf": "SS",
             "riftOff": "B",
-            "riftDef": "B",
-            "parallel": "A"
+            "riftDef": "I",
+            "parallel": "SS"
         },
         "Heroína do Tempo": {
             "pf": "B",
             "riftOff": "C",
-            "riftDef": "C",
+            "riftDef": "I",
             "parallel": "B"
         },
         "Garota Material": {
-            "pf": "B",
+            "pf": "S",
             "riftOff": "B",
-            "riftDef": "B",
-            "parallel": "B"
+            "riftDef": "I",
+            "parallel": "S"
         },
         "Rebelde Cósmica": {
-            "pf": "A",
+            "pf": "SS",
             "riftOff": "A",
-            "riftDef": "B",
-            "parallel": "B"
+            "riftDef": "I",
+            "parallel": "SS"
         },
         "Princesa da Lua": {
-            "pf": "B",
+            "pf": "S",
             "riftOff": "B",
-            "riftDef": "A",
-            "parallel": "B"
+            "riftDef": "I",
+            "parallel": "S"
         },
         "Ameaça Tripla": {
-            "pf": "B",
-            "riftOff": "B",
-            "riftDef": "B",
-            "parallel": "B"
+            "pf": "A",
+            "riftOff": "A",
+            "riftDef": "I",
+            "parallel": "A"
         },
         "Glamour Galático": {
-            "pf": "C",
+            "pf": "B",
             "riftOff": "C",
-            "riftDef": "B",
-            "parallel": "C"
-        },
-        "Estrela Ninja": {
-            "pf": "S",
-            "riftOff": "A",
             "riftDef": "C",
             "parallel": "B"
         },
-        "Srta. Mercúrio": {
-            "pf": "B",
+        "Estrela Ninja": {
+            "pf": "SS",
             "riftOff": "B",
-            "riftDef": "B",
-            "parallel": "B"
+            "riftDef": "I",
+            "parallel": "SS"
+        },
+        "Srta. Mercúrio": {
+            "pf": "S",
+            "riftOff": "B",
+            "riftDef": "I",
+            "parallel": "S"
         },
         "Criança Estelar": {
             "pf": "B",
             "riftOff": "C",
-            "riftDef": "C",
-            "parallel": "C"
+            "riftDef": "I",
+            "parallel": "B"
         },
         "Chama Solar": {
-            "pf": "C",
+            "pf": "S",
             "riftOff": "C",
-            "riftDef": "C",
-            "parallel": "C"
+            "riftDef": "I",
+            "parallel": "S"
         }
     },
     "beowulf": {
