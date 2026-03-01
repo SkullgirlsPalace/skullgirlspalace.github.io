@@ -165,8 +165,9 @@ function renderEffects(type, containerId) {
 
     let html = '';
 
-    effects.forEach(effect => {
+    effects.forEach((effect, index) => {
         const stacks = effect.stacks ? `${effect.stacks}x` : '-';
+        const effectColor = effect.color || 'var(--text-primary)';
         html += `
             <tr class="effect-row">
                 <td class="effect-icon-cell">
@@ -175,11 +176,11 @@ function renderEffects(type, containerId) {
                     </div>
                 </td>
                 <td class="effect-name-cell">
-                    <span class="effect-name">${effect.name}</span>
+                    <span class="effect-name" style="color: ${effectColor};">${effect.name}</span>
                 </td>
                 <td class="effect-desc-cell">
-                    <p><strong>Descrição do Jogo:</strong> ${effect.detailed}</p>
-                    ${effect.explicacao ? `<p style="margin-top: 6px;"><strong>Explicação:</strong> ${effect.explicacao}</p>` : ''}
+                    <p><strong style="color: ${effectColor};">Descrição do Jogo:</strong> ${effect.detailed}</p>
+                    ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effectColor};">Explicação:</strong> ${effect.explicacao}</p>` : ''}
                     ${effect.scaling ? `<small class="effect-scaling" style="display: block; margin-top: 6px;">Escalonamento: ${effect.scaling}</small>` : ''}
                 </td>
                 <td class="effect-stacks-cell">${stacks}</td>
