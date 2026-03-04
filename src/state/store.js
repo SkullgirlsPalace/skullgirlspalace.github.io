@@ -10,6 +10,7 @@ const state = {
     catalysts: null,
     statistics: null,
     tierData: {},
+    userPreferences: JSON.parse(localStorage.getItem('SGM_USER_PREFS') || '{"catalystNotes":{}}'),
 
     // UI State
     currentCharacter: null,
@@ -204,5 +205,19 @@ export function toggleMobileMenu() {
 export function toggleFilterBar() {
     state.isFilterBarOpen = !state.isFilterBarOpen;
     notifySubscribers();
+}
+
+/**
+ * Update user notes for a specific catalyst
+ * @param {string} catalystName - Name of the catalyst
+ * @param {string} note - User note text
+ */
+export function updateCatalystNote(catalystName, note) {
+    if (!state.userPreferences.catalystNotes) {
+        state.userPreferences.catalystNotes = {};
+    }
+    state.userPreferences.catalystNotes[catalystName] = note;
+    localStorage.setItem('SGM_USER_PREFS', JSON.stringify(state.userPreferences));
+    // notifySubscribers(); // We may not want to re-render the whole app on keystroke to avoid losing focus
 }
 

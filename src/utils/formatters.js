@@ -60,7 +60,7 @@ export function formatText(text) {
     return workingText;
 }
 
-import { getMoveImage } from '../data/movesimages.js';
+import { getMoveData } from '../data/movesimages.js';
 
 /**
  * Format arsenal string into HTML with move images
@@ -108,13 +108,13 @@ export function formatArsenal(arsenal, charKey = null) {
     if (charKey) {
         return items.map(item => {
             const moveName = item.trim();
-            const moveImage = getMoveImage(charKey, moveName);
+            const moveData = getMoveData(charKey, moveName);
 
-            if (moveImage) {
+            if (moveData) {
                 return `
                     <div class="arsenal-move">
-                        <img src="${moveImage}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
-                        <span class="move-name">${moveName}</span>
+                        <img src="${moveData.image.image}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
+                        <span class="move-name attr-highlight move-highlight" data-attr-key="move" data-move="${moveName}" data-char="${charKey}">${moveName}</span>
                     </div>
                 `;
             }

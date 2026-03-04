@@ -164,6 +164,7 @@ function setupStaticUI() {
     // Insert scroll navigation
     const scrollNavContainer = document.getElementById('scroll-nav-container');
     if (scrollNavContainer) {
+        scrollNavContainer.classList.add('scroll-nav');
         scrollNavContainer.innerHTML = createScrollNav();
     }
 
@@ -186,16 +187,17 @@ function setupScrollListener() {
             const scrollY = window.scrollY;
             const docHeight = document.documentElement.scrollHeight;
             const windowHeight = window.innerHeight;
-            const hasScrollableContent = docHeight > windowHeight + 50;
 
             if (scrollTopBtn) {
-                scrollTopBtn.classList.toggle('visible', scrollY > 300);
+                // Show if scrolled down more than 200px
+                scrollTopBtn.classList.toggle('visible', scrollY > 200);
             }
 
             if (scrollBottomBtn) {
-                // Show only when there's scrollable content AND not at the bottom
+                // Show if not near the bottom and page is actually scrollable
                 const atBottom = scrollY >= docHeight - windowHeight - 100;
-                scrollBottomBtn.classList.toggle('visible', hasScrollableContent && !atBottom);
+                const isScrollable = docHeight > windowHeight + 100;
+                scrollBottomBtn.classList.toggle('visible', isScrollable && !atBottom);
             }
         };
 

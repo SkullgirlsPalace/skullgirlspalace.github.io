@@ -47,7 +47,7 @@ export function createAboutDrawer() {
                     <h1>Skullgirls Palace</h1>
                     <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
                     <div class="hero-buttons">
-                        <a href="https://discord.gg/9dZqtVz6pz" target="_blank" class="btn btn-primary">
+                        <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">
                             💬 Discord
                         </a>
                         <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank" class="btn btn-secondary">
@@ -58,22 +58,19 @@ export function createAboutDrawer() {
 
                 <div class="info-cards vertical">
                     <div class="card-link">
-                        <h3>📖 Builds Completas</h3>
-                        <p>Variantes com atributos recomendados e arsenal otimizado.</p>
+                        <h3>📖 Builds Recomendadas</h3>
+                        <p>O intuito de recomendar uma Build, Superior e Arsenal é para facilitar sua Vida e você desempenhar melhor com sua Variante Favorita sem precisar ficar perguntando de tantos lugares, foi tudo montado por bons jogadores e boa parte das recomendações são boas, eu espero. Em caso de erros reporte no Servidor do Discord.</p>
                     </div>
                     <div class="card-link">
                         <h3>📊 Calculadora</h3>
-                        <p>Simule seus ganhos mensais de Canopy Coins e Teonita.</p>
-                    </div>
-                    <div class="card-link">
-                        <h3>🏰 Comunidade</h3>
-                        <p>Projeto de fãs para fãs. Junte-se ao servidor Palácio Branco!</p>
+                        <p>Simule seus Ganhos mensais de Moedas e Teonitas, calcule também o quanto é necessário para Gastar em Moedas para Melhorar suas Variantes, Golpes, Astros e etc...</p>
                     </div>
                 </div>
 
                 <div class="credits-section">
                     <h4>✨ Créditos</h4>
                     <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
+                    <p>Colaborador Principal: <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
                     <p>Assets originais pertencem à Hidden Variable Studios e Autumn Games.</p>
 
                     <div class="disclaimer-tooltip" style="margin-top: 20px;">
@@ -83,7 +80,7 @@ export function createAboutDrawer() {
                             <p>Todos os assets pertencem aos seus respectivos proprietários.</p>
                         </div>
                     </div>
-                    <p style="font-size: 0.85rem; margin-top: 15px;">Encontrou um erro? Reporte no servidor <a href="https://discord.gg/9dZqtVz6pz" target="_blank">Palácio Branco</a>.</p>
+                    <p style="font-size: 0.85rem; margin-top: 15px;">Encontrou algum erro ou bug? Reporte no <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Servidor Palácio Branco</a>.</p>
                 </div>
             </div>
         </aside>
@@ -96,10 +93,8 @@ export function createAboutDrawer() {
  */
 export function createScrollNav() {
     return `
-        <div class="scroll-nav">
-            <button onclick="scrollToTop()" id="scrollTopBtn" title="Ir para o Topo"></button>
-            <button onclick="scrollToBottom()" id="scrollToBottomBtn" title="Ir para o Final"></button>
-        </div>
+        <button id="scrollTopBtn" class="scroll-nav-btn" onclick="scrollToTop()" title="Voltar ao topo"></button>
+        <button id="scrollToBottomBtn" class="scroll-nav-btn" onclick="scrollToBottom()" title="Ir para o final"></button>
     `;
 }
 

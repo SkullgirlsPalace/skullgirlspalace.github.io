@@ -23,7 +23,7 @@
                 },
                 "marquee_ability": "**Juramento de Sangue** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Sol de Khepri, Mordida da Sekhmet, Damas Escarlates (Provocar), Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Sol de Khepri, Mordida da Sekhmet, Damas Escarlates (Provocar), Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Don Passione",
@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "A Vampira",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Senhor das Trevas",
@@ -89,7 +89,7 @@
                 },
                 "marquee_ability": "Sacrifício Ritual",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Dano Crítico",
-                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ],
         "ouro": [
@@ -113,7 +113,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Magnata Nobre",
@@ -135,7 +135,7 @@
                 },
                 "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Intervenção da Diva",
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Confusão Interior",
@@ -179,7 +179,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Lazulita",
@@ -201,7 +201,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Dama do Massacre, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Dama do Massacre, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Banho de Sangue",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ],
         "prata": [
@@ -247,7 +247,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Amor Sangrento",
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "**Juramento de Sangue** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Víbora Escarlate",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "Juramento de Sangue",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Sombruma",
@@ -313,7 +313,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ],
         "bronze": [
@@ -337,7 +337,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Decifrada",
@@ -359,7 +359,7 @@
                 },
                 "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ]
     }

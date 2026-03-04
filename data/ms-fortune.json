@@ -23,7 +23,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Soldado de Infantaria",
@@ -45,7 +45,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Fúria Felpuda",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "BLÉÉÉ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Biscoito da Sorte",
@@ -89,7 +89,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Briga Fatal",
@@ -111,7 +111,7 @@
                 },
                 "marquee_ability": "BLÉÉÉ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             }
         ],
         "ouro": [
@@ -135,7 +135,7 @@
                 },
                 "marquee_ability": "BLÉÉÉ",
                 "recommended_build": "VD%, Defesa, Resistência e ATQ%",
-                "recommended_arsenal": "Cinco de desmembro, Febre de gato, Deslisada Felina, El Gato, Explosão"
+                "recommended_arsenal": "Cinco de desmembro, Febre de gato, Deslisada felina, El Gato, Explosão"
             },
             {
                 "name": "Miau e Ordem",
@@ -157,7 +157,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Ladra de Tempo",
@@ -179,7 +179,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Agente Trapaçeira",
@@ -201,7 +201,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Corta e Afoga",
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Terripeluda",
@@ -245,7 +245,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada felina, Fibrosa, El Gato"
             }
         ],
         "prata": [
@@ -269,7 +269,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico\"",
-                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Sra. Jurada",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Febre de gato, Gato sonolento (Provocar), Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Sorte Felina",
@@ -313,7 +313,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Remendada",
@@ -335,7 +335,7 @@
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             }
         ],
         "bronze": [
@@ -362,7 +362,7 @@
                     "> BUP (Ataque)"
                 ],
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             },
             {
                 "name": "Gata do Inferno",
@@ -384,7 +384,7 @@
                 },
                 "marquee_ability": "BLÉÉÉ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada felina, Fibrosa, El Gato"
             }
         ]
     }
