@@ -27,26 +27,31 @@ export function render() {
 
             <!-- Catalysts of the Week Section -->
             <div class="cotw-section">
-                <h3>Catalisadores da Semana</h3>
+                <h2 class="catalyst-title-main">Modificadores da Semana</h2>
                 <div class="cotw-filters">
                     <button class="cotw-filter-btn" data-element="fire">
                         <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                        <span>Fogo</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="water">
                         <img src="img/icones/ElementalWaterBackless.png" alt="Água">
+                        <span>Água</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="wind">
-                        <img src="img/icones/ElementalAirBackless.png" alt="Ar">
+                        <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                        <span>Ar</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="light">
                         <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                        <span>Luz</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="dark">
                         <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
+                        <span>Trevas</span>
                     </button>
                 </div>
                 <div class="catalyst-grid" id="cotw-container">
-                    <p class="info-state">Selecione um elemento para ver os catalisadores da semana.</p>
+                    <p class="info-state" style="text-align: center; margin: 20px 0;">Selecione um elemento para ver os modificadores da semana.</p>
                 </div>
             </div>
 
@@ -153,7 +158,6 @@ function renderCatalystCard(item, isCotw = false) {
     return `
         <div class="catalyst-card ${isCotw ? 'cotw-card' : ''}">
             <div class="catalyst-card-header">
-                ${item.icon ? `<img src="${item.icon}" alt="${item.name}" class="catalyst-icon">` : ''}
                 <h4>${item.name}</h4>
                 ${item.constraint ? `<span class="catalyst-constraint">${item.constraint}</span>` : ''}
             </div>
