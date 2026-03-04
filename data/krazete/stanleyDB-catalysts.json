@@ -1,0 +1,538 @@
+{
+    "cat-IArm-NA-g": {
+        "name": "Armada Invencível",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconInvincible.png",
+        "SA1": "50% de chance de ganhar INVENCÍVEL por 5/6/7/8/9/10/11/12/13/14/15 segundos quando um aliado é derrotado."
+    },
+    "cat-IArm-char-g": {
+        "name": "Armada Invencível",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconInvincible.png",
+        "SA1": "100% de chance de ganhar INVENCÍVEL por 5/6/7/8/9/10/11/12/13/14/15 segundos quando um aliado é derrotado."
+    },
+    "cat-aFlin-NA-g": {
+        "name": "O Vacilão Nervoso",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconUnflinching.png",
+        "SA1": "Com menos de 50% de VIDA, 100% de chance de ganhar INABALÁVEL por 5/6/7/8/9/10/11/12/13/14/15 s e 2 camadas(s) de BARREIRA quando NOCAUTEADO."
+    },
+    "cat-aFlin-char-g": {
+        "name": "O Vacilão Nervoso",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconUnflinching.png",
+        "SA1": "Com menos de 65% de VIDA, 100% de chance de ganhar INABALÁVEL por 5/6/7/8/9/10/11/12/13/14/15 s e 2 camadas(s) de BARREIRA quando NOCAUTEADO."
+    },
+    "cat-aImmu-NA-g": {
+        "name": "Autoimune",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconImmune.png",
+        "SA1": "Ao sofrer pelo menos 2 EF. NEGATIVOS, 100% de chance de remover todos os EF. NEGATIVOS e ganhar IMUNIDADE 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 s ao sofrer outro EF. NEG."
+    },
+    "cat-aImmu-char-g": {
+        "name": "Autoimune",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconImmune.png",
+        "SA1": "Ao sofrer pelo menos 1 EF. NEGATIVOS, 100% de chance de remover todos os EF. NEGATIVOS e ganhar IMUNIDADE 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 s ao sofrer outro EF. NEG."
+    },
+    "cat-armRa-NA-g": {
+        "name": "Classificação da Armadura",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+        "SA1": "15% de chance quando GOLPEADO de evitar dano e ganhar ARMAD. por 5/6/7/8/9/10/11/12/13/14/15 s se o opon. tiver mais de 7 GOLPES COMBO."
+    },
+    "cat-armRa-char-g": {
+        "name": "Classificação da Armadura",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+        "SA1": "20% de chance quando GOLPEADO de evitar dano e ganhar ARMAD. por 5/6/7/8/9/10/11/12/13/14/15 s se o opon. tiver mais de 7 GOLPES COMBO."
+    },
+    "cat-bBust-NA-g": {
+        "name": "Blockbusted",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockBlock.png",
+        "SA1": "Quando GOLPEADO, tem 15% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 5/6/7/8/9/10/11/12/13/14/15 s se ele tiver um BLOCKBUSTER cheio."
+    },
+    "cat-bBust-char-g": {
+        "name": "Blockbusted",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockBlock.png",
+        "SA1": "Quando GOLPEADO, tem 25% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 5/6/7/8/9/10/11/12/13/14/15 s se ele tiver um BLOCKBUSTER cheio."
+    },
+    "cat-bGuil-NA-g": {
+        "name": "Sangramento Culposo",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconBleed.png",
+        "SA1": "Ao infligir SANGRAMENTO, tem 50% de chance de aumentar sua duração em 5 segundos.",
+        "SA2": "Enquanto o oponente estiver sofrendo com SANGRAMENTO, causa dano igual a 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% da VIDA MÁX. dele a cada 3 segundos."
+    },
+    "cat-bGuil-char-g": {
+        "name": "Sangramento Culposo",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconBleed.png",
+        "SA1": "Ao infligir SANGRAMENTO, tem 100% de chance de aumentar sua duração em 5 segundos.",
+        "SA2": "Enquanto o oponente estiver sofrendo com SANGRAMENTO, causa dano igual a 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% da VIDA MÁX. dele a cada 3 segundos."
+    },
+    "cat-bonViv-char-g": {
+        "name": "Boa Vida",
+        "element": "",
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Marie ganha RESISTÊNCIA FINAL e inflige QUIETUS por 10/11/12/13/14/15/16/17/18/19/20 segundos cada ao sofrer um GOLPE que tire ao menos 10% da sua VIDA MÁX.",
+        "SA2": "Enquanto estiver se beneficiando de RESISTÊNCIA FINAL, Marie remove 1 EF. POS. do oponente e recupera 5% de VIDA por segundo."
+    },
+    "cat-cElem-char-g": {
+        "name": "Elemento Corrosivo",
+        "element": "",
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Oponentes perdem 1.5/1.75/2/2.25/2.5/2.75/3/3.25/3.5/3.75/4% de VIDA por segundo enquanto estão em VANTAGEM OU DESVANTAGEM ELEMENTAL contra a Double."
+    },
+    "cat-cOfKno-NA-g": {
+        "name": "Maldição do Conhecimento",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCurse.png",
+        "SA1": "50% chance de infligir MALDIÇÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos ao ganhar um EFEITO POSITIVO."
+    },
+    "cat-cOfKno-char-g": {
+        "name": "Maldição do Conhecimento",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCurse.png",
+        "SA1": "100% chance de infligir MALDIÇÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos ao ganhar um EFEITO POSITIVO."
+    },
+    "cat-crip-NA-g": {
+        "name": "Incapacitador",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCripple.png",
+        "SA1": "Inflige INCAPACITAÇÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos e FADIGA por 18/17/16/15/14/13/12/11/10/9/8 segundos quando um ataque do oponente tira pelo menos 10% de VIDA."
+    },
+    "cat-crip-char-g": {
+        "name": "Incapacitador",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCripple.png",
+        "SA1": "Inflige INCAPACITAÇÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos e FADIGA por 18/17/16/15/14/13/12/11/10/9/8 segundos quando um ataque do oponente tira pelo menos 8% de VIDA."
+    },
+    "cat-dBarreled-char-g": {
+        "name": "Cano Duplo",
+        "element": "",
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Dália Negra ganha 2 camadas de FÚRIA por 5/6/7/8/9/10/11/12/13/14/15 segundos quando dispara um TIRO.",
+        "SA2": "Com pelo menos 4 camadas de FÚRIA, os TIROS são INDEFENSÁVEIS e têm 50% de chance de infligir ATORDOAMENTO por 3 segundos."
+    },
+    "cat-dNut-elem-g": {
+        "name": "Darknut",
+        "element": "dark",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Defensores do Elemento Trevas]: comece a luta com 5 camadas de ARMADURA. Cada uma é removida quando GOLPEADO com uma CONTAGEM DE COMBO em qualquer múltiplo de 10.",
+        "SA2": "Ganhe 10% de chance de infligir SANGRAMENTO por 5/6/7/8/9/10/11/12/13/14/15 segundos quando GOLPEADO com ARMADURA."
+    },
+    "cat-dOrD-char-g": {
+        "name": "É Fazer Ou Morrer",
+        "element": "",
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Após 130/120/110/100/90/80/70/60/50/40/30 segundos se passarem na luta, se Beowulf estiver vivo, todos os aliados ganham IMUNIDADE e ACELERAÇÃO permanentes."
+    },
+    "cat-doomD-NA-g": {
+        "name": "Máquina da Destruição",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDoom.png",
+        "SA1": "50% de chance de infligir DESTRUIÇÃO por 30/28/26/24/22/20/18/16/14/12/10 s ao cair abaixo de 50% de VIDA. Ela é removida quando o oponente é DERROTADO ou SAI DA ASSISTÊNCIA."
+    },
+    "cat-doomD-char-g": {
+        "name": "Máquina da Destruição",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDoom.png",
+        "SA1": "100% de chance de infligir DESTRUIÇÃO por 30/28/26/24/22/20/18/16/14/12/10 s ao cair abaixo de 50% de VIDA. Ela é removida quando o oponente é DERROTADO ou SAI DA ASSISTÊNCIA."
+    },
+    "cat-dpBuer-char-g": {
+        "name": "Não Cutuque O Buer",
+        "element": "",
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "A Painwheel não pode perder mais de 15% de VIDA com um único GOLPE.",
+        "SA2": "Ao perder 15% de VIDA com qualquer GOLPE, REFLETE 25/30/35/40/45/50/55/60/65/70/75% do dano."
+    },
+    "cat-electF-char-g": {
+        "name": "Campo Eletrostático",
+        "element": "",
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Ao se beneficiar de um EF. POSITIVO, a Robo-Fortune ganha chance de 25% de infligir OSCILAÇÃO DE ENERGIA e POLARIDADE INVERSA por 5/6/7/8/9/10/11/12/13/14/15 seg cada quando GOLPEADA."
+    },
+    "cat-fArmo-elem-g": {
+        "name": "Armadura de Gelo",
+        "element": "water",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+        "SA1": "[Defensores do Elemento Água]: 10% de chance de ganhar ARMADURA por 2/3/4/5/6/7/8/9/10/11/12 segundos quando GOLPEADO.",
+        "SA2": "Quando GOLPEADO com ARMADURA, reflita 15% do dano recebido."
+    },
+    "cat-fFight-NA-g": {
+        "name": "Luta Final",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+        "SA1": "50% de chance de ganhar RESISTÊNCIA FINAL por 5/6/7/8/9/10/11/12/13/14/15 segundos quando o oponente usa um BLOCKBUSTER."
+    },
+    "cat-fFight-char-g": {
+        "name": "Luta Final",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+        "SA1": "100% de chance de ganhar RESISTÊNCIA FINAL por 5/6/7/8/9/10/11/12/13/14/15 segundos quando o oponente usa um BLOCKBUSTER."
+    },
+    "cat-fireS-elem-g": {
+        "name": "Incendiário",
+        "element": "fire",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Defensores do Elemento Fogo]: ganhe FÚRIA por 10 segundos e 1 camada de PRECISÃO a cada 15/14/13/12/11/10/9/8/7/6/5 segundos.",
+        "SA2": "Enquanto estiver se beneficiando de PRECISÃO, inflija QUEBRA DE GUARDA ao GOLPEAR (inclui golpes bloqueados)."
+    },
+    "cat-futRes-char-g": {
+        "name": "Resistência Fútil",
+        "element": "",
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Quando a VIDA do Big Band está acima de 50%, oponentes sofrem 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% de dano ao acertarem um GOLPE que tire menos de 1% da VIDA MÁX. do Big Band. A PERFURAÇÃO dos oponentes diminui 35% ao enfrentar Big Band."
+    },
+    "cat-gEscap-char-g": {
+        "name": "Grande Fuga",
+        "element": "",
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "A Filia tem 50% de chance de ganhar EVASÃO a cada 15/14/13/12/11/10/9/8/7/6/5º GOLPE de combo sofrido."
+    },
+    "cat-hPoint-char-g": {
+        "name": "Pontas Ocas",
+        "element": "",
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Os projéteis da Peacock infligem SANGRAMENTO FORTE, INCAPACITAÇÃO e QUEBRA DE GUARDA por 5/6/7/8/9/10/11/12/13/14/15 s quando BLOQUEADOS."
+    },
+    "cat-hWater-elem-g": {
+        "name": "Águas Altas",
+        "element": "water",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Defensores do Elemento Água]: 10% de chance de ganhar ARMADURA e MIASMA por 10/12/14/16/18/20/22/24/26/28/30 s quando GOLPEADO com um BLOCKBUSTER cheio."
+    },
+    "cat-hexT-NA-g": {
+        "name": "Hora de Enfeitiçar",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHex.png",
+        "SA1": "A cada 20 segundos, os oponentes sofrem FEITIÇO por 3/4/5/6/7/8/9/10/11/12/13 segundos."
+    },
+    "cat-hexT-char-g": {
+        "name": "Hora de Enfeitiçar",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHex.png",
+        "SA1": "A cada 15 segundos, os oponentes sofrem FEITIÇO por 3/4/5/6/7/8/9/10/11/12/13 segundos."
+    },
+    "cat-iThreat-char-g": {
+        "name": "Ameaça Iminente",
+        "element": "",
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "A Parasoul ganha PRECISÃO ao gerar uma LÁGRIMA.",
+        "SA2": "Cada GOLPE CRÍTICO acertado por qualquer um dos lutadores causa SANGRAMENTO no oponente e aumenta o DANO DE CRÍTICO da Parasoul em 50/60/70/80/90/100/110/120/130/140/150%."
+    },
+    "cat-inAir-elem-g": {
+        "name": "No Ar Rarefeito",
+        "element": "wind",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Defensores do Elemento Ar]: A cada 35/33/31/29/27/25/23/21/19/17/15 s, todos os EF. NEG. são removidos e todos os BLOCKBUSTERS do oponente são reiniciados."
+    },
+    "cat-lWeigh-elem-g": {
+        "name": "Iluminados",
+        "element": "light",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Defensores do Elemento Luz]: Comece a luta com 10/12/14/16/18/20/22/24/26/28/30 segundos de INABALÁVEL e IMUNIDADE."
+    },
+    "cat-lWord-elem-g": {
+        "name": "Últimas Palavras",
+        "element": "light",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+        "SA1": "[Defensores do Elemento Luz]: Uma vez por luta, ganhe 100% de chance de ter RESISTÊNCIA FINAL por 5/6/7/8/9/10/11/12/13/14/15 s ao sofrer um GOLPE que seria fatal."
+    },
+    "cat-markD-NA-g": {
+        "name": "Marca da Exclusão",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDeathMark.png",
+        "SA1": "Os oponentes sofrem MARCA DA MORTE por 5/6/7/8/9/10/11/12/13/14/15 segundos quando estão com menos de 50% de VIDA.",
+        "SA2": "AO GOLPEAR, tem 10% de chance de derrotar os oponentes imediatamente se estiverem sofrendo de MARCA DA MORTE (inclui golpes bloqueados)."
+    },
+    "cat-markD-char-g": {
+        "name": "Marca da Exclusão",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDeathMark.png",
+        "SA1": "Os oponentes sofrem MARCA DA MORTE por 5/6/7/8/9/10/11/12/13/14/15 segundos quando estão com menos de 75% de VIDA.",
+        "SA2": "AO GOLPEAR, tem 10% de chance de derrotar os oponentes imediatamente se estiverem sofrendo de MARCA DA MORTE (inclui golpes bloqueados)."
+    },
+    "cat-megaL-char-g": {
+        "name": "Megalixir",
+        "element": "",
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Todos os aliados ganham 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% no MEDIDOR DE BLOCKBUSTER por segundo enquanto Valentine for a lutadora ativa e estiver se beneficiando de REGENERAÇÃO."
+    },
+    "cat-noHeal-NA-g": {
+        "name": "Sem Salto Alto",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHealBlock.png",
+        "SA1": "O oponente sofre BLOQUEIO DE CURA por 5 segundos a cada 12/11.5/11/10.5/10/9.5/9/8.5/8/7.5/7 segundos enquanto tiver mais de 45 % de VIDA."
+    },
+    "cat-noHeal-char-g": {
+        "name": "Sem Salto Alto",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHealBlock.png",
+        "SA1": "O oponente sofre BLOQUEIO DE CURA por 5 segundos a cada 12/11.5/11/10.5/10/9.5/9/8.5/8/7.5/7 segundos enquanto tiver mais de 25 % de VIDA."
+    },
+    "cat-oPeriod-char-g": {
+        "name": "Período Orbital",
+        "element": "",
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Quando a Annie BLOQUEIA um GOLPE, ela causa uma MARCA DA MORTE de 20/19/18/17/16/15/14/13/12/11/10 segundos, que é removida quando ela sofre um GOLPE DE COMBO de 10. Se a MARCA DA MORTE expirar, o oponente sofre IMOBILIZAÇÃO por 15 seg."
+    },
+    "cat-overL-elem-g": {
+        "name": "Sobrecarregado",
+        "element": "wind",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+        "SA1": "[Defensores do Elemento Ar]: ganhe 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% no MEDIDOR DE BLOCKBUSTER por segundo se o oponente tiver um BLOCKBUSTER totalmente carregado.",
+        "SA2": "Ganhe também 25% de chance de infligir um ATORDOAMENTO de 5 segundos."
+    },
+    "cat-pHaste-NA-g": {
+        "name": "Velocidade Máxima",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHaste.png",
+        "SA1": "Quando GOLPEADO com um BLOCKBUSTER, tem 25% de chance de ganhar ACELERAÇÃO por 10 segundos.",
+        "SA2": "Ao ganhar ACELERAÇÃO, ganhe também 30/32/34/36/38/40/42/44/46/48/50% no MEDIDOR DE BLOCKBUSTER."
+    },
+    "cat-pHaste-char-g": {
+        "name": "Velocidade Máxima",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHaste.png",
+        "SA1": "Quando GOLPEADO com um BLOCKBUSTER, tem 50% de chance de ganhar ACELERAÇÃO por 10 segundos.",
+        "SA2": "Ao ganhar ACELERAÇÃO, ganhe também 30/32/34/36/38/40/42/44/46/48/50% no MEDIDOR DE BLOCKBUSTER."
+    },
+    "cat-pMones-char-g": {
+        "name": "Faraomônios",
+        "element": "",
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Eliza ganha uma chance de 20% de infligir FEITIÇO e MALDIÇÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos quando GOLPEADA."
+    },
+    "cat-pRage-NA-g": {
+        "name": "Fúria Primitiva",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+        "SA1": "Ganhe FÚRIA por 15 segundos e 5/6/7/8/9/10/11/12/13/14/15% no MEDIDOR DE BLOCKBUSTER para cada 10 GOLPES DE COMBO sofridos."
+    },
+    "cat-pRage-char-g": {
+        "name": "Fúria Primitiva",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+        "SA1": "Ganhe FÚRIA por 15 segundos e 5/6/7/8/9/10/11/12/13/14/15% no MEDIDOR DE BLOCKBUSTER para cada 5 GOLPES DE COMBO sofridos."
+    },
+    "cat-rOoze-char-g": {
+        "name": "Ritmo e Gosma",
+        "element": "",
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "A Umbrella ganha 1 camada de MIASMA a cada 13/12/11/10/9/8/7/6/5/4/3 segundos. O MIASMA é removido quando a Umbrella é NOCAUTEADA.",
+        "SA2": "Ao alcançar 5 camadas de MIASMA, os oponentes sofrem 2 camadas de GOSMA permanente."
+    },
+    "cat-rTemp-elem-g": {
+        "name": "Altas Temperaturas",
+        "element": "fire",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+        "SA1": "[Defensores do Elemento Fogo]: ganhe FÚRIA de 10/12/14/16/18/20/22/24/26/28/30 segundo(s) a cada 5 segundos. ATAQUES DE ARRANCADA e BLOCKBUSTERS são INDEFENSÁVEIS ao se beneficiar de ao menos 2 camadas de FÚRIA."
+    },
+    "cat-recB-NA-g": {
+        "name": "Batedor de Recordes",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmorBreak.png",
+        "SA1": "Cada GOLPE tem 25% de chance de infligir QUEBRA DE ARMADURA e QUEBRA DE GUARDA por 5/6/7/8/9/10/11/12/13/14/15 segundos.",
+        "SA2": "Acertar um CRÍTICO converte a QUEBRA DE ARMADURA em permanente."
+    },
+    "cat-recB-char-g": {
+        "name": "Batedor de Recordes",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmorBreak.png",
+        "SA1": "Cada GOLPE tem 50% de chance de infligir QUEBRA DE ARMADURA e QUEBRA DE GUARDA por 5/6/7/8/9/10/11/12/13/14/15 segundos.",
+        "SA2": "Acertar um CRÍTICO converte a QUEBRA DE ARMADURA em permanente."
+    },
+    "cat-regX-NA-g": {
+        "name": "Regeneração X",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconRegen.png",
+        "SA1": "Ao ganhar REGENERAÇÃO, tem 50% de chance de aumentar sua duração em 2/3/4/5/6/7/8/9/10/11/12 s e recuperar 15% de VIDA imediatamente."
+    },
+    "cat-regX-char-g": {
+        "name": "Regeneração X",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconRegen.png",
+        "SA1": "Ao ganhar REGENERAÇÃO, tem 100% de chance de aumentar sua duração em 2/3/4/5/6/7/8/9/10/11/12 s e recuperar 15% de VIDA imediatamente."
+    },
+    "cat-rtSend-char-g": {
+        "name": "Devolver ao Remetente",
+        "element": "",
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Uma vez por luta quando derrotada sob EF. NEG., a Squigly ganha 50/55/60/65/70/75/80/85/90/95/100% de chance de RESSUSCITAR com 50% de VIDA e TRANSFERIR todos os EF. NEG. para o oponente."
+    },
+    "cat-sDark-elem-g": {
+        "name": "Tiro No Escuro",
+        "element": "dark",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+        "SA1": "[Defensores do Elemento Trevas]: ao BLOQUEAR um GOLPE, tem 100% de chance de DRENAR 5/6/7/8/9/10/11/12/13/14/15% DO MEDIDOR DE BLOCKBUSTER."
+    },
+    "cat-sPost-char-g": {
+        "name": "Arranhador",
+        "element": "",
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "A Ms. Fortune inflige LENTIDÃO e MARCA DA MORTE por 2/3/4/5/6/7/8/9/10/11/12 segundos quando seus ataques são BLOQUEADOS.",
+        "SA2": "Ao atingir 5 camadas de LENTIDÃO, o oponente fica ATORDOADO por 3 segundos."
+    },
+    "cat-sPowder-char-g": {
+        "name": "Pó do Sono",
+        "element": "",
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Fukua tem 10% de chance de infligir FADIGA por 15/14/13/12/11/10/9/8/7/6/5 segundos e DRENAR 10% do MEDIDOR DE BLOCKBUSTER do oponente quando GOLPEADA."
+    },
+    "cat-slomo-NA-g": {
+        "name": "Super Câmera Lenta",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconSlow.png",
+        "SA1": "Os oponentes sofrem LENTIDÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos após cada 5 segundos sem usar um BLOCKBUSTER."
+    },
+    "cat-slomo-char-g": {
+        "name": "Super Câmera Lenta",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconSlow.png",
+        "SA1": "Os oponentes sofrem LENTIDÃO por 5/6/7/8/9/10/11/12/13/14/15 segundos após cada 3 segundos sem usar um BLOCKBUSTER."
+    },
+    "cat-specE-NA-g": {
+        "name": "Exceção Especial",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockSpecial.png",
+        "SA1": "Ao usar um GOLPE ESPECIAL, 50% de chance de DESATIVAR os GOLPES ESPECIAIS do oponente por 5/6/7/8/9/10/11/12/13/14/15 seg."
+    },
+    "cat-specE-char-g": {
+        "name": "Exceção Especial",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockSpecial.png",
+        "SA1": "Ao usar um GOLPE ESPECIAL, 100% de chance de DESATIVAR os GOLPES ESPECIAIS do oponente por 5/6/7/8/9/10/11/12/13/14/15 seg."
+    },
+    "cat-strongA-char-g": {
+        "name": "Fortemente Armado",
+        "element": "",
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "A Cerebella tem 50/55/60/65/70/75/80/85/90/95/100% de chance de ganhar INABALÁVEL por 5 segundos ao BLOQUEAR qualquer ataque."
+    },
+    "cat-stunG-NA-g": {
+        "name": "Granada Atordoante",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+        "SA1": "Projéteis infligem 200% de DANO EXTRA quando BLOQUEADOS e têm 25% de chance de ATORDOAR o oponente por 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 segundo(s) ao GOLPEAR."
+    },
+    "cat-stunG-char-g": {
+        "name": "Granada Atordoante",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+        "SA1": "Projéteis infligem 200% de DANO EXTRA quando BLOQUEADOS e têm 50% de chance de ATORDOAR o oponente por 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 segundo(s) ao GOLPEAR."
+    },
+    "cat-tBPrec-NA-g": {
+        "name": "Para Ser Preciso",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconPrecision.png",
+        "SA1": "Ganhe 3 camada(s) de PRECISÃO a cada 15/14/13/12/11/10/9/8/7/6/5 segundos."
+    },
+    "cat-tBPrec-char-g": {
+        "name": "Para Ser Preciso",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconPrecision.png",
+        "SA1": "Ganhe 5 camada(s) de PRECISÃO a cada 15/14/13/12/11/10/9/8/7/6/5 segundos."
+    },
+    "cat-tagNG-NA-g": {
+        "name": "Desassistir",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockTag.png",
+        "SA1": "50% de chance de DESATIVAR A ENTRADA NA ASSISTÊNCIA e IMOBILIZAR por 5/6/7/8/9/10/11/12/13/14/15 segundos ao SAIR DA ASSISTÊNCIA."
+    },
+    "cat-tagNG-char-g": {
+        "name": "Desassistir",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockTag.png",
+        "SA1": "100% de chance de DESATIVAR A ENTRADA NA ASSISTÊNCIA e IMOBILIZAR por 5/6/7/8/9/10/11/12/13/14/15 segundos ao SAIR DA ASSISTÊNCIA."
+    },
+    "cat-withF-NA-g": {
+        "name": "Previsão Definhante",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+        "SA1": "A cada 10 segundos, os oponentes sofrem DEFINHAR por 5/6/7/8/9/10/11/12/13/14/15 segundos. DEFINHAR será removido se o oponente usar um BLOCKBUSTER."
+    },
+    "cat-withF-char-g": {
+        "name": "Previsão Definhante",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+        "SA1": "A cada 7 segundos, os oponentes sofrem DEFINHAR por 5/6/7/8/9/10/11/12/13/14/15 segundos. DEFINHAR será removido se o oponente usar um BLOCKBUSTER."
+    }
+}

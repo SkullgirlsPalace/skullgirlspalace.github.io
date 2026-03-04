@@ -65,7 +65,7 @@
                     "name": "SABOR MISTERIOSO",
                     "description": "[HAB 1]: **Ao TRANSMUTAR**, ganhe um EFEITO POSITIVO aleatório por 7 segundos.\n\n[HAB 2]: Causa 20% de dano extra **para cada EFEITO POSITIVO aplicado à Double**."
                 },
-                "marquee_ability": "Caos ou Volatilidade",
+                "marquee_ability": "Volatilidade",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
                 "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
             },
@@ -90,6 +90,28 @@
                 "marquee_ability": "Caos",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
                 "recommended_arsenal": "Gatélites, Falsas intenções (Provocar), Fim da Picada, Fakesabiá, Pelinhoslide"
+            },
+            {
+                "name": "Grande Mãe",
+                "title_formatted": "Grande Mãe - Trevas - Diamante",
+                "element": "Trevas",
+                "color_hex": "#aa00ff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/double/Double_31.png"
+                },
+                "stats": {
+                    "attack": "11,981",
+                    "health": "58,676",
+                    "power": "25,713"
+                },
+                "signature_ability": {
+                    "name": "SE APROXIMANDO",
+                    "description": "ATAQUES de INVESTIDA bem-sucedidos têm 100% de chance de causar MALDIÇÃO por 5 s. Quando um EF. NEGATIVO no oponente expira, aplique 1 EFs. NEGATIVO(s) aleatórios por 5 s. \n\nSempre que Double aplicar uma EF. NEG., seu ATAQUE é aumentado permanentemente e a DEFESA do oponente é reduzida permanentemente em 1%."
+                },
+                "marquee_ability": "Caos",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_arsenal": "Gatélites, Multidão Enfurecida, Fim da Picada, Fakesabiá, Pelinhoslide"
             }
         ],
         "ouro": [

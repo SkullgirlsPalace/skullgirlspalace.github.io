@@ -23,7 +23,7 @@
                 },
                 "marquee_ability": "Final Amargo",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                "recommended_arsenal": "Hora do Rango, Trava-Língua, Soprando Bolhas, Moedor de Sal, Explosão"
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
             },
             {
                 "name": "Campeã dos Campeões",
@@ -67,7 +67,7 @@
                 },
                 "marquee_ability": "Doce Vitória",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Ganho Medidor",
-                "recommended_arsenal": "Trava-Língua, Tempo Ruim,  Refluxo Ácido, Bolha Boba, Lambe e Vai"
+                "recommended_arsenal": "Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal, Lambe e Vai"
             },
             {
                 "name": "Angelical",
@@ -201,6 +201,28 @@
                 },
                 "marquee_ability": "Final Amargo",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Isca Sortuda",
+                "title_formatted": "Isca Sortuda - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#00e676",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": ""
+                },
+                "stats": {
+                    "attack": "11,117",
+                    "health": "63,572",
+                    "power": "25,656"
+                },
+                "signature_ability": {
+                    "name": "DOCE OSTENTAÇÃO",
+                    "description": "Enquanto Umbrella estiver viva, o Lutador ativo tem 50% de chance de ganhar um EF. POSITIVO baseado no ELEMENTO de um aliado aleatório por 7 segundos ao acertar um GOLPE CRÍTICO.\\n\\nEnquanto Umbrella estiver viva, o DANO CRÍTICO do Lutador ativo aumenta em 20% por acúmulo de REGENERAÇÃO."
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor (Suporte)",
                 "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
             }
         ],

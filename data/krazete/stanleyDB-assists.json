@@ -1,0 +1,322 @@
+{
+    "bdrain-gphantasm-a1": {
+        "name": "Mente Explosiva",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "Ao terminar, inflige DESTRUIÇÃO permanente por 30/26/22/20 s. A DESTRUIÇÃO é removida se o oponente SAIR DA ASSISTÊNCIA."
+    },
+    "bdrain-gphantasm-d1": {
+        "name": "Guerra Psicológica",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "Ao terminar, DRENA 20/25/30/35% do MEDIDOR DE BLOCKBUSTER do oponente."
+    },
+    "bdrain-gphantasm-f1": {
+        "name": "Garras da Morte",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "Ao terminar, concede 2 camada(s) de FÚRIA por 10/12/14/15 s."
+    },
+    "bdrain-gphantasm-l1": {
+        "name": "Sobrecarga Sensorial",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "35/40/45/50% do dano causado é recuperado como VIDA."
+    },
+    "bdrain-gphantasm-w1": {
+        "name": "Terror Tecnológico",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "Ao terminar, converte até 3 EFEITOS NEGATIVOS em MIASMA por 10/12/14/15 s."
+    },
+    "bdrain-hdetach-a1": {
+        "name": "Mente Explosiva",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Inflige periodicamente um dos EF. NEG. a seguir por 8/10/11/12 s: DEFINHAR, FADIGA ou FEITIÇO"
+    },
+    "bdrain-hdetach-d1": {
+        "name": "Guerra Psicológica",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Inflige periodicamente um dos EF. NEG. a seguir por 8/10/11/12 segundos: SANGRAMENTO, BLOQUEIO DE CURA ou FEITIÇO"
+    },
+    "bdrain-hdetach-f1": {
+        "name": "Garras da Morte",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Inflige periodicamente um dos EF. NEG. a seguir por 8/10/11/12 s: QUEBRA DE GUARDA, MARCA DA MORTE ou FEITIÇO"
+    },
+    "bdrain-hdetach-l1": {
+        "name": "Sobrecarga Sensorial",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Inflige periodicamente um dos EF. NEG. a seguir por 8/10/11/12 segundos: OSCILAÇÃO DE ENERGIA, QUIETUS ou FEITIÇO"
+    },
+    "bdrain-hdetach-w1": {
+        "name": "Terror Tecnológico",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Inflige periodicamente um dos EF. NEG. a seguir por 8/10/11/12 s: GOSMA, DESATIVAR GOLPES ESPECIAIS ou FEITIÇO"
+    },
+    "bdrain-msummon-a1": {
+        "name": "Mente Explosiva",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "Ao GOLPEAR, 25/50/75/100% de chance de remover até 2 EF. POS. do oponente."
+    },
+    "bdrain-msummon-d1": {
+        "name": "Guerra Psicológica",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "Ao GOLPEAR, 25/50/75/100% de chance de infligir SANGRAMENTO FORTE por 12 s."
+    },
+    "bdrain-msummon-f1": {
+        "name": "Garras da Morte",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "25/50/75/100% de chance de infligir 1 camada(s) de QUEBRA DE GUARDA por 12 s ao BLOQUEAR."
+    },
+    "bdrain-msummon-l1": {
+        "name": "Sobrecarga Sensorial",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "Tem chance 25/50/75/100% maior de acertar um CRÍTICO."
+    },
+    "bdrain-msummon-w1": {
+        "name": "Terror Tecnológico",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "Ao GOLPEAR, 25/50/75/100% de chance de infligir QUEBRA DE ARMADURA e MARCA DA MORTE por 12 s cada."
+    },
+    "bdrain-psyjumble-a1": {
+        "name": "Mente Explosiva",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "Causa 10/12/14/15% de dano extra por cada camada de EF. NEG. no oponente."
+    },
+    "bdrain-psyjumble-d1": {
+        "name": "Guerra Psicológica",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "Ao GOLPEAR, 10% de chance de DESATIVAR os GOLPES ESPECIAIS ou BLOCKBUSTERS do oponente por 10/12/14/15 s."
+    },
+    "bdrain-psyjumble-f1": {
+        "name": "Garras da Morte",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "Ao GOLPEAR, 10/12/14/15% de chance de transferir 1 EF. POS. do oponente para si mesmo."
+    },
+    "bdrain-psyjumble-l1": {
+        "name": "Sobrecarga Sensorial",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "Ao GOLPEAR, 10% de chance de infligir POLARIDADE INVERSA por 10/12/14/15 s."
+    },
+    "bdrain-psyjumble-w1": {
+        "name": "Terror Tecnológico",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "Ao GOLPEAR, 10% de chance de conceder 1 camada(s) de BARREIRA por 10/12/14/15 s."
+    },
+    "min-coolkids-d1": {
+        "name": "Cavaleira da Noite",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 2/2.3/2.6/3% a cada GOLPE que acertar."
+    },
+    "min-coolkids-f1": {
+        "name": "Carpa Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "Ao GOLPEAR, 10/12/14/15% de chance de remover 1 EF. POS. do oponente."
+    },
+    "min-coolkids-l1": {
+        "name": "Peixe Pequeno",
+        "element": "light",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "Ao GOLPEAR, 10/12/14/15% de chance de infligir POLARIDADE INVERSA por 15 s."
+    },
+    "min-coolkids-n1": {
+        "name": "Tridente Real",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "Ao GOLPEAR, 15% de chance de conceder FÚRIA, ARMADURA, REGENERAÇÃO, ESPINHOS, BÊNÇÃO ou BARREIRA por 15/17/19/20 s."
+    },
+    "min-coolkids-w1": {
+        "name": "Talento Cru",
+        "element": "water",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "Ao GOLPEAR, 10/12/14/15% de chance de transferir 1 EF. NEG. seu para o oponente."
+    },
+    "min-dimsum-d1": {
+        "name": "Cavaleira da Noite",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "PRATO POSITIVO concede OLHO-MORTO por 8/10/11/12 s. PRATO NEGATIVO inflige 2 camada(s) de DEFINHAR por 8/10/11/12 s."
+    },
+    "min-dimsum-f1": {
+        "name": "Carpa Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "PRATO POSITIVO concede 2 camada(s) de FÚRIA por 8/10/11/12 s. PRATO NEGATIVO inflige 2 camada(s) de QUEBRA de GUARDA por 8/10/11/12 s."
+    },
+    "min-dimsum-l1": {
+        "name": "Peixe Pequeno",
+        "element": "light",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "PRATO POSITIVO concede IMUNIDADE por 8/10/11/12 s. PRATO NEGATIVO inflige QUIETUS por 8/10/11/12 s."
+    },
+    "min-dimsum-n1": {
+        "name": "Tridente Real",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "PRATO POSITIVO concede 2 camada(s) de BARREIRA por 10/12/14/15 s. PRATO NEGATIVO inflige FEITIÇO por 8/10/11/12 s."
+    },
+    "min-dimsum-w1": {
+        "name": "Talento Cru",
+        "element": "water",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "PRATO POSITIVO concede 2 camada(s) de BLOQUEIO AUTOMÁTICO por 8/10/11/12 s. PRATO NEGATIVO inflige MALDIÇÃO por 8/10/11/12 s."
+    },
+    "min-jattack-d1": {
+        "name": "Cavaleira da Noite",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "50/65/80/100% de chance de infligir 2 camada(s) de QUEBRA DE GUARDA por 12 s ao BLOQUEAR."
+    },
+    "min-jattack-f1": {
+        "name": "Carpa Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "Causa 5/10/15/20% de dano extra por cada camada de EF. POS. no oponente."
+    },
+    "min-jattack-l1": {
+        "name": "Peixe Pequeno",
+        "element": "light",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "DRENA o MEDIDOR DE BLOCKBUSTER do oponente em 10/15/20/25% ao GOLPEAR."
+    },
+    "min-jattack-n1": {
+        "name": "Tridente Real",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "20/25/30/35% do dano causado é recuperado como VIDA."
+    },
+    "min-jattack-w1": {
+        "name": "Talento Cru",
+        "element": "water",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "Ao GOLPEAR, 50/65/80/100% de chance de infligir SANGRAMENTO FORTE por 12 s."
+    },
+    "min-tgrab-d1": {
+        "name": "Cavaleira da Noite",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "Ao GOLPEAR, 25/35/45/60% de chance de infligir ATORDOAMENTO por 4 s."
+    },
+    "min-tgrab-f1": {
+        "name": "Carpa Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "Ao GOLPEAR, 50/65/80/100% de chance de infligir 2 camada(s) de GOSMA por 12 s."
+    },
+    "min-tgrab-l1": {
+        "name": "Peixe Pequeno",
+        "element": "light",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "Tira 5/7/9/10% a mais da VIDA MÁX. do oponente se ele estiver sofrendo um EFEITO NEGATIVO."
+    },
+    "min-tgrab-n1": {
+        "name": "Tridente Real",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "Ao GOLPEAR, 50/65/80/100% de chance de DESATIVAR BLOCKBUSTERS por 12 s."
+    },
+    "min-tgrab-w1": {
+        "name": "Talento Cru",
+        "element": "water",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "Ao GOLPEAR, 50/65/80/100% de chance de infligir QUEBRA DE ARMADURA e MARCA DA MORTE por 12 s cada."
+    }
+}

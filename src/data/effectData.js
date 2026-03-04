@@ -122,8 +122,8 @@ export const EFFECT_DATA = {
         explicacao: 'Aumenta o Dano em 20%. Remove Incapacitação.'
     },
     evasion: {
-        keys: ['Evasão', 'Esquiva', 'Evasion'],
-        name: 'Evasão',
+        keys: ['Esquiva', 'Evasão', 'Evasion'],
+        name: 'Esquiva',
         type: 'buff',
         icon: 'img/modifiers/buffs/Evasion.png',
         stacks: 5,

@@ -90,6 +90,28 @@
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
                 "recommended_arsenal": "NHAM NHAM NHAM, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
+            },
+            {
+                "name": "Briga Fatal",
+                "title_formatted": "Briga Fatal - Luz - Diamante",
+                "element": "Luz",
+                "color_hex": "#ffea00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/ms-fortune/Ms_Fortune_29.png"
+                },
+                "stats": {
+                    "attack": "10,522",
+                    "health": "75,360",
+                    "power": "27,274"
+                },
+                "signature_ability": {
+                    "name": "FARDO DO SACRIFÍCIO",
+                    "description": "Quando qualquer lutador acertar um GOLPE BLOQUEADO, sofra um EFEITO NEGATIVO aleatório por 10 segundos e reduza permanentemente o ATAQUE e a DEFESA do oponente em 4%.\\n\\nQuando qualquer lutador usar um GOLPE ESPECIAL, transfira todos os EFEITOS NEGATIVOS para o oponente e ganhe ESQUIVA por 5 segundos e IMUNIDADE por 10 segundos. Se um EFEITO NEGATIVO foi transferido, cure 2% da VIDA MÁXIMA para cada EFEITO NEGATIVO no oponente."
+                },
+                "marquee_ability": "BLÉÉÉ",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Patadas, Febre de gato, Deslisada Felina, Fibrosa, El Gato"
             }
         ],
         "ouro": [

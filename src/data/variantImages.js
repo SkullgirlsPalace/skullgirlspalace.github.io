@@ -111,7 +111,8 @@ const VARIANT_IMAGES = {
         "Misticatástrofe": "img/double/Double_5.png",
         "Pecado da Serpente": "img/double/Double_6.png",
         "Freirarteira": "img/double/Double_1.png",
-        "Sorvescola": "img/double/Double_2.png"
+        "Sorvescola": "img/double/Double_2.png",
+        "Grande Mãe": "img/double/Double_31.png"
     },
     "eliza": {
         "Múmia Querida": "img/eliza/Eliza_14.png",
@@ -200,7 +201,8 @@ const VARIANT_IMAGES = {
         "Sorte Felina": "img/ms-fortune/Ms_Fortune_3.png",
         "Remendada": "img/ms-fortune/Ms_Fortune_6.png",
         "Brincadeirinha": "img/ms-fortune/Ms_Fortune_1.png",
-        "Gata do Inferno": "img/ms-fortune/Ms_Fortune_2.png"
+        "Gata do Inferno": "img/ms-fortune/Ms_Fortune_2.png",
+        "Briga Fatal": "img/ms-fortune/Ms_Fortune_29.png"
     },
     "painwheel": {
         "Escaladora de Paredes": "img/painwheel/Painwheel_15.png",
@@ -272,7 +274,8 @@ const VARIANT_IMAGES = {
         "Protetor Vetor": "img/robo-fortune/Robo-Fortune_6.png",
         "Ronrominador": "img/robo-fortune/Robo-Fortune_4.png",
         "Protótipo": "img/robo-fortune/Robo-Fortune_1.png",
-        "M-1AU": "img/robo-fortune/Robo-Fortune_2.png"
+        "M-1AU": "img/robo-fortune/Robo-Fortune_2.png",
+        "Dupla Exposição": "img/robo-fortune/Robo_Fortune_0.png"
     },
     "squigly": {
         "Reviravolta": "img/squigly/Squigly_14.png",
@@ -292,7 +295,7 @@ const VARIANT_IMAGES = {
         "Medo do Palco": "img/squigly/Squigly_1.png",
         "Branca de Medo": "img/squigly/Squigly_2.png"
     },
-    "umbrella": {
+    'umbrella': {
         "Desejo de Morte": "img/umbrella/Umbrella_15.png",
         "Campeã dos Campeões": "img/umbrella/Umbrella_14.png",
         "Artista Ilusionista": "img/umbrella/Umbrella_13.png",
@@ -308,6 +311,8 @@ const VARIANT_IMAGES = {
         "Criança Selvagem": "img/umbrella/Umbrella_7.png",
         "Pitada de Raiva": "img/umbrella/Umbrella_2.png",
         "Vento Ventania": "img/umbrella/Umbrella_3.png"
+    ,
+        'Isca Sortuda': 'img/umbrella/Umbrella_31.png'
     },
     "valentine": {
         "Preços para matar": "img/valentine/Valentine_13.png",
