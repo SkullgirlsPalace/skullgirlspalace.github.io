@@ -131,7 +131,7 @@
                 },
                 "signature_ability": {
                     "name": "AUTÓPSIA ALIENÍGENA",
-                    "description": "**Enquanto FAMINTO,** inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 50%. **A DESTRUIÇÃO é removida se a Umbrella SAI DO CAMPO DE BATALHA ou for derrotada.**\n\n**Ao derrotar um inimigo,** ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 15 s. [Efeitos Positivos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Space_Case)"
+                    "description": "**Enquanto FAMINTO,** inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 50%. **A DESTRUIÇÃO é removida se a Umbrella SAI DO CAMPO DE BATALHA ou for derrotada.**\n\n**Ao derrotar um inimigo,** ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 15 s."
                 },
                 "marquee_ability": "Doce Vitória",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",

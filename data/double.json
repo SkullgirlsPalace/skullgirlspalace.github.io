@@ -197,7 +197,7 @@
                 },
                 "signature_ability": {
                     "name": "PENTAGLAM",
-                    "description": "[HAB 1]: **Ao TRANSMUTAR**, ganha EFEITOS POSITIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[HAB 2]: **Ao TRANSMUTAR**, inflige EFEITOS NEGATIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[Efeitos Positivos e Negativos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Rainbow_Blight)"
+                    "description": "[HAB 1]: **Ao TRANSMUTAR**, ganha EFEITOS POSITIVOS baseados no ELEMENTO resultante por 10 segundos.\n\n[HAB 2]: **Ao TRANSMUTAR**, inflige EFEITOS NEGATIVOS baseados no ELEMENTO resultante por 10 segundos."
                 },
                 "marquee_ability": "Caos",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",

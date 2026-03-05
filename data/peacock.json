@@ -243,7 +243,7 @@
                 },
                 "signature_ability": {
                     "name": "ESPECTRO AMPLO",
-                    "description": "[HAB 1]: **Todos os aliados ENTRAM NA ASSISTÊNCIA** com **2 EFEITOS POSITIVOS baseados nos seus ELEMENTOS** por 10 segundos (exceto depois da morte de um aliado).\n\n[HAB 2]: **Enquanto Peacock está viva, todos os projéteis têm** 10% de chance de infligir EF. NEG. com base no ELEMENTO do oponente por 10 s.\n\n[Efeitos Positivos e Negativos dos Elementos.](https://skullgirlsmobile.fandom.com/wiki/Prism_Plumage)"
+                    "description": "[HAB 1]: **Todos os aliados ENTRAM NA ASSISTÊNCIA** com **2 EFEITOS POSITIVOS baseados nos seus ELEMENTOS** por 10 segundos (exceto depois da morte de um aliado).\n\n[HAB 2]: **Enquanto Peacock está viva, todos os projéteis têm** 10% de chance de infligir EF. NEG. com base no ELEMENTO do oponente por 10 s."
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
