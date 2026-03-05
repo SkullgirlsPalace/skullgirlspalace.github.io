@@ -71,6 +71,7 @@ export function createAboutDrawer() {
                     <h4>✨ Créditos</h4>
                     <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
                     <p>Inspiração Principal e Colaborador: <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
+                    <p>Fontes oficiais utilizadas: <a href="https://krazete.github.io/sgm/" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Fandom Wiki</a>.</p>
                     <p>Assets originais pertencem à Hidden Variable Studios e Autumn Games.</p>
 
                     <div class="disclaimer-tooltip" style="margin-top: 20px;">
