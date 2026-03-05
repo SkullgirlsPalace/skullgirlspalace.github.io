@@ -378,7 +378,7 @@ export const EFFECT_DATA = {
         explicacao: 'Bloqueia o uso de Blockbusters e não permite carregar Blockbusters pendentes.'
     },
     lock_special: {
-        keys: ['Desativar Especiais', 'Lock Special'],
+        keys: ['Desativar Especiais', 'Lock Special', 'Desabilitam GOLPES ESPECIAIS'],
         name: 'Desativar Especiais',
         type: 'debuff',
         color: '#ff4444',

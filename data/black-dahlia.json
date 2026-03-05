@@ -134,7 +134,7 @@
                     "description": "[HAB 1]: Os GOLPES DE ATAQUE DE CARGA de qualquer aliado dão ACELERAÇÃO por 12 segundos.\n\n[HAB 2]: Ao GOLPEAR, todos os aliados têm 25% de chance de infligir QUEBRA DE ARMADURA e SANGRAMENTO FORTE por 10 s cada, enquanto estiverem com ACELERAÇÃO."
                 },
                 "marquee_ability": "Descontrole Metálico",
-                "recommended_build": "ATQ%, Perfuração, Precisão e Reat Especial",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
                 "recommended_arsenal": "Empoderar, Deslizando, Massacre, Ratoeira dos Medici, Te Vejo por Aí (Expulsão)"
             },
             {
@@ -222,7 +222,7 @@
                     "description": "[HAB 1]: TIROS COMUNS infligem DEFINHAR e BLOQUEIO DE CURA por 15 segundos cada enquanto perto de um oponente.\n\n[HAB 2]: 50% de todo o dano infligido é recuperado como VIDA enquanto o oponente estiver sofrendo BLOQUEIO DE CURA."
                 },
                 "marquee_ability": "Descontrole Metálico",
-                "recommended_build": "ATQ%, Perfuração, Precisão e Reat Especial",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
                 "recommended_arsenal": "Empoderar, Capacho, Deslizando, Massacre,  Ratoeira dos Medici"
             }
         ],

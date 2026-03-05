@@ -200,7 +200,7 @@
                     "description": "[HAB 1]: **Quando Big Band estiver vivo**, os oponentes causam 35% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER\n\n[HAB 2]: **Quando Big Band realizar uma ARRANCADA DE ATAQUE bem-sucedida, drene 5% de VIDA do inimigo**. Quando Big Band sofre um GOLPE durante a ARRANCADA, ele ganha 2 acúmulos de ESPINHOS por 10 s."
                 },
                 "marquee_ability": "Líder da Banda",
-                "recommended_build": "",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                 "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             },
             {
@@ -223,7 +223,7 @@
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
-                "recommended_arsenal": ""
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Solo de Soalha, Pedalada Gigante, Porrada de Pratos"
             }
         ],
         "prata": [

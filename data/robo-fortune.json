@@ -91,7 +91,7 @@
                     "description": "[HAB 1]: 20% de chance ao GOLPEAR, aplica OSCILAÇÃO DE ENERGIA por 20 seg **em ambos os lutadores enquanto estiver perto do oponente.** Golpes NÃO-BLOCKBUSTER concedem 3% de medidor de BLOCKBUSTER.\n\n[HAB 2]: **Ao usar um BLOCKBUSTER**, ganha FÚRIA, REGENERAÇÃO ou ESQUIVA por 20 seg por cada camada de OSCILAÇÃO DE ENERGIA removida em ambos os lutadores."
                 },
                 "marquee_ability": "DDOS",
-                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítica e Dano Crítico",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
                 "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Raio de Teonita, Fidget Spin"
             }
         ],
@@ -114,12 +114,9 @@
                     "name": "PROTOCOLO DE INTRUSÃO",
                     "description": "[HAB 1]: **Quando Robo-Fortune ENTRA NA ASSISTÊNCIA,** remove todos os EF. POS. do oponente, inflige FEITIÇO e DESATIVA AS ASSISTÊNCIAS por 10 segundos cada.\n\n[HAB 2]: **Todos os ataques de RAIO e ENERGIA **têm 10% de chance de conceder BARREIRA e INABALÁVEL por 10 segundos cada **ao golpear. **Além disso, todos os EF. POS. ativos são transferidos da Robo-Fortune **para o lutador que estiver ENTRANDO NA ASSISTÊNCIA.**"
                 },
-                "marquee_ability": [
-                    "> VERIFICAÇÃO DE PING (Ataque)",
-                    "> DDOS (Defesa)"
-                ],
-                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Raio de Teonita"
+                "marquee_ability": "DDOS",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Raio de Calor, Raio de Teonita, Explosão"
             },
             {
                 "name": "Tela Azul",
@@ -247,7 +244,7 @@
                 },
                 "signature_ability": {
                     "name": "INSTANTÂNEO",
-                    "description": "ATAQUES de RAIO bem-sucedidos de GOLPES ESPECIAIS concedem IMUNIDADE por 10 segundos e aplicam ATORDOAMENTO no oponente por 2 segundos se ele não estiver sofrendo de SANGRAMENTO.\\n\\nQuando ATORDOAMENTO expirar no oponente, conceda ESQUIVA por 15 segundos à Robo-Fortune e aplique SANGRAMENTO FORTE no oponente por 5 segundos."
+                    "description": "**ATAQUES de RAIO bem-sucedidos de GOLPES ESPECIAIS** concedem IMUNIDADE por 10 segundos e aplicam ATORDOAMENTO no oponente por 2 segundos **se ele não estiver sofrendo de SANGRAMENTO**.\\n\\**Quando o ATORDOAMENTO expirar no oponente**, conceda ESQUIVA por 15 segundos à Robo-Fortune e aplique SANGRAMENTO FORTE no oponente por 5 segundos."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
@@ -340,8 +337,8 @@
                     "description": "[HAB 1]: 15% de chance de ganhar 1 cam. de PRECISÃO e infligir MARCA DA MORTE por 10 s **se o opon. BLOQUEAR um GOLPE.**\n\n[HAB 2]: **Cada CRÍTICO acertado aumenta permanentemente o DANO** em 3%."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
-                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítica e Dano Crítico",
-                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Raio de Teonita, Fidget Spin"
+                "recommended_build": "Perfuração, Taxa de Atq Crítico, Dano Crítico e Ganho Medidor",
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CURTO-CIRCUITO, BATERIA DE ASSALTO, CANHÃO DRAMÁTICO ALFA, Raio de Calor"
             }
         ],
         "bronze": [

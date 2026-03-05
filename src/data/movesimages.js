@@ -1604,11 +1604,20 @@ const MOVE_DATA = {
             },
             "type": "Golpe Especial",
             "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
+            },
+        "Tiro Silencioso": {
+            "image": {
+                "image": "img/parasoul/Parasoul_28.png",
+                "type": "Blockbuster",
+                "description": "Tem chance 15%/25%/35% maior de acertar um CRÍTICO."
+            },
+            "type": "Blockbuster",
+            "description": "Tem chance 15%/25%/35% maior de acertar um CRÍTICO."
         },
         "Banho de napalm": {
             "image": {
                 "image": "img/parasoul/Parasoul_27.png",
-                "type": "Golpe Especial",
+                "type": "Blockbuster",
                 "description": ""
             },
             "type": "Blockbuster",

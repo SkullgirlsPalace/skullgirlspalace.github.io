@@ -22,7 +22,7 @@
                     "description": "[HAB 1]: **Enquanto a % de VIDA for menor que a do oponente**, ganhe IMUNIDADE permanente e recupere 2% de VIDA por seg.\n\n[HAB 2]: Ganhe 5% do MEDIDOR DE BLOCKBUSTER e 1 camadas de PRECISÃO após cada 3 seg **ao enfrentar Fukua, Filia ou um oponente do Elemento Luz.**"
                 },
                 "marquee_ability": "Ira da Aparição",
-                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat Especial",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
                 "recommended_arsenal": "Uma Vez Mordido..., Beijo de Boa noite, Broca Sonhadora, Tiros de Amor, Explosão"
             },
             {
@@ -43,7 +43,7 @@
                     "name": "ATAQUE DE PÂNICO",
                     "description": "[HAB 1]: **Enquanto a VIDA do oponente estiver acima de** 35%, ATAQUES DE ARRANCADA infligem MALDIÇÃO e concedem ACELERAÇÃO por 15 segundos cada **ao GOLPEAR.**\n\n[HAB 2]: Inflija DEFINHAR por 5 segundos e cause dano igual a 5% da VIDA MÁX. do oponente a cada 2 segundos **enquanto estiver perto do oponente e se beneficiando de ACELERAÇÃO.**"
                 },
-                "marquee_ability": "**Maldade Spectral** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
                 "recommended_arsenal": "Uma Vez Mordido..., Conchinha Inevitável, Broca Sonhadora, Tiros de Amor, Tiros de Amor"
             },
@@ -312,7 +312,7 @@
                     "description": "[HAB 1]: **Enquanto o clone sombrio da Fukua estiver ativo**, os GOLPES ESPECIAIS aplicam MALDIÇÃO por 10 segundos.\n\n[HAB 2]: **Enquanto o clone sombrio da Fukua estiver ativo**, os GOLPES de MOVIMENTOS ESPECIAIS causam 100% de DANO extra."
                 },
                 "marquee_ability": "Maldade Spectral",
-                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
                 "recommended_arsenal": "Conchinha Inevitável, Broca Sonhadora, Tiros de Amor, Tiros de Amor, Clone Solitário"
             }
         ],
