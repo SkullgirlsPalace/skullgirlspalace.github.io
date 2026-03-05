@@ -175,7 +175,7 @@
                 },
                 "signature_ability": {
                     "name": "RIPOSTE-APOCALÍPTICO",
-                    "description": "[HAB 1]: Um BLOQUEIO no **momento certo contra ataques comuns** tem 50% de chance de ATORDOAR o oponente por 3 s.\n\n[HAB 2]: **BLOCKBUSTERS** causam 100% de dano extra contra oponentes ATORDOADOS."
+                    "description": "BLOQUEIOS bem cronometrados aplicam ATORDOAMENTO no oponente por 5 segundos e causam QUEBRA DE GUARDA. **QUEBRA DE GUARDA é removida quando PARASOUL sai**.\n\n**BLOCKBUSTERS** causam 100% de dano extra contra oponentes sob efeito de QUEBRA DE GUARDA."
                 },
                 "marquee_ability": "MASSA CRÍTICA",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

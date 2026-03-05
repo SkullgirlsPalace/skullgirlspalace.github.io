@@ -85,7 +85,7 @@
                 },
                 "signature_ability": {
                     "name": "PEQUENA HÉLICE DOS HORRORES",
-                    "description": "[HAB 1]: Causa 25% de dano extra **para cada lutador, aliado ou oponente derrotado.**\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO **após derrotar um oponente.**"
+                    "description": "**Aumente permanentemente o ATAQUE da Painwheel** em 25% a cada 15% de VIDA perdida por qualquer lutador. Enquanto a Painwheel for a lutadora ativa, aliados no banco também se curam em 25% de VIDA.\n\n**Ao derrotar um oponente**, ganhe 3 acúmulos de REGENERAÇÃO permanente. Enquanto estiver com REGENERAÇÃO, ganhe MIASMA por 9 segundos a cada 3 segundos."
                 },
                 "marquee_ability": "Rancor (Ataque), Sangue Maculado (Defesa/Ataque)",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
