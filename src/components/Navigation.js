@@ -70,7 +70,7 @@ export function createAboutDrawer() {
                 <div class="credits-section">
                     <h4>✨ Créditos</h4>
                     <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
-                    <p>Colaborador Principal: <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
+                    <p>Inspiração Principal e Colaborador: <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
                     <p>Assets originais pertencem à Hidden Variable Studios e Autumn Games.</p>
 
                     <div class="disclaimer-tooltip" style="margin-top: 20px;">
