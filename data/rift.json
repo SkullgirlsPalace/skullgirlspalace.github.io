@@ -1,0 +1,350 @@
+{
+    "maps": [
+        {
+            "map": 1,
+            "nodes": [
+                {
+                    "node": "Single (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "BIOFEEDBACK",
+                            "description": "When an opponent lands a CRITICAL HIT, 50% of the damage will be reflected back."
+                        }
+                    ]
+                },
+                {
+                    "node": "Single (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "CHICKS DIG SCARS",
+                            "description": "Gain permanent REGEN and ENRAGE when HIT with an attack that deals at least 10% MAX HEALTH."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "DEVIL'S SNARE",
+                            "description": "Gain THORNS for 5 seconds for each HIT blocked by the opponent."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "LIVE WIRE",
+                            "description": "While BLOCKING, gain a 50% chance when HIT to inflict STUN for 1 second."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Top)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "EYE FOR AN EYE",
+                            "description": "Gain HASTE and inflict ARMOR BREAK for 10 seconds when HIT with an attack that inflicts more than 5% MAX HEALTH."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "HOUSE ADVANTAGE",
+                            "description": "While at an ELEMENTAL ADVANTAGE, gain 5% BLOCKBUSTER METER per second."
+                        },
+                        {
+                            "name": "LET IT SNOW",
+                            "description": "[Water Element Fighters]: Gain ARMOR for 3 seconds when suffering a HIT that deals less than 1% MAX HEALTH."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 2,
+            "nodes": [
+                {
+                    "node": "Single (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "POWER OF TWO",
+                            "description": "BLOCKBUSTERS are UNBLOCKABLE while the opponent has a fully charged BLOCKBUSTER."
+                        }
+                    ]
+                },
+                {
+                    "node": "Single (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "DANGER ZONE",
+                            "description": "All attacks are UNBLOCKABLE when below 25% HEALTH."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "INITIATIVE",
+                            "description": "Using a BLOCKBUSTER reduces the opponent's BLOCKBUSTER METER by 100%."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Right)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "ELDER SIGN",
+                            "description": "When not at an ELEMENTAL ADVANTAGE, take 100% bonus damage."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Triple (Top)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "GET A GRIP!",
+                            "description": "All THROWS are unbreakable.\n\nSuffer no damage from opponent THROWS."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "TRANSDUCER",
+                            "description": "HITS quickly build BLOCKBUSTER METER if the opponent is blocking."
+                        },
+                        {
+                            "name": "FLASH POINT",
+                            "description": "[Fire Element Fighters]: Gain permanent ENRAGE for every 15% HEALTH lost.\n\n50% chance to inflict STUN for 4 seconds when landing a HIT that deals at least 10% damage."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 3,
+            "nodes": [
+                {
+                    "node": "Single (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "STANDING TALL",
+                            "description": "Gain REGEN every 3 seconds.\n\nREGEN is removed when KNOCKED DOWN."
+                        }
+                    ]
+                },
+                {
+                    "node": "Single (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "CONCRETE RESOLVE",
+                            "description": "Remove all DEBUFFS and gain permanent IMMUNITY when dropping below 50% HEALTH."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "DON'T STOP ME NOW",
+                            "description": "Gain UNFLINCHING while DASHING FORWARD."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "HALFTIME",
+                            "description": "Once per match, gain 5 stacks of REGEN for 6 seconds when dropping below 50% HEALTH."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Top)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "UNCANNY DODGE",
+                            "description": "For every 10th combo HIT the opponent lands, gain HASTE for 10 seconds and 1 stack of EVASION."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "DOUBLE TAP",
+                            "description": "Once per match, RESURRECT with 25% HEALTH after being dead for 10 seconds."
+                        },
+                        {
+                            "name": "GONE WITH THE WIND",
+                            "description": "[Air Element Fighters]: Regain 25% HEALTH when TAGGING OUT. Whenever the opponent uses a BLOCKBUSTER, their SPECIAL MOVES are reset and their BLOCKBUSTER METER is reduced by 100%."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 4,
+            "nodes": [
+                {
+                    "node": "Single (Left)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "RUPTURE",
+                            "description": "While blocking, lose 20% BLOCKBUSTER METER per second."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Single (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "JUICED UP",
+                            "description": "Gain permanent HASTE."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Left)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "INERTIA",
+                            "description": "TAG-IN attacks are UNBLOCKABLE and grant UNFLINCHING for 5 seconds."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "PUNCH THROUGH",
+                            "description": "Dash Attacks are UNBLOCKABLE."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Top)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "EXQUISITE CORPSE",
+                            "description": "Suffering a HIT while near a dead teammate grants THORNS for 15 seconds.\n\nRESURRECT all teammates with 50% HEALTH when using a TIER 3 BLOCKBUSTER."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [
+                        {
+                            "name": "INFECTED FLESH",
+                            "description": "Suffer a 30 second DOOM when the opponent drops below 50% HEALTH."
+                        }
+                    ],
+                    "defender_modifiers": [
+                        {
+                            "name": "O HOLY NIGHT",
+                            "description": "[Light Element Fighters]: RESURRECT with 25% HEALTH and FINAL STAND for 15 seconds after being dead for 60 seconds."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 5,
+            "nodes": [
+                {
+                    "node": "Single (Left)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "OFF-TEMPO",
+                            "description": "Suffer a random DEBUFF for 10 seconds for every 5 COMBO HITS."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Single (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "JINX",
+                            "description": "Deal 100% bonus damage if the opponent has any active DEBUFFS."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Left)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "CALTROPS",
+                            "description": "Suffer BLEED for 10 seconds when DASHING BACK."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Double (Right)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "ELECTRIC SHEEP",
+                            "description": "Gain a 10% chance when hit to inflict POWER SURGE for 10 seconds."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Top)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "SANITY'S REQUIEM",
+                            "description": "Every 5 seconds, suffer a random DEBUFF (excluding STUN) for 10 seconds."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "FINAL CURSE",
+                            "description": "When defeated, inflict the opponent with 3 DEBUFFS (excluding STUN) for 10 seconds."
+                        },
+                        {
+                            "name": "SILENT NIGHT",
+                            "description": "[Dark Element Fighters]: When suffering a CRITICAL HIT, DISABLE the opponent's BLOCKBUSTERS for 10 seconds."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

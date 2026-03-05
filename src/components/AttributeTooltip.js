@@ -7,6 +7,8 @@
 import { ATTRIBUTE_DATA } from '../data/attributeData.js';
 import { EFFECT_DATA } from '../data/effectData.js';
 import { getMoveData } from '../data/movesimages.js';
+import { getElementEffects } from '../data/elementEffectsData.js';
+import { ELEMENT_MAP } from '../config/constants.js';
 
 // ========== STATE ==========
 let activeTooltip = null;
@@ -23,6 +25,23 @@ const INACTIVITY_TIMEOUT = 20000; // 20 seconds
  */
 function resolveData(target) {
     const key = target.dataset.attrKey;
+
+    // Element table for special variants
+    if (key === 'element_table') {
+        const variantName = target.dataset.variant;
+        const effectsData = getElementEffects(variantName);
+        if (effectsData) {
+            return {
+                source: 'element_table',
+                data: {
+                    variantName,
+                    ...effectsData
+                }
+            };
+        }
+        return null;
+    }
+
     if (key === 'move') {
         const moveName = target.dataset.move;
         const charKey = target.dataset.char;
@@ -50,6 +69,54 @@ function resolveData(target) {
 }
 
 /**
+ * Build HTML for element effects table (used in both tooltip and modal)
+ * @param {Object} data - Element effects data
+ * @param {boolean} compact - Whether to use compact layout (tooltip) or full (modal)
+ * @returns {string} HTML string
+ */
+function buildElementTableHTML(data, compact = false) {
+    const elements = ['Ar', 'Fogo', 'Água', 'Trevas', 'Luz', 'Neutro'];
+    const hasDebuffs = data.debuffs && Object.values(data.debuffs).some(arr => arr && arr.length > 0);
+
+    let rows = elements.map(el => {
+        const elInfo = ELEMENT_MAP[el];
+        if (!elInfo) return '';
+        const buffs = (data.buffs && data.buffs[el]) || [];
+        const debuffs = (data.debuffs && data.debuffs[el]) || [];
+        if (buffs.length === 0 && debuffs.length === 0) return '';
+
+        const buffText = buffs.length > 0 ? buffs.join(', ') : '—';
+        const debuffText = debuffs.length > 0 ? debuffs.join(', ') : '';
+
+        return `
+            <tr class="element-row">
+                <td class="element-cell">
+                    <img src="${elInfo.iconPath}" alt="${el}" class="element-table-icon">
+                    <span class="element-table-name">${el}</span>
+                </td>
+                <td class="buff-cell">${buffText}</td>
+                ${hasDebuffs ? `<td class="debuff-cell">${debuffText || '—'}</td>` : ''}
+            </tr>
+        `;
+    }).filter(Boolean).join('');
+
+    return `
+        <table class="element-effects-table">
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th class="buff-header">EF. Positivo</th>
+                    ${hasDebuffs ? '<th class="debuff-header">EF. Negativo</th>' : ''}
+                </tr>
+            </thead>
+            <tbody>
+                ${rows}
+            </tbody>
+        </table>
+    `;
+}
+
+/**
  * Show a tooltip near the target element
  * @param {HTMLElement} target - The .attr-highlight element
  */
@@ -62,7 +129,19 @@ function showTooltip(target) {
     const tooltip = document.createElement('div');
     tooltip.className = 'attr-tooltip';
 
-    if (source === 'attr') {
+    if (source === 'element_table') {
+        tooltip.classList.add('element-table-tooltip');
+        tooltip.innerHTML = `
+            <div class="attr-tooltip-header">
+                <div class="attr-tooltip-title-group">
+                    <strong>Efeitos por Elemento</strong>
+                </div>
+                <span class="attr-tooltip-max">${data.variantName}</span>
+            </div>
+            ${buildElementTableHTML(data, true)}
+            <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
+        `;
+    } else if (source === 'attr') {
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
                 <div class="attr-tooltip-title-group">
@@ -175,7 +254,18 @@ function showDetailModal(target) {
     let bodyHtml;
     let headerHtml;
 
-    if (source === 'attr') {
+    if (source === 'element_table') {
+        headerHtml = `
+            <h3>Efeitos por Elemento</h3>
+            <span class="attr-detail-max">${data.variantName}</span>
+        `;
+        bodyHtml = `
+            <div class="attr-detail-section">
+                <h4>📋 Tabela de Efeitos Elementais</h4>
+                ${buildElementTableHTML(data, false)}
+            </div>
+        `;
+    } else if (source === 'attr') {
         headerHtml = `
             <h3>${data.name}</h3>
             ${data.max ? `<span class="attr-detail-max">Máximo: ${data.max}</span>` : ''}

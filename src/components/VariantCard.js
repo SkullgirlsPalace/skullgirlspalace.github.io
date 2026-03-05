@@ -29,7 +29,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     }
 
     // Format ability description
-    const abilityDesc = formatText(variant.signature_ability?.description || 'Sem descrição');
+    const abilityDesc = formatText(variant.signature_ability?.description || 'Sem descrição', variant.name);
 
     // Format arsenal with images
     const arsenalHTML = formatArsenal(variant.recommended_arsenal || '', charKey);

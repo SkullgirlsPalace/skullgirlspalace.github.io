@@ -5,7 +5,7 @@
 
 import { EFFECT_DATA } from '../data/effectData.js';
 import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
-import { loadCatalysts } from '../services/dataService.js';
+import { loadCatalysts, loadFendaData } from '../services/dataService.js';
 
 export function render() {
     return `
@@ -139,21 +139,21 @@ export function render() {
                     <!-- Catalysts of the Week Section -->
                     <div class="cotw-section">
                         <div class="cotw-filters">
-                            <button class="cotw-filter-btn" data-element="fire">
-                                <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
-                                <span>Fogo</span>
-                            </button>
                             <button class="cotw-filter-btn" data-element="water">
                                 <img src="img/icones/ElementalWaterBackless.png" alt="Água">
                                 <span>Água</span>
                             </button>
+                            <button class="cotw-filter-btn" data-element="fire">
+                                <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                                <span>Fogo</span>
+                            </button>
                             <button class="cotw-filter-btn" data-element="wind">
-                                <img src="img/icones/ElementalWindBackless.png" alt="Ar">
-                                <span>Ar</span>
+                            <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                            <span>Ar</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="light">
-                                <img src="img/icones/ElementalLightBackless.png" alt="Luz">
-                                <span>Luz</span>
+                            <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                            <span>Luz</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="dark">
                                 <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
@@ -161,7 +161,7 @@ export function render() {
                             </button>
                         </div>
                         <div class="catalyst-grid" id="cotw-container-guide">
-                            <p class="info-state" style="text-align: center; margin: 20px 0;">Selecione um elemento para ver os modificadores da semana.</p>
+                            <p class="info-state" style="text-align: center; margin: 20px 0;"></p>
                         </div>
                     </div>
 
@@ -262,13 +262,29 @@ async function initCatalysts() {
         return;
     }
 
+    // Load fenda data for COTW section
+    const fendaData = await loadFendaData();
+
     // Attach event listeners for COTW in Guide
     document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(b => b.classList.remove('active'));
             const button = e.currentTarget;
-            button.classList.add('active');
-            renderCotw(button.dataset.element, 'cotw-container-guide', catalysts);
+            const isActive = button.classList.contains('active');
+
+            // Remove active from all
+            document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(b => b.classList.remove('active'));
+
+            if (isActive) {
+                // If it was already active, we just deactivated it. Clear the container.
+                const cotwContainer = document.getElementById('cotw-container-guide');
+                if (cotwContainer) {
+                    cotwContainer.innerHTML = '<p class="info-state" style="text-align: center; margin: 20px 0;"></p>';
+                }
+            } else {
+                // Otherwise, activate it and render
+                button.classList.add('active');
+                renderCotw(button.dataset.element, 'cotw-container-guide', fendaData);
+            }
         });
     });
 
@@ -309,7 +325,10 @@ async function initCatalysts() {
                 html += '</div>';
             }
 
-            container.innerHTML = html;
+            container.innerHTML = `
+                <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">Catalisadores da Fenda</h2>
+                ${html}
+            `;
             return;
         }
     }
@@ -317,12 +336,13 @@ async function initCatalysts() {
     // Fallback for other formats
     if (Array.isArray(catalysts)) {
         container.innerHTML = `
+            <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">Catalisadores da Fenda</h2>
             <div class="catalyst-grid">
                 ${catalysts.map(cat => renderCatalystCard(cat)).join('')}
             </div>
         `;
     } else if (catalysts.categories && Array.isArray(catalysts.categories)) {
-        container.innerHTML = catalysts.categories.map(catObj => {
+        const categoriesHtml = catalysts.categories.map(catObj => {
             const categoryClass = getCategoryClass(catObj.category);
             return `
                 <div class="catalyst-category ${categoryClass}">
@@ -333,6 +353,11 @@ async function initCatalysts() {
                 </div>
             `;
         }).join('');
+
+        container.innerHTML = `
+            <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">Catalisadores da Fenda</h2>
+            ${categoriesHtml}
+        `;
     } else {
         container.innerHTML = '<p class="info-state">Dados de catalisadores carregados.</p>';
     }
@@ -366,22 +391,85 @@ function renderSpecialEffects(containerId) {
     container.innerHTML = html;
 }
 
-function renderCotw(element, containerId, catalystsData) {
+// Element to rift map mapping
+const ELEMENT_TO_MAP = {
+    water: 1,
+    fire: 2,
+    wind: 3,
+    light: 4,
+    dark: 5
+};
+
+function renderCotw(element, containerId, fendaData) {
     const cotwContainer = document.getElementById(containerId);
-    if (!cotwContainer || !catalystsData) return;
+    if (!cotwContainer || !fendaData) return;
 
-    const filteredItems = [];
-    for (const cat of catalystsData.categories) {
-        const matching = cat.items.filter(i => i.element === element);
-        filteredItems.push(...matching);
-    }
+    const mapNumber = ELEMENT_TO_MAP[element];
+    if (!mapNumber) return;
 
-    if (filteredItems.length === 0) {
-        cotwContainer.innerHTML = '<p class="info-state" style="text-align: center; margin: 20px 0;">Nenhum modificador específico deste elemento encontrado.</p>';
+    const map = fendaData.maps.find(m => m.map === mapNumber);
+    if (!map) {
+        cotwContainer.innerHTML = '<p class="info-state" style="text-align: center; margin: 20px 0;">Nenhum modificador encontrado para este elemento.</p>';
         return;
     }
 
-    cotwContainer.innerHTML = filteredItems.map(item => renderCatalystCard(item)).join('');
+    // Build cards from all nodes in this map
+    const cards = [];
+    for (const node of map.nodes) {
+        if (node.node === 'Boss') {
+            // Merge all boss modifiers into a single card
+            const allBossMods = [...node.defender_modifiers, ...node.attacker_modifiers];
+            if (allBossMods.length > 0) {
+                cards.push(renderBossCard(allBossMods));
+            }
+        } else {
+            // Defender modifiers
+            for (const mod of node.defender_modifiers) {
+                cards.push(renderRiftModCard(mod, node.node));
+            }
+            // Attacker modifiers
+            for (const mod of node.attacker_modifiers) {
+                cards.push(renderRiftModCard(mod, node.node));
+            }
+        }
+    }
+
+    cotwContainer.innerHTML = cards.join('');
+}
+
+function renderRiftModCard(mod, nodeName) {
+    const formattedDesc = (mod.description || '').replace(/\n/g, '<br>');
+
+    return `
+        <div class="catalyst-card cotw-card">
+            <div class="catalyst-card-header">
+                <h4>${mod.name}</h4>
+                <span class="catalyst-constraint">${nodeName}</span>
+            </div>
+            <div class="catalyst-description">
+                <p>${formattedDesc}</p>
+            </div>
+        </div>
+    `;
+}
+
+function renderBossCard(mods) {
+    const descriptions = mods.map(mod => {
+        const formattedDesc = (mod.description || '').replace(/\n/g, '<br>');
+        return `<p><strong>${mod.name}</strong></p><p>${formattedDesc}</p>`;
+    }).join('<br>');
+
+    return `
+        <div class="catalyst-card cotw-card">
+            <div class="catalyst-card-header">
+                <h4>${mods[0].name}</h4>
+                <span class="catalyst-constraint">Boss</span>
+            </div>
+            <div class="catalyst-description">
+                ${descriptions}
+            </div>
+        </div>
+    `;
 }
 
 function getCategoryClass(name) {

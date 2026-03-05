@@ -66,7 +66,7 @@
                     "description": "[HAB 1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por  um **ataque de curta distância (inclusive bloqueando).**\n\n[HAB 2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra."
                 },
                 "marquee_ability": "Líder da Banda",
-                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor ou Precisão",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                 "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
             }
         ],

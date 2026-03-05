@@ -4,6 +4,7 @@
 // =====================================================
 
 import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
+import { hasElementEffects } from '../data/elementEffectsData.js';
 
 /**
  * Format ability/description text
@@ -11,7 +12,7 @@ import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
  * @param {string} text - Raw text to format
  * @returns {string} Formatted HTML string
  */
-export function formatText(text) {
+export function formatText(text, variantName = null) {
     if (!text) return '';
 
     // Remove [HAB 1]: and [HAB 2]: prefixes
@@ -49,6 +50,14 @@ export function formatText(text) {
 
     for (const { marker, html } of replacements) {
         workingText = workingText.replace(marker, html);
+    }
+
+    // Wrap ELEMENTO keyword for variants with element effects
+    if (variantName && hasElementEffects(variantName)) {
+        workingText = workingText.replace(
+            /(?<![\wÀ-ÿ])ELEMENTOS?(?![\wÀ-ÿ])/g,
+            (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}">${match}</span>`
+        );
     }
 
     // Convert numbers to highlighted spans
