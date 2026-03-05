@@ -7,6 +7,7 @@
 import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switchDetailTab } from './router.js';
 import { loadAllCharacters, loadTierData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
+import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleToggleCompactMode, handleCycleRank, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
@@ -159,6 +160,12 @@ function setupStaticUI() {
     const drawerContainer = document.getElementById('drawer-container');
     if (drawerContainer) {
         drawerContainer.innerHTML = createAboutDrawer();
+    }
+
+    // Insert footer
+    const footerContainer = document.getElementById('footer-container');
+    if (footerContainer) {
+        footerContainer.innerHTML = createFooter();
     }
 
     // Insert scroll navigation
