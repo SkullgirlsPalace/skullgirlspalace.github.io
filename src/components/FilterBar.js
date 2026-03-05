@@ -24,10 +24,11 @@ export function createFilterBar() {
                     <img src="img/icones/constraints_no.png" alt="Limpar">
                 </button>
             </div>
+            
+            <div class="vertical-separator"></div>
 
             <!-- Collapsible Filter Content -->
             <div class="filter-content" id="filter-content">
-                <div class="vertical-separator"></div>
 
                 <!-- Rarity Grid (2x2) -->
                 <div class="filter-grid rarity-grid">

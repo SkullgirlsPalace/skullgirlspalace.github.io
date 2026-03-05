@@ -181,28 +181,29 @@
 .rarity-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
+    gap: 2px;
+    padding: 5px 10px;
     border-radius: 20px;
     font-family: 'Washington', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .rarity-badge img.rarity-icon {
-    height: 18px;
+    height: 16px;
+    /* Slightly smaller icon to match text */
     width: auto;
 }
 
 .element-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
+    gap: 2px;
+    padding: 5px 10px;
     border-radius: 20px;
     font-family: 'Washington', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     background: rgba(255, 255, 255, 0.05);
@@ -417,8 +418,8 @@
 }
 
 .arsenal-move .move-icon {
-    width: 48px;
-    height: 48px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }

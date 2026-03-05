@@ -230,6 +230,28 @@
                 "marquee_ability": "DDOS",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
                 "recommended_arsenal": "CURTO-CIRCUITO, ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Raio de Teonita, Fidget Spin"
+            },
+            {
+                "name": "Dupla Exposição",
+                "title_formatted": "Dupla Exposição - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffea00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/robo-fortune/Robo_Fortune_0.png"
+                },
+                "stats": {
+                    "attack": "12,576",
+                    "health": "52,032",
+                    "power": "25,107"
+                },
+                "signature_ability": {
+                    "name": "INSTANTÂNEO",
+                    "description": "ATAQUES de RAIO bem-sucedidos de GOLPES ESPECIAIS concedem IMUNIDADE por 10 segundos e aplicam ATORDOAMENTO no oponente por 2 segundos se ele não estiver sofrendo de SANGRAMENTO.\\n\\nQuando ATORDOAMENTO expirar no oponente, conceda ESQUIVA por 15 segundos à Robo-Fortune e aplique SANGRAMENTO FORTE no oponente por 5 segundos."
+                },
+                "marquee_ability": "VERIFICAÇÃO DE PING",
+                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
+                "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, Corte Rápido, Raio de Teonita, Raio de Teonita"
             }
         ],
         "prata": [

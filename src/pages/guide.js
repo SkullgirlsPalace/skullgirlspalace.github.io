@@ -105,13 +105,68 @@ export function render() {
                             </table>
                         </div>
                     </div>
+
+                    <div style="height: 40px;"></div> <!-- Spacer -->
+
+                    <!-- SPECIAL EFFECTS SECTION -->
+                    <div class="modifiers-section">
+                        <h2 class="section-title" style="color: #b0bec5; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            <img src="img/modifiers/permanent/Permanent.png" style="width: 24px; height: 24px;">
+                            Efeito Permanente
+                        </h2>
+                        <div class="effects-table-container">
+                            <table class="effects-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ícone</th>
+                                        <th>Nome</th>
+                                        <th>Efeito / Descrição</th>
+                                        <th>Máx.</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="special-list">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- CATALYSTS TAB -->
                 <div id="tab-catalysts" class="guide-tab-content">
-                    <div class="catalysts-intro">
-                        <p>Catalisadores são modificadores que o Jogador pode aplicar em seus nós de Batalha na sua Base em Batalhas da Fenda, esses modificadores são essênciais para dificultar o ataque contra sua base, além dos modificadores da semana.</p>
+                    <h2 class="catalyst-title-main">Modificadores da Semana</h2>
+                    
+                    <!-- Catalysts of the Week Section -->
+                    <div class="cotw-section">
+                        <div class="cotw-filters">
+                            <button class="cotw-filter-btn" data-element="water">
+                                <img src="img/icones/ElementalWaterBackless.png" alt="Água">
+                                <span>Água</span>
+                            </button>
+                            <button class="cotw-filter-btn" data-element="fire">
+                                <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                                <span>Fogo</span>
+                            </button>
+                            <button class="cotw-filter-btn" data-element="wind">
+                            <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                            <span>Ar</span>
+                            </button>
+                            <button class="cotw-filter-btn" data-element="light">
+                            <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                            <span>Luz</span>
+                            </button>
+                            <button class="cotw-filter-btn" data-element="dark">
+                                <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
+                                <span>Trevas</span>
+                            </button>
+                        </div>
+                        <div class="catalyst-grid" id="cotw-container-guide">
+                            <p class="info-state" style="text-align: center; margin: 20px 0;">Selecione um elemento para ver os modificadores da semana.</p>
+                        </div>
                     </div>
+
+                    <div style="height: 40px; border-bottom: 1px solid #30363d; margin-bottom: 40px;"></div>
+
                     <div class="catalyst-categories" id="catalyst-container">
                         <!-- Populated by JS -->
                         <div class="loading-state">Carregando catalisadores...</div>
@@ -125,6 +180,7 @@ export function render() {
 export function init() {
     renderEffects('buff', 'buffs-list');
     renderEffects('debuff', 'debuffs-list');
+    renderSpecialEffects('special-list');
     initCatalysts();
 
     // Register global tab switcher
@@ -159,8 +215,9 @@ function renderEffects(type, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    const effects = Object.values(EFFECT_DATA)
-        .filter(e => e.type === type)
+    const effects = Object.entries(EFFECT_DATA)
+        .filter(([key, e]) => e.type === type && key !== 'permanent')
+        .map(([key, e]) => e)
         .sort((a, b) => a.name.localeCompare(b.name));
 
     let html = '';
@@ -204,6 +261,16 @@ async function initCatalysts() {
         container.innerHTML = '<p class="error-state">Erro ao carregar catalisadores.</p>';
         return;
     }
+
+    // Attach event listeners for COTW in Guide
+    document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(b => b.classList.remove('active'));
+            const button = e.currentTarget;
+            button.classList.add('active');
+            renderCotw(button.dataset.element, 'cotw-container-guide', catalysts);
+        });
+    });
 
     // Handle Discord embed format
     if (catalysts.embeds && Array.isArray(catalysts.embeds)) {
@@ -254,18 +321,67 @@ async function initCatalysts() {
                 ${catalysts.map(cat => renderCatalystCard(cat)).join('')}
             </div>
         `;
-    } else if (catalysts.categories) {
-        container.innerHTML = Object.entries(catalysts.categories).map(([category, items]) => `
-            <div class="catalyst-category">
-                <h3>${category}</h3>
-                <div class="catalyst-grid">
-                    ${items.map(cat => renderCatalystCard(cat)).join('')}
+    } else if (catalysts.categories && Array.isArray(catalysts.categories)) {
+        container.innerHTML = catalysts.categories.map(catObj => {
+            const categoryClass = getCategoryClass(catObj.category);
+            return `
+                <div class="catalyst-category ${categoryClass}">
+                    <h3 style="font-family: 'Washington', sans-serif; color: var(--accent-gold); margin-bottom: 16px;">${catObj.category} ⬇️</h3>
+                    <div class="catalyst-grid">
+                        ${catObj.items.map(item => renderCatalystCard(item)).join('')}
+                    </div>
                 </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     } else {
         container.innerHTML = '<p class="info-state">Dados de catalisadores carregados.</p>';
     }
+}
+
+function renderSpecialEffects(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const effect = EFFECT_DATA.permanent;
+    if (!effect) return;
+
+    const html = `
+        <tr class="effect-row">
+            <td class="effect-icon-cell">
+                <div class="effect-icon-wrapper">
+                    <img src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
+                </div>
+            </td>
+            <td class="effect-name-cell">
+                <span class="effect-name" style="color: ${effect.color};">${effect.name}</span>
+            </td>
+            <td class="effect-desc-cell">
+                <p><strong style="color: ${effect.color};">Descrição do Jogo:</strong> ${effect.detailed}</p>
+                ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effect.color};">Explicação:</strong> ${effect.explicacao}</p>` : ''}
+            </td>
+            <td class="effect-stacks-cell">-</td>
+        </tr>
+    `;
+
+    container.innerHTML = html;
+}
+
+function renderCotw(element, containerId, catalystsData) {
+    const cotwContainer = document.getElementById(containerId);
+    if (!cotwContainer || !catalystsData) return;
+
+    const filteredItems = [];
+    for (const cat of catalystsData.categories) {
+        const matching = cat.items.filter(i => i.element === element);
+        filteredItems.push(...matching);
+    }
+
+    if (filteredItems.length === 0) {
+        cotwContainer.innerHTML = '<p class="info-state" style="text-align: center; margin: 20px 0;">Nenhum modificador específico deste elemento encontrado.</p>';
+        return;
+    }
+
+    cotwContainer.innerHTML = filteredItems.map(item => renderCatalystCard(item)).join('');
 }
 
 function getCategoryClass(name) {
@@ -287,13 +403,19 @@ function formatCatalystText(text) {
     return text;
 }
 
-function renderCatalystCard(catalyst) {
+function renderCatalystCard(item) {
+    // Formatting newlines in description
+    const formattedDesc = (item.description || '').replace(/\\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
     return `
         <div class="catalyst-card">
-            ${catalyst.icon ? `<img src="${catalyst.icon}" alt="${catalyst.name}" class="catalyst-icon">` : ''}
-            <h4>${catalyst.name || 'Catalisador'}</h4>
-            <p>${catalyst.description || ''}</p>
-            ${catalyst.rarity ? `<span class="catalyst-rarity ${catalyst.rarity}">${catalyst.rarity.toUpperCase()}</span>` : ''}
+            <div class="catalyst-card-header">
+                <h4>${item.name}</h4>
+                ${item.constraint ? `<span class="catalyst-constraint">${item.constraint}</span>` : ''}
+            </div>
+            <div class="catalyst-description">
+                <p>${formattedDesc}</p>
+            </div>
         </div>
     `;
 }

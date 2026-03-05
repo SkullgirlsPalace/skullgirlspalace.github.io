@@ -1,79 +1,424 @@
 {
-    "content":  null,
-    "embeds":  [
-                   {
-                       "description":  [
-                                           "O intuito é ajudar e priorizar investimentos nestes catalisadores e também ter atenção ao lidar com eles. Está em ordem Alfabetica.",
-                                           "",
-                                           "### Notas: Os sinais ao lado do nome representam isso: ",
-                                           "",
-                                           "### **(+)**. Forte, pode ser útil em mais situações. ",
-                                           "",
-                                           "### **(=)**. Bom, cumpre sua função e pode ser usado em certas ocasiões.",
-                                           "",
-                                           "### **(-)**. Mediano ou Ruim, pouco usável na maioria das situações, pode funcionar em alguns casos."
-                                       ],
-                       "title":  "Catalisadores para Batalhas da Fenda.",
-                       "color":  "#333333",
-                       "author":  {
-                                      "name":  "SGM - Versão do Jogo: 8.0"
-                                  },
-                       "fields":  [
-                                      {
-                                          "name":  "Forte ⬇️",
-                                          "value":  [
-                                                        "* +AutoImune (Ambos), +Blockbusted (Ambos)",
-                                                        "* =Hora de Enfeitiçar (Ambos), +Luta Final (Ambos)",
-                                                        "* +Maldição do Conhecimento (Ambos), =No Ar Rarefeito (Def. Ar)",
-                                                        "* +O Vacilão Nervoso (Ambos), +Previsão Definhante (Ambos),",
-                                                        "* +Resistência Fútil (Big Band)"
-                                                    ],
-                                          "inline":  false
-                                      },
-                                      {
-                                          "name":  "Bom ⬇️",
-                                          "value":  [
-                                                        "* =Armadura de Gelo (Def. Água), -Boa Vida (Marie)",
-                                                        "* -É Fazer Ou Morrer (Beowulf), =Exceção Especial (Ambos)",
-                                                        "* =Incapacitador (Ambos), =Máquina da Destruição (Ambos)",
-                                                        "* =Não Cutuque O Buer (Painwheel), =Últimas Palavras (Def. Luz)"
-                                                    ],
-                                          "inline":  false
-                                      },
-                                      {
-                                          "name":  "Mediano ⬇️",
-                                          "value":  [
-                                                        "* =Águas Altas (Def. Água), -Altas Temperaturas (Def. Fogo)",
-                                                        "* =Arranhador (Ms. Fortune), =Campo Eletrostático (Robo Fortune)",
-                                                        "* =Darknut (Def. Trevas), -Devolver ao Remetente (Squigly)",
-                                                        "* =Elemento Corrosivo (Double), -Faraomônios (Eliza)",
-                                                        "* =Grande Fuga (Filia), =Iluminados (Def. Luz)",
-                                                        "* =Incendiário (Def. Fogo), -Marca da Exclusão (Personagem)",
-                                                        "* =Pontas Ocas (Peacock), =Sem Salto Alto (Ambos)",
-                                                        "* =Sobrecarregado (Def. Ar), =Super Câmera Lenta (Ambos)",
-                                                        "* =Tiro No Escuro (Def. Trevas)"
-                                                    ],
-                                          "inline":  false
-                                      },
-                                      {
-                                          "name":  "Ruim ⬇️",
-                                          "value":  [
-                                                        "* -Ameaça Iminente (Parasoul), -Armada Invencível (Ambos)",
-                                                        "* -Batedor de Recordes (Ambos), -Classificação de Armadura (Ambos)",
-                                                        "* -Fortemente Armado (Cerebella), -Fúria Primitiva (Ambos)",
-                                                        "* -Granada Atordoante (Ambos), -Marca da Exclusão",
-                                                        "* -Megalixir (Valentine), -Para Ser Preciso (Ambos)",
-                                                        "* -Período Orbital (Annie), =Pó do Sono (Fukua)",
-                                                        "* =Regeneração X (Ambos), -Ritmo e Gosma (Umbrella)",
-                                                        "* -Sangramento Culposo (Ambos), -Velocidade Máxima (Ambos)"
-                                                    ],
-                                          "inline":  false
-                                      }
-                                  ],
-                       "thumbnail":  {
-
-                                     }
-                   }
-               ],
-    "components":  null
+    "categories": [
+        {
+            "category": "Forte",
+            "items": [
+                {
+                    "name": "AutoImune",
+                    "constraint": "Ambos",
+                    "description": "Ao sofrer pelo menos 2 EF. NEGATIVOS, 100% de chance de remover todos os EF. NEGATIVOS e ganhar IMUNIDADE 6 s ao sofrer outro EF. NEG.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconImmune.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Blockbusted",
+                    "constraint": "Ambos",
+                    "description": "Quando GOLPEADO, tem 15% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 15 s se ele tiver um BLOCKBUSTER cheio.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockBlock.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Hora de Enfeitiçar",
+                    "constraint": "Ambos",
+                    "description": "A cada 20 segundos, os oponentes sofrem FEITIÇO por 13 segundos.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHex.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Luta Final",
+                    "constraint": "Ambos",
+                    "description": "50% de chance de ganhar RESISTÊNCIA FINAL por 15 segundos quando o oponente usa um BLOCKBUSTER.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Maldição do Conhecimento",
+                    "constraint": "Ambos",
+                    "description": "50% chance de infligir MALDIÇÃO por 15 segundos ao ganhar um EFEITO POSITIVO.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCurse.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "No Ar Rarefeito",
+                    "constraint": "Def. Ar",
+                    "description": "[Defensores do Elemento Ar]: A cada 15s, todos os EF. NEG. são removidos e todos os BLOCKBUSTERS do oponente são reiniciados.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "wind",
+                    "notes": ""
+                },
+                {
+                    "name": "O Vacilão Nervoso",
+                    "constraint": "Ambos",
+                    "description": "Com menos de 50% de VIDA, 100% de chance de ganhar INABALÁVEL por 15 s e 2 camadas(s) de BARREIRA quando NOCAUTEADO.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconUnflinching.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Previsão Definhante",
+                    "constraint": "Ambos",
+                    "description": "A cada 10 segundos, os oponentes sofrem DEFINHAR por 15 segundos. DEFINHAR será removido se o oponente usar um BLOCKBUSTER.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Resistência Fútil",
+                    "constraint": "Big Band",
+                    "description": "Quando a VIDA do Big Band está acima de 50%, oponentes sofrem 6% de dano ao acertarem um GOLPE que tire menos de 1% da VIDA MÁX. do Big Band. A PERFURAÇÃO dos oponentes diminui 35% ao enfrentar Big Band.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "category": "Bom",
+            "items": [
+                {
+                    "name": "Armadura de Gelo",
+                    "constraint": "Def. Água",
+                    "description": "[Defensores do Elemento Água]: 10% de chance de ganhar ARMADURA por 12 segundos quando GOLPEADO.\n\nQuando GOLPEADO com ARMADURA, reflita 15% do dano recebido.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+                    "element": "water",
+                    "notes": ""
+                },
+                {
+                    "name": "Boa Vida",
+                    "constraint": "Marie",
+                    "description": "Marie ganha RESISTÊNCIA FINAL e inflige QUIETUS por 20 segundos cada ao sofrer um GOLPE que tire ao menos 10% da sua VIDA MÁX.\n\nEnquanto estiver se beneficiando de RESISTÊNCIA FINAL, Marie remove 1 EF. POS. do oponente e recupera 5% de VIDA por segundo.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "É Fazer Ou Morrer",
+                    "constraint": "Beowulf",
+                    "description": "Após 30 segundos se passarem na luta, se Beowulf estiver vivo, todos os aliados ganham IMUNIDADE e ACELERAÇÃO permanentes.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Exceção Especial",
+                    "constraint": "Ambos",
+                    "description": "Ao usar um GOLPE ESPECIAL, 50% de chance de DESATIVAR os GOLPES ESPECIAIS do oponente por 15 seg.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockSpecial.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Incapacitador",
+                    "constraint": "Ambos",
+                    "description": "Inflige INCAPACITAÇÃO por 15 segundos e FADIGA por 8 segundos quando um ataque do oponente tira pelo menos 10% de VIDA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCripple.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Máquina da Destruição",
+                    "constraint": "Ambos",
+                    "description": "50% de chance de infligir DESTRUIÇÃO por 10 s ao cair abaixo de 50% de VIDA. Ela é removida quando o oponente é DERROTADO ou SAI DA ASSISTÊNCIA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDoom.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Não Cutuque O Buer",
+                    "constraint": "Painwheel",
+                    "description": "A Painwheel não pode perder mais de 15% de VIDA com um único GOLPE.\n\nAo perder 15% de VIDA com qualquer GOLPE, REFLETE 75% do dano.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Últimas Palavras",
+                    "constraint": "Def. Luz",
+                    "description": "[Defensores do Elemento Luz]: Uma vez por luta, ganhe 100% de chance de ter RESISTÊNCIA FINAL por 15 s ao sofrer um GOLPE que seria fatal.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+                    "element": "light",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "category": "Mediano",
+            "items": [
+                {
+                    "name": "Águas Altas",
+                    "constraint": "Def. Água",
+                    "description": "[Defensores do Elemento Água]: 10% de chance de ganhar ARMADURA e MIASMA por 30 s quando GOLPEADO com um BLOCKBUSTER cheio.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "water",
+                    "notes": ""
+                },
+                {
+                    "name": "Altas Temperaturas",
+                    "constraint": "Def. Fogo",
+                    "description": "[Defensores do Elemento Fogo]: ganhe FÚRIA de 30 segundos a cada 5 segundos. ATAQUES DE ARRANCADA e BLOCKBUSTERS são INDEFENSÁVEIS ao se beneficiar de ao menos 2 camadas de FÚRIA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+                    "element": "fire",
+                    "notes": ""
+                },
+                {
+                    "name": "Arranhador",
+                    "constraint": "Ms. Fortune",
+                    "description": "A Ms. Fortune inflige LENTIDÃO e MARCA DA MORTE por 12 segundos quando seus ataques são BLOQUEADOS.\n\nAo atingir 5 camadas de LENTIDÃO, o oponente fica ATORDOADO por 3 segundos.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Campo Eletrostático",
+                    "constraint": "Robo Fortune",
+                    "description": "Ao se beneficiar de um EF. POSITIVO, a Robo-Fortune ganha chance de 25% de infligir OSCILAÇÃO DE ENERGIA e POLARIDADE INVERSA por 15 seg cada quando GOLPEADA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Darknut",
+                    "constraint": "Def. Trevas",
+                    "description": "[Defensores do Elemento Trevas]: comece a luta com 5 camadas de ARMADURA. Cada uma é removida quando GOLPEADO com uma CONTAGEM DE COMBO em qualquer múltiplo de 10.\n\nGanhe 10% de chance de infligir SANGRAMENTO por 15 segundos quando GOLPEADO com ARMADURA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "dark",
+                    "notes": ""
+                },
+                {
+                    "name": "Devolver ao Remetente",
+                    "constraint": "Squigly",
+                    "description": "Uma vez por luta quando derrotada sob EF. NEG., a Squigly ganha 100% de chance de RESSUSCITAR com 50% de VIDA e TRANSFERIR todos os EF. NEG. para o oponente.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Elemento Corrosivo",
+                    "constraint": "Double",
+                    "description": "Oponentes perdem 4% de VIDA por segundo enquanto estão em VANTAGEM OU DESVANTAGEM ELEMENTAL contra a Double.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Faraomônios",
+                    "constraint": "Eliza",
+                    "description": "Eliza ganha uma chance de 20% de infligir FEITIÇO e MALDIÇÃO por 15 segundos quando GOLPEADA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Grande Fuga",
+                    "constraint": "Filia",
+                    "description": "A Filia tem 50% de chance de ganhar EVASÃO a cada 5º GOLPE de combo sofrido.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Iluminados",
+                    "constraint": "Def. Luz",
+                    "description": "[Defensores do Elemento Luz]: Comece a luta com 30 segundos de INABALÁVEL e IMUNIDADE.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "light",
+                    "notes": ""
+                },
+                {
+                    "name": "Incendiário",
+                    "constraint": "Def. Fogo",
+                    "description": "[Defensores do Elemento Fogo]: ganhe FÚRIA por 10 segundos e 1 camada de PRECISÃO a cada 5 segundos.\n\nEnquanto estiver se beneficiando de PRECISÃO, inflija QUEBRA DE GUARDA ao GOLPEAR (inclui golpes bloqueados).",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "fire",
+                    "notes": ""
+                },
+                {
+                    "name": "Marca da Exclusão",
+                    "constraint": "Personagem",
+                    "description": "Os oponentes sofrem MARCA DA MORTE por 15 segundos quando estão com menos de 50% de VIDA.\n\nAO GOLPEAR, tem 10% de chance de derrotar os oponentes imediatamente se estiverem sofrendo de MARCA DA MORTE (inclui golpes bloqueados).",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDeathMark.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Pontas Ocas",
+                    "constraint": "Peacock",
+                    "description": "Os projéteis da Peacock infligem SANGRAMENTO FORTE, INCAPACITAÇÃO e QUEBRA DE GUARDA por 15 s quando BLOQUEADOS.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Sem Salto Alto",
+                    "constraint": "Ambos",
+                    "description": "O oponente sofre BLOQUEIO DE CURA por 7 segundos a cada 7 segundos enquanto tiver mais de 45 % de VIDA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHealBlock.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Sobrecarregado",
+                    "constraint": "Def. Ar",
+                    "description": "[Defensores do Elemento Ar]: ganhe 6% no MEDIDOR DE BLOCKBUSTER por segundo se o oponente tiver um BLOCKBUSTER totalmente carregado.\n\nGanhe também 25% de chance de infligir um ATORDOAMENTO de 5 segundos.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+                    "element": "wind",
+                    "notes": ""
+                },
+                {
+                    "name": "Super Câmera Lenta",
+                    "constraint": "Ambos",
+                    "description": "Os oponentes sofrem LENTIDÃO por 15 segundos após cada 5 segundos sem usar um BLOCKBUSTER.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconSlow.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Tiro No Escuro",
+                    "constraint": "Def. Trevas",
+                    "description": "[Defensores do Elemento Trevas]: ao BLOQUEAR um GOLPE, tem 100% de chance de DRENAR 15% DO MEDIDOR DE BLOCKBUSTER.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+                    "element": "dark",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "category": "Ruim",
+            "items": [
+                {
+                    "name": "Ameaça Iminente",
+                    "constraint": "Parasoul",
+                    "description": "A Parasoul ganha PRECISÃO ao gerar uma LÁGRIMA.\n\nCada GOLPE CRÍTICO acertado por qualquer um dos lutadores causa SANGRAMENTO no oponente e aumenta o DANO DE CRÍTICO da Parasoul em 150%.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Armada Invencível",
+                    "constraint": "Ambos",
+                    "description": "50% de chance de ganhar INVENCÍVEL por 15 segundos quando um aliado é derrotado.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconInvincible.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Batedor de Recordes",
+                    "constraint": "Ambos",
+                    "description": "Cada GOLPE tem 25% de chance de infligir QUEBRA DE ARMADURA e QUEBRA DE GUARDA por 15 segundos.\n\nAcertar um CRÍTICO converte a QUEBRA DE ARMADURA em permanente.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmorBreak.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Classificação da Armadura",
+                    "constraint": "Ambos",
+                    "description": "15% de chance quando GOLPEADO de evitar dano e ganhar ARMAD. por 15 s se o opon. tiver mais de 7 GOLPES COMBO.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Fortemente Armado",
+                    "constraint": "Cerebella",
+                    "description": "A Cerebella tem 100% de chance de ganhar INABALÁVEL por 5 segundos ao BLOQUEAR qualquer ataque.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Fúria Primitiva",
+                    "constraint": "Ambos",
+                    "description": "Ganhe FÚRIA por 15 segundos e 15% no MEDIDOR DE BLOCKBUSTER para cada 10 GOLPES DE COMBO sofridos.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Granada Atordoante",
+                    "constraint": "Ambos",
+                    "description": "Projéteis infligem 200% de DANO EXTRA quando BLOQUEADOS e têm 25% de chance de ATORDOAR o oponente por 6 segundos ao GOLPEAR.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Marca da Exclusão",
+                    "constraint": "",
+                    "description": "Os oponentes sofrem MARCA DA MORTE por 15 segundos quando estão com menos de 50% de VIDA.\n\nAO GOLPEAR, tem 10% de chance de derrotar os oponentes imediatamente se estiverem sofrendo de MARCA DA MORTE (inclui golpes bloqueados).",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDeathMark.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Megalixir",
+                    "constraint": "Valentine",
+                    "description": "Todos os aliados ganham 6% no MEDIDOR DE BLOCKBUSTER por segundo enquanto Valentine for a lutadora ativa e estiver se beneficiando de REGENERAÇÃO.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Para Ser Preciso",
+                    "constraint": "Ambos",
+                    "description": "Ganhe 3 camada(s) de PRECISÃO a cada 5 segundos.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconPrecision.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Período Orbital",
+                    "constraint": "Annie",
+                    "description": "Quando a Annie BLOQUEIA um GOLPE, ela causa uma MARCA DA MORTE de 10 segundos, que é removida quando ela sofre um GOLPE DE COMBO de 10. Se a MARCA DA MORTE expirar, o oponente sofre IMOBILIZAÇÃO por 15 seg.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Pó do Sono",
+                    "constraint": "Fukua",
+                    "description": "Fukua tem 10% de chance de infligir FADIGA por 5 segundos e DRENAR 10% do MEDIDOR DE BLOCKBUSTER do oponente quando GOLPEADA.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Regeneração X",
+                    "constraint": "Ambos",
+                    "description": "Ao ganhar REGENERAÇÃO, tem 50% de chance de aumentar sua duração em 12 s e recuperar 15% de VIDA imediatamente.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconRegen.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Ritmo e Gosma",
+                    "constraint": "Umbrella",
+                    "description": "A Umbrella ganha 1 camada de MIASMA a cada 3 segundos. O MIASMA é removido quando a Umbrella é NOCAUTEADA.\n\nAo alcançar 5 camadas de MIASMA, os oponentes sofrem 2 camadas de GOSMA permanente.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Sangramento Culposo",
+                    "constraint": "Ambos",
+                    "description": "Ao infligir SANGRAMENTO, tem 50% de chance de aumentar sua duração em 5 segundos.\n\nEnquanto o oponente estiver sofrendo com SANGRAMENTO, causa dano igual a 6% da VIDA MÁX. dele a cada 3 segundos.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconBleed.png",
+                    "element": "",
+                    "notes": ""
+                },
+                {
+                    "name": "Velocidade Máxima",
+                    "constraint": "Ambos",
+                    "description": "Quando GOLPEADO com um BLOCKBUSTER, tem 25% de chance de ganhar ACELERAÇÃO por 10 segundos.\n\nAo ganhar ACELERAÇÃO, ganhe também 50% no MEDIDOR DE BLOCKBUSTER.",
+                    "icon": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHaste.png",
+                    "element": "",
+                    "notes": ""
+                }
+            ]
+        }
+    ]
 }

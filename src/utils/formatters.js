@@ -4,6 +4,7 @@
 // =====================================================
 
 import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
+import { hasElementEffects } from '../data/elementEffectsData.js';
 
 /**
  * Format ability/description text
@@ -11,7 +12,7 @@ import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
  * @param {string} text - Raw text to format
  * @returns {string} Formatted HTML string
  */
-export function formatText(text) {
+export function formatText(text, variantName = null) {
     if (!text) return '';
 
     // Remove [HAB 1]: and [HAB 2]: prefixes
@@ -51,6 +52,14 @@ export function formatText(text) {
         workingText = workingText.replace(marker, html);
     }
 
+    // Wrap ELEMENTO keyword for variants with element effects
+    if (variantName && hasElementEffects(variantName)) {
+        workingText = workingText.replace(
+            /(?<![\wÀ-ÿ])ELEMENTOS?(?![\wÀ-ÿ])/g,
+            (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}">${match}</span>`
+        );
+    }
+
     // Convert numbers to highlighted spans
     workingText = workingText.replace(/((?:\?\?\?|\d+(?:\.\d+)?%?))/g, '<span class="number">$1</span>');
 
@@ -60,7 +69,7 @@ export function formatText(text) {
     return workingText;
 }
 
-import { getMoveImage } from '../data/movesimages.js';
+import { getMoveData } from '../data/movesimages.js';
 
 /**
  * Format arsenal string into HTML with move images
@@ -108,13 +117,13 @@ export function formatArsenal(arsenal, charKey = null) {
     if (charKey) {
         return items.map(item => {
             const moveName = item.trim();
-            const moveImage = getMoveImage(charKey, moveName);
+            const moveData = getMoveData(charKey, moveName);
 
-            if (moveImage) {
+            if (moveData) {
                 return `
                     <div class="arsenal-move">
-                        <img src="${moveImage}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
-                        <span class="move-name">${moveName}</span>
+                        <img src="${moveData.image.image}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
+                        <span class="move-name attr-highlight move-highlight" data-attr-key="move" data-move="${moveName}" data-char="${charKey}">${moveName}</span>
                     </div>
                 `;
             }

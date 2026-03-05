@@ -32,6 +32,9 @@ export function render() {
                     <button class="hub-btn" onclick="navigateTo('stats')">
                         <span>ESTATÍSTICAS</span>
                     </button>
+                    <button class="hub-btn" onclick="window.open('https://hub.skullgirlsmobile.com', '_blank')">
+                        <span>SKULLGIRLS MOBILE HUB</span>
+                    </button>
                 </div>
 
             </div>

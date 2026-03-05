@@ -146,12 +146,27 @@ html[lang='zh-cn'] .cinematic {
     cursor: pointer;
     transition: color 0.2s, text-shadow 0.2s;
     position: relative;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    text-decoration: none !important;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    gap: 4px;
+    margin: 0 2px;
 }
 
-.attr-highlight:hover {
-    text-shadow: 0 0 8px currentColor;
-    border-bottom-style: solid;
+.attr-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(212, 168, 75, 1);
+}
+
+.attr-highlight:hover::after {
+    box-shadow: 0 0 5px rgba(212, 168, 75, 0.8);
 }
 
 /* SGM Style Colors */
@@ -179,23 +194,15 @@ html[lang='zh-cn'] .cinematic {
 
 /* ========== INLINE EFFECT ICONS ========== */
 .inline-effect-icon {
-    width: 18px;
-    /* Slightly larger */
-    height: 18px;
-    margin-right: 6px;
+    width: 1.1em;
+    height: 1.1em;
+    margin-right: 2px;
     display: inline-block;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
     flex-shrink: 0;
+    vertical-align: middle;
 }
 
-.attr-highlight {
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    vertical-align: baseline;
-    /* Better baseline alignment with surrounding text */
-    gap: 2px;
-}
 
 /* Modal Icon Styling */
 .attr-detail-header {

@@ -21,9 +21,9 @@
                     "name": "DOMINAÇÃO ABSOLUTA",
                     "description": "[HAB 1]: Usar um GOLPE ESPECIAL **sacrifica 10% da VIDA MÁX. da Eliza** e dá 35% do MED. DE BLOCKBUSTER e REGENERAÇÃO FORTE por 10 seg.\n\n[HAB 2]: Ganhe BÊNÇÃO e IMUNIDADE por 30 segundos cada **ao entrar no MODO SEKHMET.**"
                 },
-                "marquee_ability": "**Juramento de Sangue** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Juramento de Sangue (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Sol de Khepri, Mordida da Sekhmet, Damas Escarlates (Provocar), Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Sol de Khepri, Mordida da Sekhmet, Damas Escarlates (Provocar), Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Don Passione",
@@ -43,9 +43,9 @@
                     "name": "EM PEDAÇOS",
                     "description": "[HAB 1]: Quando Eliza **estiver para sofrer um EF. NEG., 50% de chance de impedi-lo** e infligir SANGRAMENTO, FEITIÇO ou QUIETUS por 12 segundos.\n\n[HAB 2]: Ganhe MIASMA permanente para cada EF. NEG. que um oponente **tenha ao sair do Modo Sekhmet** (máx. de 3 por saída). Remove MIASMA **quando o oponente não estiver mais sofrendo** um EF. NEG."
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "A Vampira",
@@ -65,9 +65,9 @@
                     "name": "BUFFET",
                     "description": "[HAB 1]: 75% de todo o dano infligido é recuperado como VIDA **desde que o percentual de VIDA da Eliza seja menor que o do oponente** (também vale para golpes bloqueados).\n\n[HAB 2]: **Quando o oponente tenta ganhar um EF. POS., Eliza tem 50% de chance de impedi-lo** e ganhar 25% no MEDIDOR DE BLOCKBUSTER."
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Senhor das Trevas",
@@ -89,7 +89,7 @@
                 },
                 "marquee_ability": "Sacrifício Ritual",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Dano Crítico",
-                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ],
         "ouro": [
@@ -111,9 +111,9 @@
                     "name": "HORA DAS BRUXAS",
                     "description": "[HAB 1]: Inflige FEITIÇO por 15 s **ao entrar no Modo Sekhmet**, desativando HAB. CARACTERÍSTICAS do oponente enquanto o efeito durar.\n\n[HAB 2]: Se um oponente SAIR DA ASSISTÊNCIA sob FEITIÇO, **o próximo oponente será afetado** por 3 EFEITOS NEGATIVOS aleatórios por 15 segundos."
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Magnata Nobre",
@@ -135,7 +135,7 @@
                 },
                 "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Intervenção da Diva",
@@ -155,9 +155,9 @@
                     "name": "CLAREAMENTO ÓSSEO",
                     "description": "[HAB 1]: No Modo Sekhmet, 50% do dano infligido por **ataques NÃO BLOCKBUSTER é recuperado como VIDA.**\n\n[HAB 2]: No Modo Sekhmet, **ataques NÃO BLOCKBUSTER causam 100% de dano extra e drenam 8% do MEDIDOR DE BLOCKBUSTER do oponente.**"
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Confusão Interior",
@@ -175,11 +175,11 @@
                 },
                 "signature_ability": {
                     "name": "AUTOABSORÇÃO",
-                    "description": "[HAB 1]: **Ao entrar no Modo Sekhmet**, ganha um EF. POSITIVO por 15 seg por aliado. O EF. POSITIVO ganho é determinado pelo ELEMENTO de cada aliado. [Efeitos Positivos dos Elementos](https://skullgirlsmobile.fandom.com/wiki/Inner_Pieces).\n\n[HAB 2]: Ao usar a ASSISTÊNCIA de ou para a Eliza, tem 100% de chance de **transferir todos os EF. POSITIVOS ativos para o próximo aliado.**"
+                    "description": "[HAB 1]: **Ao entrar no Modo Sekhmet**, ganha um EF. POSITIVO por 15 seg por aliado. O EF. POSITIVO ganho é determinado pelo ELEMENTO de cada aliado.\n\n[HAB 2]: Ao usar a ASSISTÊNCIA de ou para a Eliza, tem 100% de chance de **transferir todos os EF. POSITIVOS ativos para o próximo aliado.**"
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Lazulita",
@@ -199,9 +199,9 @@
                     "name": "MUDANÇA DE MARÉ",
                     "description": "[HAB 1]: **Uma vez por luta**, ao ENTRAR NA ASSISTÊNCIA, **iguale o valor do MEDIDOR DE BLOCKBUSTER mais alto do oponente** e inflija QUEBRA de ARM. por 15 s.\n\n[HAB 2]: **Uma vez por luta**, ao usar um BLOCKBUSTER CATEGORIA 3, **troque a porcentagem de VIDA com o oponente** e ganhe REGEN. FORTE por 15 s."
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Dama do Massacre, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Dama do Massacre, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Banho de Sangue",
@@ -221,9 +221,9 @@
                     "name": "SOLO SANGUÍNEO",
                     "description": "[HAB 1]: **Se um dos lutadores usar um BLOCKBUSTER, ambos sofrerão SANGRAMENTO** por 10 segundos.\n\n[HAB 2]: 100% de chance de **converter todos os efeitos de SANGRAMENTO do próprio lutador em REGENERAÇÃO.**"
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ],
         "prata": [
@@ -245,9 +245,9 @@
                     "name": "DEFLEXÃO ASTRAL",
                     "description": "[HAB 1]: Inflige DEFINHAR, MALDIÇÃO, QUIETUS ou FEITIÇO por 10 s **ao usar um BLOCKBUSTER ou GOLPE ESPECIAL.**\n\n[HAB 2]: Também ganha 1 camada de ESQUIVA por 10 s ** ao usar um BLOCKBUSTER.**"
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Amor Sangrento",
@@ -267,9 +267,9 @@
                     "name": "ESQUEMA DE PIRÂMIDE",
                     "description": "[HAB 1]: Recupera 10% de VIDA **quando um dos lutadores usa um GOLPE ESPECIAL.**\n\n[HAB 2]: Recupera 15% do MEDIDOR DE BLOCKBUSTER **quando um dos lutadores usa um BLOCKBUSTER.**"
                 },
-                "marquee_ability": "**Juramento de Sangue** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Juramento de Sangue (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Víbora Escarlate",
@@ -291,7 +291,7 @@
                 },
                 "marquee_ability": "Juramento de Sangue",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Mordida da Sekhmet, Mergulho de Hórus, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Sombruma",
@@ -311,9 +311,9 @@
                     "name": "SANGUE NO OLHO",
                     "description": "[HAB 1]: Ganhe OLHO-MORTO por 6 s **quando um oponente sofrer um EF. NEGATIVO.**\n\n[HAB 2]: **Sekhmet causa 100% de dano extra**. Os oponentes derrotados pelos ataques de Sekhmet não podem ser revividos."
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ],
         "bronze": [
@@ -335,9 +335,9 @@
                     "name": "BELEZA INTERIOR",
                     "description": "[HAB 1]: Inflige QUEBRA DE ARMADURA por 15 s **ao entrar no Modo Sekhmet.**\n\n[HAB 2]: Remova todos os EFEITOS NEGATIVOS e ganhe IMUNIDADE por 15 segundos **ao entrar no Modo Sekhmet.**"
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             },
             {
                 "name": "Decifrada",
@@ -357,9 +357,9 @@
                     "name": "INVEJA",
                     "description": "[HAB 1]: Inflige 25% de dano extra **a todos os aliados vivos do oponente.**\n\n[HAB 2]: Transfere 1 EFEITO POSITIVO do inimigo para você e inflige DEFINHAR por 10 segundos **quando você entrar no MODO SEKHMET.**"
                 },
-                "marquee_ability": "**Sacrifício Ritual** (Opcional, o ideal é ser Critless)",
+                "marquee_ability": "Sacrifício Ritual (Opcional, o ideal é ser Critless)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o Caos, Peso de Anúbis"
+                "recommended_arsenal": "Fúria da Sekhmet, Mordida da Sekhmet, Espiral de Osíris, Banir o caos, Peso de Anúbis"
             }
         ]
     }

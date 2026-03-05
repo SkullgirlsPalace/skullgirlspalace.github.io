@@ -563,14 +563,14 @@ input:checked+.slider:before {
 .compact-portrait-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    gap: 8px;
+    gap: 1px;
 }
 
-.compact-portrait-img {
-    width: 44px;
-    height: 44px;
+.tier-table.compact-mode .tier-char-cell .compact-portrait-img {
+    width: 120px;
+    height: 120px;
     border-radius: 4px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
@@ -578,7 +578,7 @@ input:checked+.slider:before {
 
 .compact-badges {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 4px;
@@ -587,8 +587,8 @@ input:checked+.slider:before {
 /* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
 .tier-table.compact-mode .tier-char-cell .compact-element-icon {
     display: block !important;
-    width: 32px !important;
-    height: 32px !important;
+    width: 28px !important;
+    height: 70px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -596,8 +596,8 @@ input:checked+.slider:before {
 
 .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
     display: block !important;
-    width: 34px !important;
-    height: 34px !important;
+    width: 30px !important;
+    height: 30px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -605,19 +605,19 @@ input:checked+.slider:before {
 
 /* RESPONSIVE IMAGES */
 @media screen and (max-width: 768px) {
-    .compact-portrait-img {
-        width: 38px;
-        height: 38px;
+    .tier-table.compact-mode .tier-char-cell .compact-portrait-img {
+        width: 70px;
+        height: 70px;
     }
 
     .tier-table.compact-mode .tier-char-cell .compact-element-icon {
-        width: 16px !important;
-        height: 16px !important;
+        width: 20px !important;
+        height: 40px !important;
     }
 
     .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
-        width: 16px !important;
-        height: 16px !important;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     .tier-table.compact-mode .tier-char-cell .compact-variant-name {

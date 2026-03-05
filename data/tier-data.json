@@ -514,6 +514,13 @@
             "riftDef": "C",
             "parallel": "B"
         },
+
+        "Grande Mãe": {
+            "pf": "S",
+            "riftOff": "S",
+            "riftDef": "C",
+            "parallel": "S"
+        },
         "Teoria do Caos": {
             "pf": "C",
             "riftOff": "C",
@@ -998,6 +1005,12 @@
             "riftDef": "I",
             "parallel": "SS"
         },
+        "Briga Fatal": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"
+        },
         "Agora e Sempre": {
             "pf": "B",
             "riftOff": "I",
@@ -1420,6 +1433,12 @@
             "riftDef": "I",
             "parallel": "B"
         },
+        "Dupla Exposição": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"
+        },
         "Bombardeiro Azul": {
             "pf": "B",
             "riftOff": "C",
@@ -1591,6 +1610,12 @@
             "riftOff": "C",
             "riftDef": "C",
             "parallel": "A"
+        },
+        "Isca Sortuda": {
+            "pf": "SS",
+            "riftOff": "SS",
+            "riftDef": "C",
+            "parallel": "SS"
         },
         "Saqueadora do Palácio": {
             "pf": "SS",

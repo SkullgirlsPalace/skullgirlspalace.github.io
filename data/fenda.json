@@ -1,0 +1,350 @@
+{
+    "maps": [
+        {
+            "map": 1,
+            "nodes": [
+                {
+                    "node": "Single (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "BIOFEEDBACK",
+                            "description": "Quando o oponente acerta um GOLPE CRÍTICO, 50% do dano é refletido de volta."
+                        }
+                    ]
+                },
+                {
+                    "node": "Single (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "CICATRIZES ATRAENTES",
+                            "description": "Ganhe REGENERAÇÃO e FÚRIA permanentes ao ser GOLPEADO com um ataque que cause pelo menos 10% da VIDA MÁXIMA."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "ARMADILHA DO DIABO",
+                            "description": "Ganhe ESPINHOS por 5 segundos para cada GOLPE bloqueado pelo oponente."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "FIO VIVO",
+                            "description": "Enquanto BLOQUEANDO, ganhe 50% de chance ao ser GOLPEADO de infligir ATORDOAMENTO por 1 segundo."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Topo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "OLHO POR OLHO",
+                            "description": "Ganhe ACELERAÇÃO e inflija QUEBRA DE ARMADURA por 10 segundos ao ser GOLPEADO com um ataque que cause mais de 5% da VIDA MÁXIMA."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "VANTAGEM DA CASA",
+                            "description": "Enquanto estiver em VANTAGEM ELEMENTAL, ganhe 5% do MEDIDOR DE BLOCKBUSTER por segundo."
+                        },
+                        {
+                            "name": "NEVASCA",
+                            "description": "[Lutadores do Elemento Água]: Ganhe ARMADURA por 3 segundos ao sofrer um GOLPE que cause menos de 1% da VIDA MÁXIMA."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 2,
+            "nodes": [
+                {
+                    "node": "Single (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "PODER DE DOIS",
+                            "description": "BLOCKBUSTERS são INDEFENSÁVEIS enquanto o oponente tiver um BLOCKBUSTER totalmente carregado."
+                        }
+                    ]
+                },
+                {
+                    "node": "Single (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "ZONA DE PERIGO",
+                            "description": "Todos os ataques são INDEFENSÁVEIS quando abaixo de 25% de VIDA."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "INICIATIVA",
+                            "description": "Usar um BLOCKBUSTER reduz o MEDIDOR DE BLOCKBUSTER do oponente em 100%."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Direito)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "SÍMBOLO ANCESTRAL",
+                            "description": "Quando não estiver em VANTAGEM ELEMENTAL, sofra 100% de dano extra."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Triple (Topo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "MÃOS FIRMES!",
+                            "description": "Todos os AGARRÕES são inquebráveis.\n\nNão sofre dano dos AGARRÕES do oponente."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "TRANSDUTOR",
+                            "description": "GOLPES constroem rapidamente o MEDIDOR DE BLOCKBUSTER se o oponente estiver bloqueando."
+                        },
+                        {
+                            "name": "PONTO DE IGNIÇÃO",
+                            "description": "[Lutadores do Elemento Fogo]: Ganhe FÚRIA permanente para cada 15% de VIDA perdida.\n\n50% de chance de infligir ATORDOAMENTO por 4 segundos ao acertar um GOLPE que cause pelo menos 10% de dano."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 3,
+            "nodes": [
+                {
+                    "node": "Single (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "DE PÉ FIRME",
+                            "description": "Ganhe REGENERAÇÃO a cada 3 segundos.\n\nA REGENERAÇÃO é removida quando NOCAUTEADO."
+                        }
+                    ]
+                },
+                {
+                    "node": "Single (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "DETERMINAÇÃO DE CONCRETO",
+                            "description": "Remova todos os EF. NEGATIVOS e ganhe IMUNIDADE permanente ao cair abaixo de 50% de VIDA."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "NÃO ME PARE AGORA",
+                            "description": "Ganhe INABALÁVEL enquanto estiver INVESTINDO PARA FRENTE."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "INTERVALO",
+                            "description": "Uma vez por luta, ganhe 5 camadas de REGENERAÇÃO por 6 segundos ao cair abaixo de 50% de VIDA."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Topo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "ESQUIVA EXTRAORDINÁRIA",
+                            "description": "A cada 10 GOLPES DE COMBO que o oponente acertar, ganhe ACELERAÇÃO por 10 segundos e 1 camada de ESQUIVA."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "TIRO DUPLO",
+                            "description": "Uma vez por luta, RESSUSCITE com 25% de VIDA após estar morto por 10 segundos."
+                        },
+                        {
+                            "name": "E O VENTO LEVOU",
+                            "description": "[Lutadores do Elemento Ar]: Recupere 25% de VIDA ao SAIR DA ASSISTÊNCIA. Sempre que o oponente usar um BLOCKBUSTER, seus GOLPES ESPECIAIS são reiniciados e seu MEDIDOR DE BLOCKBUSTER é reduzido em 100%."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 4,
+            "nodes": [
+                {
+                    "node": "Single (Esquerdo)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "RUPTURA",
+                            "description": "Enquanto bloqueando, perca 20% do MEDIDOR DE BLOCKBUSTER por segundo."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Single (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "ENERGIZADO",
+                            "description": "Ganhe ACELERAÇÃO permanente."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Esquerdo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "INÉRCIA",
+                            "description": "Ataques de ASSISTÊNCIA são INDEFENSÁVEIS e concedem INABALÁVEL por 5 segundos."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "PERFURAR",
+                            "description": "ATAQUES DE INVESTIDA são INDEFENSÁVEIS."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Topo)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "CADÁVER REQUINTADO",
+                            "description": "Sofrer um GOLPE perto de um aliado morto concede ESPINHOS por 15 segundos.\n\nRESSUSCITE todos os aliados com 50% de VIDA ao usar um BLOCKBUSTER TIER 3."
+                        }
+                    ]
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [
+                        {
+                            "name": "CARNE INFECTADA",
+                            "description": "Sofra DESTRUIÇÃO de 30 segundos quando o oponente cair abaixo de 50% de VIDA."
+                        }
+                    ],
+                    "defender_modifiers": [
+                        {
+                            "name": "Ó NOITE SAGRADA",
+                            "description": "[Lutadores do Elemento Luz]: RESSUSCITE com 25% de VIDA e RESISTÊNCIA FINAL por 15 segundos após estar morto por 60 segundos."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "map": 5,
+            "nodes": [
+                {
+                    "node": "Single (Esquerdo)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "FORA DE RITMO",
+                            "description": "Sofra um EF. NEGATIVO aleatório por 10 segundos a cada 5 GOLPES DE COMBO."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Single (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "AZAR",
+                            "description": "Causa 100% de dano extra se o oponente tiver qualquer EF. NEGATIVO ativo."
+                        }
+                    ]
+                },
+                {
+                    "node": "Double (Esquerdo)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "ESTREPES",
+                            "description": "Sofra SANGRAMENTO por 10 segundos ao INVESTIR PARA TRÁS."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Double (Direito)",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "OVELHA ELÉTRICA",
+                            "description": "Ganhe 10% de chance ao ser GOLPEADO de infligir OSCILAÇÃO DE ENERGIA por 10 segundos."
+                        }
+                    ]
+                },
+                {
+                    "node": "Triple (Topo)",
+                    "attacker_modifiers": [
+                        {
+                            "name": "RÉQUIEM DA SANIDADE",
+                            "description": "A cada 5 segundos, sofra um EF. NEGATIVO aleatório (exceto ATORDOAMENTO) por 10 segundos."
+                        }
+                    ],
+                    "defender_modifiers": []
+                },
+                {
+                    "node": "Boss",
+                    "attacker_modifiers": [],
+                    "defender_modifiers": [
+                        {
+                            "name": "MALDIÇÃO FINAL",
+                            "description": "Quando derrotado, inflija 3 EF. NEGATIVOS (exceto ATORDOAMENTO) no oponente por 10 segundos."
+                        },
+                        {
+                            "name": "NOITE SILENCIOSA",
+                            "description": "[Lutadores do Elemento Trevas]: Ao sofrer um GOLPE CRÍTICO, DESATIVE os BLOCKBUSTERS do oponente por 10 segundos."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
