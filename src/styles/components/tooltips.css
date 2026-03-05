@@ -236,3 +236,96 @@
 .attr-detail-section.detailed p {
     color: var(--text-primary);
 }
+
+/* =====================================================
+   ELEMENT EFFECTS TABLE (tooltip + modal)
+   Used by element_table source in AttributeTooltip.js
+   ===================================================== */
+
+/* Wider tooltip for element tables */
+.attr-tooltip.element-table-tooltip {
+    width: 380px;
+}
+
+/* Table base */
+.element-effects-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 8px;
+}
+
+.element-effects-table thead th {
+    text-align: left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-gold-dark);
+    font-weight: 800;
+    padding: 4px 8px 8px 8px;
+    border-bottom: var(--border-subtle);
+}
+
+.element-effects-table .buff-header {
+    color: var(--element-wind);
+}
+
+.element-effects-table .debuff-header {
+    color: #ff6b6b;
+}
+
+/* Row */
+.element-effects-table .element-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background var(--transition-fast);
+}
+
+.element-effects-table .element-row:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.element-effects-table .element-row:last-child {
+    border-bottom: none;
+}
+
+/* Cells */
+.element-effects-table td {
+    padding: 6px 8px;
+    vertical-align: middle;
+}
+
+.element-effects-table .element-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.element-table-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.element-table-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+}
+
+.element-effects-table .buff-cell {
+    color: var(--element-wind);
+    font-weight: 500;
+}
+
+.element-effects-table .debuff-cell {
+    color: #ff6b6b;
+    font-weight: 500;
+}
+
+/* Highlight for clickable ELEMENTO text */
+.attr-highlight.element-table {
+    color: var(--accent-gold-light);
+    cursor: pointer;
+    border-bottom: 1px dashed var(--accent-gold);
+}
