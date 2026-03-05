@@ -267,7 +267,7 @@ export const PORTRAIT_MAP = {
         "Tela Azul": "img/portrait/rf/blueS.png",
         "Terror Byte": "img/portrait/rf/tByte.png",
         "Persona Grata": "img/portrait/rf/pAssist.png",
-        "Dupla exposição": "img/portrait/rf/dExposure.png",
+        "Dupla Exposição": "img/portrait/rf/dExposure.png",
         "Caça-cabeças": "img/portrait/rf/metro.png",
         "Tritura-Números": "img/portrait/rf/nCrunch.png",
         "Bombardeiro Azul": "img/portrait/rf/bBomb.png",
