@@ -88,11 +88,8 @@
                     "description": "[HAB 1]: **A cada 10 segundos ganhe 3 EF. POSITIVO(S) aleatório(s) por 5 segundos.**\n\n[HAB 2]: Ao usar um BLOCKBUSTER, tem **33% de chance de converter 3 EF. POSITIVO(S) em FÚRIA permanente.**"
                 },
                 "marquee_ability": "Sanguessuga",
-                "recommended_build": [
-                    "Tricobezoar, Senta a Pua!, ",
-                    "Die Verwandlung,  Espinho Trançado, Espinho Trançado"
-                ],
-                "recommended_arsenal": ""
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Tricobezoar, Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             }
         ],
         "ouro": [
@@ -315,12 +312,8 @@
                     "description": "[HAB 1]: **Enquanto Filia estiver viva**, a TAXA DE CRÍTICO do lutador ativo aumenta em 10% a cada 3 acertos em combo (até 100%).\n\n[HAB 2]: Os GOLPES CRÍTICOS da Filia **acima de 10 acertos em combo** ignoram a ARMADURA e a DEFESA do lutador oponente."
                 },
                 "marquee_ability": "Sanguessuga",
-                "recommended_build": [
-                    "Senta a Pua!,",
-                    "Espinho Trançado, ",
-                    "Espinho Trançado, Espinho Trançado, Espinho Trançado"
-                ],
-                "recommended_arsenal": ""
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             }
         ],
         "bronze": [

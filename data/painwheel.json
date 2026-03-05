@@ -65,16 +65,13 @@
                     "name": "FAZER A CABEÇA",
                     "description": "[HAB 1]: Drene 10% do MEDIDOR DE BLOCKBUSTER **a cada GOLPE não BLOCKBUSTER bloqueado pelo oponente.**\n\n[HAB 2]: 15% do dano causado **por um BLOCKBUSTER** também é sofrido pelos aliados do oponente."
                 },
-                "marquee_ability": [
-                    "Rancor (Ataque) ",
-                    "Sangue Maculado (Defesa/Ataque)"
-                ],
+                "marquee_ability": "Rancor (Ataque), Sangue Maculado (Defesa/Ataque)",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Sobrecarga de Buer, Morte Rastejante, Eixo de Corrida, Ferrão Gae Bolga, Explosão"
+                "recommended_arsenal": "Sobrecarga de Buer, Morte Rastejante, Eixo de Corrida, Ferrão Gae Bolga, Ferrão Gae Bolga"
             },
             {
-                "name": "Papa-moscas",
-                "title_formatted": "Papa-moscas - Ar - Diamante",
+                "name": "Papa-Moscas",
+                "title_formatted": "Papa-Moscas - Ar - Diamante",
                 "element": "Ar",
                 "color_hex": "#00ff00",
                 "images": {
@@ -90,12 +87,9 @@
                     "name": "PEQUENA HÉLICE DOS HORRORES",
                     "description": "[HAB 1]: Causa 25% de dano extra **para cada lutador, aliado ou oponente derrotado.**\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO **após derrotar um oponente.**"
                 },
-                "marquee_ability": [
-                    "Rancor (Ataque)",
-                    "Sangue Maculado (Defesa/Ataque)"
-                ],
+                "marquee_ability": "Rancor (Ataque), Sangue Maculado (Defesa/Ataque)",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Sobrecarga de Buer, Morte Rastejante, Eixo de Corrida, Eixo de Corrida, Explosão"
+                "recommended_arsenal": "Colheita de Buer, Morte Rastejante, Eixo de Corrida, Ferrão Gae Bolga, Ferrão Gae Bolga"
             }
         ],
         "ouro": [

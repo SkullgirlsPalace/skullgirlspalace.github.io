@@ -208,7 +208,7 @@ const VARIANT_IMAGES = {
         "Escaladora de Paredes": "img/painwheel/Painwheel_15.png",
         "Ameaça Mascarada": "img/painwheel/Painwheel_16.png",
         "Neuromancer": "img/painwheel/Painwheel_14.png",
-        "Papa-moscas": "img/painwheel/Painwheel_13.png",
+        "Papa-Moscas": "img/painwheel/Painwheel_13.png",
         "Vagalume": "img/painwheel/Painwheel_9.png",
         "Frio Mordente": "img/painwheel/Painwheel_11.png",
         "Gênese": "img/painwheel/Painwheel_7.png",
