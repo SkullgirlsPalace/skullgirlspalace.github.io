@@ -10,6 +10,7 @@ import { setCharacters, setTierData, setCatalysts, setStatistics } from '../stat
 const cache = {
     characters: null,
     catalysts: null,
+    fenda: null,
     statistics: null,
     tierData: null,
     // Stats-specific caches
@@ -124,6 +125,23 @@ export async function loadCatalysts() {
         return data;
     } catch (err) {
         console.error('Error loading catalysts:', err);
+        return null;
+    }
+}
+
+/**
+ * Load fenda (rift) data
+ * @returns {Promise<Object>} Fenda data
+ */
+export async function loadFendaData() {
+    if (cache.fenda) return cache.fenda;
+
+    try {
+        const res = await fetch('data/fenda.json');
+        cache.fenda = await res.json();
+        return cache.fenda;
+    } catch (err) {
+        console.error('Error loading fenda data:', err);
         return null;
     }
 }
@@ -311,6 +329,7 @@ export function getCharacter(charKey) {
 export function clearCache() {
     cache.characters = null;
     cache.catalysts = null;
+    cache.fenda = null;
     cache.statistics = null;
     cache.tierData = null;
     cache.golpes = null;

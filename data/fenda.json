@@ -24,7 +24,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Esquerdo)",
+                    "node": "Duo (Esquerdo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -34,7 +34,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Direito)",
+                    "node": "Duo (Direito)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -44,7 +44,7 @@
                     ]
                 },
                 {
-                    "node": "Triple (Topo)",
+                    "node": "Triplo (Topo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -93,7 +93,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Esquerdo)",
+                    "node": "Duo (Esquerdo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -103,7 +103,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Direito)",
+                    "node": "Duo (Direito)",
                     "attacker_modifiers": [
                         {
                             "name": "SÍMBOLO ANCESTRAL",
@@ -113,7 +113,7 @@
                     "defender_modifiers": []
                 },
                 {
-                    "node": "Triple (Topo)",
+                    "node": "Triplo (Topo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -162,7 +162,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Esquerdo)",
+                    "node": "Duo (Esquerdo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -172,7 +172,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Direito)",
+                    "node": "Duo (Direito)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -182,7 +182,7 @@
                     ]
                 },
                 {
-                    "node": "Triple (Topo)",
+                    "node": "Triplo (Topo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -231,7 +231,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Esquerdo)",
+                    "node": "Duo (Esquerdo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -241,7 +241,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Direito)",
+                    "node": "Duo (Direito)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -251,7 +251,7 @@
                     ]
                 },
                 {
-                    "node": "Triple (Topo)",
+                    "node": "Triplo (Topo)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -301,7 +301,7 @@
                     ]
                 },
                 {
-                    "node": "Double (Esquerdo)",
+                    "node": "Duo (Esquerdo)",
                     "attacker_modifiers": [
                         {
                             "name": "ESTREPES",
@@ -311,7 +311,7 @@
                     "defender_modifiers": []
                 },
                 {
-                    "node": "Double (Direito)",
+                    "node": "Duo (Direito)",
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
@@ -321,7 +321,7 @@
                     ]
                 },
                 {
-                    "node": "Triple (Topo)",
+                    "node": "Triplo (Topo)",
                     "attacker_modifiers": [
                         {
                             "name": "RÉQUIEM DA SANIDADE",
@@ -337,6 +337,7 @@
                         {
                             "name": "MALDIÇÃO FINAL",
                             "description": "Quando derrotado, inflija 3 EF. NEGATIVOS (exceto ATORDOAMENTO) no oponente por 10 segundos."
+                            
                         },
                         {
                             "name": "NOITE SILENCIOSA",
