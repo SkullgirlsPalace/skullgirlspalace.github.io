@@ -107,7 +107,7 @@
                 },
                 "signature_ability": {
                     "name": "FARDO DO SACRIFÍCIO",
-                    "description": "Quando qualquer lutador acertar um GOLPE BLOQUEADO, sofra um EFEITO NEGATIVO aleatório por 10 segundos e reduza permanentemente o ATAQUE e a DEFESA do oponente em 4%.\\n\\nQuando qualquer lutador usar um GOLPE ESPECIAL, transfira todos os EFEITOS NEGATIVOS para o oponente e ganhe ESQUIVA por 5 segundos e IMUNIDADE por 10 segundos. Se um EFEITO NEGATIVO foi transferido, cure 2% da VIDA MÁXIMA para cada EFEITO NEGATIVO no oponente."
+                    "description": "**Quando qualquer lutador acertar um GOLPE BLOQUEADO, sofra um EFEITO NEGATIVO aleatório** por 10 segundos e reduza permanentemente o ATAQUE e a DEFESA do oponente em 4%.\\n\\n**Quando qualquer lutador usar um GOLPE ESPECIAL, transfira todos os EFEITOS NEGATIVOS para o oponente e ganhe ESQUIVA** por 5 segundos e IMUNIDADE por 10 segundos. **Se um EFEITO NEGATIVO foi transferido**, cure 2% da VIDA MÁXIMA para cada EFEITO NEGATIVO no oponente."
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

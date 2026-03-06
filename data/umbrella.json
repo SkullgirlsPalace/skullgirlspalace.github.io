@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "DOCE OSTENTAÇÃO",
-                    "description": "Enquanto Umbrella estiver viva, o Lutador ativo tem 50% de chance de ganhar um EF. POSITIVO baseado no ELEMENTO de um aliado aleatório por 7 segundos ao acertar um GOLPE CRÍTICO.\\n\\nEnquanto Umbrella estiver viva, o DANO CRÍTICO do Lutador ativo aumenta em 20% por acúmulo de REGENERAÇÃO."
+                    "description": "**Enquanto Umbrella estiver viva**, o Lutador ativo tem 50% de chance de ganhar um EF. POSITIVO baseado no ELEMENTO de um aliado aleatório por 7 segundos ao acertar um GOLPE CRÍTICO.\\n\\n**Enquanto Umbrella estiver viva**, o DANO CRÍTICO do Lutador ativo aumenta em 20% por acúmulo de REGENERAÇÃO."
                 },
                 "marquee_ability": "Final Amargo",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
