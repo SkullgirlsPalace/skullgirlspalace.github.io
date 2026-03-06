@@ -16,6 +16,7 @@ import {
     updateAstroSlider
 } from '../components/Calculator.js';
 import { loadStatistics } from '../services/dataService.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Render statistics page
@@ -28,14 +29,13 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>📊 Estatísticas</h2>
+                <h2>${t('stats.title')}</h2>
             </div>
 
             <div class="stats-intro">
                 <div class="intro-card">
-                    <h3>🎮 Bem-vindo ao Simulador</h3>
-                    <p>Calcule seus ganhos mensais estimados e custos de evolução no Skullgirls Mobile. 
-                    Configure seu perfil de jogador para obter resultados personalizados.</p>
+                    <h3>${t('stats.welcome')}</h3>
+                    <p>${t('stats.intro')}</p>
                 </div>
             </div>
 

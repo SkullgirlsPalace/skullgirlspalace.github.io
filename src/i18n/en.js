@@ -1,0 +1,166 @@
+// =====================================================
+// LOCALE: English (en)
+// =====================================================
+
+export default {
+    // ── Navbar ──────────────────────────────────────
+    'nav.about': 'about',
+    'nav.home': 'Home',
+    'nav.characters': 'Characters',
+    'nav.guide': 'Guide',
+    'nav.stats': 'Statistics',
+
+    // ── Home ────────────────────────────────────────
+    'home.title': 'Skullgirls Palace',
+    'home.subtitle': 'Your complete source for builds, stats and strategies for Skullgirls Mobile.',
+    'home.btn.characters': 'CHARACTERS',
+    'home.btn.guide': 'GUIDE',
+    'home.btn.stats': 'STATISTICS',
+    'home.btn.hub': 'SKULLGIRLS MOBILE HUB',
+
+    // ── Characters Page ─────────────────────────────
+    'characters.title': 'Choose a Character',
+    'characters.export': 'Export',
+
+    // ── Character Detail ────────────────────────────
+    'detail.not_found': 'Character not found',
+    'detail.tab.builds': 'BUILDS',
+    'detail.tab.tier': 'TIER LIST',
+    'detail.no_variants': 'No variants found with these filters.',
+
+    // ── Variant Card ────────────────────────────────
+    'variant.sa_label': 'SIGNATURE ABILITY:',
+    'variant.marquee_label': 'RECOMMENDED MARQUEE:',
+    'variant.build_label': 'RECOMMENDED BUILD',
+    'variant.arsenal_label': 'RECOMMENDED ARSENAL',
+    'variant.tab.ability': 'Ability',
+    'variant.tab.build': 'Build',
+    'variant.no_desc': 'No description',
+    'variant.default_sa': 'Special Ability',
+    'variant.stat.atk': 'ATK',
+    'variant.stat.hp': 'HP',
+    'variant.stat.power': 'Power',
+
+    // ── Filter Bar ──────────────────────────────────
+    'filter.label': 'Filter',
+    'filter.clear': 'Clear Filters',
+    'filter.sort': 'SORT',
+    'filter.score': 'SCORE',
+    'filter.atk': 'ATTACK',
+    'filter.hp': 'HP',
+    'filter.alpha': 'ALPHABETICAL',
+    'filter.element': 'ELEMENT',
+    'filter.category': 'CATEGORY',
+    'filter.change_char': 'CHANGE CHARACTER',
+    'filter.choose_char': 'Choose Character',
+
+    // ── Guide Page ──────────────────────────────────
+    'guide.title': 'Game Guide',
+    'guide.subtitle': 'Complete reference of effects, mechanics and tutorials.',
+    'guide.tab.tutorials': '📚 Tutorials',
+    'guide.tab.modifiers': 'Modifiers',
+    'guide.tab.catalysts': '⚡ Catalysts',
+    'guide.tutorial.renda_title': '📜 Rift Passive Income Manifesto',
+    'guide.tutorial.renda_desc': 'Ultimate guide on how to optimize your Rift earnings with minimal effort (80/20 Strategy).',
+    'guide.buffs_title': 'Buffs',
+    'guide.debuffs_title': 'Debuffs',
+    'guide.permanent_title': 'Permanent Effects',
+    'guide.th.icon': 'Icon',
+    'guide.th.name': 'Name',
+    'guide.th.effect': 'Effect / Description',
+    'guide.th.max': 'Max.',
+    'guide.effect.game_desc': 'Game Description:',
+    'guide.effect.explanation': 'Explanation:',
+    'guide.export_modifiers': 'Export Modifiers',
+    'guide.cotw_title': 'Modifiers of the Week',
+    'guide.catalysts_title': 'Rift Catalysts',
+    'guide.loading_catalysts': 'Loading catalysts...',
+    'guide.error_catalysts': 'Error loading catalysts.',
+    'guide.no_modifiers': 'No modifiers found for this element.',
+    'guide.catalyst_data_loaded': 'Catalyst data loaded.',
+
+    // ── Element Names ───────────────────────────────
+    'element.fire': 'Fire',
+    'element.water': 'Water',
+    'element.wind': 'Wind',
+    'element.light': 'Light',
+    'element.dark': 'Dark',
+    'element.neutral': 'Neutral',
+
+    // ── Rarity Names ────────────────────────────────
+    'rarity.diamond': 'DIAMOND',
+    'rarity.gold': 'GOLD',
+    'rarity.silver': 'SILVER',
+    'rarity.bronze': 'BRONZE',
+
+    // ── Statistics Page ─────────────────────────────
+    'stats.title': '📊 Statistics',
+    'stats.welcome': '🎮 Welcome to the Simulator',
+    'stats.intro': 'Calculate your estimated monthly earnings and evolution costs in Skullgirls Mobile. Configure your player profile to get personalized results.',
+
+    // ── Tier List Page ──────────────────────────────
+    'tierlist.title': 'Tier List',
+    'tierlist.intro': 'Choose a character to see the detailed tier list of all their variants. Rankings are based on performance in each game mode.',
+
+    // ── Footer ──────────────────────────────────────
+    'footer.subtitle': 'Your complete source for builds, stats and strategies for Skullgirls Mobile.',
+    'footer.credits_title': '✨ Credits',
+    'footer.developed_by': 'Developed by',
+    'footer.inspiration': 'Main Inspiration and Contributor:',
+    'footer.sources': 'Official sources:',
+    'footer.sources_and': 'and',
+    'footer.catalog': 'Krazete Catalog',
+    'footer.wiki': 'Fandom Wiki',
+    'footer.links_title': '🎮 Official Links',
+    'footer.official_site': 'Official SGM Site',
+    'footer.hub': 'Skullgirls Mobile Hub',
+    'footer.disclaimer': 'Original assets belong to Autumn Games and Hidden Variable Studios.',
+    'footer.feedback_title': '🐛 Feedback',
+    'footer.feedback': 'Found a bug or error? Report it on the',
+    'footer.feedback_link': 'Palácio Branco Server',
+    'footer.copyright': 'Skullgirls Palace. A fan project not affiliated with the official developers.',
+
+    // ── About Drawer ────────────────────────────────
+    'about.title': 'About the Project',
+    'about.subtitle': 'Your complete source for builds, stats and strategies for Skullgirls Mobile. A project by the Palácio Branco community.',
+    'about.builds_title': '📖 Recommended Builds',
+    'about.builds_desc': 'The purpose of recommending a Build, Marquee and Arsenal is to make your life easier and help you perform better with your Favorite Variant without having to ask around, it was all put together by good players and most of the recommendations are solid, I hope. In case of errors please report on the Discord Server.',
+    'about.calc_title': '📊 Calculator',
+    'about.calc_desc': 'Simulate your monthly earnings of Coins and Theonite, also calculate how much you need to spend in Coins to upgrade your Variants, Moves, Catalysts, etc.',
+    'about.credits_title': '✨ Credits',
+    'about.developed_by': 'Developed by',
+    'about.inspiration': 'Main Inspiration and Contributor:',
+    'about.sources': 'Official sources used:',
+    'about.sources_and': 'and',
+    'about.catalog': 'Krazete Catalog',
+    'about.wiki': 'Fandom Wiki',
+    'about.assets': 'Original assets belong to Hidden Variable Studios and Autumn Games.',
+    'about.disclaimer_btn': '⚠️',
+    'about.disclaimer_title': 'Legal Notice:',
+    'about.disclaimer_text': 'Fan Project - Not affiliated with Hidden Variable Studios or Autumn Games.',
+    'about.disclaimer_assets': 'All assets belong to their respective owners.',
+    'about.bug_report': 'Found a bug or error? Report it on the',
+    'about.bug_report_link': 'Palácio Branco Server',
+
+    // ── Scroll Nav ──────────────────────────────────
+    'scroll.top': 'Back to top',
+    'scroll.bottom': 'Go to bottom',
+
+    // ── Language Selector ───────────────────────────
+    'lang.label': 'Language',
+    'lang.pt': 'Português',
+    'lang.en': 'English',
+
+    // ── COTW Element Labels ─────────────────────────
+    'cotw.water': 'Water',
+    'cotw.fire': 'Fire',
+    'cotw.wind': 'Wind',
+    'cotw.light': 'Light',
+    'cotw.dark': 'Dark',
+
+    // ── Editor Mode ─────────────────────────────────
+    'editor.edit_ability': 'Edit ability description for',
+    'editor.edit_build': 'Edit recommended build for',
+    'editor.edit_arsenal': 'Edit recommended arsenal for',
+    'editor.export_json': 'Export JSON',
+};

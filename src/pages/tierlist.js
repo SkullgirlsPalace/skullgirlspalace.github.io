@@ -5,6 +5,7 @@
 
 import { renderCharacterGrid } from '../components/CharacterCard.js';
 import { getCharacters } from '../services/dataService.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Render tier list page
@@ -17,12 +18,11 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>Tier List</h2>
+                <h2>${t('tierlist.title')}</h2>
             </div>
 
             <div class="tierlist-intro">
-                <p>Escolha um personagem para ver a tier list detalhada de todas as suas variantes. 
-                   As notas são baseadas em performance em cada modo de jogo.</p>
+                <p>${t('tierlist.intro')}</p>
             </div>
 
             <div class="character-grid tierlist-grid" id="tierlistGrid">

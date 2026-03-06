@@ -4,27 +4,40 @@
 // =====================================================
 
 import { getState, toggleAboutDrawer, toggleMobileMenu } from '../state/store.js';
+import { t, getLang, setLang } from '../i18n/i18n.js';
 
 /**
  * Create navbar HTML
  * @returns {string} HTML string
  */
 export function createNavbar() {
+    const lang = getLang();
+    const ptActive = lang === 'pt-BR' ? 'active' : '';
+    const enActive = lang === 'en' ? 'active' : '';
+
     return `
         <nav class="navbar hidden-nav" id="navbar">
             <div class="navbar-brand">
                 <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
                 <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="about-link">
                     <img src="img/icones/IconInfo.png" alt="">
-                    <span>sobre</span>
+                    <span>${t('nav.about')}</span>
                 </a>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="javascript:void(0)" onclick="navigateTo('')">Inicio</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('characters')">Personagens</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('guide')">Guia</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Estatísticas</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.stats')}</a></li>
             </ul>
+            <div class="lang-selector" id="langSelector">
+                <button class="lang-btn ${ptActive}" onclick="handleSetLang('pt-BR')" title="Português">
+                    🇧🇷
+                </button>
+                <button class="lang-btn ${enActive}" onclick="handleSetLang('en')" title="English">
+                    🇺🇸
+                </button>
+            </div>
             <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
         </nav>
     `;
@@ -39,13 +52,13 @@ export function createAboutDrawer() {
         <div id="drawer-overlay" class="drawer-overlay" onclick="handleToggleAboutDrawer()"></div>
         <aside id="about-drawer" class="about-drawer">
             <div class="drawer-header">
-                <h3>Sobre o Projeto</h3>
+                <h3>${t('about.title')}</h3>
                 <button class="close-drawer" onclick="handleToggleAboutDrawer()">×</button>
             </div>
             <div class="drawer-content">
                 <div class="hero">
                     <h1>Skullgirls Palace</h1>
-                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
+                    <p>${t('about.subtitle')}</p>
                     <div class="hero-buttons">
                         <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">
                             💬 Discord
@@ -58,30 +71,30 @@ export function createAboutDrawer() {
 
                 <div class="info-cards vertical">
                     <div class="card-link">
-                        <h3>📖 Builds Recomendadas</h3>
-                        <p>O intuito de recomendar uma Build, Superior e Arsenal é para facilitar sua Vida e você desempenhar melhor com sua Variante Favorita sem precisar ficar perguntando de tantos lugares, foi tudo montado por bons jogadores e boa parte das recomendações são boas, eu espero. Em caso de erros reporte no Servidor do Discord.</p>
+                        <h3>${t('about.builds_title')}</h3>
+                        <p>${t('about.builds_desc')}</p>
                     </div>
                     <div class="card-link">
-                        <h3>📊 Calculadora</h3>
-                        <p>Simule seus Ganhos mensais de Moedas e Teonitas, calcule também o quanto é necessário para Gastar em Moedas para Melhorar suas Variantes, Golpes, Astros e etc...</p>
+                        <h3>${t('about.calc_title')}</h3>
+                        <p>${t('about.calc_desc')}</p>
                     </div>
                 </div>
 
                 <div class="credits-section">
-                    <h4>✨ Créditos</h4>
-                    <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
-                    <p>Inspiração Principal e Colaborador: <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
-                    <p>Fontes oficiais utilizadas: <a href="https://krazete.github.io/sgm/" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Fandom Wiki</a>.</p>
-                    <p>Assets originais pertencem à Hidden Variable Studios e Autumn Games.</p>
+                    <h4>${t('about.credits_title')}</h4>
+                    <p>${t('about.developed_by')} <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
+                    <p>${t('about.inspiration')} <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
+                    <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.catalog')}</a> ${t('about.sources_and')} <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.wiki')}</a>.</p>
+                    <p>${t('about.assets')}</p>
 
                     <div class="disclaimer-tooltip" style="margin-top: 20px;">
-                        <button class="disclaimer-btn" onclick="handleToggleDisclaimer()" title="Aviso Legal">⚠️</button>
+                        <button class="disclaimer-btn" onclick="handleToggleDisclaimer()" title="${t('about.disclaimer_title')}">${t('about.disclaimer_btn')}</button>
                         <div class="disclaimer-content" id="disclaimer-content">
-                            <p><strong>Aviso Legal:</strong> Projeto de Fã - Não afiliado à Hidden Variable Studios ou Autumn Games.</p>
-                            <p>Todos os assets pertencem aos seus respectivos proprietários.</p>
+                            <p><strong>${t('about.disclaimer_title')}</strong> ${t('about.disclaimer_text')}</p>
+                            <p>${t('about.disclaimer_assets')}</p>
                         </div>
                     </div>
-                    <p style="font-size: 0.85rem; margin-top: 15px;">Encontrou algum erro ou bug? Reporte no <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Servidor Palácio Branco</a>.</p>
+                    <p style="font-size: 0.85rem; margin-top: 15px;">${t('about.bug_report')} <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.bug_report_link')}</a>.</p>
                 </div>
             </div>
         </aside>
@@ -94,8 +107,8 @@ export function createAboutDrawer() {
  */
 export function createScrollNav() {
     return `
-        <button id="scrollTopBtn" class="scroll-nav-btn" onclick="scrollToTop()" title="Voltar ao topo"></button>
-        <button id="scrollToBottomBtn" class="scroll-nav-btn" onclick="scrollToBottom()" title="Ir para o final"></button>
+        <button id="scrollTopBtn" class="scroll-nav-btn" onclick="scrollToTop()" title="${t('scroll.top')}"></button>
+        <button id="scrollToBottomBtn" class="scroll-nav-btn" onclick="scrollToBottom()" title="${t('scroll.bottom')}"></button>
     `;
 }
 
@@ -169,4 +182,12 @@ export function handleToggleDisclaimer() {
     } else {
         clearTimeout(disclaimerTimer);
     }
+}
+
+/**
+ * Handle language change
+ * @param {string} lang - Language code
+ */
+export function handleSetLang(lang) {
+    setLang(lang);
 }

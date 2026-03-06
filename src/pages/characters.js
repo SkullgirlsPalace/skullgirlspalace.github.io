@@ -6,6 +6,7 @@
 import { renderCharacterGrid } from '../components/CharacterCard.js';
 import { getCharacters } from '../services/dataService.js';
 import { renderExportModal, initExportModal } from '../components/ExportCharacterData.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Render characters page
@@ -18,10 +19,10 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>Escolha um Personagem</h2>
+                <h2>${t('characters.title')}</h2>
                 <button class="export-trigger-btn" onclick="toggleExportModal()" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
                     <span class="btn-icon">📥</span>
-                    Exportar
+                    ${t('characters.export')}
                 </button>
             </div>
             

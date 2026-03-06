@@ -6,7 +6,7 @@
 // Core imports
 import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switchDetailTab } from './router.js';
 import { loadAllCharacters, loadTierData } from './services/dataService.js';
-import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
+import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer, handleSetLang } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleToggleCompactMode, handleCycleRank, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
@@ -30,6 +30,7 @@ window.scrollToBottom = scrollToBottom;
 window.handleToggleAboutDrawer = handleToggleAboutDrawer;
 window.handleToggleMobileMenu = handleToggleMobileMenu;
 window.handleToggleDisclaimer = handleToggleDisclaimer;
+window.handleSetLang = handleSetLang;
 
 // Filter handlers
 window.handleFilterClick = handleFilterClick;

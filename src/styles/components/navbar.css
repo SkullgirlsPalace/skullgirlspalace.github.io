@@ -88,6 +88,41 @@
     background: rgba(212, 168, 75, 0.1);
 }
 
+/* ========== LANGUAGE SELECTOR ========== */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 12px;
+    padding: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.15rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    opacity: 0.85;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-btn.active {
+    opacity: 1;
+    background: rgba(212, 168, 75, 0.15);
+    box-shadow: 0 0 0 1px rgba(212, 168, 75, 0.3);
+}
+
 .hamburger {
     display: none;
     font-size: 1.5rem;

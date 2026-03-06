@@ -11,6 +11,7 @@ import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.
 import { renderVariants } from '../components/VariantCard.js';
 import { createFilterBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
 import { createTierView } from '../components/TierTable.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Render character detail page
@@ -27,7 +28,7 @@ export function render(charKey, initialTab = 'builds') {
                     <button class="btn-back" onclick="navigateTo('characters')">
                         ←
                     </button>
-                    <h2>Personagem não encontrado</h2>
+                    <h2>${t('detail.not_found')}</h2>
                 </div>
             </section>
         `;
@@ -56,11 +57,11 @@ export function render(charKey, initialTab = 'builds') {
                 <div class="detail-tabs">
                     <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
                             onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
-                        BUILDS
+                        ${t('detail.tab.builds')}
                     </button>
                     <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
                             onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
-                        TIER LIST
+                        ${t('detail.tab.tier')}
                     </button>
                 </div>
             </div>
@@ -91,7 +92,7 @@ function renderBuildsTab(charKey, charData) {
     // Generate variant cards HTML
     let variantsHTML = '';
     if (variants.length === 0) {
-        variantsHTML = '<p style="color: var(--text-muted); padding: 20px; text-align: center;">Nenhuma variante encontrada com estes filtros.</p>';
+        variantsHTML = `<p style="color: var(--text-muted); padding: 20px; text-align: center;">${t('detail.no_variants')}</p>`;
     } else {
         variantsHTML = `<div class="variants-grid" id="variants-container"></div>`;
     }

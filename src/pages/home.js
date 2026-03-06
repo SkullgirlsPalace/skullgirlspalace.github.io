@@ -3,6 +3,8 @@
 // Landing hub with navigation cards
 // =====================================================
 
+import { t } from '../i18n/i18n.js';
+
 /**
  * Render home page
  * @returns {string} HTML string
@@ -15,25 +17,25 @@ export function render() {
                 <div class="hub-hero">
                     <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="hub-about-link">
                         <img src="img/icones/IconInfo.png" alt="">
-                        <span>SOBRE</span>
+                        <span>${t('nav.about').toUpperCase()}</span>
                     </a>
-                    <h1>Skullgirls Palace</h1>
-                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile.</p>
+                    <h1>${t('home.title')}</h1>
+                    <p>${t('home.subtitle')}</p>
                 </div>
 
                 <!-- Menu Buttons -->
                 <div class="hub-menu">
                     <button class="hub-btn" onclick="navigateTo('characters')">
-                        <span>PERSONAGENS</span>
+                        <span>${t('home.btn.characters')}</span>
                     </button>
                     <button class="hub-btn" onclick="navigateTo('guide')">
-                        <span>GUIA</span>
+                        <span>${t('home.btn.guide')}</span>
                     </button>
                     <button class="hub-btn" onclick="navigateTo('stats')">
-                        <span>ESTATÍSTICAS</span>
+                        <span>${t('home.btn.stats')}</span>
                     </button>
                     <button class="hub-btn" onclick="window.open('https://hub.skullgirlsmobile.com', '_blank')">
-                        <span>SKULLGIRLS MOBILE HUB</span>
+                        <span>${t('home.btn.hub')}</span>
                     </button>
                 </div>
 

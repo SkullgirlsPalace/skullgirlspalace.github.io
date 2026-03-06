@@ -6,27 +6,28 @@
 import { EFFECT_DATA } from '../data/effectData.js';
 import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
+import { t } from '../i18n/i18n.js';
 
 export function render() {
     return `
         <div class="guide-container fade-in">
             <div class="guide-header">
                 <div class="header-content">
-                    <h1>Guia do Jogo</h1>
-                    <p>Referência completa de efeitos, mecânicas e tutoriais.</p>
+                    <h1>${t('guide.title')}</h1>
+                    <p>${t('guide.subtitle')}</p>
                 </div>
             </div>
 
             <div class="guide-tabs">
                 <button class="guide-tab-btn active" onclick="switchGuideTab('tutorials')">
-                    📚 Tutoriais
+                    ${t('guide.tab.tutorials')}
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('modifiers')">
-                    <img src="img/icones/Button_Modifiers.png" alt="Modificadores" class="tab-icon">
-                    Modificadores
+                    <img src="img/icones/Button_Modifiers.png" alt="${t('guide.tab.modifiers')}" class="tab-icon">
+                    ${t('guide.tab.modifiers')}
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('catalysts')">
-                    ⚡ Catalisadores
+                    ${t('guide.tab.catalysts')}
                 </button>
             </div>
 
@@ -36,8 +37,8 @@ export function render() {
                     <div class="tutorial-grid" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
                         
                         <div class="tutorial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; text-align: center; cursor: pointer; transition: transform 0.2s, border-color 0.2s;" onclick="navigateTo('tutorial-renda-passiva')" onmouseover="this.style.borderColor='var(--accent-gold)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)';">
-                            <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">📜 Manifesto da Renda Passiva da Fenda</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Guia definitivo sobre como otimizar seus ganhos de Fenda com o mínimo de esforço (Estratégia 80/20).</p>
+                            <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">${t('guide.tutorial.renda_title')}</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">${t('guide.tutorial.renda_desc')}</p>
                         </div>
 
                     </div>
@@ -50,7 +51,7 @@ export function render() {
                     <div class="export-trigger-section">
                         <button class="export-trigger-btn" onclick="toggleModifierExportModal()">
                             <span class="btn-icon">📥</span>
-                            Exportar Modificadores
+                            ${t('guide.export_modifiers')}
                         </button>
                     </div>
 
@@ -62,16 +63,16 @@ export function render() {
                     <div class="modifiers-section">
                         <h2 class="section-title" style="color: var(--accent-green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
                             <img src="img/modifiers/buffs/Regen.png" style="width: 24px; height: 24px;"> 
-                            Efeitos Positivos
+                            ${t('guide.buffs_title')}
                         </h2>
                         <div class="effects-table-container">
                             <table class="effects-table">
                                 <thead>
                                     <tr>
-                                        <th>Ícone</th>
-                                        <th>Nome</th>
-                                        <th>Efeito / Descrição</th>
-                                        <th>Máx.</th>
+                                        <th>${t('guide.th.icon')}</th>
+                                        <th>${t('guide.th.name')}</th>
+                                        <th>${t('guide.th.effect')}</th>
+                                        <th>${t('guide.th.max')}</th>
                                     </tr>
                                 </thead>
                                 <tbody id="buffs-list">
@@ -87,16 +88,16 @@ export function render() {
                     <div class="modifiers-section">
                         <h2 class="section-title" style="color: var(--accent-red); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
                             <img src="img/modifiers/debuffs/Bleed.png" style="width: 24px; height: 24px;">
-                            Efeitos Negativos
+                            ${t('guide.debuffs_title')}
                         </h2>
                         <div class="effects-table-container">
                             <table class="effects-table">
                                 <thead>
                                     <tr>
-                                        <th>Ícone</th>
-                                        <th>Nome</th>
-                                        <th>Efeito / Descrição</th>
-                                        <th>Máx.</th>
+                                        <th>${t('guide.th.icon')}</th>
+                                        <th>${t('guide.th.name')}</th>
+                                        <th>${t('guide.th.effect')}</th>
+                                        <th>${t('guide.th.max')}</th>
                                     </tr>
                                 </thead>
                                 <tbody id="debuffs-list">
@@ -112,16 +113,16 @@ export function render() {
                     <div class="modifiers-section">
                         <h2 class="section-title" style="color: #b0bec5; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
                             <img src="img/modifiers/permanent/Permanent.png" style="width: 24px; height: 24px;">
-                            Efeito Permanente
+                            ${t('guide.permanent_title')}
                         </h2>
                         <div class="effects-table-container">
                             <table class="effects-table">
                                 <thead>
                                     <tr>
-                                        <th>Ícone</th>
-                                        <th>Nome</th>
-                                        <th>Efeito / Descrição</th>
-                                        <th>Máx.</th>
+                                        <th>${t('guide.th.icon')}</th>
+                                        <th>${t('guide.th.name')}</th>
+                                        <th>${t('guide.th.effect')}</th>
+                                        <th>${t('guide.th.max')}</th>
                                     </tr>
                                 </thead>
                                 <tbody id="special-list">
@@ -134,30 +135,30 @@ export function render() {
                 
                 <!-- CATALYSTS TAB -->
                 <div id="tab-catalysts" class="guide-tab-content">
-                    <h2 class="catalyst-title-main">Modificadores da Semana</h2>
+                    <h2 class="catalyst-title-main">${t('guide.cotw_title')}</h2>
                     
                     <!-- Catalysts of the Week Section -->
                     <div class="cotw-section">
                         <div class="cotw-filters">
                             <button class="cotw-filter-btn" data-element="water">
-                                <img src="img/icones/ElementalWaterBackless.png" alt="Água">
-                                <span>Água</span>
+                                <img src="img/icones/ElementalWaterBackless.png" alt="${t('cotw.water')}">
+                                <span>${t('cotw.water')}</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="fire">
-                                <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
-                                <span>Fogo</span>
+                                <img src="img/icones/ElementalFireBackless.png" alt="${t('cotw.fire')}">
+                                <span>${t('cotw.fire')}</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="wind">
-                            <img src="img/icones/ElementalWindBackless.png" alt="Ar">
-                            <span>Ar</span>
+                            <img src="img/icones/ElementalWindBackless.png" alt="${t('cotw.wind')}">
+                            <span>${t('cotw.wind')}</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="light">
-                            <img src="img/icones/ElementalLightBackless.png" alt="Luz">
-                            <span>Luz</span>
+                            <img src="img/icones/ElementalLightBackless.png" alt="${t('cotw.light')}">
+                            <span>${t('cotw.light')}</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="dark">
-                                <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
-                                <span>Trevas</span>
+                                <img src="img/icones/ElementalDarkBackless.png" alt="${t('cotw.dark')}">
+                                <span>${t('cotw.dark')}</span>
                             </button>
                         </div>
                         <div class="catalyst-grid" id="cotw-container-guide">
@@ -169,7 +170,7 @@ export function render() {
 
                     <div class="catalyst-categories" id="catalyst-container">
                         <!-- Populated by JS -->
-                        <div class="loading-state">Carregando catalisadores...</div>
+                        <div class="loading-state">${t('guide.loading_catalysts')}</div>
                     </div>
                 </div>
             </div>
@@ -236,8 +237,8 @@ function renderEffects(type, containerId) {
                     <span class="effect-name" style="color: ${effectColor};">${effect.name}</span>
                 </td>
                 <td class="effect-desc-cell">
-                    <p><strong style="color: ${effectColor};">Descrição do Jogo:</strong> ${effect.detailed}</p>
-                    ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effectColor};">Explicação:</strong> ${effect.explicacao}</p>` : ''}
+                    <p><strong style="color: ${effectColor};">${t('guide.effect.game_desc')}</strong> ${effect.detailed}</p>
+                    ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effectColor};">${t('guide.effect.explanation')}</strong> ${effect.explicacao}</p>` : ''}
                     ${effect.scaling ? `<small class="effect-scaling" style="display: block; margin-top: 6px;">Escalonamento: ${effect.scaling}</small>` : ''}
                 </td>
                 <td class="effect-stacks-cell">${stacks}</td>
@@ -258,7 +259,7 @@ async function initCatalysts() {
 
     const catalysts = await loadCatalysts();
     if (!catalysts) {
-        container.innerHTML = '<p class="error-state">Erro ao carregar catalisadores.</p>';
+        container.innerHTML = `<p class="error-state">${t('guide.error_catalysts')}</p>`;
         return;
     }
 
@@ -326,7 +327,7 @@ async function initCatalysts() {
             }
 
             container.innerHTML = `
-                <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">Catalisadores da Fenda</h2>
+                <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">${t('guide.catalysts_title')}</h2>
                 ${html}
             `;
             return;
@@ -336,7 +337,7 @@ async function initCatalysts() {
     // Fallback for other formats
     if (Array.isArray(catalysts)) {
         container.innerHTML = `
-            <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">Catalisadores da Fenda</h2>
+            <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">${t('guide.catalysts_title')}</h2>
             <div class="catalyst-grid">
                 ${catalysts.map(cat => renderCatalystCard(cat)).join('')}
             </div>
@@ -355,11 +356,11 @@ async function initCatalysts() {
         }).join('');
 
         container.innerHTML = `
-            <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">Catalisadores da Fenda</h2>
+            <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">${t('guide.catalysts_title')}</h2>
             ${categoriesHtml}
         `;
     } else {
-        container.innerHTML = '<p class="info-state">Dados de catalisadores carregados.</p>';
+        container.innerHTML = `<p class="info-state">${t('guide.catalyst_data_loaded')}</p>`;
     }
 }
 
@@ -381,8 +382,8 @@ function renderSpecialEffects(containerId) {
                 <span class="effect-name" style="color: ${effect.color};">${effect.name}</span>
             </td>
             <td class="effect-desc-cell">
-                <p><strong style="color: ${effect.color};">Descrição do Jogo:</strong> ${effect.detailed}</p>
-                ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effect.color};">Explicação:</strong> ${effect.explicacao}</p>` : ''}
+                <p><strong style="color: ${effect.color};">${t('guide.effect.game_desc')}</strong> ${effect.detailed}</p>
+                ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effect.color};">${t('guide.effect.explanation')}</strong> ${effect.explicacao}</p>` : ''}
             </td>
             <td class="effect-stacks-cell">-</td>
         </tr>
@@ -409,7 +410,7 @@ function renderCotw(element, containerId, fendaData) {
 
     const map = fendaData.maps.find(m => m.map === mapNumber);
     if (!map) {
-        cotwContainer.innerHTML = '<p class="info-state" style="text-align: center; margin: 20px 0;">Nenhum modificador encontrado para este elemento.</p>';
+        cotwContainer.innerHTML = `<p class="info-state" style="text-align: center; margin: 20px 0;">${t('guide.no_modifiers')}</p>`;
         return;
     }
 
@@ -438,7 +439,7 @@ function renderCotw(element, containerId, fendaData) {
 }
 
 function renderRiftModCard(mod, nodeName) {
-    const formattedDesc = (mod.description || '').replace(/\n/g, '<br>');
+    const formattedDesc = (mod.description || '').replace(/\\n/g, '<br>');
 
     return `
         <div class="catalyst-card cotw-card">
@@ -455,7 +456,7 @@ function renderRiftModCard(mod, nodeName) {
 
 function renderBossCard(mods) {
     const descriptions = mods.map(mod => {
-        const formattedDesc = (mod.description || '').replace(/\n/g, '<br>');
+        const formattedDesc = (mod.description || '').replace(/\\n/g, '<br>');
         return `<p><strong>${mod.name}</strong></p><p>${formattedDesc}</p>`;
     }).join('<br>');
 

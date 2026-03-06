@@ -6,6 +6,7 @@
 import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar } from '../state/store.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getCharacters } from '../services/dataService.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Create filter bar HTML
@@ -18,10 +19,10 @@ export function createFilterBar() {
             <div class="filter-controls">
                 <button class="filter-toggle-btn" onclick="handleToggleFilter()">
                     <img src="img/icones/icon_filter.png" onerror="this.src='img/icones/filter.png'" alt="">
-                    <span>Filtrar</span>
+                    <span>${t('filter.label')}</span>
                 </button>
-                <button class="clear-filters-btn" onclick="handleClearFilters()" title="Limpar Filtros">
-                    <img src="img/icones/constraints_no.png" alt="Limpar">
+                <button class="clear-filters-btn" onclick="handleClearFilters()" title="${t('filter.clear')}">
+                    <img src="img/icones/constraints_no.png" alt="${t('filter.clear')}">
                 </button>
             </div>
             
@@ -33,20 +34,20 @@ export function createFilterBar() {
                 <!-- Rarity Grid (2x2) -->
                 <div class="filter-grid rarity-grid">
                     <button class="filter-btn rarity-btn" data-rarity="bronze"
-                        onclick="handleFilterClick('rarity', 'bronze')" title="Bronze">
-                        <img src="img/icones/icone_bronze.png" alt="Bronze">
+                        onclick="handleFilterClick('rarity', 'bronze')" title="${t('rarity.bronze')}">
+                        <img src="img/icones/icone_bronze.png" alt="${t('rarity.bronze')}">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="prata"
-                        onclick="handleFilterClick('rarity', 'prata')" title="Prata">
-                        <img src="img/icones/icone_prata.png" alt="Prata">
+                        onclick="handleFilterClick('rarity', 'prata')" title="${t('rarity.silver')}">
+                        <img src="img/icones/icone_prata.png" alt="${t('rarity.silver')}">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="ouro"
-                        onclick="handleFilterClick('rarity', 'ouro')" title="Ouro">
-                        <img src="img/icones/icone_ouro.png" alt="Ouro">
+                        onclick="handleFilterClick('rarity', 'ouro')" title="${t('rarity.gold')}">
+                        <img src="img/icones/icone_ouro.png" alt="${t('rarity.gold')}">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="diamante"
-                        onclick="handleFilterClick('rarity', 'diamante')" title="Diamante">
-                        <img src="img/icones/icone_diamante.png" alt="Diamante">
+                        onclick="handleFilterClick('rarity', 'diamante')" title="${t('rarity.diamond')}">
+                        <img src="img/icones/icone_diamante.png" alt="${t('rarity.diamond')}">
                     </button>
                 </div>
 
@@ -55,28 +56,28 @@ export function createFilterBar() {
                 <!-- Element Grid (3x2) -->
                 <div class="filter-grid element-grid">
                     <button class="filter-btn element-btn" data-element="fogo"
-                        onclick="handleFilterClick('element', 'fogo')" title="Fogo">
-                        <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                        onclick="handleFilterClick('element', 'fogo')" title="${t('element.fire')}">
+                        <img src="img/icones/ElementalFireBackless.png" alt="${t('element.fire')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="agua"
-                        onclick="handleFilterClick('element', 'agua')" title="Água">
-                        <img src="img/icones/ElementalWaterBackless.png" alt="Água">
+                        onclick="handleFilterClick('element', 'agua')" title="${t('element.water')}">
+                        <img src="img/icones/ElementalWaterBackless.png" alt="${t('element.water')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="ar"
-                        onclick="handleFilterClick('element', 'ar')" title="Ar">
-                        <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                        onclick="handleFilterClick('element', 'ar')" title="${t('element.wind')}">
+                        <img src="img/icones/ElementalWindBackless.png" alt="${t('element.wind')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="luz"
-                        onclick="handleFilterClick('element', 'luz')" title="Luz">
-                        <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                        onclick="handleFilterClick('element', 'luz')" title="${t('element.light')}">
+                        <img src="img/icones/ElementalLightBackless.png" alt="${t('element.light')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="trevas"
-                        onclick="handleFilterClick('element', 'trevas')" title="Trevas">
-                        <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
+                        onclick="handleFilterClick('element', 'trevas')" title="${t('element.dark')}">
+                        <img src="img/icones/ElementalDarkBackless.png" alt="${t('element.dark')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="neutro"
-                        onclick="handleFilterClick('element', 'neutro')" title="Neutro">
-                        <img src="img/icones/ElementalNeutralBackless.png" alt="Neutro">
+                        onclick="handleFilterClick('element', 'neutro')" title="${t('element.neutral')}">
+                        <img src="img/icones/ElementalNeutralBackless.png" alt="${t('element.neutral')}">
                     </button>
                 </div>
 
@@ -86,16 +87,16 @@ export function createFilterBar() {
                 <div class="filter-section right">
                     <div class="sort-header">
                         <img src="img/icones/icon_sort.png" onerror="this.style.display='none'" alt="">
-                        ORGANIZAR
+                        ${t('filter.sort')}
                     </div>
                     <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
                     <div class="sort-group">
-                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
-                        <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
-                        <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">VIDA</button>
-                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
-                        <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">ELEMENTO</button>
-                        <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">CATEGORIA</button>
+                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">${t('filter.score')}</button>
+                        <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${t('filter.atk')}</button>
+                        <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${t('filter.hp')}</button>
+                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${t('filter.alpha')}</button>
+                        <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${t('filter.element')}</button>
+                        <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${t('filter.category')}</button>
                     </div>
                 </div>
 
@@ -103,10 +104,10 @@ export function createFilterBar() {
 
                 <!-- Character Navigator -->
                 <div class="filter-section right character-nav">
-                    <div class="sort-header" id="char-nav-header">MUDE O PERSONAGEM</div>
+                    <div class="sort-header" id="char-nav-header">${t('filter.change_char')}</div>
                     <div class="char-dropdown" id="char-dropdown">
                         <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
-                            <span id="current-char-label">Escolher Personagem</span>
+                            <span id="current-char-label">${t('filter.choose_char')}</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="char-dropdown-content" id="char-dropdown-content">
@@ -144,14 +145,14 @@ export function updateFilterUI() {
         }
     });
 
-    // Update Sort Buttons
+    // Update Sort Buttons — use i18n labels
     const sortLabels = {
-        'score': 'PONTUAÇÃO',
-        'atk': 'ATAQUE',
-        'hp': 'VIDA',
-        'name': 'ORDEM ALFABÉTICA',
-        'element': 'ELEMENTO',
-        'class': 'CATEGORIA'
+        'score': t('filter.score'),
+        'atk': t('filter.atk'),
+        'hp': t('filter.hp'),
+        'name': t('filter.alpha'),
+        'element': t('filter.element'),
+        'class': t('filter.category')
     };
 
     document.querySelectorAll('.sort-btn').forEach(btn => {

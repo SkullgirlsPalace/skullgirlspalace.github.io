@@ -2,6 +2,7 @@ import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS, CHARACTER_COLORS } from '../c
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState, updateCharacterData } from '../state/store.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -29,7 +30,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     }
 
     // Format ability description
-    const abilityDesc = formatText(variant.signature_ability?.description || 'Sem descrição', variant.name);
+    const abilityDesc = formatText(variant.signature_ability?.description || t('variant.no_desc'), variant.name);
 
     // Format arsenal with images
     const arsenalHTML = formatArsenal(variant.recommended_arsenal || '', charKey);
@@ -46,7 +47,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     const buildText = variant.recommended_build || '';
     const hasBuildContent = !!(buildText || arsenalHTML);
 
-    const saName = variant.signature_ability?.name || 'Habilidade Especial';
+    const saName = variant.signature_ability?.name || t('variant.default_sa');
 
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
@@ -70,18 +71,18 @@ export function createVariantCard(variant, charKey, index = 0) {
                 
                 <div class="variant-stats">
                     <div class="stat-item">
-                        <img src="img/icones/AttackIcon.png" alt="ATQ" class="stat-icon">
-                        <span class="label">ATQ</span>
+                        <img src="img/icones/AttackIcon.png" alt="${t('variant.stat.atk')}" class="stat-icon">
+                        <span class="label">${t('variant.stat.atk')}</span>
                         <span class="value">${variant.stats?.attack || '-'}</span>
                     </div>
                     <div class="stat-item">
-                        <img src="img/icones/HealthIcon.png" alt="Vida" class="stat-icon">
-                        <span class="label">Vida</span>
+                        <img src="img/icones/HealthIcon.png" alt="${t('variant.stat.hp')}" class="stat-icon">
+                        <span class="label">${t('variant.stat.hp')}</span>
                         <span class="value">${variant.stats?.health || '-'}</span>
                     </div>
                     <div class="stat-item">
                         <img src="${elementInfo.statIcon}" alt="${variant.element}" class="stat-icon">
-                        <span class="label">Poder</span>
+                        <span class="label">${t('variant.stat.power')}</span>
                         <span class="value">${variant.stats?.power || '-'}</span>
                     </div>
                 </div>
@@ -89,17 +90,17 @@ export function createVariantCard(variant, charKey, index = 0) {
                 <!-- Tab Navigation -->
                 <div class="variant-tabs">
                     <button class="variant-tab-btn active" data-tab="habilidade" data-card="${cardId}">
-                        Habilidade
+                        ${t('variant.tab.ability')}
                     </button>
                     ${hasBuildContent ? `
                         <button class="variant-tab-btn" data-tab="build" data-card="${cardId}">
-                            Build
+                            ${t('variant.tab.build')}
                         </button>
                     ` : ''}
                     ${state.isEditorMode ? `
                         <button class="save-data-btn small" style="margin-left: auto; padding: 4px 10px; font-size: 0.7rem;" 
                                 onclick="handleExportCharacterJSON('${charKey}')">
-                            Export JSON
+                            ${t('editor.export_json')}
                         </button>
                     ` : ''}
                 </div>
@@ -109,7 +110,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                     <div class="variant-tab-content active" data-tab="habilidade">
                         <div class="ability-box ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'signature_ability')">
                             <h4 style="margin-bottom: 8px;">
-                                <span style="color: var(--accent-gold)">HABILIDADE CARACTERÍSTICA:</span>
+                                <span style="color: var(--accent-gold)">${t('variant.sa_label')}</span>
                                 <span style="color: #fff; margin-left: 6px;">${saName.toUpperCase()}</span>
                             </h4>
                             <p style="margin-bottom: 16px;">${abilityDesc}</p>
@@ -118,7 +119,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                             
                             ${variant.marquee_ability ? `
                                 <h4 style="font-size: 0.85rem; margin-bottom: 0;">
-                                    <span style="color: var(--accent-gold)">SUPERIOR RECOMENDADA:</span>
+                                    <span style="color: var(--accent-gold)">${t('variant.marquee_label')}</span>
                                     <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
                                 </h4>
                             ` : ''}
@@ -130,14 +131,14 @@ export function createVariantCard(variant, charKey, index = 0) {
                         <div class="variant-tab-content" data-tab="build">
                             ${buildText ? `
                                 <div class="ability-box build ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'recommended_build')">
-                                    <h4>BUILD RECOMENDADA</h4>
+                                    <h4>${t('variant.build_label')}</h4>
                                     <p>${formatBuildText(buildText)}</p>
                                 </div>
                             ` : ''}
                             
                             ${arsenalHTML ? `
                                 <div class="ability-box arsenal ${editingClass}" onclick="handleEditVariantField('${charKey}', '${variant.name}', 'recommended_arsenal')">
-                                    <h4>ARSENAL RECOMENDADO</h4>
+                                    <h4>${t('variant.arsenal_label')}</h4>
                                     <div class="arsenal-list">${arsenalHTML}</div>
                                 </div>
                             ` : ''}
@@ -160,7 +161,7 @@ export function renderVariants(containerId, variants, charKey) {
     if (!container) return;
 
     if (!variants || variants.length === 0) {
-        container.innerHTML = '<p style="color: var(--text-muted); padding: 20px;">Nenhuma variante encontrada com estes filtros.</p>';
+        container.innerHTML = `<p style="color: var(--text-muted); padding: 20px;">${t('detail.no_variants')}</p>`;
         return;
     }
 
@@ -232,13 +233,13 @@ export function handleEditVariantField(charKey, variantName, field) {
 
     if (field === 'signature_ability') {
         currentValue = targetVariant.signature_ability?.description || '';
-        promptMsg = `Editar descrição da habilidade para ${variantName}:`;
+        promptMsg = `${t('editor.edit_ability')} ${variantName}:`;
     } else if (field === 'recommended_build') {
         currentValue = targetVariant.recommended_build || '';
-        promptMsg = `Editar build recomendada para ${variantName}:`;
+        promptMsg = `${t('editor.edit_build')} ${variantName}:`;
     } else if (field === 'recommended_arsenal') {
         currentValue = targetVariant.recommended_arsenal || '';
-        promptMsg = `Editar arsenal recomendado para ${variantName} (formato string):`;
+        promptMsg = `${t('editor.edit_arsenal')} ${variantName} (formato string):`;
     }
 
     const newValue = prompt(promptMsg, currentValue);
