@@ -5,6 +5,13 @@
 // =====================================================
 
 import { formatNumber } from '../utils/formatters.js';
+import { t, getLang } from '../i18n/i18n.js';
+
+// Translate rarity key to display label
+function rarityLabel(key) {
+    const map = { bronze: 'Bronze', prata: t('calc.silver'), ouro: t('calc.gold'), diamante: t('calc.diamond') };
+    return map[key] || key;
+}
 
 // Store loaded data
 let statsData = null;
@@ -27,8 +34,8 @@ export function createCalculator() {
         <div class="calculator-box">
             <!-- TAB BAR -->
             <div class="calc-tab-bar">
-                <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')"><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> Ganhos Mensais</button>
-                <button class="calc-tab" data-tab="custos" onclick="switchCalcTab('custos')">📈 Custos de Build</button>
+                <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')"><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.coins')}"> ${t('calc.tab.earnings')}</button>
+                <button class="calc-tab" data-tab="custos" onclick="switchCalcTab('custos')">📈 ${t('calc.tab.costs')}</button>
             </div>
 
             <!-- ========== TAB: GANHOS ========== -->
@@ -38,107 +45,107 @@ export function createCalculator() {
                         <div class="calc-form">
                             <!-- Fixed Earnings Section -->
                             <div class="calc-section">
-                                <h4>📅 Fontes Fixas</h4>
+                                <h4>📅 ${t('calc.fixed_sources')}</h4>
                                 <div class="toggle-group" id="fixed-toggles">
                                     <button class="toggle-btn active" data-source="diarias" data-type="fixed">
-                                        Eventos Diários
+                                        ${t('calc.daily_events')}
                                     </button>
                                     <button class="toggle-btn active" data-source="calendario" data-type="fixed">
-                                        Calendário
+                                        ${t('calc.calendar')}
                                     </button>
                                     <button class="toggle-btn active" data-source="site" data-type="fixed">
-                                        Site
+                                        ${t('calc.site')}
                                     </button>
                                     <button class="toggle-btn active" data-source="guildaDiaria" data-type="fixed">
-                                        Missões de Guilda
+                                        ${t('calc.guild_missions')}
                                     </button>
                                 </div>
                             </div>
 
                             <!-- Battle Pass Section -->
                             <div class="calc-section">
-                                <h4>🎫 Passe de Batalha</h4>
+                                <h4>🎫 ${t('calc.battle_pass')}</h4>
                                 <div class="toggle-group exclusive" id="passe-toggles">
-                                    <button class="toggle-btn active" data-source="gratis" data-type="passe">Grátis</button>
+                                    <button class="toggle-btn active" data-source="gratis" data-type="passe">${t('calc.free')}</button>
                                     <button class="toggle-btn" data-source="premium" data-type="passe">Premium</button>
                                 </div>
                             </div>
 
                             <!-- Prize Fights Section -->
                             <div class="calc-section">
-                                <h4>📊 Disputa Premiada (DP)</h4>
+                                <h4>📊 ${t('calc.prize_fights')}</h4>
                                 
-                                <span class="toggle-label">DP Personagem (Faixa):</span>
+                                <span class="toggle-label">${t('calc.pf_char_tier')}:</span>
                                 <div class="toggle-group exclusive" id="dp-faixa-toggles">
                                     <button class="toggle-btn" data-source="bronze" data-type="dpFaixa"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="dpFaixa"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="dpFaixa"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante</button>
-                                    <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">Não faço</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="dpFaixa"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.silver')}"> ${t('calc.silver')}</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="dpFaixa"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.gold')}"> ${t('calc.gold')}</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.diamond')}"> ${t('calc.diamond')}</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">${t('calc.skip')}</button>
                                 </div>
 
-                                <span class="toggle-label">DP Personagem (Ranking):</span>
+                                <span class="toggle-label">${t('calc.pf_char_ranking')}:</span>
                                 <div class="toggle-group exclusive" id="dp-rank-toggles">
                                     <button class="toggle-btn" data-source="top10percent" data-type="dpRank">Top 10%</button>
                                     <button class="toggle-btn active" data-source="top30percent" data-type="dpRank">Top 30%</button>
                                     <button class="toggle-btn" data-source="top60percent" data-type="dpRank">Top 60%</button>
                                 </div>
 
-                                <span class="toggle-label">DP Mensal:</span>
+                                <span class="toggle-label">${t('calc.pf_monthly')}:</span>
                                 <div class="toggle-group" id="dp-mensal-toggles">
                                     <button class="toggle-btn active" data-source="mensal" data-type="dpMensal">
-                                        Participar
+                                        ${t('calc.participate')}
                                     </button>
                                 </div>
                                 
-                                <span class="toggle-label">DP Médicis:</span>
+                                <span class="toggle-label">${t('calc.pf_medicis')}:</span>
                                 <div class="toggle-group exclusive" id="dp-medicis-toggles">
                                     <button class="toggle-btn" data-source="top100" data-type="dpMedicis">Top 100</button>
                                     <button class="toggle-btn active" data-source="top10percent" data-type="dpMedicis">Top 10%</button>
-                                    <button class="toggle-btn off" data-source="nenhum" data-type="dpMedicis">Não faço</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="dpMedicis">${t('calc.skip')}</button>
                                 </div>
                             </div>
 
                             <!-- Parallel Realms Section -->
                             <div class="calc-section">
-                                <h4>🏰 Reinos Paralelos</h4>
-                                <span class="toggle-label">Dificuldade:</span>
+                                <h4>🏰 ${t('calc.parallel_realms')}</h4>
+                                <span class="toggle-label">${t('calc.difficulty')}:</span>
                                 <div class="toggle-group exclusive" id="reinos-dif-toggles">
-                                    <button class="toggle-btn" data-source="basico" data-type="reinosDif">Básico</button>
-                                    <button class="toggle-btn" data-source="avancado" data-type="reinosDif">Avançado</button>
-                                    <button class="toggle-btn" data-source="especialista" data-type="reinosDif">Especialista</button>
-                                    <button class="toggle-btn" data-source="mestre" data-type="reinosDif">Mestre</button>
-                                    <button class="toggle-btn" data-source="pesadelo" data-type="reinosDif">Pesadelo</button>
-                                    <button class="toggle-btn active" data-source="semDo" data-type="reinosDif">Sem Dó</button>
-                                    <button class="toggle-btn off" data-source="nenhum" data-type="reinosDif">Não faço</button>
+                                    <button class="toggle-btn" data-source="basico" data-type="reinosDif">${t('calc.basic')}</button>
+                                    <button class="toggle-btn" data-source="avancado" data-type="reinosDif">${t('calc.advanced')}</button>
+                                    <button class="toggle-btn" data-source="especialista" data-type="reinosDif">${t('calc.expert')}</button>
+                                    <button class="toggle-btn" data-source="mestre" data-type="reinosDif">${t('calc.master')}</button>
+                                    <button class="toggle-btn" data-source="pesadelo" data-type="reinosDif">${t('calc.nightmare')}</button>
+                                    <button class="toggle-btn active" data-source="semDo" data-type="reinosDif">${t('calc.merciless')}</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="reinosDif">${t('calc.skip')}</button>
                                 </div>
-                                <span class="toggle-label">Completude:</span>
+                                <span class="toggle-label">${t('calc.completion')}:</span>
                                 <div class="toggle-group exclusive" id="reinos-comp-toggles">
-                                    <button class="toggle-btn" data-source="min" data-type="reinosComp">Mínimo</button>
-                                    <button class="toggle-btn active" data-source="max" data-type="reinosComp">Máximo</button>
+                                    <button class="toggle-btn" data-source="min" data-type="reinosComp">${t('calc.minimum')}</button>
+                                    <button class="toggle-btn active" data-source="max" data-type="reinosComp">${t('calc.maximum')}</button>
                                 </div>
                             </div>
 
                             <!-- Guilds Section -->
                             <div class="calc-section">
-                                <h4>👥 Guilda</h4>
+                                <h4>👥 ${t('calc.guild')}</h4>
                                 <div class="toggle-group" id="guilda-eventos-toggles">
                                     <button class="toggle-btn active" data-source="eventos" data-type="guildaEventos">
-                                        Eventos de Guilda
+                                        ${t('calc.guild_events')}
                                     </button>
                                 </div>
 
-                                <span class="toggle-label">Tier de Batalha:</span>
+                                <span class="toggle-label">${t('calc.battle_tier')}:</span>
                                 <div class="toggle-group exclusive" id="guilda-tier-toggles">
                                     <button class="toggle-btn" data-source="bronze" data-type="guildaTier"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="guildaTier"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="guildaTier"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="guildaTier"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante</button>
-                                    <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">Não participo</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="guildaTier"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.silver')}"> ${t('calc.silver')}</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="guildaTier"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.gold')}"> ${t('calc.gold')}</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="guildaTier"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.diamond')}"> ${t('calc.diamond')}</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">${t('calc.not_participating')}</button>
                                 </div>
 
                                 <div id="diamante-slider-container" class="slider-container">
-                                    <span class="toggle-label">Pontos da Guilda (Diamante): <span id="diamante-pontos-display">16000</span></span>
+                                    <span class="toggle-label">${t('calc.guild_points_diamond')}: <span id="diamante-pontos-display">16000</span></span>
                                     <input type="range" id="diamante-pontos-slider" min="16000" max="30000" step="1000" value="16000" oninput="updateDiamanteSlider(this.value)">
                                     <div class="slider-labels">
                                         <span>16k</span>
@@ -153,17 +160,17 @@ export function createCalculator() {
 
                     <div class="calc-results">
                         <div id="earnings-result" class="result-box">
-                            <h4><img src="img/oficial/Theonite.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Teonita"> Resultado Estimado</h4>
+                            <h4><img src="img/oficial/Theonite.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.theonite')}"> ${t('calc.estimated_result')}</h4>
                             <div class="result-grid">
                                 <div class="result-card coins">
-                                    <span class="result-label">Moedas Mensais</span>
+                                    <span class="result-label">${t('calc.monthly_coins')}</span>
                                     <span class="result-value" id="result-coins">-</span>
-                                    <span class="result-sub">≈ <span id="result-coins-week">-</span>/semana</span>
+                                    <span class="result-sub">≈ <span id="result-coins-week">-</span>/${t('calc.week')}</span>
                                 </div>
                                 <div class="result-card teonita">
-                                    <span class="result-label">Teonita Mensal</span>
+                                    <span class="result-label">${t('calc.monthly_theonite')}</span>
                                     <span class="result-value" id="result-teonita">-</span>
-                                    <span class="result-sub">≈ <span id="result-teonita-week">-</span>/semana</span>
+                                    <span class="result-sub">≈ <span id="result-teonita-week">-</span>/${t('calc.week')}</span>
                                 </div>
                             </div>
                             <div id="earnings-breakdown" class="breakdown-box"></div>
@@ -179,31 +186,31 @@ export function createCalculator() {
                         <div class="calc-form">
                             <!-- GOLPES SECTION -->
                             <div class="calc-section">
-                                <h4>⚔️ Golpes (5 por Build)</h4>
+                                <h4>⚔️ ${t('calc.moves')} (5 ${t('calc.per_build')})</h4>
                                 
-                                <span class="toggle-label">Raridade do Personagem:</span>
+                                <span class="toggle-label">${t('calc.char_rarity')}:</span>
                                 <div class="toggle-group exclusive" id="golpe-raridade-toggles">
                                     <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante</button>
-                                    <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">Sem Golpes</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="golpeRaridade"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.silver')}"> ${t('calc.silver')}</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.gold')}"> ${t('calc.gold')}</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.diamond')}"> ${t('calc.diamond')}</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">${t('calc.no_moves')}</button>
                                 </div>
 
                                 <div class="toggle-group" id="golpe-shiny-toggle">
-                                    <button class="toggle-btn" data-source="shiny" data-type="golpeShiny">✨ Shiny (50% desconto)</button>
+                                    <button class="toggle-btn" data-source="shiny" data-type="golpeShiny">✨ Shiny (50% ${t('calc.discount')})</button>
                                 </div>
 
-                                <span class="toggle-label">Nível Desejado:</span>
+                                <span class="toggle-label">${t('calc.desired_level')}:</span>
                                 <div class="toggle-group exclusive" id="golpe-nivel-toggles">
                                     <button class="toggle-btn" data-source="9" data-type="golpeNivel">Lv 9</button>
                                     <button class="toggle-btn" data-source="12" data-type="golpeNivel">Lv 12</button>
                                     <button class="toggle-btn active" data-source="15" data-type="golpeNivel">Lv 15</button>
-                                    <button class="toggle-btn" data-source="custom" data-type="golpeNivel">Customizado</button>
+                                    <button class="toggle-btn" data-source="custom" data-type="golpeNivel">${t('calc.custom')}</button>
                                 </div>
 
                                 <div id="golpe-slider-container" class="slider-container" style="display: none;">
-                                    <span class="toggle-label">Nível: <span id="golpe-nivel-display">2</span></span>
+                                    <span class="toggle-label">${t('calc.level')}: <span id="golpe-nivel-display">2</span></span>
                                     <input type="range" id="golpe-nivel-slider" min="2" max="15" step="1" value="2" oninput="updateGolpeSlider(this.value)">
                                     <div class="slider-labels">
                                         <span>2</span>
@@ -211,9 +218,9 @@ export function createCalculator() {
                                     </div>
                                 </div>
 
-                                <span class="toggle-label">Nível Inicial:</span>
+                                <span class="toggle-label">${t('calc.initial_level')}:</span>
                                 <div id="golpe-nivel-inicial-container" class="slider-container">
-                                    <span class="toggle-label">Nível: <span id="golpe-nivel-inicial-display">1</span></span>
+                                    <span class="toggle-label">${t('calc.level')}: <span id="golpe-nivel-inicial-display">1</span></span>
                                     <input type="range" id="golpe-nivel-inicial-slider" min="1" max="14" step="1" value="1" oninput="updateGolpeInicialSlider(this.value)">
                                     <div class="slider-labels">
                                         <span>1</span>
@@ -224,24 +231,24 @@ export function createCalculator() {
 
                             <!-- ASTROS SECTION -->
                             <div class="calc-section">
-                                <h4>⭐ Astros Convidados (1 por Build)</h4>
+                                <h4>⭐ ${t('calc.catalyst_guests')} (1 ${t('calc.per_build')})</h4>
 
-                                <span class="toggle-label">Raridade do Astro:</span>
+                                <span class="toggle-label">${t('calc.catalyst_rarity')}:</span>
                                 <div class="toggle-group exclusive" id="astro-raridade-toggles">
                                     <button class="toggle-btn" data-source="bronze" data-type="astroRaridade"><img src="img/icones/icone_bronze.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> Bronze (Lv 5)</button>
-                                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> Prata (Lv 10)</button>
-                                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> Ouro (Lv 15)</button>
-                                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> Diamante (Lv 20)</button>
-                                    <button class="toggle-btn" data-source="custom" data-type="astroRaridade">Customizado</button>
-                                    <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">Sem Astro</button>
+                                    <button class="toggle-btn" data-source="prata" data-type="astroRaridade"><img src="img/icones/icone_prata.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.silver')}"> ${t('calc.silver')} (Lv 10)</button>
+                                    <button class="toggle-btn" data-source="ouro" data-type="astroRaridade"><img src="img/icones/icone_ouro.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.gold')}"> ${t('calc.gold')} (Lv 15)</button>
+                                    <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade"><img src="img/icones/icone_diamante.png" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('calc.diamond')}"> ${t('calc.diamond')} (Lv 20)</button>
+                                    <button class="toggle-btn" data-source="custom" data-type="astroRaridade">${t('calc.custom')}</button>
+                                    <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">${t('calc.no_catalyst')}</button>
                                 </div>
 
                                 <div class="toggle-group" id="astro-shiny-toggle">
-                                    <button class="toggle-btn" data-source="shiny" data-type="astroShiny">✨ Shiny (50% desconto)</button>
+                                    <button class="toggle-btn" data-source="shiny" data-type="astroShiny">✨ Shiny (50% ${t('calc.discount')})</button>
                                 </div>
 
                                 <div id="astro-slider-container" class="slider-container" style="display: none;">
-                                    <span class="toggle-label">Nível: <span id="astro-nivel-display">2</span></span>
+                                    <span class="toggle-label">${t('calc.level')}: <span id="astro-nivel-display">2</span></span>
                                     <input type="range" id="astro-nivel-slider" min="2" max="20" step="1" value="2" oninput="updateAstroSlider(this.value)">
                                     <div class="slider-labels">
                                         <span>2</span>
@@ -256,7 +263,7 @@ export function createCalculator() {
 
                     <div class="calc-results">
                         <div id="build-cost-result" class="result-box">
-                            <h4><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> Custo Total da Build</h4>
+                            <h4><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.coins')}"> ${t('calc.total_build_cost')}</h4>
                             <div id="build-cost-breakdown" class="breakdown-box styled"></div>
                         </div>
                     </div>
@@ -436,7 +443,7 @@ export function initToggleButtons() {
 export function updateDiamanteSlider(value) {
     const display = document.getElementById('diamante-pontos-display');
     if (display) {
-        display.textContent = parseInt(value).toLocaleString('pt-BR');
+        display.textContent = parseInt(value).toLocaleString(getLang() === 'en' ? 'en-US' : 'pt-BR');
     }
     calculateEarnings();
 }
@@ -486,28 +493,28 @@ export function calculateEarnings() {
         const valor = (fixos.diarias?.valor || 0) * (fixos.diarias?.regra?.ocorrenciasMensais || 30);
         totalCoins += valor;
         totalTeonita += teonitas.diarias?.valor || 0;
-        breakdown.push({ nome: 'Eventos Diários', coins: valor, teonita: teonitas.diarias?.valor });
+        breakdown.push({ nome: t('calc.daily_events'), coins: valor, teonita: teonitas.diarias?.valor });
     }
 
     // Calendario
     if (isToggleActive('fixed-toggles', 'calendario')) {
         totalCoins += fixos.calendario?.valor || 0;
         totalTeonita += fixos.calendario?.teonita || 0;
-        breakdown.push({ nome: 'Calendário', coins: fixos.calendario?.valor, teonita: fixos.calendario?.teonita });
+        breakdown.push({ nome: t('calc.calendar'), coins: fixos.calendario?.valor, teonita: fixos.calendario?.teonita });
     }
 
     // Site
     if (isToggleActive('fixed-toggles', 'site')) {
         totalCoins += fixos.site?.valor || 0;
         totalTeonita += fixos.site?.teonita || 0;
-        breakdown.push({ nome: 'Site', coins: fixos.site?.valor, teonita: fixos.site?.teonita });
+        breakdown.push({ nome: t('calc.site'), coins: fixos.site?.valor, teonita: fixos.site?.teonita });
     }
 
     // Missões Diárias de Guilda (teonita only)
     if (isToggleActive('fixed-toggles', 'guildaDiaria')) {
         const guildaTeonita = teonitas.guilda?.valor || 0;
         totalTeonita += guildaTeonita;
-        breakdown.push({ nome: 'Missões Guilda', teonita: guildaTeonita });
+        breakdown.push({ nome: t('calc.guild_missions'), teonita: guildaTeonita });
     }
 
     // === PASSE ===
@@ -516,7 +523,7 @@ export function calculateEarnings() {
         totalCoins += fixos.passe[passeType].valor || 0;
         totalTeonita += fixos.passe[passeType].teonita || 0;
         breakdown.push({
-            nome: `Passe (${passeType === 'gratis' ? 'Grátis' : 'Premium'})`,
+            nome: `${t('calc.pass')} (${passeType === 'gratis' ? t('calc.free') : 'Premium'})`,
             coins: fixos.passe[passeType].valor,
             teonita: fixos.passe[passeType].teonita
         });
@@ -540,7 +547,7 @@ export function calculateEarnings() {
         totalTeonita += dpTeonitaTotal;
 
         breakdown.push({
-            nome: `DP Personagem (${disputas.personagem?.[dpFaixa]?.nome || dpFaixa})`,
+            nome: `${t('calc.pf_char_short')} (${disputas.personagem?.[dpFaixa]?.nome || dpFaixa})`,
             coins: dpTotal,
             teonita: dpTeonitaTotal
         });
@@ -552,7 +559,7 @@ export function calculateEarnings() {
         const mensalTeonita = disputas.mensal?.rankings?.padrao?.teonita || 0;
         totalCoins += mensalCoins;
         totalTeonita += mensalTeonita;
-        breakdown.push({ nome: 'DP Mensal', coins: mensalCoins, teonita: mensalTeonita });
+        breakdown.push({ nome: t('calc.pf_monthly'), coins: mensalCoins, teonita: mensalTeonita });
     }
 
     // === DP MEDICIS ===
@@ -564,7 +571,7 @@ export function calculateEarnings() {
         const medicisFreq = disputas.medicis?.regra?.ocorrenciasMensais || 4;
         const medicisTotal = (medicisPadrao + medicisRankBonus) * medicisFreq;
         totalCoins += medicisTotal;
-        breakdown.push({ nome: 'DP Médicis', coins: medicisTotal });
+        breakdown.push({ nome: t('calc.pf_medicis'), coins: medicisTotal });
     }
 
     // === REINOS PARALELOS ===
@@ -576,7 +583,7 @@ export function calculateEarnings() {
         const reinoFreq = reinos.regra?.ocorrenciasMensais || 9;
         const reinoTotal = reinoReward * reinoFreq;
         totalCoins += reinoTotal;
-        breakdown.push({ nome: `Reinos (${reinos.dificuldades?.[reinosDif]?.nome || reinosDif})`, coins: reinoTotal });
+        breakdown.push({ nome: `${t('calc.realms_short')} (${reinos.dificuldades?.[reinosDif]?.nome || reinosDif})`, coins: reinoTotal });
     }
 
     // === GUILDA ===
@@ -585,7 +592,7 @@ export function calculateEarnings() {
         const guildaEventosReward = guildas.eventos?.recompensasEvento?.canopyCoins || 0;
         const guildaEventosTotal = guildaEventosReward * 4; // 4 eventos por mês
         totalCoins += guildaEventosTotal;
-        breakdown.push({ nome: 'Eventos de Guilda', coins: guildaEventosTotal });
+        breakdown.push({ nome: t('calc.guild_events'), coins: guildaEventosTotal });
     }
 
     // Batalha de guilda (tier)
@@ -605,11 +612,9 @@ export function calculateEarnings() {
 
             const tierTotal = tierReward * 4; // 4 batalhas semanais por mês
             totalCoins += tierTotal;
-            breakdown.push({ nome: `Batalha Guilda (${tierData.nome})`, coins: tierTotal });
+            breakdown.push({ nome: `${t('calc.guild_battle')} (${tierData.nome})`, coins: tierTotal });
         }
     }
-
-    // Teonita de missões diárias de guilda (handled separately in fixed sources if toggle active)
 
     // === UPDATE UI ===
     const resultBox = document.getElementById('earnings-result');
@@ -624,15 +629,15 @@ export function calculateEarnings() {
     const breakdownBox = document.getElementById('earnings-breakdown');
     if (breakdownBox) {
         breakdownBox.innerHTML = `
-            <h5>📊 Detalhamento</h5>
+            <h5>📊 ${t('calc.breakdown')}</h5>
             <ul>
                 ${breakdown.map(item => `
                     <li>
                         <span>${item.nome}</span>
                         <span>
-                            ${item.coins ? formatNumber(item.coins) + ' moedas' : ''}
+                            ${item.coins ? formatNumber(item.coins) + ` ${t('calc.coins')}` : ''}
                             ${item.coins && item.teonita ? ' + ' : ''}
-                            ${item.teonita ? formatNumber(item.teonita) + ' teonita' : ''}
+                            ${item.teonita ? formatNumber(item.teonita) + ` ${t('calc.theonite')}` : ''}
                         </span>
                     </li>
                 `).join('')}
@@ -727,12 +732,14 @@ export function calculateBuildCost() {
 
         const custoDoNivel = astrosData.custoPorNivel[String(astroNivelAlvo)] || { gold: 0, po: 0 };
 
+        const rarityLabel = astroRaridade === 'custom' ? t('calc.custom') : astroRaridade.charAt(0).toUpperCase() + astroRaridade.slice(1);
+
         astrosResult = {
             nivelAlvo: astroNivelAlvo,
             gold: totalGold,
             po: totalPo,
             custoDoNivel,
-            raridade: astroRaridade === 'custom' ? 'Customizado' : astroRaridade.charAt(0).toUpperCase() + astroRaridade.slice(1),
+            raridade: rarityLabel,
             isShiny: astroShiny
         };
     }
@@ -754,19 +761,19 @@ export function calculateBuildCost() {
     if (golpesResult) {
         html += `
             <div class="cost-section golpes">
-                <h5>⚔️ Golpes ${golpesResult.isShiny ? '✨' : ''}</h5>
+                <h5>⚔️ ${t('calc.moves')} ${golpesResult.isShiny ? '✨' : ''}</h5>
                 <ul>
                     <li>
-                        <span>1 golpe (Lv${golpesResult.nivelInicial}→${golpesResult.nivelAlvo})</span>
+                        <span>1 ${t('calc.move_single')} (Lv${golpesResult.nivelInicial}→${golpesResult.nivelAlvo})</span>
                         <span class="value">${formatNumber(golpesResult.custoUmGolpe)}</span>
                     </li>
                     <li>
-                        <span>5 golpes (Lv${golpesResult.nivelInicial}→${golpesResult.nivelAlvo})</span>
+                        <span>5 ${t('calc.moves_plural')} (Lv${golpesResult.nivelInicial}→${golpesResult.nivelAlvo})</span>
                         <span class="value">${formatNumber(golpesResult.custoBuild)}</span>
                     </li>
                     ${golpesResult.custoPersonagem ? `
                     <li>
-                        <span>Personagem ${golpesResult.raridade}${golpesResult.isShiny ? ' shiny' : ''}</span>
+                        <span>${t('calc.character')} ${rarityLabel(golpesResult.raridade)}${golpesResult.isShiny ? ' shiny' : ''}</span>
                         <span class="value">${formatNumber(golpesResult.custoPersonagem)}</span>
                     </li>
                     ` : ''}
@@ -779,11 +786,11 @@ export function calculateBuildCost() {
     if (astrosResult) {
         html += `
             <div class="cost-section astros">
-                <h5>⭐ Astro ${astrosResult.raridade} ${astrosResult.isShiny ? '✨' : ''}</h5>
+                <h5>⭐ ${t('calc.catalyst_single')} ${astrosResult.raridade} ${astrosResult.isShiny ? '✨' : ''}</h5>
                 <ul>
                     <li>
-                        <span>1 astro (Lv1→${astrosResult.nivelAlvo})</span>
-                        <span class="value">${formatNumber(astrosResult.gold)}${astrosResult.po > 0 ? ` <span class="po">+${formatNumber(astrosResult.po)} pó</span>` : ''}</span>
+                        <span>1 ${t('calc.catalyst_single').toLowerCase()} (Lv1→${astrosResult.nivelAlvo})</span>
+                        <span class="value">${formatNumber(astrosResult.gold)}${astrosResult.po > 0 ? ` <span class="po">+${formatNumber(astrosResult.po)} ${t('calc.evo_dust')}</span>` : ''}</span>
                     </li>
                 </ul>
             </div>
@@ -794,12 +801,12 @@ export function calculateBuildCost() {
     html += `
         <div class="cost-total">
             <div class="total-row">
-                <span class="total-label"><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> Total em Moedas</span>
+                <span class="total-label"><img src="img/oficial/CanopyCoin.png" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.coins')}"> ${t('calc.total_coins')}</span>
                 <span class="total-value coins">${formatNumber(totalCoins)}</span>
             </div>
             ${totalPo > 0 ? `
             <div class="total-row">
-                <span class="total-label">🔮 Total em Pó de Evolução</span>
+                <span class="total-label">🔮 ${t('calc.total_evo_dust')}</span>
                 <span class="total-value po">${formatNumber(totalPo)}</span>
             </div>
             ` : ''}
@@ -808,8 +815,8 @@ export function calculateBuildCost() {
 
     // Shiny notes only
     const shinyNotes = [];
-    if (golpesResult?.isShiny && golpesResult?.custoPersonagem) shinyNotes.push('Personagem shiny (50%)');
-    if (astrosResult?.isShiny) shinyNotes.push('Astro shiny (50%)');
+    if (golpesResult?.isShiny && golpesResult?.custoPersonagem) shinyNotes.push(`${t('calc.character')} shiny (50%)`);
+    if (astrosResult?.isShiny) shinyNotes.push(`${t('calc.catalyst_single')} shiny (50%)`);
     if (shinyNotes.length > 0) {
         html += `<p class="cost-notes">✨ ${shinyNotes.join(' • ')}</p>`;
     }

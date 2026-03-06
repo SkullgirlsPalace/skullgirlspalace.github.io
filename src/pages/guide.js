@@ -7,6 +7,7 @@ import { EFFECT_DATA } from '../data/effectData.js';
 import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
 import { t } from '../i18n/i18n.js';
+import { getLang } from '../i18n/i18n.js';
 
 export function render() {
     return `
@@ -216,30 +217,39 @@ function renderEffects(type, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
+    const isEN = getLang() === 'en';
+
     const effects = Object.entries(EFFECT_DATA)
         .filter(([key, e]) => e.type === type && key !== 'permanent')
         .map(([key, e]) => e)
-        .sort((a, b) => a.name.localeCompare(b.name));
+        .sort((a, b) => {
+            const nameA = isEN ? (a.name_en || a.name) : a.name;
+            const nameB = isEN ? (b.name_en || b.name) : b.name;
+            return nameA.localeCompare(nameB);
+        });
 
     let html = '';
 
     effects.forEach((effect, index) => {
         const stacks = effect.stacks ? `${effect.stacks}x` : '-';
         const effectColor = effect.color || 'var(--text-primary)';
+        const name = isEN ? (effect.name_en || effect.name) : effect.name;
+        const detailed = isEN ? (effect.detailed_en || effect.detailed) : effect.detailed;
+        const explicacao = isEN ? (effect.explicacao_en || effect.explicacao) : effect.explicacao;
         html += `
             <tr class="effect-row">
                 <td class="effect-icon-cell">
                     <div class="effect-icon-wrapper">
-                        <img src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
+                        <img src="${effect.icon}" alt="${name}" class="effect-icon-img">
                     </div>
                 </td>
                 <td class="effect-name-cell">
-                    <span class="effect-name" style="color: ${effectColor};">${effect.name}</span>
+                    <span class="effect-name" style="color: ${effectColor};">${name}</span>
                 </td>
                 <td class="effect-desc-cell">
-                    <p><strong style="color: ${effectColor};">${t('guide.effect.game_desc')}</strong> ${effect.detailed}</p>
-                    ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effectColor};">${t('guide.effect.explanation')}</strong> ${effect.explicacao}</p>` : ''}
-                    ${effect.scaling ? `<small class="effect-scaling" style="display: block; margin-top: 6px;">Escalonamento: ${effect.scaling}</small>` : ''}
+                    <p><strong style="color: ${effectColor};">${t('guide.effect.game_desc')}</strong> ${detailed}</p>
+                    ${explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effectColor};">${t('guide.effect.explanation')}</strong> ${explicacao}</p>` : ''}
+                    ${effect.scaling ? `<small class="effect-scaling" style="display: block; margin-top: 6px;">${t('guide.effect.scaling')}: ${effect.scaling}</small>` : ''}
                 </td>
                 <td class="effect-stacks-cell">${stacks}</td>
             </tr>
@@ -371,19 +381,24 @@ function renderSpecialEffects(containerId) {
     const effect = EFFECT_DATA.permanent;
     if (!effect) return;
 
+    const isEN = getLang() === 'en';
+    const name = isEN ? (effect.name_en || effect.name) : effect.name;
+    const detailed = isEN ? (effect.detailed_en || effect.detailed) : effect.detailed;
+    const explicacao = isEN ? (effect.explicacao_en || effect.explicacao) : effect.explicacao;
+
     const html = `
         <tr class="effect-row">
             <td class="effect-icon-cell">
                 <div class="effect-icon-wrapper">
-                    <img src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
+                    <img src="${effect.icon}" alt="${name}" class="effect-icon-img">
                 </div>
             </td>
             <td class="effect-name-cell">
-                <span class="effect-name" style="color: ${effect.color};">${effect.name}</span>
+                <span class="effect-name" style="color: ${effect.color};">${name}</span>
             </td>
             <td class="effect-desc-cell">
-                <p><strong style="color: ${effect.color};">${t('guide.effect.game_desc')}</strong> ${effect.detailed}</p>
-                ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effect.color};">${t('guide.effect.explanation')}</strong> ${effect.explicacao}</p>` : ''}
+                <p><strong style="color: ${effect.color};">${t('guide.effect.game_desc')}</strong> ${detailed}</p>
+                ${explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effect.color};">${t('guide.effect.explanation')}</strong> ${explicacao}</p>` : ''}
             </td>
             <td class="effect-stacks-cell">-</td>
         </tr>
@@ -474,10 +489,11 @@ function renderBossCard(mods) {
 }
 
 function getCategoryClass(name) {
-    if (name.toLowerCase().includes('forte')) return 'cat-strong';
-    if (name.toLowerCase().includes('bom')) return 'cat-good';
-    if (name.toLowerCase().includes('mediano')) return 'cat-medium';
-    if (name.toLowerCase().includes('ruim')) return 'cat-weak';
+    const lower = name.toLowerCase();
+    if (lower.includes('forte') || lower.includes('strong')) return 'cat-strong';
+    if (lower.includes('bom') || lower.includes('good')) return 'cat-good';
+    if (lower.includes('mediano') || lower.includes('average')) return 'cat-medium';
+    if (lower.includes('ruim') || lower.includes('weak')) return 'cat-weak';
     return '';
 }
 

@@ -6,6 +6,7 @@
 import { CHARACTER_FILES } from '../config/constants.js';
 import { setCharacters, setTierData, setCatalysts, setStatistics } from '../state/store.js';
 import { applyEnglishData, applyEnglishToSingleCharacter } from './dataSwitcher.js';
+import { getLang } from '../i18n/i18n.js';
 
 // Cache for loaded data
 const cache = {
@@ -118,15 +119,18 @@ export async function loadTierData() {
  * @returns {Promise<Object>} Catalysts data
  */
 export async function loadCatalysts() {
-    if (cache.catalysts) {
-        return cache.catalysts;
+    const lang = getLang();
+    const cacheKey = lang === 'en' ? 'catalysts_en' : 'catalysts';
+    if (cache[cacheKey]) {
+        return cache[cacheKey];
     }
 
     try {
-        const res = await fetch('data/catalisadores.json');
+        const url = lang === 'en' ? 'data/catalisadores_en.json' : 'data/catalisadores.json';
+        const res = await fetch(url);
         const data = await res.json();
 
-        cache.catalysts = data;
+        cache[cacheKey] = data;
         setCatalysts(data);
 
         return data;
@@ -141,12 +145,15 @@ export async function loadCatalysts() {
  * @returns {Promise<Object>} Fenda data
  */
 export async function loadFendaData() {
-    if (cache.fenda) return cache.fenda;
+    const lang = getLang();
+    const cacheKey = lang === 'en' ? 'fenda_en' : 'fenda';
+    if (cache[cacheKey]) return cache[cacheKey];
 
     try {
-        const res = await fetch('data/fenda.json');
-        cache.fenda = await res.json();
-        return cache.fenda;
+        const url = lang === 'en' ? 'data/fenda_en.json' : 'data/fenda.json';
+        const res = await fetch(url);
+        cache[cacheKey] = await res.json();
+        return cache[cacheKey];
     } catch (err) {
         console.error('Error loading fenda data:', err);
         return null;
