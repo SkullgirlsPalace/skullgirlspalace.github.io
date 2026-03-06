@@ -309,7 +309,7 @@
                 },
                 "signature_ability": {
                     "name": "SUPORTE IMORTAL",
-                    "description": "[HAB 1]: **Com Beowulf vivo**, os aliados ganham RESISTÊNCIA FINAL por 10 s a cada 30 s.\n\n[HAB 2]: Inflija MARCA DA MORTE e ganhe 2 acúmulos de FÚRIA por 10 s cada ao ativar o MODO HYPE **enquanto Beowulf tiver aliados vivos.**"
+                    "description": "**Enquanto Beowulf estiver vivo**, todos os aliados ganham RESISTÊNCIA FINAL e INABALÁVEL por 10 segundos cada, a cada 20 segundos.\n\nInflija MARCA DA MORTE e ganhe 2 camadas de FÚRIA por 10 s cada ao ativar o MODO HYPE **enquanto Beowulf tiver aliados vivos**."
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",

@@ -275,7 +275,7 @@ const VARIANT_IMAGES = {
         "Ronrominador": "img/robo-fortune/Robo-Fortune_4.png",
         "Protótipo": "img/robo-fortune/Robo-Fortune_1.png",
         "M-1AU": "img/robo-fortune/Robo-Fortune_2.png",
-        "Dupla Exposição": "img/robo-fortune/Robo_Fortune_0.png"
+        "Dupla Exposição": "img/robo-fortune/Robo_Fortune_30.png"
     },
     "squigly": {
         "Reviravolta": "img/squigly/Squigly_14.png",
