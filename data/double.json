@@ -107,7 +107,7 @@
                 },
                 "signature_ability": {
                     "name": "SE APROXIMANDO",
-                    "description": "ATAQUES de INVESTIDA bem-sucedidos têm 100% de chance de causar MALDIÇÃO por 5 s. Quando um EF. NEGATIVO no oponente expira, aplique 1 EFs. NEGATIVO(s) aleatórios por 5 s. \n\nSempre que Double aplicar uma EF. NEG., seu ATAQUE é aumentado permanentemente e a DEFESA do oponente é reduzida permanentemente em 1%."
+                    "description": "**ATAQUES de INVESTIDA bem-sucedidos** têm 100% de chance de causar MALDIÇÃO por 5 s. Quando um EF. NEGATIVO no oponente expira, aplique 1 EFs. NEGATIVO(s) aleatórios por 5 s. \n\n**Sempre que Double aplicar uma EF. NEG., seu ATAQUE é aumentado permanentemente e a DEFESA do oponente é reduzida permanentemente em 1%.**"
                 },
                 "marquee_ability": "Caos",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
