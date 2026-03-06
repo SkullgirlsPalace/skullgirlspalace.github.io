@@ -3,6 +3,8 @@
 // Extracted from script.js for modularity
 // =====================================================
 
+import { getLang } from '../i18n/i18n.js';
+
 export const CHARACTER_FILES = [
     'annie.json',
     'beowulf.json',
@@ -66,7 +68,8 @@ export const CHARACTER_COLORS = {
     'valentine': '#FFFFFF'
 };
 
-export const ELEMENT_MAP = {
+// ── Element Map with i18n display names ─────────────────
+const ELEMENT_MAP_PT = {
     'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/icones/ElementalFireBackless.png', statIcon: 'img/icones/ElementalIconFire.png' },
     'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/icones/ElementalWaterBackless.png', statIcon: 'img/icones/ElementalIconWater.png' },
     'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/icones/ElementalWindBackless.png', statIcon: 'img/icones/ElementalIconWind.png' },
@@ -75,15 +78,54 @@ export const ELEMENT_MAP = {
     'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/icones/ElementalNeutralBackless.png', statIcon: 'img/icones/ElementalIconNeutral.png' }
 };
 
-export const RARITY_ORDER = { 'diamante': 4, 'ouro': 3, 'prata': 2, 'bronze': 1 };
-export const ELEMENT_ORDER = { 'Fogo': 1, 'Água': 2, 'Ar': 3, 'Luz': 4, 'Trevas': 5, 'Neutro': 6 };
+const ELEMENT_MAP_EN = {
+    'Fire': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/icones/ElementalFireBackless.png', statIcon: 'img/icones/ElementalIconFire.png' },
+    'Water': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/icones/ElementalWaterBackless.png', statIcon: 'img/icones/ElementalIconWater.png' },
+    'Wind': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/icones/ElementalWindBackless.png', statIcon: 'img/icones/ElementalIconWind.png' },
+    'Light': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/icones/ElementalLightBackless.png', statIcon: 'img/icones/ElementalIconLight.png' },
+    'Dark': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/icones/ElementalDarkBackless.png', statIcon: 'img/icones/ElementalIconDark.png' },
+    'Neutral': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/icones/ElementalNeutralBackless.png', statIcon: 'img/icones/ElementalIconNeutral.png' }
+};
 
-export const RARITY_LABELS = {
+/**
+ * Get the ELEMENT_MAP appropriate for the current language
+ * @returns {Object} element map
+ */
+export function getElementMap() {
+    return getLang() === 'en' ? { ...ELEMENT_MAP_PT, ...ELEMENT_MAP_EN } : ELEMENT_MAP_PT;
+}
+
+// Keep ELEMENT_MAP as the pt-BR version for backward compat
+export const ELEMENT_MAP = ELEMENT_MAP_PT;
+
+// ── Rarity labels with i18n ─────────────────────────────
+const RARITY_LABELS_PT = {
     'diamante': 'DIAMANTE',
     'ouro': 'OURO',
     'prata': 'PRATA',
     'bronze': 'BRONZE'
 };
+
+const RARITY_LABELS_EN = {
+    'diamante': 'DIAMOND',
+    'ouro': 'GOLD',
+    'prata': 'SILVER',
+    'bronze': 'BRONZE'
+};
+
+/**
+ * Get rarity labels for current language
+ * @returns {Object} rarity labels map
+ */
+export function getRarityLabels() {
+    return getLang() === 'en' ? RARITY_LABELS_EN : RARITY_LABELS_PT;
+}
+
+// Keep original export for backward compat
+export const RARITY_LABELS = RARITY_LABELS_PT;
+
+export const RARITY_ORDER = { 'diamante': 4, 'ouro': 3, 'prata': 2, 'bronze': 1 };
+export const ELEMENT_ORDER = { 'Fogo': 1, 'Água': 2, 'Ar': 3, 'Luz': 4, 'Trevas': 5, 'Neutro': 6 };
 
 export const RARITY_ICONS = {
     'diamante': 'img/icones/icone_diamante.png',
@@ -93,3 +135,62 @@ export const RARITY_ICONS = {
 };
 
 export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'I', 'N/A'];
+
+// ── Element name translation helpers ────────────────────
+const ELEMENT_PT_TO_EN = {
+    'Fogo': 'Fire', 'Água': 'Water', 'Ar': 'Wind',
+    'Luz': 'Light', 'Trevas': 'Dark', 'Neutro': 'Neutral'
+};
+
+const ELEMENT_EN_TO_PT = {
+    'fire': 'Fogo', 'water': 'Água', 'air': 'Ar', 'wind': 'Ar',
+    'light': 'Luz', 'dark': 'Trevas', 'neutral': 'Neutro',
+    // Capitalized versions too
+    'Fire': 'Fogo', 'Water': 'Água', 'Air': 'Ar', 'Wind': 'Ar',
+    'Light': 'Luz', 'Dark': 'Trevas', 'Neutral': 'Neutro'
+};
+
+/**
+ * Translate a pt-BR element name to English
+ * @param {string} ptElement - Portuguese element name (e.g. 'Fogo')
+ * @returns {string} English element name (e.g. 'Fire')
+ */
+export function elementToEN(ptElement) {
+    return ELEMENT_PT_TO_EN[ptElement] || ptElement;
+}
+
+/**
+ * Translate an English element name to pt-BR (for internal key lookup)
+ * @param {string} enElement - English element (e.g. 'fire')
+ * @returns {string} Portuguese element name (e.g. 'Fogo')
+ */
+export function elementToPT(enElement) {
+    return ELEMENT_EN_TO_PT[enElement] || enElement;
+}
+
+// ── Character name translation ──────────────────────────
+const CHARACTER_NAME_PT_TO_EN = {
+    'Dália Negra': 'Black Dahlia'
+};
+
+const CHARACTER_NAME_EN_TO_PT = {
+    'Black Dahlia': 'Dália Negra'
+};
+
+/**
+ * Translate a character display name to English
+ * @param {string} ptName - Portuguese character name
+ * @returns {string} English character name
+ */
+export function characterNameToEN(ptName) {
+    return CHARACTER_NAME_PT_TO_EN[ptName] || ptName;
+}
+
+/**
+ * Translate a character display name to Portuguese
+ * @param {string} enName - English character name
+ * @returns {string} Portuguese character name
+ */
+export function characterNameToPT(enName) {
+    return CHARACTER_NAME_EN_TO_PT[enName] || enName;
+}

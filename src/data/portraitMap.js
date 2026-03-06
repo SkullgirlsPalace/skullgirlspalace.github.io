@@ -336,8 +336,17 @@ export const PORTRAIT_MAP = {
 
 /**
  * Returns the exact portrait image for a given variant, based on mapping
+ * @param {string} charKey - Character key
+ * @param {string} variantName - Current variant name (may be EN)
+ * @param {string} [originalName] - Original PT name for lookup
  */
-export function getPortraitImage(charKey, variantName) {
+export function getPortraitImage(charKey, variantName, originalName) {
+    // First try original (Portuguese) name for lookup
+    const lookupName = originalName || variantName;
+    if (PORTRAIT_MAP[charKey] && PORTRAIT_MAP[charKey][lookupName]) {
+        return PORTRAIT_MAP[charKey][lookupName];
+    }
+    // Then try the current name
     if (PORTRAIT_MAP[charKey] && PORTRAIT_MAP[charKey][variantName]) {
         return PORTRAIT_MAP[charKey][variantName];
     }

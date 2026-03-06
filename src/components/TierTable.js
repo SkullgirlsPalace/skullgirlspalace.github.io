@@ -3,12 +3,13 @@
 // Renders tier list table with ranking badges
 // =====================================================
 
-import { ELEMENT_MAP, TIER_RANKS, RARITY_ICONS } from '../config/constants.js';
+import { ELEMENT_MAP, TIER_RANKS, RARITY_ICONS, getElementMap } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { getPortraitImage } from '../data/portraitMap.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getState, setCompactMode, setEditorMode, updateTierRank } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
+import { t } from '../i18n/i18n.js';
 
 /**
  * Create rank badge HTML
@@ -25,7 +26,7 @@ export function createRankBadge(rank) {
 /**
  * Cycle through ranks SS -> S -> A -> B -> C -> I -> N/A
  * @param {string} charKey - Character key
- * @param {string} variantName - Variant name
+ * @param {string} variantName - Variant name (always PT for tier data keys)
  * @param {string} mode - Mode key (pf, riftOff, riftDef, parallel)
  */
 function cycleRank(charKey, variantName, mode) {
@@ -62,6 +63,7 @@ function cycleRank(charKey, variantName, mode) {
 export function createTierTable(charKey, charData) {
     const state = getState();
     const tierData = state.tierData[charKey] || {};
+    const elementMap = getElementMap();
 
     // Get and filter variants
     let variants = flattenVariants(charData.variants);
@@ -74,26 +76,31 @@ export function createTierTable(charKey, charData) {
     let rowsHTML = '';
 
     if (variants.length === 0) {
-        rowsHTML = `<tr><td colspan="5" class="text-center" style="padding: 40px; color: var(--text-muted);">Nenhuma variante encontrada com estes filtros.</td></tr>`;
+        rowsHTML = `<tr><td colspan="5" class="text-center" style="padding: 40px; color: var(--text-muted);">${t('tier.no_results')}</td></tr>`;
     } else {
         rowsHTML = variants.map(variant => {
-            const baseRanks = tierData[variant.name] || {};
+            // Use original PT name for tier data lookup and image lookups
+            const tierKey = variant.name_original || variant.name;
+            const baseRanks = tierData[tierKey] || {};
             const ranks = {
                 pf: baseRanks.pf || 'B',
                 riftOff: baseRanks.riftOff || 'B',
                 riftDef: baseRanks.riftDef || 'B',
                 parallel: baseRanks.parallel || 'B'
             };
-            const imgPath = getVariantImage(charKey, variant.name, 0);
-            const portraitPath = getPortraitImage(charKey, variant.name);
+            const imgPath = getVariantImage(charKey, variant.name, 0, variant.name_original);
+            const portraitPath = getPortraitImage(charKey, variant.name, variant.name_original);
 
             const elementStr = variant.element || 'Neutro';
-            const elementInfo = ELEMENT_MAP[elementStr] || ELEMENT_MAP['Neutro'];
+            const elementInfo = elementMap[elementStr] || ELEMENT_MAP[elementStr] || ELEMENT_MAP['Neutro'];
             const elementClass = elementInfo.class;
 
             const rarityKey = variant.rarityKey || 'diamante';
             const rarityIcon = RARITY_ICONS[rarityKey];
             const masteryIcon = getMasteryIcon(charKey);
+
+            // Escape variant name for onclick (handle apostrophes)
+            const escapedTierKey = tierKey.replace(/'/g, "\\'");
 
             const charCellContent = state.isCompactMode ? `
                 <div class="compact-char-info">
@@ -119,22 +126,22 @@ export function createTierTable(charKey, charData) {
                         </div>
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'pf')">
+                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${escapedTierKey}', 'pf')">
                             ${createRankBadge(ranks.pf)}
                         </div>
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'parallel')">
+                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${escapedTierKey}', 'parallel')">
                             ${createRankBadge(ranks.parallel)}
                         </div>
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'riftOff')">
+                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${escapedTierKey}', 'riftOff')">
                             ${createRankBadge(ranks.riftOff)}
                         </div>
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'riftDef')">
+                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${escapedTierKey}', 'riftDef')">
                             ${createRankBadge(ranks.riftDef)}
                         </div>
                     </td>
@@ -148,18 +155,18 @@ export function createTierTable(charKey, charData) {
             <table class="tier-table ${compactClass} ${editingClass}">
                 <thead>
                     <tr>
-                        <th>Variante</th>
+                        <th>${t('tier.variant')}</th>
                         <th class="text-center">
-                            <span class="attr-highlight" data-attr-key="tier_dp_ataque" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">DP Ataque</span>
+                            <span class="attr-highlight" data-attr-key="tier_dp_ataque" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">${t('tier.pf_attack')}</span>
                         </th>
                         <th class="text-center">
-                            <span class="attr-highlight" data-attr-key="tier_reinos_paralelos" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">Reinos Paralelos</span>
+                            <span class="attr-highlight" data-attr-key="tier_reinos_paralelos" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">${t('tier.parallel_realms')}</span>
                         </th>
                         <th class="text-center">
-                            <span class="attr-highlight" data-attr-key="tier_fenda_ataque" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">Fenda Ataque</span>
+                            <span class="attr-highlight" data-attr-key="tier_fenda_ataque" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">${t('tier.rift_offense')}</span>
                         </th>
                         <th class="text-center">
-                            <span class="attr-highlight" data-attr-key="tier_fenda_defesa" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">Fenda Defesa</span>
+                            <span class="attr-highlight" data-attr-key="tier_fenda_defesa" style="border-bottom: 1px dotted rgba(255,255,255,0.4); color: var(--text-muted); padding: 4px;">${t('tier.rift_defense')}</span>
                         </th>
                     </tr>
                 </thead>
@@ -189,25 +196,25 @@ export function createTierView(charKey, charData) {
         <!-- Rank Explanations Dictionary -->
         <div class="rank-dictionary">
             <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
-                <p>O Melhor dos Melhores; Domina o Modo.</p>
+                <p>${t('tier.rank_ss')}</p>
             </div>
             <div class="dict-item"><span class="rank-badge rank-s">S</span>
-                <p>Muito Forte e Útil; Poucas Falhas.</p>
+                <p>${t('tier.rank_s')}</p>
             </div>
             <div class="dict-item"><span class="rank-badge rank-a">A</span>
-                <p>Sólido, mas com algumas limitações.</p>
+                <p>${t('tier.rank_a')}</p>
             </div>
             <div class="dict-item"><span class="rank-badge rank-b">B</span>
-                <p>Razoável, mas tem desvantagens claras.</p>
+                <p>${t('tier.rank_b')}</p>
             </div>
             <div class="dict-item"><span class="rank-badge rank-c">C</span>
-                <p>Ruim; existem opções melhores.</p>
+                <p>${t('tier.rank_c')}</p>
             </div>
             <div class="dict-item"><span class="rank-badge rank-i">I</span>
-                <p>Inviável: Sem utilidade; Não Recomendado.</p>
+                <p>${t('tier.rank_i')}</p>
             </div>
             <div class="dict-item"><span class="rank-badge rank-na">N/A</span>
-                <p>Não Avaliado/Em Análise: Lutador Novo ou Alterado; Rank Pendente.</p>
+                <p>${t('tier.rank_na')}</p>
             </div>
         </div>
 
@@ -218,7 +225,7 @@ export function createTierView(charKey, charData) {
                     <input type="checkbox" id="compact-mode-toggle" ${compactChecked} onchange="handleToggleCompactMode()">
                     <span class="slider round"></span>
                 </label>
-                <span class="editor-label">Modo Compacto</span>
+                <span class="editor-label">${t('tier.compact_mode')}</span>
             </div>
         </div>
 

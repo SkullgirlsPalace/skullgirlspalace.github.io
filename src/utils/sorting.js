@@ -3,7 +3,7 @@
 // Logic for sorting and filtering variants
 // =====================================================
 
-import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js';
+import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP, getElementMap } from '../config/constants.js';
 import { parseStatValue } from './formatters.js';
 
 /**
@@ -14,6 +14,7 @@ import { parseStatValue } from './formatters.js';
  */
 export function sortVariants(variants, sortConfig) {
     const { type, direction } = sortConfig;
+    const elementMap = getElementMap();
 
     return [...variants].sort((a, b) => {
         let valA, valB;
@@ -36,8 +37,14 @@ export function sortVariants(variants, sortConfig) {
                 valB = b.name;
                 break;
             case 'element':
-                valA = ELEMENT_ORDER[a.element] || 99;
-                valB = ELEMENT_ORDER[b.element] || 99;
+                // Support both PT and EN element names
+                valA = ELEMENT_ORDER[a.element] || (elementMap[a.element] ? Object.values(ELEMENT_ORDER).length + 1 : 99);
+                valB = ELEMENT_ORDER[b.element] || (elementMap[b.element] ? Object.values(ELEMENT_ORDER).length + 1 : 99);
+                // Use the element map's key for ordering
+                const infoA = elementMap[a.element];
+                const infoB = elementMap[b.element];
+                if (infoA) valA = Object.keys(ELEMENT_ORDER).indexOf(Object.keys(ELEMENT_MAP).find(k => ELEMENT_MAP[k].key === infoA.key)) + 1 || 99;
+                if (infoB) valB = Object.keys(ELEMENT_ORDER).indexOf(Object.keys(ELEMENT_MAP).find(k => ELEMENT_MAP[k].key === infoB.key)) + 1 || 99;
                 break;
             case 'class':
                 valA = RARITY_ORDER[a.rarityKey] || 0;
@@ -62,6 +69,7 @@ export function sortVariants(variants, sortConfig) {
  */
 export function filterVariants(variants, filters) {
     let filtered = variants;
+    const elementMap = getElementMap();
 
     // Rarity Filter (multi-select)
     if (filters.rarity && filters.rarity.length > 0) {
@@ -71,7 +79,8 @@ export function filterVariants(variants, filters) {
     // Element Filter (multi-select)
     if (filters.element && filters.element.length > 0) {
         filtered = filtered.filter(v => {
-            const elementInfo = ELEMENT_MAP[v.element];
+            // Look up in the current element map (supports both PT and EN element names)
+            const elementInfo = elementMap[v.element] || ELEMENT_MAP[v.element];
             return elementInfo && filters.element.includes(elementInfo.key);
         });
     }
@@ -95,3 +104,4 @@ export function flattenVariants(variantsObj) {
     });
     return allVariants;
 }
+

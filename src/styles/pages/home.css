@@ -13,9 +13,10 @@
 .hub-top-bar {
     margin-bottom: 20px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    padding-left: 10px;
+    padding: 0 10px;
 }
 
 .hub-about-top {
@@ -36,9 +37,6 @@
 }
 
 .hub-about-link {
-    position: absolute;
-    top: -20px;
-    left: 0;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -59,6 +57,10 @@
     height: 16px;
     width: auto;
     filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
+.home-lang-selector {
+    margin-left: auto;
 }
 
 .hub-hero h1 {
@@ -180,4 +182,3 @@
     width: 100%;
     opacity: 1;
 }
-

@@ -1,4 +1,4 @@
-import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS, CHARACTER_COLORS } from '../config/constants.js';
+import { ELEMENT_MAP, RARITY_ICONS, CHARACTER_COLORS, getElementMap, getRarityLabels } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState, updateCharacterData } from '../state/store.js';
@@ -16,7 +16,8 @@ export function createVariantCard(variant, charKey, index = 0) {
     const editingClass = state.isEditorMode ? 'editing' : '';
     const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
 
-    const elementInfo = ELEMENT_MAP[variant.element] || {
+    const currentElementMap = getElementMap();
+    const elementInfo = currentElementMap[variant.element] || ELEMENT_MAP[variant.element] || {
         icon: '⚪',
         class: 'neutral',
         iconPath: 'img/icones/ElementalFireBackless.png',
@@ -24,7 +25,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     };
 
     // Get portrait URL - prioritize local backup, fallback to JSON, then default
-    let portraitUrl = getVariantImage(charKey, variant.name, index);
+    let portraitUrl = getVariantImage(charKey, variant.name, index, variant.name_original);
     if (portraitUrl.includes('_Icon.png') && variant.images?.portrait_url) {
         portraitUrl = variant.images.portrait_url;
     }
@@ -37,7 +38,7 @@ export function createVariantCard(variant, charKey, index = 0) {
 
     // Get rarity display name
     const rarityKey = variant.rarityKey || 'diamante';
-    const rarityLabel = RARITY_LABELS[rarityKey] || rarityKey.toUpperCase();
+    const rarityLabel = getRarityLabels()[rarityKey] || rarityKey.toUpperCase();
     const rarityIcon = RARITY_ICONS[rarityKey] || '';
 
     // Unique ID for this card's tabs

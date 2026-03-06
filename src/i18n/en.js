@@ -102,6 +102,22 @@ export default {
     'tierlist.title': 'Tier List',
     'tierlist.intro': 'Choose a character to see the detailed tier list of all their variants. Rankings are based on performance in each game mode.',
 
+    // ── Tier Table ──────────────────────────────────
+    'tier.variant': 'Variant',
+    'tier.pf_attack': 'PF Attack',
+    'tier.parallel_realms': 'Parallel Realms',
+    'tier.rift_offense': 'Rift Offense',
+    'tier.rift_defense': 'Rift Defense',
+    'tier.no_results': 'No variants found with these filters.',
+    'tier.compact_mode': 'Compact Mode',
+    'tier.rank_ss': 'Best of the Best; Dominates the Mode.',
+    'tier.rank_s': 'Very Strong and Useful; Few Weaknesses.',
+    'tier.rank_a': 'Solid, but with some limitations.',
+    'tier.rank_b': 'Decent, but has clear disadvantages.',
+    'tier.rank_c': 'Weak; better options exist.',
+    'tier.rank_i': 'Unviable: No utility; Not Recommended.',
+    'tier.rank_na': 'Not Rated/Under Review: New or Changed Fighter; Rank Pending.',
+
     // ── Footer ──────────────────────────────────────
     'footer.subtitle': 'Your complete source for builds, stats and strategies for Skullgirls Mobile.',
     'footer.credits_title': '✨ Credits',

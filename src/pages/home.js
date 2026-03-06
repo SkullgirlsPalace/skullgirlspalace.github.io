@@ -3,22 +3,36 @@
 // Landing hub with navigation cards
 // =====================================================
 
-import { t } from '../i18n/i18n.js';
+import { t, getLang } from '../i18n/i18n.js';
 
 /**
  * Render home page
  * @returns {string} HTML string
  */
 export function render() {
+    const lang = getLang();
+    const ptActive = lang === 'pt-BR' ? 'active' : '';
+    const enActive = lang === 'en' ? 'active' : '';
+
     return `
         <section class="section" id="landing-hub">
             <div class="hub-container">
                 <!-- Hero Section -->
                 <div class="hub-hero">
-                    <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="hub-about-link">
-                        <img src="img/icones/IconInfo.png" alt="">
-                        <span>${t('nav.about').toUpperCase()}</span>
-                    </a>
+                    <div class="hub-top-bar">
+                        <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="hub-about-link">
+                            <img src="img/icones/IconInfo.png" alt="">
+                            <span>${t('nav.about').toUpperCase()}</span>
+                        </a>
+                        <div class="lang-selector home-lang-selector">
+                            <button class="lang-btn ${ptActive}" onclick="handleSetLang('pt-BR')" title="Português">
+                                🇧🇷
+                            </button>
+                            <button class="lang-btn ${enActive}" onclick="handleSetLang('en')" title="English">
+                                🇺🇸
+                            </button>
+                        </div>
+                    </div>
                     <h1>${t('home.title')}</h1>
                     <p>${t('home.subtitle')}</p>
                 </div>

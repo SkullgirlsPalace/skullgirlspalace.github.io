@@ -5,6 +5,7 @@
 
 import { CHARACTER_FILES } from '../config/constants.js';
 import { setCharacters, setTierData, setCatalysts, setStatistics } from '../state/store.js';
+import { applyEnglishData, applyEnglishToSingleCharacter } from './dataSwitcher.js';
 
 // Cache for loaded data
 const cache = {
@@ -50,10 +51,13 @@ export async function loadAllCharacters() {
 
     await Promise.all(promises);
 
-    cache.characters = characters;
-    setCharacters(characters);
+    // Apply English data overlay when lang=en
+    const finalCharacters = await applyEnglishData(characters);
 
-    return characters;
+    cache.characters = finalCharacters;
+    setCharacters(finalCharacters);
+
+    return finalCharacters;
 }
 
 /**
@@ -68,7 +72,10 @@ export async function loadCharacter(charKey) {
 
     try {
         const res = await fetch(`data/${charKey}.json`);
-        const data = await res.json();
+        let data = await res.json();
+
+        // Apply English overlay for single char load
+        data = await applyEnglishToSingleCharacter(charKey, data);
 
         if (!cache.characters) {
             cache.characters = {};

@@ -311,7 +311,7 @@ const VARIANT_IMAGES = {
         "Criança Selvagem": "img/umbrella/Umbrella_7.png",
         "Pitada de Raiva": "img/umbrella/Umbrella_2.png",
         "Vento Ventania": "img/umbrella/Umbrella_3.png"
-    ,
+        ,
         'Isca Sortuda': 'img/umbrella/Umbrella_31.png'
     },
     "valentine": {
@@ -337,8 +337,18 @@ const VARIANT_IMAGES = {
 
 /**
  * Helper to get variant images
+ * @param {string} charKey - Character key
+ * @param {string} variantName - Current variant name (may be EN)
+ * @param {number} index - Index (unused, kept for compat)
+ * @param {string} [originalName] - Original PT name for lookup
  */
-export function getVariantImage(charKey, variantName, index) {
+export function getVariantImage(charKey, variantName, index, originalName) {
+    // First try original (Portuguese) name for lookup
+    const lookupName = originalName || variantName;
+    if (VARIANT_IMAGES[charKey] && VARIANT_IMAGES[charKey][lookupName]) {
+        return VARIANT_IMAGES[charKey][lookupName];
+    }
+    // Then try the current name (for variants with same name in both languages)
     if (VARIANT_IMAGES[charKey] && VARIANT_IMAGES[charKey][variantName]) {
         return VARIANT_IMAGES[charKey][variantName];
     }
