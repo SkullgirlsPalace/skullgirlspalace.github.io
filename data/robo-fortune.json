@@ -244,7 +244,7 @@
                 },
                 "signature_ability": {
                     "name": "INSTANTÂNEO",
-                    "description": "**ATAQUES de RAIO bem-sucedidos de GOLPES ESPECIAIS** concedem IMUNIDADE por 10 segundos e aplicam ATORDOAMENTO no oponente por 2 segundos **se ele não estiver sofrendo de SANGRAMENTO**.\\n\\**Quando o ATORDOAMENTO expirar no oponente**, conceda ESQUIVA por 15 segundos à Robo-Fortune e aplique SANGRAMENTO FORTE no oponente por 5 segundos."
+                    "description": "**ATAQUES de RAIO bem-sucedidos de GOLPES ESPECIAIS** concedem IMUNIDADE por 10 segundos e aplicam ATORDOAMENTO no oponente por 2 segundos **se ele não estiver sofrendo de SANGRAMENTO**.\n\n**Quando o ATORDOAMENTO expirar no oponente**, conceda ESQUIVA por 15 segundos à Robo-Fortune e aplique SANGRAMENTO FORTE no oponente por 5 segundos."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
