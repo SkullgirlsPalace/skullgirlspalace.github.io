@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "LÁGRIMAS DE DOR",
-                    "description": "[HAB 1]: Ganhe FÚRIA por 10 segundos **ao gerar uma LÁGRIMA.**\n\n[HAB 2}: LÁGRIMAS detonadas infligem SANGRAMENTO por 5 segundos **ao GOLPEAR.**"
+                    "description": "Ganhe FÚRIA por 10 segundos **ao gerar uma LÁGRIMA.**\n\nLÁGRIMAS detonadas infligem SANGRAMENTO por 5 segundos **ao GOLPEAR.**"
                 },
                 "marquee_ability": "MASSA CRÍTICA",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -385,4 +385,5 @@
             }
         ]
     }
+
 }
