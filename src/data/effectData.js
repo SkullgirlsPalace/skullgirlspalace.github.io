@@ -6,6 +6,12 @@
 
 export const EFFECT_DATA = {
     // --- TERMINOLOGIA TÉCNICA ---
+    ataque: {
+        keys: ['ATQ', 'ATK', 'Ataque', 'ATAQUE','Attack'],
+        name: 'Ataque (ATQ)',
+        type: 'term',
+        detailed: 'Reoresenta o dano base do seu lutador.'
+    },
     vida: {
         keys: ['HP', 'VIDA', 'VD', 'Vida'],
         name: 'Vida (VD)',
@@ -16,19 +22,19 @@ export const EFFECT_DATA = {
         keys: ['Habilidades Características', 'Habilidade Característica', 'Signature Abilities'],
         name: 'Habilidades Características',
         type: 'term',
-        detailed: 'São as habilidades passivas que tornam cada personagem único no jogo.'
+        detailed: 'São as habilidades passivas que tornam cada Variante única no jogo.'
     },
     marquee_abilities: {
         keys: ['Habilidade Superior', 'Habilidades Superiores', 'Marquee Abilities'],
         name: 'Habilidade Superior',
         type: 'term',
-        detailed: 'Uma habilidade poderosa que pode ser escolhida entre duas opções após o personagem atingir seu potencial máximo.'
+        detailed: 'Uma habilidade adicional que pode ser escolhida entre duas opções após o personagem finalizar sua árvore de habilidades.'
     },
     special_moves: {
         keys: ['Golpes Especiais', 'Golpe Especial', 'Special Moves'],
         name: 'Golpes Especiais',
         type: 'term',
-        detailed: 'Diferente dos Blockbusters, os Golpes Especiais recarregam com o tempo (Reativação Especial).'
+        detailed: 'Golpes Especiais são os golpesredondos, são mais "simples" que os Blockbusters, eles podem ser usados com mais frequência (Reat. Especial e Níveis carrega mais rápido) e podem ser repetidos.'
     },
     tag_in: {
         keys: ['Assistência', 'Tag In', 'Ataque de Assistência'],
@@ -40,19 +46,23 @@ export const EFFECT_DATA = {
         keys: ['Efeito Positivo', 'EF. POS.', 'Buff'],
         name: 'Efeito Positivo (EF. POS.)',
         type: 'term',
-        detailed: 'Ícones verdes que aparecem acima da barra de vida.'
+        detailed: 'Ícones coloridos que aparecem abaixo da barra de vida.'
     },
     debuff: {
         keys: ['Efeito Negativo', 'EF. NEG.', 'Debuff'],
         name: 'Efeito Negativo (EF. NEG.)',
         type: 'term',
-        detailed: 'Ícones vermelhos que aparecem acima da barra de vida.'
+        detailed: 'Ícones vermelhos que aparecem abaixo da barra de vida.'
     },
     permanent_modifier: {
         keys: ['Modificador Permanente', 'Efeito Permanente', 'Permanent Modifier'],
         name: 'Efeito Permanente',
         type: 'term',
-        detailed: 'São representados por um brilho ou borda dourada no ícone do efeito.'
+        color: '#b0bec5',
+        icon: 'img/modifiers/permanent/Permanent.png',
+        stacks: 5,
+        detailed: 'O Efeito com está borda não pode ser removido.',
+        explicacao: 'O Efeito com está borda não pode ser removido.'
     },
 
     // --- EFEITOS POSITIVOS (BUFFS) ---
