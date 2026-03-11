@@ -219,3 +219,42 @@ export function formatBuildText(text) {
 
     return workingText;
 }
+
+/**
+ * Format catalyst constraint or node type (Rift/Weekly)
+ * @param {string} constraint - Raw constraint/node string
+ * @returns {string} Translated/Formatted string
+ */
+export function formatConstraint(constraint) {
+    if (!constraint) return '';
+
+    const mapping = {
+        'Boss': 'Chefe (Nó Central)',
+        'Triplo (Topo)': 'Nó Triplo (Topo)',
+        'Duo (Esquerdo)': 'Nó Duplo (Esquerdo)',
+        'Duo (Direito)': 'Nó Duplo (Direito)',
+        'Duo': 'Nó Duplo',
+        'Single (Esquerdo)': 'Nó Solo (Esquerdo)',
+        'Single (Direito)': 'Nó Solo (Direito)',
+        'Single': 'Nó Solo',
+        'Ambos': 'Ambos', // Keep as is or refine if user specifies
+        'Personagem': 'Nome do Personagem',
+        'Def. Fogo': 'Def. Fogo',
+        'Def. Água': 'Def. Água',
+        'Def. Ar': 'Def. Ar',
+        'Def. Luz': 'Def. Luz',
+        'Def. Trevas': 'Def. Trevas'
+    };
+
+    // Check for exact match first
+    if (mapping[constraint]) {
+        return mapping[constraint];
+    }
+
+    // Handle character-specific constraints (e.g., "Marie", "Annie")
+    // If it's a known character name, we can leave it as is or format it.
+    // The user mentioned "Nome do personagem" as a correction, so we might want to 
+    // detect characters.
+    
+    return constraint;
+}

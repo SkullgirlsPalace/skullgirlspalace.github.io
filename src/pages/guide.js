@@ -6,6 +6,7 @@
 import { EFFECT_DATA } from '../data/effectData.js';
 import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
+import { formatConstraint } from '../utils/formatters.js';
 
 export function render() {
     return `
@@ -216,7 +217,7 @@ function renderEffects(type, containerId) {
     if (!container) return;
 
     const effects = Object.entries(EFFECT_DATA)
-        .filter(([key, e]) => e.type === type && key !== 'permanent')
+        .filter(([key, e]) => e.type === type && key !== 'permanent_modifier')
         .map(([key, e]) => e)
         .sort((a, b) => a.name.localeCompare(b.name));
 
@@ -367,8 +368,10 @@ function renderSpecialEffects(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    const effect = EFFECT_DATA.permanent;
+    const effect = EFFECT_DATA.permanent_modifier;
     if (!effect) return;
+
+    const stacks = effect.stacks ? `${effect.stacks}x` : '-';
 
     const html = `
         <tr class="effect-row">
@@ -381,10 +384,9 @@ function renderSpecialEffects(containerId) {
                 <span class="effect-name" style="color: ${effect.color};">${effect.name}</span>
             </td>
             <td class="effect-desc-cell">
-                <p><strong style="color: ${effect.color};">Descrição do Jogo:</strong> ${effect.detailed}</p>
-                ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effect.color};">Explicação:</strong> ${effect.explicacao}</p>` : ''}
+                ${effect.explicacao ? `<p><strong style="color: ${effect.color};">Explicação:</strong> ${effect.explicacao}</p>` : ''}
             </td>
-            <td class="effect-stacks-cell">-</td>
+            <td class="effect-stacks-cell">${stacks}</td>
         </tr>
     `;
 
@@ -444,7 +446,7 @@ function renderRiftModCard(mod, nodeName) {
         <div class="catalyst-card cotw-card">
             <div class="catalyst-card-header">
                 <h4>${mod.name}</h4>
-                <span class="catalyst-constraint">${nodeName}</span>
+                <span class="catalyst-constraint">${formatConstraint(nodeName)}</span>
             </div>
             <div class="catalyst-description">
                 <p>${formattedDesc}</p>
@@ -463,7 +465,7 @@ function renderBossCard(mods) {
         <div class="catalyst-card cotw-card">
             <div class="catalyst-card-header">
                 <h4>${mods[0].name}</h4>
-                <span class="catalyst-constraint">Boss</span>
+                <span class="catalyst-constraint">${formatConstraint('Boss')}</span>
             </div>
             <div class="catalyst-description">
                 ${descriptions}
@@ -499,7 +501,7 @@ function renderCatalystCard(item) {
         <div class="catalyst-card">
             <div class="catalyst-card-header">
                 <h4>${item.name}</h4>
-                ${item.constraint ? `<span class="catalyst-constraint">${item.constraint}</span>` : ''}
+                ${item.constraint ? `<span class="catalyst-constraint">${formatConstraint(item.constraint)}</span>` : ''}
             </div>
             <div class="catalyst-description">
                 <p>${formattedDesc}</p>
