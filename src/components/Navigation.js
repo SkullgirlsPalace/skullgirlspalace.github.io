@@ -23,7 +23,7 @@ export function createNavbar() {
                 <li><a href="javascript:void(0)" onclick="navigateTo('')">Inicio</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('characters')">Personagens</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('guide')">Guia</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Estatísticas</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Calculadora</a></li>
             </ul>
             <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
         </nav>
@@ -45,7 +45,7 @@ export function createAboutDrawer() {
             <div class="drawer-content">
                 <div class="hero">
                     <h1>Skullgirls Palace</h1>
-                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
+                    <p>Sua fonte completa de builds, calculadoras e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
                     <div class="hero-buttons">
                         <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">
                             💬 Discord

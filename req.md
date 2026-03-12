@@ -28,7 +28,7 @@ A Home deve conter:
 
 Navbar fixa contendo os links:
 - Builds
-- Estatísticas
+- Calculadora
 - Catalisadores
 - Tier Lists
 
@@ -97,7 +97,7 @@ A página de detalhe do personagem deve exibir uma árvore de habilidades intera
 
 ---
 
-### 📈 Módulo 3: Calculadora e Estatísticas (Economia)
+### 📈 Módulo 3: Calculadora (Economia)
 
 | ID | Requisito |
 |:---|:----------|
@@ -136,9 +136,9 @@ Painel interativo para calcular custos de investimento (Coins/Pontos de Habilida
 
 | ID | Requisito |
 |:---|:----------|
-| **RF012** | **Disclaimer de Estatísticas** |
+| **RF012** | **Disclaimer da Calculadora** |
 
-A aba de estatísticas deve conter um aviso explícito de que os valores apresentados são **aproximados** (cálculo baseado em estimativa).
+A aba da calculadora deve conter um aviso explícito de que os valores apresentados são **aproximados** (cálculo baseado em estimativa).
 
 ---
 

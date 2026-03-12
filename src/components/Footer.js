@@ -12,7 +12,7 @@ export function createFooter() {
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Skullgirls Palace</h3>
-                <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile.</p>
+                <p>Sua fonte completa de builds, guias e mais para Skullgirls Mobile.</p>
                 <div class="footer-socials">
                     <a href="https://discord.gg/whZJz92RTt" target="_blank" class="footer-icon-link" title="Discord">
                         💬 Discord

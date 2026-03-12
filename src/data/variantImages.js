@@ -243,7 +243,7 @@ const VARIANT_IMAGES = {
     },
     "peacock": {
         "Fica Frio": "img/peacock/Peacock_13.png",
-        "Apanhadora De Sonhos": "img/peacock/Peacock_14.png",
+        "Apanhadora de Sonhos": "img/peacock/Peacock_14.png",
         "Quebra de Contrato": "img/peacock/Peacock_15.png",
         "Intocável": "img/peacock/Peacock_7.png",
         "Velhos Tempos": "img/peacock/Peacock_8.png",

@@ -243,7 +243,7 @@ export const PORTRAIT_MAP = {
     },
     "peacock": {
         "Fica Frio": "img/portrait/pe/fFrame.png",
-        "Apanhadora De Sonhos": "img/portrait/pe/dCatch.png",
+        "Apanhadora de Sonhos": "img/portrait/pe/dCatch.png",
         "Quebra de Contrato": "img/portrait/pe/dBreaker.png",
         "Intocável": "img/portrait/pe/uTouch.png",
         "Velhos Tempos": "img/portrait/pe/tAFolks.png",

@@ -28,7 +28,7 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>📊 Estatísticas</h2>
+                <h2>📊 Calculadora</h2>
             </div>
 
             <div class="stats-intro">
