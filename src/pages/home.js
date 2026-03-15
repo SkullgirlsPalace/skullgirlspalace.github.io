@@ -14,7 +14,7 @@ export function render() {
                 <!-- Hero Section -->
                 <div class="hub-hero">
                     <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="hub-about-link">
-                        <img src="img/icones/IconInfo.png" alt="">
+                        <img src="img/official/IconInfo.png" alt="">
                         <span>SOBRE</span>
                     </a>
                     <h1>Skullgirls Palace</h1>

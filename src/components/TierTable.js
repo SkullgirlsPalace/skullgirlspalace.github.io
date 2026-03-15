@@ -107,7 +107,7 @@ export function createTierTable(charKey, charData) {
                     <span class="compact-variant-name">${variant.name}</span>
                 </div>
             ` : `
-                <img src="${imgPath}" alt="${variant.name}" onerror="this.src='img/icones/Annie_Icon.png'">
+                <img src="${imgPath}" alt="${variant.name}" onerror="this.src='img/official/Annie_Icon.png'">
                 <span>${variant.name}</span>
             `;
 

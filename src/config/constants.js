@@ -25,24 +25,24 @@ export const CHARACTER_FILES = [
 ];
 
 export const CHARACTER_ICONS = {
-    'annie': 'img/icones/Annie_Icon.png',
-    'beowulf': 'img/icones/Beowulf_Icon.png',
-    'big-band': 'img/icones/BigBand_Icon.png',
-    'black-dahlia': 'img/icones/BlackDahlia_Icon.png',
-    'cerebella': 'img/icones/Cerebella_Icon.png',
-    'double': 'img/icones/Double_Icon.png',
-    'eliza': 'img/icones/Eliza_Icon.png',
-    'filia': 'img/icones/Filia_Icon.png',
-    'fukua': 'img/icones/Fukua_Icon.png',
-    'marie': 'img/icones/Marie_Icon.png',
-    'ms-fortune': 'img/icones/MsFortune_Icon.png',
-    'painwheel': 'img/icones/Painwheel_Icon.png',
-    'parasoul': 'img/icones/Parasoul_Icon.png',
-    'peacock': 'img/icones/Peacock_Icon.png',
-    'robo-fortune': 'img/icones/RoboFortune_Icon.png',
-    'squigly': 'img/icones/Squigly_Icon.png',
-    'umbrella': 'img/icones/Umbrella_Icon.png',
-    'valentine': 'img/icones/Valentine_Icon.png'
+    'annie': 'img/select_character/Annie_Icon2.png',
+    'beowulf': 'img/select_character/Beowulf_Icon2.png',
+    'big-band': 'img/select_character/bigband_icon2.png',
+    'black-dahlia': 'img/select_character/black_dahlia_icon2.png',
+    'cerebella': 'img/select_character/cerebella_icon2.png',
+    'double': 'img/select_character/double_icon2.png',
+    'eliza': 'img/select_character/eliza_icon2.png',
+    'filia': 'img/select_character/filia_icon2.png',
+    'fukua': 'img/select_character/fukua_icon2.png',
+    'marie': 'img/select_character/marie_icon2.png',
+    'ms-fortune': 'img/select_character/msfortune_icon2.png',
+    'painwheel': 'img/select_character/painwhell_icon2.png',
+    'parasoul': 'img/select_character/parasoul_icon2.png',
+    'peacock': 'img/select_character/peacock2.png',
+    'robo-fortune': 'img/select_character/robo_fortune_icon2.png',
+    'squigly': 'img/select_character/squigly_icon2.png',
+    'umbrella': 'img/select_character/umbrella_icon2.png',
+    'valentine': 'img/select_character/valentine_icon2.png'
 };
 
 export const CHARACTER_COLORS = {
@@ -67,12 +67,12 @@ export const CHARACTER_COLORS = {
 };
 
 export const ELEMENT_MAP = {
-    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/icones/ElementalFireBackless.png', statIcon: 'img/icones/ElementalIconFire.png' },
-    'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/icones/ElementalWaterBackless.png', statIcon: 'img/icones/ElementalIconWater.png' },
-    'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/icones/ElementalWindBackless.png', statIcon: 'img/icones/ElementalIconWind.png' },
-    'Luz': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/icones/ElementalLightBackless.png', statIcon: 'img/icones/ElementalIconLight.png' },
-    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/icones/ElementalDarkBackless.png', statIcon: 'img/icones/ElementalIconDark.png' },
-    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/icones/ElementalNeutralBackless.png', statIcon: 'img/icones/ElementalIconNeutral.png' }
+    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/official/ElementalFireBackless.png', statIcon: 'img/official/ElementalIconFire.png' },
+    'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/official/ElementalWaterBackless.png', statIcon: 'img/official/ElementalIconWater.png' },
+    'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/official/ElementalWindBackless.png', statIcon: 'img/official/ElementalIconWind.png' },
+    'Luz': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/official/ElementalLightBackless.png', statIcon: 'img/official/ElementalIconLight.png' },
+    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/official/ElementalDarkBackless.png', statIcon: 'img/official/ElementalIconDark.png' },
+    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/official/ElementalNeutralBackless.png', statIcon: 'img/official/ElementalIconNeutral.png' }
 };
 
 export const RARITY_ORDER = { 'diamante': 4, 'ouro': 3, 'prata': 2, 'bronze': 1 };
@@ -86,10 +86,10 @@ export const RARITY_LABELS = {
 };
 
 export const RARITY_ICONS = {
-    'diamante': 'img/icones/icone_diamante.png',
-    'ouro': 'img/icones/icone_ouro.png',
-    'prata': 'img/icones/icone_prata.png',
-    'bronze': 'img/icones/icone_bronze.png'
+    'diamante': 'img/official/icone_diamante.png',
+    'ouro': 'img/official/icone_ouro.png',
+    'prata': 'img/official/icone_prata.png',
+    'bronze': 'img/official/icone_bronze.png'
 };
 
 export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'I', 'N/A'];

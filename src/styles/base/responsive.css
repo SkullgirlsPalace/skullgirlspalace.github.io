@@ -169,38 +169,44 @@
     .filter-bar {
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 6px 8px;
-        gap: 6px;
+        padding: 8px 12px;
+        gap: 8px 16px;
         align-items: center;
         justify-content: center;
     }
 
     .filter-controls {
+        order: -1;
+        margin-right: 0;
         flex-wrap: nowrap;
         gap: 4px;
-        order: 3;
+        flex-shrink: 0;
     }
 
     .filter-content {
         display: contents;
     }
 
-    .rarity-grid {
-        order: 1;
+    .filter-bar > .vertical-separator {
+        display: block !important;
+        height: 38px;
+        margin: 0 4px;
     }
 
-    .element-grid {
-        order: 2;
+    .filter-content > .vertical-separator {
+        display: none !important;
     }
 
-    .filter-label {
-        font-size: 0.85rem;
+    .rarity-grid + .vertical-separator {
+        display: block !important;
+        height: 38px;
+        margin: 0 4px;
     }
 
     .filter-toggle-btn {
-        padding: 6px 10px;
+        padding: 6px 8px;
         min-width: auto;
-        font-size: 0.7rem;
+        font-size: 0;
     }
 
     .filter-toggle-btn span {
@@ -208,16 +214,52 @@
     }
 
     .filter-toggle-btn img {
-        height: 20px;
+        height: 24px;
+        margin: 0;
+    }
+
+    /* Mobile clear button logic (merged into main button) */
+    #desktop-clear-btn {
+        display: none !important;
+    }
+
+    .filter-toggle-btn.can-clear .icon-default {
+        display: none !important;
+    }
+
+    .filter-toggle-btn.can-clear .icon-active {
+        display: inline-block !important;
+    }
+
+    .filter-toggle-btn.can-clear {
+        background: rgba(255, 50, 50, 0.1);
+        border-color: rgba(255, 50, 50, 0.5);
+        color: #ff8a8a;
+        box-shadow: 0 0 10px rgba(255, 50, 50, 0.15);
+    }
+    
+    .filter-toggle-btn.can-clear:hover {
+        background: rgba(255, 50, 50, 0.2);
+        border-color: #ff5050;
+    }
+
+    .filter-toggle-btn.can-clear img {
+        filter: drop-shadow(0 0 5px rgba(255, 50, 50, 0.5));
+    }
+
+    .filter-grid {
+        gap: 4px;
+    }
+
+    .rarity-grid {
+        padding-right: 0 !important;
+        border-right: none !important;
+        margin-right: 0 !important;
     }
 
     .filter-btn {
-        width: 30px;
-        height: 30px;
-    }
-
-    .vertical-separator {
-        display: none;
+        width: 32px;
+        height: 32px;
     }
 
     .filter-section.right {
@@ -226,14 +268,14 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin-top: 4px;
-        padding-top: 8px;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
-        order: 10;
+        margin-top: 6px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .sort-group {
         justify-content: center;
+        gap: 6px;
     }
 
     .sort-btn {
@@ -279,6 +321,7 @@
 
     .ability-box {
         padding: 14px;
+        text-align: left;
     }
 
     .ability-box p {
@@ -527,10 +570,17 @@
         padding: 16px;
     }
 
-    /* Scroll nav */
+    /* Scroll nav visibility */
     .scroll-nav {
-        bottom: 16px;
-        right: 12px;
+        bottom: 24px;
+        right: 16px;
+        z-index: 10000; /* Higher than footer/navbar */
+    }
+
+    .scroll-nav-btn {
+        width: 44px !important;
+        height: 44px !important;
+        opacity: 0.8; /* Subtle but visible */
     }
 
     /* ===== TIER LIST MOBILE ===== */

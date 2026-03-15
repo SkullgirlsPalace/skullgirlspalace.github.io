@@ -344,9 +344,9 @@ export function getVariantImage(charKey, variantName, index) {
     }
 
     // Fallback for missing images
-    return `img/icones/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;
+    return `img/official/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;
 }
 
 export function getVariantIcon(charKey, variantName) {
-    return `img/icones/${charKey}_Icon.png`;
+    return `img/official/${charKey}_Icon.png`;
 }

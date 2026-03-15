@@ -169,6 +169,15 @@
     font-size: 1.6rem;
     color: #fff;
     margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.element-effects-icon {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
 }
 
 .variant-meta {
@@ -332,7 +341,7 @@
 
 .ability-box p {
     font-family: 'Roboto Condensed', 'Dodam', sans-serif;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: 0.92rem;
     line-height: 1.6;
 }

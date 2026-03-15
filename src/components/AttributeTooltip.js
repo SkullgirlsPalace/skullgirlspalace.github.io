@@ -256,8 +256,10 @@ function showDetailModal(target) {
 
     if (source === 'element_table') {
         headerHtml = `
-            <h3>Efeitos por Elemento</h3>
-            <span class="attr-detail-max">${data.variantName}</span>
+            <h3>
+                Efeitos por Elemento
+                <span class="attr-detail-max">${data.variantName}</span>
+            </h3>
         `;
         bodyHtml = `
             <div class="attr-detail-section">
@@ -267,8 +269,10 @@ function showDetailModal(target) {
         `;
     } else if (source === 'attr') {
         headerHtml = `
-            <h3>${data.name}</h3>
-            ${data.max ? `<span class="attr-detail-max">Máximo: ${data.max}</span>` : ''}
+            <h3>
+                ${data.name}
+                ${data.max ? `<span class="attr-detail-max">Máximo: ${data.max}</span>` : ''}
+            </h3>
         `;
         bodyHtml = `
             <div class="attr-detail-section">
@@ -284,8 +288,10 @@ function showDetailModal(target) {
         const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
         headerHtml = `
             ${iconHtml}
-            <h3>${data.name}</h3>
-            <span class="attr-detail-max">${data.type}</span>
+            <h3>
+                ${data.name}
+                <span class="attr-detail-max">${data.type}</span>
+            </h3>
         `;
         bodyHtml = `
             <div class="attr-detail-section">
@@ -299,8 +305,10 @@ function showDetailModal(target) {
         const typeLabel = data.type === 'buff' ? 'Efeito Positivo' : data.type === 'debuff' ? 'Efeito Negativo' : 'Termo';
         headerHtml = `
             ${iconHtml}
-            <h3>${data.name}</h3>
-            <span class="attr-detail-max">${typeLabel}</span>
+            <h3>
+                ${data.name}
+                <span class="attr-detail-max">${typeLabel}</span>
+            </h3>
         `;
         bodyHtml = `
             <div class="attr-detail-section">

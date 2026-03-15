@@ -18,8 +18,8 @@ export function createVariantCard(variant, charKey, index = 0) {
     const elementInfo = ELEMENT_MAP[variant.element] || {
         icon: '⚪',
         class: 'neutral',
-        iconPath: 'img/icones/ElementalFireBackless.png',
-        statIcon: 'img/icones/ElementalIconNeutral.png'
+        iconPath: 'img/official/ElementalFireBackless.png',
+        statIcon: 'img/official/ElementalIconNeutral.png'
     };
 
     // Get portrait URL - prioritize local backup, fallback to JSON, then default
@@ -51,7 +51,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
             <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
-                 onerror="this.src='img/icones/Annie_Icon.png'">
+                 onerror="this.src='img/official/Annie_Icon.png'">
             
             <div class="variant-info">
                 <div class="variant-header">
@@ -70,12 +70,12 @@ export function createVariantCard(variant, charKey, index = 0) {
                 
                 <div class="variant-stats">
                     <div class="stat-item">
-                        <img src="img/icones/AttackIcon.png" alt="ATQ" class="stat-icon">
+                        <img src="img/official/AttackIcon.png" alt="ATQ" class="stat-icon">
                         <span class="label">ATQ</span>
                         <span class="value">${variant.stats?.attack || '-'}</span>
                     </div>
                     <div class="stat-item">
-                        <img src="img/icones/HealthIcon.png" alt="Vida" class="stat-icon">
+                        <img src="img/official/HealthIcon.png" alt="Vida" class="stat-icon">
                         <span class="label">Vida</span>
                         <span class="value">${variant.stats?.health || '-'}</span>
                     </div>
@@ -112,11 +112,11 @@ export function createVariantCard(variant, charKey, index = 0) {
                                 <span style="color: var(--accent-gold)">HABILIDADE CARACTERÍSTICA:</span>
                                 <span style="color: #fff; margin-left: 6px;">${saName.toUpperCase()}</span>
                             </h4>
+                            <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 12px 0;"></div>
                             <p style="margin-bottom: 16px;">${abilityDesc}</p>
                             
-                            <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
-                            
                             ${variant.marquee_ability ? `
+                                <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
                                 <h4 style="font-size: 0.85rem; margin-bottom: 0;">
                                     <span style="color: var(--accent-gold)">SUPERIOR RECOMENDADA:</span>
                                     <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>

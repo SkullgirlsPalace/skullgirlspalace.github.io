@@ -342,5 +342,5 @@ export function getPortraitImage(charKey, variantName) {
         return PORTRAIT_MAP[charKey][variantName];
     }
     // Fallback if mapping fails or new variant is not yet mapped
-    return `img/icones/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;
+    return `img/official/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;
 }

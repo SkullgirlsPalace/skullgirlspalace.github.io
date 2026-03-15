@@ -7,10 +7,10 @@
 export const EFFECT_DATA = {
     // --- TERMINOLOGIA TÉCNICA ---
     ataque: {
-        keys: ['ATQ', 'ATK', 'Ataque', 'ATAQUE','Attack'],
-        name: 'Ataque (ATQ)',
+        keys: ['ATQ', 'ATK', 'Ataque', 'ATAQUE', 'Attack'],
+        name: 'ATQ / Ataque',
         type: 'term',
-        detailed: 'Reoresenta o dano base do seu lutador.'
+        detailed: 'Representa o dano base do seu lutador.'
     },
     vida: {
         keys: ['HP', 'VIDA', 'VD', 'Vida'],

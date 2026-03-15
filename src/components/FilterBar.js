@@ -14,14 +14,18 @@ import { getCharacters } from '../services/dataService.js';
 export function createFilterBar() {
     return `
         <div class="filter-bar">
-            <!-- Filter Header & Clear -->
+            <!-- Dynamic Filter/Clear Button -->
             <div class="filter-controls">
-                <button class="filter-toggle-btn" onclick="handleToggleFilter()">
-                    <img src="img/icones/icon_filter.png" onerror="this.src='img/icones/filter.png'" alt="">
-                    <span>Filtrar</span>
+                <button id="main-filter-btn" class="filter-toggle-btn" onclick="handleMainFilterAction()">
+                    <div class="btn-icon-wrapper">
+                        <img class="icon-default" src="img/official/icon_filter.png" onerror="this.src='img/official/filter.png'" alt="">
+                        <img class="icon-active" src="img/official/constraints_no.png" alt="">
+                    </div>
+                    <span class="text-default">Filtrar</span>
+                    <span class="text-active">Limpar</span>
                 </button>
-                <button class="clear-filters-btn" onclick="handleClearFilters()" title="Limpar Filtros">
-                    <img src="img/icones/constraints_no.png" alt="Limpar">
+                <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="Limpar Filtros">
+                    <img src="img/official/constraints_no.png" alt="Limpar">
                 </button>
             </div>
             
@@ -34,19 +38,19 @@ export function createFilterBar() {
                 <div class="filter-grid rarity-grid">
                     <button class="filter-btn rarity-btn" data-rarity="bronze"
                         onclick="handleFilterClick('rarity', 'bronze')" title="Bronze">
-                        <img src="img/icones/icone_bronze.png" alt="Bronze">
+                        <img src="img/official/icone_bronze.png" alt="Bronze">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="prata"
                         onclick="handleFilterClick('rarity', 'prata')" title="Prata">
-                        <img src="img/icones/icone_prata.png" alt="Prata">
+                        <img src="img/official/icone_prata.png" alt="Prata">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="ouro"
                         onclick="handleFilterClick('rarity', 'ouro')" title="Ouro">
-                        <img src="img/icones/icone_ouro.png" alt="Ouro">
+                        <img src="img/official/icone_ouro.png" alt="Ouro">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="diamante"
                         onclick="handleFilterClick('rarity', 'diamante')" title="Diamante">
-                        <img src="img/icones/icone_diamante.png" alt="Diamante">
+                        <img src="img/official/icone_diamante.png" alt="Diamante">
                     </button>
                 </div>
 
@@ -56,27 +60,27 @@ export function createFilterBar() {
                 <div class="filter-grid element-grid">
                     <button class="filter-btn element-btn" data-element="fogo"
                         onclick="handleFilterClick('element', 'fogo')" title="Fogo">
-                        <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                        <img src="img/official/ElementalFireBackless.png" alt="Fogo">
                     </button>
                     <button class="filter-btn element-btn" data-element="agua"
                         onclick="handleFilterClick('element', 'agua')" title="Água">
-                        <img src="img/icones/ElementalWaterBackless.png" alt="Água">
+                        <img src="img/official/ElementalWaterBackless.png" alt="Água">
                     </button>
                     <button class="filter-btn element-btn" data-element="ar"
                         onclick="handleFilterClick('element', 'ar')" title="Ar">
-                        <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                        <img src="img/official/ElementalWindBackless.png" alt="Ar">
                     </button>
                     <button class="filter-btn element-btn" data-element="luz"
                         onclick="handleFilterClick('element', 'luz')" title="Luz">
-                        <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                        <img src="img/official/ElementalLightBackless.png" alt="Luz">
                     </button>
                     <button class="filter-btn element-btn" data-element="trevas"
                         onclick="handleFilterClick('element', 'trevas')" title="Trevas">
-                        <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
+                        <img src="img/official/ElementalDarkBackless.png" alt="Trevas">
                     </button>
                     <button class="filter-btn element-btn" data-element="neutro"
                         onclick="handleFilterClick('element', 'neutro')" title="Neutro">
-                        <img src="img/icones/ElementalNeutralBackless.png" alt="Neutro">
+                        <img src="img/official/ElementalNeutralBackless.png" alt="Neutro">
                     </button>
                 </div>
 
@@ -85,7 +89,7 @@ export function createFilterBar() {
                 <!-- Sort Section -->
                 <div class="filter-section right">
                     <div class="sort-header">
-                        <img src="img/icones/icon_sort.png" onerror="this.style.display='none'" alt="">
+                        <img src="img/official/icon_sort.png" onerror="this.style.display='none'" alt="">
                         ORGANIZAR
                     </div>
                     <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
@@ -165,14 +169,29 @@ export function updateFilterUI() {
         }
     });
 
-    // Clear button visibility
+    // Dynamic Filter/Clear button logic
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
         sort.type !== 'score' ||
         sort.direction !== 'desc';
-    const clearBtn = document.querySelector('.clear-filters-btn');
-    if (clearBtn) {
-        clearBtn.classList.toggle('visible', hasActiveFilters);
+
+    const mainBtn = document.getElementById('main-filter-btn');
+    const desktopClearBtn = document.getElementById('desktop-clear-btn');
+
+    if (mainBtn) {
+        if (hasActiveFilters) {
+            mainBtn.classList.add('can-clear');
+        } else {
+            mainBtn.classList.remove('can-clear');
+        }
+    }
+
+    if (desktopClearBtn) {
+        if (hasActiveFilters) {
+            desktopClearBtn.classList.add('visible');
+        } else {
+            desktopClearBtn.classList.remove('visible');
+        }
     }
 }
 
@@ -211,7 +230,7 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         return `
             <button class="char-dropdown-item ${activeClass}" 
                     onclick="openCharacterDetails('${charKey}', '${currentTab}'); handleToggleCharDropdown();">
-                <img src="${mIcon}" alt="" onerror="this.src='img/icones/Annie_Icon.png'">
+                <img src="${mIcon}" alt="" onerror="this.src='img/official/Annie_Icon.png'">
                 <span>${charData.character}</span>
             </button>
         `;
@@ -244,9 +263,27 @@ export function handleClearFilters() {
     }
 }
 
+export function handleMainFilterAction() {
+    const state = getState();
+    const { filters, sort } = state;
+    
+    const hasActiveFilters = filters.rarity.length > 0 ||
+        filters.element.length > 0 ||
+        sort.type !== 'score' ||
+        sort.direction !== 'desc';
+
+    if (hasActiveFilters && window.innerWidth <= 768) {
+        // Only act as CLEAR on mobile
+        handleClearFilters();
+    } else {
+        // Toggle filter panel (if applicable)
+        handleToggleFilter();
+    }
+}
+
 export function handleToggleFilter() {
     const filterContent = document.getElementById('filter-content');
-    const filterBtn = document.querySelector('.filter-toggle-btn');
+    const filterBtn = document.getElementById('main-filter-btn');
     const filterBar = document.querySelector('.filter-bar');
 
     if (filterContent) {

@@ -146,6 +146,17 @@
     font-weight: 600;
 }
 
+/* Base states for unified button icons and text */
+.filter-toggle-btn .icon-active,
+.filter-toggle-btn .text-active {
+    display: none;
+}
+
+.filter-toggle-btn .icon-default,
+.filter-toggle-btn .text-default {
+    display: inline-block;
+}
+
 /* Filter Content - Always Visible */
 .filter-content {
     display: flex;

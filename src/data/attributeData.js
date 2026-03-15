@@ -17,14 +17,14 @@
 export const ATTRIBUTE_DATA = {
     atq: {
         keys: ['ATQ%', 'ATQ'],
-        name: 'ATQ / Ataque',
+        name: '<img src="img/official/AttackIcon.png" alt="ATQ" style="width: 24px; vertical-align: middle; margin-right: 6px;"> Ataque',
         max: 'Indefinido',
         summary: 'Ataque é um atributo fundamental para qualquer personagem que precise infligir dano.',
-        detailed: 'O Ataque aumenta o Dano Base do personagem. Ele é essencial, pois fortalece tudo o que o lutador faz: escala com a Taxa de Ataque Crítico e Dano Crítico, e aumenta a eficácia das Fúrias. Além disso, ter mais Ataque aumenta o dano causado pelos seus Golpes Especiais, Blockbusters, Habilidades Características, Astro Convidado e Ataques de Assistência. Contra oponentes com Armadura ou Defesa alta, o Ataque contribui significativamente, embora existam raras exceções onde outros atributos possam ser priorizados.'
+        detailed: 'O Ataque aumenta o Dano Base do personagem. Ele é essencial, pois fortalece tudo o que o lutador faz: escala com a Taxa de ATQ Crítico e Dano Crítico, e aumenta a eficácia das Fúrias. Além disso, ter mais Ataque aumenta o dano causado pelos seus Golpes Especiais, Blockbusters, Habilidades Características, Astro Convidado e Ataques de Assistência. Contra oponentes com Armadura ou Defesa alta, o Ataque contribui significativamente, embora existam raras exceções onde outros atributos possam ser priorizados.'
     },
     vd: {
         keys: ['VD%', 'VD', 'Vida%', 'Vida'],
-        name: 'VD / Vida',
+        name: '<img src="img/official/HealthIcon.png" alt="Vida" style="width: 24px; vertical-align: middle; margin-right: 6px;"> Vida',
         max: 'Indefinido',
         summary: 'Vida é um atributo atrelado à sobrevivência, necessário para resistir a grandes quantidades de dano.',
         detailed: 'É o principal atributo para variantes defensivas, suportes ou aquelas que interagem com Vida em suas habilidades. A Vida escala com a Vida Base da Variante, Habilidades Características, Modificadores e Efeitos. Personagens com muita Vida absorvem mais dano ao possuir Barreira (que escala com a Vida Máxima) e recebem mais cura de Regenerações (Vida Base + Vida%). Também aumenta a quantidade de Vida recuperada ao ser revivido.'
@@ -60,14 +60,14 @@ export const ATTRIBUTE_DATA = {
     bonus_elem: {
         keys: ['Bônus Elem.', 'Bônus Elemental'],
         name: 'Bônus Elemental',
-        max: '50% (Além do bônus natural)',
+        max: '50%',
         summary: 'Aumenta os danos causados quando em vantagem de Elementos.',
         detailed: 'Potencializa o dano do lutador quando ele está em Vantagem Elemental. A regra básica é: Fogo vence Ar, Ar vence Água e Água vence Fogo. Luz e Trevas não possuem desvantagem, ambos ficam em vantagem quando se enfrentam. O elemento Neutro não possui vantagem ou desvantagem.'
     },
     penal_elem: {
         keys: ['Penal. Elem.', 'Penalidade Elemental'],
         name: 'Penalidade Elemental',
-        max: 'Até 0% (Reduz a penalidade)',
+        max: '0%',
         summary: 'Reduz a perda de dano quando você está em desvantagem de Elementos.',
         detailed: 'Normalmente, você causa menos dano em desvantagem (exemplo: Ar contra Fogo, Fogo contra Água). Este atributo reduz essa penalidade para que você não perca tanto dano ao atacar, permitindo lutar de igual para igual mesmo em situações desfavoráveis.'
     },
@@ -101,9 +101,9 @@ export const ATTRIBUTE_DATA = {
     },
     taxa_critica: {
         keys: ['Taxa de ATQ Crít.', 'Taxa de Ataque Crítico', 'Taxa de Atq Crítico', 'Taxa de Atq de Crítico'],
-        name: 'Taxa de Ataque Crítico',
+        name: 'Taxa de ATQ Crítico',
         max: '100%',
-        summary: 'Aumenta a chance de acertar um Golpe Crítico.',
+        summary: 'Aumenta a probabilidade de acertar um Golpe Crítico.',
         detailed: 'Define a chance de aumentar o Dano Base do seu personagem no próximo golpe. Este atributo escala com Dano Crítico, Ataque e o efeito de Marca da Morte para causar ainda mais dano.'
     },
     dano_crit: {
@@ -111,7 +111,7 @@ export const ATTRIBUTE_DATA = {
         name: 'Dano Crítico',
         max: '200%',
         summary: 'Aumenta o bônus de danos ao acertar um Golpe Crítico.',
-        detailed: 'Este atributo é um complemento da Taxa de Ataque Crítico. Enquanto a Taxa aumenta a probabilidade de ocorrer, o Dano Crítico aumenta muito o dano infligido quando o golpe acontece. Ele escala com a Taxa de Ataque Crítico, Ataque e Marca da Morte.'
+        detailed: 'Este atributo é um complemento da Taxa de ATQ Crítico. Enquanto a Taxa aumenta a probabilidade de ocorrer, o Dano Crítico aumenta muito o dano infligido quando o golpe acontece. Ele escala com a Taxa de ATQ Crítico, Ataque e Marca da Morte.'
     },
     resist_crit: {
         keys: ['Resist. ATQ. Crít.', 'Resistência a Ataque Crítico'],
@@ -124,13 +124,13 @@ export const ATTRIBUTE_DATA = {
         keys: [],
         name: 'DP Ataque',
         summary: 'Classifica o Desempenho para a Disputa Premiada (Ataque).',
-        detailed: 'Classifica o Desempenho da Variante baseando-se em suas Habilidades Caracterítiscas, utilidade em questão de inflingir dano, controle da partida e capacidade de lidar com confrontos mais difíceis.'
+        detailed: 'Classifica o Desempenho da Variante baseando-se em suas Habilidades Características, utilidade em questão de inflingir dano, controle da partida e capacidade de lidar com confrontos mais difíceis.'
     },
     tier_reinos_paralelos: {
         keys: [],
         name: 'Reinos Paralelos',
         summary: 'Classificação para o modo Reinos Paralelos.',
-        detailed: 'Classifica o Desempenho para o Modo Reinos Paralelos (Sem Dó/Pesadelo), baseando em suas Habilidades Caracterítiscas, já que o modo possui diversos modificadores difíceis de lidar.'
+        detailed: 'Classifica o Desempenho para o Modo Reinos Paralelos (Sem Dó/Pesadelo), baseando em suas Habilidades Características, já que o modo possui diversos modificadores difíceis de lidar.'
     },
     tier_fenda_ataque: {
         keys: [],
@@ -142,7 +142,7 @@ export const ATTRIBUTE_DATA = {
         keys: [],
         name: 'Fenda Defesa',
         summary: 'Classificação para o modo Batalhas da Fenda (Defesa).',
-        detailed: 'Classifica o Desempenho Individual e em Equpe para as Defesas em nós da Fenda, baseando-se o quão difícil é lidar com a Defesa por ter uma forte Habilidade Característica, Habilidade Superior ou Muita Vida. Os Catalisadores e Modificadores podem beneficiar muito bem as Defesas em diferentes contextos, mais por si só se a Variante for Forte o suficiente ela terá um grande impacto defensivo na sua Base ou na Base do Oponente.'
+        detailed: 'Classifica o Desempenho Individual e em Equpe para as Defesas em nós da Fenda, baseando-se o quão difícil é lidar com a Defesa por ter uma forte Habilidade Característica, Habilidade Superior ou Muita Vida. Os Catalisadores e Modificadores podem beneficiar muito bem as Defesas em diferentes contextos, mas por si só se a Variante for Forte o suficiente ela terá um grande impacto defensivo na sua Base ou na Base do Oponente.'
     }
 };
 

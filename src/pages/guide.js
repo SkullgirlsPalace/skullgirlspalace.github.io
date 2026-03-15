@@ -4,6 +4,7 @@
 // =====================================================
 
 import { EFFECT_DATA } from '../data/effectData.js';
+import { ATTRIBUTE_DATA } from '../data/attributeData.js';
 import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
 import { formatConstraint } from '../utils/formatters.js';
@@ -11,23 +12,22 @@ import { formatConstraint } from '../utils/formatters.js';
 export function render() {
     return `
         <div class="guide-container fade-in">
-            <div class="guide-header">
-                <div class="header-content">
-                    <h1>Guia do Jogo</h1>
-                    <p>Referência completa de efeitos, mecânicas e tutoriais.</p>
-                </div>
-            </div>
 
             <div class="guide-tabs">
                 <button class="guide-tab-btn active" onclick="switchGuideTab('tutorials')">
                     📚 Tutoriais
                 </button>
+                <button class="guide-tab-btn" onclick="switchGuideTab('statistics')">
+                    <img src="img/official/AttackIcon.png" alt="Estatísticas" class="tab-icon">
+                    Estatísticas
+                </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('modifiers')">
-                    <img src="img/icones/Button_Modifiers.png" alt="Modificadores" class="tab-icon">
+                    <img src="img/official/Button_Modifiers.png" alt="Modificadores" class="tab-icon">
                     Modificadores
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('catalysts')">
-                    ⚡ Catalisadores
+                    <img src="img/official/RiftCoin.png" alt="Catalisadores" class="tab-icon">
+                    Catalisadores
                 </button>
             </div>
 
@@ -41,6 +41,27 @@ export function render() {
                             <p style="color: var(--text-secondary); font-size: 0.9rem;">Guia definitivo sobre como otimizar seus ganhos de Fenda com o mínimo de esforço (Estratégia 80/20).</p>
                         </div>
 
+                    </div>
+                </div>
+
+                <!-- STATISTICS TAB -->
+                <div id="tab-statistics" class="guide-tab-content">
+                    
+                    <div class="stats-hero-container">
+                        <div class="stats-header-row">
+                            <span class="stats-header-title">Estatísticas Máximas</span>
+                            <button class="stats-toggle-btn" onclick="toggleStatsImage()">
+                                <span class="toggle-text">Ocultar Imagem</span>
+                            </button>
+                        </div>
+
+                        <div id="statsImageWrapper" class="stats-image-wrapper">
+                            <img src="img/unofficial/status_max_pt-br.jpg" alt="Estatísticas Máximas" class="stats-ref-image">
+                        </div>
+                    </div>
+
+                    <div class="stats-glossary-container">
+                        ${renderGlossary()}
                     </div>
                 </div>
 
@@ -141,23 +162,23 @@ export function render() {
                     <div class="cotw-section">
                         <div class="cotw-filters">
                             <button class="cotw-filter-btn" data-element="water">
-                                <img src="img/icones/ElementalWaterBackless.png" alt="Água">
+                                <img src="img/official/ElementalWaterBackless.png" alt="Água">
                                 <span>Água</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="fire">
-                                <img src="img/icones/ElementalFireBackless.png" alt="Fogo">
+                                <img src="img/official/ElementalFireBackless.png" alt="Fogo">
                                 <span>Fogo</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="wind">
-                            <img src="img/icones/ElementalWindBackless.png" alt="Ar">
+                            <img src="img/official/ElementalWindBackless.png" alt="Ar">
                             <span>Ar</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="light">
-                            <img src="img/icones/ElementalLightBackless.png" alt="Luz">
+                            <img src="img/official/ElementalLightBackless.png" alt="Luz">
                             <span>Luz</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="dark">
-                                <img src="img/icones/ElementalDarkBackless.png" alt="Trevas">
+                                <img src="img/official/ElementalDarkBackless.png" alt="Trevas">
                                 <span>Trevas</span>
                             </button>
                         </div>
@@ -186,11 +207,12 @@ export function init() {
 
     // Register global tab switcher
     window.switchGuideTab = switchGuideTab;
+    window.toggleStatsImage = toggleStatsImage;
 
     // Initialize modifier export modal listeners
     initModifierExportModal();
 
-    // Trigger lazy loading if needed (though we use direct src for icons here mostly)
+    // Trigger lazy loading if needed
     if (window.setupLazyLoading) window.setupLazyLoading();
 }
 
@@ -198,7 +220,9 @@ function switchGuideTab(tabName) {
     // Update buttons
     document.querySelectorAll('.guide-tab-btn').forEach(btn => {
         btn.classList.remove('active');
-        if (btn.getAttribute('onclick').includes(tabName)) {
+        // Check if the onclick contains the tabName exactly
+        const onClickAttr = btn.getAttribute('onclick');
+        if (onClickAttr && onClickAttr.includes(`'${tabName}'`)) {
             btn.classList.add('active');
         }
     });
@@ -508,4 +532,48 @@ function renderCatalystCard(item) {
             </div>
         </div>
     `;
+}
+
+function toggleStatsImage() {
+    const wrapper = document.getElementById('statsImageWrapper');
+    const btn = document.querySelector('.stats-toggle-btn');
+    if (!wrapper) return;
+
+    const isHidden = wrapper.style.display === 'none';
+    wrapper.style.display = isHidden ? 'block' : 'none';
+
+    if (btn) {
+        btn.querySelector('.toggle-text').textContent = isHidden ? 'Ocultar Imagem' : 'Mostrar Imagem';
+    }
+}
+
+function renderGlossary() {
+    // Filter out tier-only entries (no keys = not a real stat)
+    const glossaryKeys = Object.keys(ATTRIBUTE_DATA).filter(k => {
+        return !k.startsWith('tier_');
+    });
+
+    const cards = glossaryKeys.map(key => {
+        const attr = ATTRIBUTE_DATA[key];
+        const maxLabel = attr.max && attr.max !== 'Indefinido'
+            ? `<span class="attribute-max">Máx: ${attr.max}</span>`
+            : (attr.max === 'Indefinido' ? `<span class="attribute-max">Máx: Indefinido</span>` : '');
+
+        return `
+            <div class="attribute-card">
+                <div class="attribute-card-header">
+                    <h3>${attr.name}</h3>
+                    ${maxLabel}
+                </div>
+                <div class="attribute-card-body">
+                    <p class="attribute-summary">${attr.summary}</p>
+                    <div class="attribute-detailed">
+                        <p>${attr.detailed}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    return `<div class="glossary-grid">${cards}</div>`;
 }

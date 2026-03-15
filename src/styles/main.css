@@ -15,7 +15,7 @@
 @import 'components/buttons.css';
 @import 'components/cards.css';
 @import 'components/hero.css';
-@import 'components/filters.css';
+@import 'components/filters.css?v=3';
 @import 'components/section-header.css';
 @import 'components/modals.css';
 @import 'components/tooltips.css';
