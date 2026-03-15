@@ -56,7 +56,7 @@ export function render() {
                         </div>
 
                         <div id="statsImageWrapper" class="stats-image-wrapper">
-                            <img loading="lazy" src="img/unofficial/status_max_pt-br.jpg" alt="Estatísticas Máximas" class="stats-ref-image">
+                            <img loading="lazy" src="img/unofficial/status_max_pt-br.webp" alt="Estatísticas Máximas" class="stats-ref-image">
                         </div>
                     </div>
 
