@@ -30,23 +30,23 @@ export function render() {
                 <h2 class="catalyst-title-main">Modificadores da Semana</h2>
                 <div class="cotw-filters">
                     <button class="cotw-filter-btn" data-element="fire">
-                        <img src="img/official/ElementalFireBackless.png" alt="Fogo">
+                        <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="Fogo">
                         <span>Fogo</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="water">
-                        <img src="img/official/ElementalWaterBackless.png" alt="Água">
+                        <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="Água">
                         <span>Água</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="wind">
-                        <img src="img/official/ElementalWindBackless.png" alt="Ar">
+                        <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="Ar">
                         <span>Ar</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="light">
-                        <img src="img/official/ElementalLightBackless.png" alt="Luz">
+                        <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="Luz">
                         <span>Luz</span>
                     </button>
                     <button class="cotw-filter-btn" data-element="dark">
-                        <img src="img/official/ElementalDarkBackless.png" alt="Trevas">
+                        <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="Trevas">
                         <span>Trevas</span>
                     </button>
                 </div>

@@ -4,7 +4,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/hSync.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/hSync.webp",
         "stats": {
             "atk": "706",
             "hp": "3335",
@@ -19,7 +19,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/Draccy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/Draccy.webp",
         "stats": {
             "atk": "706",
             "hp": "3753",
@@ -34,7 +34,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/LLure.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/LLure.webp",
         "stats": {
             "atk": "297",
             "hp": "1698",
@@ -49,7 +49,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/NBrakes.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/NBrakes.webp",
         "stats": {
             "atk": "624",
             "hp": "3056",
@@ -64,7 +64,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/aComp.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/aComp.webp",
         "stats": {
             "atk": "706",
             "hp": "2919",
@@ -79,7 +79,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/aEgo.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/aEgo.webp",
         "stats": {
             "atk": "788",
             "hp": "2501",
@@ -94,7 +94,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/aForce.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/aForce.webp",
         "stats": {
             "atk": "277",
             "hp": "2184",
@@ -109,7 +109,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/aGreed.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/aGreed.webp",
         "stats": {
             "atk": "458",
             "hp": "4074",
@@ -124,7 +124,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/aSent.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/aSent.webp",
         "stats": {
             "atk": "248",
             "hp": "1940",
@@ -139,7 +139,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/aTach.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/aTach.webp",
         "stats": {
             "atk": "256",
             "hp": "1764",
@@ -154,7 +154,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/aTeen.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/aTeen.webp",
         "stats": {
             "atk": "292",
             "hp": "1764",
@@ -169,7 +169,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/aWond.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/aWond.webp",
         "stats": {
             "atk": "248",
             "hp": "1940",
@@ -184,7 +184,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bBaddy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bBaddy.webp",
         "stats": {
             "atk": "218",
             "hp": "2426",
@@ -199,7 +199,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bBandit.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bBandit.webp",
         "stats": {
             "atk": "617",
             "hp": "4169",
@@ -214,7 +214,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/bBath.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/bBath.webp",
         "stats": {
             "atk": "336",
             "hp": "1786",
@@ -229,7 +229,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/bBelle.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/bBelle.webp",
         "stats": {
             "atk": "613",
             "hp": "3704",
@@ -244,7 +244,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/bBomb.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/bBomb.webp",
         "stats": {
             "atk": "132",
             "hp": "809",
@@ -259,7 +259,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bBox.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bBox.webp",
         "stats": {
             "atk": "66",
             "hp": "450",
@@ -274,7 +274,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/bCold.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/bCold.webp",
         "stats": {
             "atk": "307",
             "hp": "1455",
@@ -289,7 +289,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/bDrive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/bDrive.webp",
         "stats": {
             "atk": "172",
             "hp": "630",
@@ -304,7 +304,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/bExor.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/bExor.webp",
         "stats": {
             "atk": "256",
             "hp": "1985",
@@ -319,7 +319,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bFreeze.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bFreeze.webp",
         "stats": {
             "atk": "326",
             "hp": "1985",
@@ -334,7 +334,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bGlam.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bGlam.webp",
         "stats": {
             "atk": "326",
             "hp": "1985",
@@ -349,7 +349,7 @@
         "rarity": "bronze",
         "element": "dark",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/bHDay.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/bHDay.webp",
         "stats": {
             "atk": "66",
             "hp": "350",
@@ -364,7 +364,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/bHazard.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/bHazard.webp",
         "stats": {
             "atk": "139",
             "hp": "945",
@@ -379,7 +379,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/bKill.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/bKill.webp",
         "stats": {
             "atk": "415",
             "hp": "1191",
@@ -394,7 +394,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/bKing.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/bKing.webp",
         "stats": {
             "atk": "685",
             "hp": "3704",
@@ -409,7 +409,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bLine.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/bLine.webp",
         "stats": {
             "atk": "58",
             "hp": "500",
@@ -424,7 +424,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/bMFrosty.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/bMFrosty.webp",
         "stats": {
             "atk": "139",
             "hp": "735",
@@ -439,7 +439,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/bShell.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/bShell.webp",
         "stats": {
             "atk": "613",
             "hp": "3704",
@@ -454,7 +454,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/bStreak.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/bStreak.webp",
         "stats": {
             "atk": "706",
             "hp": "2919",
@@ -469,7 +469,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bTop.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bTop.webp",
         "stats": {
             "atk": "132",
             "hp": "1040",
@@ -484,7 +484,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/bValen.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/bValen.webp",
         "stats": {
             "atk": "139",
             "hp": "945",
@@ -499,7 +499,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/bigSister.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/bigSister.webp",
         "stats": {
             "atk": "336",
             "hp": "1588",
@@ -514,7 +514,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/blueS.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/blueS.webp",
         "stats": {
             "atk": "218",
             "hp": "2184",
@@ -529,7 +529,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/boneBelle.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/boneBelle.webp",
         "stats": {
             "atk": "140",
             "hp": "851",
@@ -544,7 +544,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/cChaser.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/cChaser.webp",
         "stats": {
             "atk": "139",
             "hp": "735",
@@ -559,7 +559,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/cCutter.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/cCutter.webp",
         "stats": {
             "atk": "706",
             "hp": "2919",
@@ -574,7 +574,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/cCyclone.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/cCyclone.webp",
         "stats": {
             "atk": "685",
             "hp": "4169",
@@ -589,7 +589,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/cGuy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/cGuy.webp",
         "stats": {
             "atk": "277",
             "hp": "1940",
@@ -604,7 +604,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/cHabit.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/cHabit.webp",
         "stats": {
             "atk": "685",
             "hp": "2778",
@@ -619,7 +619,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/cMind.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/cMind.webp",
         "stats": {
             "atk": "375",
             "hp": "1786",
@@ -634,7 +634,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/cScout.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/cScout.webp",
         "stats": {
             "atk": "292",
             "hp": "1544",
@@ -649,7 +649,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/cStones.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/cStones.webp",
         "stats": {
             "atk": "85",
             "hp": "360",
@@ -664,7 +664,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/cTheory.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/cTheory.webp",
         "stats": {
             "atk": "297",
             "hp": "1455",
@@ -679,7 +679,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/candyCrusher.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/candyCrusher.webp",
         "stats": {
             "atk": "155",
             "hp": "735",
@@ -694,7 +694,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/claw.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/claw.webp",
         "stats": {
             "atk": "362",
             "hp": "1544",
@@ -709,7 +709,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/clock.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/clock.webp",
         "stats": {
             "atk": "613",
             "hp": "3704",
@@ -724,7 +724,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/corrosive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/corrosive.webp",
         "stats": {
             "atk": "248",
             "hp": "2184",
@@ -739,7 +739,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/crittyKitty.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/crittyKitty.webp",
         "stats": {
             "atk": "600",
             "hp": "13021",
@@ -757,7 +757,7 @@
         "rarity": "gold",
         "element": "neutral",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/dArtist.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/dArtist.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -772,7 +772,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/dBand.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/dBand.webp",
         "stats": {
             "atk": "457",
             "hp": "5094",
@@ -787,7 +787,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/dBrawl.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/dBrawl.webp",
         "stats": {
             "atk": "326",
             "hp": "1764",
@@ -802,7 +802,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/dBreaker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/dBreaker.webp",
         "stats": {
             "atk": "788",
             "hp": "2919",
@@ -817,7 +817,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/dCatch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/dCatch.webp",
         "stats": {
             "atk": "685",
             "hp": "3242",
@@ -832,7 +832,7 @@
         "rarity": "bronze",
         "element": "dark",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/dCrypt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/dCrypt.webp",
         "stats": {
             "atk": "56",
             "hp": "495",
@@ -847,7 +847,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/dDemon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/dDemon.webp",
         "stats": {
             "atk": "706",
             "hp": "2919",
@@ -862,7 +862,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/dExposure.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/dExposure.webp",
         "stats": {
             "atk": "336",
             "hp": "1390",
@@ -877,7 +877,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/dHeat.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/dHeat.webp",
         "stats": {
             "atk": "140",
             "hp": "851",
@@ -892,7 +892,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/dInterv.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/dInterv.webp",
         "stats": {
             "atk": "292",
             "hp": "1985",
@@ -907,7 +907,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/dLicious.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/dLicious.webp",
         "stats": {
             "atk": "155",
             "hp": "630",
@@ -922,7 +922,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/dLocked.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/dLocked.webp",
         "stats": {
             "atk": "613",
             "hp": "4169",
@@ -937,7 +937,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/dLocks.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/dLocks.webp",
         "stats": {
             "atk": "248",
             "hp": "1698",
@@ -952,7 +952,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/dMight.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/dMight.webp",
         "stats": {
             "atk": "685",
             "hp": "3704",
@@ -967,7 +967,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/dNaire.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/dNaire.webp",
         "stats": {
             "atk": "248",
             "hp": "2184",
@@ -982,7 +982,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/dOWint.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/dOWint.webp",
         "stats": {
             "atk": "218",
             "hp": "2184",
@@ -997,7 +997,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/dProne.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/dProne.webp",
         "stats": {
             "atk": "160",
             "hp": "756",
@@ -1012,7 +1012,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/dame.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/dame.webp",
         "stats": {
             "atk": "139",
             "hp": "945",
@@ -1027,7 +1027,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/djFriz.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/djFriz.webp",
         "stats": {
             "atk": "812",
             "hp": "2627",
@@ -1042,7 +1042,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/eEcho.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/eEcho.webp",
         "stats": {
             "atk": "160",
             "hp": "661",
@@ -1057,7 +1057,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/eEvil.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/eEvil.webp",
         "stats": {
             "atk": "297",
             "hp": "1455",
@@ -1072,7 +1072,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/eSax.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/eSax.webp",
         "stats": {
             "atk": "294",
             "hp": "1985",
@@ -1087,7 +1087,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/eagerDeceiver.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/eagerDeceiver.webp",
         "stats": {
             "atk": "685",
             "hp": "3242",
@@ -1102,7 +1102,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/elizaRaidBoss.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/elizaRaidBoss.webp",
         "stats": {
             "atk": "600",
             "hp": "13021",
@@ -1120,7 +1120,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fCookie.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fCookie.webp",
         "stats": {
             "atk": "872",
             "hp": "2919",
@@ -1135,7 +1135,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/fEnds.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/fEnds.webp",
         "stats": {
             "atk": "56",
             "hp": "385",
@@ -1150,7 +1150,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/fFang.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/fFang.webp",
         "stats": {
             "atk": "294",
             "hp": "1588",
@@ -1165,7 +1165,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/fFav.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/fFav.webp",
         "stats": {
             "atk": "178",
             "hp": "756",
@@ -1180,7 +1180,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/fFight.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/fFight.webp",
         "stats": {
             "atk": "375",
             "hp": "1588",
@@ -1195,7 +1195,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/fFly.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/fFly.webp",
         "stats": {
             "atk": "307",
             "hp": "1455",
@@ -1210,7 +1210,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/fFrame.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/fFrame.webp",
         "stats": {
             "atk": "624",
             "hp": "3566",
@@ -1225,7 +1225,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fFray.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fFray.webp",
         "stats": {
             "atk": "548",
             "hp": "3925",
@@ -1240,7 +1240,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/fFriday.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/fFriday.webp",
         "stats": {
             "atk": "198",
             "hp": "567",
@@ -1255,7 +1255,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fFury.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fFury.webp",
         "stats": {
             "atk": "760",
             "hp": "3242",
@@ -1270,7 +1270,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/fRein.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/fRein.webp",
         "stats": {
             "atk": "256",
             "hp": "1985",
@@ -1285,7 +1285,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/fRemains.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/fRemains.webp",
         "stats": {
             "atk": "538",
             "hp": "4169",
@@ -1300,7 +1300,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fSoldier.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fSoldier.webp",
         "stats": {
             "atk": "645",
             "hp": "3568",
@@ -1315,7 +1315,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/fTrap.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/fTrap.webp",
         "stats": {
             "atk": "872",
             "hp": "2501",
@@ -1330,7 +1330,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/feath.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/feath.webp",
         "stats": {
             "atk": "248",
             "hp": "1698",
@@ -1345,7 +1345,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/freshHeir.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/freshHeir.webp",
         "stats": {
             "atk": "74",
             "hp": "350",
@@ -1360,7 +1360,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/fullSail.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/fullSail.webp",
         "stats": {
             "atk": "297",
             "hp": "1698",
@@ -1375,7 +1375,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fur.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/fur.webp",
         "stats": {
             "atk": "362",
             "hp": "1544",
@@ -1390,7 +1390,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/furM.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/furM.webp",
         "stats": {
             "atk": "706",
             "hp": "3753",
@@ -1405,7 +1405,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/gDanger.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/gDanger.webp",
         "stats": {
             "atk": "617",
             "hp": "3753",
@@ -1420,7 +1420,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/gDigger.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/gDigger.webp",
         "stats": {
             "atk": "256",
             "hp": "1985",
@@ -1435,7 +1435,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/gFan.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/gFan.webp",
         "stats": {
             "atk": "361",
             "hp": "1323",
@@ -1450,7 +1450,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/gJazz.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/gJazz.webp",
         "stats": {
             "atk": "218",
             "hp": "2426",
@@ -1465,7 +1465,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/gMatt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/gMatt.webp",
         "stats": {
             "atk": "155",
             "hp": "945",
@@ -1480,7 +1480,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/gReaper.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/gReaper.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -1495,7 +1495,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/gShift.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/gShift.webp",
         "stats": {
             "atk": "104",
             "hp": "924",
@@ -1510,7 +1510,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/galaxy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/galaxy.webp",
         "stats": {
             "atk": "139",
             "hp": "840",
@@ -1525,7 +1525,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/gangG.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/gangG.webp",
         "stats": {
             "atk": "104",
             "hp": "1040",
@@ -1540,7 +1540,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/gloom.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/gloom.webp",
         "stats": {
             "atk": "118",
             "hp": "1040",
@@ -1555,7 +1555,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/goku.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/goku.webp",
         "stats": {
             "atk": "600",
             "hp": "13021",
@@ -1573,7 +1573,7 @@
         "rarity": "bronze",
         "element": "light",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/goldG.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/goldG.webp",
         "stats": {
             "atk": "75",
             "hp": "405",
@@ -1588,7 +1588,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/goliath.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/goliath.webp",
         "stats": {
             "atk": "132",
             "hp": "1040",
@@ -1603,7 +1603,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/hAppar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/hAppar.webp",
         "stats": {
             "atk": "160",
             "hp": "661",
@@ -1618,7 +1618,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/hBelle.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/hBelle.webp",
         "stats": {
             "atk": "292",
             "hp": "1544",
@@ -1633,7 +1633,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/hCaliber.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/hCaliber.webp",
         "stats": {
             "atk": "613",
             "hp": "4169",
@@ -1648,7 +1648,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/hCat.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/hCat.webp",
         "stats": {
             "atk": "95",
             "hp": "315",
@@ -1663,7 +1663,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/hDarkn.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/hDarkn.webp",
         "stats": {
             "atk": "685",
             "hp": "2778",
@@ -1678,7 +1678,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/hFiend.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/hFiend.webp",
         "stats": {
             "atk": "140",
             "hp": "756",
@@ -1693,7 +1693,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/hHanded.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/hHanded.webp",
         "stats": {
             "atk": "685",
             "hp": "4169",
@@ -1708,7 +1708,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/hMan.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/hMan.webp",
         "stats": {
             "atk": "155",
             "hp": "840",
@@ -1723,7 +1723,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/hMetal.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/hMetal.webp",
         "stats": {
             "atk": "538",
             "hp": "4631",
@@ -1738,7 +1738,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/hQuin.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/hQuin.webp",
         "stats": {
             "atk": "375",
             "hp": "1786",
@@ -1753,7 +1753,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/hReign.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/hReign.webp",
         "stats": {
             "atk": "66",
             "hp": "400",
@@ -1768,7 +1768,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/hRuler.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/hRuler.webp",
         "stats": {
             "atk": "248",
             "hp": "1940",
@@ -1783,7 +1783,7 @@
         "rarity": "bronze",
         "element": "light",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/hStrong.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/hStrong.webp",
         "stats": {
             "atk": "85",
             "hp": "405",
@@ -1798,7 +1798,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/heat.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/heat.webp",
         "stats": {
             "atk": "706",
             "hp": "3335",
@@ -1813,7 +1813,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/hero.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/hero.webp",
         "stats": {
             "atk": "292",
             "hp": "1764",
@@ -1828,7 +1828,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/iDom.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/iDom.webp",
         "stats": {
             "atk": "248",
             "hp": "1940",
@@ -1843,7 +1843,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/iFiber.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/iFiber.webp",
         "stats": {
             "atk": "297",
             "hp": "1455",
@@ -1858,7 +1858,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/iHot.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/iHot.webp",
         "stats": {
             "atk": "66",
             "hp": "360",
@@ -1873,7 +1873,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/iLeague.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/iLeague.webp",
         "stats": {
             "atk": "160",
             "hp": "756",
@@ -1888,7 +1888,7 @@
         "rarity": "gold",
         "element": "neutral",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/iPiece.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/iPiece.webp",
         "stats": {
             "atk": "292",
             "hp": "1985",
@@ -1903,7 +1903,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/iThreat.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/iThreat.webp",
         "stats": {
             "atk": "336",
             "hp": "1390",
@@ -1918,7 +1918,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/iTwin.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/iTwin.webp",
         "stats": {
             "atk": "75",
             "hp": "315",
@@ -1933,7 +1933,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/inDeni.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/inDeni.webp",
         "stats": {
             "atk": "66",
             "hp": "450",
@@ -1948,7 +1948,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/ink.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/ink.webp",
         "stats": {
             "atk": "155",
             "hp": "735",
@@ -1963,7 +1963,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/iono.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/iono.webp",
         "stats": {
             "atk": "375",
             "hp": "1390",
@@ -1978,7 +1978,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/jBreaker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/jBreaker.webp",
         "stats": {
             "atk": "788",
             "hp": "2501",
@@ -1993,7 +1993,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/jKit.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/jKit.webp",
         "stats": {
             "atk": "82",
             "hp": "350",
@@ -2008,7 +2008,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/jSpecter.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/jSpecter.webp",
         "stats": {
             "atk": "140",
             "hp": "851",
@@ -2023,7 +2023,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/kJoy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/kJoy.webp",
         "stats": {
             "atk": "122",
             "hp": "840",
@@ -2038,7 +2038,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/lHope.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/lHope.webp",
         "stats": {
             "atk": "218",
             "hp": "1940",
@@ -2053,7 +2053,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/lLux.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/lLux.webp",
         "stats": {
             "atk": "336",
             "hp": "1786",
@@ -2068,7 +2068,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/lRegent.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/lRegent.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -2083,7 +2083,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/lethalW.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/lethalW.webp",
         "stats": {
             "atk": "118",
             "hp": "1040",
@@ -2098,7 +2098,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/littleSister.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/littleSister.webp",
         "stats": {
             "atk": "624",
             "hp": "3566",
@@ -2113,7 +2113,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/loveCraft.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/loveCraft.webp",
         "stats": {
             "atk": "617",
             "hp": "3753",
@@ -2128,7 +2128,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/lucky.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/lucky.webp",
         "stats": {
             "atk": "146",
             "hp": "809",
@@ -2143,7 +2143,7 @@
         "rarity": "bronze",
         "element": "light",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/m3ow.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/m3ow.webp",
         "stats": {
             "atk": "58",
             "hp": "450",
@@ -2158,7 +2158,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mCorpse.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mCorpse.webp",
         "stats": {
             "atk": "218",
             "hp": "2184",
@@ -2173,7 +2173,7 @@
         "rarity": "gold",
         "element": "neutral",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/mCurl.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/mCurl.webp",
         "stats": {
             "atk": "336",
             "hp": "1390",
@@ -2188,7 +2188,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/mDear.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/mDear.webp",
         "stats": {
             "atk": "521",
             "hp": "4586",
@@ -2203,7 +2203,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/mGirl.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/mGirl.webp",
         "stats": {
             "atk": "292",
             "hp": "1764",
@@ -2218,7 +2218,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mMalice.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mMalice.webp",
         "stats": {
             "atk": "617",
             "hp": "3753",
@@ -2233,7 +2233,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/mMatch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/mMatch.webp",
         "stats": {
             "atk": "178",
             "hp": "567",
@@ -2248,7 +2248,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/mMen.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/mMen.webp",
         "stats": {
             "atk": "645",
             "hp": "3056",
@@ -2263,7 +2263,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/mMercury.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/mMercury.webp",
         "stats": {
             "atk": "139",
             "hp": "840",
@@ -2278,7 +2278,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mOfHonor.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mOfHonor.webp",
         "stats": {
             "atk": "104",
             "hp": "1040",
@@ -2293,7 +2293,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/mOne.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/mOne.webp",
         "stats": {
             "atk": "375",
             "hp": "1390",
@@ -2308,7 +2308,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/mSonic.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/mSonic.webp",
         "stats": {
             "atk": "294",
             "hp": "1985",
@@ -2323,7 +2323,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/mTrial.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/mTrial.webp",
         "stats": {
             "atk": "172",
             "hp": "735",
@@ -2338,7 +2338,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/martialO.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/martialO.webp",
         "stats": {
             "atk": "336",
             "hp": "1786",
@@ -2353,7 +2353,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/mekaStar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/mekaStar.webp",
         "stats": {
             "atk": "788",
             "hp": "3753",
@@ -2368,7 +2368,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/meow.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/meow.webp",
         "stats": {
             "atk": "307",
             "hp": "1699",
@@ -2383,7 +2383,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/metro.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/metro.webp",
         "stats": {
             "atk": "375",
             "hp": "1390",
@@ -2398,7 +2398,7 @@
         "rarity": "bronze",
         "element": "dark",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mmaid.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/mmaid.webp",
         "stats": {
             "atk": "58",
             "hp": "450",
@@ -2413,7 +2413,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/model.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/model.webp",
         "stats": {
             "atk": "521",
             "hp": "4074",
@@ -2428,7 +2428,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/moon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/moon.webp",
         "stats": {
             "atk": "336",
             "hp": "1588",
@@ -2443,7 +2443,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/nCrunch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/nCrunch.webp",
         "stats": {
             "atk": "326",
             "hp": "1544",
@@ -2458,7 +2458,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/nDeath.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/nDeath.webp",
         "stats": {
             "atk": "617",
             "hp": "3335",
@@ -2473,7 +2473,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/nDepart.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/nDepart.webp",
         "stats": {
             "atk": "122",
             "hp": "945",
@@ -2488,7 +2488,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/nEgrets.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/nEgrets.webp",
         "stats": {
             "atk": "139",
             "hp": "840",
@@ -2503,7 +2503,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/nMance.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/nMance.webp",
         "stats": {
             "atk": "758",
             "hp": "2778",
@@ -2518,7 +2518,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/nOne.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/nOne.webp",
         "stats": {
             "atk": "132",
             "hp": "924",
@@ -2533,7 +2533,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/nSense.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/nSense.webp",
         "stats": {
             "atk": "74",
             "hp": "300",
@@ -2548,7 +2548,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/nShade.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/nShade.webp",
         "stats": {
             "atk": "139",
             "hp": "945",
@@ -2563,7 +2563,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/nTerr.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/nTerr.webp",
         "stats": {
             "atk": "292",
             "hp": "1544",
@@ -2578,7 +2578,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/necroB.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/necroB.webp",
         "stats": {
             "atk": "104",
             "hp": "1040",
@@ -2593,7 +2593,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/ninja.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/ninja.webp",
         "stats": {
             "atk": "160",
             "hp": "756",
@@ -2608,7 +2608,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/nyan.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/nyan.webp",
         "stats": {
             "atk": "118",
             "hp": "924",
@@ -2623,7 +2623,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/oGre.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/oGre.webp",
         "stats": {
             "atk": "582",
             "hp": "4074",
@@ -2638,7 +2638,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/oMai.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/oMai.webp",
         "stats": {
             "atk": "140",
             "hp": "756",
@@ -2653,7 +2653,7 @@
         "rarity": "gold",
         "element": "neutral",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/oUp.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/oUp.webp",
         "stats": {
             "atk": "256",
             "hp": "2205",
@@ -2668,7 +2668,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/pAssist.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/pAssist.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -2683,7 +2683,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/pBall.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/pBall.webp",
         "stats": {
             "atk": "326",
             "hp": "1764",
@@ -2698,7 +2698,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/pDark.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/pDark.webp",
         "stats": {
             "atk": "198",
             "hp": "662",
@@ -2713,7 +2713,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/pDick.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/pDick.webp",
         "stats": {
             "atk": "256",
             "hp": "2205",
@@ -2728,7 +2728,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/pIcon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/pIcon.webp",
         "stats": {
             "atk": "613",
             "hp": "4169",
@@ -2743,7 +2743,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/pKid.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/pKid.webp",
         "stats": {
             "atk": "375",
             "hp": "1390",
@@ -2758,7 +2758,7 @@
         "rarity": "silver",
         "element": "neutral",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/pPlum.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/pPlum.webp",
         "stats": {
             "atk": "132",
             "hp": "809",
@@ -2773,7 +2773,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/pPlunder.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/pPlunder.webp",
         "stats": {
             "atk": "326",
             "hp": "1544",
@@ -2788,7 +2788,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/pPride.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/pPride.webp",
         "stats": {
             "atk": "248",
             "hp": "1940",
@@ -2803,7 +2803,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/pProdigy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/pProdigy.webp",
         "stats": {
             "atk": "326",
             "hp": "1544",
@@ -2818,7 +2818,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/pShoot.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/pShoot.webp",
         "stats": {
             "atk": "178",
             "hp": "661",
@@ -2833,7 +2833,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/pTech.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/pTech.webp",
         "stats": {
             "atk": "256",
             "hp": "1764",
@@ -2848,7 +2848,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/pThread.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/pThread.webp",
         "stats": {
             "atk": "336",
             "hp": "1390",
@@ -2863,7 +2863,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/pTwist.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/pTwist.webp",
         "stats": {
             "atk": "538",
             "hp": "4169",
@@ -2878,7 +2878,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/pType.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/pType.webp",
         "stats": {
             "atk": "74",
             "hp": "350",
@@ -2893,7 +2893,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/pUp.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/pUp.webp",
         "stats": {
             "atk": "172",
             "hp": "735",
@@ -2908,7 +2908,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/pWeave.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/pWeave.webp",
         "stats": {
             "atk": "292",
             "hp": "1544",
@@ -2923,7 +2923,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/pWrangler.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/pWrangler.webp",
         "stats": {
             "atk": "256",
             "hp": "1985",
@@ -2938,7 +2938,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/polter.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/polter.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -2953,7 +2953,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/prime.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/prime.webp",
         "stats": {
             "atk": "336",
             "hp": "1588",
@@ -2968,7 +2968,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/psyco.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/psyco.webp",
         "stats": {
             "atk": "336",
             "hp": "1786",
@@ -2983,7 +2983,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/puddlePirate.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/puddlePirate.webp",
         "stats": {
             "atk": "155",
             "hp": "735",
@@ -2998,7 +2998,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/puppet.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/puppet.webp",
         "stats": {
             "atk": "812",
             "hp": "2627",
@@ -3013,7 +3013,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/purr.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/purr.webp",
         "stats": {
             "atk": "160",
             "hp": "756",
@@ -3028,7 +3028,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/rAppr.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/rAppr.webp",
         "stats": {
             "atk": "146",
             "hp": "693",
@@ -3043,7 +3043,7 @@
         "rarity": "gold",
         "element": "neutral",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/rBlight.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/rBlight.webp",
         "stats": {
             "atk": "326",
             "hp": "1323",
@@ -3058,7 +3058,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/rBlonde.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/rBlonde.webp",
         "stats": {
             "atk": "292",
             "hp": "1764",
@@ -3073,7 +3073,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/rCopy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/rCopy.webp",
         "stats": {
             "atk": "140",
             "hp": "945",
@@ -3088,7 +3088,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/rCopy_.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/rCopy_.webp",
         "stats": {
             "atk": "66",
             "hp": "350",
@@ -3103,7 +3103,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/rEvil.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/rEvil.webp",
         "stats": {
             "atk": "104",
             "hp": "1155",
@@ -3118,7 +3118,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/rForce.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/rForce.webp",
         "stats": {
             "atk": "336",
             "hp": "1588",
@@ -3133,7 +3133,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/rGing.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/rGing.webp",
         "stats": {
             "atk": "613",
             "hp": "3704",
@@ -3148,7 +3148,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/rNerv.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/rNerv.webp",
         "stats": {
             "atk": "361",
             "hp": "1323",
@@ -3163,7 +3163,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/rStar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/rStar.webp",
         "stats": {
             "atk": "118",
             "hp": "809",
@@ -3178,7 +3178,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/rVelvet.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/rVelvet.webp",
         "stats": {
             "atk": "248",
             "hp": "2184",
@@ -3193,7 +3193,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/rain.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/rain.webp",
         "stats": {
             "atk": "139",
             "hp": "735",
@@ -3208,7 +3208,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/rei.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/rei.webp",
         "stats": {
             "atk": "521",
             "hp": "4586",
@@ -3223,7 +3223,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/reigningChamp.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/reigningChamp.webp",
         "stats": {
             "atk": "624",
             "hp": "3566",
@@ -3238,7 +3238,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/rerun.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/rerun.webp",
         "stats": {
             "atk": "74",
             "hp": "350",
@@ -3253,7 +3253,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/rhythm.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/rhythm.webp",
         "stats": {
             "atk": "256",
             "hp": "2205",
@@ -3268,7 +3268,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/rogue.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/rogue.webp",
         "stats": {
             "atk": "415",
             "hp": "1390",
@@ -3283,7 +3283,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/roseTinted.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/roseTinted.webp",
         "stats": {
             "atk": "132",
             "hp": "809",
@@ -3298,7 +3298,7 @@
         "rarity": "bronze",
         "element": "light",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/rusty.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/rusty.webp",
         "stats": {
             "atk": "82",
             "hp": "300",
@@ -3313,7 +3313,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/sApart.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/sApart.webp",
         "stats": {
             "atk": "172",
             "hp": "630",
@@ -3328,7 +3328,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/sBite.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/sBite.webp",
         "stats": {
             "atk": "788",
             "hp": "3335",
@@ -3343,7 +3343,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/sBound.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/sBound.webp",
         "stats": {
             "atk": "706",
             "hp": "3335",
@@ -3358,7 +3358,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/sCharmer.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/sCharmer.webp",
         "stats": {
             "atk": "122",
             "hp": "945",
@@ -3373,7 +3373,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/sCross.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/sCross.webp",
         "stats": {
             "atk": "292",
             "hp": "1764",
@@ -3388,7 +3388,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/sForce.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/sForce.webp",
         "stats": {
             "atk": "521",
             "hp": "3568",
@@ -3403,7 +3403,7 @@
         "rarity": "bronze",
         "element": "dark",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/sFright.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/sFright.webp",
         "stats": {
             "atk": "58",
             "hp": "450",
@@ -3418,7 +3418,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/sGeneral.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/sGeneral.webp",
         "stats": {
             "atk": "294",
             "hp": "1588",
@@ -3433,7 +3433,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/sGiver.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/sGiver.webp",
         "stats": {
             "atk": "326",
             "hp": "1985",
@@ -3448,7 +3448,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/sHuntress.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/sHuntress.webp",
         "stats": {
             "atk": "248",
             "hp": "2184",
@@ -3463,7 +3463,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/sImage.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/sImage.webp",
         "stats": {
             "atk": "521",
             "hp": "3568",
@@ -3478,7 +3478,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/sKill.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/sKill.webp",
         "stats": {
             "atk": "256",
             "hp": "1764",
@@ -3493,7 +3493,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/sOps.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/sOps.webp",
         "stats": {
             "atk": "118",
             "hp": "924",
@@ -3508,7 +3508,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/sOut.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/sOut.webp",
         "stats": {
             "atk": "613",
             "hp": "4169",
@@ -3523,7 +3523,7 @@
         "rarity": "diamond",
         "element": "neutral",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/sRose.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/sRose.webp",
         "stats": {
             "atk": "521",
             "hp": "4074",
@@ -3538,7 +3538,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/sSalt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/sSalt.webp",
         "stats": {
             "atk": "706",
             "hp": "3335",
@@ -3553,7 +3553,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/sSchool.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/sSchool.webp",
         "stats": {
             "atk": "74",
             "hp": "300",
@@ -3568,7 +3568,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/sSeeker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/sSeeker.webp",
         "stats": {
             "atk": "617",
             "hp": "3753",
@@ -3583,7 +3583,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/sSeraph.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/sSeraph.webp",
         "stats": {
             "atk": "457",
             "hp": "4586",
@@ -3598,7 +3598,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/sShine.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/sShine.webp",
         "stats": {
             "atk": "613",
             "hp": "3704",
@@ -3613,7 +3613,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/sSin.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/sSin.webp",
         "stats": {
             "atk": "132",
             "hp": "693",
@@ -3628,7 +3628,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/sSold.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/sSold.webp",
         "stats": {
             "atk": "538",
             "hp": "3704",
@@ -3643,7 +3643,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/sSpang.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/sSpang.webp",
         "stats": {
             "atk": "582",
             "hp": "4586",
@@ -3658,7 +3658,7 @@
         "rarity": "bronze",
         "element": "light",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/sStiff.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/sStiff.webp",
         "stats": {
             "atk": "49",
             "hp": "495",
@@ -3673,7 +3673,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_el:692287012450992219> Eliza",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/sViper.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/sViper.webp",
         "stats": {
             "atk": "160",
             "hp": "850",
@@ -3688,7 +3688,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/sWitch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/sWitch.webp",
         "stats": {
             "atk": "375",
             "hp": "1191",
@@ -3703,7 +3703,7 @@
         "rarity": "bronze",
         "element": "light",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/salty.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/salty.webp",
         "stats": {
             "atk": "85",
             "hp": "315",
@@ -3718,7 +3718,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/scrub.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/scrub.webp",
         "stats": {
             "atk": "58",
             "hp": "400",
@@ -3733,7 +3733,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_pa:698884548678910043> Parasoul",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/shelt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/shelt.webp",
         "stats": {
             "atk": "66",
             "hp": "400",
@@ -3748,7 +3748,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/shriek.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/shriek.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -3763,7 +3763,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/sketch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/sketch.webp",
         "stats": {
             "atk": "85",
             "hp": "315",
@@ -3778,7 +3778,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/solar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/solar.webp",
         "stats": {
             "atk": "75",
             "hp": "360",
@@ -3793,7 +3793,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/soulC.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/soulC.webp",
         "stats": {
             "atk": "160",
             "hp": "850",
@@ -3808,7 +3808,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/souls.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/souls.webp",
         "stats": {
             "atk": "160",
             "hp": "661",
@@ -3823,7 +3823,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/spaceCase.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/spaceCase.webp",
         "stats": {
             "atk": "326",
             "hp": "1544",
@@ -3838,7 +3838,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/splash.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/splash.webp",
         "stats": {
             "atk": "415",
             "hp": "1390",
@@ -3853,7 +3853,7 @@
         "rarity": "bronze",
         "element": "air",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/starC.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/starC.webp",
         "stats": {
             "atk": "66",
             "hp": "400",
@@ -3868,7 +3868,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/tAFolks.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/tAFolks.webp",
         "stats": {
             "atk": "326",
             "hp": "1544",
@@ -3883,7 +3883,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/tByte.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/tByte.webp",
         "stats": {
             "atk": "292",
             "hp": "1764",
@@ -3898,7 +3898,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/tChic.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/tChic.webp",
         "stats": {
             "atk": "617",
             "hp": "3335",
@@ -3913,7 +3913,7 @@
         "rarity": "gold",
         "element": "neutral",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/tKnight.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/tKnight.webp",
         "stats": {
             "atk": "294",
             "hp": "1787",
@@ -3928,7 +3928,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/tMake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/tMake.webp",
         "stats": {
             "atk": "122",
             "hp": "1050",
@@ -3943,7 +3943,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/tMett.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/tMett.webp",
         "stats": {
             "atk": "70",
             "hp": "330",
@@ -3958,7 +3958,7 @@
         "rarity": "bronze",
         "element": "fire",
         "character": "<:sp_ma:1247164362528133210> Marie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/tMystic.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ma/tMystic.webp",
         "stats": {
             "atk": "65",
             "hp": "405",
@@ -3973,7 +3973,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/tRant.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/tRant.webp",
         "stats": {
             "atk": "415",
             "hp": "1191",
@@ -3988,7 +3988,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/tThief.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/tThief.webp",
         "stats": {
             "atk": "307",
             "hp": "1699",
@@ -4003,7 +4003,7 @@
         "rarity": "silver",
         "element": "water",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/tTyrant.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/tTyrant.webp",
         "stats": {
             "atk": "132",
             "hp": "693",
@@ -4018,7 +4018,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/teto.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/teto.webp",
         "stats": {
             "atk": "613",
             "hp": "3242",
@@ -4033,7 +4033,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/toad.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/toad.webp",
         "stats": {
             "atk": "178",
             "hp": "851",
@@ -4048,7 +4048,7 @@
         "rarity": "bronze",
         "element": "dark",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/trigger.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/trigger.webp",
         "stats": {
             "atk": "66",
             "hp": "450",
@@ -4063,7 +4063,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_an:767922687204524032> Annie",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/triple.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/triple.webp",
         "stats": {
             "atk": "118",
             "hp": "924",
@@ -4078,7 +4078,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/twist.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/twist.webp",
         "stats": {
             "atk": "118",
             "hp": "809",
@@ -4093,7 +4093,7 @@
         "rarity": "bronze",
         "element": "dark",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/uDog.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/uDog.webp",
         "stats": {
             "atk": "74",
             "hp": "400",
@@ -4108,7 +4108,7 @@
         "rarity": "bronze",
         "element": "water",
         "character": "<:sp_cb:685401170495537152> Cerebella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/uStudy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/uStudy.webp",
         "stats": {
             "atk": "74",
             "hp": "450",
@@ -4123,7 +4123,7 @@
         "rarity": "gold",
         "element": "water",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/uTouch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/uTouch.webp",
         "stats": {
             "atk": "297",
             "hp": "1698",
@@ -4138,7 +4138,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/uViolent.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/uViolent.webp",
         "stats": {
             "atk": "375",
             "hp": "1390",
@@ -4153,7 +4153,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/unfazed.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/unfazed.webp",
         "stats": {
             "atk": "292",
             "hp": "1985",
@@ -4168,7 +4168,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/unholy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/unholy.webp",
         "stats": {
             "atk": "521",
             "hp": "4586",
@@ -4183,7 +4183,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_bb:684054646528147500> Big Band",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/vVirt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/vVirt.webp",
         "stats": {
             "atk": "122",
             "hp": "1050",
@@ -4198,7 +4198,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_fu:698919709336141886> Fukua",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/vaporW.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/vaporW.webp",
         "stats": {
             "atk": "292",
             "hp": "1544",
@@ -4213,7 +4213,7 @@
         "rarity": "silver",
         "element": "air",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/vect.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/vect.webp",
         "stats": {
             "atk": "122",
             "hp": "945",
@@ -4228,7 +4228,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/wBane.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/wBane.webp",
         "stats": {
             "atk": "375",
             "hp": "1588",
@@ -4243,7 +4243,7 @@
         "rarity": "silver",
         "element": "fire",
         "character": "<:sp_pe:698879915713626142> Peacock",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/wCard.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/wCard.webp",
         "stats": {
             "atk": "132",
             "hp": "809",
@@ -4258,7 +4258,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_pw:698904045389348914> Painwheel",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/wCrawler.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pw/wCrawler.webp",
         "stats": {
             "atk": "645",
             "hp": "3056",
@@ -4273,7 +4273,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_mf:698837829467242496> Ms. Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/wStalk.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/mf/wStalk.webp",
         "stats": {
             "atk": "645",
             "hp": "3568",
@@ -4288,7 +4288,7 @@
         "rarity": "gold",
         "element": "air",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/wSwept.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/wSwept.webp",
         "stats": {
             "atk": "336",
             "hp": "1390",
@@ -4303,7 +4303,7 @@
         "rarity": "gold",
         "element": "light",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/wWarr.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/wWarr.webp",
         "stats": {
             "atk": "277",
             "hp": "1940",
@@ -4318,7 +4318,7 @@
         "rarity": "diamond",
         "element": "water",
         "character": "<:sp_va:698852651617746974> Valentine",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/wWork.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/wWork.webp",
         "stats": {
             "atk": "538",
             "hp": "3704",
@@ -4333,7 +4333,7 @@
         "rarity": "silver",
         "element": "dark",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/wildChild.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/wildChild.webp",
         "stats": {
             "atk": "178",
             "hp": "661",
@@ -4348,7 +4348,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_bd:1115123780705063043> Black Dahlia",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/wildH.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bd/wildH.webp",
         "stats": {
             "atk": "292",
             "hp": "1985",
@@ -4363,7 +4363,7 @@
         "rarity": "diamond",
         "element": "dark",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/wishfulEater.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/wishfulEater.webp",
         "stats": {
             "atk": "685",
             "hp": "2919",
@@ -4378,7 +4378,7 @@
         "rarity": "silver",
         "element": "light",
         "character": "<:sp_beo:684771548414083107> Beowulf",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/wresX.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/wresX.webp",
         "stats": {
             "atk": "178",
             "hp": "756",
@@ -4393,7 +4393,7 @@
         "rarity": "gold",
         "element": "fire",
         "character": "<:sp_um:969082448082268241> Umbrella",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/wunderKind.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/wunderKind.webp",
         "stats": {
             "atk": "375",
             "hp": "1390",
@@ -4408,7 +4408,7 @@
         "rarity": "diamond",
         "element": "air",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/xBot.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/xBot.webp",
         "stats": {
             "atk": "685",
             "hp": "4169",
@@ -4423,7 +4423,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_db:692275933536845884> Double",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/xMorph.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/do/xMorph.webp",
         "stats": {
             "atk": "375",
             "hp": "1191",
@@ -4438,7 +4438,7 @@
         "rarity": "diamond",
         "element": "light",
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/zeraora.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/zeraora.webp",
         "stats": {
             "atk": "706",
             "hp": "3753",

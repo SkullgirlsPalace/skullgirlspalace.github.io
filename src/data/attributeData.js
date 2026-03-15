@@ -17,14 +17,14 @@
 export const ATTRIBUTE_DATA = {
     atq: {
         keys: ['ATQ%', 'ATQ'],
-        name: '<img src="img/official/AttackIcon.png" alt="ATQ" style="width: 24px; vertical-align: middle; margin-right: 6px;"> Ataque',
+        name: '<img loading="lazy" src="img/official/AttackIcon.webp" alt="ATQ" style="width: 24px; vertical-align: middle; margin-right: 6px;"> Ataque',
         max: 'Indefinido',
         summary: 'Ataque é um atributo fundamental para qualquer personagem que precise infligir dano.',
         detailed: 'O Ataque aumenta o Dano Base do personagem. Ele é essencial, pois fortalece tudo o que o lutador faz: escala com a Taxa de ATQ Crítico e Dano Crítico, e aumenta a eficácia das Fúrias. Além disso, ter mais Ataque aumenta o dano causado pelos seus Golpes Especiais, Blockbusters, Habilidades Características, Astro Convidado e Ataques de Assistência. Contra oponentes com Armadura ou Defesa alta, o Ataque contribui significativamente, embora existam raras exceções onde outros atributos possam ser priorizados.'
     },
     vd: {
         keys: ['VD%', 'VD', 'Vida%', 'Vida'],
-        name: '<img src="img/official/HealthIcon.png" alt="Vida" style="width: 24px; vertical-align: middle; margin-right: 6px;"> Vida',
+        name: '<img loading="lazy" src="img/official/HealthIcon.webp" alt="Vida" style="width: 24px; vertical-align: middle; margin-right: 6px;"> Vida',
         max: 'Indefinido',
         summary: 'Vida é um atributo atrelado à sobrevivência, necessário para resistir a grandes quantidades de dano.',
         detailed: 'É o principal atributo para variantes defensivas, suportes ou aquelas que interagem com Vida em suas habilidades. A Vida escala com a Vida Base da Variante, Habilidades Características, Modificadores e Efeitos. Personagens com muita Vida absorvem mais dano ao possuir Barreira (que escala com a Vida Máxima) e recebem mais cura de Regenerações (Vida Base + Vida%). Também aumenta a quantidade de Vida recuperada ao ser revivido.'

@@ -18,13 +18,13 @@ export function createVariantCard(variant, charKey, index = 0) {
     const elementInfo = ELEMENT_MAP[variant.element] || {
         icon: '⚪',
         class: 'neutral',
-        iconPath: 'img/official/ElementalFireBackless.png',
-        statIcon: 'img/official/ElementalIconNeutral.png'
+        iconPath: 'img/official/ElementalFireBackless.webp',
+        statIcon: 'img/official/ElementalIconNeutral.webp'
     };
 
     // Get portrait URL - prioritize local backup, fallback to JSON, then default
     let portraitUrl = getVariantImage(charKey, variant.name, index);
-    if (portraitUrl.includes('_Icon.png') && variant.images?.portrait_url) {
+    if (portraitUrl.includes('_Icon.webp') && variant.images?.portrait_url) {
         portraitUrl = variant.images.portrait_url;
     }
 
@@ -51,18 +51,18 @@ export function createVariantCard(variant, charKey, index = 0) {
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
             <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
-                 onerror="this.src='img/official/Annie_Icon.png'">
+                 onerror="this.src='img/official/Annie_Icon.webp'">
             
             <div class="variant-info">
                 <div class="variant-header">
                     <h3>${variant.name}</h3>
                     <div class="variant-meta">
                         <span class="element-badge ${elementInfo.class}">
-                            <img src="${elementInfo.iconPath}" alt="${variant.element}">
+                            <img loading="lazy" src="${elementInfo.iconPath}" alt="${variant.element}">
                             ${variant.element.toUpperCase()}
                         </span>
                         <span class="rarity-badge ${rarityKey}">
-                            ${rarityIcon ? `<img src="${rarityIcon}" alt="${rarityLabel}" class="rarity-icon">` : ''}
+                            ${rarityIcon ? `<img loading="lazy" src="${rarityIcon}" alt="${rarityLabel}" class="rarity-icon">` : ''}
                             ${rarityLabel}
                         </span>
                     </div>
@@ -70,17 +70,17 @@ export function createVariantCard(variant, charKey, index = 0) {
                 
                 <div class="variant-stats">
                     <div class="stat-item">
-                        <img src="img/official/AttackIcon.png" alt="ATQ" class="stat-icon">
+                        <img loading="lazy" src="img/official/AttackIcon.webp" alt="ATQ" class="stat-icon">
                         <span class="label">ATQ</span>
                         <span class="value">${variant.stats?.attack || '-'}</span>
                     </div>
                     <div class="stat-item">
-                        <img src="img/official/HealthIcon.png" alt="Vida" class="stat-icon">
+                        <img loading="lazy" src="img/official/HealthIcon.webp" alt="Vida" class="stat-icon">
                         <span class="label">Vida</span>
                         <span class="value">${variant.stats?.health || '-'}</span>
                     </div>
                     <div class="stat-item">
-                        <img src="${elementInfo.statIcon}" alt="${variant.element}" class="stat-icon">
+                        <img loading="lazy" src="${elementInfo.statIcon}" alt="${variant.element}" class="stat-icon">
                         <span class="label">Poder</span>
                         <span class="value">${variant.stats?.power || '-'}</span>
                     </div>

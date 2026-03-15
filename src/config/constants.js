@@ -25,24 +25,24 @@ export const CHARACTER_FILES = [
 ];
 
 export const CHARACTER_ICONS = {
-    'annie': 'img/select_character/Annie_Icon2.png',
-    'beowulf': 'img/select_character/Beowulf_Icon2.png',
-    'big-band': 'img/select_character/bigband_icon2.png',
-    'black-dahlia': 'img/select_character/black_dahlia_icon2.png',
-    'cerebella': 'img/select_character/cerebella_icon2.png',
-    'double': 'img/select_character/double_icon2.png',
-    'eliza': 'img/select_character/eliza_icon2.png',
-    'filia': 'img/select_character/filia_icon2.png',
-    'fukua': 'img/select_character/fukua_icon2.png',
-    'marie': 'img/select_character/marie_icon2.png',
-    'ms-fortune': 'img/select_character/msfortune_icon2.png',
-    'painwheel': 'img/select_character/painwhell_icon2.png',
-    'parasoul': 'img/select_character/parasoul_icon2.png',
-    'peacock': 'img/select_character/peacock2.png',
-    'robo-fortune': 'img/select_character/robo_fortune_icon2.png',
-    'squigly': 'img/select_character/squigly_icon2.png',
-    'umbrella': 'img/select_character/umbrella_icon2.png',
-    'valentine': 'img/select_character/valentine_icon2.png'
+    'annie': 'img/select_character/Annie_Icon2.webp',
+    'beowulf': 'img/select_character/Beowulf_Icon2.webp',
+    'big-band': 'img/select_character/bigband_icon2.webp',
+    'black-dahlia': 'img/select_character/black_dahlia_icon2.webp',
+    'cerebella': 'img/select_character/cerebella_icon2.webp',
+    'double': 'img/select_character/double_icon2.webp',
+    'eliza': 'img/select_character/eliza_icon2.webp',
+    'filia': 'img/select_character/filia_icon2.webp',
+    'fukua': 'img/select_character/fukua_icon2.webp',
+    'marie': 'img/select_character/marie_icon2.webp',
+    'ms-fortune': 'img/select_character/msfortune_icon2.webp',
+    'painwheel': 'img/select_character/painwhell_icon2.webp',
+    'parasoul': 'img/select_character/parasoul_icon2.webp',
+    'peacock': 'img/select_character/peacock2.webp',
+    'robo-fortune': 'img/select_character/robo_fortune_icon2.webp',
+    'squigly': 'img/select_character/squigly_icon2.webp',
+    'umbrella': 'img/select_character/umbrella_icon2.webp',
+    'valentine': 'img/select_character/valentine_icon2.webp'
 };
 
 export const CHARACTER_COLORS = {
@@ -67,12 +67,12 @@ export const CHARACTER_COLORS = {
 };
 
 export const ELEMENT_MAP = {
-    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/official/ElementalFireBackless.png', statIcon: 'img/official/ElementalIconFire.png' },
-    'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/official/ElementalWaterBackless.png', statIcon: 'img/official/ElementalIconWater.png' },
-    'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/official/ElementalWindBackless.png', statIcon: 'img/official/ElementalIconWind.png' },
-    'Luz': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/official/ElementalLightBackless.png', statIcon: 'img/official/ElementalIconLight.png' },
-    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/official/ElementalDarkBackless.png', statIcon: 'img/official/ElementalIconDark.png' },
-    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/official/ElementalNeutralBackless.png', statIcon: 'img/official/ElementalIconNeutral.png' }
+    'Fogo': { class: 'fire', icon: '🔥', key: 'fogo', iconPath: 'img/official/ElementalFireBackless.webp', statIcon: 'img/official/ElementalIconFire.webp' },
+    'Água': { class: 'water', icon: '💧', key: 'agua', iconPath: 'img/official/ElementalWaterBackless.webp', statIcon: 'img/official/ElementalIconWater.webp' },
+    'Ar': { class: 'wind', icon: '🌪️', key: 'ar', iconPath: 'img/official/ElementalWindBackless.webp', statIcon: 'img/official/ElementalIconWind.webp' },
+    'Luz': { class: 'light', icon: '☀️', key: 'luz', iconPath: 'img/official/ElementalLightBackless.webp', statIcon: 'img/official/ElementalIconLight.webp' },
+    'Trevas': { class: 'dark', icon: '🌙', key: 'trevas', iconPath: 'img/official/ElementalDarkBackless.webp', statIcon: 'img/official/ElementalIconDark.webp' },
+    'Neutro': { class: 'neutral', icon: '⚪', key: 'neutro', iconPath: 'img/official/ElementalNeutralBackless.webp', statIcon: 'img/official/ElementalIconNeutral.webp' }
 };
 
 export const RARITY_ORDER = { 'diamante': 4, 'ouro': 3, 'prata': 2, 'bronze': 1 };
@@ -86,10 +86,10 @@ export const RARITY_LABELS = {
 };
 
 export const RARITY_ICONS = {
-    'diamante': 'img/official/icone_diamante.png',
-    'ouro': 'img/official/icone_ouro.png',
-    'prata': 'img/official/icone_prata.png',
-    'bronze': 'img/official/icone_bronze.png'
+    'diamante': 'img/official/icone_diamante.webp',
+    'ouro': 'img/official/icone_ouro.webp',
+    'prata': 'img/official/icone_prata.webp',
+    'bronze': 'img/official/icone_bronze.webp'
 };
 
 export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'I', 'N/A'];

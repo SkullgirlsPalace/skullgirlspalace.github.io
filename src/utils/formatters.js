@@ -38,7 +38,7 @@ export function formatText(text, variantName = null) {
             // Determine type for styling
             const effect = EFFECT_DATA[effectKey];
             const typeClass = effect ? effect.type : 'term';
-            const iconHtml = (effect && effect.icon) ? `<img src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
+            const iconHtml = (effect && effect.icon) ? `<img loading="lazy" src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
 
             replacements.push({
                 marker,
@@ -59,7 +59,7 @@ export function formatText(text, variantName = null) {
     if (variantName && hasElementEffects(variantName)) {
         workingText = workingText.replace(
             /(?<![\wÀ-ÿ])ELEMENTOS?(?![\wÀ-ÿ])/g,
-            (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}"><img src="img/official/all_elements.gif" width="256" height="256" class="inline-effect-icon" alt="">${match}</span>`
+            (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}"><img loading="lazy" src="img/official/all_elements.gif" width="256" height="256" class="inline-effect-icon" alt="">${match}</span>`
         );
     }
 
@@ -122,7 +122,7 @@ export function formatArsenal(arsenal, charKey = null) {
             if (moveData) {
                 return `
                     <div class="arsenal-move">
-                        <img src="${moveData.image.image}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
+                        <img loading="lazy" src="${moveData.image.image}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
                         <span class="move-name attr-highlight move-highlight" data-attr-key="move" data-move="${moveName}" data-char="${charKey}">${moveName}</span>
                     </div>
                 `;
@@ -160,7 +160,7 @@ export function getMasteryIcon(charKey) {
     ).join('');
     // Special case for Robofortune (lowercase f in asset)
     const fileName = pascalName === 'RoboFortune' ? 'Robofortune' : pascalName;
-    return `img/official/${fileName}_MasteryIcon.png`;
+    return `img/official/${fileName}_MasteryIcon.webp`;
 }
 
 /**

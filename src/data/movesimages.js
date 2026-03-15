@@ -8,7 +8,7 @@ const MOVE_DATA = {
     "annie": {
         "Explosão": {
             "image": {
-                "image": "img/annie/Annie_19.png",
+                "image": "img/annie/Annie_19.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE GUARDA por 5/7/10 seg."
             },
@@ -17,7 +17,7 @@ const MOVE_DATA = {
         },
         "Corte Crescente": {
             "image": {
-                "image": "img/annie/Annie_21.png",
+                "image": "img/annie/Annie_21.webp",
                 "type": "Golpe Especial",
                 "description": "50% de chance de causar QUEBRA DE GUARDA por 5/7/10 segundos ao BLOQUEAR."
             },
@@ -26,7 +26,7 @@ const MOVE_DATA = {
         },
         "Pilar de Destruição": {
             "image": {
-                "image": "img/annie/Annie_22.png",
+                "image": "img/annie/Annie_22.webp",
                 "type": "Golpe Especial",
                 "description": "Em um GOLPE CRÍTICO, tira 5/7/10% adicionais da VIDA MÁX. do oponente."
             },
@@ -35,7 +35,7 @@ const MOVE_DATA = {
         },
         "Chuva de Meteoros": {
             "image": {
-                "image": "img/annie/Annie_25.png",
+                "image": "img/annie/Annie_25.webp",
                 "type": "Golpe Especial",
                 "description": "CHANCE DE CRÍTICO 50/75/100% maior se o oponente tiver um BLOCKBUSTER totalmente carregado."
             },
@@ -44,7 +44,7 @@ const MOVE_DATA = {
         },
         "Estilingue Gravitacional": {
             "image": {
-                "image": "img/annie/Annie_28.png",
+                "image": "img/annie/Annie_28.webp",
                 "type": "Golpe Especial",
                 "description": "5% de chance de causar IMOBILIZAÇÃO por 10/12/15 segundos ao acertar um GOLPE."
             },
@@ -53,7 +53,7 @@ const MOVE_DATA = {
         },
         "Foto Bop": {
             "image": {
-                "image": "img/annie/Annie_29.png",
+                "image": "img/annie/Annie_29.webp",
                 "type": "Golpe Especial",
                 "description": "Transfere todos os EF. NEGATIVOS para o oponente.\\n\\nOs oponentes com menos de 25% de VIDA têm uma chance de 25/35/50% de serem derrotados instantaneamente."
             },
@@ -62,7 +62,7 @@ const MOVE_DATA = {
         },
         "Pilar da Criação": {
             "image": {
-                "image": "img/annie/Annie_27.png",
+                "image": "img/annie/Annie_27.webp",
                 "type": "Golpe Especial",
                 "description": "CURA os aliados em 50/75/100% do dano causado se usado com uma CONTAGEM DE COMBO de pelo menos 30."
             },
@@ -71,7 +71,7 @@ const MOVE_DATA = {
         },
         "Raio Sagan": {
             "image": {
-                "image": "img/annie/Annie_26.png",
+                "image": "img/annie/Annie_26.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% do dano causado é recuperado como VIDA."
             },
@@ -80,7 +80,7 @@ const MOVE_DATA = {
         },
         "Reentrada": {
             "image": {
-                "image": "img/annie/Annie_24.png",
+                "image": "img/annie/Annie_24.webp",
                 "type": "Golpe Especial",
                 "description": "Dá FÚRIA por 5/7/10 segundos se o terceiro golpe for um GOLPE CRÍTICO."
             },
@@ -89,7 +89,7 @@ const MOVE_DATA = {
         },
         "Punho do Norte": {
             "image": {
-                "image": "img/annie/Annie_23.png",
+                "image": "img/annie/Annie_23.webp",
                 "type": "Golpe Especial",
                 "description": "Dá INABALÁVEL por 5/7/10 segundos se usado com uma CONTAGEM DE COMBO de pelo menos 15."
             },
@@ -98,7 +98,7 @@ const MOVE_DATA = {
         },
         "Corte Saturno": {
             "image": {
-                "image": "img/annie/Annie_20.png",
+                "image": "img/annie/Annie_20.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -107,7 +107,7 @@ const MOVE_DATA = {
         },
         "Nebulosa Refletora": {
             "image": {
-                "image": "img/annie/Annie_18.png",
+                "image": "img/annie/Annie_18.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar BLOQUEIO AUTOMÁTICO por 10/12/15 seg.\\n\\nSe usado como contragolpe, inflige IMOBILIZAÇÃO por 5 segundos."
             },
@@ -118,7 +118,7 @@ const MOVE_DATA = {
     "beowulf": {
         "Aroo Ready?": {
             "image": {
-                "image": "img/beowulf/Beowulf_17.png",
+                "image": "img/beowulf/Beowulf_17.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar ACELERAÇÃO por 10/12/15 segundos."
             },
@@ -127,7 +127,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/beowulf/Beowulf_18.png",
+                "image": "img/beowulf/Beowulf_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige LENTIDÃO por 5/7/10 segundos."
             },
@@ -136,7 +136,7 @@ const MOVE_DATA = {
         },
         "Geatish Trepak": {
             "image": {
-                "image": "img/beowulf/Beowulf_24.png",
+                "image": "img/beowulf/Beowulf_24.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de dano extra se usado no MODO HYPE."
             },
@@ -145,7 +145,7 @@ const MOVE_DATA = {
         },
         "Gigantic Arm": {
             "image": {
-                "image": "img/beowulf/Beowulf_25.png",
+                "image": "img/beowulf/Beowulf_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/20/25% de chance de ATORDOAR o oponente por 4/6 s e tem chance 25/50/100% maior de acertar um CRÍTICO enquanto estiver no MODO HYPE.\r"
             },
@@ -154,7 +154,7 @@ const MOVE_DATA = {
         },
         "Hurting Hurdle (Cadeira)": {
             "image": {
-                "image": "img/beowulf/Beowulf_21.png",
+                "image": "img/beowulf/Beowulf_21.webp",
                 "type": "Desconhecido",
                 "description": "Sem descrição"
             },
@@ -163,7 +163,7 @@ const MOVE_DATA = {
         },
         "Wulf Shoot": {
             "image": {
-                "image": "img/beowulf/Beowulf_23.png",
+                "image": "img/beowulf/Beowulf_23.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -172,7 +172,7 @@ const MOVE_DATA = {
         },
         "Gigan Arm Sweep": {
             "image": {
-                "image": "img/beowulf/Beowulf_20.png",
+                "image": "img/beowulf/Beowulf_20.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige SANGRAMENTO por 4/8/12 s e ganha 10/15/20% de MEDIDOR DE BLOCKBUSTER. Também causa 15/20/25% a mais de dano enquanto estiver no MODO HYPE.\r"
             },
@@ -181,7 +181,7 @@ const MOVE_DATA = {
         },
         "Striker Kick": {
             "image": {
-                "image": "img/beowulf/Beowulf_19.png",
+                "image": "img/beowulf/Beowulf_19.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -190,7 +190,7 @@ const MOVE_DATA = {
         },
         "Lupine Pummel": {
             "image": {
-                "image": "img/beowulf/Beowulf_26.png",
+                "image": "img/beowulf/Beowulf_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25/35% de chance de infligir QUEBRA DE GUARDA e MALDIÇÃO por 10 s.\r"
             },
@@ -199,7 +199,7 @@ const MOVE_DATA = {
         },
         "Three Wulf Moonsault": {
             "image": {
-                "image": "img/beowulf/Beowulf_29.png",
+                "image": "img/beowulf/Beowulf_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50/100% de chance de REMOVER 1 EF. POS. do oponente. Oponentes derrotados não revivem se usado no MODO HYPE.\r"
             },
@@ -208,7 +208,7 @@ const MOVE_DATA = {
         },
         "Wulfamania!": {
             "image": {
-                "image": "img/beowulf/Beowulf_28.png",
+                "image": "img/beowulf/Beowulf_28.webp",
                 "type": "Golpe Especial",
                 "description": "Ao usar para derrotar um oponente, recupera 25/35/50% da VIDA MÁX. de Beowulf instantaneamente. O efeito é dobrado ao usar o MODO HYPE.\r"
             },
@@ -217,7 +217,7 @@ const MOVE_DATA = {
         },
         "Wulf Blitzer": {
             "image": {
-                "image": "img/beowulf/Beowulf_22.png",
+                "image": "img/beowulf/Beowulf_22.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50% de chance de infligir QUEBRA DE ARMADURA por 5/7 segundos."
             },
@@ -226,7 +226,7 @@ const MOVE_DATA = {
         },
         "Airwulf": {
             "image": {
-                "image": "img/beowulf/Beowulf_27.png",
+                "image": "img/beowulf/Beowulf_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50/100% de chance de infligir QUEBRA DE ARMADURA e BLOQUEIO DE CURA por 10 s.\r"
             },
@@ -237,7 +237,7 @@ const MOVE_DATA = {
     "big-band": {
         "Explosão": {
             "image": {
-                "image": "img/big-band/Big_Band_17.png",
+                "image": "img/big-band/Big_Band_17.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige INCAPACITAÇÃO por 5/7/10 segundos."
             },
@@ -246,7 +246,7 @@ const MOVE_DATA = {
         },
         "Pedalada Gigante": {
             "image": {
-                "image": "img/big-band/Big_Band_22.png",
+                "image": "img/big-band/Big_Band_22.webp",
                 "type": "Golpe Especial",
                 "description": "Remove todos os EF. POS. do oponente e desativa os GOLPES ESPECIAIS dele por 4/8/12 s ao GOLPEAR."
             },
@@ -255,7 +255,7 @@ const MOVE_DATA = {
         },
         "Porrada de Pratos": {
             "image": {
-                "image": "img/big-band/Big_Band_20.png",
+                "image": "img/big-band/Big_Band_20.webp",
                 "type": "Golpe Especial",
                 "description": "20/35% de chance de ATORDOAR o oponente por 3/4 segundos ao GOLPEAR."
             },
@@ -264,7 +264,7 @@ const MOVE_DATA = {
         },
         "Soco Labrosone": {
             "image": {
-                "image": "img/big-band/Big_Band_21.png",
+                "image": "img/big-band/Big_Band_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 50/100% de chance de infligir SANGRAMENTO por 4/6 segundos."
             },
@@ -273,7 +273,7 @@ const MOVE_DATA = {
         },
         "Solo de Soalha": {
             "image": {
-                "image": "img/big-band/Big_Band_24.png",
+                "image": "img/big-band/Big_Band_24.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 2/5/8% de dano extra por cada GOLPE DE COMBO."
             },
@@ -282,7 +282,7 @@ const MOVE_DATA = {
         },
         "Trompa Supersônica": {
             "image": {
-                "image": "img/big-band/Big_Band_25.png",
+                "image": "img/big-band/Big_Band_25.webp",
                 "type": "Golpe Especial",
                 "description": "15% de chance de infligir SANGRAMENTO FORTE por 5/7/10 s ao GOLPEAR."
             },
@@ -291,7 +291,7 @@ const MOVE_DATA = {
         },
         "Tuba Tuba": {
             "image": {
-                "image": "img/big-band/Big_Band_29.png",
+                "image": "img/big-band/Big_Band_29.webp",
                 "type": "Golpe Especial",
                 "description": "35% de chance de remover 1 EF. POS. do oponente ao GOLPEAR. O GOLPE final tem 50/75/100% de chance de ATORDOAR por 6 s."
             },
@@ -300,7 +300,7 @@ const MOVE_DATA = {
         },
         "Motor Tympani": {
             "image": {
-                "image": "img/big-band/Big_Band_26.png",
+                "image": "img/big-band/Big_Band_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25% de chance de infligir QUEBRA DE ARMADURA por 5/7/10 s."
             },
@@ -309,7 +309,7 @@ const MOVE_DATA = {
         },
         "Siga o Compasso": {
             "image": {
-                "image": "img/big-band/Big_Band_27.png",
+                "image": "img/big-band/Big_Band_27.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MED. DE BLOCKBUSTER do oponente em 8/10/12% a cada GOLPE acertado em GOLPES DE COMBO maiores que 10."
             },
@@ -318,7 +318,7 @@ const MOVE_DATA = {
         },
         "Fôlego da Gaita": {
             "image": {
-                "image": "img/big-band/Big_Band_16.png",
+                "image": "img/big-band/Big_Band_16.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar ARMADURA por 10/15/20 segundos."
             },
@@ -327,7 +327,7 @@ const MOVE_DATA = {
         },
         "Intervalo": {
             "image": {
-                "image": "img/big-band/Big_Band_19.png",
+                "image": "img/big-band/Big_Band_19.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -336,7 +336,7 @@ const MOVE_DATA = {
         },
         "Isolamento Acústico": {
             "image": {
-                "image": "img/big-band/Big_Band_18.png",
+                "image": "img/big-band/Big_Band_18.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado como contragolpe, ATORDOA o oponente por 2/3/4 segundos."
             },
@@ -345,7 +345,7 @@ const MOVE_DATA = {
         },
         "Doce Melodia": {
             "image": {
-                "image": "img/big-band/Big_Band_23.png",
+                "image": "img/big-band/Big_Band_23.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 6/7/8% a cada GOLPE que acertar."
             },
@@ -354,7 +354,7 @@ const MOVE_DATA = {
         },
         "Arautos em Fila": {
             "image": {
-                "image": "img/big-band/Big_Band_28.png",
+                "image": "img/big-band/Big_Band_28.webp",
                 "type": "Golpe Especial",
                 "description": "Ganhe 3 camadas de REGENERAÇÃO por 8/10/12 s."
             },
@@ -365,7 +365,7 @@ const MOVE_DATA = {
     "black-dahlia": {
         "Te Vejo por Aí": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_18.png",
+                "image": "img/black-dahlia/Black_Dahlia_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -374,7 +374,7 @@ const MOVE_DATA = {
         },
         "Deslizando": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_20.png",
+                "image": "img/black-dahlia/Black_Dahlia_20.webp",
                 "type": "Golpe Especial",
                 "description": "Tem 50/75/100% de chance de remover todos os EF. NEG. quando usado."
             },
@@ -383,7 +383,7 @@ const MOVE_DATA = {
         },
         "Massacre": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_24.png",
+                "image": "img/black-dahlia/Black_Dahlia_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ganhe OLHO-MORTO por 5/7/10 segundos ao golpear."
             },
@@ -392,7 +392,7 @@ const MOVE_DATA = {
         },
         "Pêndulo da Morte": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_22.png",
+                "image": "img/black-dahlia/Black_Dahlia_22.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -401,7 +401,7 @@ const MOVE_DATA = {
         },
         "Ratoeira dos Medici": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_23.png",
+                "image": "img/black-dahlia/Black_Dahlia_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, DESATIVA os BLOCKBUSTERS e inflige IMOBILIZAÇÃO por 8/10/12 segundos."
             },
@@ -410,7 +410,7 @@ const MOVE_DATA = {
         },
         "Capacho": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_26.png",
+                "image": "img/black-dahlia/Black_Dahlia_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 5/7/10 segundos."
             },
@@ -419,7 +419,7 @@ const MOVE_DATA = {
         },
         "Empoderar": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_27.png",
+                "image": "img/black-dahlia/Black_Dahlia_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige MALDIÇÃO por 5/7/10 segundos."
             },
@@ -428,7 +428,7 @@ const MOVE_DATA = {
         },
         "Perigo no Cenário": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_25.png",
+                "image": "img/black-dahlia/Black_Dahlia_25.webp",
                 "type": "Golpe Especial",
                 "description": "50/75/100% de chance de infligir QUEBRA DE GUARDA por 10 segundos ao BLOQUEAR."
             },
@@ -437,7 +437,7 @@ const MOVE_DATA = {
         },
         "Presente de Despedida": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_28.png",
+                "image": "img/black-dahlia/Black_Dahlia_28.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 10/15/20% de dano extra por cada camada de EF. NEG. no oponente."
             },
@@ -446,7 +446,7 @@ const MOVE_DATA = {
         },
         "Contra, Ataque!": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_21.png",
+                "image": "img/black-dahlia/Black_Dahlia_21.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado como contragolpe, inflige BLOQUEIO DE CURA por 4/8/12 segundos."
             },
@@ -455,7 +455,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_17.png",
+                "image": "img/black-dahlia/Black_Dahlia_17.webp",
                 "type": "Golpe Especial",
                 "description": "Causa MARCA DA MORTE por 5/7/10 segundos quando acertar um GOLPE."
             },
@@ -464,7 +464,7 @@ const MOVE_DATA = {
         },
         "Noite das Garotas": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_29.png",
+                "image": "img/black-dahlia/Black_Dahlia_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25% de chance de infligir MARCA DA MORTE por 10/12/15 s (também se aplica a golpes bloqueados)."
             },
@@ -473,7 +473,7 @@ const MOVE_DATA = {
         },
         "Último Pedido": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_25.png",
+                "image": "img/black-dahlia/Black_Dahlia_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ganhe FÚRIA e OLHO-MORTO por 10/12/15 segundos se usado para derrotar um oponente."
             },
@@ -482,7 +482,7 @@ const MOVE_DATA = {
         },
         "É Suco de Maçã": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_19.png",
+                "image": "img/black-dahlia/Black_Dahlia_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar OLHO-MORTO por 10/12/15 segundos."
             },
@@ -493,7 +493,7 @@ const MOVE_DATA = {
     "cerebella": {
         "Explosão": {
             "image": {
-                "image": "img/cerebella/Cerebella_18.png",
+                "image": "img/cerebella/Cerebella_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige INCAPACITAÇÃO por 5/7/10 segundos."
             },
@@ -502,7 +502,7 @@ const MOVE_DATA = {
         },
         "Arremesso de Martelo": {
             "image": {
-                "image": "img/cerebella/Cerebella_19.png",
+                "image": "img/cerebella/Cerebella_19.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -511,7 +511,7 @@ const MOVE_DATA = {
         },
         "Cavalo de Alça": {
             "image": {
-                "image": "img/cerebella/Cerebella_25.png",
+                "image": "img/cerebella/Cerebella_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 10/20% de chance de infligir SANGRAMENTO por 5/7 segundos."
             },
@@ -520,7 +520,7 @@ const MOVE_DATA = {
         },
         "Cerecóptero": {
             "image": {
-                "image": "img/cerebella/Cerebella_22.png",
+                "image": "img/cerebella/Cerebella_22.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 10/20% de chance de infligir QUEBRA DE ARMADURA por 5/7 segundos."
             },
@@ -529,7 +529,7 @@ const MOVE_DATA = {
         },
         "Chifrada Montanhesa": {
             "image": {
-                "image": "img/cerebella/Cerebella_20.png",
+                "image": "img/cerebella/Cerebella_20.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
             },
@@ -538,7 +538,7 @@ const MOVE_DATA = {
         },
         "Gorilassel": {
             "image": {
-                "image": "img/cerebella/Cerebella_24.png",
+                "image": "img/cerebella/Cerebella_24.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -547,7 +547,7 @@ const MOVE_DATA = {
         },
         "Punho Engatilhado": {
             "image": {
-                "image": "img/cerebella/Cerebella_23.png",
+                "image": "img/cerebella/Cerebella_23.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -556,7 +556,7 @@ const MOVE_DATA = {
         },
         "Diamante Bruto": {
             "image": {
-                "image": "img/cerebella/Cerebella_28.png",
+                "image": "img/cerebella/Cerebella_28.webp",
                 "type": "Golpe Especial",
                 "description": "15/25/35% de dano extra se o oponente estiver no ar."
             },
@@ -565,7 +565,7 @@ const MOVE_DATA = {
         },
         "Dínamo Diamante": {
             "image": {
-                "image": "img/cerebella/Cerebella_27.png",
+                "image": "img/cerebella/Cerebella_27.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 2/5/8% de dano extra por cada GOLPE DE COMBO."
             },
@@ -574,7 +574,7 @@ const MOVE_DATA = {
         },
         "Excelebella": {
             "image": {
-                "image": "img/cerebella/Cerebella_29.png",
+                "image": "img/cerebella/Cerebella_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25% de chance de ATORDOAR o oponente por 4/6 segundos."
             },
@@ -583,7 +583,7 @@ const MOVE_DATA = {
         },
         "Final Mortal": {
             "image": {
-                "image": "img/cerebella/Cerebella_31.png",
+                "image": "img/cerebella/Cerebella_31.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado para derrotar um oponente, ganha 2 EFEITOS POSITIVOS aleatórios por 10/12/15 seg."
             },
@@ -592,7 +592,7 @@ const MOVE_DATA = {
         },
         "Trapézio Medici": {
             "image": {
-                "image": "img/cerebella/Cerebella_17.png",
+                "image": "img/cerebella/Cerebella_17.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar ARMADURA por 10/12/15 segundos."
             },
@@ -601,7 +601,7 @@ const MOVE_DATA = {
         },
         "Cortada de Chifre": {
             "image": {
-                "image": "img/cerebella/Cerebella_21.png",
+                "image": "img/cerebella/Cerebella_21.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -610,7 +610,7 @@ const MOVE_DATA = {
         },
         "Amaciante": {
             "image": {
-                "image": "img/cerebella/Cerebella_30.png",
+                "image": "img/cerebella/Cerebella_30.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado para derrotar um oponente, ganha 2 camadas de ARMADURA por 10/12/15 seg."
             },
@@ -619,7 +619,7 @@ const MOVE_DATA = {
         },
         "Rede de Segurança": {
             "image": {
-                "image": "img/cerebella/Cerebella_26.png",
+                "image": "img/cerebella/Cerebella_26.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado para derrotar um oponente, ganha REGENERAÇÃO FORTE por 5/8/10 seg."
             },
@@ -630,7 +630,7 @@ const MOVE_DATA = {
     "double": {
         "Falsas intenções": {
             "image": {
-                "image": "img/double/Double_19.png",
+                "image": "img/double/Double_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar um EFEITO POSITIVO aleatório por 10/12/15 segundos."
             },
@@ -639,7 +639,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/double/Double_17.png",
+                "image": "img/double/Double_17.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige BLOQUEIO DE CURA por 5/7/10 segundos."
             },
@@ -648,7 +648,7 @@ const MOVE_DATA = {
         },
         "Fakesabiá": {
             "image": {
-                "image": "img/double/Double_21.png",
+                "image": "img/double/Double_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige BLOQUEIO DE CURA por 4/8/12 segundos."
             },
@@ -657,7 +657,7 @@ const MOVE_DATA = {
         },
         "Fim da Picada": {
             "image": {
-                "image": "img/double/Double_23.png",
+                "image": "img/double/Double_23.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -666,7 +666,7 @@ const MOVE_DATA = {
         },
         "Luger Cover": {
             "image": {
-                "image": "img/double/Double_24.png",
+                "image": "img/double/Double_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige um EFEITO NEGATIVO aleatório por 4/8/12 segundos."
             },
@@ -675,7 +675,7 @@ const MOVE_DATA = {
         },
         "Pelinhoslide": {
             "image": {
-                "image": "img/double/Double_22.png",
+                "image": "img/double/Double_22.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige LENTIDÃO por 4/8/12 segundos."
             },
@@ -684,7 +684,7 @@ const MOVE_DATA = {
         },
         "Gatélites": {
             "image": {
-                "image": "img/double/Double_28.png",
+                "image": "img/double/Double_28.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 2/3/5% de chance de remover todos os EFEITOS POSITIVOS."
             },
@@ -693,7 +693,7 @@ const MOVE_DATA = {
         },
         "Megacaótico": {
             "image": {
-                "image": "img/double/Double_29.png",
+                "image": "img/double/Double_29.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 3/4/5% a cada GOLPE acertado."
             },
@@ -702,7 +702,7 @@ const MOVE_DATA = {
         },
         "Ligeirinho": {
             "image": {
-                "image": "img/double/Double_20.png",
+                "image": "img/double/Double_20.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -711,7 +711,7 @@ const MOVE_DATA = {
         },
         "Cabra da Peste": {
             "image": {
-                "image": "img/double/Double_18.png",
+                "image": "img/double/Double_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -720,7 +720,7 @@ const MOVE_DATA = {
         },
         "Gunblades": {
             "image": {
-                "image": "img/double/Double_26.png",
+                "image": "img/double/Double_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO e BLOQUEIO DE CURA por 10 segundos."
             },
@@ -729,7 +729,7 @@ const MOVE_DATA = {
         },
         "Hora do Pesadelo": {
             "image": {
-                "image": "img/double/Double_30.png",
+                "image": "img/double/Double_30.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado para derrotar um oponente, ganha 3 EFEITOS POSITIVOS aleatórios por 10/12/15 segundos."
             },
@@ -738,7 +738,7 @@ const MOVE_DATA = {
         },
         "Besta de Gehenna": {
             "image": {
-                "image": "img/double/Double_25.png",
+                "image": "img/double/Double_25.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de chance de colocar os GOLPES ESPECIAIS e TROCAS do oponente em REATIVAÇÃO."
             },
@@ -747,7 +747,7 @@ const MOVE_DATA = {
         },
         "Multidão Enfurecida": {
             "image": {
-                "image": "img/double/Double_27.png",
+                "image": "img/double/Double_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir FEITIÇO por 10 segundos."
             },
@@ -758,7 +758,7 @@ const MOVE_DATA = {
     "eliza": {
         "Damas Escarlates": {
             "image": {
-                "image": "img/eliza/Eliza_19.png",
+                "image": "img/eliza/Eliza_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar REGENERAÇÃO por 10/12/15 segundos."
             },
@@ -767,7 +767,7 @@ const MOVE_DATA = {
         },
         "Exílio do Paraíso": {
             "image": {
-                "image": "img/eliza/Eliza_18.png",
+                "image": "img/eliza/Eliza_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -776,7 +776,7 @@ const MOVE_DATA = {
         },
         "Ascenção": {
             "image": {
-                "image": "img/eliza/Eliza_26.png",
+                "image": "img/eliza/Eliza_26.webp",
                 "type": "Golpe Especial",
                 "description": "25/50% de chance de ATORDOAR o oponente por 4/6 segundos ao GOLPEAR."
             },
@@ -785,7 +785,7 @@ const MOVE_DATA = {
         },
         "Banir o caos": {
             "image": {
-                "image": "img/eliza/Eliza_21.png",
+                "image": "img/eliza/Eliza_21.webp",
                 "type": "Golpe Especial",
                 "description": "Remove todos os EFEITOS POSITIVOS do oponente e inflige BLOQUEIO DE CURA por 4/8/12 seg (ao BLOQUEAR também)."
             },
@@ -794,7 +794,7 @@ const MOVE_DATA = {
         },
         "Espiral de Osíris": {
             "image": {
-                "image": "img/eliza/Eliza_24.png",
+                "image": "img/eliza/Eliza_24.webp",
                 "type": "Golpe Especial",
                 "description": "5/10% de chance de infligir SANGRAMENTO FORTE por 5/10 segundos ao GOLPEAR."
             },
@@ -803,7 +803,7 @@ const MOVE_DATA = {
         },
         "Mergulho de Hórus": {
             "image": {
-                "image": "img/eliza/Eliza_22.png",
+                "image": "img/eliza/Eliza_22.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -812,7 +812,7 @@ const MOVE_DATA = {
         },
         "Peso de Anúbis": {
             "image": {
-                "image": "img/eliza/Eliza_20.png",
+                "image": "img/eliza/Eliza_20.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -821,7 +821,7 @@ const MOVE_DATA = {
         },
         "Dama do Massacre": {
             "image": {
-                "image": "img/eliza/Eliza_32.png",
+                "image": "img/eliza/Eliza_32.webp",
                 "type": "Golpe Especial",
                 "description": "50/75/100% de chance de infligir um EF. NEGATIVO. aleatório por 10 seg e colocar GOLPES ESPECIAIS e ASSISTÊNCIAS do oponente em REATIVAÇÃO."
             },
@@ -830,7 +830,7 @@ const MOVE_DATA = {
         },
         "Fúria da Sekhmet": {
             "image": {
-                "image": "img/eliza/Eliza_29.png",
+                "image": "img/eliza/Eliza_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de ganhar FÚRIA E ACELERAÇÃO por 10 seg."
             },
@@ -839,7 +839,7 @@ const MOVE_DATA = {
         },
         "Mordida da Sekhmet": {
             "image": {
-                "image": "img/eliza/Eliza_27.png",
+                "image": "img/eliza/Eliza_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir QUEBRA DE ARMADURA e MALDIÇÃO por 10 seg."
             },
@@ -848,7 +848,7 @@ const MOVE_DATA = {
         },
         "Meio da Esfinge": {
             "image": {
-                "image": "img/eliza/Eliza_30.png",
+                "image": "img/eliza/Eliza_30.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, reduz o MEDIDOR DE BLOCKBUSTER do oponente em 25/35/50%."
             },
@@ -857,7 +857,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/eliza/Eliza_17.png",
+                "image": "img/eliza/Eliza_17.webp",
                 "type": "Golpe Especial",
                 "description": "Inflige MALDIÇÃO por 5/7/10 segundos ao GOLPEAR"
             },
@@ -866,7 +866,7 @@ const MOVE_DATA = {
         },
         "Nekhbet, a Abutre": {
             "image": {
-                "image": "img/eliza/Eliza_30.png",
+                "image": "img/eliza/Eliza_30.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir QUEBRA DE ARMADURA por 8 segundos."
             },
@@ -875,7 +875,7 @@ const MOVE_DATA = {
         },
         "Trono de Ísis": {
             "image": {
-                "image": "img/eliza/Eliza_25.png",
+                "image": "img/eliza/Eliza_25.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -884,7 +884,7 @@ const MOVE_DATA = {
         },
         "Vez da Sekhmet": {
             "image": {
-                "image": "img/eliza/Eliza_28.png",
+                "image": "img/eliza/Eliza_28.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO e BLOQUEIO DE CURA por 10 seg."
             },
@@ -893,7 +893,7 @@ const MOVE_DATA = {
         },
         "Sol de Khepri": {
             "image": {
-                "image": "img/eliza/Eliza_30.png",
+                "image": "img/eliza/Eliza_30.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 25/35/50% de dano extra se o oponente estiver sofrendo um EFEITO NEGATIVO."
             },
@@ -904,7 +904,7 @@ const MOVE_DATA = {
     "filia": {
         "Explosão": {
             "image": {
-                "image": "img/filia/Filia_18.png",
+                "image": "img/filia/Filia_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige SANGRAMENTO por 5/7/10 segundos."
             },
@@ -913,7 +913,7 @@ const MOVE_DATA = {
         },
         "Mechas Soltas": {
             "image": {
-                "image": "img/filia/Filia_19.png",
+                "image": "img/filia/Filia_19.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -922,7 +922,7 @@ const MOVE_DATA = {
         },
         "Espinho Trançado": {
             "image": {
-                "image": "img/filia/Filia_23.png",
+                "image": "img/filia/Filia_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige SANGRAMENTO por 4/8/12 segundos."
             },
@@ -931,7 +931,7 @@ const MOVE_DATA = {
         },
         "Cuspida": {
             "image": {
-                "image": "img/filia/Filia_29.png",
+                "image": "img/filia/Filia_29.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 25/35/50%."
             },
@@ -940,7 +940,7 @@ const MOVE_DATA = {
         },
         "Die Verwandlung": {
             "image": {
-                "image": "img/filia/Filia_24.png",
+                "image": "img/filia/Filia_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 10/15/20% de chance de infligir SANGRAMENTO por 5 segundos."
             },
@@ -949,7 +949,7 @@ const MOVE_DATA = {
         },
         "Senta a Pua!": {
             "image": {
-                "image": "img/filia/Filia_25.png",
+                "image": "img/filia/Filia_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 5/10/15% de chance de remover todos os EFEITOS POSITIVOS."
             },
@@ -958,7 +958,7 @@ const MOVE_DATA = {
         },
         "Tricobezoar": {
             "image": {
-                "image": "img/filia/Filia_27.png",
+                "image": "img/filia/Filia_27.webp",
                 "type": "Golpe Especial",
                 "description": "15/25/35% de dano extra se o oponente estiver no ar."
             },
@@ -967,7 +967,7 @@ const MOVE_DATA = {
         },
         "Pico de Viúva": {
             "image": {
-                "image": "img/filia/Filia_26.png",
+                "image": "img/filia/Filia_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 50/75/100% de chance de infligir INCAPACITAÇÃO e QUEBRA DE ARMADURA por 10 seg."
             },
@@ -976,7 +976,7 @@ const MOVE_DATA = {
         },
         "Lobo Devorador": {
             "image": {
-                "image": "img/filia/Filia_28.png",
+                "image": "img/filia/Filia_28.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de dano extra se o oponente tiver um efeito de SANGRAMENTO."
             },
@@ -985,7 +985,7 @@ const MOVE_DATA = {
         },
         "Bola de Cabelo": {
             "image": {
-                "image": "img/filia/Filia_22.png",
+                "image": "img/filia/Filia_22.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -994,7 +994,7 @@ const MOVE_DATA = {
         },
         "Coque Francês": {
             "image": {
-                "image": "img/filia/Filia_21.png",
+                "image": "img/filia/Filia_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50% de chance de infligir SANGRAMENTO por 3/5 segundos."
             },
@@ -1003,7 +1003,7 @@ const MOVE_DATA = {
         },
         "Brocamizade": {
             "image": {
-                "image": "img/filia/Filia_20.png",
+                "image": "img/filia/Filia_20.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -1012,7 +1012,7 @@ const MOVE_DATA = {
         },
         "É de Nascença": {
             "image": {
-                "image": "img/filia/Filia_17.png",
+                "image": "img/filia/Filia_17.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar FÚRIA por 10/12/15 segundos."
             },
@@ -1023,7 +1023,7 @@ const MOVE_DATA = {
     "fukua": {
         "Explosão": {
             "image": {
-                "image": "img/fukua/Fukua_18.png",
+                "image": "img/fukua/Fukua_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige FADIGA por 15/13/10 seg."
             },
@@ -1032,7 +1032,7 @@ const MOVE_DATA = {
         },
         "Brocamizade": {
             "image": {
-                "image": "img/fukua/Fukua_20.png",
+                "image": "img/fukua/Fukua_20.webp",
                 "type": "Golpe Especial",
                 "description": "Causa MARCA DE MORTE, QUEBRA DE ARMADURA e INCAPACITAÇÃO por 10/12/15 seg cada, se o golpe final for CRÍTICO."
             },
@@ -1041,7 +1041,7 @@ const MOVE_DATA = {
         },
         "Clone Solitário": {
             "image": {
-                "image": "img/fukua/Fukua_21.png",
+                "image": "img/fukua/Fukua_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, causa BLOQUEIO DE CURA por 10/12/15 seg. A VIDA drena lentamente enquanto um Clone é preparado."
             },
@@ -1050,7 +1050,7 @@ const MOVE_DATA = {
         },
         "Tiros de Amor": {
             "image": {
-                "image": "img/fukua/Fukua_24.png",
+                "image": "img/fukua/Fukua_24.webp",
                 "type": "Golpe Especial",
                 "description": "INDEFENSÁVEL se o oponente estiver distante. Ao GOLPEAR, drena 5/10/15% do MEDIDOR DE BLOCKBUSTER ou 15/20/25% se o oponente estiver longe."
             },
@@ -1059,7 +1059,7 @@ const MOVE_DATA = {
         },
         "Beijo de Boa noite": {
             "image": {
-                "image": "img/fukua/Fukua_25.png",
+                "image": "img/fukua/Fukua_25.webp",
                 "type": "Golpe Especial",
                 "description": "10/15/25% de chance de infligir DEFINHAR e FADIGA por 10 seg cada ao GOLPEAR."
             },
@@ -1068,7 +1068,7 @@ const MOVE_DATA = {
         },
         "Broca Sonhadora": {
             "image": {
-                "image": "img/fukua/Fukua_26.png",
+                "image": "img/fukua/Fukua_26.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 2/5/8% de dano extra por cada GOLPE DE COMBO."
             },
@@ -1077,7 +1077,7 @@ const MOVE_DATA = {
         },
         "Conchinha Inevitável": {
             "image": {
-                "image": "img/fukua/Fukua_27.png",
+                "image": "img/fukua/Fukua_27.webp",
                 "type": "Golpe Especial",
                 "description": "Dá 1/2/3 camadas de MIASMA por 10 seg se usado para derrotar um oponente.\\n\\n50% do dano causado é recuperado como VIDA."
             },
@@ -1086,7 +1086,7 @@ const MOVE_DATA = {
         },
         "Melhores Amigos!": {
             "image": {
-                "image": "img/fukua/Fukua_28.png",
+                "image": "img/fukua/Fukua_28.webp",
                 "type": "Golpe Especial",
                 "description": "15/20/25% de chance de transferir todos os EF. NEGATIVOS para o oponente e todos EF. POSITIVOS do oponente para você ao GOLPEAR."
             },
@@ -1095,7 +1095,7 @@ const MOVE_DATA = {
         },
         "Uma Vez Mordido...": {
             "image": {
-                "image": "img/fukua/Fukua_29.png",
+                "image": "img/fukua/Fukua_29.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 25/35/50% de dano bônus se o oponente tiver mais de 50% DE VIDA.\\n\\n50% do dano causado é recuperado como VIDA."
             },
@@ -1104,7 +1104,7 @@ const MOVE_DATA = {
         },
         "Mechas Soltas": {
             "image": {
-                "image": "img/fukua/Fukua_19.png",
+                "image": "img/fukua/Fukua_19.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1113,7 +1113,7 @@ const MOVE_DATA = {
         },
         "Flecha do Cupido": {
             "image": {
-                "image": "img/fukua/Fukua_23.png",
+                "image": "img/fukua/Fukua_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, drena 5/10/15% do MEDIDOR DE BLOCKBUSTER ou 15/20/25% se o oponente estiver longe."
             },
@@ -1122,7 +1122,7 @@ const MOVE_DATA = {
         },
         "Indefeso": {
             "image": {
-                "image": "img/fukua/Fukua_17.png",
+                "image": "img/fukua/Fukua_17.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE no seu oponente para ganhar MIASMA por 10/12/15 seg e recuperar 5% de VIDA."
             },
@@ -1131,7 +1131,7 @@ const MOVE_DATA = {
         },
         "Abraço de Inseto": {
             "image": {
-                "image": "img/fukua/Fukua_22.png",
+                "image": "img/fukua/Fukua_22.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige FADIGA por 15/13/10 seg. A VIDA drena lentamente enquanto um Clone é preparado."
             },
@@ -1140,7 +1140,7 @@ const MOVE_DATA = {
         },
         "De Pernas pro Ar": {
             "image": {
-                "image": "img/fukua/Fukua_30.png",
+                "image": "img/fukua/Fukua_30.webp",
                 "type": "Golpe Especial",
                 "description": "Causa dano adicional de 5/10/15% para cada 10% DE VIDA perdida por Fukua."
             },
@@ -1151,7 +1151,7 @@ const MOVE_DATA = {
     "marie": {
         "Explosão": {
             "image": {
-                "image": "img/marie/Marie_16.png",
+                "image": "img/marie/Marie_16.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUIETUS por 10/12/15 segundos."
             },
@@ -1160,7 +1160,7 @@ const MOVE_DATA = {
         },
         "Desafio Formal": {
             "image": {
-                "image": "img/marie/Marie_17.png",
+                "image": "img/marie/Marie_17.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1169,7 +1169,7 @@ const MOVE_DATA = {
         },
         "Carrossel da Marie": {
             "image": {
-                "image": "img/marie/Marie_21.png",
+                "image": "img/marie/Marie_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
             },
@@ -1178,7 +1178,7 @@ const MOVE_DATA = {
         },
         "Fazedor de Feno de Hilgard": {
             "image": {
-                "image": "img/marie/Marie_20.png",
+                "image": "img/marie/Marie_20.webp",
                 "type": "Golpe Especial",
                 "description": "INVOCAÇÃO ESQUELÉTICA: ao GOLPEAR, inflige QUIETUS por 5/7/10 segundos."
             },
@@ -1187,7 +1187,7 @@ const MOVE_DATA = {
         },
         "Obstrução da Sucção": {
             "image": {
-                "image": "img/marie/Marie_22.png",
+                "image": "img/marie/Marie_22.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -1196,7 +1196,7 @@ const MOVE_DATA = {
         },
         "Pula-Pula": {
             "image": {
-                "image": "img/marie/Marie_23.png",
+                "image": "img/marie/Marie_23.webp",
                 "type": "Golpe Especial",
                 "description": "INVOCAÇÃO ESQUELÉTICA: 15/20/25% de chance de infligir SANGRAMENTO FORTE por 5 segundos ao GOLPEAR."
             },
@@ -1205,7 +1205,7 @@ const MOVE_DATA = {
         },
         "Esmurrar Até Cansar": {
             "image": {
-                "image": "img/marie/Marie_25.png",
+                "image": "img/marie/Marie_25.webp",
                 "type": "Golpe Especial",
                 "description": "INVOCAÇÃO ESQUELÉTICA: 20/35% de chance de infligir ATORDOAMENTO por 3/4 segundos ao GOLPEAR. INDEFENSÁVEL se o oponente estiver sofrendo de QUIETUS."
             },
@@ -1214,7 +1214,7 @@ const MOVE_DATA = {
         },
         "Impacto Esquelético Repetido": {
             "image": {
-                "image": "img/marie/Marie_29.png",
+                "image": "img/marie/Marie_29.webp",
                 "type": "Golpe Especial",
                 "description": "INVOCAÇÃO ESQUELÉTICA: inflige POLARIDADE INVERSA por 10/12/15 segundos ao GOLPEAR. Causa 50% de dano extra se CARREGADO."
             },
@@ -1223,7 +1223,7 @@ const MOVE_DATA = {
         },
         "Uivo de Hilgard": {
             "image": {
-                "image": "img/marie/Marie_26.png",
+                "image": "img/marie/Marie_26.webp",
                 "type": "Golpe Especial",
                 "description": "INVOCAÇÃO ESQUELÉTICA: 35% de chance de infligir QUIETUS por 10/12/15 segundos ao GOLPEAR."
             },
@@ -1232,7 +1232,7 @@ const MOVE_DATA = {
         },
         "O Peso da sua Vontade": {
             "image": {
-                "image": "img/marie/Marie_28.png",
+                "image": "img/marie/Marie_28.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 2/3/4% a cada GOLPE que acertar."
             },
@@ -1241,7 +1241,7 @@ const MOVE_DATA = {
         },
         "Manobra Roomba": {
             "image": {
-                "image": "img/marie/Marie_27.png",
+                "image": "img/marie/Marie_27.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% do dano causado é recuperado como VIDA."
             },
@@ -1250,7 +1250,7 @@ const MOVE_DATA = {
         },
         "Limpeza Geral": {
             "image": {
-                "image": "img/marie/Marie_24.png",
+                "image": "img/marie/Marie_24.webp",
                 "type": "Golpe Especial",
                 "description": "25/50/75% de chance de remover todos os EFEITOS POSITIVOS ao GOLPEAR."
             },
@@ -1259,7 +1259,7 @@ const MOVE_DATA = {
         },
         "Explosão do Fole": {
             "image": {
-                "image": "img/marie/Marie_19.png",
+                "image": "img/marie/Marie_19.webp",
                 "type": "Golpe Especial",
                 "description": "50/75/100% de chance ao GOLPEAR (inclui golpes bloqueados) para transferir 1 EF. NEG. de si mesma para o oponente."
             },
@@ -1268,7 +1268,7 @@ const MOVE_DATA = {
         },
         "Um Momento no Tempo": {
             "image": {
-                "image": "img/marie/Marie_18.png",
+                "image": "img/marie/Marie_18.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar um EF. POS. aleatório por 10/12/15 segundos. Também inflige DEFINHAR por 10 segundos se CARREGADO."
             },
@@ -1279,7 +1279,7 @@ const MOVE_DATA = {
     "ms-fortune": {
         "Gato sonolento": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_19.png",
+                "image": "img/ms-fortune/Ms_Fortune_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar 1/2/3 camada(s) de PRECISÃO."
             },
@@ -1288,7 +1288,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_17.png",
+                "image": "img/ms-fortune/Ms_Fortune_17.webp",
                 "type": "Golpe Especial",
                 "description": "Causa MARCA DA MORTE por 5/7/10 segundos quando acertar um GOLPE."
             },
@@ -1297,7 +1297,7 @@ const MOVE_DATA = {
         },
         "Deslisada felina": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_21.png",
+                "image": "img/ms-fortune/Ms_Fortune_21.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 25/35/50% de dano extra contra oponentes sofrendo um EFEITO NEGATIVO."
             },
@@ -1306,7 +1306,7 @@ const MOVE_DATA = {
         },
         "El Gato": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_22.png",
+                "image": "img/ms-fortune/Ms_Fortune_22.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de chance infligir ATORDOAMENTO por 4 segundos ao acertar um CRÍTICO."
             },
@@ -1315,7 +1315,7 @@ const MOVE_DATA = {
         },
         "Fibrosa": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_23.png",
+                "image": "img/ms-fortune/Ms_Fortune_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
             },
@@ -1324,7 +1324,7 @@ const MOVE_DATA = {
         },
         "Cinco de desmembro": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_28.png",
+                "image": "img/ms-fortune/Ms_Fortune_28.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 50/75/100% de dano extra se o oponente tiver menos de 50% de VIDA. Sacrifica 25% da sua VIDA restante."
             },
@@ -1333,7 +1333,7 @@ const MOVE_DATA = {
         },
         "Febre de gato": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_25.png",
+                "image": "img/ms-fortune/Ms_Fortune_25.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 3/5/8% de dano adicional por GOLPE COMBO e inflige MARCA DA MORTE por 10 seg. (ao BLOQUEAR também)."
             },
@@ -1342,7 +1342,7 @@ const MOVE_DATA = {
         },
         "NHAM NHAM NHAM": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_26.png",
+                "image": "img/ms-fortune/Ms_Fortune_26.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% do dano causado é recuperado como VIDA."
             },
@@ -1351,7 +1351,7 @@ const MOVE_DATA = {
         },
         "Patadas": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_24.png",
+                "image": "img/ms-fortune/Ms_Fortune_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO por 5 segundos."
             },
@@ -1360,7 +1360,7 @@ const MOVE_DATA = {
         },
         "Gata-pulta": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_18.png",
+                "image": "img/ms-fortune/Ms_Fortune_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1369,7 +1369,7 @@ const MOVE_DATA = {
         },
         "Arranhão de gato": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_20.png",
+                "image": "img/ms-fortune/Ms_Fortune_20.webp",
                 "type": "Golpe Especial",
                 "description": "Cada GOLPE tem 15/25/35% de chance de infligir MARCA DA MORTE por 10 s ou QUEBRA DE ARMAD. por 10 s se o ataque for BLOQUEADO."
             },
@@ -1378,7 +1378,7 @@ const MOVE_DATA = {
         },
         "Fúria feral": {
             "image": {
-                "image": "img/ms-fortune/Ms_Fortune_27.png",
+                "image": "img/ms-fortune/Ms_Fortune_27.webp",
                 "type": "Golpe Especial",
                 "description": "Causa dano adicional igual a 5/7/10% da VIDA MÁXIMA do oponente se o golpe final for um CRÍTICO."
             },
@@ -1389,7 +1389,7 @@ const MOVE_DATA = {
     "painwheel": {
         "Explosão": {
             "image": {
-                "image": "img/painwheel/Painwheel_17.png",
+                "image": "img/painwheel/Painwheel_17.webp",
                 "type": "Golpe Especial",
                 "description": "Causa MARCA DA MORTE por 5/7/10 segundos quando acertar um GOLPE."
             },
@@ -1398,7 +1398,7 @@ const MOVE_DATA = {
         },
         "Eixo de Corrida": {
             "image": {
-                "image": "img/painwheel/Painwheel_22.png",
+                "image": "img/painwheel/Painwheel_22.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -1407,7 +1407,7 @@ const MOVE_DATA = {
         },
         "Ferrão Gae Bolga": {
             "image": {
-                "image": "img/painwheel/Painwheel_21.png",
+                "image": "img/painwheel/Painwheel_21.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -1416,7 +1416,7 @@ const MOVE_DATA = {
         },
         "Colheita de Buer": {
             "image": {
-                "image": "img/painwheel/Painwheel_27.png",
+                "image": "img/painwheel/Painwheel_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25% de chance de infligir QUEBRA DE ARMADURA por 5/10 segundos."
             },
@@ -1425,7 +1425,7 @@ const MOVE_DATA = {
         },
         "Morte Rastejante": {
             "image": {
-                "image": "img/painwheel/Painwheel_25.png",
+                "image": "img/painwheel/Painwheel_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 5/10% de chance de infligir SANGRAMENTO por 3/6 segundos."
             },
@@ -1434,7 +1434,7 @@ const MOVE_DATA = {
         },
         "Sobrecarga de Buer": {
             "image": {
-                "image": "img/painwheel/Painwheel_28.png",
+                "image": "img/painwheel/Painwheel_28.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 3/5/7% a cada GOLPE acertado."
             },
@@ -1443,7 +1443,7 @@ const MOVE_DATA = {
         },
         "Carga de Ódio": {
             "image": {
-                "image": "img/painwheel/Painwheel_24.png",
+                "image": "img/painwheel/Painwheel_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50/100% de chance de ganhar FÚRIA por 10 segundos."
             },
@@ -1452,7 +1452,7 @@ const MOVE_DATA = {
         },
         "Boca-de-Dragão": {
             "image": {
-                "image": "img/painwheel/Painwheel_18.png",
+                "image": "img/painwheel/Painwheel_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1461,7 +1461,7 @@ const MOVE_DATA = {
         },
         "Sorria!": {
             "image": {
-                "image": "img/painwheel/Painwheel_19.png",
+                "image": "img/painwheel/Painwheel_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar FÚRIA por 10/12/15 segundos."
             },
@@ -1470,7 +1470,7 @@ const MOVE_DATA = {
         },
         "Rancor Violeta": {
             "image": {
-                "image": "img/painwheel/Painwheel_23.png",
+                "image": "img/painwheel/Painwheel_23.webp",
                 "type": "Golpe Especial",
                 "description": "5/10% de chance de infligir SANGRAMENTO FORTE por 5/10 segundos ao GOLPEAR."
             },
@@ -1479,7 +1479,7 @@ const MOVE_DATA = {
         },
         "Lírio Cruel": {
             "image": {
-                "image": "img/painwheel/Painwheel_20.png",
+                "image": "img/painwheel/Painwheel_20.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25% de chance de infligir SANGRAMENTO por 2/4 segundos."
             },
@@ -1488,7 +1488,7 @@ const MOVE_DATA = {
         },
         "Foice Fraturada": {
             "image": {
-                "image": "img/painwheel/Painwheel_26.png",
+                "image": "img/painwheel/Painwheel_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/20/25% de chance de infligir MARCA DA MORTE por 10 seg."
             },
@@ -1499,7 +1499,7 @@ const MOVE_DATA = {
     "parasoul": {
         "Bâillement": {
             "image": {
-                "image": "img/parasoul/Parasoul_20.png",
+                "image": "img/parasoul/Parasoul_20.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar IMUNIDADE por 10/12/15 segundos."
             },
@@ -1508,7 +1508,7 @@ const MOVE_DATA = {
         },
         "Chamado da Garça": {
             "image": {
-                "image": "img/parasoul/Parasoul_21.png",
+                "image": "img/parasoul/Parasoul_21.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar 1/2/3 camada(s) de PRECISÃO."
             },
@@ -1517,7 +1517,7 @@ const MOVE_DATA = {
         },
         "Gatilho de napalm": {
             "image": {
-                "image": "img/parasoul/Parasoul_24.png",
+                "image": "img/parasoul/Parasoul_24.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -1526,7 +1526,7 @@ const MOVE_DATA = {
         },
         "Tiro de Napalm": {
             "image": {
-                "image": "img/parasoul/Parasoul_26.png",
+                "image": "img/parasoul/Parasoul_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 50/100% de chance de infligir SANGRAMENTO por 5/8 segundos."
             },
@@ -1535,7 +1535,7 @@ const MOVE_DATA = {
         },
         "Brigada Infernal": {
             "image": {
-                "image": "img/parasoul/Parasoul_31.png",
+                "image": "img/parasoul/Parasoul_31.webp",
                 "type": "Golpe Especial",
                 "description": "50/75/100% de dano extra enquanto pelo menos 3 LÁGRIMAS estiverem ativas."
             },
@@ -1544,7 +1544,7 @@ const MOVE_DATA = {
         },
         "Brigada Motorizada": {
             "image": {
-                "image": "img/parasoul/Parasoul_30.png",
+                "image": "img/parasoul/Parasoul_30.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25% de chance de ATORDOAR o oponente por 4/6 segundos."
             },
@@ -1553,7 +1553,7 @@ const MOVE_DATA = {
         },
         "Quicando no Dossel": {
             "image": {
-                "image": "img/parasoul/Parasoul_29.png",
+                "image": "img/parasoul/Parasoul_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de remover todos os EFEITOS POSITIVOS."
             },
@@ -1562,7 +1562,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/parasoul/Parasoul_19.png",
+                "image": "img/parasoul/Parasoul_19.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, DESATIVA BLOCKBUSTERS por 5/7/10 seg."
             },
@@ -1571,7 +1571,7 @@ const MOVE_DATA = {
         },
         "Banimento": {
             "image": {
-                "image": "img/parasoul/Parasoul_18.png",
+                "image": "img/parasoul/Parasoul_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1580,7 +1580,7 @@ const MOVE_DATA = {
         },
         "Mergulho da Garça": {
             "image": {
-                "image": "img/parasoul/Parasoul_22.png",
+                "image": "img/parasoul/Parasoul_22.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado como contragolpe, ATORDOA o oponente por 3/4/5 segundos."
             },
@@ -1589,7 +1589,7 @@ const MOVE_DATA = {
         },
         "Arremesso de napalm": {
             "image": {
-                "image": "img/parasoul/Parasoul_23.png",
+                "image": "img/parasoul/Parasoul_23.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -1598,7 +1598,7 @@ const MOVE_DATA = {
         },
         "Garça Motorizada": {
             "image": {
-                "image": "img/parasoul/Parasoul_25.png",
+                "image": "img/parasoul/Parasoul_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
             },
@@ -1607,7 +1607,7 @@ const MOVE_DATA = {
             },
         "Tiro Silencioso": {
             "image": {
-                "image": "img/parasoul/Parasoul_28.png",
+                "image": "img/parasoul/Parasoul_28.webp",
                 "type": "Blockbuster",
                 "description": "Tem chance 15%/25%/35% maior de acertar um CRÍTICO."
             },
@@ -1616,7 +1616,7 @@ const MOVE_DATA = {
         },
         "Banho de napalm": {
             "image": {
-                "image": "img/parasoul/Parasoul_27.png",
+                "image": "img/parasoul/Parasoul_27.webp",
                 "type": "Blockbuster",
                 "description": ""
             },
@@ -1627,7 +1627,7 @@ const MOVE_DATA = {
     "peacock": {
         "Vai, George!": {
             "image": {
-                "image": "img/peacock/Peacock_22.png",
+                "image": "img/peacock/Peacock_22.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -1636,7 +1636,7 @@ const MOVE_DATA = {
         },
         "Quem Vem Agora?": {
             "image": {
-                "image": "img/peacock/Peacock_16.png",
+                "image": "img/peacock/Peacock_16.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1645,7 +1645,7 @@ const MOVE_DATA = {
         },
         "BANG, BANG, BANG!": {
             "image": {
-                "image": "img/peacock/Peacock_19.png",
+                "image": "img/peacock/Peacock_19.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -1654,7 +1654,7 @@ const MOVE_DATA = {
         },
         "Multidão Enfurecida": {
             "image": {
-                "image": "img/peacock/Peacock_26.png",
+                "image": "img/peacock/Peacock_26.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25/35% de chance de remover todos os EFEITOS POSITIVOS."
             },
@@ -1663,7 +1663,7 @@ const MOVE_DATA = {
         },
         "Lenny, o Solitário": {
             "image": {
-                "image": "img/peacock/Peacock_25.png",
+                "image": "img/peacock/Peacock_25.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige 1/2/3 EFEITOS NEGATIVOS aleatórios por 10 segundos."
             },
@@ -1672,7 +1672,7 @@ const MOVE_DATA = {
         },
         "Alô Passarinho": {
             "image": {
-                "image": "img/peacock/Peacock_17.png",
+                "image": "img/peacock/Peacock_17.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar IMUNIDADE por 10/12/15 segundos."
             },
@@ -1681,7 +1681,7 @@ const MOVE_DATA = {
         },
         "Liguem os Motores!": {
             "image": {
-                "image": "img/peacock/Peacock_20.png",
+                "image": "img/peacock/Peacock_20.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50% de chance de infligir SANGRAMENTO por 4/8 segundos."
             },
@@ -1690,7 +1690,7 @@ const MOVE_DATA = {
         },
         "Explosão": {
             "image": {
-                "image": "img/peacock/Peacock_18.png",
+                "image": "img/peacock/Peacock_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 5/7/10 segundos."
             },
@@ -1699,7 +1699,7 @@ const MOVE_DATA = {
         },
         "Esquadrilha da Fumaça": {
             "image": {
-                "image": "img/peacock/Peacock_21.png",
+                "image": "img/peacock/Peacock_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
             },
@@ -1708,7 +1708,7 @@ const MOVE_DATA = {
         },
         "Dia do Julgamento": {
             "image": {
-                "image": "img/peacock/Peacock_23.png",
+                "image": "img/peacock/Peacock_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25% de chance de ATORDOAR o oponente por 4/6 segundos."
             },
@@ -1717,7 +1717,7 @@ const MOVE_DATA = {
         },
         "Bons Companheiros": {
             "image": {
-                "image": "img/peacock/Peacock_28.png",
+                "image": "img/peacock/Peacock_28.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 5/10% de chance de infligir QUEBRA DE ARMADURA por 5/8 segundos."
             },
@@ -1726,7 +1726,7 @@ const MOVE_DATA = {
         },
         "Agonia de Argo": {
             "image": {
-                "image": "img/peacock/Peacock_24.png",
+                "image": "img/peacock/Peacock_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 5/10% de chance de infligir QUEBRA DE ARMADURA por 3/5 segundos."
             },
@@ -1735,7 +1735,7 @@ const MOVE_DATA = {
         },
         "Aeroporto Mortal": {
             "image": {
-                "image": "img/peacock/Peacock_27.png",
+                "image": "img/peacock/Peacock_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 15/25% de chance de infligir SANGRAMENTO FORTE por 5/10 segundos."
             },
@@ -1746,7 +1746,7 @@ const MOVE_DATA = {
     "robo-fortune": {
         "Explosão": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_17.png",
+                "image": "img/robo-fortune/Robo-Fortune_17.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflija OSCILAÇÃO DE ENERGIA por 5/7/10 segundos."
             },
@@ -1755,7 +1755,7 @@ const MOVE_DATA = {
         },
         "Corte Rápido": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_24.png",
+                "image": "img/robo-fortune/Robo-Fortune_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, 50% de chance de ATORDOAR por 4 s e infligir OSC. DE ENERGIA por 10/12/15 s se o oponente ARRANCAR."
             },
@@ -1764,7 +1764,7 @@ const MOVE_DATA = {
         },
         "Fidget Spin": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_20.png",
+                "image": "img/robo-fortune/Robo-Fortune_20.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -1773,7 +1773,7 @@ const MOVE_DATA = {
         },
         "Raio de Calor": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_21.png",
+                "image": "img/robo-fortune/Robo-Fortune_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, 15/25/35% de chance de REMOVER 1 EF. POS. do oponente e ATORDOAR por 3 s."
             },
@@ -1782,7 +1782,7 @@ const MOVE_DATA = {
         },
         "Raio de Teonita": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_23.png",
+                "image": "img/robo-fortune/Robo-Fortune_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, DESATIVA ASSISTÊNCIAS, GOLPES ESPECIAIS ou BLOCKBUSTERS por 5/7/10 segundos.\\n\\nInflige QUEBRA DE ARMADURA por 10 segundos se BLOQUEADA."
             },
@@ -1791,7 +1791,7 @@ const MOVE_DATA = {
         },
         "Rotação Perigosa!": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_22.png",
+                "image": "img/robo-fortune/Robo-Fortune_22.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, 15/20/25% de chance de TRANSFERIR 1 EF. NEG. para o oponente."
             },
@@ -1800,7 +1800,7 @@ const MOVE_DATA = {
         },
         "ARMADILHA MAGNÉTICA": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_27.png",
+                "image": "img/robo-fortune/Robo-Fortune_27.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% do dano causado é recuperado como VIDA. Ganhe BARREIRA por 10 segundos ao GOLPEAR."
             },
@@ -1809,7 +1809,7 @@ const MOVE_DATA = {
         },
         "BATERIA DE ASSALTO": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_26.png",
+                "image": "img/robo-fortune/Robo-Fortune_26.webp",
                 "type": "Golpe Especial",
                 "description": "10/15/20% de chance de infligir OSCILAÇÃO DE ENERGIA por 10 segundos ao GOLPEAR."
             },
@@ -1818,7 +1818,7 @@ const MOVE_DATA = {
         },
         "CANHÃO DRAMÁTICO ALFA": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_25.png",
+                "image": "img/robo-fortune/Robo-Fortune_25.webp",
                 "type": "Golpe Especial",
                 "description": "CRÍTICOS infligem DEFINHAR por 5/7/10 segundos."
             },
@@ -1827,7 +1827,7 @@ const MOVE_DATA = {
         },
         "CANHÃO DRAMÁTICO ÔMEGA": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_29.png",
+                "image": "img/robo-fortune/Robo-Fortune_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, 2/3/5% de chance de REMOVER 1 EF. POS. do oponente e tirar 2% de VIDA extra p/ cada EF. POS. removido. Oponentes derrotados não revivem."
             },
@@ -1836,7 +1836,7 @@ const MOVE_DATA = {
         },
         "Corte da Linha": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_18.png",
+                "image": "img/robo-fortune/Robo-Fortune_18.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1845,7 +1845,7 @@ const MOVE_DATA = {
         },
         "CURTO-CIRCUITO": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_28.png",
+                "image": "img/robo-fortune/Robo-Fortune_28.webp",
                 "type": "Golpe Especial",
                 "description": "Durante o modo de detonação, GOLPES reduzem o MEDIDOR DE BLOCKBUSTER em 5/7/10%.\\n\\nSacrifica 10% da sua VIDA MÁXIMA."
             },
@@ -1854,7 +1854,7 @@ const MOVE_DATA = {
         },
         "Fala de verdade!": {
             "image": {
-                "image": "img/robo-fortune/Robo-Fortune_19.png",
+                "image": "img/robo-fortune/Robo-Fortune_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar BARREIRA por 10/12/15 segundos."
             },
@@ -1865,7 +1865,7 @@ const MOVE_DATA = {
     "squigly": {
         "Explosão": {
             "image": {
-                "image": "img/squigly/Squigly_18.png",
+                "image": "img/squigly/Squigly_18.webp",
                 "type": "Golpe Especial",
                 "description": "Inflige MALDIÇÃO por 5/7/10 segundos ao GOLPEAR"
             },
@@ -1874,7 +1874,7 @@ const MOVE_DATA = {
         },
         "Arrastar e morder": {
             "image": {
-                "image": "img/squigly/Squigly_22.png",
+                "image": "img/squigly/Squigly_22.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 10/15/20% de chance de remover todos os EFEITOS POSITIVOS do oponente."
             },
@@ -1883,7 +1883,7 @@ const MOVE_DATA = {
         },
         "Basso buffo": {
             "image": {
-                "image": "img/squigly/Squigly_17.png",
+                "image": "img/squigly/Squigly_17.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -1892,7 +1892,7 @@ const MOVE_DATA = {
         },
         "O acorde de prata": {
             "image": {
-                "image": "img/squigly/Squigly_24.png",
+                "image": "img/squigly/Squigly_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de TRANSFERIR 1 EFEITO POSITIVO do oponente para si mesmo."
             },
@@ -1901,7 +1901,7 @@ const MOVE_DATA = {
         },
         "Arrastar e soltar": {
             "image": {
-                "image": "img/squigly/Squigly_27.png",
+                "image": "img/squigly/Squigly_27.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 5/7/10 segundos."
             },
@@ -1910,7 +1910,7 @@ const MOVE_DATA = {
         },
         "Soco de dragão": {
             "image": {
-                "image": "img/squigly/Squigly_23.png",
+                "image": "img/squigly/Squigly_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige MALDIÇÃO por 5/7/10 segundos, se usado enquanto CARREGADO."
             },
@@ -1919,7 +1919,7 @@ const MOVE_DATA = {
         },
         "Fúria do dragão": {
             "image": {
-                "image": "img/squigly/Squigly_29.png",
+                "image": "img/squigly/Squigly_29.webp",
                 "type": "Golpe Especial",
                 "description": "Inflige MALDIÇÃO por 5/7/10 segundos.\\n\\nCausa 50% de dano extra se usado com menos de 10% de VIDA."
             },
@@ -1928,7 +1928,7 @@ const MOVE_DATA = {
         },
         "Encantador de serpentes": {
             "image": {
-                "image": "img/squigly/Squigly_19.png",
+                "image": "img/squigly/Squigly_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar IMUNIDADE por 10/12/15 segundos."
             },
@@ -1937,7 +1937,7 @@ const MOVE_DATA = {
         },
         "Inferno do Leviatã": {
             "image": {
-                "image": "img/squigly/Squigly_28.png",
+                "image": "img/squigly/Squigly_28.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25% de chance de infligir DEFINHAR e BLOQUEIO DE CURA por 5/7/10 segundos."
             },
@@ -1946,7 +1946,7 @@ const MOVE_DATA = {
         },
         "Empurrador de margaridas": {
             "image": {
-                "image": "img/squigly/Squigly_26.png",
+                "image": "img/squigly/Squigly_26.webp",
                 "type": "Golpe Especial",
                 "description": "Causa 25/35/50% de dano extra a oponentes com menos de 25% de VIDA."
             },
@@ -1955,7 +1955,7 @@ const MOVE_DATA = {
         },
         "Ópera de batalha": {
             "image": {
-                "image": "img/squigly/Squigly_25.png",
+                "image": "img/squigly/Squigly_25.webp",
                 "type": "Golpe Especial",
                 "description": "25% de chance de fazer DEFINHAR por 5/7/10 segundos ao GOLPEAR"
             },
@@ -1964,7 +1964,7 @@ const MOVE_DATA = {
         },
         "Das cinzas às cinzas": {
             "image": {
-                "image": "img/squigly/Squigly_21.png",
+                "image": "img/squigly/Squigly_21.webp",
                 "type": "Golpe Especial",
                 "description": "15/20/25% de chance de fazer DEFINHAR por 5 segundos ao GOLPEAR"
             },
@@ -1973,7 +1973,7 @@ const MOVE_DATA = {
         },
         "Centro do palco": {
             "image": {
-                "image": "img/squigly/Squigly_20.png",
+                "image": "img/squigly/Squigly_20.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -1984,7 +1984,7 @@ const MOVE_DATA = {
     "umbrella": {
         "Explosão": {
             "image": {
-                "image": "img/umbrella/Umbrella_18.png",
+                "image": "img/umbrella/Umbrella_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige GOSMA por 10/12/15 segundos."
             },
@@ -1993,7 +1993,7 @@ const MOVE_DATA = {
         },
         "Bolha Boba": {
             "image": {
-                "image": "img/umbrella/Umbrella_24.png",
+                "image": "img/umbrella/Umbrella_24.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige GOSMA por 10/12/15 segundos."
             },
@@ -2002,7 +2002,7 @@ const MOVE_DATA = {
         },
         "Lambe e Vai": {
             "image": {
-                "image": "img/umbrella/Umbrella_23.png",
+                "image": "img/umbrella/Umbrella_23.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
             },
@@ -2011,7 +2011,7 @@ const MOVE_DATA = {
         },
         "Moedor de Sal": {
             "image": {
-                "image": "img/umbrella/Umbrella_22.png",
+                "image": "img/umbrella/Umbrella_22.webp",
                 "type": "Golpe Especial",
                 "description": ""
             },
@@ -2020,7 +2020,7 @@ const MOVE_DATA = {
         },
         "Soprando Bolhas": {
             "image": {
-                "image": "img/umbrella/Umbrella_20.png",
+                "image": "img/umbrella/Umbrella_20.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, DESATIVA ASSISTÊNCIAS, GOLPES ESPECIAIS ou BLOCKBUSTERS por 5/7/10 segundos."
             },
@@ -2029,7 +2029,7 @@ const MOVE_DATA = {
         },
         "Hora do Rango": {
             "image": {
-                "image": "img/umbrella/Umbrella_30.png",
+                "image": "img/umbrella/Umbrella_30.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% do dano causado é recuperado como VIDA. Oponentes derrotados não podem ser revividos."
             },
@@ -2038,7 +2038,7 @@ const MOVE_DATA = {
         },
         "Lente Projetora": {
             "image": {
-                "image": "img/umbrella/Umbrella_28.png",
+                "image": "img/umbrella/Umbrella_28.webp",
                 "type": "Golpe Especial",
                 "description": "10/15/20% de chance de infligir OSCILAÇÃO DE ENERGIA por 10 segundos ao GOLPEAR."
             },
@@ -2047,7 +2047,7 @@ const MOVE_DATA = {
         },
         "Refluxo Ácido": {
             "image": {
-                "image": "img/umbrella/Umbrella_25.png",
+                "image": "img/umbrella/Umbrella_25.webp",
                 "type": "Golpe Especial",
                 "description": "50% de chance de infligir GOSMA por 10/12/15 segundos ao GOLPEAR."
             },
@@ -2056,7 +2056,7 @@ const MOVE_DATA = {
         },
         "Tempo Ruim": {
             "image": {
-                "image": "img/umbrella/Umbrella_27.png",
+                "image": "img/umbrella/Umbrella_27.webp",
                 "type": "Golpe Especial",
                 "description": "25% de chance de causar DEFINHAR por 5/7/10 segundos ao GOLPEAR se usado enquanto FAMINTO."
             },
@@ -2065,7 +2065,7 @@ const MOVE_DATA = {
         },
         "Trava-Língua": {
             "image": {
-                "image": "img/umbrella/Umbrella_29.png",
+                "image": "img/umbrella/Umbrella_29.webp",
                 "type": "Golpe Especial",
                 "description": "35% de chance de infligir GOSMA por 10/12/15 segundos ao GOLPEAR.\\n\\n35% do dano causado é recuperado como VIDA."
             },
@@ -2074,7 +2074,7 @@ const MOVE_DATA = {
         },
         "Saúde!": {
             "image": {
-                "image": "img/umbrella/Umbrella_19.png",
+                "image": "img/umbrella/Umbrella_19.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -2083,7 +2083,7 @@ const MOVE_DATA = {
         },
         "Dá Cá um Abraço": {
             "image": {
-                "image": "img/umbrella/Umbrella_17.png",
+                "image": "img/umbrella/Umbrella_17.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE seu oponente para ganhar 1/2/3 camadas de BÊNÇÃO por 15 segundos."
             },
@@ -2092,7 +2092,7 @@ const MOVE_DATA = {
         },
         "Chute Carrossel": {
             "image": {
-                "image": "img/umbrella/Umbrella_21.png",
+                "image": "img/umbrella/Umbrella_21.webp",
                 "type": "Golpe Especial",
                 "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
@@ -2101,7 +2101,7 @@ const MOVE_DATA = {
         },
         "Arrancada Hungern": {
             "image": {
-                "image": "img/umbrella/Umbrella_26.png",
+                "image": "img/umbrella/Umbrella_26.webp",
                 "type": "Golpe Especial",
                 "description": "15/20/25% de dano extra se usado enquanto EMPANTURRADO."
             },
@@ -2112,7 +2112,7 @@ const MOVE_DATA = {
     "valentine": {
         "Explosão": {
             "image": {
-                "image": "img/valentine/Valentine_18.png",
+                "image": "img/valentine/Valentine_18.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, inflige SANGRAMENTO por 5/7/10 segundos."
             },
@@ -2121,7 +2121,7 @@ const MOVE_DATA = {
         },
         "Triagem!": {
             "image": {
-                "image": "img/valentine/Valentine_20.png",
+                "image": "img/valentine/Valentine_20.webp",
                 "type": "Golpe Especial",
                 "description": "**Expulsão**\\n\\nAo GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
             },
@@ -2130,7 +2130,7 @@ const MOVE_DATA = {
         },
         "Cruz da Morte": {
             "image": {
-                "image": "img/valentine/Valentine_21.png",
+                "image": "img/valentine/Valentine_21.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/50% de chance de infligir SANGRAMENTO por 5/8 segundos."
             },
@@ -2139,7 +2139,7 @@ const MOVE_DATA = {
         },
         "Risco Biológico: Tipo A": {
             "image": {
-                "image": "img/valentine/Valentine_23.png",
+                "image": "img/valentine/Valentine_23.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 25/35/50% (GOLPEANDO ou BLOQUEANDO)."
             },
@@ -2148,7 +2148,7 @@ const MOVE_DATA = {
         },
         "Contraveneno: Detox": {
             "image": {
-                "image": "img/valentine/Valentine_26.png",
+                "image": "img/valentine/Valentine_26.webp",
                 "type": "Golpe Especial",
                 "description": "15/25/35% de chance de remover todos os EFEITOS POSITIVOS ao GOLPEAR."
             },
@@ -2157,7 +2157,7 @@ const MOVE_DATA = {
         },
         "Contraveneno: Paralisia": {
             "image": {
-                "image": "img/valentine/Valentine_27.png",
+                "image": "img/valentine/Valentine_27.webp",
                 "type": "Golpe Especial",
                 "description": "15/25/35% de chance de ATORDOAR o oponente por 5 segundos ao GOLPEAR."
             },
@@ -2166,7 +2166,7 @@ const MOVE_DATA = {
         },
         "Incisão Excessiva": {
             "image": {
-                "image": "img/valentine/Valentine_29.png",
+                "image": "img/valentine/Valentine_29.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO por 5 segundos."
             },
@@ -2175,7 +2175,7 @@ const MOVE_DATA = {
         },
         "Laringectomia": {
             "image": {
-                "image": "img/valentine/Valentine_30.png",
+                "image": "img/valentine/Valentine_30.webp",
                 "type": "Golpe Especial",
                 "description": "10/15/20% de chance de infligir SANGRAMENTO FORTE por 10 segundos ao GOLPEAR."
             },
@@ -2184,7 +2184,7 @@ const MOVE_DATA = {
         },
         "Morte Cardiovascular": {
             "image": {
-                "image": "img/valentine/Valentine_32.png",
+                "image": "img/valentine/Valentine_32.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de dano extra se o oponente estiver sofrendo SANGRAMENTO."
             },
@@ -2193,7 +2193,7 @@ const MOVE_DATA = {
         },
         "Ressuscitação Agressiva": {
             "image": {
-                "image": "img/valentine/Valentine_31.png",
+                "image": "img/valentine/Valentine_31.webp",
                 "type": "Golpe Especial",
                 "description": "Ao GOLPEAR o corpo de um aliado caído, RESSUSCITE-O com {0:P0} de VIDA."
             },
@@ -2202,7 +2202,7 @@ const MOVE_DATA = {
         },
         "Morto ao Chegar": {
             "image": {
-                "image": "img/valentine/Valentine_33.png",
+                "image": "img/valentine/Valentine_33.webp",
                 "type": "Golpe Especial",
                 "description": "Se usado para derrotar um oponente, ganha REGENERAÇÃO FORTE por 10/12/15 seg."
             },
@@ -2211,7 +2211,7 @@ const MOVE_DATA = {
         },
         "Queda funerária": {
             "image": {
-                "image": "img/valentine/Valentine_22.png",
+                "image": "img/valentine/Valentine_22.webp",
                 "type": "Golpe Especial",
                 "description": "25/50/75% de chance de ATORDOAR o oponente por 4 segundos se a Valentine estiver com REGENERAÇÃO."
             },
@@ -2220,7 +2220,7 @@ const MOVE_DATA = {
         },
         "Chocoglicemia": {
             "image": {
-                "image": "img/valentine/Valentine_19.png",
+                "image": "img/valentine/Valentine_19.webp",
                 "type": "Golpe Especial",
                 "description": "PROVOQUE o oponente para ganhar REGENERAÇÃO por 10/12/15 segundos."
             },
@@ -2229,7 +2229,7 @@ const MOVE_DATA = {
         },
         "Contraveneno: Sedativo": {
             "image": {
-                "image": "img/valentine/Valentine_28.png",
+                "image": "img/valentine/Valentine_28.webp",
                 "type": "Golpe Especial",
                 "description": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 15/25/35% ao GOLPEAR."
             },
@@ -2238,7 +2238,7 @@ const MOVE_DATA = {
         },
         "Risco Biológico: Tipo B": {
             "image": {
-                "image": "img/valentine/Valentine_24.png",
+                "image": "img/valentine/Valentine_24.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de chance de remover todos os EFEITOS POSITIVOS do oponente (GOLPEANDO ou BLOQUEANDO)."
             },
@@ -2247,7 +2247,7 @@ const MOVE_DATA = {
         },
         "Risco Biológico: Tipo C": {
             "image": {
-                "image": "img/valentine/Valentine_25.png",
+                "image": "img/valentine/Valentine_25.webp",
                 "type": "Golpe Especial",
                 "description": "25/35/50% de chance de infligir ATORDOAMENTO por 4 segundos (GOLPEANDO ou BLOQUEANDO)."
             },

@@ -10,7 +10,7 @@
                 "color_hex": "#000000",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682423351345202/1000.png?ex=67ffa514&is=67fe5394&hm=202179b42dc364403787d3d5cc8bb9337e55f6f127ee264f40f4156296cd1d84&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682423351345202/1000.webp?ex=67ffa514&is=67fe5394&hm=202179b42dc364403787d3d5cc8bb9337e55f6f127ee264f40f4156296cd1d84&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "8,775",
@@ -32,7 +32,7 @@
                 "color_hex": "#6426a8",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682475016785960/1000.png?ex=67ffa520&is=67fe53a0&hm=ee34c691157ddc11074f7b1b90094c1fa8cdf435968d7b2c0cd52cebb66d9cb5&=&format=webp&quality=lossless&width=743&height=978"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682475016785960/1000.webp?ex=67ffa520&is=67fe53a0&hm=ee34c691157ddc11074f7b1b90094c1fa8cdf435968d7b2c0cd52cebb66d9cb5&=&format=webp&quality=lossless&width=743&height=978"
                 },
                 "stats": {
                     "attack": "11,847",
@@ -54,7 +54,7 @@
                 "color_hex": "#dfd173",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1368627460169535488/Mad_Malice_TEMP.png?ex=6818e926&is=681797a6&hm=d5121bf7852cc01a844ad0a70649207bd1fbb13f19ffa69ac6650749195ecd42&=&format=webp&quality=lossless&width=258&height=377"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1368627460169535488/Mad_Malice_TEMP.webp?ex=6818e926&is=681797a6&hm=d5121bf7852cc01a844ad0a70649207bd1fbb13f19ffa69ac6650749195ecd42&=&format=webp&quality=lossless&width=258&height=377"
                 },
                 "stats": {
                     "attack": "11,847",
@@ -78,7 +78,7 @@
                 "color_hex": "#1095d5",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682166987227146/1000.png?ex=67ffa4d7&is=67fe5357&hm=8150166f76aafceda68cdc328d5eb5c310a535a49e99e8b28b5f99594b53db79&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682166987227146/1000.webp?ex=67ffa4d7&is=67fe5357&hm=8150166f76aafceda68cdc328d5eb5c310a535a49e99e8b28b5f99594b53db79&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "8,160",
@@ -100,7 +100,7 @@
                 "color_hex": "#dfd173",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682273413627956/1000.png?ex=67ffa4f0&is=67fe5370&hm=e0aa623cd0709d1a3a97a1a6e492ca79674cd8281ed82b2153b203b7f048a330&=&format=webp&quality=lossless&width=743&height=978"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682273413627956/1000.webp?ex=67ffa4f0&is=67fe5370&hm=e0aa623cd0709d1a3a97a1a6e492ca79674cd8281ed82b2153b203b7f048a330&=&format=webp&quality=lossless&width=743&height=978"
                 },
                 "stats": {
                     "attack": "9,581",
@@ -122,7 +122,7 @@
                 "color_hex": "#076314",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682232695066776/1000.png?ex=67ffa4e7&is=67fe5367&hm=e553857ffc29f1c7e7d6726c0a738c95bfc1c4d3168233b2541da3aebb89ece3&=&format=webp&quality=lossless&width=743&height=978"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682232695066776/1000.webp?ex=67ffa4e7&is=67fe5367&hm=e553857ffc29f1c7e7d6726c0a738c95bfc1c4d3168233b2541da3aebb89ece3&=&format=webp&quality=lossless&width=743&height=978"
                 },
                 "stats": {
                     "attack": "9,581",
@@ -144,7 +144,7 @@
                 "color_hex": "#dfd173",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682208380682240/1000.png?ex=67ffa4e1&is=67fe5361&hm=521a717e4623381cc912a289f13ca293bfd95ca155bc53f4d12f665c8b8ecb57&=&format=webp&quality=lossless&width=743&height=978"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682208380682240/1000.webp?ex=67ffa4e1&is=67fe5361&hm=521a717e4623381cc912a289f13ca293bfd95ca155bc53f4d12f665c8b8ecb57&=&format=webp&quality=lossless&width=743&height=978"
                 },
                 "stats": {
                     "attack": "9,581",
@@ -166,7 +166,7 @@
                 "color_hex": "#076314",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682346377482251/1000.png?ex=67ffa502&is=67fe5382&hm=8a7614b1ba706c5b37d4f268725d818d178f1876bbbf7d45e9cfa1a1b5e34630&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682346377482251/1000.webp?ex=67ffa502&is=67fe5382&hm=8a7614b1ba706c5b37d4f268725d818d178f1876bbbf7d45e9cfa1a1b5e34630&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "11,002",
@@ -188,7 +188,7 @@
                 "color_hex": "#6426a8",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682398986637393/1000.png?ex=67ffa50e&is=67fe538e&hm=c5e4453a43493c7fe0977eea7b42735b53fcd7cb40e4c38b8d6f0ede595e8f1b&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682398986637393/1000.webp?ex=67ffa50e&is=67fe538e&hm=c5e4453a43493c7fe0977eea7b42735b53fcd7cb40e4c38b8d6f0ede595e8f1b&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "11,002",
@@ -212,7 +212,7 @@
                 "color_hex": "#dfd173",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682047160029184/1000.png?ex=67ffa4ba&is=67fe533a&hm=9a167d5b99ecb5548952b4fec86ed799053f3b966f9a4d57dcc4372c252a0496&=&format=webp&quality=lossless&width=743&height=978"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682047160029184/1000.webp?ex=67ffa4ba&is=67fe533a&hm=9a167d5b99ecb5548952b4fec86ed799053f3b966f9a4d57dcc4372c252a0496&=&format=webp&quality=lossless&width=743&height=978"
                 },
                 "stats": {
                     "attack": "7,604",
@@ -234,7 +234,7 @@
                 "color_hex": "#076314",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682107981762661/1000.png?ex=67ffa4c9&is=67fe5349&hm=d947ad6c7eba5baa2623179030a094c394d5f0f949873567fd16a84fd291d836&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682107981762661/1000.webp?ex=67ffa4c9&is=67fe5349&hm=d947ad6c7eba5baa2623179030a094c394d5f0f949873567fd16a84fd291d836&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "8,909",
@@ -256,7 +256,7 @@
                 "color_hex": "#6426a8",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025858041610351/Jack-O-Specter.png?ex=68decf9b&is=68dd7e1b&hm=9af024eacff142e32b9605e9b88b3f55833217ae1c58110b8763ab94206e860b&"
+                    "portrait_url": "https://cdn.discordapp.com/attachments/1389702388683899052/1423025858041610351/Jack-O-Specter.webp?ex=68decf9b&is=68dd7e1b&hm=9af024eacff142e32b9605e9b88b3f55833217ae1c58110b8763ab94206e860b&"
                 },
                 "stats": {
                     "attack": "10,215",
@@ -278,7 +278,7 @@
                 "color_hex": "#ef2e2d",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682141561356458/1000.png?ex=67ffa4d1&is=67fe5351&hm=856aca9f66cbe00da937779e9dea7aed3f5466d57670d3f009adadff7e12919f&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682141561356458/1000.webp?ex=67ffa4d1&is=67fe5351&hm=856aca9f66cbe00da937779e9dea7aed3f5466d57670d3f009adadff7e12919f&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "10,215",
@@ -302,7 +302,7 @@
                 "color_hex": "#6426a8",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361681977740230956/1000.png?ex=67ffa4aa&is=67fe532a&hm=7d2f3add8b8fe8a5afa3bb518ac5eaf5b5257484cf6678f6a7d04e99a31ab083&=&format=webp&quality=lossless&width=743&height=978"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361681977740230956/1000.webp?ex=67ffa4aa&is=67fe532a&hm=7d2f3add8b8fe8a5afa3bb518ac5eaf5b5257484cf6678f6a7d04e99a31ab083&=&format=webp&quality=lossless&width=743&height=978"
                 },
                 "stats": {
                     "attack": "8,237",
@@ -324,7 +324,7 @@
                 "color_hex": "#ef2e2d",
                 "images": {
                     "icon_url": "",
-                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682008044208228/1000.png?ex=67ffa4b1&is=67fe5331&hm=49e97bb2e9bd0aca9530a3da19ef92a226e2f9d915dd6f93887f3332a4850ff8&=&format=webp&quality=lossless&width=200&height=263"
+                    "portrait_url": "https://media.discordapp.net/attachments/1360911582938534114/1361682008044208228/1000.webp?ex=67ffa4b1&is=67fe5331&hm=49e97bb2e9bd0aca9530a3da19ef92a226e2f9d915dd6f93887f3332a4850ff8&=&format=webp&quality=lossless&width=200&height=263"
                 },
                 "stats": {
                     "attack": "9,293",

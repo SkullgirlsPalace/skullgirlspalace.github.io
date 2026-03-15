@@ -4,7 +4,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm2_burst.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE GUARDA por 5/7/10 seg."
     },
     "an-sm-ccut-g": {
@@ -12,7 +12,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm5_crescentcut.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm5_crescentcut.webp",
         "SA1": "50% de chance de causar QUEBRA DE GUARDA por 5/7/10 segundos ao BLOQUEAR."
     },
     "an-sm-dpillar-g": {
@@ -20,7 +20,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm4_destructionpillar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm4_destructionpillar.webp",
         "SA1": "Em um GOLPE CRÍTICO, tira 5/7/10% adicionais da VIDA MÁX. do oponente."
     },
     "an-sm-nknuckle-g": {
@@ -28,7 +28,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm6_northknuckle.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm6_northknuckle.webp",
         "SA1": "Dá INABALÁVEL por 5/7/10 segundos se usado com uma CONTAGEM DE COMBO de pelo menos 15."
     },
     "an-sm-oTake-g": {
@@ -36,7 +36,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -45,7 +45,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm7_reentry.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm7_reentry.webp",
         "SA1": "Dá FÚRIA por 5/7/10 segundos se o terceiro golpe for um GOLPE CRÍTICO."
     },
     "an-sm-taunt-g": {
@@ -53,7 +53,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm3_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar BLOQUEIO AUTOMÁTICO por 10/12/15 seg.",
         "SA2": "Se usado como contragolpe, inflige IMOBILIZAÇÃO por 5 segundos."
     },
@@ -62,7 +62,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm4_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm4_burst.webp",
         "SA1": "Ao GOLPEAR, inflige INCAPACITAÇÃO por 5/7/10 segundos."
     },
     "bb-sm-clar-g": {
@@ -70,7 +70,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm7_sweetclarinet.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm7_sweetclarinet.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 6/7/8% a cada GOLPE que acertar."
     },
     "bb-sm-cymb-g": {
@@ -78,7 +78,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm5_cymbalclash.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm5_cymbalclash.webp",
         "SA1": "20/35% de chance de ATORDOAR o oponente por 3/4 segundos ao GOLPEAR."
     },
     "bb-sm-knuck-g": {
@@ -86,7 +86,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm1_brassknuckles.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm1_brassknuckles.webp",
         "SA1": "Ao GOLPEAR, tem 50/100% de chance de infligir SANGRAMENTO por 4/6 segundos."
     },
     "bb-sm-noise-g": {
@@ -94,7 +94,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm8_noisecancel.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm8_noisecancel.webp",
         "SA1": "Se usado como contragolpe, ATORDOA o oponente por 2/3/4 segundos."
     },
     "bb-sm-oTake-g": {
@@ -102,7 +102,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm6_takefive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm6_takefive.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -111,7 +111,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm2_giantstep.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm2_giantstep.webp",
         "SA1": "Remove todos os EF. POS. do oponente e desativa os GOLPES ESPECIAIS dele por 4/8/12 s ao GOLPEAR."
     },
     "bb-sm-step-g_": {
@@ -119,7 +119,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm3_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar ARMADURA por 10/15/20 segundos."
     },
     "bd-sm-burst-g": {
@@ -127,7 +127,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm2_burst.webp",
         "SA1": "Causa MARCA DA MORTE por 5/7/10 segundos quando acertar um GOLPE."
     },
     "bd-sm-counter-g": {
@@ -135,7 +135,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm6_counterstrike.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm6_counterstrike.webp",
         "SA1": "Se usado como contragolpe, inflige BLOQUEIO DE CURA por 4/8/12 segundos."
     },
     "bd-sm-deathp-g": {
@@ -143,7 +143,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm8_deathpendulum.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm8_deathpendulum.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "bd-sm-mousetr-g": {
@@ -151,7 +151,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm7_medicimousetrap.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm7_medicimousetrap.webp",
         "SA1": "Ao GOLPEAR, DESATIVA os BLOCKBUSTERS e inflige IMOBILIZAÇÃO por 8/10/12 segundos."
     },
     "bd-sm-oTake-g": {
@@ -159,7 +159,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -168,7 +168,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm4_onslaught.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm4_onslaught.webp",
         "SA1": "Ganhe OLHO-MORTO por 5/7/10 segundos ao golpear."
     },
     "bd-sm-taunt-g": {
@@ -176,7 +176,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm3_taunt.webp",
         "SA1": "PROVOQUE seu oponente para ganhar OLHO-MORTO por 10/12/15 segundos."
     },
     "bd-sm-tea-g": {
@@ -184,7 +184,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm5_teaslip.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm5_teaslip.webp",
         "SA1": "Tem 50/75/100% de chance de remover todos os EF. NEG. quando usado."
     },
     "be-sm-blitz-g": {
@@ -192,7 +192,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm4_wulfblitzer.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm4_wulfblitzer.webp",
         "SA1": "Ao GOLPEAR, tem 25/50% de chance de infligir QUEBRA DE ARMADURA por 5/7 segundos."
     },
     "be-sm-burst-g": {
@@ -200,7 +200,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm2_burst.webp",
         "SA1": "Ao GOLPEAR, inflige LENTIDÃO por 5/7/10 segundos."
     },
     "be-sm-hurt-g": {
@@ -208,7 +208,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm8_hurtinghurdle.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm8_hurtinghurdle.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "be-sm-oTake-g": {
@@ -216,7 +216,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -225,14 +225,14 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm5_wulfshoot.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm5_wulfshoot.webp"
     },
     "be-sm-sweep-g": {
         "name": "Gigan Arm Sweep",
         "type": "sm",
         "gear": 2,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm6_giganarmsweep.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm6_giganarmsweep.webp",
         "SA1": "Ao GOLPEAR, inflige SANGRAMENTO por 4/8/12 s e ganha 10/15/20% de MEDIDOR DE BLOCKBUSTER. Também causa 15/20/25% a mais de dano enquanto estiver no MODO HYPE.\r"
     },
     "be-sm-taunt-g": {
@@ -240,7 +240,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm3_taunt.webp",
         "SA1": "PROVOQUE seu oponente para ganhar ACELERAÇÃO por 10/12/15 segundos."
     },
     "ce-sm-bButt-g": {
@@ -248,7 +248,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm6_battlebutt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm6_battlebutt.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
     },
     "ce-sm-bSlam-g": {
@@ -256,7 +256,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm2_buttslam.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm2_buttslam.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "ce-sm-burst-g": {
@@ -264,7 +264,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm9_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm9_burst.webp",
         "SA1": "Ao GOLPEAR, inflige INCAPACITAÇÃO por 5/7/10 segundos."
     },
     "ce-sm-copter-g": {
@@ -272,7 +272,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm3_cerecopter.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm3_cerecopter.webp",
         "SA1": "Ao GOLPEAR, tem 10/20% de chance de infligir QUEBRA DE ARMADURA por 5/7 segundos."
     },
     "ce-sm-horse-g": {
@@ -280,7 +280,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm5_pummelhorse.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm5_pummelhorse.webp",
         "SA1": "Ao GOLPEAR, tem 10/20% de chance de infligir SANGRAMENTO por 5/7 segundos."
     },
     "ce-sm-load-g": {
@@ -288,7 +288,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm4_locknload.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm4_locknload.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "ce-sm-mGR-g": {
@@ -296,14 +296,14 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm7_merrygorilla.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm7_merrygorilla.webp"
     },
     "ce-sm-oTake-g": {
         "name": "Arremesso de Martelo",
         "type": "sm",
         "gear": 0,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm8_snapback.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm8_snapback.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -312,7 +312,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm1_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm1_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar ARMADURA por 10/12/15 segundos."
     },
     "do-sm-burst-g": {
@@ -320,7 +320,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm2_burst.webp",
         "SA1": "Ao GOLPEAR, inflige BLOQUEIO DE CURA por 5/7/10 segundos."
     },
     "do-sm-buzz-g": {
@@ -328,7 +328,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm8_bogusbuzzard.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm8_bogusbuzzard.webp",
         "SA1": "Ao GOLPEAR, inflige BLOQUEIO DE CURA por 4/8/12 segundos."
     },
     "do-sm-flesh-g": {
@@ -336,14 +336,14 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm7_fleshstep.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm7_fleshstep.webp"
     },
     "do-sm-hBomb-g": {
         "name": "Fim da Picada",
         "type": "sm",
         "gear": 2,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm4_hornetbomber.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm4_hornetbomber.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "do-sm-luger-g": {
@@ -351,7 +351,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm5_lugerreplica.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm5_lugerreplica.webp",
         "SA1": "Ao GOLPEAR, inflige um EFEITO NEGATIVO aleatório por 4/8/12 segundos."
     },
     "do-sm-oTake-g": {
@@ -359,7 +359,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -368,7 +368,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm6_ciliaslide.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm6_ciliaslide.webp",
         "SA1": "Ao GOLPEAR, inflige LENTIDÃO por 4/8/12 segundos."
     },
     "do-sm-taunt-g": {
@@ -376,7 +376,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm3_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar um EFEITO POSITIVO aleatório por 10/12/15 segundos."
     },
     "el-sm-anubis-g": {
@@ -384,14 +384,14 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm8_weightofanubis.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm8_weightofanubis.webp"
     },
     "el-sm-burst-g": {
         "name": "Explosão",
         "type": "sm",
         "gear": 0,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm3_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm3_burst.webp",
         "SA1": "Inflige MALDIÇÃO por 5/7/10 segundos ao GOLPEAR"
     },
     "el-sm-chaos-g": {
@@ -399,7 +399,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm10_chaosbanish.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm10_chaosbanish.webp",
         "SA1": "Remove todos os EFEITOS POSITIVOS do oponente e inflige BLOQUEIO DE CURA por 4/8/12 seg (ao BLOQUEAR também)."
     },
     "el-sm-dive-g": {
@@ -407,7 +407,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm9_diveofhorus.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm9_diveofhorus.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "el-sm-khat-g": {
@@ -415,7 +415,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm4_upperkhat.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm4_upperkhat.webp",
         "SA1": "25/50% de chance de ATORDOAR o oponente por 4/6 segundos ao GOLPEAR."
     },
     "el-sm-oTake-g": {
@@ -423,7 +423,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm2_snapback.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm2_snapback.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -432,7 +432,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm6_middleofthesphynx.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm6_middleofthesphynx.webp",
         "SA1": "Ao GOLPEAR, reduz o MEDIDOR DE BLOCKBUSTER do oponente em 25/35/50%."
     },
     "el-sm-spiral-g": {
@@ -440,7 +440,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm5_osirisspiral.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm5_osirisspiral.webp",
         "SA1": "5/10% de chance de infligir SANGRAMENTO FORTE por 5/10 segundos ao GOLPEAR."
     },
     "el-sm-taunt-g": {
@@ -448,7 +448,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm1_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm1_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar REGENERAÇÃO por 10/12/15 segundos."
     },
     "el-sm-throne-g": {
@@ -456,14 +456,14 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm7_throneofisis.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm7_throneofisis.webp"
     },
     "fi-sm-burst-g": {
         "name": "Explosão",
         "type": "sm",
         "gear": 0,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm4_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm4_burst.webp",
         "SA1": "Ao GOLPEAR, inflige SANGRAMENTO por 5/7/10 segundos."
     },
     "fi-sm-drill-g": {
@@ -471,7 +471,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm6_drillationship.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm6_drillationship.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "fi-sm-hBall-g": {
@@ -479,14 +479,14 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm2_hairball.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm2_hairball.webp"
     },
     "fi-sm-oTake-g": {
         "name": "Mechas Soltas",
         "type": "sm",
         "gear": 0,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm5_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm5_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -495,7 +495,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm3_ringletspike.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm3_ringletspike.webp",
         "SA1": "Ao GOLPEAR, inflige SANGRAMENTO por 4/8/12 segundos."
     },
     "fi-sm-taunt-g": {
@@ -503,7 +503,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm7_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm7_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar FÚRIA por 10/12/15 segundos."
     },
     "fi-sm-twist-g": {
@@ -511,7 +511,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm1_frenchtwist.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm1_frenchtwist.webp",
         "SA1": "Ao GOLPEAR, tem 25/50% de chance de infligir SANGRAMENTO por 3/5 segundos."
     },
     "fu-sm-aClone-g": {
@@ -519,7 +519,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm6_foreveraclone.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm6_foreveraclone.webp",
         "SA1": "Ao GOLPEAR, causa BLOQUEIO DE CURA por 10/12/15 seg. A VIDA drena lentamente enquanto um Clone é preparado."
     },
     "fu-sm-burst-g": {
@@ -527,7 +527,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm4_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm4_burst.webp",
         "SA1": "Ao GOLPEAR, inflige FADIGA por 15/13/10 seg."
     },
     "fu-sm-drill-g": {
@@ -535,7 +535,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm6_drillationship.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm6_drillationship.webp",
         "SA1": "Causa MARCA DE MORTE, QUEBRA DE ARMADURA e INCAPACITAÇÃO por 10/12/15 seg cada, se o golpe final for CRÍTICO."
     },
     "fu-sm-lDart-g": {
@@ -543,7 +543,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm4_lovedart.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm4_lovedart.webp",
         "SA1": "Ao GOLPEAR, drena 5/10/15% do MEDIDOR DE BLOCKBUSTER ou 15/20/25% se o oponente estiver longe."
     },
     "fu-sm-lobs-g": {
@@ -551,7 +551,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm5_lobsoflove.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm5_lobsoflove.webp",
         "SA1": "INDEFENSÁVEL se o oponente estiver distante. Ao GOLPEAR, drena 5/10/15% do MEDIDOR DE BLOCKBUSTER ou 15/20/25% se o oponente estiver longe."
     },
     "fu-sm-oTake-g": {
@@ -559,7 +559,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm5_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm5_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -568,7 +568,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm7_swarmembrace.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm7_swarmembrace.webp",
         "SA1": "Ao GOLPEAR, inflige FADIGA por 15/13/10 seg. A VIDA drena lentamente enquanto um Clone é preparado."
     },
     "fu-sm-taunt-g": {
@@ -576,7 +576,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm3_taunt.webp",
         "SA1": "PROVOQUE no seu oponente para ganhar MIASMA por 10/12/15 seg e recuperar 5% de VIDA."
     },
     "ma-sm-ballroom-g": {
@@ -584,7 +584,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm4_mariegoround.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm4_mariegoround.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
     },
     "ma-sm-bellows-g": {
@@ -592,7 +592,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm7_bellowsblast.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm7_bellowsblast.webp",
         "SA1": "50/75/100% de chance ao GOLPEAR (inclui golpes bloqueados) para transferir 1 EF. NEG. de si mesma para o oponente."
     },
     "ma-sm-burst-g": {
@@ -600,7 +600,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm2_burst.webp",
         "SA1": "Ao GOLPEAR, inflige QUIETUS por 10/12/15 segundos."
     },
     "ma-sm-cclog-g": {
@@ -608,14 +608,14 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm6_suctionobstruction.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm6_suctionobstruction.webp"
     },
     "ma-sm-haymaker-g": {
         "name": "Fazedor de Feno de Hilgard",
         "type": "sm",
         "gear": 3,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm8_hilgardshaymaker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm8_hilgardshaymaker.webp",
         "SA1": "INVOCAÇÃO ESQUELÉTICA: ao GOLPEAR, inflige QUIETUS por 5/7/10 segundos."
     },
     "ma-sm-hoptoit-g": {
@@ -623,7 +623,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm5_hoptoit.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm5_hoptoit.webp",
         "SA1": "INVOCAÇÃO ESQUELÉTICA: 15/20/25% de chance de infligir SANGRAMENTO FORTE por 5 segundos ao GOLPEAR."
     },
     "ma-sm-oTake-g": {
@@ -631,7 +631,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -640,7 +640,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm3_taunt.webp",
         "SA1": "PROVOQUE seu oponente para ganhar um EF. POS. aleatório por 10/12/15 segundos. Também inflige DEFINHAR por 10 segundos se CARREGADO."
     },
     "mf-sm-burst-g": {
@@ -648,7 +648,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm2_burst.webp",
         "SA1": "Causa MARCA DA MORTE por 5/7/10 segundos quando acertar um GOLPE."
     },
     "mf-sm-fiber-g": {
@@ -656,7 +656,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm4_fiberupper.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm4_fiberupper.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
     },
     "mf-sm-gato-g": {
@@ -664,7 +664,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm5_elgato.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm5_elgato.webp",
         "SA1": "25/35/50% de chance infligir ATORDOAMENTO por 4 segundos ao acertar um CRÍTICO."
     },
     "mf-sm-oTake-g": {
@@ -672,7 +672,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -681,7 +681,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm3_taunt.webp",
         "SA1": "PROVOQUE seu oponente para ganhar 1/2/3 camada(s) de PRECISÃO."
     },
     "ms-sm-scrat-g": {
@@ -689,7 +689,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm7_catscratch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm7_catscratch.webp",
         "SA1": "Cada GOLPE tem 15/25/35% de chance de infligir MARCA DA MORTE por 10 s ou QUEBRA DE ARMAD. por 10 s se o ataque for BLOQUEADO."
     },
     "ms-sm-slide-g": {
@@ -697,7 +697,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm6_catslide.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm6_catslide.webp",
         "SA1": "Causa 25/35/50% de dano extra contra oponentes sofrendo um EFEITO NEGATIVO."
     },
     "pa-sm-burst-g": {
@@ -705,7 +705,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm3_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm3_burst.webp",
         "SA1": "Ao GOLPEAR, DESATIVA BLOCKBUSTERS por 5/7/10 seg."
     },
     "pa-sm-call-g": {
@@ -713,7 +713,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm5_egretcall.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm5_egretcall.webp",
         "SA1": "PROVOQUE seu oponente para ganhar 1/2/3 camada(s) de PRECISÃO."
     },
     "pa-sm-moto-g": {
@@ -721,7 +721,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm7_egretmoto.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm7_egretmoto.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
     },
     "pa-sm-oTake-g": {
@@ -729,7 +729,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm2_snapback.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm2_snapback.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -738,7 +738,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm6_egretdive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm6_egretdive.webp",
         "SA1": "Se usado como contragolpe, ATORDOA o oponente por 3/4/5 segundos."
     },
     "pa-sm-shot-g": {
@@ -746,7 +746,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm4_napalmshot.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm4_napalmshot.webp",
         "SA1": "Ao GOLPEAR, tem 50/100% de chance de infligir SANGRAMENTO por 5/8 segundos."
     },
     "pa-sm-taunt-g": {
@@ -754,7 +754,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm1_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm1_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar IMUNIDADE por 10/12/15 segundos."
     },
     "pa-sm-toss-g": {
@@ -762,21 +762,21 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm8_napalmtoss.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm8_napalmtoss.webp"
     },
     "pa-sm-trig-g": {
         "name": "Gatilho de napalm",
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm9_napalmtrigger.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm9_napalmtrigger.webp"
     },
     "pe-sm-aShow-g": {
         "name": "Esquadrilha da Fumaça",
         "type": "sm",
         "gear": 2,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm6_george_airshow.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm6_george_airshow.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
     },
     "pe-sm-bang-g": {
@@ -784,7 +784,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm2_bang.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm2_bang.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "pe-sm-boxcar-g": {
@@ -792,7 +792,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm5_george_boxcar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm5_george_boxcar.webp",
         "SA1": "Ao GOLPEAR, tem 25/50% de chance de infligir SANGRAMENTO por 4/8 segundos."
     },
     "pe-sm-burst-g": {
@@ -800,7 +800,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm9_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm9_burst.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 5/7/10 segundos."
     },
     "pe-sm-gDO-g": {
@@ -808,14 +808,14 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm4_george_walk.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm4_george_walk.webp"
     },
     "pe-sm-oTake-g": {
         "name": "Quem Vem Agora?",
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm8_snapback.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm8_snapback.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -824,7 +824,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm1_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm1_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar IMUNIDADE por 10/12/15 segundos."
     },
     "pw-sm-burst-g": {
@@ -832,7 +832,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm7_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm7_burst.webp",
         "SA1": "Causa MARCA DA MORTE por 5/7/10 segundos quando acertar um GOLPE."
     },
     "pw-sm-grudge-g": {
@@ -840,7 +840,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm4_violetgrudge.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm4_violetgrudge.webp",
         "SA1": "5/10% de chance de infligir SANGRAMENTO FORTE por 5/10 segundos ao GOLPEAR."
     },
     "pw-sm-lily-g": {
@@ -848,7 +848,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm5_cruellily.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm5_cruellily.webp",
         "SA1": "Ao GOLPEAR, tem 15/25% de chance de infligir SANGRAMENTO por 2/4 segundos."
     },
     "pw-sm-oTake-g": {
@@ -856,7 +856,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm2_snapdragon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm2_snapdragon.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -865,14 +865,14 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm6_piniondash.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm6_piniondash.webp"
     },
     "pw-sm-sting-g": {
         "name": "Ferrão Gae Bolga",
         "type": "sm",
         "gear": 1,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm1_gaebolgastinger.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm1_gaebolgastinger.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "pw-sm-taunt-g": {
@@ -880,7 +880,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm3_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar FÚRIA por 10/12/15 segundos."
     },
     "rf-sm-burst-g": {
@@ -888,7 +888,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm2_burst.webp",
         "SA1": "Ao GOLPEAR, inflija OSCILAÇÃO DE ENERGIA por 5/7/10 segundos."
     },
     "rf-sm-oTake-g": {
@@ -896,7 +896,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -905,7 +905,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm5_phaserburn.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm5_phaserburn.webp",
         "SA1": "Ao GOLPEAR, 15/25/35% de chance de REMOVER 1 EF. POS. do oponente e ATORDOAR por 3 s."
     },
     "rf-sm-rHaz-g": {
@@ -913,7 +913,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm6_rotationhazard.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm6_rotationhazard.webp",
         "SA1": "Ao GOLPEAR, 15/20/25% de chance de TRANSFERIR 1 EF. NEG. para o oponente."
     },
     "rf-sm-spin-g": {
@@ -921,7 +921,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm8_fidgetspin.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm8_fidgetspin.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "rf-sm-tBeam-g": {
@@ -929,7 +929,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm4_theonitebeam.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm4_theonitebeam.webp",
         "SA1": "Ao GOLPEAR, DESATIVA ASSISTÊNCIAS, GOLPES ESPECIAIS ou BLOCKBUSTERS por 5/7/10 segundos.",
         "SA2": "Inflige QUEBRA DE ARMADURA por 10 segundos se BLOQUEADA."
     },
@@ -938,7 +938,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm3_taunt.webp",
         "SA1": "PROVOQUE seu oponente para ganhar BARREIRA por 10/12/15 segundos."
     },
     "rf-sm-vCut-g": {
@@ -946,7 +946,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm7_variablecutter.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm7_variablecutter.webp",
         "SA1": "Ao GOLPEAR, 50% de chance de ATORDOAR por 4 s e infligir OSC. DE ENERGIA por 10/12/15 s se o oponente ARRANCAR."
     },
     "sq-sm-ash-g": {
@@ -954,7 +954,7 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm8_ashestoashes.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm8_ashestoashes.webp",
         "SA1": "15/20/25% de chance de fazer DEFINHAR por 5 segundos ao GOLPEAR"
     },
     "sq-sm-bite-g": {
@@ -962,7 +962,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm4_dragnbite.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm4_dragnbite.webp",
         "SA1": "Ao GOLPEAR, tem 10/15/20% de chance de remover todos os EFEITOS POSITIVOS do oponente."
     },
     "sq-sm-burst-g": {
@@ -970,7 +970,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm2_burst.webp",
         "SA1": "Inflige MALDIÇÃO por 5/7/10 segundos ao GOLPEAR"
     },
     "sq-sm-cStag-g": {
@@ -978,14 +978,14 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm7_centerstage.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm7_centerstage.webp"
     },
     "sq-sm-chor-g": {
         "name": "O acorde de prata",
         "type": "sm",
         "gear": 1,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm5_thesilverchord.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm5_thesilverchord.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de TRANSFERIR 1 EFEITO POSITIVO do oponente para si mesmo."
     },
     "sq-sm-drau-g": {
@@ -993,7 +993,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm6_draugenpunch.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm6_draugenpunch.webp",
         "SA1": "Ao GOLPEAR, inflige MALDIÇÃO por 5/7/10 segundos, se usado enquanto CARREGADO."
     },
     "sq-sm-oTake-g": {
@@ -1001,7 +1001,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -1010,7 +1010,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm3_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar IMUNIDADE por 10/12/15 segundos."
     },
     "um-sm-bobbl-g": {
@@ -1018,7 +1018,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm4_bobblinbubble.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm4_bobblinbubble.webp",
         "SA1": "Ao GOLPEAR, inflige GOSMA por 10/12/15 segundos."
     },
     "um-sm-burst-g": {
@@ -1026,7 +1026,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm2_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm2_burst.webp",
         "SA1": "Ao GOLPEAR, inflige GOSMA por 10/12/15 segundos."
     },
     "um-sm-carousel-g": {
@@ -1034,7 +1034,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm8_carouselkick.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm8_carouselkick.webp",
         "SA1": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
     },
     "um-sm-oTake-g": {
@@ -1042,7 +1042,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm1_outtake.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm1_outtake.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -1051,14 +1051,14 @@
         "type": "sm",
         "gear": 2,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm6_saltgrinder.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm6_saltgrinder.webp"
     },
     "um-sm-slurp-g": {
         "name": "Lambe e Vai",
         "type": "sm",
         "gear": 2,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm7_slurpnslide.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm7_slurpnslide.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 4/8/12 segundos."
     },
     "um-sm-taunt-g": {
@@ -1066,7 +1066,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm3_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm3_taunt.webp",
         "SA1": "PROVOQUE seu oponente para ganhar 1/2/3 camadas de BÊNÇÃO por 15 segundos."
     },
     "um-sm-wishm-g": {
@@ -1074,7 +1074,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm5_wishmaker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm5_wishmaker.webp",
         "SA1": "Ao GOLPEAR, DESATIVA ASSISTÊNCIAS, GOLPES ESPECIAIS ou BLOCKBUSTERS por 5/7/10 segundos."
     },
     "va-sm-burst-g": {
@@ -1082,7 +1082,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm4_burst.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm4_burst.webp",
         "SA1": "Ao GOLPEAR, inflige SANGRAMENTO por 5/7/10 segundos."
     },
     "va-sm-dCross-g": {
@@ -1090,7 +1090,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm3_shuriken.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm3_shuriken.webp",
         "SA1": "Ao GOLPEAR, tem 25/50% de chance de infligir SANGRAMENTO por 5/8 segundos."
     },
     "va-sm-mDrop-g": {
@@ -1098,7 +1098,7 @@
         "type": "sm",
         "gear": 3,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm9_mortuarydrop.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm9_mortuarydrop.webp",
         "SA1": "25/50/75% de chance de ATORDOAR o oponente por 4 segundos se a Valentine estiver com REGENERAÇÃO."
     },
     "va-sm-oTake-g": {
@@ -1106,7 +1106,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm2_snapback.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm2_snapback.webp",
         "ability": "Expulsão",
         "SA1": "Ao GOLPEAR, força o oponente a SAIR DA ASSISTÊNCIA, removendo todos os EFEITOS DE COMBATE."
     },
@@ -1115,7 +1115,7 @@
         "type": "sm",
         "gear": 0,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm1_taunt.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm1_taunt.webp",
         "SA1": "PROVOQUE o oponente para ganhar REGENERAÇÃO por 10/12/15 segundos."
     },
     "va-sm-vialA-g": {
@@ -1123,7 +1123,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm5_vialhazarda.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm5_vialhazarda.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 25/35/50% (GOLPEANDO ou BLOQUEANDO)."
     },
     "va-sm-vialB-g": {
@@ -1131,7 +1131,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm6_vialhazardb.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm6_vialhazardb.webp",
         "SA1": "25/35/50% de chance de remover todos os EFEITOS POSITIVOS do oponente (GOLPEANDO ou BLOQUEANDO)."
     },
     "va-sm-vialC-g": {
@@ -1139,7 +1139,7 @@
         "type": "sm",
         "gear": 1,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm7_vialhazardc.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm7_vialhazardc.webp",
         "SA1": "25/35/50% de chance de infligir ATORDOAMENTO por 4 segundos (GOLPEANDO ou BLOQUEANDO)."
     },
     "an-bb-beam-g": {
@@ -1147,7 +1147,7 @@
         "type": "bb",
         "gear": 3,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb2_saganbeam.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb2_saganbeam.webp",
         "SA1": "25/35/50% do dano causado é recuperado como VIDA."
     },
     "an-bb-magicgirl-g": {
@@ -1155,7 +1155,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb5_photobop.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb5_photobop.webp",
         "SA1": "Transfere todos os EF. NEGATIVOS para o oponente.",
         "SA2": "Os oponentes com menos de 25% de VIDA têm uma chance de 25/35/50% de serem derrotados instantaneamente."
     },
@@ -1164,7 +1164,7 @@
         "type": "bb",
         "gear": 3,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb1_meteorstrike.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb1_meteorstrike.webp",
         "SA1": "CHANCE DE CRÍTICO 50/75/100% maior se o oponente tiver um BLOCKBUSTER totalmente carregado."
     },
     "an-bb-pillar-g": {
@@ -1172,7 +1172,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb4_pillarofcreation.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb4_pillarofcreation.webp",
         "SA1": "CURA os aliados em 50/75/100% do dano causado se usado com uma CONTAGEM DE COMBO de pelo menos 30."
     },
     "an-bb-slingshot-g": {
@@ -1180,7 +1180,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_an:767922687204524032>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb3_gravityslingshot.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb3_gravityslingshot.webp",
         "SA1": "5% de chance de causar IMOBILIZAÇÃO por 10/12/15 segundos ao acertar um GOLPE."
     },
     "bb-bb-aTrain-g": {
@@ -1188,7 +1188,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb6_t2_taketheatrain.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb6_t2_taketheatrain.webp",
         "SA1": "Reduz o MED. DE BLOCKBUSTER do oponente em 8/10/12% a cada GOLPE acertado em GOLPES DE COMBO maiores que 10."
     },
     "bb-bb-extend-g": {
@@ -1196,7 +1196,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb4_t1_beatextend.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb4_t1_beatextend.webp",
         "SA1": "Causa 2/5/8% de dano extra por cada GOLPE DE COMBO."
     },
     "bb-bb-ssJazz-g_": {
@@ -1204,7 +1204,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb1_t1_supersonicjazz.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb1_t1_supersonicjazz.webp",
         "SA1": "15% de chance de infligir SANGRAMENTO FORTE por 5/7/10 s ao GOLPEAR."
     },
     "bb-bb-strike-g": {
@@ -1212,7 +1212,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb2_t3_strikeuptheband.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb2_t3_strikeuptheband.webp",
         "SA1": "Ganhe 3 camadas de REGENERAÇÃO por 8/10/12 s."
     },
     "bb-bb-tuba-g": {
@@ -1220,7 +1220,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb5_t3_tubatuba.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb5_t3_tubatuba.webp",
         "SA1": "35% de chance de remover 1 EF. POS. do oponente ao GOLPEAR. O GOLPE final tem 50/75/100% de chance de ATORDOAR por 6 s."
     },
     "bb-bb-tympan-g": {
@@ -1228,7 +1228,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_bb:684054646528147500>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb3_t2_tympanidrive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb3_t2_tympanidrive.webp",
         "SA1": "Ao GOLPEAR, tem 25% de chance de infligir QUEBRA DE ARMADURA por 5/7/10 s."
     },
     "bd-bb-doormat-g": {
@@ -1236,7 +1236,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb1_doormat.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb1_doormat.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 5/7/10 segundos."
     },
     "bd-bb-empower-g": {
@@ -1244,7 +1244,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb3_empower.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb3_empower.webp",
         "SA1": "Ao GOLPEAR, inflige MALDIÇÃO por 5/7/10 segundos."
     },
     "bd-bb-gift-g": {
@@ -1252,7 +1252,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb4_partinggift.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb4_partinggift.webp",
         "SA1": "Causa 10/15/20% de dano extra por cada camada de EF. NEG. no oponente."
     },
     "bd-bb-girls-g": {
@@ -1260,7 +1260,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb5_girlsnight.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb5_girlsnight.webp",
         "SA1": "Ao GOLPEAR, tem 25% de chance de infligir MARCA DA MORTE por 10/12/15 s (também se aplica a golpes bloqueados)."
     },
     "bd-bb-last-g": {
@@ -1268,7 +1268,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb6_lastcall.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb6_lastcall.webp",
         "SA1": "Ganhe FÚRIA e OLHO-MORTO por 10/12/15 segundos se usado para derrotar um oponente."
     },
     "bd-bb-stage-g": {
@@ -1276,7 +1276,7 @@
         "type": "bb",
         "gear": 3,
         "character": "<:sp_bd:1115123780705063043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb2_stagehazard.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb2_stagehazard.webp",
         "SA1": "50/75/100% de chance de infligir QUEBRA DE GUARDA por 10 segundos ao BLOQUEAR."
     },
     "be-bb-aWulf-g": {
@@ -1284,7 +1284,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb2_t2_airwulf.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb2_t2_airwulf.webp",
         "SA1": "Ao GOLPEAR, tem 25/50/100% de chance de infligir QUEBRA DE ARMADURA e BLOQUEIO DE CURA por 10 s.\r"
     },
     "be-bb-arm-g": {
@@ -1292,7 +1292,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb1_t1_giganticarm.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb1_t1_giganticarm.webp",
         "SA1": "Ao GOLPEAR, tem 15/20/25% de chance de ATORDOAR o oponente por 4/6 s e tem chance 25/50/100% maior de acertar um CRÍTICO enquanto estiver no MODO HYPE.\r"
     },
     "be-bb-mania-g": {
@@ -1300,7 +1300,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb6_t3_wulfamania.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb6_t3_wulfamania.webp",
         "SA1": "Ao usar para derrotar um oponente, recupera 25/35/50% da VIDA MÁX. de Beowulf instantaneamente. O efeito é dobrado ao usar o MODO HYPE.\r"
     },
     "be-bb-pummel-g_": {
@@ -1308,7 +1308,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb5_t2_lupinepummel.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb5_t2_lupinepummel.webp",
         "SA1": "Ao GOLPEAR, tem 15/25/35% de chance de infligir QUEBRA DE GUARDA e MALDIÇÃO por 10 s.\r"
     },
     "be-bb-sault-g": {
@@ -1316,7 +1316,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb3_t3_threewulfmoonsault.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb3_t3_threewulfmoonsault.webp",
         "SA1": "Ao GOLPEAR, tem 25/50/100% de chance de REMOVER 1 EF. POS. do oponente. Oponentes derrotados não revivem se usado no MODO HYPE.\r"
     },
     "be-bb-trepak-g": {
@@ -1324,7 +1324,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_beo:684771548414083107>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb4_t1_geatishtrepak.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb4_t1_geatishtrepak.webp",
         "SA1": "25/35/50% de dano extra se usado no MODO HYPE."
     },
     "ce-bb-dDrop-g": {
@@ -1332,7 +1332,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb5_t1_diamonddrop.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb5_t1_diamonddrop.webp",
         "SA1": "Se usado para derrotar um oponente, ganha REGENERAÇÃO FORTE por 5/8/10 seg."
     },
     "ce-bb-dynamo-g": {
@@ -1340,7 +1340,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb2_t1_diamonddynamo.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb2_t1_diamonddynamo.webp",
         "SA1": "Causa 2/5/8% de dano extra por cada GOLPE DE COMBO."
     },
     "ce-bb-excell-g": {
@@ -1348,7 +1348,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb4_t2_excellebella.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb4_t2_excellebella.webp",
         "SA1": "Ao GOLPEAR, tem 15/25% de chance de ATORDOAR o oponente por 4/6 segundos."
     },
     "ce-bb-forever-g": {
@@ -1356,7 +1356,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb1_t2_diamondsareforever.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb1_t2_diamondsareforever.webp",
         "SA1": "15/25/35% de dano extra se o oponente estiver no ar."
     },
     "ce-bb-gBag-g": {
@@ -1364,7 +1364,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb6_t3_grabbag.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb6_t3_grabbag.webp",
         "SA1": "Se usado para derrotar um oponente, ganha 2 camadas de ARMADURA por 10/12/15 seg."
     },
     "ce-bb-uShow-g": {
@@ -1372,7 +1372,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_cb:685401170495537152>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb3_t3_ultimateshowstopper.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb3_t3_ultimateshowstopper.webp",
         "SA1": "Se usado para derrotar um oponente, ganha 2 EFEITOS POSITIVOS aleatórios por 10/12/15 seg."
     },
     "do-bb-array-g": {
@@ -1380,7 +1380,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb6_megalitharray.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb6_megalitharray.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 3/4/5% a cada GOLPE acertado."
     },
     "do-bb-beast-g": {
@@ -1388,7 +1388,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb1_beastofgehenna.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb1_beastofgehenna.webp",
         "SA1": "25/35/50% de chance de colocar os GOLPES ESPECIAIS e TROCAS do oponente em REATIVAÇÃO."
     },
     "do-bb-cLives-g": {
@@ -1396,7 +1396,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb5_catellitelives.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb5_catellitelives.webp",
         "SA1": "Ao GOLPEAR, tem 2/3/5% de chance de remover todos os EFEITOS POSITIVOS."
     },
     "do-bb-gun-g": {
@@ -1404,7 +1404,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb2_gunblades.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb2_gunblades.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO e BLOQUEIO DE CURA por 10 segundos."
     },
     "do-bb-legion-g": {
@@ -1412,7 +1412,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb3_nightmarelegion.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb3_nightmarelegion.webp",
         "SA1": "Se usado para derrotar um oponente, ganha 3 EFEITOS POSITIVOS aleatórios por 10/12/15 segundos."
     },
     "do-bb-wagon-g": {
@@ -1420,7 +1420,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_db:692275933536845884>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb4_bandwagon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb4_bandwagon.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir FEITIÇO por 10 segundos."
     },
     "el-bb-khep-g": {
@@ -1428,7 +1428,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb2_t2_kheprisun.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb2_t2_kheprisun.webp",
         "SA1": "Causa 25/35/50% de dano extra se o oponente estiver sofrendo um EFEITO NEGATIVO."
     },
     "el-bb-lady-g": {
@@ -1436,7 +1436,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t3_ladyofslaughter.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t3_ladyofslaughter.webp",
         "SA1": "50/75/100% de chance de infligir um EF. NEGATIVO. aleatório por 10 seg e colocar GOLPES ESPECIAIS e ASSISTÊNCIAS do oponente em REATIVAÇÃO."
     },
     "el-bb-nekh-g": {
@@ -1444,7 +1444,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb3_t2_nekhbetbreaker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb3_t2_nekhbetbreaker.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir QUEBRA DE ARMADURA por 8 segundos."
     },
     "el-bb-sBite-g": {
@@ -1452,7 +1452,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsbite.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsbite.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir QUEBRA DE ARMADURA e MALDIÇÃO por 10 seg."
     },
     "el-bb-sFury-g": {
@@ -1460,7 +1460,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsfury.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsfury.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de ganhar FÚRIA E ACELERAÇÃO por 10 seg."
     },
     "el-bb-sTurn-g": {
@@ -1468,7 +1468,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_el:692287012450992219>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsturn.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsturn.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO e BLOQUEIO DE CURA por 10 seg."
     },
     "fi-bb-blow-g": {
@@ -1476,7 +1476,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb6_t3_blowout.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb6_t3_blowout.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 25/35/50%."
     },
     "fi-bb-fenrir-g": {
@@ -1484,7 +1484,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb3_t3_fenrirdrive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb3_t3_fenrirdrive.webp",
         "SA1": "25/35/50% de dano extra se o oponente tiver um efeito de SANGRAMENTO."
     },
     "fi-bb-gregor-g": {
@@ -1492,7 +1492,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb1_t1_gregorsamson.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb1_t1_gregorsamson.webp",
         "SA1": "Ao GOLPEAR, tem 10/15/20% de chance de infligir SANGRAMENTO por 5 segundos."
     },
     "fi-bb-temper-g": {
@@ -1500,7 +1500,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb5_t1_drilltempered.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb5_t1_drilltempered.webp",
         "SA1": "Ao GOLPEAR, tem 5/10/15% de chance de remover todos os EFEITOS POSITIVOS."
     },
     "fi-bb-tricho-g": {
@@ -1508,7 +1508,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb2_t2_trichobezoar.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb2_t2_trichobezoar.webp",
         "SA1": "15/25/35% de dano extra se o oponente estiver no ar."
     },
     "fi-bb-widow-g": {
@@ -1516,7 +1516,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_fi:698821373698637894>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb4_t2_widowspeak.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb4_t2_widowspeak.webp",
         "SA1": "Ao GOLPEAR, tem 50/75/100% de chance de infligir INCAPACITAÇÃO e QUEBRA DE ARMADURA por 10 seg."
     },
     "fu-bb-drill-g": {
@@ -1524,7 +1524,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb5_t1_drilltempered.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb5_t1_drilltempered.webp",
         "SA1": "Causa 2/5/8% de dano extra por cada GOLPE DE COMBO."
     },
     "fu-bb-friend-g": {
@@ -1532,7 +1532,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb3_bestfriendsforever.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb3_bestfriendsforever.webp",
         "SA1": "15/20/25% de chance de transferir todos os EF. NEGATIVOS para o oponente e todos EF. POSITIVOS do oponente para você ao GOLPEAR."
     },
     "fu-bb-hHeels-g": {
@@ -1540,7 +1540,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb6_headoverheels.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb6_headoverheels.webp",
         "SA1": "Causa dano adicional de 5/10/15% para cada 10% DE VIDA perdida por Fukua."
     },
     "fu-bb-kiss-g": {
@@ -1548,7 +1548,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb1_goodnightkiss.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb1_goodnightkiss.webp",
         "SA1": "10/15/25% de chance de infligir DEFINHAR e FADIGA por 10 seg cada ao GOLPEAR."
     },
     "fu-bb-snugg-g": {
@@ -1556,7 +1556,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb4_inevitablesnuggle.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb4_inevitablesnuggle.webp",
         "SA1": "Dá 1/2/3 camadas de MIASMA por 10 seg se usado para derrotar um oponente.",
         "SA2": "50% do dano causado é recuperado como VIDA."
     },
@@ -1565,7 +1565,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_fu:698919709336141886>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb6_t3_blowout.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb6_t3_blowout.webp",
         "SA1": "Causa 25/35/50% de dano bônus se o oponente tiver mais de 50% DE VIDA.",
         "SA2": "50% do dano causado é recuperado como VIDA."
     },
@@ -1574,7 +1574,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb3_carpalpummel.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb3_carpalpummel.webp",
         "SA1": "INVOCAÇÃO ESQUELÉTICA: 20/35% de chance de infligir ATORDOAMENTO por 3/4 segundos ao GOLPEAR. INDEFENSÁVEL se o oponente estiver sofrendo de QUIETUS."
     },
     "ma-bb-hilgard-g": {
@@ -1582,7 +1582,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb1_hilgardshowl.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb1_hilgardshowl.webp",
         "SA1": "INVOCAÇÃO ESQUELÉTICA: 35% de chance de infligir QUIETUS por 10/12/15 segundos ao GOLPEAR."
     },
     "ma-bb-hoover-g": {
@@ -1590,7 +1590,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb4_hoovermaneuver.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb4_hoovermaneuver.webp",
         "SA1": "25/35/50% do dano causado é recuperado como VIDA."
     },
     "ma-bb-repetitive-g": {
@@ -1598,7 +1598,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb6_repetitiveskeletonimpact.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb6_repetitiveskeletonimpact.webp",
         "SA1": "INVOCAÇÃO ESQUELÉTICA: inflige POLARIDADE INVERSA por 10/12/15 segundos ao GOLPEAR. Causa 50% de dano extra se CARREGADO."
     },
     "ma-bb-scrub-g": {
@@ -1606,7 +1606,7 @@
         "type": "bb",
         "gear": 3,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb2_scrubnsmash.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb2_scrubnsmash.webp",
         "SA1": "25/50/75% de chance de remover todos os EFEITOS POSITIVOS ao GOLPEAR."
     },
     "ma-bb-weight-g": {
@@ -1614,7 +1614,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_ma:1247164362528133210>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb5_weightofourwill.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb5_weightofourwill.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 2/3/4% a cada GOLPE que acertar."
     },
     "mf-bb-dMemb-g": {
@@ -1622,7 +1622,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb5_fifthofdismember.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb5_fifthofdismember.webp",
         "SA1": "Causa 50/75/100% de dano extra se o oponente tiver menos de 50% de VIDA. Sacrifica 25% da sua VIDA restante."
     },
     "mf-bb-edge-g": {
@@ -1630,7 +1630,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb4_feraledge.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb4_feraledge.webp",
         "SA1": "Causa dano adicional igual a 5/7/10% da VIDA MÁXIMA do oponente se o golpe final for um CRÍTICO."
     },
     "mf-bb-fever-g": {
@@ -1638,7 +1638,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb2_catscratchfever.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb2_catscratchfever.webp",
         "SA1": "Causa 3/5/8% de dano adicional por GOLPE COMBO e inflige MARCA DA MORTE por 10 seg. (ao BLOQUEAR também)."
     },
     "mf-bb-omnom-g": {
@@ -1646,7 +1646,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb3_omnomnom.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb3_omnomnom.webp",
         "SA1": "25/35/50% do dano causado é recuperado como VIDA."
     },
     "mf-bb-paws-g": {
@@ -1654,7 +1654,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_mf:698837829467242496>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb1_hitpaws.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb1_hitpaws.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO por 5 segundos."
     },
     "pa-bb-canopy-g": {
@@ -1662,7 +1662,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb4_t1_forbearance.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb4_t1_forbearance.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de remover todos os EFEITOS POSITIVOS."
     },
     "pa-bb-iBrig-g": {
@@ -1670,7 +1670,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb3_t3_infernobrigade.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb3_t3_infernobrigade.webp",
         "SA1": "50/75/100% de dano extra enquanto pelo menos 3 LÁGRIMAS estiverem ativas."
     },
     "pa-bb-mBrig-g": {
@@ -1678,7 +1678,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb2_t2_motorbrigade.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb2_t2_motorbrigade.webp",
         "SA1": "Ao GOLPEAR, tem 15/25% de chance de ATORDOAR o oponente por 4/6 segundos."
     },
     "pa-bb-scope-g": {
@@ -1686,7 +1686,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb1_t1_silentscope.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb1_t1_silentscope.webp",
         "SA1": "Tem chance 15/25/35% maior de acertar um CRÍTICO."
     },
     "pa-bb-shower-g": {
@@ -1694,14 +1694,14 @@
         "type": "bb",
         "gear": 0,
         "character": "<:sp_pa:698884548678910043>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb5_t2_napalmshower.png"
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb5_t2_napalmshower.webp"
     },
     "pe-bb-airport-g": {
         "name": "Aeroporto Mortal",
         "type": "bb",
         "gear": 6,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb7_t3_deadlyairport.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb7_t3_deadlyairport.webp",
         "SA1": "Ao GOLPEAR, tem 15/25% de chance de infligir SANGRAMENTO FORTE por 5/10 segundos."
     },
     "pe-bb-argus-g": {
@@ -1709,7 +1709,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb5_t1_argusagony.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb5_t1_argusagony.webp",
         "SA1": "Ao GOLPEAR, tem 5/10% de chance de infligir QUEBRA DE ARMADURA por 3/5 segundos."
     },
     "pe-bb-doom-g": {
@@ -1717,7 +1717,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb6_t1_impendingdoom.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb6_t1_impendingdoom.webp",
         "SA1": "Ao GOLPEAR, tem 15/25% de chance de ATORDOAR o oponente por 4/6 segundos."
     },
     "pe-bb-fellow-g": {
@@ -1725,7 +1725,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb2_t3_goodfellows.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb2_t3_goodfellows.webp",
         "SA1": "Ao GOLPEAR, tem 5/10% de chance de infligir QUEBRA DE ARMADURA por 5/8 segundos."
     },
     "pe-bb-lenny-g": {
@@ -1733,7 +1733,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb1_t2_lonesomelenny.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb1_t2_lonesomelenny.webp",
         "SA1": "Ao GOLPEAR, inflige 1/2/3 EFEITOS NEGATIVOS aleatórios por 10 segundos."
     },
     "pe-bb-wagon-g": {
@@ -1741,7 +1741,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_pe:698879915713626142>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb4_t2_bandwagon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb4_t2_bandwagon.webp",
         "SA1": "Ao GOLPEAR, tem 15/25/35% de chance de remover todos os EFEITOS POSITIVOS."
     },
     "pw-bb-bOver-g": {
@@ -1749,7 +1749,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb3_t3_bueroverdrive.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb3_t3_bueroverdrive.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 3/5/7% a cada GOLPE acertado."
     },
     "pw-bb-crawl-g": {
@@ -1757,7 +1757,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb1_t1_deathcrawl.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb1_t1_deathcrawl.webp",
         "SA1": "Ao GOLPEAR, tem 5/10% de chance de infligir SANGRAMENTO por 3/6 segundos."
     },
     "pw-bb-instal-g": {
@@ -1765,7 +1765,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb4_t1_hatredinstall.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb4_t1_hatredinstall.webp",
         "SA1": "Ao GOLPEAR, tem 25/50/100% de chance de ganhar FÚRIA por 10 segundos."
     },
     "pw-bb-reaper-g": {
@@ -1773,7 +1773,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb5_t2_fracturereaper.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb5_t2_fracturereaper.webp",
         "SA1": "Ao GOLPEAR, tem 15/20/25% de chance de infligir MARCA DA MORTE por 10 seg."
     },
     "pw-bb-thresh-g": {
@@ -1781,7 +1781,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_pw:698904045389348914>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb2_t2_buerthresher.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb2_t2_buerthresher.webp",
         "SA1": "Ao GOLPEAR, tem 15/25% de chance de infligir QUEBRA DE ARMADURA por 5/10 segundos."
     },
     "rf-bb-battery-g": {
@@ -1789,7 +1789,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb2_assaultbattery.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb2_assaultbattery.webp",
         "SA1": "10/15/20% de chance de infligir OSCILAÇÃO DE ENERGIA por 10 segundos ao GOLPEAR."
     },
     "rf-bb-break-g": {
@@ -1797,7 +1797,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb3_circuitbreaker.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb3_circuitbreaker.webp",
         "SA1": "Durante o modo de detonação, GOLPES reduzem o MEDIDOR DE BLOCKBUSTER em 5/7/10%.",
         "SA2": "Sacrifica 10% da sua VIDA MÁXIMA."
     },
@@ -1806,7 +1806,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb1_catastrophecannonalpha.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb1_catastrophecannonalpha.webp",
         "SA1": "CRÍTICOS infligem DEFINHAR por 5/7/10 segundos."
     },
     "rf-bb-canonO-g": {
@@ -1814,7 +1814,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb5_catastrophecannonomega.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb5_catastrophecannonomega.webp",
         "SA1": "Ao GOLPEAR, 2/3/5% de chance de REMOVER 1 EF. POS. do oponente e tirar 2% de VIDA extra p/ cada EF. POS. removido. Oponentes derrotados não revivem."
     },
     "rf-bb-magnet-g": {
@@ -1822,7 +1822,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_rf:698919676612313168>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb4_magnetictrap.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb4_magnetictrap.webp",
         "SA1": "25/35/50% do dano causado é recuperado como VIDA. Ganhe BARREIRA por 10 segundos ao GOLPEAR."
     },
     "sq-bb-bat-g": {
@@ -1830,7 +1830,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb2_battleopera.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb2_battleopera.webp",
         "SA1": "25% de chance de fazer DEFINHAR por 5/7/10 segundos ao GOLPEAR"
     },
     "sq-bb-dai-g": {
@@ -1838,7 +1838,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb1_daisypusher.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb1_daisypusher.webp",
         "SA1": "Causa 25/35/50% de dano extra a oponentes com menos de 25% de VIDA."
     },
     "sq-bb-dnd-g": {
@@ -1846,7 +1846,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb4_dragndrop.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb4_dragndrop.webp",
         "SA1": "Ao GOLPEAR, inflige QUEBRA DE ARMADURA por 5/7/10 segundos."
     },
     "sq-bb-inf-g": {
@@ -1854,7 +1854,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb3_infernoofleviathan.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb3_infernoofleviathan.webp",
         "SA1": "Ao GOLPEAR, tem 25% de chance de infligir DEFINHAR e BLOQUEIO DE CURA por 5/7/10 segundos."
     },
     "sq-bb-rod-g": {
@@ -1862,7 +1862,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_sq:698909665077231776>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb5_rageofthedragon.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb5_rageofthedragon.webp",
         "SA1": "Inflige MALDIÇÃO por 5/7/10 segundos.",
         "SA2": "Causa 50% de dano extra se usado com menos de 10% de VIDA."
     },
@@ -1871,7 +1871,7 @@
         "type": "bb",
         "gear": 3,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb2_acidreflux.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb2_acidreflux.webp",
         "SA1": "50% de chance de infligir GOSMA por 10/12/15 segundos ao GOLPEAR."
     },
     "um-bb-feed-g": {
@@ -1879,7 +1879,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb6_feedingtime.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb6_feedingtime.webp",
         "SA1": "25/35/50% do dano causado é recuperado como VIDA. Oponentes derrotados não podem ser revividos."
     },
     "um-bb-project-g": {
@@ -1887,7 +1887,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb4_projectionlens.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb4_projectionlens.webp",
         "SA1": "10/15/20% de chance de infligir OSCILAÇÃO DE ENERGIA por 10 segundos ao GOLPEAR."
     },
     "um-bb-rush-g": {
@@ -1895,7 +1895,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb1_hungernrush.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb1_hungernrush.webp",
         "SA1": "15/20/25% de dano extra se usado enquanto EMPANTURRADO."
     },
     "um-bb-tongue-g": {
@@ -1903,7 +1903,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb5_tonguetwister.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb5_tonguetwister.webp",
         "SA1": "35% de chance de infligir GOSMA por 10/12/15 segundos ao GOLPEAR.",
         "SA2": "35% do dano causado é recuperado como VIDA."
     },
@@ -1912,7 +1912,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_um:969082448082268241>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb3_undertheweather.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb3_undertheweather.webp",
         "SA1": "25% de chance de causar DEFINHAR por 5/7/10 segundos ao GOLPEAR se usado enquanto FAMINTO."
     },
     "va-bb-check-g": {
@@ -1920,7 +1920,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb1_t1_checkmateincision.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb1_t1_checkmateincision.webp",
         "SA1": "Ao GOLPEAR, tem 25/35/50% de chance de infligir SANGRAMENTO por 5 segundos."
     },
     "va-bb-countA-g": {
@@ -1928,7 +1928,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb5_t1_countervenomsedative.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb5_t1_countervenomsedative.webp",
         "SA1": "Reduz o MEDIDOR DE BLOCKBUSTER do oponente em 15/25/35% ao GOLPEAR."
     },
     "va-bb-countB-g": {
@@ -1936,7 +1936,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb6_t1_countervenomdetox.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb6_t1_countervenomdetox.webp",
         "SA1": "15/25/35% de chance de remover todos os EFEITOS POSITIVOS ao GOLPEAR."
     },
     "va-bb-countO-g": {
@@ -1944,7 +1944,7 @@
         "type": "bb",
         "gear": 4,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb7_t1_countervenomparalysis.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb7_t1_countervenomparalysis.webp",
         "SA1": "15/25/35% de chance de ATORDOAR o oponente por 5 segundos ao GOLPEAR."
     },
     "va-bb-dOA-g": {
@@ -1952,7 +1952,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb3_t3_deadonarrival.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb3_t3_deadonarrival.webp",
         "SA1": "Se usado para derrotar um oponente, ganha REGENERAÇÃO FORTE por 10/12/15 seg."
     },
     "va-bb-eKG-g": {
@@ -1960,7 +1960,7 @@
         "type": "bb",
         "gear": 6,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb2_t3_ekgflatliner.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb2_t3_ekgflatliner.webp",
         "SA1": "25/35/50% de dano extra se o oponente estiver sofrendo SANGRAMENTO."
     },
     "va-bb-forbid-g": {
@@ -1968,7 +1968,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb4_t2_forbiddenprocedure.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb4_t2_forbiddenprocedure.webp",
         "SA1": "Ao GOLPEAR o corpo de um aliado caído, RESSUSCITE-O com {0:P0} de VIDA."
     },
     "va-bb-laryng-g": {
@@ -1976,7 +1976,7 @@
         "type": "bb",
         "gear": 5,
         "character": "<:sp_va:698852651617746974>",
-        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb8_t2_laryngectomy.png",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb8_t2_laryngectomy.webp",
         "SA1": "10/15/20% de chance de infligir SANGRAMENTO FORTE por 10 segundos ao GOLPEAR."
     }
 }

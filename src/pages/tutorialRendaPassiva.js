@@ -272,7 +272,7 @@ export function render() {
                     <p>Para ilustrar estas leis, apresentamos a visualização sagrada de uma base construída sob a égide da eficiência e da renda passiva:</p>
                     
                     <div class="image-frame">
-                        <img src="img/testes/base-renda-passiva.jpeg" alt="[Mapa da Base Recomendada]" class="base-image" onerror="this.src='https://via.placeholder.com/800x450?text=Imagem+da+Base+Nao+Encontrada'">
+                        <img loading="lazy" src="img/testes/base-renda-passiva.jpeg" alt="[Mapa da Base Recomendada]" class="base-image" onerror="this.src='https://via.placeholder.com/800x450?text=Imagem+da+Base+Nao+Encontrada'">
                         <p style="text-align: center; font-size: 0.875rem; font-style: italic; margin-top: 1rem;">Referência visual: A disposição tática dos guardiões e catalisadores.</p>
                     </div>
 

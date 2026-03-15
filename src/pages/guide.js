@@ -18,15 +18,15 @@ export function render() {
                     📚 Tutoriais
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('statistics')">
-                    <img src="img/official/AttackIcon.png" alt="Estatísticas" class="tab-icon">
+                    <img loading="lazy" src="img/official/AttackIcon.webp" alt="Estatísticas" class="tab-icon">
                     Estatísticas
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('modifiers')">
-                    <img src="img/official/Button_Modifiers.png" alt="Modificadores" class="tab-icon">
+                    <img loading="lazy" src="img/official/Button_Modifiers.webp" alt="Modificadores" class="tab-icon">
                     Modificadores
                 </button>
                 <button class="guide-tab-btn" onclick="switchGuideTab('catalysts')">
-                    <img src="img/official/RiftCoin.png" alt="Catalisadores" class="tab-icon">
+                    <img loading="lazy" src="img/official/RiftCoin.webp" alt="Catalisadores" class="tab-icon">
                     Catalisadores
                 </button>
             </div>
@@ -56,7 +56,7 @@ export function render() {
                         </div>
 
                         <div id="statsImageWrapper" class="stats-image-wrapper">
-                            <img src="img/unofficial/status_max_pt-br.jpg" alt="Estatísticas Máximas" class="stats-ref-image">
+                            <img loading="lazy" src="img/unofficial/status_max_pt-br.jpg" alt="Estatísticas Máximas" class="stats-ref-image">
                         </div>
                     </div>
 
@@ -83,7 +83,7 @@ export function render() {
                     <!-- BUFFS SECTION -->
                     <div class="modifiers-section">
                         <h2 class="section-title" style="color: var(--accent-green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                            <img src="img/modifiers/buffs/Regen.png" style="width: 24px; height: 24px;"> 
+                            <img loading="lazy" src="img/modifiers/buffs/Regen.webp" style="width: 24px; height: 24px;"> 
                             Efeitos Positivos
                         </h2>
                         <div class="effects-table-container">
@@ -108,7 +108,7 @@ export function render() {
                     <!-- DEBUFFS SECTION -->
                     <div class="modifiers-section">
                         <h2 class="section-title" style="color: var(--accent-red); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                            <img src="img/modifiers/debuffs/Bleed.png" style="width: 24px; height: 24px;">
+                            <img loading="lazy" src="img/modifiers/debuffs/Bleed.webp" style="width: 24px; height: 24px;">
                             Efeitos Negativos
                         </h2>
                         <div class="effects-table-container">
@@ -133,7 +133,7 @@ export function render() {
                     <!-- SPECIAL EFFECTS SECTION -->
                     <div class="modifiers-section">
                         <h2 class="section-title" style="color: #b0bec5; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                            <img src="img/modifiers/permanent/Permanent.png" style="width: 24px; height: 24px;">
+                            <img loading="lazy" src="img/modifiers/permanent/Permanent.webp" style="width: 24px; height: 24px;">
                             Efeito Permanente
                         </h2>
                         <div class="effects-table-container">
@@ -162,23 +162,23 @@ export function render() {
                     <div class="cotw-section">
                         <div class="cotw-filters">
                             <button class="cotw-filter-btn" data-element="water">
-                                <img src="img/official/ElementalWaterBackless.png" alt="Água">
+                                <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="Água">
                                 <span>Água</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="fire">
-                                <img src="img/official/ElementalFireBackless.png" alt="Fogo">
+                                <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="Fogo">
                                 <span>Fogo</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="wind">
-                            <img src="img/official/ElementalWindBackless.png" alt="Ar">
+                            <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="Ar">
                             <span>Ar</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="light">
-                            <img src="img/official/ElementalLightBackless.png" alt="Luz">
+                            <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="Luz">
                             <span>Luz</span>
                             </button>
                             <button class="cotw-filter-btn" data-element="dark">
-                                <img src="img/official/ElementalDarkBackless.png" alt="Trevas">
+                                <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="Trevas">
                                 <span>Trevas</span>
                             </button>
                         </div>
@@ -254,7 +254,7 @@ function renderEffects(type, containerId) {
             <tr class="effect-row">
                 <td class="effect-icon-cell">
                     <div class="effect-icon-wrapper">
-                        <img src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
+                        <img loading="lazy" src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
                     </div>
                 </td>
                 <td class="effect-name-cell">
@@ -401,7 +401,7 @@ function renderSpecialEffects(containerId) {
         <tr class="effect-row">
             <td class="effect-icon-cell">
                 <div class="effect-icon-wrapper">
-                    <img src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
+                    <img loading="lazy" src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
                 </div>
             </td>
             <td class="effect-name-cell">
