@@ -15,7 +15,7 @@ export function createNavbar() {
             <div class="navbar-brand">
                 <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
                 <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="about-link">
-                    <img src="img/official/IconInfo.png" alt="">
+                    <img loading="lazy" src="img/official/IconInfo.webp" alt="">
                     <span>sobre</span>
                 </a>
             </div>

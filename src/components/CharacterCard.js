@@ -15,14 +15,14 @@ import { CHARACTER_ICONS, CHARACTER_COLORS } from '../config/constants.js';
  */
 export function createCharacterCard(charKey, charData, index = 0, onClick = 'openCharacterDetails') {
     const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
-    const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.png`;
+    const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.webp`;
 
     return `
         <div class="character-card animate-in" 
              style="animation-delay: ${index * 0.03}s; --char-accent: ${charColor}"
              onclick="${onClick}('${charKey}')">
             <img src="${iconPath}" alt="${charData.character}" loading="lazy" 
-                 onerror="this.src='img/official/Annie_Icon.png'">
+                 onerror="this.src='img/official/Annie_Icon.webp'">
             <div class="name">${charData.character.toUpperCase()}</div>
         </div>
     `;

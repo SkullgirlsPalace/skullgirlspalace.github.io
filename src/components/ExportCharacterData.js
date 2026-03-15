@@ -22,7 +22,7 @@ export function renderExportModal() {
             <label class="export-char-item" data-char-key="${key}">
                 <input type="checkbox" class="export-char-checkbox" value="${key}">
                 <div class="export-char-icon-wrapper">
-                    <img src="${icon}" alt="${name}" class="export-char-icon" onerror="this.style.display='none'">
+                    <img loading="lazy" src="${icon}" alt="${name}" class="export-char-icon" onerror="this.style.display='none'">
                 </div>
                 <span class="export-char-name">${name}</span>
             </label>

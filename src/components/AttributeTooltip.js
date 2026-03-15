@@ -91,7 +91,7 @@ function buildElementTableHTML(data, compact = false) {
         return `
             <tr class="element-row">
                 <td class="element-cell">
-                    <img src="${elInfo.iconPath}" alt="${el}" class="element-table-icon">
+                    <img loading="lazy" src="${elInfo.iconPath}" alt="${el}" class="element-table-icon">
                     <span class="element-table-name">${el}</span>
                 </td>
                 <td class="buff-cell">${buffText}</td>
@@ -153,7 +153,7 @@ function showTooltip(target) {
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     } else if (source === 'move') {
-        const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
+        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
                 <div class="attr-tooltip-title-group">
@@ -167,7 +167,7 @@ function showTooltip(target) {
         `;
     } else {
         // Effect (buff/debuff/term)
-        const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
+        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
 
         let disclaimerHtml = '';
         if (data.stacks || data.scaling) {
@@ -285,7 +285,7 @@ function showDetailModal(target) {
             </div>
         `;
     } else if (source === 'move') {
-        const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
+        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
         headerHtml = `
             ${iconHtml}
             <h3>
@@ -301,7 +301,7 @@ function showDetailModal(target) {
         `;
     } else {
         // Effect (buff/debuff/term)
-        const iconHtml = data.icon ? `<img src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
+        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
         const typeLabel = data.type === 'buff' ? 'Efeito Positivo' : data.type === 'debuff' ? 'Efeito Negativo' : 'Termo';
         headerHtml = `
             ${iconHtml}

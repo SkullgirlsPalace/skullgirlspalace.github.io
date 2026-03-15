@@ -1,0 +1,20 @@
+{
+  "name": "palacio-branco-enterprises",
+  "version": "1.0.0",
+  "description": "Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso",
+  "main": "src/main.js",
+  "scripts": {
+    "optimize": "node tools/optimize-images.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bot-do-jao/palacio-branco-enterprises.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sharp": "^0.33.5"
+  }
+}

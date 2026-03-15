@@ -18,14 +18,14 @@ export function createFilterBar() {
             <div class="filter-controls">
                 <button id="main-filter-btn" class="filter-toggle-btn" onclick="handleMainFilterAction()">
                     <div class="btn-icon-wrapper">
-                        <img class="icon-default" src="img/official/icon_filter.png" onerror="this.src='img/official/filter.png'" alt="">
-                        <img class="icon-active" src="img/official/constraints_no.png" alt="">
+                        <img loading="lazy" class="icon-default" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
+                        <img loading="lazy" class="icon-active" src="img/official/constraints_no.webp" alt="">
                     </div>
                     <span class="text-default">Filtrar</span>
                     <span class="text-active">Limpar</span>
                 </button>
                 <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="Limpar Filtros">
-                    <img src="img/official/constraints_no.png" alt="Limpar">
+                    <img loading="lazy" src="img/official/constraints_no.webp" alt="Limpar">
                 </button>
             </div>
             
@@ -38,19 +38,19 @@ export function createFilterBar() {
                 <div class="filter-grid rarity-grid">
                     <button class="filter-btn rarity-btn" data-rarity="bronze"
                         onclick="handleFilterClick('rarity', 'bronze')" title="Bronze">
-                        <img src="img/official/icone_bronze.png" alt="Bronze">
+                        <img loading="lazy" src="img/official/icone_bronze.webp" alt="Bronze">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="prata"
                         onclick="handleFilterClick('rarity', 'prata')" title="Prata">
-                        <img src="img/official/icone_prata.png" alt="Prata">
+                        <img loading="lazy" src="img/official/icone_prata.webp" alt="Prata">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="ouro"
                         onclick="handleFilterClick('rarity', 'ouro')" title="Ouro">
-                        <img src="img/official/icone_ouro.png" alt="Ouro">
+                        <img loading="lazy" src="img/official/icone_ouro.webp" alt="Ouro">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="diamante"
                         onclick="handleFilterClick('rarity', 'diamante')" title="Diamante">
-                        <img src="img/official/icone_diamante.png" alt="Diamante">
+                        <img loading="lazy" src="img/official/icone_diamante.webp" alt="Diamante">
                     </button>
                 </div>
 
@@ -60,27 +60,27 @@ export function createFilterBar() {
                 <div class="filter-grid element-grid">
                     <button class="filter-btn element-btn" data-element="fogo"
                         onclick="handleFilterClick('element', 'fogo')" title="Fogo">
-                        <img src="img/official/ElementalFireBackless.png" alt="Fogo">
+                        <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="Fogo">
                     </button>
                     <button class="filter-btn element-btn" data-element="agua"
                         onclick="handleFilterClick('element', 'agua')" title="Água">
-                        <img src="img/official/ElementalWaterBackless.png" alt="Água">
+                        <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="Água">
                     </button>
                     <button class="filter-btn element-btn" data-element="ar"
                         onclick="handleFilterClick('element', 'ar')" title="Ar">
-                        <img src="img/official/ElementalWindBackless.png" alt="Ar">
+                        <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="Ar">
                     </button>
                     <button class="filter-btn element-btn" data-element="luz"
                         onclick="handleFilterClick('element', 'luz')" title="Luz">
-                        <img src="img/official/ElementalLightBackless.png" alt="Luz">
+                        <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="Luz">
                     </button>
                     <button class="filter-btn element-btn" data-element="trevas"
                         onclick="handleFilterClick('element', 'trevas')" title="Trevas">
-                        <img src="img/official/ElementalDarkBackless.png" alt="Trevas">
+                        <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="Trevas">
                     </button>
                     <button class="filter-btn element-btn" data-element="neutro"
                         onclick="handleFilterClick('element', 'neutro')" title="Neutro">
-                        <img src="img/official/ElementalNeutralBackless.png" alt="Neutro">
+                        <img loading="lazy" src="img/official/ElementalNeutralBackless.webp" alt="Neutro">
                     </button>
                 </div>
 
@@ -89,7 +89,7 @@ export function createFilterBar() {
                 <!-- Sort Section -->
                 <div class="filter-section right">
                     <div class="sort-header">
-                        <img src="img/official/icon_sort.png" onerror="this.style.display='none'" alt="">
+                        <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
                         ORGANIZAR
                     </div>
                     <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
@@ -212,7 +212,7 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     if (char && currentLabel) {
         const masteryIcon = getMasteryIcon(currentCharKey);
         currentLabel.innerHTML = `
-            <img src="${masteryIcon}" alt="" style="width:24px; height:24px; object-fit:contain;">
+            <img loading="lazy" src="${masteryIcon}" alt="" style="width:24px; height:24px; object-fit:contain;">
             ${char.character}
         `;
     }
@@ -230,7 +230,7 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         return `
             <button class="char-dropdown-item ${activeClass}" 
                     onclick="openCharacterDetails('${charKey}', '${currentTab}'); handleToggleCharDropdown();">
-                <img src="${mIcon}" alt="" onerror="this.src='img/official/Annie_Icon.png'">
+                <img loading="lazy" src="${mIcon}" alt="" onerror="this.src='img/official/Annie_Icon.webp'">
                 <span>${charData.character}</span>
             </button>
         `;

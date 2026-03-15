@@ -32,7 +32,7 @@ export function renderModifierExportModal() {
                 <input type="checkbox" class="export-modifier-checkbox" value="${effect.key}" data-type="${effect.type}">
                 <div class="export-char-icon-wrapper">
                     ${effect.icon
-                ? `<img src="${effect.icon}" alt="${effect.name}" class="export-char-icon" onerror="this.style.display='none'">`
+                ? `<img loading="lazy" src="${effect.icon}" alt="${effect.name}" class="export-char-icon" onerror="this.style.display='none'">`
                 : `<span style="font-size: 0.7rem; color: var(--text-muted);">${typeLabel}</span>`
             }
                 </div>
