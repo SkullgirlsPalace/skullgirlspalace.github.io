@@ -14,11 +14,11 @@ export function render() {
                 <!-- Hero Section -->
                 <div class="hub-hero">
                     <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="hub-about-link">
-                        <img src="img/icones/IconInfo.png" alt="">
+                        <img src="img/official/IconInfo.png" alt="">
                         <span>SOBRE</span>
                     </a>
                     <h1>Skullgirls Palace</h1>
-                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile.</p>
+                    <p>Sua fonte completa de builds, calculadoras e estratégias para Skullgirls Mobile.</p>
                 </div>
 
                 <!-- Menu Buttons -->
@@ -30,7 +30,7 @@ export function render() {
                         <span>GUIA</span>
                     </button>
                     <button class="hub-btn" onclick="navigateTo('stats')">
-                        <span>ESTATÍSTICAS</span>
+                        <span>CALCULADORA</span>
                     </button>
                     <button class="hub-btn" onclick="window.open('https://hub.skullgirlsmobile.com', '_blank')">
                         <span>SKULLGIRLS MOBILE HUB</span>

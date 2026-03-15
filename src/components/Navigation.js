@@ -15,7 +15,7 @@ export function createNavbar() {
             <div class="navbar-brand">
                 <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
                 <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="about-link">
-                    <img src="img/icones/IconInfo.png" alt="">
+                    <img src="img/official/IconInfo.png" alt="">
                     <span>sobre</span>
                 </a>
             </div>
@@ -23,7 +23,7 @@ export function createNavbar() {
                 <li><a href="javascript:void(0)" onclick="navigateTo('')">Inicio</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('characters')">Personagens</a></li>
                 <li><a href="javascript:void(0)" onclick="navigateTo('guide')">Guia</a></li>
-                <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Estatísticas</a></li>
+                <li><a href="javascript:void(0)" onclick="navigateTo('stats')">Calculadora</a></li>
             </ul>
             <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
         </nav>
@@ -45,30 +45,30 @@ export function createAboutDrawer() {
             <div class="drawer-content">
                 <div class="hero">
                     <h1>Skullgirls Palace</h1>
-                    <p>Sua fonte completa de builds, estatísticas e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
+                    <p>Sua fonte completa de builds, calculadoras e estratégias para Skullgirls Mobile. Um projeto da comunidade Palácio Branco.</p>
                     <div class="hero-buttons">
                         <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">
-                            💬 Discord
+                            Discord
                         </a>
                         <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank" class="btn btn-secondary">
-                            📦 GitHub
+                            GitHub
                         </a>
                     </div>
                 </div>
 
                 <div class="info-cards vertical">
                     <div class="card-link">
-                        <h3>📖 Builds Recomendadas</h3>
+                        <h3>Builds Recomendadas</h3>
                         <p>O intuito de recomendar uma Build, Superior e Arsenal é para facilitar sua Vida e você desempenhar melhor com sua Variante Favorita sem precisar ficar perguntando de tantos lugares, foi tudo montado por bons jogadores e boa parte das recomendações são boas, eu espero. Em caso de erros reporte no Servidor do Discord.</p>
                     </div>
                     <div class="card-link">
-                        <h3>📊 Calculadora</h3>
+                        <h3>Calculadora</h3>
                         <p>Simule seus Ganhos mensais de Moedas e Teonitas, calcule também o quanto é necessário para Gastar em Moedas para Melhorar suas Variantes, Golpes, Astros e etc...</p>
                     </div>
                 </div>
 
                 <div class="credits-section">
-                    <h4>✨ Créditos</h4>
+                    <h4>Créditos</h4>
                     <p>Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.</p>
                     <p>Inspiração Principal e Colaborador: <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
                     <p>Fontes oficiais utilizadas: <a href="https://krazete.github.io/sgm/" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Fandom Wiki</a>.</p>

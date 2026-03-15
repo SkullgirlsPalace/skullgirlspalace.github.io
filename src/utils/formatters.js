@@ -18,8 +18,8 @@ export function formatText(text, variantName = null) {
     // Remove [HAB 1]: and [HAB 2]: prefixes
     text = text.replace(/\[HAB \d+\]:\s*/g, '');
 
-    // Convert **bold** to <strong>
-    text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    // Remove **bold** syntax instead of converting to <strong> since it doesn't add readability
+    text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
 
     // Convert Discord emoji format to simple text
     text = text.replace(/<:[^:]+:\d+>/g, '');
@@ -52,16 +52,16 @@ export function formatText(text, variantName = null) {
         workingText = workingText.replace(marker, html);
     }
 
+    // Convert numbers to highlighted spans
+    workingText = workingText.replace(/((?:\?\?\?|\d+(?:\.\d+)?%?))/g, '<span class="number">$1</span>');
+
     // Wrap ELEMENTO keyword for variants with element effects
     if (variantName && hasElementEffects(variantName)) {
         workingText = workingText.replace(
             /(?<![\wÀ-ÿ])ELEMENTOS?(?![\wÀ-ÿ])/g,
-            (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}">${match}</span>`
+            (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}"><img src="img/official/all_elements.gif" width="256" height="256" class="inline-effect-icon" alt="">${match}</span>`
         );
     }
-
-    // Convert numbers to highlighted spans
-    workingText = workingText.replace(/((?:\?\?\?|\d+(?:\.\d+)?%?))/g, '<span class="number">$1</span>');
 
     // Convert \n to <br>
     workingText = workingText.replace(/\\n/g, '<br>').replace(/\n/g, '<br>');
@@ -160,7 +160,7 @@ export function getMasteryIcon(charKey) {
     ).join('');
     // Special case for Robofortune (lowercase f in asset)
     const fileName = pascalName === 'RoboFortune' ? 'Robofortune' : pascalName;
-    return `img/icones/${fileName}_MasteryIcon.png`;
+    return `img/official/${fileName}_MasteryIcon.png`;
 }
 
 /**

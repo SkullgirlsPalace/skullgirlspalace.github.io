@@ -22,7 +22,7 @@ export function createCharacterCard(charKey, charData, index = 0, onClick = 'ope
              style="animation-delay: ${index * 0.03}s; --char-accent: ${charColor}"
              onclick="${onClick}('${charKey}')">
             <img src="${iconPath}" alt="${charData.character}" loading="lazy" 
-                 onerror="this.src='img/icones/Annie_Icon.png'">
+                 onerror="this.src='img/official/Annie_Icon.png'">
             <div class="name">${charData.character.toUpperCase()}</div>
         </div>
     `;

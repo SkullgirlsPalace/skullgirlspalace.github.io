@@ -28,12 +28,12 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>📊 Estatísticas</h2>
+                <h2>Calculadora</h2>
             </div>
 
             <div class="stats-intro">
                 <div class="intro-card">
-                    <h3>🎮 Bem-vindo ao Simulador</h3>
+                    <h3>Calculadora</h3>
                     <p>Calcule seus ganhos mensais estimados e custos de evolução no Skullgirls Mobile. 
                     Configure seu perfil de jogador para obter resultados personalizados.</p>
                 </div>

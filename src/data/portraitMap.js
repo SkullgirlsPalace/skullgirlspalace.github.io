@@ -243,7 +243,7 @@ export const PORTRAIT_MAP = {
     },
     "peacock": {
         "Fica Frio": "img/portrait/pe/fFrame.png",
-        "Apanhadora De Sonhos": "img/portrait/pe/dCatch.png",
+        "Apanhadora de Sonhos": "img/portrait/pe/dCatch.png",
         "Quebra de Contrato": "img/portrait/pe/dBreaker.png",
         "Intocável": "img/portrait/pe/uTouch.png",
         "Velhos Tempos": "img/portrait/pe/tAFolks.png",
@@ -342,5 +342,5 @@ export function getPortraitImage(charKey, variantName) {
         return PORTRAIT_MAP[charKey][variantName];
     }
     // Fallback if mapping fails or new variant is not yet mapped
-    return `img/icones/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;
+    return `img/official/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;
 }

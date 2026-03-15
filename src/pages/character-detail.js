@@ -48,7 +48,7 @@ export function render(charKey, initialTab = 'builds') {
                 
                 <div class="char-title-centered">
                     <img src="${masteryIcon}" alt="${charData.character}" class="char-mastery-icon"
-                         onerror="this.src='img/icones/Annie_MasteryIcon.png'">
+                         onerror="this.src='img/official/Annie_MasteryIcon.png'">
                     <h2>${charData.character.toUpperCase()}</h2>
                 </div>
                 

@@ -257,10 +257,10 @@
             "parallel": "B"
         },
         "Ganhando Vantagem": {
-            "pf": "N/A",
-            "riftOff": "N/A",
-            "riftDef": "N/A",
-            "parallel": "N/A"
+            "pf": "S",
+            "riftOff": "A",
+            "riftDef": "I",
+            "parallel": "S"
         },
         "Virtuoso Vintage": {
             "pf": "B",
@@ -1613,7 +1613,7 @@
         },
         "Isca Sortuda": {
             "pf": "SS",
-            "riftOff": "SS",
+            "riftOff": "A",
             "riftDef": "C",
             "parallel": "SS"
         },

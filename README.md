@@ -30,7 +30,7 @@ Elementos de interface reutilizáveis em várias partes do site.
 Estilos que são específicos de uma única página.
 -   `home.css`: Hub inicial e grade de personagens.
 -   `character-detail.css`: Página de detalhes do personagem.
--   `statistics.css`: Calculadoras e página de estatísticas.
+-   `statistics.css`: Página da Calculadora de ganhos e gastos do jogo.
 -   `guide.css`: Tabelas e estrutura da página de guias.
 -   `tierlist.css`: Página e editor da Tier List.
 -   `catalysts.css`: Página de catalisadores.

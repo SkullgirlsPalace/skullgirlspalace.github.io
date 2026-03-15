@@ -109,7 +109,7 @@
                 }
                 output += `    },\n`;
             }
-            output += '};\n\n/**\n * Returns the exact portrait image for a given variant, based on mapping\n */\nexport function getPortraitImage(charKey, variantName) {\n    if (PORTRAIT_MAP[charKey] && PORTRAIT_MAP[charKey][variantName]) {\n        return PORTRAIT_MAP[charKey][variantName];\n    }\n    // Fallback if mapping fails or new variant is not yet mapped\n    return `img/icones/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;\n}';
+            output += '};\n\n/**\n * Returns the exact portrait image for a given variant, based on mapping\n */\nexport function getPortraitImage(charKey, variantName) {\n    if (PORTRAIT_MAP[charKey] && PORTRAIT_MAP[charKey][variantName]) {\n        return PORTRAIT_MAP[charKey][variantName];\n    }\n    // Fallback if mapping fails or new variant is not yet mapped\n    return `img/official/${charKey.charAt(0).toUpperCase() + charKey.slice(1)}_Icon.png`;\n}';
             
             const textarea = document.getElementById('output');
             textarea.value = output;

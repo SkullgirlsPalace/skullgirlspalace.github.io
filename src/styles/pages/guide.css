@@ -195,4 +195,197 @@
     .guide-header h1 {
         font-size: 2rem;
     }
+
+    .attributes-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Statistics Tab Styles */
+.attribute-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-gold) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Statistics Tab - Hero Container */
+.stats-hero-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Statistics Tab - Header Row */
+.stats-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.stats-header-title {
+    color: var(--accent-gold);
+    font-family: 'Washington', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(212, 168, 75, 0.2);
+}
+
+.stats-toggle-btn {
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.15), rgba(212, 168, 75, 0.05));
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Washington', sans-serif;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stats-toggle-btn:hover {
+    background: var(--accent-gold);
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(212, 168, 75, 0.3);
+}
+/* (removed toggle-icon) */
+
+/* Statistics Tab - Reference Image */
+.stats-image-wrapper {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: fadeSlideIn 0.3s ease;
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stats-ref-image {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Statistics Tab - Glossary */
+.stats-glossary-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.25rem;
+}
+
+.attribute-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.attribute-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.attribute-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 10px;
+    gap: 12px;
+}
+
+.attribute-card-header h3 {
+    color: var(--accent-gold);
+    margin: 0;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.attribute-max {
+    background: rgba(212, 168, 75, 0.1);
+    color: var(--accent-gold-light);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.attribute-summary {
+    color: var(--text-primary);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.attribute-detailed {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* Mobile adjustments for Stats and Menu Nav */
+@media (max-width: 768px) {
+    .guide-tabs {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+        padding: 4px 12px 12px 12px !important;
+        scrollbar-width: none;
+    }
+
+    .guide-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .guide-tab-btn {
+        width: auto !important;
+        flex: 0 0 auto !important;
+        padding: 10px 18px !important;
+        font-size: 0.85rem !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .glossary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-header-row {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .stats-ref-image {
+        max-width: 100%;
+    }
 }
