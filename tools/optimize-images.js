@@ -22,8 +22,14 @@ async function processDirectory(directory) {
                 
                 console.log(`Processing: ${fullPath} -> ${webPath}`);
                 try {
-                    await sharp(fullPath)
-                        .webp({ quality: 85 })
+                    let imagePipeline = sharp(fullPath);
+                    
+                    if (fullPath.includes('select_character')) {
+                        imagePipeline = imagePipeline.resize({ width: 800, withoutEnlargement: true });
+                    }
+
+                    await imagePipeline
+                        .webp({ quality: 80 })
                         .toFile(webPath);
                     
                     console.log(`Successfully converted. Deleting original: ${fullPath}`);
