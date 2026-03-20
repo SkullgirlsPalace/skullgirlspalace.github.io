@@ -32,7 +32,7 @@ export const VARIANT_CLASSES = {
     "Combatente da Liberdade": ["Defensivo"],
     "Pico Bola": ["Suporte de Utilidade"],
     "Homem de Gelo": ["Coringa"],
-    "Promotor": ["Ofensivo"],
+    "Promotor": ["Suporte de Utilidade"],
     "Favorito dos Fãs": ["Suporte de Utilidade"],
     "Heavy Metal": ["Coringa"],
     "Banda dos Sonhos": ["Coringa"],
@@ -122,10 +122,8 @@ export const VARIANT_CLASSES = {
     "Megassônico": ["Coringa"],
     "Megera Vaporwave": ["Coringa"],
     "Fantoche Sombrio": ["Coringa"],
-    "Ameaça": ["Coringa"],
     "Zona de Buffer": ["Coringa"],
     "Overclocked": ["Coringa"],
-    "Très Chic": ["Coringa"],
     "Mai-s O Quê?": ["Coringa"]
 };
 
