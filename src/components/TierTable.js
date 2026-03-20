@@ -5,7 +5,7 @@
 
 import { ELEMENT_MAP, TIER_RANKS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { getPortraitImage } from '../data/portraitMap.js';
+import { getVariantClasses, CLASS_ICONS, CLASS_DESCRIPTIONS } from '../data/variantClasses.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getState, setCompactMode, setEditorMode, updateTierRank } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
@@ -52,6 +52,63 @@ function cycleRank(charKey, variantName, mode) {
 }
 
 
+/**
+ * Create class badges HTML for a variant (no longer used in standard view, replaced by rank badges)
+ * @param {string} variantName - Variant name
+ * @returns {string} HTML string with class icon badges
+ */
+function createClassBadges(variantName) {
+    const classes = getVariantClasses(variantName);
+    const badges = classes.map(cls => {
+        const info = CLASS_ICONS[cls];
+        if (!info) return '';
+        return `<img loading="lazy" src="${info.icon}" alt="${cls}" title="${cls}" class="class-role-icon" style="--class-color: ${info.color}">`;
+    }).join('');
+    return `<div class="class-badges">${badges}</div>`;
+}
+
+/**
+ * Render rank cell with optional class icon overlay
+ */
+function renderRankCell(charKey, variantName, mode, rankValue, classes) {
+    const normalizedRank = rankValue ? String(rankValue).toUpperCase().trim() : '';
+    const isRankBOrHigher = ['SS', 'S', 'A', 'B'].includes(normalizedRank);
+
+    const iconsHTML = classes.map(cls => {
+        let classInfo = { ...CLASS_ICONS[cls] };
+        if (!classInfo.icon) return '';
+        
+        let showIcon = false;
+        if (cls === 'Defensivo') {
+            showIcon = (mode === 'riftDef');
+        } else if (cls === 'Ofensivo') {
+            showIcon = (mode !== 'riftDef');
+        } else if (cls === 'Suporte de Utilidade') {
+            showIcon = (mode !== 'riftDef');
+        } else if (cls === 'Coringa') {
+            showIcon = true;
+            // Override with Armor icon if rank is B or higher AND mode is riftDef
+            if (isRankBOrHigher && mode === 'riftDef') {
+                classInfo.icon = "img/modifiers/buffs/Armor.webp";
+                classInfo.color = "#1565c0";
+            }
+        }
+        
+        if (showIcon) {
+            return `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${cls}" title="${cls}">`;
+        }
+        return '';
+    }).join('');
+    
+    return `
+        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variantName}', '${mode}')">
+            <div class="rank-badge-wrapper">
+                ${createRankBadge(rankValue)}
+                ${iconsHTML}
+            </div>
+        </div>
+    `;
+}
 
 /**
  * Create tier table HTML
@@ -62,11 +119,12 @@ function cycleRank(charKey, variantName, mode) {
 export function createTierTable(charKey, charData) {
     const state = getState();
     const tierData = state.tierData[charKey] || {};
+    const { filters, sort } = state.tabState.tier;
 
     // Get and filter variants
     let variants = flattenVariants(charData.variants);
-    variants = filterVariants(variants, state.filters);
-    variants = sortVariants(variants, state.sort);
+    variants = filterVariants(variants, filters);
+    variants = sortVariants(variants, sort);
 
     const compactClass = state.isCompactMode ? 'compact-mode' : '';
     const editingClass = state.isEditorMode ? 'editing' : '';
@@ -85,7 +143,6 @@ export function createTierTable(charKey, charData) {
                 parallel: baseRanks.parallel || 'B'
             };
             const imgPath = getVariantImage(charKey, variant.name, 0);
-            const portraitPath = getPortraitImage(charKey, variant.name);
 
             const elementStr = variant.element || 'Neutro';
             const elementInfo = ELEMENT_MAP[elementStr] || ELEMENT_MAP['Neutro'];
@@ -95,16 +152,15 @@ export function createTierTable(charKey, charData) {
             const rarityIcon = RARITY_ICONS[rarityKey];
             const masteryIcon = getMasteryIcon(charKey);
 
+            const variantClasses = getVariantClasses(variant.name);
+
             const charCellContent = state.isCompactMode ? `
                 <div class="compact-char-info">
-                    <div class="compact-portrait-wrapper">
-                        <img loading="lazy" src="${portraitPath}" alt="${variant.name}" title="${variant.name}" class="compact-portrait-img">
-                        <div class="compact-badges">
-                            <img loading="lazy" src="${elementInfo.statIcon}" alt="${elementStr}" class="compact-element-icon">
-                            <img loading="lazy" src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
-                        </div>
-                    </div>
                     <span class="compact-variant-name">${variant.name}</span>
+                    <div class="compact-badges">
+                        <img loading="lazy" src="${elementInfo.statIcon}" alt="${elementStr}" class="compact-element-icon">
+                        <img loading="lazy" src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
+                    </div>
                 </div>
             ` : `
                 <img loading="lazy" src="${imgPath}" alt="${variant.name}" onerror="this.src='img/official/Annie_Icon.webp'">
@@ -119,24 +175,16 @@ export function createTierTable(charKey, charData) {
                         </div>
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'pf')">
-                            ${createRankBadge(ranks.pf)}
-                        </div>
+                        ${renderRankCell(charKey, variant.name, 'pf', ranks.pf, variantClasses)}
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'parallel')">
-                            ${createRankBadge(ranks.parallel)}
-                        </div>
+                        ${renderRankCell(charKey, variant.name, 'parallel', ranks.parallel, variantClasses)}
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'riftOff')">
-                            ${createRankBadge(ranks.riftOff)}
-                        </div>
+                        ${renderRankCell(charKey, variant.name, 'riftOff', ranks.riftOff, variantClasses)}
                     </td>
                     <td class="text-center">
-                        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variant.name}', 'riftDef')">
-                            ${createRankBadge(ranks.riftDef)}
-                        </div>
+                        ${renderRankCell(charKey, variant.name, 'riftDef', ranks.riftDef, variantClasses)}
                     </td>
                 </tr>
             `;
@@ -187,27 +235,56 @@ export function createTierView(charKey, charData) {
 
 
         <!-- Rank Explanations Dictionary -->
-        <div class="rank-dictionary">
-            <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
-                <p>O Melhor dos Melhores; Domina o Modo.</p>
+        <div class="legend-section">
+            <div class="legend-header">
+                <span class="legend-title">Notas</span>
+                <button class="legend-toggle-btn" onclick="toggleLegendSection('rank-dict')">▼</button>
             </div>
-            <div class="dict-item"><span class="rank-badge rank-s">S</span>
-                <p>Muito Forte e Útil; Poucas Falhas.</p>
+            <div class="rank-dictionary" id="rank-dict">
+                <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
+                    <p>O Melhor dos Melhores; Domina o Modo.</p>
+                </div>
+                <div class="dict-item"><span class="rank-badge rank-s">S</span>
+                    <p>Muito Forte e Útil; Poucas Falhas.</p>
+                </div>
+                <div class="dict-item"><span class="rank-badge rank-a">A</span>
+                    <p>Sólido, mas com algumas limitações.</p>
+                </div>
+                <div class="dict-item"><span class="rank-badge rank-b">B</span>
+                    <p>Razoável, mas tem desvantagens claras.</p>
+                </div>
+                <div class="dict-item"><span class="rank-badge rank-c">C</span>
+                    <p>Ruim; existem opções melhores.</p>
+                </div>
+                <div class="dict-item"><span class="rank-badge rank-i">I</span>
+                    <p>Inviável: Sem utilidade; Não Recomendado.</p>
+                </div>
+                <div class="dict-item"><span class="rank-badge rank-na">N/A</span>
+                    <p>Não Avaliado/Em Análise: Lutador Novo ou Alterado; Rank Pendente.</p>
+                </div>
             </div>
-            <div class="dict-item"><span class="rank-badge rank-a">A</span>
-                <p>Sólido, mas com algumas limitações.</p>
+        </div>
+
+        <!-- Class Role Legend -->
+        <div class="legend-section">
+            <div class="legend-header">
+                <span class="legend-title">Classes / Funções</span>
+                <button class="legend-toggle-btn" onclick="toggleLegendSection('class-dict')">▼</button>
             </div>
-            <div class="dict-item"><span class="rank-badge rank-b">B</span>
-                <p>Razoável, mas tem desvantagens claras.</p>
-            </div>
-            <div class="dict-item"><span class="rank-badge rank-c">C</span>
-                <p>Ruim; existem opções melhores.</p>
-            </div>
-            <div class="dict-item"><span class="rank-badge rank-i">I</span>
-                <p>Inviável: Sem utilidade; Não Recomendado.</p>
-            </div>
-            <div class="dict-item"><span class="rank-badge rank-na">N/A</span>
-                <p>Não Avaliado/Em Análise: Lutador Novo ou Alterado; Rank Pendente.</p>
+            <div class="class-dictionary" id="class-dict">
+                ${Object.entries(CLASS_DESCRIPTIONS).map(([cls, desc]) => {
+                    const info = CLASS_ICONS[cls];
+                    if (!info) return '';
+                    return `
+                        <div class="class-dict-item">
+                            <img src="${info.icon}" alt="${cls}" class="class-dict-icon" style="--class-color: ${info.color}">
+                            <div class="class-dict-text">
+                                <strong style="color: ${info.color}">${cls}</strong>
+                                <p>${desc}</p>
+                            </div>
+                        </div>
+                    `;
+                }).join('')}
             </div>
         </div>
 
@@ -250,6 +327,22 @@ export function handleToggleEditorMode() {
         window.onTierDataChanged();
     }
 }
+
+/**
+ * Toggle visibility of legend sections
+ */
+window.toggleLegendSection = function(id) {
+    const element = document.getElementById(id);
+    const btn = element.previousElementSibling.querySelector('.legend-toggle-btn i');
+    
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+        btn.className = 'fas fa-chevron-down';
+    } else {
+        element.classList.add('hidden');
+        btn.className = 'fas fa-chevron-right';
+    }
+};
 
 export async function handleSaveTierData() {
     const state = getState();

@@ -17,14 +17,16 @@ const state = {
     currentSection: 'landing-hub',
     currentTab: 'builds', // 'builds' | 'tier'
 
-    // Filters & Sorting
-    filters: {
-        rarity: [],
-        element: []
-    },
-    sort: {
-        type: 'score',
-        direction: 'desc'
+    // Tab-Specific Filters & Sorting
+    tabState: {
+        builds: {
+            filters: { rarity: [], element: [] },
+            sort: { type: 'score', direction: 'desc' }
+        },
+        tier: {
+            filters: { rarity: [], element: [] },
+            sort: { type: 'class', direction: 'desc' }
+        }
     },
 
     // Editor Mode (for tier list)
@@ -106,12 +108,14 @@ export function setCurrentTab(tab) {
 }
 
 export function setFilters(filters) {
-    state.filters = { ...state.filters, ...filters };
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    state.tabState[tab].filters = { ...state.tabState[tab].filters, ...filters };
     notifySubscribers();
 }
 
 export function toggleFilter(type, value) {
-    const filterArray = state.filters[type];
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    const filterArray = state.tabState[tab].filters[type];
     const index = filterArray.indexOf(value);
 
     if (index > -1) {
@@ -123,22 +127,40 @@ export function toggleFilter(type, value) {
 }
 
 export function clearFilters() {
-    state.filters = { rarity: [], element: [] };
-    state.sort = { type: 'score', direction: 'desc' };
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    state.tabState[tab].filters = { rarity: [], element: [] };
+    state.tabState[tab].sort = tab === 'tier' 
+        ? { type: 'class', direction: 'desc' }
+        : { type: 'score', direction: 'desc' };
+    notifySubscribers();
+}
+
+/**
+ * Resets ALL filters for ALL tabs. Used on character navigation.
+ */
+export function resetAllFilters() {
+    state.tabState.builds.filters = { rarity: [], element: [] };
+    state.tabState.tier.filters = { rarity: [], element: [] };
+    state.tabState.builds.sort = { type: 'score', direction: 'desc' };
+    state.tabState.tier.sort = { type: 'class', direction: 'desc' };
     notifySubscribers();
 }
 
 export function setSort(sortConfig) {
-    state.sort = { ...state.sort, ...sortConfig };
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    state.tabState[tab].sort = { ...state.tabState[tab].sort, ...sortConfig };
     notifySubscribers();
 }
 
 export function toggleSort(sortType) {
-    if (state.sort.type === sortType) {
-        state.sort.direction = state.sort.direction === 'desc' ? 'asc' : 'desc';
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    const currentSort = state.tabState[tab].sort;
+
+    if (currentSort.type === sortType) {
+        currentSort.direction = currentSort.direction === 'desc' ? 'asc' : 'desc';
     } else {
-        state.sort.type = sortType;
-        state.sort.direction = ['name', 'element', 'class'].includes(sortType) ? 'asc' : 'desc';
+        currentSort.type = sortType;
+        currentSort.direction = ['name', 'element', 'class'].includes(sortType) ? 'asc' : 'desc';
     }
     notifySubscribers();
 }
