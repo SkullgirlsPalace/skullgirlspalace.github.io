@@ -387,6 +387,42 @@ input:checked+.slider:before {
     font-size: 2.4rem;
 }
 
+.rank-badge-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app .rank-class-badge {
+    position: absolute;
+    bottom: -8px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    z-index: 5;
+    pointer-events: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#app .tier-table.compact-mode .rank-badge-wrapper {
+    flex-direction: row;
+    gap: 4px;
+}
+
+#app .tier-table.compact-mode .rank-class-badge {
+    position: static;
+    width: 16px;
+    height: 16px;
+    bottom: auto;
+    right: auto;
+    margin-left: 2px;
+}
+
 /* Hide only stat-based sorts in Tier mode */
 .tier-list-mode .sort-btn[data-sort="score"],
 .tier-list-mode .sort-btn[data-sort="atk"],
@@ -538,8 +574,8 @@ input:checked+.slider:before {
 
 .tier-table.compact-mode .tier-char-cell {
     width: auto;
-    padding: 2px 0;
-    align-items: center;
+    padding: 10px 16px;
+    align-items: flex-start;
     justify-content: center;
     gap: 0;
 }
@@ -552,28 +588,12 @@ input:checked+.slider:before {
 /* Portrait container logic */
 .compact-char-info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 2px;
+    gap: 8px;
     width: max-content;
-    margin: 0 auto;
-}
-
-.compact-portrait-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 1px;
-}
-
-.tier-table.compact-mode .tier-char-cell .compact-portrait-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 4px;
-    object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    margin: 0;
 }
 
 .compact-badges {
@@ -581,14 +601,14 @@ input:checked+.slider:before {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
 }
 
 /* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
 .tier-table.compact-mode .tier-char-cell .compact-element-icon {
     display: block !important;
-    width: 28px !important;
-    height: 70px !important;
+    height: 20px !important;
+    width: auto !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -596,8 +616,8 @@ input:checked+.slider:before {
 
 .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
     display: block !important;
-    width: 30px !important;
-    height: 30px !important;
+    width: 20px !important;
+    height: 20px !important;
     object-fit: contain;
     border-radius: 0;
     filter: none;
@@ -631,17 +651,13 @@ input:checked+.slider:before {
 /* Ensure the variant name wraps nicely and has a fixed max width so it doesn't break the layout. */
 .tier-table.compact-mode .tier-char-cell .compact-variant-name {
     display: block;
-    /* Overrides the previous display: none if there was any */
-    font-size: 1.18rem;
-    font-weight: 700;
-    text-align: center;
-    max-width: 160px;
-    white-space: normal;
-    word-break: break-word;
-    /* Allows long names to break lines if needed */
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: left;
+    white-space: nowrap;
     line-height: 1.1;
     color: #fff;
-    margin-top: 4px;
+    margin-top: 0;
 }
 
 .tier-table.compact-mode .rank-badge {
@@ -726,16 +742,57 @@ input:checked+.slider:before {
     margin: 0;
 }
 
-/* ========== RANK DICTIONARY ========== */
-.rank-dictionary {
+.legend-section {
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.legend-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.legend-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.legend-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.legend-toggle-btn:hover {
+    color: #fff;
+    opacity: 1;
+}
+
+.rank-dictionary, .class-dictionary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
-    background: rgba(10, 10, 15, 0.4);
     padding: 20px;
-    border-radius: var(--border-radius-sm);
-    margin-bottom: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.rank-dictionary.hidden, .class-dictionary.hidden {
+    display: none;
 }
 
 .dict-item {
@@ -820,3 +877,110 @@ input:checked+.slider:before {
 }
 
 /* C */
+
+/* ========== CLASS ROLE ICONS ========== */
+.class-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+#app .class-role-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: help;
+}
+
+.class-role-icon:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 10px var(--class-color, rgba(255, 255, 255, 0.3));
+}
+
+/* Compact mode class icons */
+.tier-table.compact-mode .class-role-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* ========== CLASS DICTIONARY LEGEND ========== */
+.class-dictionary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    background: rgba(10, 10, 15, 0.4);
+    padding: 20px;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Legend items padding is handled by .rank-dictionary, .class-dictionary */
+
+
+.class-dict-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.class-dict-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.class-dict-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.class-dict-text strong {
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.class-dict-text p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ========== RESPONSIVE CLASS ICONS ========== */
+@media screen and (max-width: 768px) {
+    .class-role-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tier-table.compact-mode .class-role-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .class-dictionary {
+        grid-template-columns: 1fr;
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .class-dict-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .class-dict-text p {
+        font-size: 0.8rem;
+    }
+}

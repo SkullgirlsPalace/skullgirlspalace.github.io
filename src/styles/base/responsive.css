@@ -601,12 +601,13 @@
     .tier-table td:first-child {
         position: sticky;
         left: 0;
-        z-index: 2;
+        z-index: 10;
         background: var(--bg-card);
     }
 
     .tier-table th:first-child {
-        background: rgba(10, 10, 15, 0.95);
+        background: #111116; /* Solid background to prevent text bleed */
+        z-index: 11;
     }
 
     .tier-table .tier-char-cell {

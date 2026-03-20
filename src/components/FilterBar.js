@@ -128,11 +128,13 @@ export function createFilterBar() {
  */
 export function updateFilterUI() {
     const state = getState();
-    const { filters, sort } = state;
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    const { filters, sort } = state.tabState[tab];
 
     // Update Rarity Buttons
+    // Do NOT highlight all buttons if none are specifically selected (showing all)
     document.querySelectorAll('.rarity-btn').forEach(btn => {
-        if (filters.rarity.includes(btn.dataset.rarity)) {
+        if (filters.rarity.length > 0 && filters.rarity.includes(btn.dataset.rarity)) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
@@ -141,7 +143,7 @@ export function updateFilterUI() {
 
     // Update Element Buttons
     document.querySelectorAll('.element-btn').forEach(btn => {
-        if (filters.element.includes(btn.dataset.element)) {
+        if (filters.element.length > 0 && filters.element.includes(btn.dataset.element)) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
@@ -158,22 +160,29 @@ export function updateFilterUI() {
         'class': 'CATEGORIA'
     };
 
+    const defaultSortType = tab === 'tier' ? 'class' : 'score';
+    const defaultSortDir = 'desc';
+
     document.querySelectorAll('.sort-btn').forEach(btn => {
         btn.classList.remove('active');
         btn.innerText = sortLabels[btn.dataset.sort] || btn.dataset.sort;
 
         if (btn.dataset.sort === sort.type) {
-            btn.classList.add('active');
+            // ONLY add .active highlight if it's NOT the default sort
+            if (sort.type !== defaultSortType || sort.direction !== defaultSortDir) {
+                btn.classList.add('active');
+            }
             const arrow = sort.direction === 'asc' ? ' ↑' : ' ↓';
             btn.innerText += arrow;
         }
     });
 
     // Dynamic Filter/Clear button logic
+    // Clear button only appears if user has manually changed something away from baseline
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
-        sort.type !== 'score' ||
-        sort.direction !== 'desc';
+        sort.type !== defaultSortType ||
+        sort.direction !== defaultSortDir;
 
     const mainBtn = document.getElementById('main-filter-btn');
     const desktopClearBtn = document.getElementById('desktop-clear-btn');

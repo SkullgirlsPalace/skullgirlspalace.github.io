@@ -82,11 +82,12 @@ export function render(charKey, initialTab = 'builds') {
  */
 function renderBuildsTab(charKey, charData) {
     const state = getState();
+    const { filters, sort } = state.tabState.builds;
 
     // Flatten and process variants
     let variants = flattenVariants(charData.variants);
-    variants = filterVariants(variants, state.filters);
-    variants = sortVariants(variants, state.sort);
+    variants = filterVariants(variants, filters);
+    variants = sortVariants(variants, sort);
 
     // Generate variant cards HTML
     let variantsHTML = '';
@@ -117,16 +118,24 @@ function renderTierTab(charKey, charData) {
     `;
 }
 
+// Global variable to track if we need to reset filters on next char load
+let lastCharKey = null;
+
 /**
  * Initialize character detail page
  * @param {string} charKey - Character key
  * @param {string} initialTab - Initial tab
  */
 export async function init(charKey, initialTab = 'builds') {
-    setCurrentCharacter(charKey);
+    const { resetAllFilters } = await import('../state/store.js');
+    
+    // Reset filters ONLY when changing character
+    if (charKey !== lastCharKey) {
+        resetAllFilters();
+        lastCharKey = charKey;
+    }
 
-    // Reset filters when entering a new character
-    setFilters({ rarity: [], element: [] });
+    setCurrentCharacter(charKey);
 
     // Force render of the initial tab content with clean filters
     // This handles both 'builds' and 'tier' tabs correctly
@@ -145,10 +154,11 @@ export function refreshVariants(charKey) {
     if (!charData) return;
 
     const state = getState();
+    const { filters, sort } = state.tabState.builds;
 
     let variants = flattenVariants(charData.variants);
-    variants = filterVariants(variants, state.filters);
-    variants = sortVariants(variants, state.sort);
+    variants = filterVariants(variants, filters);
+    variants = sortVariants(variants, sort);
 
     renderVariants('variants-container', variants, charKey);
 }
@@ -169,15 +179,9 @@ export async function switchTab(charKey, tab) {
     // This prevents resetting the user's sort preference when switching characters 
     // while staying on the same tab (e.g. browsing Tier Lists).
     // Also applies if previousTab is undefined (first load).
-    if (tab !== previousTab) {
-        if (tab === 'tier') {
-            // Tier List Default: Category Descending
-            setSort({ type: 'class', direction: 'desc' });
-        } else {
-            // Builds Default: Score Descending
-            setSort({ type: 'score', direction: 'desc' });
-        }
-    }
+    // No longer resetting sort on tab switch. 
+    // Users want their chosen filters and sorting to remain as they set them.
+    // We only update the active tab in the state.
 
     // Update tab button states
     document.querySelectorAll('.tab-btn').forEach(btn => {

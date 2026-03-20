@@ -5,6 +5,7 @@
 
 import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js';
 import { parseStatValue } from './formatters.js';
+import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
 
 /**
  * Sort variants based on sort configuration
@@ -16,8 +17,17 @@ export function sortVariants(variants, sortConfig) {
     const { type, direction } = sortConfig;
 
     return [...variants].sort((a, b) => {
-        let valA, valB;
+        // Enforce Rarity as Primary Sort (Diamond <-> Bronze)
+        // Note: RARITY_ORDER has Diamond = 4, Bronze = 1
+        const rarityA = RARITY_ORDER[a.rarityKey] || 0;
+        const rarityB = RARITY_ORDER[b.rarityKey] || 0;
 
+        if (rarityA !== rarityB) {
+            return direction === 'desc' ? (rarityB - rarityA) : (rarityA - rarityB);
+        }
+
+        // Secondary Sort (User's chosen criterion)
+        let valA, valB;
         switch (type) {
             case 'score':
                 valA = parseStatValue(a.stats?.power);
@@ -40,8 +50,10 @@ export function sortVariants(variants, sortConfig) {
                 valB = ELEMENT_ORDER[b.element] || 99;
                 break;
             case 'class':
-                valA = RARITY_ORDER[a.rarityKey] || 0;
-                valB = RARITY_ORDER[b.rarityKey] || 0;
+                const classesA = getVariantClasses(a.name);
+                const classesB = getVariantClasses(b.name);
+                valA = CLASS_ORDER[classesA[0]] || 99;
+                valB = CLASS_ORDER[classesB[0]] || 99;
                 break;
             default:
                 valA = a.name;
