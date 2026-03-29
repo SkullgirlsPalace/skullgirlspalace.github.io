@@ -215,7 +215,7 @@
                     "attacker_modifiers": [
                         {
                             "name": "RUPTURA",
-                            "description": "Ao BLOQUEAR, perca 20% do MEDIDOR DE BLOCKBUSTER a cada segund."
+                            "description": "Enquanto bloqueando, perca 20% do MEDIDOR DE BLOCKBUSTER por segundo."
                         }
                     ],
                     "defender_modifiers": []
@@ -225,7 +225,7 @@
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
-                            "name": "SANGUE QUENTE",
+                            "name": "ENERGIZADO",
                             "description": "Ganhe ACELERAÇÃO permanente."
                         }
                     ]
@@ -236,7 +236,7 @@
                     "defender_modifiers": [
                         {
                             "name": "INÉRCIA",
-                            "description": "Ataques Assistidos são INDEFENSÁVEIS e dão INABALÁVEL por 5 segundos."
+                            "description": "Ataques de ASSISTÊNCIA são INDEFENSÁVEIS e concedem INABALÁVEL por 5 segundos."
                         }
                     ]
                 },
@@ -245,8 +245,8 @@
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
-                            "name": "CARRETA DESGOVERNADA",
-                            "description": "ATAQUES DE ARRANCADA são INDEFENSÁVEIS."
+                            "name": "PERFURAR",
+                            "description": "ATAQUES DE INVESTIDA são INDEFENSÁVEIS."
                         }
                     ]
                 },
@@ -255,8 +255,8 @@
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
-                            "name": "CORPO REQUINTADO",
-                            "description": "Sofrer um GOLPE próximo de um aliado morto dá ESPINHOS por 15 segundos.\n\nRESSUSCITE todos os aliados com 50% de VIDA ao usar um BLOCKBUSTER CATEGORIA 3."
+                            "name": "CADÁVER REQUINTADO",
+                            "description": "Sofrer um GOLPE perto de um aliado morto concede ESPINHOS por 15 segundos.\n\nRESSUSCITE todos os aliados com 50% de VIDA ao usar um BLOCKBUSTER TIER 3."
                         }
                     ]
                 },
@@ -265,13 +265,13 @@
                     "attacker_modifiers": [
                         {
                             "name": "CARNE INFECTADA",
-                            "description": "Sofra DESTRUIÇÃO Permanente por 30 segundos quando o oponente ficar com menos de 50% de VIDA."
+                            "description": "Sofra DESTRUIÇÃO de 30 segundos quando o oponente cair abaixo de 50% de VIDA."
                         }
                     ],
                     "defender_modifiers": [
                         {
-                            "name": "NOITE FELIZ",
-                            "description": "[Lutadores do Elemento Luz]: RESSUSCITE com 25% de VIDA e RESISTÊNCIA FINAL por 15s depois de estar morto por 60s."
+                            "name": "Ó NOITE SAGRADA",
+                            "description": "[Lutadores do Elemento Luz]: RESSUSCITE com 25% de VIDA e RESISTÊNCIA FINAL por 15 segundos após estar morto por 60 segundos."
                         }
                     ]
                 }
@@ -284,7 +284,7 @@
                     "node": "Single (Esquerdo)",
                     "attacker_modifiers": [
                         {
-                            "name": "FORA DE TEMPO",
+                            "name": "FORA DE RITMO",
                             "description": "Sofra um EF. NEGATIVO aleatório por 10 segundos a cada 5 GOLPES DE COMBO."
                         }
                     ],
@@ -295,7 +295,7 @@
                     "attacker_modifiers": [],
                     "defender_modifiers": [
                         {
-                            "name": "MALDIÇÃO",
+                            "name": "AZAR",
                             "description": "Causa 100% de dano extra se o oponente tiver qualquer EF. NEGATIVO ativo."
                         }
                     ]
@@ -305,7 +305,7 @@
                     "attacker_modifiers": [
                         {
                             "name": "ESTREPES",
-                            "description": "Sofra SANGRAMENTO por 10 segundos ao ARRANCAR PARA TRÁS."
+                            "description": "Sofra SANGRAMENTO por 10 segundos ao INVESTIR PARA TRÁS."
                         }
                     ],
                     "defender_modifiers": []
@@ -316,7 +316,7 @@
                     "defender_modifiers": [
                         {
                             "name": "OVELHA ELÉTRICA",
-                            "description": "Quando GOLPEADO ganhe 10% de infligir OSCILAÇÃO DE ENERGIA por 10 segundos."
+                            "description": "Ganhe 10% de chance ao ser GOLPEADO de infligir OSCILAÇÃO DE ENERGIA por 10 segundos."
                         }
                     ]
                 },
@@ -325,7 +325,7 @@
                     "attacker_modifiers": [
                         {
                             "name": "RÉQUIEM DA SANIDADE",
-                            "description": "A cada 5 segundos, sofra um EFEITO NEGATIVO aleatório (exceto ATORDOAMENTO) por 10 segundos."
+                            "description": "A cada 5 segundos, sofra um EF. NEGATIVO aleatório (exceto ATORDOAMENTO) por 10 segundos."
                         }
                     ],
                     "defender_modifiers": []
@@ -336,11 +336,11 @@
                     "defender_modifiers": [
                         {
                             "name": "MALDIÇÃO FINAL",
-                            "description": "Quando derrotado, inflija 3 EFEITOS NEGATIVOS (exceto ATORDOAMENTO) no oponente por 10 segundos."
+                            "description": "Quando derrotado, inflija 3 EF. NEGATIVOS (exceto ATORDOAMENTO) no oponente por 10 segundos."
                             
                         },
                         {
-                            "name": "NOITE DE PAZ",
+                            "name": "NOITE SILENCIOSA",
                             "description": "[Lutadores do Elemento Trevas]: Ao sofrer um GOLPE CRÍTICO, DESATIVE os BLOCKBUSTERS do oponente por 10 segundos."
                         }
                     ]

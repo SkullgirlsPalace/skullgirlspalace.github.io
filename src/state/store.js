@@ -29,6 +29,10 @@ const state = {
         }
     },
 
+    // Editor Mode (for tier list)
+    isEditorMode: false,
+    isCompactMode: localStorage.getItem('TIER_COMPACT_MODE') === 'true',
+
     // UI State
     isFilterBarOpen: false,
     isAboutDrawerOpen: false,
@@ -166,7 +170,39 @@ export function setTierData(tierData) {
     notifySubscribers();
 }
 
+/**
+ * Update specific character data in state
+ * @param {string} charKey - Character key
+ * @param {Function} updateFn - Function that takes character object and returns updated object
+ */
+export function updateCharacterData(charKey, updateFn) {
+    if (state.characters[charKey]) {
+        state.characters[charKey] = updateFn(state.characters[charKey]);
+        notifySubscribers();
+    }
+}
 
+export function updateTierRank(charKey, variantName, mode, newRank) {
+    if (!state.tierData[charKey]) {
+        state.tierData[charKey] = {};
+    }
+    if (!state.tierData[charKey][variantName]) {
+        state.tierData[charKey][variantName] = { pf: 'B', riftOff: 'B', riftDef: 'B', parallel: 'B' };
+    }
+    state.tierData[charKey][variantName][mode] = newRank;
+    notifySubscribers();
+}
+
+export function setEditorMode(enabled) {
+    state.isEditorMode = enabled;
+    notifySubscribers();
+}
+
+export function setCompactMode(enabled) {
+    state.isCompactMode = enabled;
+    localStorage.setItem('TIER_COMPACT_MODE', enabled);
+    notifySubscribers();
+}
 
 export function setCatalysts(catalysts) {
     state.catalysts = catalysts;
