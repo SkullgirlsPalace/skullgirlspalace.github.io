@@ -7,7 +7,7 @@ import { ELEMENT_MAP, TIER_RANKS, RARITY_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { getVariantClasses, CLASS_ICONS, CLASS_DESCRIPTIONS } from '../data/variantClasses.js';
 import { getMasteryIcon } from '../utils/formatters.js';
-import { getState, setCompactMode, setEditorMode, updateTierRank } from '../state/store.js';
+import { getState } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
 
 /**
@@ -28,28 +28,6 @@ export function createRankBadge(rank) {
  * @param {string} variantName - Variant name
  * @param {string} mode - Mode key (pf, riftOff, riftDef, parallel)
  */
-function cycleRank(charKey, variantName, mode) {
-    const state = getState();
-    const currentTierData = state.tierData[charKey] || {};
-    const variantRanks = currentTierData[variantName] || { pf: 'N/A', riftOff: 'N/A', riftDef: 'N/A', parallel: 'N/A' };
-    const currentRank = variantRanks[mode] || 'N/A';
-
-    const currentIndex = TIER_RANKS.indexOf(currentRank);
-    const nextIndex = (currentIndex + 1) % TIER_RANKS.length;
-    const nextRank = TIER_RANKS[nextIndex];
-
-    updateTierRank(charKey, variantName, mode, nextRank);
-
-    // Save locally for immediate feedback
-    const updatedTierData = { ...state.tierData };
-    if (!updatedTierData[charKey]) updatedTierData[charKey] = {};
-    if (!updatedTierData[charKey][variantName]) updatedTierData[charKey][variantName] = {};
-    updatedTierData[charKey][variantName][mode] = nextRank;
-
-    if (window.onTierDataChanged) {
-        window.onTierDataChanged();
-    }
-}
 
 
 /**
@@ -101,7 +79,7 @@ function renderRankCell(charKey, variantName, mode, rankValue, classes) {
     }).join('');
     
     return `
-        <div class="rank-cell-container text-center" onclick="handleCycleRank('${charKey}', '${variantName}', '${mode}')">
+        <div class="rank-cell-container text-center">
             <div class="rank-badge-wrapper">
                 ${createRankBadge(rankValue)}
                 ${iconsHTML}
@@ -125,9 +103,6 @@ export function createTierTable(charKey, charData) {
     let variants = flattenVariants(charData.variants);
     variants = filterVariants(variants, filters);
     variants = sortVariants(variants, sort);
-
-    const compactClass = state.isCompactMode ? 'compact-mode' : '';
-    const editingClass = state.isEditorMode ? 'editing' : '';
 
     let rowsHTML = '';
 
@@ -154,15 +129,7 @@ export function createTierTable(charKey, charData) {
 
             const variantClasses = getVariantClasses(variant.name);
 
-            const charCellContent = state.isCompactMode ? `
-                <div class="compact-char-info">
-                    <span class="compact-variant-name">${variant.name}</span>
-                    <div class="compact-badges">
-                        <img loading="lazy" src="${elementInfo.statIcon}" alt="${elementStr}" class="compact-element-icon">
-                        <img loading="lazy" src="${rarityIcon}" alt="${rarityKey}" class="compact-rarity-icon">
-                    </div>
-                </div>
-            ` : `
+            const charCellContent = `
                 <img loading="lazy" src="${imgPath}" alt="${variant.name}" onerror="this.src='img/official/Annie_Icon.webp'">
                 <span>${variant.name}</span>
             `;
@@ -193,7 +160,7 @@ export function createTierTable(charKey, charData) {
 
     return `
         <div class="tier-table-wrapper">
-            <table class="tier-table ${compactClass} ${editingClass}">
+            <table class="tier-table">
                 <thead>
                     <tr>
                         <th>Variante</th>
@@ -226,9 +193,6 @@ export function createTierTable(charKey, charData) {
  * @returns {string} HTML string
  */
 export function createTierView(charKey, charData) {
-    const state = getState();
-    const compactChecked = state.isCompactMode ? 'checked' : '';
-    const editorChecked = state.isEditorMode ? 'checked' : '';
 
     return `
 
@@ -288,95 +252,21 @@ export function createTierView(charKey, charData) {
             </div>
         </div>
 
-        <!-- Display Control Bar -->
-        <div class="editor-control-bar" style="justify-content: center;">
-            <div class="editor-toggle">
-                <label class="switch">
-                    <input type="checkbox" id="compact-mode-toggle" ${compactChecked} onchange="handleToggleCompactMode()">
-                    <span class="slider round"></span>
-                </label>
-                <span class="editor-label">Modo Compacto</span>
-            </div>
-        </div>
-
         ${createTierTable(charKey, charData)}
     `;
 }
 
-// Global handlers
-export function handleCycleRank(charKey, variantName, mode) {
-    const state = getState();
-    if (state.isEditorMode) {
-        cycleRank(charKey, variantName, mode);
-    }
-}
-
-export function handleToggleCompactMode() {
-    const checked = document.getElementById('compact-mode-toggle')?.checked || false;
-    setCompactMode(checked);
-    if (window.onTierDataChanged) {
-        window.onTierDataChanged();
-    }
-}
-
-export function handleToggleEditorMode() {
-    const checked = document.getElementById('editor-mode-toggle')?.checked || false;
-    setEditorMode(checked);
-    // Re-render to show/hide notice and update table class
-    if (window.onTierDataChanged) {
-        window.onTierDataChanged();
-    }
-}
-
-/**
- * Toggle visibility of legend sections
- */
+// Global UI handler for legend sections
 window.toggleLegendSection = function(id) {
     const element = document.getElementById(id);
-    const btn = element.previousElementSibling.querySelector('.legend-toggle-btn i');
+    const btn = element.closest('.legend-section').querySelector('.legend-toggle-btn');
+    
+    element.classList.toggle('hidden');
     
     if (element.classList.contains('hidden')) {
-        element.classList.remove('hidden');
-        btn.className = 'fas fa-chevron-down';
+        btn.style.transform = 'rotate(-90deg)';
     } else {
-        element.classList.add('hidden');
-        btn.className = 'fas fa-chevron-right';
+        btn.style.transform = 'rotate(0deg)';
     }
 };
 
-export async function handleSaveTierData() {
-    const state = getState();
-
-    // Always persist to localStorage for safety
-    localStorage.setItem('TIER_DATA_PERSISTED', JSON.stringify(state.tierData));
-
-    try {
-        const response = await fetch('http://localhost:3000/save-tier-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(state.tierData)
-        });
-
-        if (response.ok) {
-            alert('✅ Dados salvos com sucesso no arquivo data/tier-data.json!');
-        } else {
-            throw new Error('Falha ao salvar no servidor');
-        }
-    } catch (error) {
-        console.error('Erro ao salvar:', error);
-
-        // Detailed error message if server is likely not running
-        const jsonString = JSON.stringify(state.tierData, null, 4);
-        console.log('--- DADOS PARA O ARQUIVO DATA/TIER-DATA.JSON ---');
-        console.log(jsonString);
-
-        alert('❌ Erro ao salvar diretamente no arquivo.\n\nCERTIFIQUE-SE QUE O SERVIDOR ESTÁ RODANDO:\n1. Abra um terminal na pasta do projeto\n2. Digite: node scripts/server.js\n\nComo contingência, o JSON foi copiado para sua área de transferência.');
-
-        // Fallback to clipboard
-        if (navigator.clipboard) {
-            navigator.clipboard.writeText(jsonString);
-        }
-    }
-}
