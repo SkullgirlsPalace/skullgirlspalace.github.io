@@ -9,6 +9,7 @@ import { EFFECT_DATA } from '../data/effectData.js';
 import { getMoveData } from '../data/movesimages.js';
 import { getElementEffects } from '../data/elementEffectsData.js';
 import { ELEMENT_MAP } from '../config/constants.js';
+import { CLASS_DESCRIPTIONS, CLASS_ICONS } from '../data/variantClasses.js';
 
 // ========== STATE ==========
 let activeTooltip = null;
@@ -61,6 +62,22 @@ function resolveData(target) {
             }
         }
         return null;
+    }
+
+    if (key.startsWith('class_')) {
+        const clsName = key.replace('class_', '');
+        if (CLASS_DESCRIPTIONS[clsName]) {
+            return {
+                source: 'class',
+                data: {
+                    name: clsName,
+                    summary: CLASS_DESCRIPTIONS[clsName],
+                    detailed: CLASS_DESCRIPTIONS[clsName],
+                    icon: CLASS_ICONS[clsName]?.icon,
+                    type: 'Classe / Função'
+                }
+            };
+        }
     }
 
     if (ATTRIBUTE_DATA[key]) return { source: 'attr', data: ATTRIBUTE_DATA[key] };
@@ -153,7 +170,7 @@ function showTooltip(target) {
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     } else if (source === 'move') {
-        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
+        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-tooltip-icon move-img" alt="">` : '';
         tooltip.innerHTML = `
             <div class="attr-tooltip-header">
                 <div class="attr-tooltip-title-group">
@@ -166,7 +183,7 @@ function showTooltip(target) {
             <span class="attr-tooltip-hint">Clique para explicação detalhada</span>
         `;
     } else {
-        // Effect (buff/debuff/term)
+        // Effect (buff/debuff/term) or Class
         const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-tooltip-icon" alt="">` : '';
 
         let disclaimerHtml = '';
@@ -185,6 +202,7 @@ function showTooltip(target) {
                     ${iconHtml}
                     <strong>${data.name}</strong>
                 </div>
+                ${source === 'class' ? `<span class="attr-tooltip-max">${data.type}</span>` : ''}
             </div>
             <p class="attr-tooltip-summary">${data.detailed}</p>
             ${disclaimerHtml}
@@ -285,7 +303,7 @@ function showDetailModal(target) {
             </div>
         `;
     } else if (source === 'move') {
-        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
+        const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-detail-icon move-img" alt="${data.name}">` : '';
         headerHtml = `
             ${iconHtml}
             <h3>
@@ -300,9 +318,10 @@ function showDetailModal(target) {
             </div>
         `;
     } else {
-        // Effect (buff/debuff/term)
+        // Effect (buff/debuff/term) or Class
         const iconHtml = data.icon ? `<img loading="lazy" src="${data.icon}" class="attr-detail-icon" alt="${data.name}">` : '';
-        const typeLabel = data.type === 'buff' ? 'Efeito Positivo' : data.type === 'debuff' ? 'Efeito Negativo' : 'Termo';
+        const typeLabel = source === 'class' ? data.type : (data.type === 'buff' ? 'Efeito Positivo' : data.type === 'debuff' ? 'Efeito Negativo' : 'Termo');
+        
         headerHtml = `
             ${iconHtml}
             <h3>

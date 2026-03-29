@@ -59,6 +59,12 @@
     object-fit: contain;
 }
 
+.attr-tooltip-icon.move-img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
 .attr-tooltip-max {
     font-size: 0.7rem;
     color: var(--text-muted);
@@ -167,13 +173,14 @@
 }
 
 .attr-detail-icon {
-    width: 85px;
-    height: 85px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: var(--border-radius-sm);
-    padding: 6px;
-    border: var(--border-subtle);
+}
+
+.attr-detail-icon.move-img {
+    width: 140px;
+    height: 140px;
 }
 
 .attr-detail-header h3 {
