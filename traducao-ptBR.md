@@ -8,12 +8,13 @@ Atue como um localizador experiente de videogames especializado em Skullgirls Mo
    - Exemplo: "gain HASTE" -> "ganhe ACELERAÇÃO"
 2. **TERMOS INTRADUZÍVEIS:** 
    - A palavra **Blockbuster** (ou BLOCKBUSTER) NUNCA deve ser traduzida.
-   - O termo **Special Move** (ou SPECIAL MOVE) deve SEMPRE ser traduzido como **Golpe Especial** ou **G. Especial** (ou GOLPE ESPECIAL ou G. ESPECIAL se estiver em maiúsculo).
+   - O termo **Special Move** (ou SPECIAL MOVE) deve SEMPRE ser traduzido como **Golpe Especial** (ou GOLPE ESPECIAL se estiver em maiúsculo).
+   - O termo **Tag** deve SEMPRE ser traduzido como **Assistência**, (ou ASSISTÊNCIA se estiver em maiúsculo).
+   - O termo **Dash** deve ser traduzido como **Arrancada** (ou ARRANCADA se estiver em maiúsculo).
 3. **NUNCA TRADUZA O NOME DA VARIANTE:** Se o texto indicar "When Annie...", não tente traduzir ou buscar nome de variante; traduza apenas o efeito.
 4. **ESTRUTURA DE SAÍDA OBRIGATÓRIA:** Mantenha estritamente o formato de tags JSON como nos nossos arquivos.
    - `[HAB 1]: Texto traduzido aqui.`
    - `[HAB 2]: Texto traduzido aqui.`
-5. **NEGRITOS MANTIDOS:** Mantenha os trechos em negrito (**texto**) nas mesmas partes da frase.
 
 ---
 

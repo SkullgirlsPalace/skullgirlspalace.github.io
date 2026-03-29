@@ -11,6 +11,7 @@ import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.
 import { renderVariants } from '../components/VariantCard.js';
 import { createFilterBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
 import { createTierView } from '../components/TierTable.js';
+import { renderProfileModal } from './character-profile.js';
 
 /**
  * Render character detail page
@@ -46,10 +47,17 @@ export function render(charKey, initialTab = 'builds') {
                     <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                 </button>
                 
-                <div class="char-title-centered">
-                    <img loading="lazy" src="${masteryIcon}" alt="${charData.character}" class="char-mastery-icon"
-                         onerror="this.src='img/official/Annie_MasteryIcon.webp'">
-                    <h2>${charData.character.toUpperCase()}</h2>
+                <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${charData.character}" class="char-select-icon"
+                             onerror="this.src='img/official/Annie_Icon.webp'" style="width: 64px; height: 64px; object-fit: contain;">
+                        <h2 style="margin: 0; font-size: 2.5rem;">${charData.character.toUpperCase()}</h2>
+                    </div>
+                    
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="Sobre ${charData.character}">
+                        <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
+                        <span>Informações</span>
+                    </button>
                 </div>
                 
                 <!-- Tab Navigation -->
@@ -70,6 +78,8 @@ export function render(charKey, initialTab = 'builds') {
             <div class="detail-content" id="detail-content">
                 ${currentTab === 'builds' ? renderBuildsTab(charKey, charData) : renderTierTab(charKey, charData)}
             </div>
+
+            ${renderProfileModal(charKey)}
         </section>
     `;
 }
