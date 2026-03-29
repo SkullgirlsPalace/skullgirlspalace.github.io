@@ -19,7 +19,7 @@ export const CLASS_ORDER = {
 
 export const CLASS_DESCRIPTIONS = {
     "Ofensivo": "Personagem feito para causar o máximo de dano possível, ganhar efeitos e infligir efeitos.",
-    "Defensivo": "Personagem que tem alta quantidade de Vida e Habilidades que aumentam a sobrevivência do mesmo, também pode ter habilidades punitivas como dano refletido e outros efeitos eficazes contra o opressor.",
+    "Defensivo": "Personagem que tem alta quantidade de Vida e Habilidades que aumentam a sobrevivência do mesmo, também pode ter habilidades punitivas como dano refletido e outros efeitos eficazes contra o opressor (Este Ícone é apresentado para Nota B ou Superior em Fenda Defesa).",
     "Suporte de Utilidade": "Personagem que tem habilidades que podem conceder EF. POSITIVOS aos Aliados, EF. NEGATIVOS aos oponentes ou ambos (conceder efeitos e inflingir efeitos). Alguns suportes podem se beneficiar de suas próprias habilidades e entrar em campo para contribuir para o time de diferentes formas.",
     "Coringa": "Personagem que consegue desempenhar em várias funções, pode inflingir dano, aplicar efeitos, inflingir efeitos, defender ou até servir como suporte."
 };

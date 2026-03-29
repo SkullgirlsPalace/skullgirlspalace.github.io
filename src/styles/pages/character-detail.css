@@ -37,36 +37,9 @@
 
 .char-title-centered h2 {
     font-family: 'Washington', sans-serif;
+    font-size: 1.75rem;
     color: var(--accent-gold);
-}
-
-.char-info-btn-centered {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(212, 168, 75, 0.3);
-    border-radius: 20px;
-    padding: 6px 16px;
-    color: var(--accent-gold);
-    font-family: 'Washington', 'Inter', sans-serif;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.char-info-btn-centered:hover {
-    background: rgba(212, 168, 75, 0.15);
-    border-color: rgba(212, 168, 75, 0.8);
-    box-shadow: 0 0 10px rgba(212, 168, 75, 0.2);
-}
-
-.char-info-icon-centered {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+    margin: 0;
 }
 
 .detail-tabs {
