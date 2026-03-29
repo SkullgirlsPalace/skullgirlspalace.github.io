@@ -191,10 +191,109 @@
     cursor: default;
 }
 
+.tier-table.editing .rank-badge {
+    cursor: pointer;
+}
+
+.tier-table.editing .rank-badge:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.tier-table.editing .rank-badge:active {
+    transform: scale(0.95);
+}
 
 /* Azul */
 
 /* Tier Table Styles */
+/* ========== EDITOR CONTROL BAR ========== */
+.editor-control-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10, 10, 15, 0.6);
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    border: 1px solid var(--border-subtle);
+}
+
+.editor-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.editor-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.save-data-btn {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.save-data-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--accent-gold);
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
 
 .tier-table-wrapper {
     overflow-x: auto;
@@ -310,6 +409,19 @@
     box-shadow: none;
 }
 
+#app .tier-table.compact-mode .rank-badge-wrapper {
+    flex-direction: row;
+    gap: 4px;
+}
+
+#app .tier-table.compact-mode .rank-class-badge {
+    position: static;
+    width: 16px;
+    height: 16px;
+    bottom: auto;
+    right: auto;
+    margin-left: 2px;
+}
 
 /* Hide only stat-based sorts in Tier mode */
 .tier-list-mode .sort-btn[data-sort="score"],
@@ -454,6 +566,153 @@
 }
 
 
+/* Compact Mode Overrides */
+.tier-table.compact-mode th,
+.tier-table.compact-mode td {
+    padding: 10px 12px !important;
+}
+
+.tier-table.compact-mode .tier-char-cell {
+    width: auto;
+    padding: 10px 16px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+}
+
+.tier-table.compact-mode .tier-char-cell>img {
+    display: none;
+    /* Hide original full image in compact mode */
+}
+
+/* Portrait container logic */
+.compact-char-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: max-content;
+    margin: 0;
+}
+
+.compact-badges {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* === AJUSTE MANUAL DOS ÍCONES (MODO COMPACTO) === */
+.tier-table.compact-mode .tier-char-cell .compact-element-icon {
+    display: block !important;
+    height: 20px !important;
+    width: auto !important;
+    object-fit: contain;
+    border-radius: 0;
+    filter: none;
+}
+
+.tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
+    display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+    border-radius: 0;
+    filter: none;
+}
+
+/* RESPONSIVE IMAGES */
+@media screen and (max-width: 768px) {
+    .tier-table.compact-mode .tier-char-cell .compact-portrait-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-element-icon {
+        width: 20px !important;
+        height: 40px !important;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-rarity-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .tier-table.compact-mode .tier-char-cell .compact-variant-name {
+        max-width: 75px;
+        font-size: 0.84rem;
+    }
+}
+
+/* =============================================== */
+
+/* Ensure the variant name wraps nicely and has a fixed max width so it doesn't break the layout. */
+.tier-table.compact-mode .tier-char-cell .compact-variant-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 1.1;
+    color: #fff;
+    margin-top: 0;
+}
+
+.tier-table.compact-mode .rank-badge {
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 1.3rem !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0;
+    font-weight: 900;
+}
+
+/* Specific text colors for compact mode ranks */
+.tier-table.compact-mode .rank-ss {
+    color: #fe01fe !important;
+}
+
+/* Pure pink-magenta */
+.tier-table.compact-mode .rank-s {
+    color: #00e676 !important;
+}
+
+/* Vibrant green */
+.tier-table.compact-mode .rank-a {
+    color: #ffeb3b !important;
+}
+
+/* Bright yellow */
+.tier-table.compact-mode .rank-b {
+    color: #a2845e !important;
+}
+
+/* Muted brown-gold */
+.tier-table.compact-mode .rank-c {
+    color: #2196f3 !important;
+}
+
+/* Clear blue */
+.tier-table.compact-mode .rank-i {
+    color: #666 !important;
+}
+
+.tier-table.compact-mode .rank-na {
+    color: #888 !important;
+}
+
+/* In compact mode, remove horizontal borders to huddle text closer to headers */
+.tier-table.compact-mode td {
+    border-right: none;
+}
+
+.tier-table.compact-mode th {
+    border-right: none;
+}
 
 
 /* ========== TEMPORARY EDITOR NOTICE ========== */
@@ -619,73 +878,6 @@
 
 /* C */
 
-/* ========== LEGEND SECTIONS ========== */
-.legend-section {
-    margin-bottom: 24px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.legend-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.legend-title {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: var(--text-muted);
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.legend-toggle-btn {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    font-size: 0.75rem;
-    padding: 2px 6px;
-    opacity: 0.6;
-    transition: all 0.2s ease;
-}
-
-.legend-toggle-btn:hover {
-    color: #fff;
-    opacity: 1;
-}
-
-.rank-dictionary, .class-dictionary {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    padding: 20px;
-    transition: all 0.3s ease;
-}
-
-.rank-dictionary.hidden, .class-dictionary.hidden {
-    display: none;
-}
-
-.dict-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.dict-item p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin: 0;
-    line-height: 1.4;
-}
-
 /* ========== CLASS ROLE ICONS ========== */
 .class-badges {
     display: flex;
@@ -708,6 +900,11 @@
     box-shadow: 0 0 10px var(--class-color, rgba(255, 255, 255, 0.3));
 }
 
+/* Compact mode class icons */
+.tier-table.compact-mode .class-role-icon {
+    width: 22px;
+    height: 22px;
+}
 
 /* ========== CLASS DICTIONARY LEGEND ========== */
 .class-dictionary {
@@ -767,6 +964,10 @@
         height: 20px;
     }
 
+    .tier-table.compact-mode .class-role-icon {
+        width: 18px;
+        height: 18px;
+    }
 
     .class-dictionary {
         grid-template-columns: 1fr;

@@ -34,5 +34,3 @@ Estilos que são específicos de uma única página.
 -   `guide.css`: Tabelas e estrutura da página de guias.
 -   `tierlist.css`: Página e editor da Tier List.
 -   `catalysts.css`: Página de catalisadores.
-
-oi
