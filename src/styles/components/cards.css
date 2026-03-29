@@ -107,6 +107,40 @@
     color: var(--text-primary);
 }
 
+/* Info Button on Character Card */
+.char-info-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.char-info-btn:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.char-info-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: brightness(1.2);
+}
+
+/* Select Character Icon on Detail Page Header */
+.char-select-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
 /* ========== VARIANTS CONTAINER ========== */
 .variants-container,
 .variants-grid {
