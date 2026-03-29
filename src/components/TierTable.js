@@ -51,32 +51,30 @@ function createClassBadges(variantName) {
 function renderRankCell(charKey, variantName, mode, rankValue, classes) {
     const normalizedRank = rankValue ? String(rankValue).toUpperCase().trim() : '';
     const isRankBOrHigher = ['SS', 'S', 'A', 'B'].includes(normalizedRank);
+    const isInvalidRank = ['I', 'N/A', 'NA', ''].includes(normalizedRank.replace('/', ''));
 
-    const iconsHTML = classes.map(cls => {
-        let classInfo = { ...CLASS_ICONS[cls] };
-        if (!classInfo.icon) return '';
-        
-        let showIcon = false;
-        if (cls === 'Defensivo') {
-            showIcon = (mode === 'riftDef');
-        } else if (cls === 'Ofensivo') {
-            showIcon = (mode !== 'riftDef');
-        } else if (cls === 'Suporte de Utilidade') {
-            showIcon = (mode !== 'riftDef');
-        } else if (cls === 'Coringa') {
-            showIcon = true;
-            // Override with Armor icon if rank is B or higher AND mode is riftDef
-            if (isRankBOrHigher && mode === 'riftDef') {
-                classInfo.icon = "img/modifiers/buffs/Armor.webp";
-                classInfo.color = "#1565c0";
-            }
+    let iconsHTML = '';
+
+    if (!isInvalidRank) {
+        if (mode === 'riftDef') {
+            iconsHTML = `<img src="img/modifiers/buffs/Armor.webp" class="rank-class-badge" style="--class-color: #1565c0" alt="Defensivo" title="Defensivo">`;
+        } else {
+            iconsHTML = classes.map(cls => {
+                let classInfo = { ...CLASS_ICONS[cls] };
+                if (!classInfo.icon) return '';
+                
+                let showIcon = false;
+                if (cls === 'Ofensivo' || cls === 'Suporte de Utilidade' || cls === 'Coringa') {
+                    showIcon = true;
+                }
+                
+                if (showIcon) {
+                    return `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${cls}" title="${cls}">`;
+                }
+                return '';
+            }).join('');
         }
-        
-        if (showIcon) {
-            return `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${cls}" title="${cls}">`;
-        }
-        return '';
-    }).join('');
+    }
     
     return `
         <div class="rank-cell-container text-center">

@@ -2,6 +2,7 @@ import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS, CHARACTER_COLORS } from '../c
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
+import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -36,6 +37,22 @@ export function createVariantCard(variant, charKey, index = 0) {
     const rarityKey = variant.rarityKey || 'diamante';
     const rarityLabel = RARITY_LABELS[rarityKey] || rarityKey.toUpperCase();
     const rarityIcon = RARITY_ICONS[rarityKey] || '';
+
+    // Get Classes
+    const variantClasses = getVariantClasses(variant.name);
+    const classesHTML = variantClasses.map(cls => {
+        const info = CLASS_ICONS[cls];
+        if (!info) return '';
+        return `
+            <div class="variant-class-wrapper" style="display: inline-flex; align-items: center; gap: 8px; margin-right: 12px; margin-bottom: 8px;">
+                <span style="font-family: system-ui, -apple-system, sans-serif; font-size: 0.85em; color: var(--text-muted); text-transform: uppercase;">Função:</span>
+                <span class="variant-class-tag attr-highlight" data-attr-key="class_${cls}" style="--class-color: ${info.color}">
+                    <img src="${info.icon}" alt="${cls}" style="width: 18px; height: 18px; object-fit: contain;">
+                    ${cls.toUpperCase()}
+                </span>
+            </div>
+        `;
+    }).join('');
 
     // Unique ID for this card's tabs
     const cardId = `variant-${charKey}-${index}`;
@@ -120,6 +137,9 @@ export function createVariantCard(variant, charKey, index = 0) {
                     <!-- Build Tab (Build + Arsenal) -->
                     ${hasBuildContent ? `
                         <div class="variant-tab-content" data-tab="build">
+                            <div class="variant-classes-display" style="display: block;">
+                                ${classesHTML}
+                            </div>
                             ${buildText ? `
                                 <div class="ability-box build">
                                     <h4>BUILD RECOMENDADA</h4>
