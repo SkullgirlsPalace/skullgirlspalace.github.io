@@ -155,11 +155,11 @@ const MOVE_DATA = {
         "Hurting Hurdle (Cadeira)": {
             "image": {
                 "image": "img/beowulf/Beowulf_21.webp",
-                "type": "Desconhecido",
-                "description": "Sem descrição"
+                "type": "Golpe Especial",
+                "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
             },
-            "type": "Desconhecido",
-            "description": "Sem descrição"
+            "type": "Golpe Especial",
+            "description": "Tem chance 25/50/100% maior de acertar um CRÍTICO."
         },
         "Wulf Shoot": {
             "image": {

@@ -9,7 +9,6 @@ import { loadAllCharacters, loadTierData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
-import { handleToggleCompactMode, handleCycleRank, handleToggleEditorMode, handleSaveTierData } from './components/TierTable.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
 import { toggleExportModal } from './components/ExportCharacterData.js';
@@ -38,11 +37,6 @@ window.handleClearFilters = handleClearFilters;
 window.handleToggleFilter = handleToggleFilter;
 window.handleToggleCharDropdown = handleToggleCharDropdown;
 
-// Tier table handlers
-window.handleToggleCompactMode = handleToggleCompactMode;
-window.handleCycleRank = handleCycleRank;
-window.handleToggleEditorMode = handleToggleEditorMode;
-window.handleSaveTierData = handleSaveTierData;
 
 // Calculator handlers (specific handlers registered by statistics.js init)
 window.handleCalculateEarnings = handleCalculateEarnings;
