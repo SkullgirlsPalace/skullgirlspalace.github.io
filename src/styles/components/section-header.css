@@ -8,7 +8,7 @@
 }
 
 .section-header h2 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1.75rem;
     color: var(--accent-gold);
 }

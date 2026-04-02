@@ -131,7 +131,7 @@
 }
 
 .profile-modal-header h2 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1.6rem;
     color: var(--accent-gold);
     margin: 0;
@@ -150,7 +150,7 @@
 .profile-tab-btn {
     background: rgba(255, 255, 255, 0.03);
     color: var(--text-secondary);
-    font-family: 'Washington', 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -226,7 +226,7 @@
 }
 
 .stat-rating-label {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 0.95rem;
     font-weight: 700;
@@ -254,7 +254,7 @@
 }
 
 .stat-playstyle h4 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-secondary);
     font-size: 0.85rem;
     margin: 0 0 6px 0;
@@ -291,7 +291,7 @@
 }
 
 .profile-section h3 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 1.15rem;
     font-weight: 700;
@@ -383,12 +383,13 @@
 
 .data-item {
     display: flex;
-    flex-direction: column;
-    gap: 3px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
 }
 
 .data-label {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 0.8rem;
     font-weight: 700;
@@ -413,7 +414,7 @@
 
 /* ========== VARIANTES TAB ========== */
 .variants-total-header {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-secondary);
     font-size: 0.9rem;
     text-align: right;
@@ -426,7 +427,7 @@
 }
 
 .variants-rarity-title {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1.1rem;
     margin-bottom: 12px;
     padding-bottom: 4px;
@@ -504,7 +505,7 @@
 }
 
 .moves-group-title {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 1.05rem;
     font-weight: 700;
@@ -585,7 +586,7 @@
 }
 
 .move-card-type {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 0.7rem;
     text-transform: uppercase;

@@ -1,6 +1,6 @@
 /* ========== CATALYSTS PAGE & FILTERS ========== */
 .catalyst-title-main {
-    font-family: 'Washington', 'TBCinema', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 2.2rem;
     text-align: center;
@@ -135,7 +135,7 @@
     color: #f0f6fc;
     font-size: 1rem;
     text-transform: uppercase;
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     letter-spacing: 1px;
 }
 
@@ -189,7 +189,7 @@
 
 /* Category Headers */
 .catalyst-category h3 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 1.5rem;
     margin: 24px 0 16px;

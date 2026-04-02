@@ -22,7 +22,7 @@
 }
 
 .card-link h3 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 1.1rem;
     margin-bottom: 12px;
@@ -199,7 +199,7 @@
 }
 
 .variant-header h3 {
-    font-family: 'Washington', 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1.6rem;
     color: #fff;
     margin-bottom: 4px;
@@ -227,7 +227,7 @@
     gap: 2px;
     padding: 5px 10px;
     border-radius: 20px;
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -245,7 +245,7 @@
     gap: 2px;
     padding: 5px 10px;
     border-radius: 20px;
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -361,7 +361,7 @@
 }
 
 .ability-box h4 {
-    font-family: 'Washington', 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 0.95rem;
     font-weight: 700;
@@ -409,7 +409,7 @@
 }
 
 .arsenal-box h4 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 700;

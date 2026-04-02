@@ -32,15 +32,15 @@
 }
 
 html[lang='ja'] .cinematic {
-    font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-family: 'Inter', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 html[lang='ko'] .cinematic {
-    font-family: 'Washington', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-family: 'Inter', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 html[lang='zh-cn'] .cinematic {
-    font-family: 'Washington', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-family: 'Inter', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 /* Numerical Values Styling */

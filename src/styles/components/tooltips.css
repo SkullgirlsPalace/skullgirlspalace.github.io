@@ -187,7 +187,7 @@
     margin: 0;
     font-size: 1.5rem;
     color: var(--accent-gold-light);
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     display: flex;
     align-items: center;
     gap: 10px;
