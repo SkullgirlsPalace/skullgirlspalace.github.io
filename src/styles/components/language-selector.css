@@ -1,0 +1,130 @@
+/* ========== LANGUAGE SELECTOR ========== */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.language-btn:hover {
+  background: rgba(212, 168, 75, 0.15);
+  border-color: rgba(212, 168, 75, 0.3);
+}
+
+.lang-flag {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.lang-code {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.lang-arrow {
+  transition: transform var(--transition-fast);
+  color: var(--text-secondary);
+}
+
+.language-dropdown.active + .language-btn .lang-arrow,
+.language-btn:has(+ .language-dropdown.active) .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  background: rgba(15, 15, 20, 0.98);
+  border: 1px solid rgba(212, 168, 75, 0.2);
+  border-radius: 8px;
+  padding: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+}
+
+.language-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.lang-option:hover {
+  background: rgba(212, 168, 75, 0.1);
+  color: var(--text-primary);
+}
+
+.lang-option.active {
+  background: rgba(212, 168, 75, 0.15);
+  color: var(--accent-gold);
+}
+
+.lang-option .lang-flag {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-actions {
+    gap: 12px;
+  }
+
+  .language-btn {
+    padding: 6px 10px;
+  }
+
+  .lang-code {
+    display: none;
+  }
+
+  .language-dropdown {
+    right: 0;
+    min-width: 120px;
+  }
+}
+
+/* Dark mode adjustments (if needed) */
+@media (prefers-color-scheme: dark) {
+  .language-dropdown {
+    background: rgba(10, 10, 15, 0.98);
+  }
+}
