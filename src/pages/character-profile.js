@@ -195,6 +195,17 @@ function renderSobreTab(charKey, charData, profile) {
                 </div>
             </div>
 
+            <!-- Abilities Section -->
+            <div class="profile-section abilities-section">
+                <div class="profile-section-header" onclick="toggleProfileAbilities()">
+                    <h3>HABILIDADES</h3>
+                    <img src="img/official/IconInfo.webp" alt="Expandir" class="bio-toggle-icon" id="abilities-toggle-icon">
+                </div>
+                <div class="abilities-content collapsed" id="abilities-content">
+                    ${renderAbilities(profile)}
+                </div>
+            </div>
+
             <!-- Biography Section -->
             <div class="profile-section biography-section">
                 <div class="profile-section-header" onclick="toggleProfileBio()">
@@ -216,6 +227,64 @@ function renderSobreTab(charKey, charData, profile) {
             </div>
         </div>
     `;
+}
+
+function renderAbilities(profile) {
+    if (!profile || (!profile.characterAbility && !profile.superiorAbility1 && !profile.superiorAbility2 && !profile.prestigeAbility)) {
+        return '<p class="profile-empty">Habilidades ainda não disponíveis.</p>';
+    }
+
+    let html = '';
+    
+    if (profile.characterAbility) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE DO PERSONAGEM</span>
+                    <span class="ability-title">- ${profile.characterAbility.title}</span>
+                </div>
+                <div class="ability-desc">${profile.characterAbility.description.replace(/\n/g, '<br>')}</div>
+            </div>
+        `;
+    }
+    
+    if (profile.superiorAbility1) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE SUPERIOR</span>
+                    <span class="ability-title">- ${profile.superiorAbility1.title}</span>
+                </div>
+                <div class="ability-desc">${profile.superiorAbility1.description.replace(/\n/g, '<br>')}</div>
+            </div>
+        `;
+    }
+
+    if (profile.superiorAbility2) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE SUPERIOR</span>
+                    <span class="ability-title">- ${profile.superiorAbility2.title}</span>
+                </div>
+                <div class="ability-desc">${profile.superiorAbility2.description.replace(/\n/g, '<br>')}</div>
+            </div>
+        `;
+    }
+
+    if (profile.prestigeAbility) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE DE PRESTÍGIO</span>
+                    <span class="ability-title">- ${profile.prestigeAbility.title}</span>
+                </div>
+                <div class="ability-desc">${profile.prestigeAbility.description.replace(/\n/g, '<br>')}</div>
+            </div>
+        `;
+    }
+
+    return html;
 }
 
 function renderEssentialData(profile) {
@@ -250,13 +319,13 @@ function renderEssentialData(profile) {
             <div class="essential-data-right">
                 ${profile.likes ? `
                     <div class="data-item likes">
-                        <span class="data-label">GOSTA:</span>
+                        <span class="data-label">GOSTA</span>
                         <span class="data-value">${profile.likes}</span>
                     </div>
                 ` : ''}
                 ${profile.dislikes ? `
                     <div class="data-item dislikes">
-                        <span class="data-label">NÃO GOSTA:</span>
+                        <span class="data-label">NÃO GOSTA</span>
                         <span class="data-value">${profile.dislikes}</span>
                     </div>
                 ` : ''}
@@ -433,10 +502,25 @@ export function toggleMoveDetail(element) {
     element.classList.toggle('expanded');
 }
 
+/**
+ * Toggle abilities expand/collapse
+ */
+export function toggleProfileAbilities() {
+    const content = document.getElementById('abilities-content');
+    const icon = document.getElementById('abilities-toggle-icon');
+    if (!content) return;
+
+    content.classList.toggle('collapsed');
+    if (icon) {
+        icon.classList.toggle('expanded');
+    }
+}
+
 // Register global handlers
 window.openProfileModal = openProfileModal;
 window.closeProfileModal = closeProfileModal;
 window.handleProfileOverlayClick = handleProfileOverlayClick;
 window.switchProfileModalTab = switchProfileModalTab;
 window.toggleProfileBio = toggleProfileBio;
+window.toggleProfileAbilities = toggleProfileAbilities;
 window.toggleMoveDetail = toggleMoveDetail;

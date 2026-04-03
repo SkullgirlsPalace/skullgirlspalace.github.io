@@ -15,7 +15,20 @@ const CHARACTER_PROFILES = {
         height: "155 cm",
         weight: "50 kg",
         likes: "Coreografia de luta, monólogos apaixonados, caminhadas na natureza, o bóson de Higgs, fruta estelar, queijo, chuvas de meteoro, os fãs, superposição quântica, roupas práticas, o Serviço Especial de Estratégia e Resgate, músicas antigas",
-        dislikes: "Tomates, plágio, serviço de buffet ruim, agentes pilantras, feiras renascentistas, o paradoxo de Fermi, números musicais aleatórios, M&Ms marrons, terraplanistas"
+        dislikes: "Tomates, plágio, serviço de buffet ruim, agentes pilantras, feiras renascentistas, o paradoxo de Fermi, números musicais aleatórios, M&Ms marrons, terraplanistas",
+        characterAbility: {
+            title: "PODER ESTELAR",
+            description: "A Annie agora enche o medidor de PODER ESTELAR ao longo do tempo e pode ativá-lo quando o medidor estiver acima de 50%. Durante o MODO PODER ESTELAR, os ataques básicos da Annie produzem ESTRELAS que causam dano total em GOLPES BLOQUEADOS, e muitos dos GOLPES ESPECIAIS da Annie têm propriedades adicionais."
+        },
+        superiorAbility1: {
+            title: "HORIZONTE DE EVENTOS",
+            description: "DESVIO PARA O VERMELHO - Cada GOLPE ESPECIAL ou BLOCKBUSTER usado dá 25% de dano extra para os GOLPES ESPECIAIS e BLOCKBUSTERS pelo resto do combo.\n\nDESVIO PARA O AZUL - O oponente causa 40% menos dano com cada GOLPE DE COMBO abaixo de 5."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "EXPLOSÃO ESTELAR",
+            description: "A Annie carrega esta habilidade quando usa o MEDIDOR DE PODER ESTELAR.\n\nTAXA DE CARGA: 2% por 1% do MEDIDOR DE PODER ESTELAR gasto.\n\nEFEITO DE ATIVAÇÃO: as ESTRELAS DO PODER ESTELAR da Annie causam 120% de dano extra."
+        }
     },
     "beowulf": {
         attack: 4,
@@ -27,7 +40,20 @@ const CHARACTER_PROFILES = {
         height: "201 cm",
         weight: "130 kg",
         likes: "Caçar, lutar a sério, suéteres, ônibus de turismo, botas, escadas, lâmpadas fluorescentes, contratos com dinheiro garantido, cervejas artesanais, o som de um público empolgado, produtos oficiais, chá de camomila",
-        dislikes: "Roteiristas profissionais, açúcar refinado, chaves sextavadas, cobras, desqualificações, tirar férias, sprays de bronzeamento, falar baixo, quando lhe dizem o que fazer ou vestir, batatas"
+        dislikes: "Roteiristas profissionais, açúcar refinado, chaves sextavadas, cobras, desqualificações, tirar férias, sprays de bronzeamento, falar baixo, quando lhe dizem o que fazer ou vestir, batatas",
+        characterAbility: {
+            title: "MODO HYPE",
+            description: "Consiga 1 Carga Hype com cada ARREMESSO e a cada 30 segundos. 3 Cargas Hype permitem ativar o MODO HYPE! No MODO HYPE, os ARREMESSOS não podem ser interrompidos, e muitos ataques apresentam melhorias surpreendentes!"
+        },
+        superiorAbility1: {
+            title: "LUTA PELO TÍTULO",
+            description: "DESAFIANTE - Beowulf recupera 2% de VIDA por segundo enquanto a % de VIDA for INFERIOR à do oponente.\n\nDEFENSOR DO TÍTULO - O Beowulf causa 20% de dano extra sempre que sua% de Vida for MAIOR que do oponente."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "AGORA OU NUNCA",
+            description: "O Beowulf carrega esta habilidade quando entra no MODO HYPE.\n\nTAXA DE CARGA: 50% por ENTRADA.\n\nEFEITO DE ATIVAÇÃO: o Beowulf causa 30% de dano extra no MODO HYPE por cada 20 segundos passados durante a luta."
+        }
     },
     "big-band": {
         attack: 2,
@@ -39,7 +65,20 @@ const CHARACTER_PROFILES = {
         height: "231 cm",
         weight: "2.268 kg (43 kg de mat. orgânica)",
         likes: "Uma boa batida, graxa de sapato, polimento para metais, música para 4 instrumentos, folhas de outono, 4ª aumentada, o espírito da lei, gim, limpeza",
-        dislikes: "Malacos, corrupção, dissonância mal resolvida, falta de cuidado, barbeadores elétricos, vitaminas, espaços apertados"
+        dislikes: "Malacos, corrupção, dissonância mal resolvida, falta de cuidado, barbeadores elétricos, vitaminas, espaços apertados",
+        characterAbility: {
+            title: "O RITMO NÃO PODE PARAR",
+            description: "Ao arrancar, o Big Band pode absorver UM golpe sem ser interrompido (mas sofre dano normalmente)."
+        },
+        superiorAbility1: {
+            title: "MAESTRO",
+            description: "SOLISTA - Ganha REGENERAÇÃO FORTE por 10 s e sofre 50% menos dano ao absorver o primeiro GOLPE ao ARRANCAR.\n\nLÍDER DA BANDA - Sofra 15% menos dano e ganhe 30% de RESISTÊNCIA enquanto o Big Band tiver aliados vivos."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "BATIDA EXPLOSIVA",
+            description: "O Big Band carrega esta habilidade a cada 10° GOLPE DE COMBO que acerta ele ou o oponente.\n\nTAXA DE CARGA: 15% por 10° GOLPE DE COMBO\n\nEFEITO DE ATIVAÇÃO: os ATAQUES DE ARRANCADA do Big Band ganham uma chance de 60% de serem INDEFENSÁVEIS e dão FÚRIA por 5 segundos."
+        }
     },
     "black-dahlia": {
         attack: 3,
@@ -51,7 +90,20 @@ const CHARACTER_PROFILES = {
         height: "175 cm",
         weight: "159 kg (45 kg de matéria orgânica)",
         likes: "Coelhos, Ottomo, sapos, facas na bota, arsênico, renda velha, petit fours red velvet, pérolas gigantes, passaportes falsos, gemas brutas, \"suco de maçã\"",
-        dislikes: "Tom, Ben Birdland, Vitale, supervisão, champagne barato (dá soluço), presas fáceis, assuntos inacabados, crianças bisbilhoteiras, cabelo azul, moralidade, mansplaining"
+        dislikes: "Tom, Ben Birdland, Vitale, supervisão, champagne barato (dá soluço), presas fáceis, assuntos inacabados, crianças bisbilhoteiras, cabelo azul, moralidade, mansplaining",
+        characterAbility: {
+            title: "FRANCO-ATIRADORA",
+            description: "Toque no botão FRANCO-ATIRADORA para disparar TIROS! Toque no botão RECARREGAR para carregar 6 TIROS novos. Quando estiver recarregando, o tipo do terceiro tiro é determinado pelo ELEMENTO de Dália Negra, e o sexto é aleatório."
+        },
+        superiorAbility1: {
+            title: "ORIGEM MECÂNICA",
+            description: "DESCONTROLE METÁLICO - TIROS ESPECIAIS infligem 30% de dano extra e QUEBRA DE ARMADURA por 10 s (também se aplica a golpes bloqueados).\n\nNÃO HÁ TEMPO PARA MORRER - Quando o oponente acerta um CRÍTICO, 50% de chance de ganhar REGENERAÇÃO e ACELERAÇÃO por 10 s cada."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "GATILHO MORTIS",
+            description: "Dália Negra carrega essa habilidade sempre que DISPARA um TIRO.\n\nTAXA DE CARGA: 17% por TIRO disparado.\n\nEFEITO DE ATIVAÇÃO: Dália Negra inflige MARCA DA MORTE e ganha OLHO-MORTO por 15 segundos ao RECARREGAR."
+        }
     },
     "cerebella": {
         attack: 4,
@@ -63,7 +115,20 @@ const CHARACTER_PROFILES = {
         height: "168 cm",
         weight: "59 kg",
         likes: "Competições, aparecer, gatos, luta greco-romana profissional, sudoku, flertar, agradar o Vitale, zoar da Feng, sua colega de quarto",
-        dislikes: "Quem fala mal do circo, quem fala mal do Vitale, pessoas irritadas, desistões, baratas"
+        dislikes: "Quem fala mal do circo, quem fala mal do Vitale, pessoas irritadas, desistões, baratas",
+        characterAbility: {
+            title: "ATO DE EQUILÍBRIO",
+            description: "INTERRUPÇÕES DE ARREMESSOS deixam os oponentes ABALADOS."
+        },
+        superiorAbility1: {
+            title: "CENTRO DO PALCO",
+            description: "VANTAGEM - ARREMESSOS reduzem 30% do MEDIDOR DE BLOCKBUSTER.\n\nMESTRE DE PICADEIRO - ARREMESSOS DESATIVAM as ASSISTÊNCIAS e GOLPES ESPECIAIS do oponente por 15 segundos."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "MAIOR A QUEDA",
+            description: "A Cerebella carrega esta habilidade sempre que ARREMESSA ou é ARREMESSADA pelo oponente.\n\nTAXA DE CARGA: 20% por ARREMESSO.\n\nEFEITO DE ATIVAÇÃO: os ARREMESSOS da Cerebella causam dano extra igual a 100% da porcentagem restante da VIDA do oponente."
+        }
     },
     "double": {
         attack: 4,
@@ -75,7 +140,20 @@ const CHARACTER_PROFILES = {
         height: "Variável",
         weight: "Variável",
         likes: "Nada",
-        dislikes: "Nada"
+        dislikes: "Nada",
+        characterAbility: {
+            title: "TRANSMUTAÇÃO",
+            description: "Após BLOQUEAR sem ser golpeado por 1 segundo, a Double muda para um novo elemento aleatório.\n\nQuando em VANTAGEM ELEMENTAL, o dano da Double aumenta em 10%.\n\nQuando em DESVANTAGEM ELEMENTAL, o dano do oponente diminui em 10%."
+        },
+        superiorAbility1: {
+            title: "ENTROPIA",
+            description: "CAOS - Quando estiver em VANTAGEM ELEMENTAL, cause um EFEITO NEGATIVO por 15 segundos quando acertar um GOLPE CRÍTICO.\n\nVOLATILIDADE - Receba um EFEITO POSITIVO aleatório por 10 segundos a cada 10 segundos."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "RISCO DUPLO",
+            description: "A Double carrega esta habilidade sempre que se TRANSMUTA.\n\nTAXA DE CARGA: 13% por TRANSMUTAÇÃO.\n\nEFEITO DE ATIVAÇÃO: os efeitos da VANTAGEM ELEMENTAL da Double aumentam em 100%."
+        }
     },
     "eliza": {
         attack: 3,
@@ -87,7 +165,20 @@ const CHARACTER_PROFILES = {
         height: "180 cm",
         weight: "73 kg (em média)",
         likes: "Cerveja, kushari, dólmãs, coquetel Old Fashioned, jogos de tabuleiro (especialmente Senet), banho de imersão, se vestir, gatos, tempo ensolarado, dançar, cantar, chamar a atenção, sangue, conquistar, Sansão",
-        dislikes: "Arrogância humana, preconceito contra Parasitas, plebeus, perder oportunidades, filantropia, raios-X, viver em locais pequenos, Trindadeísmo, inexatidão histórica, sangue doente, perder o nariz, Sansão"
+        dislikes: "Arrogância humana, preconceito contra Parasitas, plebeus, perder oportunidades, filantropia, raios-X, viver em locais pequenos, Trindadeísmo, inexatidão histórica, sangue doente, perder o nariz, Sansão",
+        characterAbility: {
+            title: "DEUSA GUERREIRA",
+            description: "BLOCKBUSTERS envolvendo a Sekhmet agora deixam a Eliza no Modo Sekhmet por um tempinho. Todo o dano recebido no Modo Sekhmet é recuperável."
+        },
+        superiorAbility1: {
+            title: "LINHAGEM SANGUÍNEA",
+            description: "JURAMENTO DE SANGUE - Sempre que um aliado é derrotado, a Eliza recupera 50% de VIDA.\n\nSACRIFÍCIO RITUAL - Sempre que um aliado é derrotado, a Eliza ganha 100% no MEDIDOR DE BLOCKBUSTER."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "BANQUETE E FOME",
+            description: "A Eliza carrega esta habilidade sempre que entra no MODO SEKHMET.\n\nTAXA DE CARGA: 25% por ENTRADA.\n\nEFEITO DE ATIVAÇÃO: a Eliza ganha 20% de chance em cada GOLPE NÃO BLOCKBUSTER no MODO SEKHMET (incluindo golpes bloqueados) de REMOVER 1 EFEITO POSITIVO do oponente e ganhar 5% de VIDA."
+        }
     },
     "filia": {
         attack: 3,
@@ -99,7 +190,20 @@ const CHARACTER_PROFILES = {
         height: "163 cm",
         weight: "64 kg",
         likes: "Comer, café, milkshakes, ler e aprender, radionovelas, quadrinhos, romances, cachorros",
-        dislikes: "Os blefes e jogatinas do Sansão, ver inocentes feridos, cabelos embaraçados, mentiras, efeitos colaterais do parasitismo do Sansão"
+        dislikes: "Os blefes e jogatinas do Sansão, ver inocentes feridos, cabelos embaraçados, mentiras, efeitos colaterais do parasitismo do Sansão",
+        characterAbility: {
+            title: "FLASHBACK",
+            description: "Arrancar para trás pouco antes de receber um GOLPE faz a Filia se ESQUIVAR do ataque do oponente, evitando dano."
+        },
+        superiorAbility1: {
+            title: "SANGRIA",
+            description: "SANGUESSUGA - 35% do dano infligido pela Filia é recuperado como VIDA.\n\nO PRIMEIRO CORTE - Cada GOLPE tem 15% de chance de converter todos os SANGRAMENTOS ativos em permanentes."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "APRUMA E TRANÇA",
+            description: "A Filia carrega esta habilidade sempre que GOLPEAR um oponente atacando ou for GOLPEADA enquanto atacar.\n\nTAXA DE CARGA: 20% por GOLPE.\n\nEFEITO DE ATIVAÇÃO: a Filia se ESQUIVA de todos os projéteis AO ARRANCAR e tem 100% de chance de infligir MARCA DA MORTE por 5 segundos ao GOLPEAR um oponente atacando."
+        }
     },
     "fukua": {
         attack: 3,
@@ -111,7 +215,20 @@ const CHARACTER_PROFILES = {
         height: "163 cm",
         weight: "64 kg",
         likes: "Desconhecido",
-        dislikes: "Desconhecido"
+        dislikes: "Desconhecido",
+        characterAbility: {
+            title: "SOMBRAS SANGUÍNIAS",
+            description: "Todo o dano que Fukua recebe é infligido como ARRANHÃO não permanente."
+        },
+        superiorAbility1: {
+            title: "ENTIDADE LIBERTA",
+            description: "MALDADE SPECTRAL - Cause 1% de dano bônus por cada 5% DE VIDA perdida.\n\nIRA DA APARIÇÃO - Reduza o dano recebido em 1% por cada 5% de VIDA perdida."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "DEVORADORA DE SONHOS",
+            description: "A Fukua carrega esta habilidade sempre que ela ou o oponente usam um BLOCKBUSTER.\n\nTAXA DE CARGA: 25% por BLOCKBUSTER.\n\nEFEITO DE ATIVAÇÃO: a Fukua drena 10% do MEDIDOR DE BLOCKBUSTER do oponente e inflige BLOQUEIO DE CURA por 5 segundos ao usar um BLOCKBUSTER."
+        }
     },
     "marie": {
         attack: 2,
@@ -123,7 +240,20 @@ const CHARACTER_PROFILES = {
         height: "144,8 cm",
         weight: "42,6 kg",
         likes: "Organização, Proteger os Inocentes, Memórias Queridas, Maçãs, Geleias e Gelatinas, Livros, Patricia, o Orfanato de Hilgard, Rommelgrad, Justiça",
-        dislikes: "Os Medicis, Guerra, Armas, Criminosos, Ratos, O Projeto Anti-Skullgirl, o Coração-Caveira, Impotência, Freira Suspeita, Vasos Frágeis"
+        dislikes: "Os Medicis, Guerra, Armas, Criminosos, Ratos, O Projeto Anti-Skullgirl, o Coração-Caveira, Impotência, Freira Suspeita, Vasos Frágeis",
+        characterAbility: {
+            title: "DESCANSO E RESSURREIÇÃO",
+            description: "Segure o botão DESCANSO E RESSURREIÇÃO para acumular uma CARGA MORTUÁRIA. Quando carregada, toque no botão para REVIVER aliados derrotados próximos e INCINERAR cadáveres de oponentes próximos!"
+        },
+        superiorAbility1: {
+            title: "ARTESÃ DOS CADÁVERES",
+            description: "INCINERAÇÃO MELHORADA - Ganhe 25% no MEDIDOR DE BLOCKBUSTER e FÚRIA quando INCINERAR um corpo morto.\n\nRESSURREIÇÃO REFORÇADA - Enquanto Marie estiver viva, os aliados ganham ARMADURA permanente e 25% de VIDA adicional quando REVIVIDOS."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "CHAMADO DO TÚMULO",
+            description: "Marie carrega esta habilidade sempre que um EF. POS. ou EF. NEG. expirar em qualquer lutador enquanto ela ESTIVER NA ASSISTÊNCIA.\n\nTAXA DE CARGA: 14% por EF. POS. ou EF. NEG. expirado.\n\nEFEITO DE ATIVAÇÃO: Marie inflige QUIETUS por 15 segundos sempre que usa uma CARGA MORTUÁRIA."
+        }
     },
     "ms-fortune": {
         attack: 5,
@@ -135,7 +265,20 @@ const CHARACTER_PROFILES = {
         height: "173 cm",
         weight: "58 kg",
         likes: "Fazer amigos, cochilar ao sol, vôlei, boliche, golfe, parkour, atormentar os outros com trocadilhos horríveis, o restaurante da Yu-Wan, Dim Sum, a Gangue Espinhosa, roubar dos ricos, dar aos pobres, batatas chips",
-        dislikes: "A Máfia dos Medici, Dália Negra, sushi, policiais, valentões, marsupiais, barulhos altos, limonada"
+        dislikes: "A Máfia dos Medici, Dália Negra, sushi, policiais, valentões, marsupiais, barulhos altos, limonada",
+        characterAbility: {
+            title: "JOGOS MENTAIS",
+            description: "Toque no botão JOGOS MENTAIS para entrar no MODO SEM CABEÇA. A cabeça da Ms. Fortune pode atacar independentemente de seu corpo. Mas cuidado: a Ms. Fortune também sofre dano adicional na cabeça!"
+        },
+        superiorAbility1: {
+            title: "TEM UM EFEITO POSITIVO?",
+            description: "BLÉEÉ - Ganhe REGENERAÇÃO por 20 segundos depois de cada 10 segundos sem sofrer um golpe (inclui golpes bloqueados).\n\nBUP - Ganhe FÚRIA por 20 segundos depois de cada 10 segundos sem sofrer um golpe (inclui golpes bloqueados)."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "BORRÃO PELUDO",
+            description: "A Ms. Fortune carrega esta habilidade com base na sua VELOCIDADE DE MOVIMENTO.\n\nTAXA DE CARGA: 1.5% da VELOCIDADE DE MOVIMENTO dela.\n\nEFEITO DE ATIVAÇÃO: a Ms. Fortune ganha ESQUIVA e inflige QUEBRA DE GUARDA por 5 segundos a cada 5 segundos."
+        }
     },
     "painwheel": {
         attack: 5,
@@ -147,7 +290,20 @@ const CHARACTER_PROFILES = {
         height: "155 cm",
         weight: "170 kg",
         likes: "Flores, jardinagem, caminhadas pela praia ao pôr-do-sol, família, o som de um mensageiro do vento, cachorros, lembranças nostálgicas, amigos, magenta, boa educação",
-        dislikes: "Laboratório ASG, Valentine, Brain Drain, a Skullgirl, o Coração-Caveira, pessoas, seu corpo, controle mental, tortura, dor, frustração, fofoca, sons de isopor, barulhos altos, trocadilhos ruins"
+        dislikes: "Laboratório ASG, Valentine, Brain Drain, a Skullgirl, o Coração-Caveira, pessoas, seu corpo, controle mental, tortura, dor, frustração, fofoca, sons de isopor, barulhos altos, trocadilhos ruins",
+        characterAbility: {
+            title: "RISCO DE FUGA",
+            description: "Toque no botão RISCO DE FUGA para flutuar! Toque de novo para aterrissar. Em voo, deslize e toque para ganhar acesso a novas ações."
+        },
+        superiorAbility1: {
+            title: "ALMA TORTURADA",
+            description: "SANGUE MACULADO - Quando o oponente acerta um CRÍTICO, 100% do dano é refletido de volta.\n\nRANCOR - Quando o oponente acerta um CRÍTICO, ganhe FÚRIA por 20 segundos e ARMADURA por 5 segundos."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "SEM LUGAR PARA SE ESCONDER",
+            description: "A Painwheel carrega essa habilidade sempre que ela ou seu oponente acertarem um GOLPE CRÍTICO.\n\nTAXA DE CARGA: 4% por GOLPE CRÍTICO.\n\nEFEITO DE ATIVAÇÃO: a Painwheel inflige QUEBRA DE GUARDA por 10 segundos ao usar um BLOCKBUSTER."
+        }
     },
     "parasoul": {
         attack: 3,
@@ -159,7 +315,20 @@ const CHARACTER_PROFILES = {
         height: "178 cm",
         weight: "70 kg",
         likes: "Lógica, vinho, xadrez, esgrima, treinar, tênis, diplomacia, filosofia, os Garças-Negras, assistir escondida \"Annie: Garota das Estrelas\", sua irmã Umbrella",
-        dislikes: "Pessoas muito emotivas, depender dos outros, quem fala mal de sua família, injustiça, a Máfia dos Medici, a Skullgirl, as peripécias de sua irmã"
+        dislikes: "Pessoas muito emotivas, depender dos outros, quem fala mal de sua família, injustiça, a Máfia dos Medici, a Skullgirl, as peripécias de sua irmã",
+        characterAbility: {
+            title: "LAGRIMOSA",
+            description: "Certos ataques geram uma LÁGRIMA. Um ATAQUE DE CARGA detona todas as LÁGRIMAS ativas, causando dano aos oponentes atingidos pela explosão."
+        },
+        superiorAbility1: {
+            title: "HIPERCRÍTICA",
+            description: "PENSAMENTO CRÍTICO - A Parasoul ganha um bônus de 25% na CHANCE DE CRÍTICO para cada LÁGRIMA ATIVA.\n\nMASSA CRÍTICA - A Parasoul ganha um bônus de 20% no DANO CRÍTICO para cada LÁGRIMA ATIVA."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "PRECISÃO MORTAL",
+            description: "A Parasoul carrega esta habilidade sempre que uma LÁGRIMA aparecer.\n\nTAXA DE CARGA: 12% por LÁGRIMA.\n\nEFEITO DE ATIVAÇÃO: a Parasoul ganha PRECISÃO a cada 2 segundo(s) enquanto estiver perto de uma LÁGRIMA."
+        }
     },
     "peacock": {
         attack: 4,
@@ -171,7 +340,20 @@ const CHARACTER_PROFILES = {
         height: "137 cm",
         weight: "43 kg (variável)",
         likes: "Desenhos animados, o programa de TV \"Annie: Garota das Estrelas\", filmes, violência, junk food, carros velozes, explosivos, charutos, mandar",
-        dislikes: "Fracotes, burocracia, figuras de autoridade, pessoas, o Coração-Caveira, nerds, salada, hashis"
+        dislikes: "Fracotes, burocracia, figuras de autoridade, pessoas, o Coração-Caveira, nerds, salada, hashis",
+        characterAbility: {
+            title: "IDEIA PROFUNDA",
+            description: "Toque no botão IDEIA PROFUNDA para sumir em um buraco, evitando alguns ataques. Toque em outro lugar para emergir atacando, ou toque de novo ou espere 2 segundos para sair sem atacar."
+        },
+        superiorAbility1: {
+            title: "MARATONA DE DESENHOS",
+            description: "EPISÓDIO ESPECIAL - Quando a Peacock usa um GOLPE ESPECIAL, há 30% de chance de reiniciar a RECARGA imediatamente.\n\nFESTA DO ELENCO - Quando Peacock ou um aliado usam um ATAQUE DE ASSISTÊNCIA há 50% de chance do ataque ser INDEFENSÁVEL."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "MUNIÇÕES MANÍACAS",
+            description: "A Peacock carrega essa habilidade sempre que ela ou o oponente sofrem dano de um PROJÉTIL.\n\nTAXA DE CARGA: 3% por PROJÉTIL.\n\nEFEITO DE ATIVAÇÃO: a Peacock tem 50% de chance de ganhar 1 camada de FÚRIA por 5 segundos, ACELERAÇÃO por 5 segundos ou PRECISÃO ao usar um GOLPE ESPECIAL."
+        }
     },
     "robo-fortune": {
         attack: 3,
@@ -183,7 +365,20 @@ const CHARACTER_PROFILES = {
         height: "168 cm",
         weight: "200 kg",
         likes: "Iscas, inteiros menores ou iguais a 1, livros sobre dragões, portões lógicos, 0x5f3759df, loops de strings desenrolados, ratos, rebeccapurple, IEEE (exceto após C!), setplay",
-        dislikes: "Desordem, formatos de arquivo incompatíveis, DES, senhas sem sal (não têm gosto de nada!), corações sangrando, línguas mal-escritas, iv, fontes que deixam o O e o 0 parecidos, check-ins sem comentários, padrões de Moire"
+        dislikes: "Desordem, formatos de arquivo incompatíveis, DES, senhas sem sal (não têm gosto de nada!), corações sangrando, línguas mal-escritas, iv, fontes que deixam o O e o 0 parecidos, check-ins sem comentários, padrões de Moire",
+        characterAbility: {
+            title: "HARDWARE DO CABEÇONE",
+            description: "Toque no botão LANÇAR para lançar os CABEÇONES. Use os CABEÇONES para atacar inimigos, colocar minas de proximidade e disparar um bombardeio de mísseis!"
+        },
+        superiorAbility1: {
+            title: "PROTOCOLO DE REDE",
+            description: "DDOS - Inflija OSCILAÇÃO DE ENERGIA por 15 segundos após cada 3 segundos enquanto estiver perto do oponente.\n\nVERIFICAÇÃO DE PING - Ganhe FÚRIA por 15 segundos após cada 2 segundos enquanto estiver longe do oponente."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "CONTADOR GEIGER",
+            description: "A Robo-Fortune carrega esta habilidade sempre que ganha um EFEITO POSITIVO ou inflige um EFEITO NEGATIVO.\n\nTAXA DE CARGA: 7% por EFEITO POSITIVO ou NEGATIVO.\n\nEFEITO DE ATIVAÇÃO: a Robo-Fortune ganha 5 camadas de PRECISÃO e reflete 20% do dano que sofrer por cada EFEITO POSITIVO que ela ou o oponente tiverem (máx. de 100%)."
+        }
     },
     "squigly": {
         attack: 2,
@@ -195,7 +390,20 @@ const CHARACTER_PROFILES = {
         height: "160 cm",
         weight: "54 kg",
         likes: "Leviatã, sua família, tradição, ler sobre eventos atuais, animais (especialmente pássaros e cobras), música, cantar, macarrão, refrigerante de baunilha, bolo, hambúrgueres, jardinagem, cheiro de incenso, banheiras com espuma, não estar morta",
-        dislikes: "Família Medici, Dália Negra, Double, o Coração-Caveira, gente mal educada, desonestidade, quem não leva karaokê a sério, tempestades com relâmpagos, estar morta"
+        dislikes: "Família Medici, Dália Negra, Double, o Coração-Caveira, gente mal educada, desonestidade, quem não leva karaokê a sério, tempestades com relâmpagos, estar morta",
+        characterAbility: {
+            title: "CAUDA DE DRAGÃO",
+            description: "Segurar o botão CAUDA DE DRAGÃO faz com que até 2 CARGAS DE DRAGÃO sejam armazenadas. As CARGAS DE DRAGÃO são consumidas para tornar certos ataques mais poderosos!"
+        },
+        superiorAbility1: {
+            title: "NOITE ASSUSTADORA",
+            description: "MORTA DO MAL - Enquanto inimigos estiverem perto do corpo da Squigly, GOLPES dos aliados infligem MALDIÇÃO e DEFINHAR por 15 segundos.\n\nMORTA-VIVA - Enquanto aliados estiverem perto do corpo da Squigly, receber um GOLPE lhes dará RESISTÊNCIA FINAL por 15 segundos."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "NÃO SAIA DA TUMBA",
+            description: "A Squigly carrega esta habilidade sempre que ela ganha ou usa uma CARGA DE DRAGÃO.\n\nTAXA DE CARGA: 12% por CARGA DE DRAGÃO ganha ou usada.\n\nEFEITO DE ATIVAÇÃO: quaisquer oponentes derrotados no momento não podem mais ser revividos, e a Squigly ganha uma CARGA DE DRAGÃO a cada 2 segundos enquanto estiver perto de um cadáver."
+        }
     },
     "umbrella": {
         attack: 4,
@@ -207,7 +415,20 @@ const CHARACTER_PROFILES = {
         height: "1,17 m",
         weight: "27,2 kg",
         likes: "Sua irmã Parasoul (a maior parte do tempo), Hungern, sorvete, desenhar, TV, anfíbios, filmes B de terror, dias chuvosos, luta-livre profissional, justiça!, origami de Hungern",
-        dislikes: "Sua irmã Parasoul (o resto do tempo), escola em casa, programa de TV Annie das Estrelas, vestidos chiques sufocantes, foie gras, ser pega, Garças da Operação B.A.B.Á.S., o aceno de princesa, joelhos machucados, chorar sobre o leite derramado"
+        dislikes: "Sua irmã Parasoul (o resto do tempo), escola em casa, programa de TV Annie das Estrelas, vestidos chiques sufocantes, foie gras, ser pega, Garças da Operação B.A.B.Á.S., o aceno de princesa, joelhos machucados, chorar sobre o leite derramado",
+        characterAbility: {
+            title: "FOME DO HUNGERN",
+            description: "Desbloqueia o Medidor de Fome do Hungern. ARREMESSOS enchem o medidor e golpes baseados em BOLHAS (incluindo tocar o botão do medidor) o esvaziam. Ataques básicos causam mais dano enquanto EMPANTURRADO e são mais rápidos enquanto FAMINTO. Certos golpes são fortalecidos pelo estado do Hungern!"
+        },
+        superiorAbility1: {
+            title: "MANDÍBULAS DA DERROTA",
+            description: "DOCE VITÓRIA - Ganhe 2 camadas de FÚRIA por 15 segundos quando derrotar um oponente.\n\nFINAL AMARGO - Uma vez por luta, ganhe RESISTÊNCIA FINAL e REGENERAÇÃO FORTE por 15 segundos cada quando estiver com menos de 25% de VIDA."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "REAÇÃO VISCERAL",
+            description: "A Umbrella carrega esta habilidade sempre que ganha ou perde FOME.\n\nTAXA DE CARGA: 1% por 1% de FOME ganha ou perdida.\n\nEFEITO DE ATIVAÇÃO: a Umbrella ganha 5% de VIDA e inflige GOSMA por 15 segundos quando GOLPEIA um oponente atacando."
+        }
     },
     "valentine": {
         attack: 2,
@@ -219,7 +440,20 @@ const CHARACTER_PROFILES = {
         height: "183 cm",
         weight: "73 kg",
         likes: "Álcool, o método científico, estudar coisas de longe, cobras, lobos, música clássica, pontualidade, planejamento cuidadoso, desmontar coisas, noticiários e escrita de não-ficção, jogos psicológicos, xadrez, violão acústico, carne, cultura oriental, chocolate amargo",
-        dislikes: "Formalidade desnecessária, sentimentalismo, pessoas fracas, cozinhar, falar com doentes, Brain Drain, dor nas costas, doces"
+        dislikes: "Formalidade desnecessária, sentimentalismo, pessoas fracas, cozinhar, falar com doentes, Brain Drain, dor nas costas, doces",
+        characterAbility: {
+            title: "SIFÃO",
+            description: "Mais do dano que a Valentine recebe é infligido como DANO DE ARRANHÃO não permanente. 75% do dano da Valentine é recuperado como VIDA, mas apenas até o limite de seu DANO DE ARRANHÃO atual."
+        },
+        superiorAbility1: {
+            title: "CLÍNICA DE COMBATE",
+            description: "CENTRO DE TRAUMAS - Quando a Valentine está viva, aliados ganham RESIST. FINAL por 15 s ao sofrer GOLPE que tire mais de 10% de VIDA.\n\nUTI - A Valentine ganha REGENERAÇÃO FORTE por 20 segundos ao sofrer um EFEITO NEGATIVO."
+        },
+        superiorAbility2: null,
+        prestigeAbility: {
+            title: "REANIMADORA",
+            description: "A Valentine carrega esta habilidade sempre que recupera VIDA ao ENTRAR NA ASSISTÊNCIA.\n\nTAXA DE CARGA: 4% por cada 1% de VIDA recuperada.\n\nEFEITO DE ATIVAÇÃO: todos os aliados derrotados são REVIVIDOS com 10% de VIDA, e a Valentine ganha continuamente 2% de VIDA por segundo."
+        }
     }
 };
 
