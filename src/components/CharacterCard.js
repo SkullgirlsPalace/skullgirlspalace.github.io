@@ -4,6 +4,7 @@
 // =====================================================
 
 import { CHARACTER_ICONS, CHARACTER_COLORS } from '../config/constants.js';
+import { isNewCharacter } from '../data/newContent.js';
 
 /**
  * Create character card HTML
@@ -16,11 +17,13 @@ import { CHARACTER_ICONS, CHARACTER_COLORS } from '../config/constants.js';
 export function createCharacterCard(charKey, charData, index = 0, onClick = 'openCharacterDetails') {
     const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
     const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.webp`;
+    const newBadgeHTML = isNewCharacter(charKey) ? '<img loading="lazy" src="img/official/new_icon_U.webp" alt="Novo" class="new-badge">' : '';
 
     return `
         <div class="character-card animate-in" 
              style="animation-delay: ${index * 0.03}s; --char-accent: ${charColor}"
              onclick="${onClick}('${charKey}')">
+            ${newBadgeHTML}
             <img src="${iconPath}" alt="${charData.character}" loading="lazy" 
                  onerror="this.src='img/official/Annie_Icon.webp'">
             <div class="name">${charData.character.toUpperCase()}</div>

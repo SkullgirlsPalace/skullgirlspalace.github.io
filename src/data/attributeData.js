@@ -120,6 +120,13 @@ export const ATTRIBUTE_DATA = {
         summary: 'Diminui a chance de receber um Golpe Crítico.',
         detailed: 'O atributo diminui a chance de sofrer um golpe crítico vindo do adversário. Se o oponente conseguir acertar o crítico mesmo assim, o dano será o mesmo, mas a frequência com que isso ocorre será drasticamente reduzida.'
     },
+    critless: {
+        keys: ['Critless', 'critless'],
+        name: 'Critless',
+        max: '-',
+        summary: 'Estratégia de não investir em Taxa e Dano Crítico.',
+        detailed: 'O conceito de Critless consiste em NÃO melhorar os nós de Taxa Crítica e Dano Crítico na Árvore de Habilidades do personagem. Isso é fundamental para lidar com variantes que punem acertos críticos, como Painwheels com Sangue Frio. Agarrões nunca causam críticos, facilitando essa estratégia.'
+    },
     tier_dp_ataque: {
         keys: [],
         name: 'DP Ataque',

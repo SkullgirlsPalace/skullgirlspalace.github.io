@@ -9,6 +9,7 @@ import { CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getCharacterProfile } from '../data/characterProfiles.js';
 import { MOVE_DATA } from '../data/movesimages.js';
 import { getVariantImage } from '../data/variantImages.js';
+import { formatText } from '../utils/formatters.js';
 
 let currentProfileTab = 'sobre';
 
@@ -190,7 +191,7 @@ function renderSobreTab(charKey, charData, profile) {
                     </div>
                     <div class="stat-playstyle">
                         <h4>ESTILO DE JOGO</h4>
-                        <p>${profile?.playstyle || 'Estilo de jogo não disponível.'}</p>
+                        <p>${profile?.playstyle ? formatText(profile.playstyle) : 'Estilo de jogo não disponível.'}</p>
                     </div>
                 </div>
             </div>
@@ -243,7 +244,7 @@ function renderAbilities(profile) {
                     <span class="ability-type">HABILIDADE DO PERSONAGEM</span>
                     <span class="ability-title">- ${profile.characterAbility.title}</span>
                 </div>
-                <div class="ability-desc">${profile.characterAbility.description.replace(/\n/g, '<br>')}</div>
+                <div class="ability-desc">${formatText(profile.characterAbility.description)}</div>
             </div>
         `;
     }
@@ -255,7 +256,7 @@ function renderAbilities(profile) {
                     <span class="ability-type">HABILIDADE SUPERIOR</span>
                     <span class="ability-title">- ${profile.superiorAbility1.title}</span>
                 </div>
-                <div class="ability-desc">${profile.superiorAbility1.description.replace(/\n/g, '<br>')}</div>
+                <div class="ability-desc">${formatText(profile.superiorAbility1.description)}</div>
             </div>
         `;
     }
@@ -267,7 +268,7 @@ function renderAbilities(profile) {
                     <span class="ability-type">HABILIDADE SUPERIOR</span>
                     <span class="ability-title">- ${profile.superiorAbility2.title}</span>
                 </div>
-                <div class="ability-desc">${profile.superiorAbility2.description.replace(/\n/g, '<br>')}</div>
+                <div class="ability-desc">${formatText(profile.superiorAbility2.description)}</div>
             </div>
         `;
     }
@@ -279,7 +280,7 @@ function renderAbilities(profile) {
                     <span class="ability-type">HABILIDADE DE PRESTÍGIO</span>
                     <span class="ability-title">- ${profile.prestigeAbility.title}</span>
                 </div>
-                <div class="ability-desc">${profile.prestigeAbility.description.replace(/\n/g, '<br>')}</div>
+                <div class="ability-desc">${formatText(profile.prestigeAbility.description)}</div>
             </div>
         `;
     }
@@ -516,7 +517,104 @@ export function toggleProfileAbilities() {
     }
 }
 
+/**
+ * Show a disclaimer/modal with character's Marquee Abilities details
+ * @param {string} charKey - Character key
+ * @param {string} marqueeName - Recommended marquee name (from JSON)
+ */
+export function showMarqueeDisclaimer(charKey, marqueeName = '') {
+    const profile = getCharacterProfile(charKey);
+    if (!profile || !profile.superiorAbility1) return;
+
+    // Clean marqueeName to get base name (e.g. "Descontrole Metálico ou Critless" -> "Descontrole Metálico")
+    const cleanName = (marqueeName || '')
+        .split(' ou ')[0]
+        .split(' (')[0]
+        .trim();
+
+    const marquee = profile.superiorAbility1;
+    const marquee2 = profile.superiorAbility2;
+
+    // Split descriptions to find the specific one
+    const allDesc = [marquee.description];
+    if (marquee2) allDesc.push(marquee2.description);
+    
+    const paragraphs = allDesc.join('\n\n').split('\n\n');
+    let filteredParts = [];
+
+    if (cleanName && cleanName.toLowerCase() !== 'critless') {
+        filteredParts = paragraphs.filter(p => 
+            p.toLowerCase().startsWith(cleanName.toLowerCase()) || 
+            p.toLowerCase().includes(cleanName.toLowerCase() + ' -')
+        );
+    }
+
+    // If no match found or name was Critless, show nothing by default (unless we want a fallback)
+    if (filteredParts.length === 0) {
+        filteredParts = paragraphs; // Fallback to all if not found
+    }
+
+    // Check if Critless was mentioned in the original marqueeName
+    const isCritlessRecommended = marqueeName && marqueeName.toLowerCase().includes('critless');
+
+    const contentHtml = `
+        <div class="marquee-disclaimer-modal" style="
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: #111; border: 1px solid var(--accent-gold); border-radius: 12px;
+            padding: 24px; z-index: 10001; max-width: 500px; width: 90%; 
+            box-shadow: 0 0 40px rgba(0,0,0,0.9); color: #fff;
+            max-height: 85vh; overflow-y: auto;
+        ">
+            <h3 style="color: var(--accent-gold); margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-microchip"></i> ${charKey.toUpperCase()} - ${marquee.title}
+            </h3>
+            
+            <div class="marquee-options-list">
+                ${filteredParts.map(p => {
+                    const [title, ...rest] = p.split(' - ');
+                    return `
+                        <div style="margin-bottom: 20px; background: rgba(255,255,255,0.03); padding: 15px; border-radius: 8px; border-left: 3px solid var(--accent-gold);">
+                            <h4 style="color: var(--accent-gold); font-size: 1rem; margin-bottom: 8px;">${title.toUpperCase()}</h4>
+                            <p style="font-size: 0.9rem; color: #ddd; line-height: 1.6;">${formatText(rest.join(' - '))}</p>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+
+            ${isCritlessRecommended ? `
+                <div class="critless-note" style="margin-top: 20px; background: rgba(255, 187, 0, 0.05); border: 1px dashed var(--accent-gold); padding: 15px; border-radius: 8px;">
+                    <h4 style="color: var(--accent-gold); font-size: 0.9rem; margin-bottom: 6px;">
+                        <i class="fas fa-exclamation-triangle"></i> OPÇÃO CRITLESS RECOMENDADA
+                    </h4>
+                    <p style="font-size: 0.85rem; color: #bbb; line-height: 1.4;">
+                        ${formatText('A estratégia de Critless é altamente recomendada para esta build. ')}
+                    </p>
+                </div>
+            ` : ''}
+
+            <div style="margin-top: 24px; text-align: right;">
+                <button onclick="document.querySelector('.marquee-disclaimer-overlay').remove(); document.querySelector('.marquee-disclaimer-modal').remove();" style="
+                    background: var(--accent-gold); color: #000; border: none; padding: 10px 24px;
+                    border-radius: 6px; font-weight: bold; cursor: pointer; transition: filter 0.2s;
+                " onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='none'">
+                    ENTENDI
+                </button>
+            </div>
+        </div>
+        <div class="marquee-disclaimer-overlay" onclick="document.querySelector('.marquee-disclaimer-overlay').remove(); document.querySelector('.marquee-disclaimer-modal').remove();" style="
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 10000; backdrop-filter: blur(4px);
+        "></div>
+    `;
+
+    const container = document.createElement('div');
+    container.innerHTML = contentHtml;
+    document.body.appendChild(container.querySelector('.marquee-disclaimer-overlay'));
+    document.body.appendChild(container.querySelector('.marquee-disclaimer-modal'));
+}
+
 // Register global handlers
+window.showMarqueeDisclaimer = showMarqueeDisclaimer;
 window.openProfileModal = openProfileModal;
 window.closeProfileModal = closeProfileModal;
 window.handleProfileOverlayClick = handleProfileOverlayClick;

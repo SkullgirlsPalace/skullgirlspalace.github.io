@@ -6,6 +6,7 @@
 import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js';
 import { parseStatValue } from './formatters.js';
 import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
+import { isNewVariant } from '../data/newContent.js';
 
 /**
  * Sort variants based on sort configuration
@@ -13,10 +14,28 @@ import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
  * @param {Object} sortConfig - { type: string, direction: 'asc'|'desc' }
  * @returns {Array} Sorted variants
  */
-export function sortVariants(variants, sortConfig) {
+export function sortVariants(variants, sortConfig, filters = null) {
     const { type, direction } = sortConfig;
 
     return [...variants].sort((a, b) => {
+        // Priority Sort: 'NOVO' variants float to top IF there are no active grouping filters (rarity/element)
+        // AND the user hasn't explicitly changed the sorting (default is score desc).
+        const noGroupingFiltersActive = !filters || (
+            (!filters.rarity || filters.rarity.length === 0) &&
+            (!filters.element || filters.element.length === 0)
+        );
+        const isDefaultSort = type === 'score' && direction === 'desc';
+
+        if (noGroupingFiltersActive && isDefaultSort) {
+            const isANew = isNewVariant(a.name);
+            const isBNew = isNewVariant(b.name);
+
+            if (isANew !== isBNew) {
+                // Return -1 to push new variants up regardless of `direction` for normal base sorting
+                return isANew ? -1 : 1; 
+            }
+        }
+
         // Enforce Rarity as Primary Sort (Diamond <-> Bronze)
         // Note: RARITY_ORDER has Diamond = 4, Bronze = 1
         const rarityA = RARITY_ORDER[a.rarityKey] || 0;

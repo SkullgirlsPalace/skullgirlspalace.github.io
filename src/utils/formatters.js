@@ -38,12 +38,19 @@ export function formatText(text, variantName = null) {
             // Determine type for styling
             const effect = EFFECT_DATA[effectKey];
             const typeClass = effect ? effect.type : 'term';
-            const iconHtml = (effect && effect.icon) ? `<img loading="lazy" src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
-
-            replacements.push({
-                marker,
-                html: `<span class="attr-highlight ${typeClass}" data-attr-key="${effectKey}">${iconHtml}${match}</span>`
-            });
+            
+            if (typeClass === 'buff-term' || typeClass === 'debuff-term') {
+                replacements.push({
+                    marker,
+                    html: `<span class="${typeClass}">${match}</span>`
+                });
+            } else {
+                const iconHtml = (effect && effect.icon) ? `<img loading="lazy" src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
+                replacements.push({
+                    marker,
+                    html: `<span class="attr-highlight ${typeClass}" data-attr-key="${effectKey}">${iconHtml}${match}</span>`
+                });
+            }
             return marker;
         });
     }
@@ -116,14 +123,16 @@ export function formatArsenal(arsenal, charKey = null) {
 
     if (charKey) {
         return items.map(item => {
-            const moveName = item.trim();
-            const moveData = getMoveData(charKey, moveName);
+            const originalName = item.trim();
+            // Strip common suffixes for image lookup (e.g., "Move Name BB3" or "Move Name (BB3)")
+            const moveNameLookup = originalName.replace(/\s*\(?BB\d\)?$/i, '').trim();
+            const moveData = getMoveData(charKey, moveNameLookup);
 
             if (moveData) {
                 return `
                     <div class="arsenal-move">
-                        <img loading="lazy" src="${moveData.image.image}" alt="${moveName}" class="move-icon" onerror="this.style.display='none'">
-                        <span class="move-name attr-highlight move-highlight" data-attr-key="move" data-move="${moveName}" data-char="${charKey}">${moveName}</span>
+                        <img loading="lazy" src="${moveData.image.image}" alt="${moveNameLookup}" class="move-icon" onerror="this.style.display='none'">
+                        <span class="move-name attr-highlight move-highlight" data-attr-key="move" data-move="${moveNameLookup}" data-char="${charKey}">${originalName}</span>
                     </div>
                 `;
             }

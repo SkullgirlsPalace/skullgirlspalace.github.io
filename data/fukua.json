@@ -224,6 +224,28 @@
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
                 "recommended_arsenal": "Uma Vez Mordido..., Conchinha Inevitável, Broca Sonhadora, Tiros de Amor, Tiros de Amor"
+            },
+            {
+                "name": "Poder Floral",
+                "title_formatted": "Poder Floral - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": ""
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "63,572",
+                    "power": "23,501"
+                },
+                "signature_ability": {
+                    "name": "POWER-UP!",
+                    "description": "[HAB 1]: A cada 2 segundos, a menos que qualquer lutador acerte um GOLPE, sofra SANGRAMENTO FORTE por 2 segundos. Ao ACERTAR um oponente que esteja atacando, remova de si até 3 EFEITO(S) NEGATIVO(S).\n\n[HAB 2]: Enquanto a Fukua não estiver sob EFEITO NEGATIVO, ao ACERTAR um oponente no ar ela ganha IMUNIDADE, INVENCÍVEL e INABALÁVEL por 4 segundos cada."
+                },
+                "marquee_ability": "Maldade Spectral",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Conchinha Inevitável, Beijo de Boa noite, Broca Sonhadora, Tiros de Amor, Tiros de Amor"
             }
         ],
         "prata": [

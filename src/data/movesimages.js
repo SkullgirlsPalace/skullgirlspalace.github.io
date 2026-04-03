@@ -473,8 +473,8 @@ const MOVE_DATA = {
         },
         "Último Pedido": {
             "image": {
-                "image": "img/black-dahlia/Black_Dahlia_25.webp",
-                "type": "Golpe Especial",
+                "image": "img/black-dahlia/Black_Dahlia_30.webp",
+                "type": "Blockbuster",
                 "description": "Ganhe FÚRIA e OLHO-MORTO por 10/12/15 segundos se usado para derrotar um oponente."
             },
             "type": "Blockbuster",

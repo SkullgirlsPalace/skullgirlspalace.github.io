@@ -3,6 +3,9 @@ import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
 import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
+import { getExclusiveData } from '../data/exclusiveVariants.js';
+import { isNewVariant } from '../data/newContent.js';
+import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -58,16 +61,82 @@ export function createVariantCard(variant, charKey, index = 0) {
     const cardId = `variant-${charKey}-${index}`;
 
     // Build content - check if we have build or arsenal data
+    let builds = variant.builds ? [...variant.builds].sort((a, b) => {
+        // Sort so "Ataque" comes before "Defesa"
+        const aIsAttack = a.title.toLowerCase().includes('ataque');
+        const bIsAttack = b.title.toLowerCase().includes('ataque');
+        if (aIsAttack && !bIsAttack) return -1;
+        if (bIsAttack && !aIsAttack) return 1;
+        return 0;
+    }) : null;
     const buildText = variant.recommended_build || '';
-    const hasBuildContent = !!(buildText || arsenalHTML);
+    const hasBuildContent = !!(builds || buildText || arsenalHTML || variant.marquee_ability);
 
     const saName = variant.signature_ability?.name || 'Habilidade Especial';
 
+    const isNew = isNewVariant(variant.name);
+    const newBadgeHTML = isNew ? `
+        <img loading="lazy" src="img/official/new_icon_U.webp" alt="Novo" class="new-badge">
+    ` : '';
+
+    // Check if variant is exclusive
+    const exclusiveData = getExclusiveData(variant.name);
+    const exclusiveBadgeHTML = exclusiveData ? `
+        <div class="exclusive-badge ${isNew ? 'shifted' : ''}">
+            <img loading="lazy" src="${exclusiveData.icon}" alt="Exclusivo" class="exclusive-icon"
+                 onerror="this.style.display='none'">
+            <div class="exclusive-text-group">
+                <span class="exclusive-label">Exclusivo</span>
+                <span class="exclusive-source">${exclusiveData.source}</span>
+            </div>
+        </div>
+    ` : '';
+
+    // Helper to render a specific build's content
+    const renderBuildContent = (b, isFirst = false) => {
+        const bArsenal = formatArsenal(b.recommended_arsenal || '', charKey);
+        const marqueeInfo = CHARACTER_PROFILES[charKey]?.superiorAbility1 || null;
+        
+        return `
+            <div class="build-sub-content ${isFirst ? 'active' : ''}" data-build-idx="${variant.name}-${b.title}">
+                ${b.marquee_ability ? `
+                    <div class="ability-box marquee">
+                        <div class="marquee-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h4 style="margin: 0;">HABILIDADE SUPERIOR</h4>
+                            ${marqueeInfo ? `
+                                <i class="fas fa-info-circle marquee-info-trigger" 
+                                   title="Ver Detalhes das Habilidades" 
+                                   style="color: var(--accent-gold); cursor: pointer; font-size: 0.8rem;"
+                                   onclick="showMarqueeDisclaimer('${charKey}', '${b.marquee_ability}')"></i>
+                            ` : ''}
+                        </div>
+                        <p style="color: #fff; font-weight: 500; font-size: 0.9rem;">${formatText(b.marquee_ability)}</p>
+                    </div>
+                ` : ''}
+                
+                ${b.recommended_build ? `
+                    <div class="ability-box build">
+                        <h4>BUILD RECOMENDADA</h4>
+                        <p>${formatBuildText(b.recommended_build)}</p>
+                    </div>
+                ` : ''}
+                
+                ${bArsenal ? `
+                    <div class="ability-box arsenal">
+                        <h4>ARSENAL RECOMENDADO</h4>
+                        <div class="arsenal-list">${bArsenal}</div>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    };
+
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
+            ${newBadgeHTML}
             <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
                  onerror="this.src='img/official/Annie_Icon.webp'">
-            
+            ${exclusiveBadgeHTML}
             <div class="variant-info">
                 <div class="variant-header">
                     <h3>${variant.name}</h3>
@@ -96,7 +165,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                     </div>
                     <div class="stat-item">
                         <img loading="lazy" src="${elementInfo.statIcon}" alt="${variant.element}" class="stat-icon">
-                        <span class="label">Poder</span>
+                        <span class="label">Pontuação</span>
                         <span class="value">${variant.stats?.power || '-'}</span>
                     </div>
                 </div>
@@ -114,7 +183,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                 </div>
                 
                 <div class="variant-tab-contents" id="${cardId}-contents">
-                    <!-- Habilidade Tab (Signature + Marquee Unified) -->
+                    <!-- Habilidade Tab (Signature Only) -->
                     <div class="variant-tab-content active" data-tab="habilidade">
                         <div class="ability-box">
                             <h4 style="margin-bottom: 8px;">
@@ -123,36 +192,56 @@ export function createVariantCard(variant, charKey, index = 0) {
                             </h4>
                             <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 12px 0;"></div>
                             <p style="margin-bottom: 16px;">${abilityDesc}</p>
-                            
-                            ${variant.marquee_ability ? `
-                                <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0;"></div>
-                                <h4 style="font-size: 0.85rem; margin-bottom: 0;">
-                                    <span style="color: var(--accent-gold)">SUPERIOR RECOMENDADA:</span>
-                                    <span style="color: #fff; margin-left: 6px;">${String(variant.marquee_ability).toUpperCase()}</span>
-                                </h4>
-                            ` : ''}
                         </div>
                     </div>
                     
                     <!-- Build Tab (Build + Arsenal) -->
                     ${hasBuildContent ? `
                         <div class="variant-tab-content" data-tab="build">
-                            <div class="variant-classes-display" style="display: block;">
-                                ${classesHTML}
-                            </div>
-                            ${buildText ? `
-                                <div class="ability-box build">
-                                    <h4>BUILD RECOMENDADA</h4>
-                                    <p>${formatBuildText(buildText)}</p>
+                            ${builds ? `
+                                <div class="build-selector">
+                                    ${builds.map((b, i) => `
+                                        <button class="build-pill ${i === 0 ? 'active' : ''}" 
+                                                onclick="switchVariantBuild(this, '${variant.name}-${b.title}')">
+                                            ${b.title.toUpperCase()}
+                                        </button>
+                                    `).join('')}
                                 </div>
-                            ` : ''}
-                            
-                            ${arsenalHTML ? `
-                                <div class="ability-box arsenal">
-                                    <h4>ARSENAL RECOMENDADO</h4>
-                                    <div class="arsenal-list">${arsenalHTML}</div>
+                                <div class="build-contents-wrapper">
+                                    ${builds.map((b, i) => renderBuildContent(b, i === 0)).join('')}
                                 </div>
-                            ` : ''}
+                            ` : `
+                                <div class="variant-classes-display" style="display: block;">
+                                    ${classesHTML}
+                                </div>
+                                ${variant.marquee_ability ? `
+                                    <div class="ability-box marquee">
+                                        <div class="marquee-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                            <h4 style="margin: 0;">HABILIDADE SUPERIOR</h4>
+                                            ${CHARACTER_PROFILES[charKey]?.superiorAbility1 ? `
+                                                <i class="fas fa-info-circle marquee-info-trigger" 
+                                                   title="Ver Detalhes das Habilidades" 
+                                                   style="color: var(--accent-gold); cursor: pointer; font-size: 0.8rem;"
+                                                   onclick="showMarqueeDisclaimer('${charKey}', '${variant.marquee_ability}')"></i>
+                                            ` : ''}
+                                        </div>
+                                        <p style="color: #fff; font-weight: 500; font-size: 0.9rem;">${formatText(variant.marquee_ability)}</p>
+                                    </div>
+                                ` : ''}
+                                ${buildText ? `
+                                    <div class="ability-box build">
+                                        <h4>BUILD RECOMENDADA</h4>
+                                        <p>${formatBuildText(buildText)}</p>
+                                    </div>
+                                ` : ''}
+                                
+                                ${arsenalHTML ? `
+                                    <div class="ability-box arsenal">
+                                        <h4>ARSENAL RECOMENDADO</h4>
+                                        <div class="arsenal-list">${arsenalHTML}</div>
+                                    </div>
+                                ` : ''}
+                            `}
                         </div>
                     ` : ''}
                 </div>
@@ -160,6 +249,23 @@ export function createVariantCard(variant, charKey, index = 0) {
         </div>
     `;
 }
+
+/**
+ * Switch between multiple builds for a variant
+ */
+window.switchVariantBuild = function(btn, buildKey) {
+    const wrapper = btn.closest('.variant-tab-content');
+    if (!wrapper) return;
+
+    // Update pills
+    wrapper.querySelectorAll('.build-pill').forEach(p => p.classList.toggle('active', p === btn));
+
+    // Update contents
+    wrapper.querySelectorAll('.build-sub-content').forEach(content => {
+        content.classList.toggle('active', content.dataset.buildIdx === buildKey);
+    });
+};
+
 
 /**
  * Render variants container

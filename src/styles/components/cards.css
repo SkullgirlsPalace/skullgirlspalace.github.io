@@ -59,7 +59,6 @@
     cursor: pointer;
     transition: all var(--transition-normal);
     position: relative;
-    overflow: hidden;
 }
 
 .character-card::before {
@@ -158,6 +157,7 @@
     grid-template-columns: auto 1fr;
     gap: 16px;
     transition: all var(--transition-normal);
+    position: relative;
 }
 
 .variant-card:hover {
@@ -190,6 +190,94 @@
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+
+/* Exclusive Badge Styling */
+.exclusive-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, rgba(20, 20, 25, 0.95), rgba(0, 0, 0, 0.85));
+    border: 1px solid rgba(212, 168, 75, 0.4);
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 2;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 10px rgba(212, 168, 75, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.exclusive-badge.shifted {
+    right: 80px; /* Moves left to make room for the NEW gear icon (80px) */
+    transform: translateX(0);
+}
+
+.exclusive-badge:hover {
+    border-color: var(--accent-gold);
+    background: linear-gradient(135deg, rgba(30, 30, 35, 0.98), rgba(10, 10, 15, 0.9));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 168, 75, 0.2);
+}
+
+.exclusive-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.exclusive-text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exclusive-label {
+    font-family: 'Dodam', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.exclusive-source {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* New Badge Styling */
+.new-badge {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 80px;
+    height: 70px;
+    object-fit: contain;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    animation: bounceIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Specific scale for Character Selection Grid to look proportional */
+.character-card .new-badge {
+    width: 60px;
+    height: 52px;
+    top: -18px;
+    right: -18px;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 .variant-info {
@@ -391,11 +479,89 @@
 }
 
 .ability-box.build {
-    border-color: rgba(68, 204, 102, 0.3);
+    border-color: rgba(255, 255, 255, 0.08);
+    background: var(--bg-card);
 }
 
 .ability-box.arsenal {
-    border-color: rgba(255, 136, 68, 0.3);
+    border-color: rgba(255, 255, 255, 0.08);
+    background: var(--bg-card);
+}
+
+.ability-box.marquee {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: var(--bg-card);
+}
+
+/* ========== BUILD SELECTOR & PILLS ========== */
+.build-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    width: fit-content;
+}
+
+.build-pill {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 8px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.build-pill:hover {
+    color: #fff;
+}
+
+.build-pill.active {
+    background: var(--accent-gold);
+    color: #000;
+    box-shadow: 0 4px 12px rgba(212, 168, 75, 0.3);
+}
+
+.build-contents-wrapper {
+    position: relative;
+    min-height: 100px;
+}
+
+.build-sub-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.build-sub-content.active {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.discord-credits {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.discord-credits span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    opacity: 0.7;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Arsenal */
@@ -421,6 +587,7 @@
 .arsenal-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -461,8 +628,8 @@
 }
 
 .arsenal-move .move-icon {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }

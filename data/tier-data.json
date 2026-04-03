@@ -850,6 +850,12 @@
             "riftOff": "S",
             "riftDef": "I",
             "parallel": "SS"
+            },
+        "Poder Floral": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"
         },
         "Virada do Camaleão": {
             "pf": "C",
@@ -906,6 +912,12 @@
             "riftOff": "A",
             "riftDef": "I",
             "parallel": "SS"
+            },
+        "Gurdião do Cometa": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"
         },
         "Octoplasma": {
             "pf": "A",
@@ -1006,10 +1018,10 @@
             "parallel": "SS"
         },
         "Briga Fatal": {
-            "pf": "N/A",
-            "riftOff": "N/A",
-            "riftDef": "N/A",
-            "parallel": "N/A"
+            "pf": "SS",
+            "riftOff": "B",
+            "riftDef": "S",
+            "parallel": "SS"
         },
         "Agora e Sempre": {
             "pf": "B",
@@ -1334,6 +1346,12 @@
             "riftOff": "A",
             "riftDef": "I",
             "parallel": "S"
+            },
+        "Ouro Maciço": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"
         },
         "Supercuringa": {
             "pf": "B",
@@ -1434,10 +1452,10 @@
             "parallel": "B"
         },
         "Dupla Exposição": {
-            "pf": "N/A",
-            "riftOff": "N/A",
-            "riftDef": "N/A",
-            "parallel": "N/A"
+            "pf": "S",
+            "riftOff": "A",
+            "riftDef": "B",
+            "parallel": "A"
         },
         "Bombardeiro Azul": {
             "pf": "B",
