@@ -68,6 +68,28 @@
                 "marquee_ability": "Incineração Melhorada",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
                 "recommended_arsenal": "Esmurrar Até Cansar, Carrossel da Marie, Fazedor de Feno de Hilgard, Pula-Pula, Obstrução da Sucção"
+            },
+            {
+                "name": "Guardião do Cometa",
+                "title_formatted": "Guardião do Cometa - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": ""
+                },
+                "stats": {
+                    "attack": "11,847",
+                    "health": "72,058",
+                    "power": "28,190"
+                },
+                "signature_ability": {
+                    "name": "HILGARD DAS ESTRELAS",
+                    "description": "[HAB 1]: Após ser invocado, Hilgard permanece no palco até Marie ser derrubada ou sair. Enquanto Hilgard estiver no palco, Marie tem 50% de chance de impedir um EFEITO NEGATIVO recebido e aplicar BLOQUEIO DE CURA e MALDIÇÃO por 10 segundos cada.\n\n[HAB 2]: Quando o oponente QUICAR na parede, remova todos os EFEITOS POSITIVOS dele e aumente o dano em 100% pelo resto do COMBO."
+                },
+                "marquee_ability": "Incineração Melhorada",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Impacto Esquelético Repetido, Esmurrar até Cansar, Fazedor de Feno de Hilgard, Carrossel da Marie, Obstrução da Sucção"
             }
         ],
         "ouro": [

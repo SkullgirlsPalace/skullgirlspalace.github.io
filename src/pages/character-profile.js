@@ -9,6 +9,8 @@ import { CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getCharacterProfile } from '../data/characterProfiles.js';
 import { MOVE_DATA } from '../data/movesimages.js';
 import { getVariantImage } from '../data/variantImages.js';
+import { formatText } from '../utils/formatters.js';
+import { EFFECT_DATA } from '../data/effectData.js';
 
 let currentProfileTab = 'sobre';
 
@@ -190,8 +192,19 @@ function renderSobreTab(charKey, charData, profile) {
                     </div>
                     <div class="stat-playstyle">
                         <h4>ESTILO DE JOGO</h4>
-                        <p>${profile?.playstyle || 'Estilo de jogo não disponível.'}</p>
+                        <p>${profile?.playstyle ? formatText(profile.playstyle) : 'Estilo de jogo não disponível.'}</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Abilities Section -->
+            <div class="profile-section abilities-section">
+                <div class="profile-section-header" onclick="toggleProfileAbilities()">
+                    <h3>HABILIDADES</h3>
+                    <img src="img/official/IconInfo.webp" alt="Expandir" class="bio-toggle-icon" id="abilities-toggle-icon">
+                </div>
+                <div class="abilities-content collapsed" id="abilities-content">
+                    ${renderAbilities(profile)}
                 </div>
             </div>
 
@@ -216,6 +229,64 @@ function renderSobreTab(charKey, charData, profile) {
             </div>
         </div>
     `;
+}
+
+function renderAbilities(profile) {
+    if (!profile || (!profile.characterAbility && !profile.superiorAbility1 && !profile.superiorAbility2 && !profile.prestigeAbility)) {
+        return '<p class="profile-empty">Habilidades ainda não disponíveis.</p>';
+    }
+
+    let html = '';
+    
+    if (profile.characterAbility) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE DO PERSONAGEM</span>
+                    <span class="ability-title">- ${profile.characterAbility.title}</span>
+                </div>
+                <div class="ability-desc">${formatText(profile.characterAbility.description)}</div>
+            </div>
+        `;
+    }
+    
+    if (profile.superiorAbility1) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE SUPERIOR</span>
+                    <span class="ability-title">- ${profile.superiorAbility1.title}</span>
+                </div>
+                <div class="ability-desc">${formatText(profile.superiorAbility1.description)}</div>
+            </div>
+        `;
+    }
+
+    if (profile.superiorAbility2) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE SUPERIOR</span>
+                    <span class="ability-title">- ${profile.superiorAbility2.title}</span>
+                </div>
+                <div class="ability-desc">${formatText(profile.superiorAbility2.description)}</div>
+            </div>
+        `;
+    }
+
+    if (profile.prestigeAbility) {
+        html += `
+            <div class="ability-card">
+                <div class="ability-header">
+                    <span class="ability-type">HABILIDADE DE PRESTÍGIO</span>
+                    <span class="ability-title">- ${profile.prestigeAbility.title}</span>
+                </div>
+                <div class="ability-desc">${formatText(profile.prestigeAbility.description)}</div>
+            </div>
+        `;
+    }
+
+    return html;
 }
 
 function renderEssentialData(profile) {
@@ -250,13 +321,13 @@ function renderEssentialData(profile) {
             <div class="essential-data-right">
                 ${profile.likes ? `
                     <div class="data-item likes">
-                        <span class="data-label">GOSTA:</span>
+                        <span class="data-label">GOSTA</span>
                         <span class="data-value">${profile.likes}</span>
                     </div>
                 ` : ''}
                 ${profile.dislikes ? `
                     <div class="data-item dislikes">
-                        <span class="data-label">NÃO GOSTA:</span>
+                        <span class="data-label">NÃO GOSTA</span>
                         <span class="data-value">${profile.dislikes}</span>
                     </div>
                 ` : ''}
@@ -433,10 +504,170 @@ export function toggleMoveDetail(element) {
     element.classList.toggle('expanded');
 }
 
+/**
+ * Toggle abilities expand/collapse
+ */
+export function toggleProfileAbilities() {
+    const content = document.getElementById('abilities-content');
+    const icon = document.getElementById('abilities-toggle-icon');
+    if (!content) return;
+
+    content.classList.toggle('collapsed');
+    if (icon) {
+        icon.classList.toggle('expanded');
+    }
+}
+
+/**
+ * Show a disclaimer/modal with character's Marquee Abilities details
+ * @param {string} charKey - Character key
+ * @param {string} marqueeName - Recommended marquee name (from JSON)
+ */
+export function showMarqueeDisclaimer(charKey, marqueeName = '') {
+    const profile = getCharacterProfile(charKey);
+    if (!profile) return;
+    
+    const marquee1 = profile.superiorAbility1;
+    const marquee2 = profile.superiorAbility2;
+    if (!marquee1) return;
+
+    // Split descriptions into individual options (paragraphs separated by \n\n)
+    const allDesc = marquee1.description + (marquee2 ? '\n\n' + marquee2.description : '');
+    const paragraphs = allDesc.split(/\n\n+/);
+    
+    // We no longer filter individually as per user request. Show all.
+    const filteredParts = paragraphs;
+
+    // Check if Critless was mentioned in the original marqueeName
+    const isCritlessRecommended = (marqueeName || '').toLowerCase().includes('critless');
+
+    const contentHtml = `
+        <div class="marquee-disclaimer-modal" style="
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: #0d0d12; border: 1px solid rgba(212, 168, 75, 0.2); border-radius: 12px;
+            padding: 24px; z-index: 10001; max-width: 500px; width: 90%; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.9), inset 0 0 40px rgba(0, 0, 0, 0.5); color: #fff;
+            max-height: 85vh; overflow-y: auto;
+        ">
+            <div style="background: rgba(255, 255, 255, 0.03); padding: 15px; border-radius: 8px; width: 100%; margin-bottom: 20px; position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.05);">
+                <h3 style="color: #fff; margin: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; font-family: 'Dodam', sans-serif;">
+                    <i class="fas fa-info-circle" style="color: var(--accent-gold);"></i> DETALHES: HABILIDADE SUPERIOR
+                </h3>
+            </div>
+
+            <h4 style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.7rem; margin-bottom: 12px; font-family: 'Inter', sans-serif; opacity: 0.8;">
+                ${charKey.replace(/-/g, ' ').toUpperCase()} • ${marquee1.title}
+            </h4>
+            
+            <div class="marquee-options-list">
+                ${filteredParts.map(p => {
+                    // Try to separate title from content. Expecting "NAME - Description"
+                    const parts = p.split(' - ');
+                    const title = parts[0];
+                    const desc = parts.slice(1).join(' - ');
+                    
+                    return `
+                        <div style="margin-bottom: 16px; background: rgba(255,255,255,0.01); padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.03);">
+                            <h4 style="color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 8px; font-family: 'Inter', sans-serif; font-weight: 700;">${title.toUpperCase()}</h4>
+                            <p style="font-size: 0.9rem; color: #ccc; line-height: 1.6; font-family: 'Roboto Condensed', sans-serif;">${formatText(desc)}</p>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+
+            ${isCritlessRecommended ? `
+                <div class="critless-note" style="margin-top: 16px; background: rgba(255, 255, 255, 0.02); padding: 12px; border-radius: 8px; border: 1px solid rgba(212, 168, 75, 0.15); cursor: pointer;" onclick="document.querySelectorAll('.marquee-disclaimer-overlay, .marquee-disclaimer-modal').forEach(el => el.remove()); showCritlessDisclaimer();">
+                    <h4 style="color: var(--accent-gold); font-size: 0.85rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                        <i class="fas fa-shield-alt"></i> ESTRATÉGIA CRITLESS RECOMENDADA
+                    </h4>
+                    <p style="font-size: 0.8rem; color: #aaa; line-height: 1.4;">
+                        Clique para entender como e porquê evitar acertos críticos nesta build.
+                    </p>
+                </div>
+            ` : ''}
+
+            <div style="margin-top: 20px; text-align: center;">
+                <button onclick="document.querySelectorAll('.marquee-disclaimer-overlay, .marquee-disclaimer-modal').forEach(el => el.remove());" style="
+                    background: transparent; color: #aaa; border: 1px solid rgba(255,255,255,0.2); padding: 8px 30px;
+                    border-radius: 20px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-size: 0.75rem; text-transform: uppercase;
+                " onmouseover="this.style.borderColor='var(--accent-gold)'; this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.color='#aaa'">
+                    Fechar
+                </button>
+            </div>
+        </div>
+        <div class="marquee-disclaimer-overlay" onclick="document.querySelector('.marquee-disclaimer-overlay').remove(); document.querySelector('.marquee-disclaimer-modal').remove();" style="
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); z-index: 10000; backdrop-filter: blur(4px);
+        "></div>
+    `;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'disclaimer-overlay-wrapper';
+    overlay.innerHTML = contentHtml;
+    
+    // Cleanup any existing ones
+    document.querySelectorAll('.marquee-disclaimer-overlay, .marquee-disclaimer-modal').forEach(el => el.remove());
+    
+    document.body.appendChild(overlay.querySelector('.marquee-disclaimer-overlay'));
+    document.body.appendChild(overlay.querySelector('.marquee-disclaimer-modal'));
+}
+
+/**
+ * Show a disclaimer for the "Critless" strategy
+ */
+export function showCritlessDisclaimer() {
+    const critless = EFFECT_DATA.critless;
+    
+    if (!critless) return;
+
+    const contentHtml = `
+        <div class="critless-disclaimer-modal" style="
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;
+            padding: 24px; z-index: 10002; max-width: 500px; width: 90%; 
+            box-shadow: 0 30px 90px rgba(0,0,0,1); color: #fff;
+            max-height: 85vh; overflow-y: auto;
+        ">
+            <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="color: #fff; margin: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; font-family: 'Dodam', sans-serif;">
+                    <i class="fas fa-shield-alt" style="color: var(--accent-gold);"></i> GUIA: ESTRATÉGIA CRITLESS
+                </h3>
+                <button onclick="document.querySelectorAll('.critless-disclaimer-overlay, .critless-disclaimer-modal').forEach(el => el.remove());" 
+                    style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; padding: 0;" 
+                    onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(255, 255, 255, 0.3)';" 
+                    onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                    <i class="fas fa-times" style="font-size: 1rem;"></i>
+                </button>
+            </div>
+
+            <div class="critless-explanation" style="font-size: 0.92rem; color: #bbb; line-height: 1.6; font-family: 'Roboto Condensed', sans-serif;">
+                ${formatText(critless.explicacao)}
+            </div>
+        </div>
+        <div class="critless-disclaimer-overlay" onclick="document.querySelectorAll('.critless-disclaimer-overlay, .critless-disclaimer-modal').forEach(el => el.remove());" style="
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 10001; backdrop-filter: blur(4px);
+        "></div>
+    `;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'disclaimer-overlay-wrapper';
+    overlay.innerHTML = contentHtml;
+    
+    // Cleanup any existing ones
+    document.querySelectorAll('.critless-disclaimer-overlay, .critless-disclaimer-modal').forEach(el => el.remove());
+    
+    document.body.appendChild(overlay.querySelector('.critless-disclaimer-overlay'));
+    document.body.appendChild(overlay.querySelector('.critless-disclaimer-modal'));
+}
+
 // Register global handlers
+window.showMarqueeDisclaimer = showMarqueeDisclaimer;
+window.showCritlessDisclaimer = showCritlessDisclaimer;
 window.openProfileModal = openProfileModal;
 window.closeProfileModal = closeProfileModal;
 window.handleProfileOverlayClick = handleProfileOverlayClick;
 window.switchProfileModalTab = switchProfileModalTab;
 window.toggleProfileBio = toggleProfileBio;
+window.toggleProfileAbilities = toggleProfileAbilities;
 window.toggleMoveDetail = toggleMoveDetail;

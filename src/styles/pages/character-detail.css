@@ -36,7 +36,7 @@
 }
 
 .char-title-centered h2 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
 }
 
@@ -49,7 +49,7 @@
     border-radius: 20px;
     padding: 6px 16px;
     color: var(--accent-gold);
-    font-family: 'Washington', 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.9rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -81,7 +81,7 @@
 .tab-btn {
     background: #1A1A24;
     color: var(--text-secondary);
-    font-family: 'Washington', 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;

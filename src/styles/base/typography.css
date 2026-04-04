@@ -32,15 +32,15 @@
 }
 
 html[lang='ja'] .cinematic {
-    font-family: 'Washington', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-family: 'Inter', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 html[lang='ko'] .cinematic {
-    font-family: 'Washington', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-family: 'Inter', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 html[lang='zh-cn'] .cinematic {
-    font-family: 'Washington', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
+    font-family: 'Inter', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 /* Numerical Values Styling */
@@ -185,11 +185,24 @@ html[lang='zh-cn'] .cinematic {
     /* Consistent Gold for all keywords */
 }
 
+.buff-term {
+    color: #6fbf73;
+    /* Verde claro para Efeito Positivo */
+    font-weight: 700;
+}
+
+.debuff-term {
+    color: #f06868;
+    /* Vermelho claro para Efeito Negativo */
+    font-weight: 700;
+}
+
 /* Numbers in description */
 .number {
     color: #4cd137;
     /* Green for numbers */
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 1.05em;
 }
 
 /* ========== INLINE EFFECT ICONS ========== */

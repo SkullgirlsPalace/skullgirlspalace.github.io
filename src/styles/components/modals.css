@@ -48,7 +48,7 @@
 }
 
 .drawer-header h3 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 1.25rem;
     text-transform: uppercase;

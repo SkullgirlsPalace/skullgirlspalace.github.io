@@ -15,7 +15,7 @@
 }
 
 .guide-header h1 {
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 2.5rem;
     margin-bottom: 8px;
@@ -41,7 +41,7 @@
     color: var(--text-secondary);
     padding: 12px 24px;
     border-radius: var(--border-radius-pill);
-    font-family: 'Cinema', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.95rem;
     cursor: pointer;
     white-space: nowrap;
@@ -102,7 +102,7 @@
 .effects-table th {
     background: rgba(0, 0, 0, 0.2);
     color: var(--accent-gold);
-    font-family: 'Cinema', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -224,7 +224,7 @@
 
 .stats-header-title {
     color: var(--accent-gold);
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -238,7 +238,7 @@
     padding: 8px 18px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Washington', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.85rem;
     display: flex;
     align-items: center;

@@ -21,9 +21,20 @@
                     "name": "STATUS OCULTO",
                     "description": "[HAB 1]: Quando Dália Negra ou o oponente ENTRAM NA ASSIST., **ela remove todos** os EF. POS. do inimigo e inflige MALDIÇÃO por 20 s.\n\n[HAB 2]: DRENE 2% de VIDA por segundo do oponente se ele estiver sofrendo **uma MALDIÇÃO.**"
                 },
-                "marquee_ability": "Descontrole Metálico (Ataque/Suporte)",
-                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                "recommended_arsenal": "Empoderar, Deslizando, Massacre, Ratoeira dos Medici, Te Vejo por Aí (Expulsão)"
+                "builds": [
+                    {
+                        "title": "Suporte",
+                        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                        "recommended_arsenal": "Empoderar, Deslizando, Massacre, Ratoeira dos Medici, Te Vejo por Aí (Expulsão)",
+                        "marquee_ability": "Descontrole Metálico ou Critless"
+                    },
+                    {
+                        "title": "Defesa",
+                        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                        "recommended_arsenal": "Último Pedido, Noite das Garotas, Deslizando, Pêndulo da Morte, Explosão",
+                        "marquee_ability": "Não Há Tempo Para Morrer"
+                    }
+                ]
             },
             {
                 "name": "Pele Elegante",
@@ -45,7 +56,7 @@
                 },
                 "marquee_ability": "Descontrole Metálico",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Empoderar, Perigo no Cenário, Massacre, Pêndulo da Morte, Pêndulo da Morte "
+                "recommended_arsenal": "Empoderar, Perigo no Cenário, Massacre, Pêndulo da Morte, Ratoeira dos Medici"
             },
             {
                 "name": "Calibre Mágico",
@@ -111,9 +122,20 @@
                     "name": "CÁLICE DE VENENO",
                     "description": "[HAB 1]: Remova todos os EF. NEG. e ganhe 3 camada(s) de BARREIRA quando qualquer lutador usar um BLOCKBUSTER.\n\n[HAB 2]: Com 5 camadas de BARREIRA, todos os TIROS são INDEFENSÁVEIS e infligem GOSMA por 10 segundos ao GOLPEAR."
                 },
-                "marquee_ability": "Não Há Tempo Para Morrer (Defesa) / Descontrole Metálico (Ataque)",
-                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Empoderar, Capacho, Presente de Despedida, Massacre, Pêndulo da Morte "
+                "builds": [
+                    {
+                        "title": "Ataque",
+                        "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                        "recommended_arsenal": "Empoderar, Capacho, Presente de Despedida, Massacre, Pêndulo da Morte",
+                        "marquee_ability": "Descontrole Metálico"
+                    },
+                    {
+                        "title": "Defesa",
+                        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                        "recommended_arsenal": "Último Pedido, Noite das Garotas, Empoderar, Pêndulo da Morte, Explosão",
+                        "marquee_ability": "Não Há Tempo Para Morrer"
+                    }
+                ]
             },
             {
                 "name": "Fora-da-Lei Marcial",

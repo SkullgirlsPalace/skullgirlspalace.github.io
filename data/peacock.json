@@ -202,6 +202,28 @@
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
                 "recommended_arsenal": "Multidão Enfurecida, Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!"
+            },
+            {
+                "name": "Ouro Maciço",
+                "title_formatted": "Ouro Maciço - Neutro - Ouro",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": ""
+                },
+                "stats": {
+                    "attack": "11,117",
+                    "health": "63,572",
+                    "power": "25,656"
+                },
+                "signature_ability": {
+                    "name": "VALEU A ESPERA",
+                    "description": "[HAB 1]: A cada 15 segundos, aumente permanentemente o ATAQUE em 35% e a TAXA DE CRÍTICO em 20% (mesmo no banco).\n\n[HAB 2]: Quando qualquer lutador acertar um GOLPE CRÍTICO, há 50% de chance de ganhar FÚRIA e BÊNÇÃO por 10 segundos cada."
+                                },
+                "marquee_ability": "Festa do Elenco",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), Quem Vem Agora? (Expulsão)"
             }
         ],
         "prata": [

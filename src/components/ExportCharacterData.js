@@ -270,7 +270,7 @@ function downloadTXT(characterData, keys) {
                 if (variant.stats) {
                     lines.push(`      Ataque: ${variant.stats.attack || '-'}`);
                     lines.push(`      Vida: ${variant.stats.health || '-'}`);
-                    lines.push(`      Poder: ${variant.stats.power || '-'}`);
+                    lines.push(`      Pontuação: ${variant.stats.power || '-'}`);
                 }
 
                 if (variant.signature_ability) {

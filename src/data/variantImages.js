@@ -166,7 +166,8 @@ const VARIANT_IMAGES = {
         "Irmãs de Alma": "img/fukua/Fukua_5.webp",
         "Falsa Temida": "img/fukua/Fukua_6.webp",
         "Cópia Aproximada": "img/fukua/Fukua_1.webp",
-        "Gêmeo Infernal": "img/fukua/Fukua_2.webp"
+        "Gêmeo Infernal": "img/fukua/Fukua_2.webp",
+        "Poder Floral": "img/fukua/Flower_Power.webp"
     },
     "marie": {
         "Megalomaníaca": "img/marie/Marie_14.webp",
@@ -183,7 +184,8 @@ const VARIANT_IMAGES = {
         "Domadora de Fantasmas": "img/marie/Marie_5.webp",
         "Osso Puro": "img/marie/Marie_1.webp",
         "Maga Marrenta": "img/marie/Marie_2.webp",
-        "Abóbora Fantasma": "img/marie/Marie_6.webp"
+        "Abóbora Fantasma": "img/marie/Marie_6.webp",
+        "Guardião do Cometa": "img/marie/Comet_Custodian.webp"
     },
     "ms-fortune": {
         "Stalker de Vento": "img/ms-fortune/Ms_Fortune_14.webp",
@@ -256,7 +258,8 @@ const VARIANT_IMAGES = {
         "Cara Pintada": "img/peacock/Peacock_4.webp",
         "Chumbinho": "img/peacock/Peacock_3.webp",
         "Reprise": "img/peacock/Peacock_1.webp",
-        "Esboço": "img/peacock/Peacock_2.webp"
+        "Esboço": "img/peacock/Peacock_2.webp",
+        "Ouro Maciço": "img/peacock/Solid_Gold.webp"
     },
     "robo-fortune": {
         "Overclocked": "img/robo-fortune/Robo-Fortune_13.webp",

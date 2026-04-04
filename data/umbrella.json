@@ -21,9 +21,20 @@
                     "name": "CICLO VORAZ",
                     "description": "[HAB 1]: **Todo 7º GOLPE DE COMBO que acerta Umbrella ou o oponente** TRANSFERE até 3 EFEITO(S) POSITIVO(S) do inimigo para ela e inflige FEITIÇO por 10 s.\n\n[HAB 2]: **Uma vez por luta, ao ser derrotada**, REVIVE com 25% de VIDA e REVIVE todos os aliados derrotados com 25% de VIDA."
                 },
-                "marquee_ability": "Final Amargo",
-                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
-                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+                "builds": [
+                    {
+                        "title": "Ataque",
+                        "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                        "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal",
+                        "marquee_ability": "Final Amargo"
+                    },
+                    {
+                        "title": "Defesa",
+                        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                        "recommended_arsenal": "Hora do Rango, Trava-Língua, Soprando Bolhas, Moedor de Sal, Explosão",
+                        "marquee_ability": "Final Amargo"
+                    }
+                ]
             },
             {
                 "name": "Campeã dos Campeões",

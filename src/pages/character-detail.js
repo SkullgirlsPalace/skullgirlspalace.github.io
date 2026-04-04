@@ -97,7 +97,7 @@ function renderBuildsTab(charKey, charData) {
     // Flatten and process variants
     let variants = flattenVariants(charData.variants);
     variants = filterVariants(variants, filters);
-    variants = sortVariants(variants, sort);
+    variants = sortVariants(variants, sort, filters);
 
     // Generate variant cards HTML
     let variantsHTML = '';
@@ -168,7 +168,7 @@ export function refreshVariants(charKey) {
 
     let variants = flattenVariants(charData.variants);
     variants = filterVariants(variants, filters);
-    variants = sortVariants(variants, sort);
+    variants = sortVariants(variants, sort, filters);
 
     renderVariants('variants-container', variants, charKey);
 }
