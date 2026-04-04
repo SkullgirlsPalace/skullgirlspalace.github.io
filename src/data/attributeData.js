@@ -123,7 +123,6 @@ export const ATTRIBUTE_DATA = {
     critless: {
         keys: ['Critless', 'critless'],
         name: 'Critless',
-        max: '-',
         summary: 'Estratégia de não investir em Taxa e Dano Crítico.',
         detailed: 'O conceito de Critless consiste em NÃO melhorar os nós de Taxa Crítica e Dano Crítico na Árvore de Habilidades do personagem. Isso é fundamental para lidar com variantes que punem acertos críticos, como Painwheels com Sangue Frio. Agarrões nunca causam críticos, facilitando essa estratégia.'
     },

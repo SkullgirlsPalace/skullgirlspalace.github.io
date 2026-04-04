@@ -283,7 +283,6 @@
         font-size: 0.75rem;
     }
 
-    /* Variant cards */
     .variant-card {
         grid-template-columns: 1fr;
         text-align: center;

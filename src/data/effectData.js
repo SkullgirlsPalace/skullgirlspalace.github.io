@@ -21,10 +21,10 @@ export const EFFECT_DATA = {
     critless: {
         keys: ['Critless', 'critless', 'Sem Crítico', 'sem crítico', 'CRITLESS'],
         name: 'Critless (Sem Crítico)',
-        type: 'term',
+        type: 'buff-term',
         color: '#ffdd44',
         detailed: 'Estratégia de não investir em Taxa e Dano Crítico para contornar habilidades de punição por acerto crítico.',
-        explicacao: 'O conceito de <strong style="color:#fff">Critless</strong> consiste em NÃO melhorar os nós de <img src="img/official/crit_rate_icon.png" class="inline-effect-icon" style="width:16px;"> Taxa Crítica e Dano Crítico na Árvore de Habilidades do personagem, mantendo-os fora também da sua Build.\n\nEvitar acertos críticos é fundamental para lidar contra variantes defensivas específicas (como Painwheels com a Habilidade Superior <em>Sangue Maculado</em>) ou modificadores com reflexão de dano na qual dependem de sofrer Dano Crítico para punir você. Essa escolha reduz seu potencial de ataque direto, sendo mais aconselhada para personagens com muita Vida, Cura ou Ataque Baixo.\n\n<strong>Dica:</strong> AGARRÕES nunca causam acertos críticos, mesmo se você tiver o Efeito Positivo "Precisão"!\n\nAvalie cuidadosamente antes de criar uma variante <em>Critless</em>, pois isso pode limitar um pouco o desempenho dela contra outros oponentes comuns.'
+        explicacao: 'O conceito de <strong style="color:#fff">Critless</strong> consiste em NÃO melhorar os nós de Taxa Crítica e Dano Crítico na Árvore de Habilidades do personagem, mantendo-os fora também da sua Build.\n\nEvitar acertos críticos é fundamental para lidar contra variantes defensivas específicas (como Painwheels com Sangue Maculado ou modificadores com reflexão de dano na qual dependem de sofrer Dano Crítico para punir você. Essa escolha reduz seu potencial de ataque direto, sendo mais aconselhada para personagens com muita Vida, Cura ou Ataque Baixo.\n\n<strong>Dica:</strong> AGARRÕES nunca causam acertos críticos, mesmo se você tiver o Efeito Positivo Precisão\n\nAvalie cuidadosamente antes de criar uma variante <em>Critless</em>, pois isso pode limitar um pouco o desempenho dela contra outros oponentes comuns.'
     },
     signature_abilities: {
         keys: ['Habilidades Características', 'Habilidade Característica', 'Signature Abilities'],

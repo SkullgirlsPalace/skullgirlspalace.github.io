@@ -47,10 +47,10 @@ export function createVariantCard(variant, charKey, index = 0) {
         const info = CLASS_ICONS[cls];
         if (!info) return '';
         return `
-            <div class="variant-class-wrapper" style="display: inline-flex; align-items: center; gap: 8px; margin-right: 12px; margin-bottom: 8px;">
-                <span style="font-family: system-ui, -apple-system, sans-serif; font-size: 0.85em; color: var(--text-muted); text-transform: uppercase;">Função:</span>
+            <div class="variant-class-wrapper">
+                <span class="variant-class-label">CLASSE</span>
                 <span class="variant-class-tag attr-highlight" data-attr-key="class_${cls}" style="--class-color: ${info.color}">
-                    <img src="${info.icon}" alt="${cls}" style="width: 18px; height: 18px; object-fit: contain;">
+                    <img src="${info.icon}" alt="${cls}">
                     ${cls.toUpperCase()}
                 </span>
             </div>
@@ -101,14 +101,13 @@ export function createVariantCard(variant, charKey, index = 0) {
             <div class="build-sub-content ${isFirst ? 'active' : ''}" data-build-idx="${variant.name}-${b.title}">
                 ${b.marquee_ability ? `
                     <div class="ability-box marquee">
-                        <div class="marquee-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                            <h4 style="margin: 0;">HABILIDADE SUPERIOR</h4>
-                            ${marqueeInfo ? `
-                                <i class="fas fa-info-circle marquee-info-trigger" 
-                                   title="Ver Detalhes das Habilidades" 
-                                   style="color: var(--accent-gold); cursor: pointer; font-size: 0.8rem;"
-                                   onclick="showMarqueeDisclaimer('${charKey}', '${b.marquee_ability}')"></i>
-                            ` : ''}
+                        <div class="marquee-header" 
+                             style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; cursor: pointer;"
+                             onclick="showMarqueeDisclaimer('${charKey}', '${b.marquee_ability}')">
+                            <h4 style="margin: 0; display: flex; align-items: center; gap: 8px;">
+                                HABILIDADE SUPERIOR RECOMENDADA
+                                <i class="fas fa-info-circle" style="font-size: 0.8rem; opacity: 0.7;"></i>
+                            </h4>
                         </div>
                         <p style="color: #fff; font-weight: 500; font-size: 0.9rem;">${formatText(b.marquee_ability)}</p>
                     </div>
@@ -134,9 +133,14 @@ export function createVariantCard(variant, charKey, index = 0) {
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
             ${newBadgeHTML}
-            <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
-                 onerror="this.src='img/official/Annie_Icon.webp'">
             ${exclusiveBadgeHTML}
+            <div class="variant-left-section">
+                <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
+                     onerror="this.src='img/official/Annie_Icon.webp'">
+                <div class="variant-classes-display">
+                    ${classesHTML}
+                </div>
+            </div>
             <div class="variant-info">
                 <div class="variant-header">
                     <h3>${variant.name}</h3>
@@ -211,20 +215,17 @@ export function createVariantCard(variant, charKey, index = 0) {
                                     ${builds.map((b, i) => renderBuildContent(b, i === 0)).join('')}
                                 </div>
                             ` : `
-                                <div class="variant-classes-display" style="display: block;">
-                                    ${classesHTML}
-                                </div>
+                                <div class="variant-classes-display empty-classes"></div>
                                 ${variant.marquee_ability ? `
                                     <div class="ability-box marquee">
-                                        <div class="marquee-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                                            <h4 style="margin: 0;">HABILIDADE SUPERIOR</h4>
-                                            ${CHARACTER_PROFILES[charKey]?.superiorAbility1 ? `
-                                                <i class="fas fa-info-circle marquee-info-trigger" 
-                                                   title="Ver Detalhes das Habilidades" 
-                                                   style="color: var(--accent-gold); cursor: pointer; font-size: 0.8rem;"
-                                                   onclick="showMarqueeDisclaimer('${charKey}', '${variant.marquee_ability}')"></i>
-                                            ` : ''}
-                                        </div>
+                                    <div class="marquee-header" 
+                                         style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; cursor: pointer;"
+                                         onclick="showMarqueeDisclaimer('${charKey}', '${variant.marquee_ability}')">
+                                        <h4 style="margin: 0; display: flex; align-items: center; gap: 8px;">
+                                            HABILIDADE SUPERIOR RECOMENDADA
+                                            <i class="fas fa-info-circle" style="font-size: 0.8rem; opacity: 0.7;"></i>
+                                        </h4>
+                                    </div>
                                         <p style="color: #fff; font-weight: 500; font-size: 0.9rem;">${formatText(variant.marquee_ability)}</p>
                                     </div>
                                 ` : ''}
@@ -320,4 +321,3 @@ function switchVariantTab(cardId, tabName) {
         content.classList.toggle('active', isActive);
     });
 }
-

@@ -39,13 +39,19 @@ export function formatText(text, variantName = null) {
             const effect = EFFECT_DATA[effectKey];
             const typeClass = effect ? effect.type : 'term';
             
-            if (typeClass === 'buff-term' || typeClass === 'debuff-term') {
+            const iconHtml = (effect && effect.icon) ? `<img loading="lazy" src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
+            
+            if (effectKey === 'critless') {
                 replacements.push({
                     marker,
-                    html: `<span class="${typeClass}">${match}</span>`
+                    html: `<span class="attr-highlight critless-term ${typeClass}" data-attr-key="critless" style="cursor:pointer;" onclick="showCritlessDisclaimer(); event.stopPropagation();">${iconHtml}${match}</span>`
+                });
+            } else if (typeClass === 'buff-term' || typeClass === 'debuff-term') {
+                replacements.push({
+                    marker,
+                    html: `<span class="${typeClass}">${iconHtml}${match}</span>`
                 });
             } else {
-                const iconHtml = (effect && effect.icon) ? `<img loading="lazy" src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
                 replacements.push({
                     marker,
                     html: `<span class="attr-highlight ${typeClass}" data-attr-key="${effectKey}">${iconHtml}${match}</span>`

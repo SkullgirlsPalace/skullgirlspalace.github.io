@@ -285,6 +285,19 @@ function showDetailModal(target) {
                 ${buildElementTableHTML(data, false)}
             </div>
         `;
+    } else if (data.name.includes('Critless') || (source === 'attr' && data.name.includes('Critless'))) {
+        headerHtml = `
+            <div style="background: rgba(255, 187, 0, 0.1); border: 1px dashed var(--accent-gold); padding: 15px; border-radius: 8px; width: 100%; margin-bottom: 20px;">
+                <h3 style="color: var(--accent-gold); margin: 0; font-size: 1.2rem; display: flex; align-items: center; gap: 10px; font-family: 'Dodam', sans-serif;">
+                    <i class="fas fa-shield-alt"></i> GUIA: ESTRATÉGIA CRITLESS
+                </h3>
+            </div>
+        `;
+        bodyHtml = `
+            <div class="attr-detail-section detailed" style="margin-top: 0;">
+                <p style="font-size: 1rem; line-height: 1.6; color: #eee;">${data.explicacao ? data.explicacao.replace(/\\n/g, '<br>') : data.detailed}</p>
+            </div>
+        `;
     } else if (source === 'attr') {
         headerHtml = `
             <h3>

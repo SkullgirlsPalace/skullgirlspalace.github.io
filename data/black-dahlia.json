@@ -23,16 +23,16 @@
                 },
                 "builds": [
                     {
+                        "title": "Suporte",
+                        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                        "recommended_arsenal": "Empoderar, Deslizando, Massacre, Ratoeira dos Medici, Te Vejo por Aí (Expulsão)",
+                        "marquee_ability": "Descontrole Metálico ou Critless"
+                    },
+                    {
                         "title": "Defesa",
                         "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                         "recommended_arsenal": "Último Pedido, Noite das Garotas, Deslizando, Pêndulo da Morte, Explosão",
                         "marquee_ability": "Não Há Tempo Para Morrer"
-                    },
-                    {
-                        "title": "Ataque / Suporte",
-                        "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
-                        "recommended_arsenal": "Empoderar, Deslizando, Massacre, Ratoeira dos Medici, Te Vejo por Aí (Expulsão)",
-                        "marquee_ability": "Descontrole Metálico ou Critless"
                     }
                 ]
             },
@@ -56,7 +56,7 @@
                 },
                 "marquee_ability": "Descontrole Metálico",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Empoderar, Perigo no Cenário, Massacre, Pêndulo da Morte, Pêndulo da Morte "
+                "recommended_arsenal": "Empoderar, Perigo no Cenário, Massacre, Pêndulo da Morte, Ratoeira dos Medici"
             },
             {
                 "name": "Calibre Mágico",
@@ -124,16 +124,16 @@
                 },
                 "builds": [
                     {
-                        "title": "Defesa",
-                        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
-                        "recommended_arsenal": "Último Pedido, Noite das Garotas, Empoderar, Pêndulo da Morte, Explosão",
-                        "marquee_ability": "Não Há Tempo Para Morrer"
-                    },
-                    {
                         "title": "Ataque",
                         "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
                         "recommended_arsenal": "Empoderar, Capacho, Presente de Despedida, Massacre, Pêndulo da Morte",
                         "marquee_ability": "Descontrole Metálico"
+                    },
+                    {
+                        "title": "Defesa",
+                        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                        "recommended_arsenal": "Último Pedido, Noite das Garotas, Empoderar, Pêndulo da Morte, Explosão",
+                        "marquee_ability": "Não Há Tempo Para Morrer"
                     }
                 ]
             },
