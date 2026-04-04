@@ -261,14 +261,6 @@
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
 
-.new-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 32px;
-    height: auto;
-    z-index: 10;
-}
 
 /* Exclusive Badge Styling */
 .exclusive-badge {
