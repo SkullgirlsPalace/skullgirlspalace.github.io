@@ -904,7 +904,7 @@
         "Sem Coração": {
             "pf": "SS",
             "riftOff": "SS",
-            "riftDef": "I",
+            "riftDef": "C",
             "parallel": "A"
         },
         "Maldade Insana": {
@@ -913,7 +913,7 @@
             "riftDef": "I",
             "parallel": "SS"
             },
-        "Gurdião do Cometa": {
+        "Guardião do Cometa": {
             "pf": "N/A",
             "riftOff": "N/A",
             "riftDef": "N/A",

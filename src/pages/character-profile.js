@@ -19,7 +19,8 @@ let currentProfileTab = 'sobre';
  * @param {string} charKey - Character key
  * @returns {string} HTML string
  */
-export function renderProfileModal(charKey) {
+export function renderProfileModal(charKeyRaw) {
+    const charKey = charKeyRaw.toLowerCase();
     const charData = getCharacter(charKey);
     if (!charData) return '';
 
@@ -128,10 +129,11 @@ export async function switchProfileModalTab(charKey, tabName) {
 /**
  * Render tab content into modal
  */
-async function renderProfileTabContent(charKey, tabName) {
+async function renderProfileTabContent(charKeyRaw, tabName) {
     const contentEl = document.getElementById('profile-modal-content');
     if (!contentEl) return;
 
+    const charKey = charKeyRaw.toLowerCase();
     const charData = getCharacter(charKey);
     if (!charData) return;
 
@@ -154,13 +156,16 @@ async function renderProfileTabContent(charKey, tabName) {
 
 function renderStars(count) {
     if (typeof count === 'string' && (count.toLowerCase() === 'variavel' || count.toLowerCase() === 'variável')) {
-        return `<span style="font-family: 'Washington', sans-serif; font-size: 0.95rem; color: var(--accent-gold);">${count.toUpperCase()}</span>`;
+        return `<span style="font-family: var(--font-secondary), sans-serif; font-size: 0.95rem; color: var(--accent-gold);">${count.toUpperCase()}</span>`;
     }
+    
+    // Ensure count is a number
+    const starCount = parseInt(count) || 3;
     const starSvg = `<svg viewBox="0 0 24 24" class="stat-star"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
     const emptyStarSvg = `<svg viewBox="0 0 24 24" class="stat-star empty" style="opacity: 0.2;"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
     let html = '';
     for (let i = 0; i < 5; i++) {
-        html += i < count ? starSvg : emptyStarSvg;
+        html += i < starCount ? starSvg : emptyStarSvg;
     }
     return html;
 }
@@ -184,11 +189,11 @@ function renderSobreTab(charKey, charData, profile) {
                 <div class="profile-intro-stats">
                     <div class="stat-rating">
                         <span class="stat-rating-label">ATAQUE:</span>
-                        <div class="stat-rating-stars">${renderStars(profile?.atk || 3)}</div>
+                        <div class="stat-rating-stars">${renderStars(profile?.attack || 3)}</div>
                     </div>
                     <div class="stat-rating">
                         <span class="stat-rating-label">VIDA:</span>
-                        <div class="stat-rating-stars">${renderStars(profile?.hp || 3)}</div>
+                        <div class="stat-rating-stars">${renderStars(profile?.health || 3)}</div>
                     </div>
                     <div class="stat-playstyle">
                         <h4>ESTILO DE JOGO</h4>

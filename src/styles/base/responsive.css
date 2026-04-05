@@ -305,12 +305,20 @@
         justify-content: center;
     }
 
-    .variant-stats {
-        justify-content: center;
+    .variant-left-section {
+        width: 100% !important;
+        margin-bottom: 20px;
     }
 
-    .variant-tabs {
+    .variant-info {
+        align-items: center;
+        width: 100%;
+    }
+
+    .variant-stats {
         justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
     }
 
     .variant-tab-btn {
@@ -328,21 +336,39 @@
     }
 
     .arsenal-list {
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        align-items: stretch;
+        width: 100%;
     }
-
     .arsenal-move {
-        min-width: 70px;
-        padding: 8px;
+        padding: 12px 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
     }
 
     .arsenal-move .move-icon {
-        width: 60px;
-        height: 60px;
+        width: 100%;
+        max-width: 110px;
+        height: auto;
+        aspect-ratio: 1;
     }
 
     .arsenal-move .move-name {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        padding: 6px 4px;
+        line-height: 1.2;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        margin-top: 8px;
     }
 
     /* ===== PHASE 4: GUIDE PAGE ===== */
