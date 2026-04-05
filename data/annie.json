@@ -110,7 +110,7 @@
                     "description": "[HAB 1]: **Quando não estiver em PODER ESTELAR nem sob efeito de EVASÃO**, BLOQUEIOS bem sucedidos concedem 50% de PODER ESTELAR, 3 acúmulo(s) de BARREIRA e permitem que Annie DESVIE de todos os ataques por 3 segundos.\n\n[HAB 2]: **Ao ativar o PODER ESTELAR, sacrifique 35% da VIDA MÁXIMA para ganhar OLHO-MORTO** por 15 segundos. **Enquanto estiver em PODER ESTELAR, inimigos na reserva** sofrem FEITIÇO e TODOS os inimigos 3% de VIDA por segundo."
                 },
                 "marquee_ability": "DESVIO PARA O VERMELHO",
-                "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
                 "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar de Destruição, Pilar de Destruição, Pilar de Destruição"
             }
         ],
