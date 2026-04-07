@@ -15,6 +15,16 @@ import { hasElementEffects } from '../data/elementEffectsData.js';
 export function formatText(text, variantName = null) {
     if (!text) return '';
 
+    // If text is an array (e.g. marquee abilities for some variants), join with newlines
+    if (Array.isArray(text)) {
+        text = text.join('\n');
+    }
+
+    // Ensure text is a string to prevent .replace errors
+    if (typeof text !== 'string') {
+        text = String(text);
+    }
+
     // Remove [HAB 1]: and [HAB 2]: prefixes
     text = text.replace(/\[HAB \d+\]:\s*/g, '');
 
@@ -92,6 +102,11 @@ import { getMoveData } from '../data/movesimages.js';
  */
 export function formatArsenal(arsenal, charKey = null) {
     if (!arsenal) return '';
+
+    // Ensure arsenal is a string
+    if (typeof arsenal !== 'string') {
+        arsenal = String(arsenal);
+    }
 
     // Remove Discord emoji codes
     arsenal = arsenal.replace(/<:[^:]+:\d+>/g, '');
