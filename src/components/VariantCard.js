@@ -6,6 +6,7 @@ import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
 import { isNewVariant } from '../data/newContent.js';
 import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
+import { t, getCurrentLanguage, getEnglishVariantName, getEnglishAbilityName, getEnglishSignatureAbility } from '../i18n/index.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -48,7 +49,7 @@ export function createVariantCard(variant, charKey, index = 0) {
         if (!info) return '';
         return `
             <div class="variant-class-wrapper">
-                <span class="variant-class-label">CLASSE</span>
+                <span class="variant-class-label">${t('variant.class')}</span>
                 <span class="variant-class-tag attr-highlight" data-attr-key="class_${cls}" style="--class-color: ${info.color}">
                     <img src="${info.icon}" alt="${cls}">
                     ${cls.toUpperCase()}
@@ -72,7 +73,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     const buildText = variant.recommended_build || '';
     const hasBuildContent = !!(builds || buildText || arsenalHTML || variant.marquee_ability);
 
-    const saName = variant.signature_ability?.name || 'Habilidade Especial';
+    const saName = variant.signature_ability?.name || `${t('variant.ability')} Especial`;
 
     const isNew = isNewVariant(variant.name);
     const newBadgeHTML = isNew ? `
@@ -159,17 +160,17 @@ export function createVariantCard(variant, charKey, index = 0) {
                 <div class="variant-stats">
                     <div class="stat-item">
                         <img loading="lazy" src="img/official/AttackIcon.webp" alt="ATQ" class="stat-icon">
-                        <span class="label">ATQ</span>
+                        <span class="label">${t('variant.attack')}</span>
                         <span class="value">${variant.stats?.attack || '-'}</span>
                     </div>
                     <div class="stat-item">
                         <img loading="lazy" src="img/official/HealthIcon.webp" alt="Vida" class="stat-icon">
-                        <span class="label">Vida</span>
+                        <span class="label">${t('variant.health')}</span>
                         <span class="value">${variant.stats?.health || '-'}</span>
                     </div>
                     <div class="stat-item">
                         <img loading="lazy" src="${elementInfo.statIcon}" alt="${variant.element}" class="stat-icon">
-                        <span class="label">Pontuação</span>
+                        <span class="label">${t('variant.power')}</span>
                         <span class="value">${variant.stats?.power || '-'}</span>
                     </div>
                 </div>
@@ -177,7 +178,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                 <!-- Tab Navigation -->
                 <div class="variant-tabs">
                     <button class="variant-tab-btn active" data-tab="habilidade" data-card="${cardId}">
-                        Habilidade
+                        ${t('variant.ability')}
                     </button>
                     ${hasBuildContent ? `
                         <button class="variant-tab-btn" data-tab="build" data-card="${cardId}">
@@ -187,7 +188,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                 </div>
                 
                 <div class="variant-tab-contents" id="${cardId}-contents">
-                    <!-- Habilidade Tab (Signature Only) -->
+                    <!-- ${t('variant.ability')} Tab (Signature Only) -->
                     <div class="variant-tab-content active" data-tab="habilidade">
                         <div class="ability-box">
                             <h4 style="margin-bottom: 8px;">

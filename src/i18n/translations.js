@@ -50,6 +50,7 @@ export const translations = {
     // Characters page
     characters: {
       title: 'Personagens',
+        selectCharacter: 'Escolha um Personagem',
       searchPlaceholder: 'Buscar personagem...',
       allCharacters: 'Todos os Personagens'
     },
@@ -87,6 +88,32 @@ export const translations = {
       reportBug: 'Encontrou algum erro ou bug? Reporte no',
       serverName: 'Servidor Palácio Branco',
       disclaimer: 'Projeto de fã não afiliado aos desenvolvedores oficiais.'
+    },
+    // Variant Card
+    variant: {
+      ability: 'Habilidade',
+      build: 'Build',
+      signatureAbility: 'HABILIDADE CARACTERÍSTICA',
+      recommendedBuild: 'BUILD RECOMENDADA',
+      recommendedArsenal: 'ARSENAL RECOMENDADO',
+      recommendedMarquee: 'HABILIDADE SUPERIOR RECOMENDADA',
+      attack: 'ATQ',
+      health: 'Vida',
+      power: 'Pontuação',
+      noVariants: 'Nenhuma variante encontrada com estes filtros.',
+      class: 'CLASSE',
+      information: 'Informações',
+      builds: 'BUILDS',
+      tierList: 'TIER LIST',
+      exclusive: 'Exclusivo'
+    },
+    // Character Detail
+    detail: {
+      characterNotFound: 'Personagem não encontrado',
+      filters: 'Filtros',
+      sortBy: 'Ordenar por',
+      rarity: 'Raridade',
+      element: 'Elemento'
     }
   },
   'en': {
@@ -135,6 +162,7 @@ export const translations = {
     // Characters page
     characters: {
       title: 'Characters',
+    selectCharacter: 'Select a Character',
       searchPlaceholder: 'Search character...',
       allCharacters: 'All Characters'
     },
@@ -172,6 +200,32 @@ export const translations = {
       reportBug: 'Found an error or bug? Report it on',
       serverName: 'Palácio Branco Server',
       disclaimer: 'Fan project not affiliated with official developers.'
+    },
+    // Variant Card
+    variant: {
+      ability: 'Ability',
+      build: 'Build',
+      signatureAbility: 'SIGNATURE ABILITY',
+      recommendedBuild: 'RECOMMENDED BUILD',
+      recommendedArsenal: 'RECOMMENDED ARSENAL',
+      recommendedMarquee: 'RECOMMENDED MARQUEE ABILITY',
+      attack: 'ATK',
+      health: 'HP',
+      power: 'Power',
+      noVariants: 'No variants found with these filters.',
+      class: 'CLASS',
+      information: 'Information',
+      builds: 'BUILDS',
+      tierList: 'TIER LIST',
+      exclusive: 'Exclusive'
+    },
+    // Character Detail
+    detail: {
+      characterNotFound: 'Character not found',
+      filters: 'Filters',
+      sortBy: 'Sort by',
+      rarity: 'Rarity',
+      element: 'Element'
     }
   }
 };
@@ -198,6 +252,20 @@ export function setLanguage(lang) {
     document.documentElement.lang = lang;
     // Dispatch event for components to re-render
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
+
+    // Update variant data translations if switching to English
+    if (lang === 'en') {
+      import('./dataTranslations.js').then(module => {
+        module.updateVariantTranslations();
+      }).catch(err => console.warn('Could not update variant translations:', err));
+    } else {
+      // Clear cache and reload page for PT-BR to show original data
+      import('./dataTranslations.js').then(module => {
+        module.clearTranslationCache();
+        // Force re-render by dispatching event
+        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
+      }).catch(() => {});
+    }
   }
 }
 

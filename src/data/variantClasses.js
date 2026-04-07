@@ -124,7 +124,6 @@ export const VARIANT_CLASSES = {
     "Fantoche Sombrio": ["Coringa"],
     "Zona de Buffer": ["Coringa"],
     "Overclocked": ["Coringa"],
-    "Mai-s O Quê?": ["Coringa"],
     "Ouro Maciço": ["Suporte de Utilidade"]
 };
 

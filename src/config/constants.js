@@ -93,3 +93,25 @@ export const RARITY_ICONS = {
 };
 
 export const TIER_RANKS = ['SS', 'S', 'A', 'B', 'C', 'I', 'N/A'];
+
+// Character names in English for sorting
+export const CHARACTER_NAMES_EN = {
+  'annie': 'Annie',
+  'beowulf': 'Beowulf',
+  'big-band': 'Big Band',
+  'black-dahlia': 'Black Dahlia',
+  'cerebella': 'Cerebella',
+  'double': 'Double',
+  'eliza': 'Eliza',
+  'filia': 'Filia',
+  'fukua': 'Fukua',
+  'marie': 'Marie',
+  'ms-fortune': 'Ms. Fortune',
+  'painwheel': 'Painwheel',
+  'parasoul': 'Parasoul',
+  'peacock': 'Peacock',
+  'robo-fortune': 'Robo-Fortune',
+  'squigly': 'Squigly',
+  'umbrella': 'Umbrella',
+  'valentine': 'Valentine'
+};
