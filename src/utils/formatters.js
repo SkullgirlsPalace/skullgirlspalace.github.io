@@ -159,7 +159,7 @@ export function formatArsenal(arsenal, charKey = null) {
             }
             return `
                 <div class="arsenal-move">
-                    <span class="move-name">${moveName}</span>
+                    <span class="move-name">\${originalName}</span>
                 </div>
             `;
         }).join('');
