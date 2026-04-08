@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.9% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/126</span>
+                <span class='fraction'>0/126</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.41% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/48</span>
+                <span class='fraction'>0/48</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20.83% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/24</span>
+                <span class='fraction'>0/24</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.71% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/112</span>
+                <span class='fraction'>0/112</span>
             </div>
         
             
@@ -385,24 +385,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">49x</span>
-<span class="cline-any cline-yes">17x</span>
-<span class="cline-any cline-yes">32x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">50x</span>
-<span class="cline-any cline-yes">73x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -414,7 +412,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -692,29 +692,29 @@ import { EFFECT_DATA } from '../data/effectData.js';
 /**
  * Render the export modifier modal HTML
  */
-export function renderModifierExportModal() {
-    const buffs = [];
-    const debuffs = [];
+export function <span class="fstat-no" title="function not covered" >renderModifierExportModal(</span>) {
+    const buffs = <span class="cstat-no" title="statement not covered" >[];</span>
+    const debuffs = <span class="cstat-no" title="statement not covered" >[];</span>
 &nbsp;
-    for (const [key, effect] of Object.entries(EFFECT_DATA)) {
-        if (effect.type === 'buff') {
-            buffs.push({ key, ...effect });
-        } else if (effect.type === 'debuff') {
-            debuffs.push({ key, ...effect });
+<span class="cstat-no" title="statement not covered" >    for (const [key, effect] of Object.entries(EFFECT_DATA)) {</span>
+<span class="cstat-no" title="statement not covered" >        if (effect.type === 'buff') {</span>
+<span class="cstat-no" title="statement not covered" >            buffs.push({ key, ...effect });</span>
+        } else <span class="cstat-no" title="statement not covered" >if (effect.type === 'debuff') {</span>
+<span class="cstat-no" title="statement not covered" >            debuffs.push({ key, ...effect });</span>
         }
     }
 &nbsp;
-    buffs.sort((a, b) =&gt; a.name.localeCompare(b.name));
-    debuffs.sort((a, b) =&gt; a.name.localeCompare(b.name));
+<span class="cstat-no" title="statement not covered" >    buffs.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; <span class="cstat-no" title="statement not covered" >a.name.localeCompare(b.name))</span>;</span>
+<span class="cstat-no" title="statement not covered" >    debuffs.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; <span class="cstat-no" title="statement not covered" >a.name.localeCompare(b.name))</span>;</span>
 &nbsp;
-    const renderCheckboxes = (effects, typeLabel) =&gt; {
-        return effects.map(effect =&gt; `
+    const renderCheckboxes = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>ffects, typeLabel) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return effects.map(<span class="fstat-no" title="function not covered" >effect </span>=&gt; <span class="cstat-no" title="statement not covered" >`</span></span>
             &lt;label class="export-char-item" data-modifier-key="${effect.key}"&gt;
                 &lt;input type="checkbox" class="export-modifier-checkbox" value="${effect.key}" data-type="${effect.type}"&gt;
                 &lt;div class="export-char-icon-wrapper"&gt;
                     ${effect.icon
                 ? `&lt;img loading="lazy" src="${effect.icon}" alt="${effect.name}" class="export-char-icon" onerror="this.style.display='none'"&gt;`
-                : <span class="branch-1 cbranch-no" title="branch not covered" >`&lt;span style="font-size: 0.7rem; color: var(--text-muted);"&gt;${typeLabel}&lt;/span&gt;`</span>
+                : `&lt;span style="font-size: 0.7rem; color: var(--text-muted);"&gt;${typeLabel}&lt;/span&gt;`
             }
                 &lt;/div&gt;
                 &lt;span class="export-char-name"&gt;${effect.name}&lt;/span&gt;
@@ -722,7 +722,7 @@ export function renderModifierExportModal() {
         `).join('');
     };
 &nbsp;
-    return `
+<span class="cstat-no" title="statement not covered" >    return `</span>
         &lt;div id="modifier-export-modal-overlay" class="export-modal-overlay" onclick="handleModifierExportOverlayClick(event)"&gt;
             &lt;div class="export-modal" onclick="event.stopPropagation()"&gt;
                 &lt;div class="export-modal-header"&gt;
@@ -994,7 +994,7 @@ function <span class="fstat-no" title="function not covered" >triggerDownload(</
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-04-08T21:03:16.371Z
+                at 2026-04-08T23:42:27.908Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

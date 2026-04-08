@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.7% </span>
+                <span class="strong">35.18% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/54</span>
+                <span class='fraction'>19/54</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">31.25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>10/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.77% </span>
+                <span class="strong">35.84% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/53</span>
+                <span class='fraction'>19/53</span>
             </div>
         
             
@@ -313,9 +313,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -327,12 +327,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -384,23 +384,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -540,10 +540,10 @@ import { renderProfileModal } from './character-profile.js';
  * @param {string} initialTab - Initial tab ('builds' or 'tier')
  * @returns {string} HTML string
  */
-export function <span class="fstat-no" title="function not covered" >render(</span>charKey, initialTab = <span class="branch-0 cbranch-no" title="branch not covered" >'builds')</span> {
-    const charData =<span class="cstat-no" title="statement not covered" > getCharacter(charKey);</span>
-<span class="cstat-no" title="statement not covered" >    if (!charData) {</span>
-<span class="cstat-no" title="statement not covered" >        return `</span>
+export function render(charKey, initialTab = 'builds') {
+    const charData = getCharacter(charKey);
+    if (!charData) {
+        return `
             &lt;section class="section character-detail"&gt;
                 &lt;div class="section-header"&gt;
                     &lt;button class="btn-back" onclick="navigateTo('characters')"&gt;
@@ -555,12 +555,12 @@ export function <span class="fstat-no" title="function not covered" >render(</sp
         `;
     }
 &nbsp;
-    const charColor = <span class="cstat-no" title="statement not covered" >CHARACTER_COLORS[charKey] || 'var(--accent-gold)';</span>
-    const masteryIcon =<span class="cstat-no" title="statement not covered" > getMasteryIcon(charKey);</span>
-    const state =<span class="cstat-no" title="statement not covered" > getState();</span>
-    const currentTab = <span class="cstat-no" title="statement not covered" >state.currentTab || initialTab;</span>
+    const charColor = CHARACTER_COLORS[charKey] || <span class="branch-1 cbranch-no" title="branch not covered" >'var(--accent-gold)';</span>
+    const masteryIcon = getMasteryIcon(charKey);
+    const state = getState();
+    const currentTab = state.currentTab || <span class="branch-1 cbranch-no" title="branch not covered" >initialTab;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return `</span>
+    return `
         &lt;section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}"&gt;
             &lt;!-- Header Content --&gt;
             &lt;div class="character-detail-header fade-in"&gt;
@@ -570,7 +570,7 @@ export function <span class="fstat-no" title="function not covered" >render(</sp
                 
                 &lt;div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;"&gt;
                     &lt;div style="display: flex; align-items: center; gap: 15px;"&gt;
-                        &lt;img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${charData.character}" class="char-select-icon"
+                        &lt;img loading="lazy" src="${CHARACTER_ICONS[charKey] || <span class="branch-1 cbranch-no" title="branch not covered" >'img/official/Annie_Icon.webp'}</span>" alt="${charData.character}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'" style="width: 64px; height: 64px; object-fit: contain;"&gt;
                         &lt;h2 style="margin: 0; font-size: 2.5rem;"&gt;${charData.character.toUpperCase()}&lt;/h2&gt;
                     &lt;/div&gt;
@@ -583,11 +583,11 @@ export function <span class="fstat-no" title="function not covered" >render(</sp
                 
                 &lt;!-- Tab Navigation --&gt;
                 &lt;div class="detail-tabs"&gt;
-                    &lt;button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
+                    &lt;button class="tab-btn ${currentTab === 'builds' ? 'active' : <span class="branch-1 cbranch-no" title="branch not covered" >''}</span>" 
                             onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds"&gt;
                         BUILDS
                     &lt;/button&gt;
-                    &lt;button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
+                    &lt;button class="tab-btn ${currentTab === 'tier' ? <span class="branch-0 cbranch-no" title="branch not covered" >'active' </span>: ''}" 
                             onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier"&gt;
                         TIER LIST
                     &lt;/button&gt;
@@ -597,7 +597,7 @@ export function <span class="fstat-no" title="function not covered" >render(</sp
             ${createFilterBar()}
 &nbsp;
             &lt;div class="detail-content" id="detail-content"&gt;
-                ${currentTab === 'builds' ? renderBuildsTab(charKey, charData) : renderTierTab(charKey, charData)}
+                ${currentTab === 'builds' ? renderBuildsTab(charKey, charData) : <span class="branch-1 cbranch-no" title="branch not covered" >renderTierTab(charKey, charData)}</span>
             &lt;/div&gt;
 &nbsp;
             ${renderProfileModal(charKey)}
@@ -611,24 +611,24 @@ export function <span class="fstat-no" title="function not covered" >render(</sp
  * @param {Object} charData - Character data
  * @returns {string} HTML string
  */
-function <span class="fstat-no" title="function not covered" >renderBuildsTab(</span>charKey, charData) {
-    const state =<span class="cstat-no" title="statement not covered" > getState();</span>
-    const { filters, sort } = <span class="cstat-no" title="statement not covered" >state.tabState.builds;</span>
+function renderBuildsTab(charKey, charData) {
+    const state = getState();
+    const { filters, sort } = state.tabState.builds;
 &nbsp;
     // Flatten and process variants
-    let variants =<span class="cstat-no" title="statement not covered" > flattenVariants(charData.variants);</span>
-<span class="cstat-no" title="statement not covered" >    variants = filterVariants(variants, filters);</span>
-<span class="cstat-no" title="statement not covered" >    variants = sortVariants(variants, sort, filters);</span>
+    let variants = flattenVariants(charData.variants);
+    variants = filterVariants(variants, filters);
+    variants = sortVariants(variants, sort, filters);
 &nbsp;
     // Generate variant cards HTML
-    let variantsHTML = <span class="cstat-no" title="statement not covered" >'';</span>
-<span class="cstat-no" title="statement not covered" >    if (variants.length === 0) {</span>
-<span class="cstat-no" title="statement not covered" >        variantsHTML = '&lt;p style="color: var(--text-muted); padding: 20px; text-align: center;"&gt;Nenhuma variante encontrada com estes filtros.&lt;/p&gt;';</span>
-    } else {
+    let variantsHTML = '';
+    if (variants.length === 0) {
+        variantsHTML = '&lt;p style="color: var(--text-muted); padding: 20px; text-align: center;"&gt;Nenhuma variante encontrada com estes filtros.&lt;/p&gt;';
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >        variantsHTML = `&lt;div class="variants-grid" id="variants-container"&gt;&lt;/div&gt;`;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return `</span>
+    return `
         &lt;div class="builds-tab-content"&gt;
             ${variantsHTML}
         &lt;/div&gt;
@@ -754,7 +754,7 @@ window.switchDetailTab = switchTab;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-04-08T21:03:16.371Z
+                at 2026-04-08T23:42:27.908Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
