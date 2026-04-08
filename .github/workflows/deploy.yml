@@ -34,12 +34,12 @@ jobs:
       - name: Run tests with coverage
         run: npm run test:coverage
 
-      - name: Check coverage threshold (20%)
+      - name: Check coverage threshold (35%)
         run: |
           COVERAGE=$(cat coverage/coverage-summary.json | jq '.total.lines.pct')
           echo "Coverage: $COVERAGE%"
-          if (( $(echo "$COVERAGE < 20" | bc -l) )); then
-            echo "::error::Coverage $COVERAGE% is below 20% threshold"
+          if (( $(echo "$COVERAGE < 35" | bc -l) )); then
+            echo "::error::Coverage $COVERAGE% is below 35% threshold"
             exit 1
           fi
           echo "✅ Coverage check passed: $COVERAGE% >= 20%"
