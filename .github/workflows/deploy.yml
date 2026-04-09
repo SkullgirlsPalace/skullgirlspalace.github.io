@@ -53,6 +53,7 @@ jobs:
 
   deploy:
     needs: test
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
