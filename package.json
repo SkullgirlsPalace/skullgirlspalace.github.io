@@ -4,7 +4,10 @@
   "description": "Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso",
   "main": "src/main.js",
   "scripts": {
-    "optimize": "node tools/optimize-images.js"
+    "optimize": "node tools/optimize-images.js",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -13,8 +16,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.3",
+    "happy-dom": "^20.8.9",
+    "vitest": "^4.1.3"
   }
 }
