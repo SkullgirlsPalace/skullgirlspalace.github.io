@@ -6,6 +6,8 @@ import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
 import { isNewVariant } from '../data/newContent.js';
 import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
+import { hasExtras, getExtrasData } from '../data/extrasData.js';
+import { MOVE_DATA } from '../data/movesimages.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -184,6 +186,11 @@ export function createVariantCard(variant, charKey, index = 0) {
                             Build
                         </button>
                     ` : ''}
+                    ${hasExtras(charKey, variant.name) ? `
+                        <button class="variant-tab-btn extras-tab-btn" data-tab="extras" data-card="${cardId}">
+                            ⭐ Extras
+                        </button>
+                    ` : ''}
                 </div>
                 
                 <div class="variant-tab-contents" id="${cardId}-contents">
@@ -245,10 +252,352 @@ export function createVariantCard(variant, charKey, index = 0) {
                             `}
                         </div>
                     ` : ''}
+
+                    <!-- Extras Tab -->
+                    ${hasExtras(charKey, variant.name) ? `
+                        <div class="variant-tab-content" data-tab="extras">
+                            ${renderExtrasContent(charKey, variant)}
+                        </div>
+                    ` : ''}
                 </div>
             </div>
         </div>
     `;
+}
+
+// ========== EXTRAS RENDERING FUNCTIONS ==========
+
+/**
+ * Render the full extras tab content with sub-tabs
+ */
+function renderExtrasContent(charKey, variant) {
+    const extras = getExtrasData(charKey, variant.name);
+    if (!extras) return '<p class="profile-empty">Sem extras disponíveis.</p>';
+
+    const cardUid = `extras-${charKey}-${variant.name.replace(/\s+/g, '-')}`;
+
+    const hasGeneral = !!extras.batalhas_gerais;
+    const hasGuildas = !!(extras.guildas?.available && extras.guildas.bosses?.length > 0);
+    const hasFenda = !!extras.batalhas_fenda;
+
+    return `
+        <div class="extras-container" id="${cardUid}">
+            <div class="extras-sub-tabs">
+                ${hasGeneral ? `<button class="extras-sub-pill active" onclick="switchExtrasSubTab('${cardUid}', 'gerais')">Batalhas Gerais</button>` : ''}
+                ${hasGuildas ? `<button class="extras-sub-pill" onclick="switchExtrasSubTab('${cardUid}', 'guildas')">Guildas</button>` : ''}
+                ${hasFenda ? `<button class="extras-sub-pill" onclick="switchExtrasSubTab('${cardUid}', 'fenda')">Batalhas da Fenda</button>` : ''}
+            </div>
+
+            <div class="extras-sub-contents">
+                ${hasGeneral ? `
+                    <div class="extras-sub-content active" data-extras-tab="gerais">
+                        ${renderBatalhasGerais(extras.batalhas_gerais, charKey)}
+                    </div>
+                ` : ''}
+                ${hasGuildas ? `
+                    <div class="extras-sub-content" data-extras-tab="guildas">
+                        ${renderGuildas(extras.guildas, charKey)}
+                    </div>
+                ` : ''}
+                ${hasFenda ? `
+                    <div class="extras-sub-content" data-extras-tab="fenda">
+                        ${renderBatalhasFenda(extras.batalhas_fenda, charKey)}
+                    </div>
+                ` : ''}
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Get move image for a move name and character
+ */
+function getMoveImage(charKey, moveName) {
+    const moves = MOVE_DATA[charKey];
+    if (!moves) return '';
+    for (const [name, data] of Object.entries(moves)) {
+        if (name.toLowerCase() === moveName.toLowerCase()) {
+            return data.image?.image || '';
+        }
+    }
+    return '';
+}
+
+/**
+ * Render a team member card with image
+ */
+function renderTeamMemberCard(member) {
+    const imgSrc = getVariantImage(member.character, member.variant, 0);
+    return `
+        <div class="extras-team-card ${member.is_current ? 'is-current' : ''}">
+            <img loading="lazy" src="${imgSrc}" alt="${member.variant}" class="extras-team-img"
+                 onerror="this.src='img/official/Annie_Icon.webp'">
+            <div class="extras-team-info">
+                <span class="extras-team-name">${member.variant}</span>
+                <span class="extras-team-role">${member.role}</span>
+            </div>
+            ${member.is_current ? '<span class="extras-current-badge">ATUAL</span>' : ''}
+        </div>
+    `;
+}
+
+/**
+ * Render ally card with image
+ */
+function renderAllyCard(ally) {
+    const imgSrc = getVariantImage(ally.character, ally.variant, 0);
+    return `
+        <div class="extras-ally-card">
+            <img loading="lazy" src="${imgSrc}" alt="${ally.variant}" class="extras-ally-img"
+                 onerror="this.src='img/official/Annie_Icon.webp'">
+            <div class="extras-ally-info">
+                <span class="extras-ally-name">${ally.variant}</span>
+                <span class="extras-ally-char">${ally.character.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                <p class="extras-ally-reason">${ally.reason}</p>
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Render a matchup card
+ */
+function renderMatchupCard(matchup) {
+    const imgSrc = getVariantImage(matchup.character, matchup.variant, 0);
+    return `
+        <div class="extras-matchup-card">
+            <img loading="lazy" src="${imgSrc}" alt="${matchup.variant}" class="extras-matchup-img"
+                 onerror="this.src='img/official/Annie_Icon.webp'">
+            <div class="extras-matchup-info">
+                <span class="extras-matchup-name">${matchup.variant}</span>
+                <p class="extras-matchup-reason">${matchup.reason}</p>
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Render Batalhas Gerais sub-tab content
+ */
+function renderBatalhasGerais(data, charKey) {
+    let html = '';
+
+    // Team section
+    if (data.time_recomendado?.length > 0) {
+        html += `
+            <div class="extras-section">
+                <h4 class="extras-section-title">
+                    👥 TIME RECOMENDADO
+                </h4>
+                <div class="extras-team-grid">
+                    ${data.time_recomendado.map(m => renderTeamMemberCard(m)).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    // Allies section
+    if (data.aliados_recomendados?.length > 0) {
+        html += `
+            <div class="extras-section">
+                <div class="extras-section-header" onclick="toggleExtrasSection(this)">
+                    <h4 class="extras-section-title">
+                        🤝 ALIADOS RECOMENDADOS
+                    </h4>
+                    <span class="extras-toggle-icon">▼</span>
+                </div>
+                <div class="extras-section-body">
+                    <div class="extras-allies-grid">
+                        ${data.aliados_recomendados.map(a => renderAllyCard(a)).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Extra moves section
+    if (data.golpes_extras?.length > 0) {
+        html += `
+            <div class="extras-section">
+                <div class="extras-section-header" onclick="toggleExtrasSection(this)">
+                    <h4 class="extras-section-title">
+                        🥊 GOLPES EXTRAS
+                    </h4>
+                    <span class="extras-toggle-icon">▼</span>
+                </div>
+                <div class="extras-section-body">
+                    <div class="extras-moves-grid">
+                        ${data.golpes_extras.map(move => {
+                            const moveImg = getMoveImage(charKey, move.name);
+                            return `
+                                <div class="extras-move-card">
+                                    ${moveImg ? `<img loading="lazy" src="${moveImg}" alt="${move.name}" class="extras-move-img" onerror="this.style.display='none'">` : ''}
+                                    <div class="extras-move-info">
+                                        <span class="extras-move-name">${move.name}</span>
+                                        <p class="extras-move-reason">${move.reason}</p>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    return html || '<p class="profile-empty">Nenhuma informação disponível.</p>';
+}
+
+/**
+ * Render Guildas sub-tab content
+ */
+function renderGuildas(data, charKey) {
+    if (!data.bosses || data.bosses.length === 0) {
+        return '<p class="profile-empty">Nenhuma recomendação para guildas.</p>';
+    }
+
+    return data.bosses.map(boss => `
+        <div class="extras-boss-section">
+            <div class="extras-boss-header">
+                <div class="extras-boss-icon-wrapper">
+                    <img src="img/official/SkullModifierIcon.webp" alt="${boss.boss_name}" class="extras-boss-icon">
+                </div>
+                <div class="extras-boss-names">
+                    <span class="extras-boss-name">${boss.boss_name}</span>
+                    <span class="extras-boss-name-en">${boss.boss_name_en}</span>
+                </div>
+            </div>
+
+            ${boss.team?.length > 0 ? `
+                <div class="extras-section">
+                    <h4 class="extras-section-title mini">
+                        👥 TIME SUGERIDO
+                    </h4>
+                    <div class="extras-team-grid">
+                        ${boss.team.map(m => renderTeamMemberCard(m)).join('')}
+                    </div>
+                </div>
+            ` : ''}
+
+            ${boss.tips ? `
+                <div class="extras-tips-box">
+                    <span class="extras-tips-icon">💡</span>
+                    <p>${formatText(boss.tips)}</p>
+                </div>
+            ` : ''}
+
+            ${boss.aliados_recomendados?.length > 0 ? `
+                <div class="extras-section">
+                    <h4 class="extras-section-title mini">
+                        🤝 ALIADOS
+                    </h4>
+                    <div class="extras-allies-grid">
+                        ${boss.aliados_recomendados.map(a => renderAllyCard(a)).join('')}
+                    </div>
+                </div>
+            ` : ''}
+        </div>
+    `).join('<div class="extras-boss-divider"></div>');
+}
+
+/**
+ * Render Batalhas da Fenda sub-tab content
+ */
+function renderBatalhasFenda(data, charKey) {
+    let html = '';
+    const defesa = data.defesa;
+
+    if (defesa) {
+        // General matchups
+        if (defesa.matchups_favoraveis?.length > 0) {
+            html += `
+                <div class="extras-section">
+                    <h4 class="extras-section-title">
+                        🛡️ SE DÁ BEM CONTRA (DEFESA)
+                    </h4>
+                    <div class="extras-matchups-grid">
+                        ${defesa.matchups_favoraveis.map(m => renderMatchupCard(m)).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // With catalyst
+        if (defesa.com_catalisador) {
+            const cat = defesa.com_catalisador;
+            html += `
+                <div class="extras-section">
+                    <div class="extras-section-header" onclick="toggleExtrasSection(this)">
+                        <h4 class="extras-section-title">
+                            🧪 COM CATALISADOR: ${cat.catalisador.toUpperCase()}
+                        </h4>
+                        <span class="extras-toggle-icon">▼</span>
+                    </div>
+                    <div class="extras-section-body">
+                        <div class="extras-catalyst-info">
+                            <p>${cat.descricao}</p>
+                        </div>
+                        ${cat.matchups_favoraveis?.length > 0 ? `
+                            <div class="extras-matchups-grid">
+                                ${cat.matchups_favoraveis.map(m => renderMatchupCard(m)).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Without catalyst
+        if (defesa.sem_catalisador?.matchups_favoraveis?.length > 0) {
+            html += `
+                <div class="extras-section">
+                    <div class="extras-section-header" onclick="toggleExtrasSection(this)">
+                        <h4 class="extras-section-title">
+                            ❌ SEM CATALISADOR
+                        </h4>
+                        <span class="extras-toggle-icon">▼</span>
+                    </div>
+                    <div class="extras-section-body">
+                        <div class="extras-matchups-grid">
+                            ${defesa.sem_catalisador.matchups_favoraveis.map(m => renderMatchupCard(m)).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
+    // Extra moves for rift
+    if (data.golpes_extras?.length > 0) {
+        html += `
+            <div class="extras-section">
+                <div class="extras-section-header" onclick="toggleExtrasSection(this)">
+                    <h4 class="extras-section-title">
+                        🥊 GOLPES EXTRAS PARA FENDA
+                    </h4>
+                    <span class="extras-toggle-icon">▼</span>
+                </div>
+                <div class="extras-section-body">
+                    <div class="extras-moves-grid">
+                        ${data.golpes_extras.map(move => {
+                            const moveImg = getMoveImage(charKey, move.name);
+                            return `
+                                <div class="extras-move-card">
+                                    ${moveImg ? `<img loading="lazy" src="${moveImg}" alt="${move.name}" class="extras-move-img" onerror="this.style.display='none'">` : ''}
+                                    <div class="extras-move-info">
+                                        <span class="extras-move-name">${move.name}</span>
+                                        <p class="extras-move-reason">${move.reason}</p>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    return html || '<p class="profile-empty">Nenhuma informação de fenda disponível.</p>';
 }
 
 /**

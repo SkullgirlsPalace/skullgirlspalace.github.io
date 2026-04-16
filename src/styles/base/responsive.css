@@ -723,6 +723,82 @@
         font-weight: 900;
         font-size: 1.5rem;
     }
+
+    /* ===== EXTRAS SYSTEM MOBILE ===== */
+
+    .extras-sub-tabs {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .extras-sub-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .extras-sub-pill {
+        padding: 6px 12px;
+        font-size: 0.65rem;
+    }
+
+    .extras-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .extras-team-img {
+        width: 60px;
+    }
+
+    .extras-team-name {
+        font-size: 0.7rem;
+    }
+
+    .extras-ally-img {
+        width: 45px;
+    }
+
+    .extras-ally-name {
+        font-size: 0.78rem;
+    }
+
+    .extras-ally-reason {
+        font-size: 0.75rem;
+    }
+
+    .extras-matchups-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .extras-matchup-img {
+        width: 45px;
+    }
+
+    .extras-moves-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .extras-move-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .extras-boss-header {
+        padding: 10px 12px;
+    }
+
+    .extras-boss-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .extras-boss-name {
+        font-size: 0.9rem;
+    }
 }
 
 /* ===== VERY SMALL SCREENS (< 360px) ===== */

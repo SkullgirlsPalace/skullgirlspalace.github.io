@@ -5,7 +5,7 @@
 
 import { renderCharacterGrid } from '../components/CharacterCard.js';
 import { getCharacters } from '../services/dataService.js';
-import { renderExportModal, initExportModal } from '../components/ExportCharacterData.js';
+
 
 /**
  * Render characters page
@@ -19,13 +19,10 @@ export function render() {
                     ←
                 </button>
                 <h2>Escolha um Personagem</h2>
-                <button class="export-trigger-btn" onclick="toggleExportModal()" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
-                    <span class="btn-icon">📥</span>
-                    Exportar
-                </button>
+
             </div>
             
-            ${renderExportModal()}
+
 
             <div class="character-grid" id="characterGrid">
                 <!-- Populated by JS -->
@@ -43,5 +40,5 @@ export function init() {
         renderCharacterGrid('characterGrid', characters, 'openCharacterDetails');
     }
 
-    initExportModal();
+
 }

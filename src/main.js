@@ -11,7 +11,7 @@ import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
-import { toggleExportModal } from './components/ExportCharacterData.js';
+
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 
@@ -41,8 +41,7 @@ window.handleToggleCharDropdown = handleToggleCharDropdown;
 // Calculator handlers (specific handlers registered by statistics.js init)
 window.handleCalculateEarnings = handleCalculateEarnings;
 
-// Export handlers
-window.toggleExportModal = toggleExportModal;
+
 
 // ========== VARIANT CARD TAB HANDLER ==========
 /**
@@ -66,6 +65,42 @@ window.switchVariantTab = function (cardId, tab) {
     contentsContainer.querySelectorAll('.variant-tab-content').forEach(content => {
         content.classList.toggle('active', content.dataset.tab === tab);
     });
+};
+
+// ========== EXTRAS SUB-TAB HANDLER ==========
+/**
+ * Switch between sub-tabs within the Extras tab
+ * @param {string} containerId - Extras container ID
+ * @param {string} subTab - Sub-tab to activate ('gerais', 'guildas', 'fenda')
+ */
+window.switchExtrasSubTab = function (containerId, subTab) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // Update sub-tab pills
+    container.querySelectorAll('.extras-sub-pill').forEach(pill => {
+        const pillTab = pill.textContent.trim().toLowerCase();
+        const isActive = (
+            (subTab === 'gerais' && pillTab.includes('gerais')) ||
+            (subTab === 'guildas' && pillTab.includes('guildas')) ||
+            (subTab === 'fenda' && pillTab.includes('fenda'))
+        );
+        pill.classList.toggle('active', isActive);
+    });
+
+    // Update sub-tab contents
+    container.querySelectorAll('.extras-sub-content').forEach(content => {
+        content.classList.toggle('active', content.dataset.extrasTab === subTab);
+    });
+};
+
+// ========== EXTRAS COLLAPSIBLE SECTION HANDLER ==========
+/**
+ * Toggle collapsible extras sections
+ * @param {HTMLElement} header - The clicked section header
+ */
+window.toggleExtrasSection = function (header) {
+    header.classList.toggle('collapsed');
 };
 
 // ========== CALLBACKS FOR REACTIVE UPDATES ==========

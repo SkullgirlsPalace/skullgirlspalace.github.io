@@ -5,7 +5,7 @@
 
 import { EFFECT_DATA } from '../data/effectData.js';
 import { ATTRIBUTE_DATA } from '../data/attributeData.js';
-import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
+
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
 import { formatConstraint } from '../utils/formatters.js';
 
@@ -68,16 +68,9 @@ export function render() {
                 <!-- MODIFIERS TAB (Unified) -->
                 <div id="tab-modifiers" class="guide-tab-content">
 
-                    <!-- Export Button -->
-                    <div class="export-trigger-section">
-                        <button class="export-trigger-btn" onclick="toggleModifierExportModal()">
-                            <span class="btn-icon">📥</span>
-                            Exportar Modificadores
-                        </button>
-                    </div>
 
-                    <!-- Export Modal (hidden by default) -->
-                    ${renderModifierExportModal()}
+
+
 
                     
                     <!-- BUFFS SECTION -->
@@ -209,8 +202,7 @@ export function init() {
     window.switchGuideTab = switchGuideTab;
     window.toggleStatsImage = toggleStatsImage;
 
-    // Initialize modifier export modal listeners
-    initModifierExportModal();
+
 
     // Trigger lazy loading if needed
     if (window.setupLazyLoading) window.setupLazyLoading();
