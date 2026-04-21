@@ -3,7 +3,7 @@
 // Utility functions for the variant extras system
 // =====================================================
 
-import { getCharacter } from '../services/dataService.js';
+import { getExtrasGlobalData } from '../services/dataService.js';
 
 /**
  * Check if a variant has extras data
@@ -23,17 +23,9 @@ export function hasExtras(charKey, variantName) {
  * @returns {Object|null} Extras data or null
  */
 export function getExtrasData(charKey, variantName) {
-    const charData = getCharacter(charKey);
-    if (!charData || !charData.variants) return null;
-
-    // Search through all rarity tiers
-    for (const rarity of Object.values(charData.variants)) {
-        if (!Array.isArray(rarity)) continue;
-        for (const variant of rarity) {
-            if (variant.name === variantName && variant.extras) {
-                return variant.extras;
-            }
-        }
+    const allExtras = getExtrasGlobalData();
+    if (allExtras && allExtras[charKey] && allExtras[charKey][variantName]) {
+        return allExtras[charKey][variantName];
     }
     return null;
 }

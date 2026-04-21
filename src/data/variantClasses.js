@@ -54,7 +54,7 @@ export const VARIANT_CLASSES = {
     "Agente Corrosiva": ["Coringa"],
     "Xenamorfa": ["Defensivo"],
     "Fibra Forte": ["Defensivo"],
-    "Maldade Eterna": ["Coringa"],
+    "Maldade Eterna": ["Suporte de Utilidade"],
     "Sorvescola": ["Suporte de Utilidade"],
     "Confusão Interior": ["Suporte de Utilidade"],
     "Veludo Vermelho": ["Suporte de Utilidade"],

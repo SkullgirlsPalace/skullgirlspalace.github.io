@@ -1,0 +1,77 @@
+{
+  "parasoul": {
+    "Indômita": {
+      "batalhas_gerais": {
+        "time_recomendado": [
+          { "character": "parasoul", "variant": "Indômita", "class": "Ponto", "is_current": true },
+          { "character": "beowulf", "variant": "Pico Bola", "class": "Assistência" },
+          { "character": "valentine", "variant": "Soldado Serafim", "class": "Suporte" }
+        ],
+        "aliados_recomendados": [
+          { "character": "double", "variant": "Maldade Eterna", "class": "Suporte de Utilidade" },
+          { "character": "valentine", "variant": "Cirurgiã-General", "class": "Suporte de Utilidade" },
+          { "character": "peacock", "variant": "Chumbinho", "class": "Ofensivo" }
+        ],
+        "golpes_extras": [
+          { "name": "Brigada Motorizada", "reason": "Alternativa para complementar a pressão com LÁGRIMAS e zoneamento." },
+          { "name": "Gatilho de Napalm", "reason": "Bom para controle de espaço e ativação de LÁGRIMAS à distância." }
+        ]
+      },
+      "guildas": {
+        "available": true,
+        "bosses": [
+          {
+            "boss_name": "Destruidora",
+            "boss_character": "Eliza",
+            "icon": "img/portrait/el/elizaRaidBoss.webp",
+            "team": [
+              { "character": "parasoul", "variant": "Indômita", "class": "DPS Principal", "is_current": true },
+              { "character": "beowulf", "variant": "Pico Bola", "class": "Assistência" },
+              { "character": "valentine", "variant": "Soldado Serafim", "class": "Suporte" }
+            ]
+          },
+          {
+            "boss_name": "Gatinha Crítica",
+            "boss_character": "Ms.Fortune",
+            "icon": "img/portrait/mf/mfRaidBoss.webp",
+            "team": [
+              { "character": "parasoul", "variant": "Indômita", "class": "DPS", "is_current": true },
+              { "character": "double", "variant": "Maldade Eterna", "class": "Suporte" },
+              { "character": "peacock", "variant": "Chumbinho", "class": "Zoneamento" }
+            ]
+          },
+          {
+            "boss_name": "Lutador Imortal",
+            "boss_character": "Marie",
+            "icon": "img/portrait/ma/marieRaidBoss.webp",
+            "team": [
+              { "character": "parasoul", "variant": "Indômita", "class": "DPS", "is_current": true },
+              { "character": "beowulf", "variant": "Pico Bola", "class": "Assistência" },
+              { "character": "valentine", "variant": "Soldado Serafim", "class": "Suporte" }
+            ]
+          }
+        ]
+      },
+      "batalhas_fenda": {
+        "defesa": {
+          "boa_contra": [
+            { "character": "big-band", "variant": "G.I. Jazz" }
+          ],
+          "ruim_contra": [
+            { "character": "black-dahlia", "variant": "Hóstia Profana" },
+            { "character": "beowulf", "variant": "Poder Sombrio" },
+            { "character": "robo-fortune", "variant": "Replicada" }
+          ],
+          "catalisadores_dificeis": [
+            "Maldição do Conhecimento",
+            "Blockbusted"
+          ]
+        },
+        "golpes_extras": [
+          { "name": "Gatilho de Napalm", "reason": "Excelente para controle de espaço na defesa da fenda, força o atacante a se aproximar." },
+          { "name": "Brigada Motorizada", "reason": "Pressão adicional com LÁGRIMAS na defesa, bom contra atacantes que recuam." }
+        ]
+      }
+    }
+  }
+}

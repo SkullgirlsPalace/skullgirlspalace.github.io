@@ -666,9 +666,84 @@ export function showCritlessDisclaimer() {
     document.body.appendChild(overlay.querySelector('.critless-disclaimer-modal'));
 }
 
+/**
+ * Show a disclaimer for a Fenda Catalyst
+ */
+export async function showCatalystDisclaimer(catalystName) {
+    try {
+        const res = await fetch('data/krazete/stanleyDB-catalysts.json');
+        const db = await res.json();
+        
+        // Find matching catalyst by name (ignoring case)
+        let catalystData = null;
+        for (const key in db) {
+            if (db[key].name && db[key].name.toLowerCase() === catalystName.toLowerCase()) {
+                catalystData = db[key];
+                break;
+            }
+        }
+        
+        if (!catalystData) {
+            console.warn('Catalyst not found:', catalystName);
+            return;
+        }
+
+        const contentHtml = `
+            <div class="catalyst-disclaimer-modal" style="
+                position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                background: #0d0d12; border: 1px solid rgba(156, 39, 176, 0.4); border-radius: 12px;
+                padding: 24px; z-index: 10002; max-width: 500px; width: 90%; 
+                box-shadow: 0 30px 90px rgba(0,0,0,1); color: #fff;
+                max-height: 85vh; overflow-y: auto;
+            ">
+                <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="color: #fff; margin: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; font-family: 'Dodam', sans-serif;">
+                        <i class="fas fa-flask" style="color: #e1bee7;"></i> DETALHES DO CATALISADOR
+                    </h3>
+                    <button onclick="document.querySelectorAll('.catalyst-disclaimer-overlay, .catalyst-disclaimer-modal').forEach(el => el.remove());" 
+                        style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; padding: 0; font-size: 1.2rem; font-weight: bold;" 
+                        onmouseover="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(255, 255, 255, 0.3)';" 
+                        onmouseout="this.style.background='rgba(255, 255, 255, 0.05)'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                        ✕
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                    <img src="${catalystData.image}" alt="${catalystData.name}" style="width: 60px; height: 60px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
+                    <h4 style="color: #e1bee7; font-size: 1.2rem; margin: 0; font-family: 'Inter', sans-serif; font-weight: 700;">${catalystData.name.toUpperCase()}</h4>
+                </div>
+
+                <div class="catalyst-explanation" style="font-size: 0.92rem; color: #bbb; line-height: 1.6; font-family: 'Roboto Condensed', sans-serif; background: rgba(156, 39, 176, 0.05); padding: 15px; border-radius: 8px; border: 1px solid rgba(156, 39, 176, 0.15);">
+                    ${[catalystData.SA1, catalystData.SA2, catalystData.SA3]
+                        .filter(Boolean)
+                        .map(sa => sa.replace(/\b(?:\d+(?:\.\d+)?\/)+(\d+(?:\.\d+)?)\b/g, '$1'))
+                        .join('<br><br>')}
+                </div>
+            </div>
+            <div class="catalyst-disclaimer-overlay" onclick="document.querySelectorAll('.catalyst-disclaimer-overlay, .catalyst-disclaimer-modal').forEach(el => el.remove());" style="
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.8); z-index: 10001; backdrop-filter: blur(4px);
+            "></div>
+        `;
+
+        const overlay = document.createElement('div');
+        overlay.className = 'disclaimer-overlay-wrapper';
+        overlay.innerHTML = contentHtml;
+        
+        // Cleanup any existing ones
+        document.querySelectorAll('.catalyst-disclaimer-overlay, .catalyst-disclaimer-modal').forEach(el => el.remove());
+        
+        document.body.appendChild(overlay.querySelector('.catalyst-disclaimer-overlay'));
+        document.body.appendChild(overlay.querySelector('.catalyst-disclaimer-modal'));
+    } catch (e) {
+        console.error('Failed to load catalyst data:', e);
+    }
+}
+
 // Register global handlers
 window.showMarqueeDisclaimer = showMarqueeDisclaimer;
 window.showCritlessDisclaimer = showCritlessDisclaimer;
+window.showCatalystDisclaimer = showCatalystDisclaimer;
 window.openProfileModal = openProfileModal;
 window.closeProfileModal = closeProfileModal;
 window.handleProfileOverlayClick = handleProfileOverlayClick;

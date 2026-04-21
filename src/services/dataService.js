@@ -20,7 +20,8 @@ const cache = {
     disputasPremiadas: null,
     reinosParalelos: null,
     ganhosFixos: null,
-    guildas: null
+    guildas: null,
+    extras: null
 };
 
 /**
@@ -142,6 +143,23 @@ export async function loadFendaData() {
         return cache.fenda;
     } catch (err) {
         console.error('Error loading fenda data:', err);
+        return null;
+    }
+}
+
+/**
+ * Load extras data
+ * @returns {Promise<Object>} Extras data
+ */
+export async function loadExtrasData() {
+    if (cache.extras) return cache.extras;
+
+    try {
+        const res = await fetch('data/extras.json');
+        cache.extras = await res.json();
+        return cache.extras;
+    } catch (err) {
+        console.error('Error loading extras data:', err);
         return null;
     }
 }
@@ -321,6 +339,13 @@ export function getCharacters() {
  */
 export function getCharacter(charKey) {
     return cache.characters?.[charKey] || null;
+}
+
+/**
+ * Get extras from cache
+ */
+export function getExtrasGlobalData() {
+    return cache.extras || {};
 }
 
 /**

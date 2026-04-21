@@ -328,13 +328,21 @@ function getMoveImage(charKey, moveName) {
  */
 function renderTeamMemberCard(member) {
     const imgSrc = getVariantImage(member.character, member.variant, 0);
+    const classes = getVariantClasses(member.variant) || [];
+    const mainClass = classes[0];
+    const classInfo = mainClass ? CLASS_ICONS[mainClass] : null;
+
     return `
         <div class="extras-team-card ${member.is_current ? 'is-current' : ''}">
             <img loading="lazy" src="${imgSrc}" alt="${member.variant}" class="extras-team-img"
-                 onerror="this.src='img/official/Annie_Icon.webp'">
+                 onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-team-info">
                 <span class="extras-team-name">${member.variant}</span>
-                <span class="extras-team-role">${member.role}</span>
+                ${classInfo ? `
+                <span class="extras-team-class" style="color: ${classInfo.color}; font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 4px; margin-top: 2px;">
+                    <img src="${classInfo.icon}" alt="${mainClass}" style="width: 12px; height: 12px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));">
+                    ${mainClass}
+                </span>` : ''}
             </div>
             ${member.is_current ? '<span class="extras-current-badge">ATUAL</span>' : ''}
         </div>
@@ -346,14 +354,21 @@ function renderTeamMemberCard(member) {
  */
 function renderAllyCard(ally) {
     const imgSrc = getVariantImage(ally.character, ally.variant, 0);
+    const classes = getVariantClasses(ally.variant) || [];
+    const mainClass = ally.class || classes[0];
+    const classInfo = mainClass ? CLASS_ICONS[mainClass] : null;
+
     return `
         <div class="extras-ally-card">
             <img loading="lazy" src="${imgSrc}" alt="${ally.variant}" class="extras-ally-img"
-                 onerror="this.src='img/official/Annie_Icon.webp'">
+                 onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-ally-info">
                 <span class="extras-ally-name">${ally.variant}</span>
-                <span class="extras-ally-char">${ally.character.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
-                <p class="extras-ally-reason">${ally.reason}</p>
+                ${classInfo ? `
+                <span class="extras-ally-class" style="color: ${classInfo.color}; display: flex; align-items: center; gap: 4px;">
+                    <img src="${classInfo.icon}" alt="${mainClass}" style="width: 12px; height: 12px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));">
+                    ${mainClass}
+                </span>` : ''}
             </div>
         </div>
     `;
@@ -367,10 +382,10 @@ function renderMatchupCard(matchup) {
     return `
         <div class="extras-matchup-card">
             <img loading="lazy" src="${imgSrc}" alt="${matchup.variant}" class="extras-matchup-img"
-                 onerror="this.src='img/official/Annie_Icon.webp'">
+                 onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-matchup-info">
-                <span class="extras-matchup-name">${matchup.variant}</span>
-                <p class="extras-matchup-reason">${matchup.reason}</p>
+                <span class="extras-matchup-name" style="color: white;">${matchup.variant}</span>
+                ${matchup.reason ? `<p class="extras-matchup-reason">${matchup.reason}</p>` : ''}
             </div>
         </div>
     `;
@@ -460,11 +475,11 @@ function renderGuildas(data, charKey) {
         <div class="extras-boss-section">
             <div class="extras-boss-header">
                 <div class="extras-boss-icon-wrapper">
-                    <img src="img/official/SkullModifierIcon.webp" alt="${boss.boss_name}" class="extras-boss-icon">
+                    <img src="${boss.icon || 'img/official/SkullModifierIcon.webp'}" alt="${boss.boss_name}" class="extras-boss-icon">
                 </div>
                 <div class="extras-boss-names">
                     <span class="extras-boss-name">${boss.boss_name}</span>
-                    <span class="extras-boss-name-en">${boss.boss_name_en}</span>
+                    <span class="extras-boss-name-en">${boss.boss_character || boss.boss_name_en}</span>
                 </div>
             </div>
 
@@ -475,24 +490,6 @@ function renderGuildas(data, charKey) {
                     </h4>
                     <div class="extras-team-grid">
                         ${boss.team.map(m => renderTeamMemberCard(m)).join('')}
-                    </div>
-                </div>
-            ` : ''}
-
-            ${boss.tips ? `
-                <div class="extras-tips-box">
-                    <span class="extras-tips-icon">💡</span>
-                    <p>${formatText(boss.tips)}</p>
-                </div>
-            ` : ''}
-
-            ${boss.aliados_recomendados?.length > 0 ? `
-                <div class="extras-section">
-                    <h4 class="extras-section-title mini">
-                        🤝 ALIADOS
-                    </h4>
-                    <div class="extras-allies-grid">
-                        ${boss.aliados_recomendados.map(a => renderAllyCard(a)).join('')}
                     </div>
                 </div>
             ` : ''}
@@ -508,59 +505,40 @@ function renderBatalhasFenda(data, charKey) {
     const defesa = data.defesa;
 
     if (defesa) {
-        // General matchups
-        if (defesa.matchups_favoraveis?.length > 0) {
+        if (defesa.boa_contra?.length > 0) {
             html += `
                 <div class="extras-section">
                     <h4 class="extras-section-title">
                         🛡️ SE DÁ BEM CONTRA (DEFESA)
                     </h4>
                     <div class="extras-matchups-grid">
-                        ${defesa.matchups_favoraveis.map(m => renderMatchupCard(m)).join('')}
+                        ${defesa.boa_contra.map(m => renderMatchupCard(m)).join('')}
                     </div>
                 </div>
             `;
         }
 
-        // With catalyst
-        if (defesa.com_catalisador) {
-            const cat = defesa.com_catalisador;
+        if (defesa.ruim_contra?.length > 0) {
             html += `
                 <div class="extras-section">
-                    <div class="extras-section-header" onclick="toggleExtrasSection(this)">
-                        <h4 class="extras-section-title">
-                            🧪 COM CATALISADOR: ${cat.catalisador.toUpperCase()}
-                        </h4>
-                        <span class="extras-toggle-icon">▼</span>
-                    </div>
-                    <div class="extras-section-body">
-                        <div class="extras-catalyst-info">
-                            <p>${cat.descricao}</p>
-                        </div>
-                        ${cat.matchups_favoraveis?.length > 0 ? `
-                            <div class="extras-matchups-grid">
-                                ${cat.matchups_favoraveis.map(m => renderMatchupCard(m)).join('')}
-                            </div>
-                        ` : ''}
+                    <h4 class="extras-section-title">
+                        ⚠️ DIFICULDADE CONTRA
+                    </h4>
+                    <div class="extras-matchups-grid">
+                        ${defesa.ruim_contra.map(m => renderMatchupCard(m)).join('')}
                     </div>
                 </div>
             `;
         }
 
-        // Without catalyst
-        if (defesa.sem_catalisador?.matchups_favoraveis?.length > 0) {
+        if (defesa.catalisadores_dificeis?.length > 0) {
             html += `
                 <div class="extras-section">
-                    <div class="extras-section-header" onclick="toggleExtrasSection(this)">
-                        <h4 class="extras-section-title">
-                            ❌ SEM CATALISADOR
-                        </h4>
-                        <span class="extras-toggle-icon">▼</span>
-                    </div>
-                    <div class="extras-section-body">
-                        <div class="extras-matchups-grid">
-                            ${defesa.sem_catalisador.matchups_favoraveis.map(m => renderMatchupCard(m)).join('')}
-                        </div>
+                    <h4 class="extras-section-title">
+                        🧪 CATALISADORES DIFÍCEIS
+                    </h4>
+                    <div class="extras-catalyst-tags">
+                        ${defesa.catalisadores_dificeis.map(c => `<span class="catalyst-tag" style="cursor: pointer;" onclick="showCatalystDisclaimer('${c}')">${c}</span>`).join('')}
                     </div>
                 </div>
             `;

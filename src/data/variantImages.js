@@ -342,8 +342,17 @@ const VARIANT_IMAGES = {
  * Helper to get variant images
  */
 export function getVariantImage(charKey, variantName, index) {
-    if (VARIANT_IMAGES[charKey] && VARIANT_IMAGES[charKey][variantName]) {
-        return VARIANT_IMAGES[charKey][variantName];
+    if (VARIANT_IMAGES[charKey]) {
+        if (VARIANT_IMAGES[charKey][variantName]) {
+            return VARIANT_IMAGES[charKey][variantName];
+        }
+        // Fallback: case insensitive search
+        const lowerVariant = variantName.toLowerCase();
+        for (const [key, value] of Object.entries(VARIANT_IMAGES[charKey])) {
+            if (key.toLowerCase() === lowerVariant) {
+                return value;
+            }
+        }
     }
 
     // Fallback for missing images

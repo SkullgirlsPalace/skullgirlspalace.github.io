@@ -5,7 +5,7 @@
 
 // Core imports
 import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switchDetailTab } from './router.js';
-import { loadAllCharacters, loadTierData } from './services/dataService.js';
+import { loadAllCharacters, loadTierData, loadExtrasData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
@@ -158,6 +158,10 @@ async function init() {
         console.log('📊 Loading tier data...');
         await loadTierData();
         console.log('✅ Tier data loaded');
+
+        console.log('🌟 Loading extras data...');
+        await loadExtrasData();
+        console.log('✅ Extras data loaded');
 
         console.log('🧭 Initializing router...');
         initRouter();
