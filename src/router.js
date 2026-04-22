@@ -132,6 +132,11 @@ export function initRouter() {
     // Listen for hash changes
     window.addEventListener('hashchange', handleRouteChange);
 
+    // Re-render current page on language change
+    window.addEventListener('languageChanged', () => {
+        handleRouteChange();
+    });
+
     // Handle initial route
     handleRouteChange();
 }

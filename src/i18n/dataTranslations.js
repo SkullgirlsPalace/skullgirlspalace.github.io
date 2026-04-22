@@ -204,7 +204,8 @@ export async function getLocalizedAbilityName(ptName, abilityNamePTBR) {
  * Clear cached mapping (call when language changes)
  */
 export function clearTranslationCache() {
-  nameMapping = null;
+  // Keep nameMapping intact - it's the source of reverse lookups
+  // The language check in sync functions handles PT-BR return
 }
 
 /**
@@ -274,6 +275,81 @@ export async function updateVariantTranslations() {
       }
     }
   });
+}
+
+// =====================================================
+// SYNCHRONOUS HELPERS
+// These read from the cached nameMapping, so they only
+// work after preloadKrazeteData() has resolved.
+// Use them in synchronous render paths (e.g. VariantCard.js).
+// =====================================================
+
+/**
+ * Check whether the name mapping has been loaded
+ * @returns {boolean} true if nameMapping is populated
+ */
+export function isDataLoaded() {
+  return nameMapping !== null;
+}
+
+/**
+ * Synchronous localized variant name (English if lang !== pt-BR)
+ * @param {string} ptName - Variant name in PT-BR
+ * @returns {string} Localized name or fallback to ptName
+ */
+export function getLocalizedNameSync(ptName) {
+  const lang = getCurrentLanguage();
+  if (lang === 'pt-BR') return ptName;
+  if (!nameMapping) return ptName; // Fallback if not loaded yet
+  const cleanPtName = cleanName(ptName);
+  return nameMapping[cleanPtName]?.name || ptName;
+}
+
+/**
+ * Synchronous localized ability name
+ * @param {string} ptName - Variant name in PT-BR
+ * @param {string} abilityNamePTBR - Ability name in PT-BR
+ * @returns {string} Localized ability name or fallback
+ */
+export function getLocalizedAbilityNameSync(ptName, abilityNamePTBR) {
+  const lang = getCurrentLanguage();
+  if (lang === 'pt-BR') return abilityNamePTBR;
+  if (!nameMapping) return abilityNamePTBR;
+  const cleanPtName = cleanName(ptName);
+  return nameMapping[cleanPtName]?.ability || abilityNamePTBR;
+}
+
+/**
+ * Synchronous localized SA description
+ * @param {string} ptName - Variant name in PT-BR
+ * @param {string} saDescPTBR - SA description in PT-BR (fallback)
+ * @returns {string} Localized SA description or fallback
+ */
+export function getLocalizedSADescSync(ptName, saDescPTBR) {
+  const lang = getCurrentLanguage();
+  if (lang === 'pt-BR') return saDescPTBR;
+  if (!nameMapping) return saDescPTBR;
+  const cleanPtName = cleanName(ptName);
+  const data = nameMapping[cleanPtName];
+  if (!data || !data.SA1) return saDescPTBR;
+  let desc = `[SA1]: ${data.SA1}`;
+  if (data.SA2) desc += `\n\n[SA2]: ${data.SA2}`;
+  return desc;
+}
+
+/**
+ * Reverse lookup: English name back to PT-BR name
+ * Needed because images are keyed by PT-BR name
+ * @param {string} enName - Variant name in English
+ * @returns {string} PT-BR name or fallback to enName
+ */
+export function getOriginalName(enName) {
+  if (!nameMapping) return enName;
+  const cleanEnName = cleanName(enName);
+  for (const [ptName, data] of Object.entries(nameMapping)) {
+    if (cleanName(data.name) === cleanEnName) return ptName;
+  }
+  return enName;
 }
 
 // Export cache for direct access if needed

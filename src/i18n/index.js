@@ -24,5 +24,27 @@ export {
   getLocalizedAbilityName,
   getTranslationMapping,
   updateVariantTranslations,
-  clearTranslationCache
+  clearTranslationCache,
+  isDataLoaded,
+  getLocalizedNameSync,
+  getLocalizedAbilityNameSync,
+  getLocalizedSADescSync,
+  getOriginalName
 } from './dataTranslations.js';
+
+export {
+  getElementMap,
+  getRarityLabels,
+  getLocalizedRarityLabel,
+  elementToEN,
+  elementToPT,
+  getLocalizedElementName
+} from '../config/constants.js';
+
+export {
+  getLocalizedClassName,
+  getLocalizedClassDescription,
+  getLocalizedClassNames,
+  classNameToPT,
+  getLocalizedVariantClasses
+} from '../data/variantClasses.js';

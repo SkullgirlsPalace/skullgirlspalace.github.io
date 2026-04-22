@@ -55,7 +55,7 @@ export function render(charKey, initialTab = 'builds') {
                         <h2 style="margin: 0; font-size: 2.5rem;">${charData.character.toUpperCase()}</h2>
                     </div>
                     
-                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="Sobre ${charData.character}">
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${charData.character}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
                         <span>${t('variant.information')}</span>
                     </button>
@@ -103,7 +103,7 @@ function renderBuildsTab(charKey, charData) {
     // Generate variant cards HTML
     let variantsHTML = '';
     if (variants.length === 0) {
-        variantsHTML = '<p style="color: var(--text-muted); padding: 20px; text-align: center;">Nenhuma variante encontrada com estes filtros.</p>';
+          variantsHTML = `<p style="color: var(--text-muted); padding: 20px; text-align: center;">${t('detail.noVariantsFilters')}</p>`;
     } else {
         variantsHTML = `<div class="variants-grid" id="variants-container"></div>`;
     }

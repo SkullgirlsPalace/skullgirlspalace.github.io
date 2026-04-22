@@ -50,7 +50,7 @@ export const translations = {
     // Characters page
     characters: {
       title: 'Personagens',
-        selectCharacter: 'Escolha um Personagem',
+      selectCharacter: 'Escolha um Personagem',
       searchPlaceholder: 'Buscar personagem...',
       allCharacters: 'Todos os Personagens'
     },
@@ -114,6 +114,74 @@ export const translations = {
       sortBy: 'Ordenar por',
       rarity: 'Raridade',
       element: 'Elemento'
+    },
+    // Tier List
+    tier: {
+      tierlistTitle: 'Tier List',
+      chooseChar: 'Escolha um personagem para ver sua tier list.'
+    },
+    // Catalysts
+    catalysts: {
+      title: 'Catalisadores',
+      intro: 'Catalisadores são itens especiais que modificam as condições de batalha na Fenda. Eles podem fortalecer ou enfraquecer certos elementos e atributos, criando vantagens estratégicas.',
+      weekModifiers: 'Modificadores da Semana',
+      selectElement: 'Selecione um elemento para ver os modificadores da semana.',
+      loading: 'Carregando catalisadores...',
+      errorLoad: 'Erro ao carregar catalisadores.',
+      noElementFound: 'Nenhum catalisador específico deste elemento encontrado.',
+      addNotes: 'Adicionar notas...'
+    },
+    // Tutorial - Manifesto da Renda Passiva
+    tutorial: {
+      title: 'O Manifesto da Renda Passiva',
+      subtitle: 'Um Decreto sobre a Eficiência na Fenda de Skullgirls Mobile',
+      edition: 'EDIÇÃO ATUALIZADA',
+      preamble: 'I. Preâmbulo: A Tirania do "Grind"',
+      preamble1: 'Nós, os jogadores conscientes do nosso tempo, reunidos em busca de justa recompensa pelo esforço calculado, vimos por este meio declarar nossa filosofia. A Fenda (Rift), em sua estrutura atual, apresenta uma disparidade injusta: a recompensa por alcançar o pináculo do Diamante 1-3 é marginalmente superior àquela do Diamante 4, contudo, o esforço exigido é exponencialmente maior.',
+      preamble2: 'Rejeitamos a corrida dos ratos. Rejeitamos o "grind" que consome horas de vida em troca de retornos decrescentes. Este manifesto é a nossa declaração de independência, baseado na filosofia do 80/20: obter 80% dos resultados com apenas 20% do esforço.',
+      preamble3: 'Este é o caminho da Renda Passiva.',
+      pillars: 'II. Os Pilares da Eficiência',
+      pillarsIntro: 'Para alcançar e manter o Diamante 4 com o mínimo de desgaste, decretamos os seguintes pilares como lei:',
+      pillar1Title: '1. O Pilar do "Timing" Divino:',
+      pillar1Desc: 'Os cinco (5) ataques obrigatórios serão realizados no domingo à tarde. Idealmente, após a missa, quando munidos do <strong>BUFF</strong> divino, e quando a elite da Fenda já ascendeu, deixando para trás bases mais fracas e menor risco de retaliação.',
+      pillar2Title: '2. O Pilar da Discrição (O Ponto 1480):',
+      pillar2Desc: 'Nosso objetivo não é a glória, mas a constância. Manter-se-á uma pontuação próxima a 1480. Ultrapassar os 1500 pontos é convidar o perigo e tornar-se um alvo desnecessário. Com cinco vitórias fáceis, esta faixa é atingida sem alarde.',
+      pillar3Title: '3. O Pilar da Caça Seletiva:',
+      pillar3Desc: 'Atacaremos somente bases mais fracas ou evidentemente fáceis. A honra não enche o cofre de Teopontos; a vitória fácil, sim.',
+      pillar4Title: '4. O Pilar da Compensação:',
+      pillar4Desc: 'Ocasionalmente, seremos atacados. Cada derrota na defesa durante a semana será considerada como um ataque adicional a ser feito no domingo, garantindo a manutenção da nossa faixa de pontos.',
+      decree: 'III. O Decreto da Base Econômica',
+      decreeIntro: 'Uma base de Renda Passiva não é construída com diamantes inúteis, mas com investimentos inteligentes que servem tanto à defesa quanto ao ataque. A ordem de prioridade é absoluta:',
+      priority1Title: 'Prioridade I: Os Diamantes "Curinga"',
+      priority1Desc: 'Unidades de valor duplo, que fortalecem o ataque e a defesa simultaneamente. Elas são o alicerce de toda a conta e, portanto, da Fenda. Focai vossos recursos aqui antes de tudo:',
+      priority1Items: 'Desejo de Morte|Hóstia Profana|Fantoche Sombrio|Ameaça Mascarada (O ganha-ganha, buildada para defesa mesmo no ataque)|Neuromancer e Papa Moscas (Com Sangue Maculado, sua superior dispensa build defensiva)',
+      priority2Title: 'Prioridade II: Os Ouros "Absurdos"',
+      priority2Desc: 'O pão e a manteiga da nossa defesa. Economicamente viáveis, rápidos de evoluir (especialmente suas habilidades superiores) e, após o <strong>BUFF</strong> da v7.7, mais potentes do que nunca. Com golpes e astro no nível 9, eles entregam o máximo custo-benefício. Esta será a maioria da nossa base:',
+      priority2Items: 'Cachinhos Malvados|Tela Azul (Funciona em ambos os nós solo)|GI Jazz (O único Big Band defensivo que honraremos)|Forças Armadas|Maldade Eterna|Fibra Forte (!!!!!)|Painwheels adicionais com Sangue Maculado|(Opcional: Última Esperança, embora menos potente)',
+      priority3Title: 'Prioridade III: A Elite Defensiva (O Toque Final)',
+      priority3Desc: 'Com a base de Curingas e Ouros estabelecida, necessitamos apenas de um ou dois especialistas. Estes são os guardiões que evitam o ataque, contribuindo passivamente para nossa renda. Não há segredo:',
+      priority3Items: 'Replicada|Megalomaníaca',
+      alchemy: 'IV. A Alquimia dos Catalisadores',
+      alchemy1: 'A transição do Ouro para o Diamante 4 exige uma mudança na gestão de tesouros. No Diamante, a Chave de Diamante é garantida e o baú rende 20% de progresso, contra miseráveis 8% do Ouro 1. Portanto, vossa missão é parar de comprar chaves com moedas de fenda e iniciar o investimento em Catalisadores.',
+      alchemy2: 'Não temais a escassez! As Disputas Premiadas de Diamante e o Concílio das Guildas proverão vossas chaves. Uma vez que vossos guerreiros estejam prontos, focai na Alquimia até que toda a base esteja encantada com catalisadores nível 9 ou superior.',
+      forgeTitle: 'Ordenanças de Forja:',
+      forgeGeneric: 'Genéricos (Nível 9):',
+      forgeGenericItems: ' Autoimune, BLOCKBUSTED, Hora de Enfeitiçar, Luta Final, Maldição do Conhecimento, O Vacilão Nervoso e Previsão Definhante.',
+      forgeGenericNote: 'Espalhai-os conforme a necessidade.',
+      forgeWind: 'Específicos de Vento (Nível 11):',
+      forgeWindItems: '"No Ar Rarefeito" é obrigatório. "Resistência Fútil" (Big Band) deve sustentar vosso duo de vento para repelir invasores.',
+      guild: 'V. O Concílio das Guildas',
+      guild1: 'As Guildas são fontes valiosas de recursos, abarcando mais jogadores em suas glórias do que a própria Fenda. Contudo, elas exigem que vossa base de Fenda esteja sólida. O investimento na base é único; os Bosses da Guilda demandam especificidades que só devem ser buscadas após a estabilidade da Renda Passiva.',
+      guild2: 'Sede membros úteis, cumpri vossas missões e usai vosso arsenal atual. Não sacrifiqueis vossa base de Fenda para perseguir metas efêmeras de Bosses antes do tempo.',
+      citadel: 'VI. O Mapa da Cidadela (Exemplo de Base)',
+      citadelDesc: 'Para ilustrar estas leis, apresentamos a visualização sagrada de uma base construída sob a égide da eficiência e da renda passiva:',
+      citadelImgAlt: '[Mapa da Base Recomendada]',
+      citadelCaption: 'Referência visual: A disposição tática dos guardiões e catalisadores.',
+      imgNotFound: 'Imagem da Base Não Encontrada',
+      conclusion: 'VII. Conclusão',
+      conclusion1: 'Que este manifesto seja o guia para aqueles que buscam a recompensa sem a exaustão. Que a Renda Passiva flua. Jogue com inteligência, não com "grind".',
+      conclusionSignature: '- Proclamado pelos Sábios da Eficiência -',
+      versionDate: 'Versão Atualizada - Dezembro de 2025'
     }
   },
   'en': {
@@ -151,7 +219,7 @@ export const translations = {
       creditsDevs: 'Developed by <strong>Lifi ツ</strong> and <strong>João Pedro</strong>.',
       inspiration: 'Main Inspiration and Collaborator:',
       sources: 'Official sources used:',
-      assetsNote: 'Original assets belong to Autumn Games and Hidden Variable Studios.',
+      assetsNote: 'Original assets belong to Autumn Game and Hidden Variable Studios.',
       disclaimerBtn: 'Legal Notice',
       disclaimerTitle: 'Legal Notice:',
       disclaimerText1: 'Fan Project - Not affiliated with Autumn Games or Hidden Variable Studios.',
@@ -162,7 +230,7 @@ export const translations = {
     // Characters page
     characters: {
       title: 'Characters',
-    selectCharacter: 'Select a Character',
+      selectCharacter: 'Select a Character',
       searchPlaceholder: 'Search character...',
       allCharacters: 'All Characters'
     },
@@ -195,7 +263,7 @@ export const translations = {
       officialLinksTitle: 'Official Links',
       officialSite: 'SGM Official Site',
       hub: 'Skullgirls Mobile Hub',
-      assetsNote: 'Original assets belong to Autumn Games and Hidden Variable Studios.',
+      assetsNote: 'Original assets belong to Autumn Game and Hidden Variable Studios.',
       feedbackTitle: 'Feedback',
       reportBug: 'Found an error or bug? Report it on',
       serverName: 'Palácio Branco Server',
@@ -226,6 +294,74 @@ export const translations = {
       sortBy: 'Sort by',
       rarity: 'Rarity',
       element: 'Element'
+    },
+    // Tier List
+    tier: {
+      tierlistTitle: 'Tier List',
+      chooseChar: 'Choose a character to view their tier list.'
+    },
+    // Catalysts
+    catalysts: {
+      title: 'Catalysts',
+      intro: 'Catalysts are special items that modify battle conditions in the Rift. They can strengthen or weaken certain elements and attributes, creating strategic advantages.',
+      weekModifiers: 'Modifiers of the Week',
+      selectElement: 'Select an element to see the weekly modifiers.',
+      loading: 'Loading catalysts...',
+      errorLoad: 'Error loading catalysts.',
+      noElementFound: 'No catalysts found for this specific element.',
+      addNotes: 'Add notes...'
+    },
+    // Tutorial - Manifesto of Passive Income
+    tutorial: {
+      title: 'The Manifesto of Passive Income',
+      subtitle: 'A Decree on Efficiency in the Skullgirls Mobile Rift',
+      edition: 'UPDATED EDITION',
+      preamble: 'I. Preamble: The Tyranny of the "Grind"',
+      preamble1: 'We, the players conscious of our time, gathered in pursuit of fair reward for calculated effort, hereby declare our philosophy. The Rift, in its current structure, presents an unjust disparity: the reward for reaching the pinnacle of Diamond 1-3 is marginally superior to that of Diamond 4, yet the effort required is exponentially greater.',
+      preamble2: 'We reject the rat race. We reject the "grind" that consumes hours of life in exchange for diminishing returns. This manifesto is our declaration of independence, based on the 80/20 philosophy: obtain 80% of the results with only 20% of the effort.',
+      preamble3: 'This is the path of Passive Income.',
+      pillars: 'II. The Pillars of Efficiency',
+      pillarsIntro: 'To achieve and maintain Diamond 4 with minimal wear, we decree the following pillars as law:',
+      pillar1Title: '1. The Pillar of Divine "Timing":',
+      pillar1Desc: 'The five (5) mandatory attacks shall be performed on Sunday afternoon. Ideally, after mass, when armed with the divine <strong>BUFF</strong>, and when the Rift elite has already ascended, leaving behind weaker bases and less risk of retaliation.',
+      pillar2Title: '2. The Pillar of Discretion (The 1480 Point):',
+      pillar2Desc: 'Our goal is not glory, but consistency. A score close to 1480 shall be maintained. Exceeding 1500 points is inviting danger and becoming an unnecessary target. With five easy victories, this range is reached without fanfare.',
+      pillar3Title: '3. The Pillar of Selective Hunting:',
+      pillar3Desc: 'We shall only attack weaker or evidently easy bases. Honor does not fill the Theonite coffers; easy victory does.',
+      pillar4Title: '4. The Pillar of Compensation:',
+      pillar4Desc: 'Occasionally, we will be attacked. Each defense defeat during the week shall be considered as an additional attack to be made on Sunday, ensuring the maintenance of our score range.',
+      decree: 'III. The Decree of the Economic Base',
+      decreeIntro: 'A Passive Income base is not built with useless diamonds, but with smart investments that serve both defense and attack. The order of priority is absolute:',
+      priority1Title: 'Priority I: The "Wildcard" Diamonds',
+      priority1Desc: 'Dual-value units that strengthen both attack and defense simultaneously. They are the foundation of the entire account and, therefore, of the Rift. Focus your resources here before anything else:',
+      priority1Items: 'Death Wish|Profane Host|Shadow Puppet|Masked Threat (The win-win, built for defense even on offense)|Neuromancer and Fly Catcher (With Tainted Blood, their superior makes defensive builds unnecessary)',
+      priority2Title: 'Priority II: The "Absurd" Golds',
+      priority2Desc: 'The bread and butter of our defense. Economically viable, quick to evolve (especially their marquee abilities) and, after the <strong>BUFF</strong> of v7.7, more powerful than ever. With moves and skill tree at level 9, they deliver maximum cost-benefit. These will be the majority of our base:',
+      priority2Items: 'Wicked Haircut|Blue Screen (Works on both solo nodes)|GI Jazz (The only defensive Big Band we shall honor)|Armed Forces|Eternal Mischief|Strong Fiber (!!!!!)|Additional Painwheels with Tainted Blood|(Optional: Last Hope, though less potent)',
+      priority3Title: 'Priority III: The Defensive Elite (The Finishing Touch)',
+      priority3Desc: 'With the foundation of Wildcards and Golds established, we need only one or two specialists. These are the guardians who deter attacks, passively contributing to our income. There is no secret:',
+      priority3Items: 'Replica|Megalomaniac',
+      alchemy: 'IV. The Alchemy of Catalysts',
+      alchemy1: 'The transition from Gold to Diamond 4 requires a change in treasure management. In Diamond, the Diamond Key is guaranteed and the chest yields 20% progress, compared to the miserable 8% of Gold 1. Therefore, your mission is to stop buying keys with rift coins and start investing in Catalysts.',
+      alchemy2: 'Fear not scarcity! Diamond Prize Fights and the Guild Council shall provide your keys. Once your warriors are ready, focus on Alchemy until the entire base is enchanted with level 9 or higher catalysts.',
+      forgeTitle: 'Forge Ordinances:',
+      forgeGeneric: 'Generic (Level 9):',
+      forgeGenericItems: ' Autoimmune, BLOCKBUSTED, Hexing Hour, Last Stand, Curse of Knowledge, Nervous Wrecker and Withering Prediction.',
+      forgeGenericNote: 'Spread them as needed.',
+      forgeWind: 'Wind-Specific (Level 11):',
+      forgeWindItems: '"Thin Air" is mandatory. "Futile Resistance" (Big Band) must sustain your wind duo to repel invaders.',
+      guild: 'V. The Guild Council',
+      guild1: 'Guilds are valuable sources of resources, encompassing more players in their glories than the Rift itself. However, they require your Rift base to be solid. The investment in the base is singular; Guild Bosses demand specificities that should only be pursued after Passive Income stability.',
+      guild2: 'Be useful members, fulfill your missions and use your current arsenal. Do not sacrifice your Rift base to chase ephemeral Boss goals before the time is right.',
+      citadel: 'VI. The Citadel Map (Base Example)',
+      citadelDesc: 'To illustrate these laws, we present the sacred visualization of a base built under the aegis of efficiency and passive income:',
+      citadelImgAlt: '[Recommended Base Map]',
+      citadelCaption: 'Visual reference: The tactical arrangement of guardians and catalysts.',
+      imgNotFound: 'Base Image Not Found',
+      conclusion: 'VII. Conclusion',
+      conclusion1: 'May this manifesto be the guide for those who seek reward without exhaustion. Let Passive Income flow. Play with intelligence, not with "grind".',
+      conclusionSignature: '- Proclaimed by the Sages of Efficiency -',
+      versionDate: 'Updated Version - December 2025'
     }
   }
 };
@@ -250,22 +386,8 @@ export function setLanguage(lang) {
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     document.documentElement.lang = lang;
-    // Dispatch event for components to re-render
+    // Dispatch event — router and static UI listeners handle re-render
     window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
-
-    // Update variant data translations if switching to English
-    if (lang === 'en') {
-      import('./dataTranslations.js').then(module => {
-        module.updateVariantTranslations();
-      }).catch(err => console.warn('Could not update variant translations:', err));
-    } else {
-      // Clear cache and reload page for PT-BR to show original data
-      import('./dataTranslations.js').then(module => {
-        module.clearTranslationCache();
-        // Force re-render by dispatching event
-        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
-      }).catch(() => {});
-    }
   }
 }
 

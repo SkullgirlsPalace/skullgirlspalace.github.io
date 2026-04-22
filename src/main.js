@@ -15,6 +15,7 @@ import { toggleExportModal } from './components/ExportCharacterData.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 import { setLanguage, getCurrentLanguage } from './i18n/index.js';
+import { preloadKrazeteData } from './i18n/dataTranslations.js';
 
 // ========== GLOBAL HANDLER REGISTRATION ==========
 // These need to be globally accessible for onclick handlers in HTML
@@ -129,6 +130,13 @@ async function init() {
         await loadTierData();
         console.log('✅ Tier data loaded');
 
+        console.log('🌐 Preloading Krazete translations...');
+        preloadKrazeteData().then(() => {
+            console.log('✅ Krazete data preloaded');
+        }).catch(err => {
+            console.warn('⚠️ Krazete preload failed (will lazy-load):', err);
+        });
+
         console.log('🧭 Initializing router...');
         initRouter();
 
@@ -179,6 +187,27 @@ function setupStaticUI() {
 
     // Initialize attribute tooltip system (delegated events)
     initAttributeTooltips();
+
+    // Re-render static UI on language change
+    window.addEventListener('languageChanged', () => {
+        const navContainer = document.getElementById('nav-container');
+        if (navContainer) navContainer.innerHTML = createNavbar();
+
+        const drawerContainer = document.getElementById('drawer-container');
+        if (drawerContainer) drawerContainer.innerHTML = createAboutDrawer();
+
+        const footerContainer = document.getElementById('footer-container');
+        if (footerContainer) footerContainer.innerHTML = createFooter();
+
+        const scrollNavContainer = document.getElementById('scroll-nav-container');
+        if (scrollNavContainer) {
+            scrollNavContainer.classList.add('scroll-nav');
+            scrollNavContainer.innerHTML = createScrollNav();
+        }
+
+        setupScrollListener();
+        initAttributeTooltips();
+    });
 }
 
 /**
