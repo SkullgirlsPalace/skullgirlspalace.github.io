@@ -13,20 +13,22 @@ import { ELEMENT_MAP, RARITY_ICONS } from '../config/constants.js';
 
 // Debounce timer for search
 let searchDebounceTimer = null;
+// Store last valid search results
+let lastValidResults = [];
+let lastValidQuery = '';
 
 /**
- * Create filter bar HTML
+ * Create search bar HTML (separate from filter bar for flexible positioning)
  * @returns {string} HTML string
  */
-export function createFilterBar() {
+export function createSearchBar() {
     return `
-        <!-- Search Bar (above filter controls) -->
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
                 <img loading="lazy" src="img/official/icon_filter.webp" alt="" class="search-icon"
                      onerror="this.src='img/official/filter.webp'">
                 <input type="text" id="variant-search-input" class="variant-search-input"
-                       placeholder="Pesquisar variante ou personagem..."
+                       placeholder="Pesquisar variante..."
                        oninput="handleSearchInput(this.value)"
                        onfocus="handleSearchFocus()"
                        autocomplete="off" spellcheck="false">
@@ -34,9 +36,17 @@ export function createFilterBar() {
             </div>
             <div class="search-results-dropdown" id="search-results-dropdown"></div>
         </div>
+    `;
+}
 
+/**
+ * Create filter bar HTML
+ * @returns {string} HTML string
+ */
+export function createFilterBar() {
+    return `
         <div class="filter-bar">
-            <!-- Dynamic Filter/Clear Button -->
+            <!-- Unified Filter/Clear Button -->
             <div class="filter-controls">
                 <button id="main-filter-btn" class="filter-toggle-btn" onclick="handleMainFilterAction()">
                     <div class="btn-icon-wrapper">
@@ -45,9 +55,6 @@ export function createFilterBar() {
                     </div>
                     <span class="text-default">Filtrar</span>
                     <span class="text-active">Limpar</span>
-                </button>
-                <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="Limpar Filtros">
-                    <img loading="lazy" src="img/official/constraints_no.webp" alt="Limpar">
                 </button>
             </div>
             
@@ -108,35 +115,12 @@ export function createFilterBar() {
 
                 <div class="vertical-separator"></div>
 
-                <!-- Class/Role Grid (2x2) -->
-                <div class="filter-grid class-grid">
-                    <button class="filter-btn class-btn" data-variant-class="Ofensivo"
-                        onclick="handleFilterClick('variantClass', 'Ofensivo')" title="Ofensivo">
-                        <img loading="lazy" src="img/modifiers/buffs/Enrage.webp" alt="Ofensivo">
-                    </button>
-                    <button class="filter-btn class-btn" data-variant-class="Defensivo"
-                        onclick="handleFilterClick('variantClass', 'Defensivo')" title="Defensivo">
-                        <img loading="lazy" src="img/modifiers/buffs/Armor.webp" alt="Defensivo">
-                    </button>
-                    <button class="filter-btn class-btn" data-variant-class="Suporte de Utilidade"
-                        onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')" title="Suporte de Utilidade">
-                        <img loading="lazy" src="img/modifiers/buffs/FinalStand.webp" alt="Suporte">
-                    </button>
-                    <button class="filter-btn class-btn" data-variant-class="Coringa"
-                        onclick="handleFilterClick('variantClass', 'Coringa')" title="Coringa">
-                        <img loading="lazy" src="img/modifiers/buffs/Deadeye.webp" alt="Coringa">
-                    </button>
-                </div>
-
-                <div class="vertical-separator"></div>
-
-                <!-- Sort Section -->
+                <!-- Sort + Class Section -->
                 <div class="filter-section right">
                     <div class="sort-header">
                         <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
-                        ORGANIZAR
+                        ORGANIZAR / CLASSE
                     </div>
-                    <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
                     <div class="sort-group">
                         <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
                         <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
@@ -144,6 +128,11 @@ export function createFilterBar() {
                         <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
                         <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">ELEMENTO</button>
                         <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">CATEGORIA</button>
+                        <div style="width:1px; height:20px; background:rgba(255,255,255,0.2); margin: 0 4px;"></div>
+                        <button class="sort-btn class-filter-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">OFENSIVO</button>
+                        <button class="sort-btn class-filter-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">DEFENSIVO</button>
+                        <button class="sort-btn class-filter-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')">SUPORTE</button>
+                        <button class="sort-btn class-filter-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')">CORINGA</button>
                     </div>
                 </div>
 
@@ -193,8 +182,8 @@ export function updateFilterUI() {
         }
     });
 
-    // Update Class Buttons
-    document.querySelectorAll('.class-btn').forEach(btn => {
+    // Update Class Buttons (new text-based buttons)
+    document.querySelectorAll('.class-filter-btn').forEach(btn => {
         const cls = btn.dataset.variantClass;
         if (filters.variantClass && filters.variantClass.length > 0 && filters.variantClass.includes(cls)) {
             btn.classList.add('active');
@@ -216,7 +205,7 @@ export function updateFilterUI() {
     const defaultSortType = tab === 'tier' ? 'class' : 'score';
     const defaultSortDir = 'desc';
 
-    document.querySelectorAll('.sort-btn').forEach(btn => {
+    document.querySelectorAll('.sort-btn:not(.class-filter-btn)').forEach(btn => {
         btn.classList.remove('active');
         btn.innerText = sortLabels[btn.dataset.sort] || btn.dataset.sort;
 
@@ -229,7 +218,7 @@ export function updateFilterUI() {
         }
     });
 
-    // Dynamic Filter/Clear button logic
+    // Unified Filter/Clear button logic
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
         (filters.variantClass && filters.variantClass.length > 0) ||
@@ -237,21 +226,11 @@ export function updateFilterUI() {
         sort.direction !== defaultSortDir;
 
     const mainBtn = document.getElementById('main-filter-btn');
-    const desktopClearBtn = document.getElementById('desktop-clear-btn');
-
     if (mainBtn) {
         if (hasActiveFilters) {
             mainBtn.classList.add('can-clear');
         } else {
             mainBtn.classList.remove('can-clear');
-        }
-    }
-
-    if (desktopClearBtn) {
-        if (hasActiveFilters) {
-            desktopClearBtn.classList.add('visible');
-        } else {
-            desktopClearBtn.classList.remove('visible');
         }
     }
 }
@@ -271,7 +250,7 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     // Update the button label with the current character
     if (currentCharKey === 'todos') {
         if (currentLabel) {
-            currentLabel.innerHTML = `📋 Todos os Personagens`;
+            currentLabel.innerHTML = `📋 Todos os Perso.`;
         }
     } else {
         const char = characters[currentCharKey];
@@ -294,7 +273,7 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
                 onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
             <span class="todos-icon">📋</span>
-            <span>Todos os Personagens</span>
+            <span>Todos os Perso.</span>
         </button>
         <div class="char-dropdown-divider"></div>
     `;
@@ -326,6 +305,21 @@ function normalizeText(text) {
 }
 
 /**
+ * Highlight matching text with green color
+ */
+function highlightMatch(text, query) {
+    if (!query || query.length < 2) return text;
+    const normalizedText = normalizeText(text);
+    const normalizedQuery = normalizeText(query);
+    const idx = normalizedText.indexOf(normalizedQuery);
+    if (idx === -1) return text;
+    const before = text.substring(0, idx);
+    const match = text.substring(idx, idx + query.length);
+    const after = text.substring(idx + query.length);
+    return `${before}<span class="search-match-highlight">${match}</span>${after}`;
+}
+
+/**
  * Handle search input with debounce
  */
 export function handleSearchInput(query) {
@@ -348,6 +342,8 @@ function performSearch(query) {
             resultsContainer.classList.remove('active');
         }
         if (clearBtn) clearBtn.style.display = 'none';
+        lastValidResults = [];
+        lastValidQuery = '';
         return;
     }
 
@@ -376,13 +372,23 @@ function performSearch(query) {
         }
     }
 
-    renderSearchResults(results.slice(0, 15), resultsContainer);
+    // If results found, update last valid; if not, show last valid results
+    if (results.length > 0) {
+        lastValidResults = results.slice(0, 15);
+        lastValidQuery = query.trim();
+        renderSearchResults(lastValidResults, resultsContainer, query.trim());
+    } else if (lastValidResults.length > 0) {
+        // Keep showing last valid results when current query has no matches
+        renderSearchResults(lastValidResults, resultsContainer, lastValidQuery);
+    } else {
+        renderSearchResults([], resultsContainer, query.trim());
+    }
 }
 
 /**
  * Render search results in the dropdown
  */
-function renderSearchResults(results, container) {
+function renderSearchResults(results, container, query = '') {
     if (!container) return;
 
     if (results.length === 0) {
@@ -399,13 +405,14 @@ function renderSearchResults(results, container) {
         const elementInfo = ELEMENT_MAP[variant.element] || {};
         const rarityIcon = RARITY_ICONS[variant.rarityKey] || '';
         const portraitUrl = getVariantImage(variant._charKey, variant.name, 0);
+        const highlightedName = highlightMatch(variant.name, query);
 
         return `
-            <button class="search-result-item" onclick="handleSearchResultClick('${variant._charKey}')">
+            <button class="search-result-item" onclick="handleSearchResultClick('${variant._charKey}', '${variant.name.replace(/'/g, "\\'")}')">
                 <img loading="lazy" src="${portraitUrl}" alt="${variant.name}" class="search-result-portrait"
                      onerror="this.src='img/official/Annie_Icon.webp'">
                 <div class="search-result-info">
-                    <span class="search-result-name">${variant.name}</span>
+                    <span class="search-result-name">${highlightedName}</span>
                     <span class="search-result-char">${variant._charName}</span>
                 </div>
                 <div class="search-result-badges">
@@ -420,9 +427,9 @@ function renderSearchResults(results, container) {
 }
 
 /**
- * Handle clicking a search result
+ * Handle clicking a search result - navigate and scroll to variant
  */
-export function handleSearchResultClick(charKey) {
+export function handleSearchResultClick(charKey, variantName) {
     const input = document.getElementById('variant-search-input');
     const dropdown = document.getElementById('search-results-dropdown');
 
@@ -435,9 +442,25 @@ export function handleSearchResultClick(charKey) {
     const clearBtn = document.getElementById('search-clear-btn');
     if (clearBtn) clearBtn.style.display = 'none';
 
+    lastValidResults = [];
+    lastValidQuery = '';
+
     // Navigate to the character
     if (window.openCharacterDetails) {
         window.openCharacterDetails(charKey, 'builds');
+        
+        // After navigation, scroll to the specific variant card
+        if (variantName) {
+            setTimeout(() => {
+                const variantCard = document.querySelector(`.variant-card[data-variant-name="${variantName}"]`);
+                if (variantCard) {
+                    variantCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Flash highlight
+                    variantCard.classList.add('search-highlight-flash');
+                    setTimeout(() => variantCard.classList.remove('search-highlight-flash'), 2000);
+                }
+            }, 500);
+        }
     }
 }
 
@@ -458,6 +481,8 @@ export function handleSearchClear() {
         dropdown.classList.remove('active');
     }
     if (clearBtn) clearBtn.style.display = 'none';
+    lastValidResults = [];
+    lastValidQuery = '';
 }
 
 /**
@@ -499,15 +524,18 @@ export function handleClearFilters() {
 
 export function handleMainFilterAction() {
     const state = getState();
-    const { filters, sort } = state;
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    const { filters, sort } = state.tabState[tab];
     
+    const defaultSortType = tab === 'tier' ? 'class' : 'score';
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
         (filters.variantClass && filters.variantClass.length > 0) ||
-        sort.type !== 'score' ||
+        sort.type !== defaultSortType ||
         sort.direction !== 'desc';
 
-    if (hasActiveFilters && window.innerWidth <= 768) {
+    if (hasActiveFilters) {
+        // Clear filters on any screen size when filters are active
         handleClearFilters();
     } else {
         handleToggleFilter();

@@ -94,14 +94,16 @@ export function createVariantCard(variant, charKey, index = 0) {
         </div>
     ` : '';
 
-    // Character badge for "Todos" mode
-    const charBadgeHTML = variant._charName ? `
-        <div class="variant-char-badge">
-            <img loading="lazy" src="${CHARACTER_ICONS[variant._charKey] || 'img/official/Annie_Icon.webp'}" alt="${variant._charName}"
-                 onerror="this.src='img/official/Annie_Icon.webp'">
-            <span>${variant._charName}</span>
-        </div>
-    ` : '';
+    // Use variant-specific charKey for "todos" mode
+    const effectiveCharKey = variant._charKey || charKey;
+    const effectiveCharColor = CHARACTER_COLORS[effectiveCharKey] || 'var(--accent-gold)';
+
+    // Character subtitle (shown under variant name)
+    const fallbackName = effectiveCharKey.charAt(0).toUpperCase() + effectiveCharKey.slice(1);
+    const effectiveCharName = variant._charName || fallbackName;
+    const charSubtitleHTML = `
+        <span class="variant-char-subtitle">${effectiveCharName}</span>
+    `;
 
     // Helper to render a specific build's content
     const renderBuildContent = (b, isFirst = false) => {
@@ -141,15 +143,12 @@ export function createVariantCard(variant, charKey, index = 0) {
         `;
     };
 
-    // Use variant-specific charKey for "todos" mode
-    const effectiveCharKey = variant._charKey || charKey;
-    const effectiveCharColor = CHARACTER_COLORS[effectiveCharKey] || 'var(--accent-gold)';
+
 
     return `
-        <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s; --char-accent: ${effectiveCharColor}">
+        <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s; --char-accent: ${effectiveCharColor}" data-variant-name="${variant.name}">
             ${newBadgeHTML}
             ${exclusiveBadgeHTML}
-            ${charBadgeHTML}
             <div class="variant-left-section">
                 <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
                      onerror="this.src='img/official/Annie_Icon.webp'">
@@ -160,6 +159,7 @@ export function createVariantCard(variant, charKey, index = 0) {
             <div class="variant-info">
                 <div class="variant-header">
                     <h3>${variant.name}</h3>
+                    ${charSubtitleHTML}
                     <div class="variant-meta">
                         <span class="element-badge ${elementInfo.class}">
                             <img loading="lazy" src="${elementInfo.iconPath}" alt="${variant.element}">

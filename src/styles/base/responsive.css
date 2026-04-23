@@ -189,7 +189,7 @@
 
     .filter-bar > .vertical-separator {
         display: block !important;
-        height: 38px;
+        height: 32px;
         margin: 0 4px;
     }
 
@@ -199,7 +199,7 @@
 
     .rarity-grid + .vertical-separator {
         display: block !important;
-        height: 38px;
+        height: 32px;
         margin: 0 4px;
     }
 
@@ -214,37 +214,8 @@
     }
 
     .filter-toggle-btn img {
-        height: 24px;
+        height: 22px;
         margin: 0;
-    }
-
-    /* Mobile clear button logic (merged into main button) */
-    #desktop-clear-btn {
-        display: none !important;
-    }
-
-    .filter-toggle-btn.can-clear .icon-default {
-        display: none !important;
-    }
-
-    .filter-toggle-btn.can-clear .icon-active {
-        display: inline-block !important;
-    }
-
-    .filter-toggle-btn.can-clear {
-        background: rgba(255, 50, 50, 0.1);
-        border-color: rgba(255, 50, 50, 0.5);
-        color: #ff8a8a;
-        box-shadow: 0 0 10px rgba(255, 50, 50, 0.15);
-    }
-    
-    .filter-toggle-btn.can-clear:hover {
-        background: rgba(255, 50, 50, 0.2);
-        border-color: #ff5050;
-    }
-
-    .filter-toggle-btn.can-clear img {
-        filter: drop-shadow(0 0 5px rgba(255, 50, 50, 0.5));
     }
 
     .filter-grid {
@@ -848,31 +819,28 @@
         height: 16px;
     }
 
-    /* Class filter grid on mobile */
-    .class-grid {
+    /* Class filter buttons on mobile */
+    .class-filter-inline {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
         gap: 4px;
     }
 
-    .class-btn {
-        width: 32px;
-        height: 32px;
+    .class-filter-btns {
+        justify-content: center;
     }
 
-    /* Character badge (todos mode) on mobile */
-    .variant-char-badge {
-        bottom: 6px;
-        left: 6px;
-        padding: 3px 8px 3px 3px;
-        gap: 4px;
-    }
-
-    .variant-char-badge img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .variant-char-badge span {
+    .class-filter-btn {
+        padding: 5px 8px;
         font-size: 0.65rem;
+    }
+
+    /* Character subtitle (todos mode) on mobile */
+    .variant-char-subtitle {
+        font-size: 0.72rem;
     }
 }
 

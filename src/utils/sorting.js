@@ -31,8 +31,14 @@ export function sortVariants(variants, sortConfig, filters = null) {
             const isBNew = isNewVariant(b.name);
 
             if (isANew !== isBNew) {
-                // Return -1 to push new variants up regardless of `direction` for normal base sorting
                 return isANew ? -1 : 1; 
+            }
+            // Among New variants, sort alphabetically by character name
+            if (isANew && isBNew) {
+                const charNameA = (a._charName || a.name).toLowerCase();
+                const charNameB = (b._charName || b.name).toLowerCase();
+                const cmp = charNameA.localeCompare(charNameB);
+                if (cmp !== 0) return cmp;
             }
         }
 

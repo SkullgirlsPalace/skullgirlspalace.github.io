@@ -9,7 +9,7 @@ import { CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
 import { renderVariants } from '../components/VariantCard.js';
-import { createFilterBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
+import { createFilterBar, createSearchBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
 import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
 
@@ -63,7 +63,7 @@ export function render(charKey, initialTab = 'builds') {
     }
 
     const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
-    const masteryIcon = getMasteryIcon(charKey);
+    const charIcon = CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp';
     const state = getState();
     const currentTab = state.currentTab || initialTab;
 
@@ -75,28 +75,30 @@ export function render(charKey, initialTab = 'builds') {
                     <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                 </button>
                 
-                <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${charData.character}" class="char-select-icon"
-                             onerror="this.src='img/official/Annie_Icon.webp'" style="width: 64px; height: 64px; object-fit: contain;">
-                        <h2 style="margin: 0; font-size: 2.5rem;">${charData.character.toUpperCase()}</h2>
+                <div class="header-top-row">
+                    <div class="char-title-row">
+                        <img loading="lazy" src="${charIcon}" alt="${charData.character}" class="char-select-icon"
+                             onerror="this.src='img/official/Annie_Icon.webp'">
+                        <h2>${charData.character.toUpperCase()}</h2>
                     </div>
-                    
+                    ${createSearchBar()}
+                </div>
+                
+                <div class="header-bottom-row">
+                    <!-- Tab Navigation -->
+                    <div class="detail-tabs">
+                        <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
+                                onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
+                            BUILDS
+                        </button>
+                        <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
+                                onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
+                            TIER LIST
+                        </button>
+                    </div>
                     <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="Sobre ${charData.character}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
                         <span>Informações</span>
-                    </button>
-                </div>
-                
-                <!-- Tab Navigation -->
-                <div class="detail-tabs">
-                    <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
-                            onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
-                        BUILDS
-                    </button>
-                    <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
-                            onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
-                        TIER LIST
                     </button>
                 </div>
             </div>
@@ -127,31 +129,60 @@ function renderTodosPage(initialTab = 'builds') {
                     <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                 </button>
                 
-                <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <span style="font-size: 2.5rem;">📋</span>
-                        <h2 style="margin: 0; font-size: 2.2rem;">TODAS AS VARIANTES</h2>
+                <div class="header-top-row">
+                    <div class="char-title-row">
+                        <span style="font-size: 2rem;">📋</span>
+                        <h2>TODAS AS VARIANTES</h2>
                     </div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
-                        Exibindo variantes de todos os personagens
-                    </p>
+                    ${createSearchBar()}
                 </div>
                 
-                <!-- Tab Navigation (only Builds in todos mode) -->
-                <div class="detail-tabs">
-                    <button class="tab-btn active" data-tab="builds">
-                        BUILDS
-                    </button>
+                <div class="header-bottom-row">
+                    <!-- Tab Navigation -->
+                    <div class="detail-tabs">
+                        <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
+                                onclick="switchDetailTab('todos', 'builds')" data-tab="builds">
+                            BUILDS
+                        </button>
+                        <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
+                                onclick="switchDetailTab('todos', 'tier')" data-tab="tier">
+                            TIER LIST
+                        </button>
+                    </div>
                 </div>
             </div>
 
             ${createFilterBar()}
 
             <div class="detail-content" id="detail-content">
-                ${renderTodosBuildsTab()}
+                ${currentTab === 'tier' ? renderTodosTierRedirect() : renderTodosBuildsTab()}
             </div>
         </section>
     `;
+}
+
+/**
+ * Render tier redirect for Todos mode - defaults to Annie
+ */
+function renderTodosTierRedirect() {
+    const characters = getCharacters();
+    if (!characters) return '<p>Carregando...</p>';
+    
+    // Get first character alphabetically (Annie)
+    const sortedKeys = Object.keys(characters).sort((a, b) => 
+        characters[a].character.localeCompare(characters[b].character)
+    );
+    const firstCharKey = sortedKeys[0] || 'annie';
+    const firstCharData = characters[firstCharKey];
+    
+    if (firstCharData) {
+        return `
+            <div class="tier-tab-content">
+                ${createTierView(firstCharKey, firstCharData)}
+            </div>
+        `;
+    }
+    return '<p style="color: var(--text-muted); text-align: center;">Nenhuma tier list disponível.</p>';
 }
 
 /**
@@ -174,7 +205,7 @@ function renderTodosBuildsTab() {
 
     return `
         <div class="builds-tab-content">
-            <p class="todos-count" style="color: var(--text-muted); text-align: center; margin-bottom: 16px; font-size: 0.85rem;">
+            <p class="variants-count" id="variants-count">
                 ${variants.length} variantes encontradas
             </p>
             ${variantsHTML}
@@ -207,6 +238,9 @@ function renderBuildsTab(charKey, charData) {
 
     return `
         <div class="builds-tab-content">
+            <p class="variants-count" id="variants-count">
+                ${variants.length} variantes encontradas
+            </p>
             ${variantsHTML}
         </div>
     `;
@@ -245,11 +279,6 @@ export async function init(charKey, initialTab = 'builds') {
 
     setCurrentCharacter(charKey);
 
-    // For "todos" mode, force builds tab
-    if (charKey === 'todos') {
-        initialTab = 'builds';
-    }
-
     // Force render of the initial tab content with clean filters
     await switchTab(charKey, initialTab);
 
@@ -277,8 +306,8 @@ export function refreshVariants(charKey) {
     variants = filterVariants(variants, filters);
     variants = sortVariants(variants, sort, filters);
 
-    // Update count for todos mode
-    const countEl = document.querySelector('.todos-count');
+    // Update variant count for all modes
+    const countEl = document.getElementById('variants-count');
     if (countEl) {
         countEl.textContent = `${variants.length} variantes encontradas`;
     }
@@ -292,11 +321,6 @@ export function refreshVariants(charKey) {
  * @param {string} tab - Tab to switch to
  */
 export async function switchTab(charKey, tab) {
-    // For "todos" mode, only builds tab is supported
-    if (charKey === 'todos') {
-        tab = 'builds';
-    }
-
     const state = getState();
     const previousTab = state.currentTab;
 
@@ -317,8 +341,12 @@ export async function switchTab(charKey, tab) {
     const contentEl = document.getElementById('detail-content');
     if (contentEl) {
         if (charKey === 'todos') {
-            contentEl.innerHTML = renderTodosBuildsTab();
-            refreshVariants('todos');
+            if (tab === 'tier') {
+                contentEl.innerHTML = renderTodosTierRedirect();
+            } else {
+                contentEl.innerHTML = renderTodosBuildsTab();
+                refreshVariants('todos');
+            }
         } else {
             const charData = getCharacter(charKey);
             if (charData) {

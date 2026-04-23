@@ -43,9 +43,10 @@
 /* ========== SEARCH BAR ========== */
 .search-bar-container {
     position: relative;
-    width: 100%;
-    margin-bottom: 10px;
+    width: 280px; /* Reference: Encantadora de Serpentes + space */
+    max-width: 100%;
     z-index: 100;
+    flex-shrink: 0;
 }
 
 .search-input-wrapper {
@@ -53,11 +54,13 @@
     align-items: center;
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 8px 16px;
-    gap: 12px;
+    border-radius: 10px;
+    padding: 6px 12px;
+    gap: 8px;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
+    height: 44px; /* Increased to avoid cutting off images */
+    box-sizing: border-box;
 }
 
 .search-input-wrapper:focus-within {
@@ -66,8 +69,8 @@
 }
 
 .search-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
     opacity: 0.5;
     flex-shrink: 0;
@@ -84,10 +87,11 @@
     border: none;
     outline: none;
     color: var(--text-primary);
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     letter-spacing: 0.2px;
+    min-width: 0;
 }
 
 .variant-search-input::placeholder {
@@ -103,10 +107,10 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-muted);
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     transition: all 0.2s ease;
     flex-shrink: 0;
 }
@@ -162,9 +166,9 @@
 .search-result-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
-    padding: 10px 16px;
+    padding: 8px 12px;
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -183,16 +187,16 @@
 }
 
 .search-result-portrait {
-    width: 44px;
+    width: 44px; /* Increased size to show full image */
     height: 44px;
-    border-radius: 8px;
-    object-fit: cover;
+    border-radius: 6px;
+    object-fit: cover; /* Change from contain to avoid cutting */
     border: 1px solid rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
+    background: rgba(0,0,0,0.3);
 }
 
 .search-result-info {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -201,7 +205,7 @@
 
 .search-result-name {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-primary);
     white-space: nowrap;
     overflow: hidden;
@@ -209,7 +213,7 @@
 }
 
 .search-result-char {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     font-weight: 400;
 }
@@ -217,19 +221,20 @@
 .search-result-badges {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     flex-shrink: 0;
+    margin-left: 10px; /* Brought closer */
 }
 
 .search-result-element {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
 
 .search-result-rarity {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
 }
 
@@ -240,6 +245,22 @@
     font-size: 0.85rem;
 }
 
+/* Search match highlight */
+.search-match-highlight {
+    color: #90ee90; /* light green */
+    font-weight: 700;
+}
+
+/* Flash highlight when scrolling to a variant from search */
+@keyframes searchFlash {
+    0%, 100% { box-shadow: none; }
+    25%, 75% { box-shadow: 0 0 20px rgba(124, 252, 124, 0.4), inset 0 0 0 2px rgba(124, 252, 124, 0.3); }
+}
+
+.search-highlight-flash {
+    animation: searchFlash 2s ease;
+}
+
 /* ========== FILTER BAR ========== */
 .filter-bar {
     display: flex;
@@ -248,7 +269,7 @@
     background: var(--bg-card);
     border: var(--border-subtle);
     border-radius: var(--border-radius);
-    padding: 12px 24px;
+    padding: 8px 16px;
     margin-bottom: 12px;
     box-shadow: var(--shadow-sm);
     gap: 0;
@@ -257,11 +278,11 @@
     transition: all 0.4s ease;
 }
 
-/* Active state (kept for backwards compatibility) */
+/* Active state */
 .filter-bar.active {
     background: var(--bg-card);
     border: var(--border-subtle);
-    padding: 12px 24px;
+    padding: 8px 16px;
     box-shadow: var(--shadow-sm);
 }
 
@@ -277,9 +298,10 @@
 .filter-section.right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     margin-left: auto;
     white-space: nowrap;
+    flex-wrap: wrap;
 }
 
 .filter-label {
@@ -300,28 +322,28 @@
     opacity: 0.9;
 }
 
-/* Filter Toggle Button */
+/* Filter Toggle Button (Unified Filter/Clear) */
 .filter-toggle-btn {
     font-family: 'TBCinema', 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 2px;
     background: rgba(212, 168, 75, 0.1);
     border: 1px solid var(--accent-gold);
     color: var(--text-primary);
     font-weight: 800;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 8px;
     cursor: pointer;
     transition: all var(--transition-fast);
     box-shadow: 0 0 10px rgba(212, 168, 75, 0.2);
     height: auto;
-    min-width: 80px;
+    min-width: 70px;
 }
 
 .filter-toggle-btn:hover,
@@ -332,13 +354,13 @@
 }
 
 .filter-toggle-btn img {
-    height: 24px;
+    height: 20px;
     width: auto;
     filter: brightness(1.2);
 }
 
 .filter-toggle-btn span {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 600;
 }
 
@@ -353,11 +375,38 @@
     display: inline-block;
 }
 
-/* Filter Content - Always Visible */
+/* When filters are active, show clear state */
+.filter-toggle-btn.can-clear .icon-default,
+.filter-toggle-btn.can-clear .text-default {
+    display: none;
+}
+
+.filter-toggle-btn.can-clear .icon-active,
+.filter-toggle-btn.can-clear .text-active {
+    display: inline-block;
+}
+
+.filter-toggle-btn.can-clear {
+    background: rgba(255, 50, 50, 0.1);
+    border-color: rgba(255, 50, 50, 0.5);
+    color: #ff8a8a;
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.15);
+}
+
+.filter-toggle-btn.can-clear:hover {
+    background: rgba(255, 50, 50, 0.2);
+    border-color: #ff5050;
+}
+
+.filter-toggle-btn.can-clear img {
+    filter: drop-shadow(0 0 5px rgba(255, 50, 50, 0.5));
+}
+
+/* Filter Content - Always Visible on desktop */
 .filter-content {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     flex-wrap: nowrap;
     overflow: visible;
     max-width: 1400px;
@@ -387,58 +436,25 @@
     font-family: 'TBCinema', 'Inter', sans-serif;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     color: var(--text-secondary);
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-right: 16px;
+    margin-right: 8px;
+    white-space: nowrap;
 }
 
 .sort-header img {
-    height: 20px;
+    height: 18px;
     width: auto;
     opacity: 0.9;
 }
 
-.clear-filters-btn {
-    background: rgba(255, 50, 50, 0.05);
-    border: 1px solid rgba(255, 50, 50, 0.3);
-    border-radius: 8px;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-10px);
-}
-
-.clear-filters-btn.visible {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
-}
-
-.clear-filters-btn:hover {
-    background: rgba(255, 50, 50, 0.15);
-    border-color: rgba(255, 50, 50, 0.5);
-    box-shadow: 0 0 8px rgba(255, 50, 50, 0.2);
-}
-
-.clear-filters-btn img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.8;
-}
-
 .vertical-separator {
     width: 1px;
-    height: 60px;
+    height: 44px;
     background: rgba(255, 255, 255, 0.1);
     margin: 0 4px;
 }
@@ -446,7 +462,7 @@
 /* Grids */
 .filter-grid {
     display: grid;
-    gap: 6px;
+    gap: 4px;
 }
 
 .rarity-grid {
@@ -459,36 +475,17 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
-/* Class/Role Grid */
-.class-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.class-btn.active {
-    opacity: 1;
-    background: rgba(212, 168, 75, 0.15);
-    border-color: rgba(212, 168, 75, 0.5);
-    box-shadow: 0 0 12px rgba(212, 168, 75, 0.2);
-    transform: translateY(-2px);
-}
-
-.class-btn.active img {
-    transform: scale(1.1);
-    filter: brightness(1.2) drop-shadow(0 2px 6px rgba(212, 168, 75, 0.4));
-}
-
 /* Buttons */
 .filter-btn {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 6px;
+    padding: 4px;
     cursor: pointer;
     transition: all var(--transition-fast);
     opacity: 0.65;
     position: relative;
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -526,10 +523,37 @@
     filter: brightness(1.2) drop-shadow(0 2px 6px rgba(212, 168, 75, 0.4));
 }
 
+/* ========== CLASS FILTER (inline with sort) ========== */
+.class-filter-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.class-filter-label {
+    display: none; /* Hide label, will be added to Sort header */
+}
+
+.class-filter-btns {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.class-filter-btn.active {
+    background: linear-gradient(135deg, rgba(212, 168, 75, 0.1), rgba(212, 168, 75, 0.2)) !important;
+    color: var(--accent-gold) !important;
+    border-color: rgba(212, 168, 75, 0.5) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
 /* Sort Badge */
 .sort-group {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     flex-wrap: wrap;
 }
 
@@ -537,14 +561,15 @@
     background: var(--bg-secondary);
     color: var(--text-secondary);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 8px 14px;
-    font-size: 0.8rem;
+    padding: 6px 10px;
+    font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 4px;
     transition: all var(--transition-fast);
     text-align: center;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
 }
 
 .sort-btn:hover {
@@ -564,35 +589,14 @@
     display: none;
 }
 
-/* ========== CHARACTER BADGE (Todos Mode) ========== */
-.variant-char-badge {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(10, 10, 15, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(212, 168, 75, 0.3);
-    border-radius: 20px;
-    padding: 4px 12px 4px 4px;
-    z-index: 5;
-}
-
-.variant-char-badge img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-
-.variant-char-badge span {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    letter-spacing: 0.3px;
+/* ========== VARIANT COUNT ========== */
+.variants-count {
+    color: var(--text-muted);
+    text-align: right;
+    margin-bottom: 8px;
+    font-size: 0.70rem;
+    font-weight: 400;
+    opacity: 0.5;
 }
 
 /* ========== CHAR DROPDOWN ENHANCEMENTS ========== */
@@ -608,7 +612,7 @@
 }
 
 .todos-item .todos-icon {
-    font-size: 1.1rem;
+    font-size: 1rem;
     width: 24px;
     text-align: center;
 }
@@ -622,15 +626,6 @@
     border-color: var(--accent-gold) !important;
 }
 
-/* ========== TODOS COUNT ========== */
-.todos-count {
-    color: var(--text-muted);
-    text-align: center;
-    margin-bottom: 16px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
 /* Responsive adjustment */
 @media (max-width: 1100px) {
     .filter-bar {
@@ -642,12 +637,19 @@
         width: 100%;
         justify-content: center;
         flex-direction: column;
-        margin-top: 12px;
+        margin-top: 8px;
         border-top: 1px solid var(--border-subtle);
-        padding-top: 16px;
+        padding-top: 8px;
     }
 
     .vertical-separator {
         display: none;
+    }
+    
+    .class-filter-inline {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+        justify-content: center;
     }
 }
