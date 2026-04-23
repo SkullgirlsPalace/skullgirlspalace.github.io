@@ -12,7 +12,7 @@ import { renderVariants } from '../components/VariantCard.js';
 import { createFilterBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
 import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
-import { t } from '../i18n/index.js';
+import { t, getLocalizedNameSync } from '../i18n/index.js';
 
 /**
  * Render character detail page
@@ -50,12 +50,12 @@ export function render(charKey, initialTab = 'builds') {
                 
                 <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
                     <div style="display: flex; align-items: center; gap: 15px;">
-                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${charData.character}" class="char-select-icon"
+                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${getLocalizedNameSync(charKey, charData.character)}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'" style="width: 64px; height: 64px; object-fit: contain;">
-                        <h2 style="margin: 0; font-size: 2.5rem;">${charData.character.toUpperCase()}</h2>
+                        <h2 style="margin: 0; font-size: 2.5rem;">${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
                     </div>
                     
-                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${charData.character}">
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charKey, charData.character)}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
                         <span>${t('variant.information')}</span>
                     </button>

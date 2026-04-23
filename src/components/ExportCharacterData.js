@@ -6,7 +6,7 @@
 
 import { CHARACTER_FILES, CHARACTER_ICONS } from '../config/constants.js';
 import { loadCharacter } from '../services/dataService.js';
-import { t } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
 
 // ========== MODAL HTML ==========
 
@@ -231,7 +231,7 @@ function downloadJSON(characterData, keys) {
     filename = `${key}.json`;
   } else {
     content = JSON.stringify(characterData, null, 2);
-    filename = 'todos-personagens.json';
+    filename = getCurrentLanguage() === 'en' ? 'all-characters.json' : 'todos-personagens.json';
   }
 
   triggerDownload(content, filename, 'application/json');
@@ -293,7 +293,7 @@ function downloadTXT(characterData, keys) {
     lines.push('');
   }
 
-  const filename = keys.length === 1 ? `${keys[0]}.txt` : 'todos-personagens.txt';
+  const filename = keys.length === 1 ? `${keys[0]}.txt` : (getCurrentLanguage() === 'en' ? 'all-characters.txt' : 'todos-personagens.txt');
   triggerDownload(lines.join('\n'), filename, 'text/plain');
 }
 

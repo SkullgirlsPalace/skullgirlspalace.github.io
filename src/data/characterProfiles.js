@@ -815,7 +815,45 @@ const CHARACTER_PROFILES_EN = {
  * @returns {Object|null} Profile data or null
  */
 export function getCharacterProfile(charKey) {
-    return CHARACTER_PROFILES[charKey] || null;
+    const profile = CHARACTER_PROFILES[charKey];
+    if (!profile) return null;
+
+    const lang = getCurrentLanguage();
+    if (lang === 'en') {
+        const en = CHARACTER_PROFILES_EN[charKey];
+        if (en) {
+            return {
+                ...profile,
+                playstyle: en.playstyle_en || profile.playstyle,
+                biography: en.biography_en || profile.biography,
+                birthday: en.birthday_en || profile.birthday,
+                bloodType: en.bloodType_en || profile.bloodType,
+                likes: en.likes_en || profile.likes,
+                dislikes: en.dislikes_en || profile.dislikes,
+                characterAbility: profile.characterAbility ? {
+                    ...profile.characterAbility,
+                    title: en.characterAbility?.title_en || profile.characterAbility.title,
+                    description: en.characterAbility?.description_en || profile.characterAbility.description,
+                } : undefined,
+                superiorAbility1: profile.superiorAbility1 ? {
+                    ...profile.superiorAbility1,
+                    title: en.superiorAbility1?.title_en || profile.superiorAbility1.title,
+                    description: en.superiorAbility1?.description_en || profile.superiorAbility1.description,
+                } : undefined,
+                superiorAbility2: profile.superiorAbility2 ? {
+                    ...profile.superiorAbility2,
+                    title: en.superiorAbility2?.title_en || profile.superiorAbility2.title,
+                    description: en.superiorAbility2?.description_en || profile.superiorAbility2.description,
+                } : undefined,
+                prestigeAbility: profile.prestigeAbility ? {
+                    ...profile.prestigeAbility,
+                    title: en.prestigeAbility?.title_en || profile.prestigeAbility.title,
+                    description: en.prestigeAbility?.description_en || profile.prestigeAbility.description,
+                } : undefined,
+            };
+        }
+    }
+    return profile;
 }
 
 /**

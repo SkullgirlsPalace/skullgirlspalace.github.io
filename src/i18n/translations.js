@@ -261,8 +261,54 @@ export const translations = {
       conclusion1: 'Que este manifesto seja o guia para aqueles que buscam a recompensa sem a exaustão. Que a Renda Passiva flua. Jogue com inteligência, não com "grind".',
       conclusionSignature: '- Proclamado pelos Sábios da Eficiência -',
       versionDate: 'Versão Atualizada - Dezembro de 2025'
-    }
-  },
+ },
+ // Character Profile
+ profile: {
+  about: 'Sobre',
+  abilities: 'Habilidades',
+  abilitiesNA: 'Habilidades não disponíveis.',
+  attack: 'Ataque',
+  biography: 'Biografia',
+  biographyNA: 'Biografia não disponível.',
+  birthday: 'Aniversário',
+  bloodType: 'Tipo Sanguíneo',
+  characterAbility: 'Habilidade do Personagem',
+  close: 'Fechar',
+  critlessClick: 'Clique para ver o Guia Critless',
+  critlessRecommended: 'Recomendado Critless',
+  dislikes: 'Desgosta',
+  essentialData: 'Dados Essenciais',
+  essentialDataNA: 'Dados essenciais não disponíveis.',
+  expandAlt: 'Expandir/Recolher alternativas',
+  health: 'Saúde',
+  height: 'Altura',
+  likes: 'Gosta',
+  marqueeDetails: 'Detalhes do Marquee',
+  moves: 'Movimentos',
+  noDescription: 'Sem descrição disponível.',
+  noMoves: 'Nenhum movimento disponível.',
+  noVariants: 'Nenhuma variante disponível.',
+  others: 'OUTROS',
+  playstyle: 'Estilo de Jogo',
+  playstyleNA: 'Estilo de jogo não disponível.',
+  prestigeAbility: 'Habilidade de Prestígio',
+  specialMoves: 'GOLPES ESPECIAIS',
+  blockbusters: 'BLOCKBUSTERS',
+  superiorAbility: 'Habilidade Superior',
+  totalMoves: 'Total de Movimentos',
+  totalVariants: 'Total de Variantes',
+  unknown: 'Desconhecido',
+  variants: 'Variantes',
+  weight: 'Peso'
+ },
+ // Error messages
+ error: {
+  pageLoad: 'Erro ao carregar página',
+  backToHome: 'Voltar ao Início',
+  appInit: 'Erro ao inicializar a aplicação',
+  reload: 'Recarregar'
+ }
+ },
   'en': {
     // Navigation
     nav: {
@@ -520,11 +566,56 @@ export const translations = {
       conclusion1: 'May this manifesto be the guide for those who seek reward without exhaustion. Let Passive Income flow. Play with intelligence, not with "grind".',
       conclusionSignature: '- Proclaimed by the Sages of Efficiency -',
       versionDate: 'Updated Version - December 2025'
-    }
-  }
+ },
+ // Character Profile
+ profile: {
+  about: 'About',
+  abilities: 'Abilities',
+  abilitiesNA: 'Abilities not available.',
+  attack: 'Attack',
+  biography: 'Biography',
+  biographyNA: 'Biography not available.',
+  birthday: 'Birthday',
+  bloodType: 'Blood Type',
+  characterAbility: 'Character Ability',
+  close: 'Close',
+  critlessClick: 'Click to view the Critless Guide',
+  critlessRecommended: 'Critless Recommended',
+  dislikes: 'Dislikes',
+  essentialData: 'Essential Data',
+  essentialDataNA: 'Essential data not available.',
+  expandAlt: 'Expand/Collapse alternatives',
+  health: 'Health',
+  height: 'Height',
+  likes: 'Likes',
+  marqueeDetails: 'Marquee Details',
+  moves: 'Moves',
+  noDescription: 'No description available.',
+  noMoves: 'No moves available.',
+  noVariants: 'No variants available.',
+  others: 'OTHERS',
+  playstyle: 'Playstyle',
+  playstyleNA: 'Playstyle not available.',
+  prestigeAbility: 'Prestige Ability',
+  specialMoves: 'SPECIAL MOVES',
+  blockbusters: 'BLOCKBUSTERS',
+  superiorAbility: 'Superior Ability',
+  totalMoves: 'Total Moves',
+  totalVariants: 'Total Variants',
+  unknown: 'Unknown',
+  variants: 'Variants',
+  weight: 'Weight'
+ },
+ // Error messages
+ error: {
+  pageLoad: 'Error loading page',
+  backToHome: 'Back to Home',
+  appInit: 'Error initializing application',
+  reload: 'Reload'
+ }
+ },
 };
 
-// Default language
 let currentLanguage = localStorage.getItem('language') || 'pt-BR';
 
 /**

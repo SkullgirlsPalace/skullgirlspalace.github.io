@@ -11,7 +11,7 @@ import { MOVE_DATA } from '../data/movesimages.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText } from '../utils/formatters.js';
 import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
-import { t, getCurrentLanguage } from '../i18n/index.js';
+import { t, getCurrentLanguage, getLocalizedNameSync } from '../i18n/index.js';
 
 let currentProfileTab = 'about';
 
@@ -37,7 +37,7 @@ export function renderProfileModal(charKeyRaw) {
       <div class="profile-modal-header">
         <img loading="lazy" src="${charIcon}" alt="${charData.character}" class="profile-modal-icon"
           onerror="this.src='img/official/Annie_Icon.webp'">
-        <h2>${charData.character.toUpperCase()}</h2>
+        <h2>${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
       </div>
 
       <!-- Tab Navigation -->
@@ -156,7 +156,7 @@ async function renderProfileTabContent(charKeyRaw, tabName) {
 // ========== TAB RENDERERS ==========
 
 function renderStars(count) {
-  if (typeof count === 'string' && (count.toLowerCase() === 'variavel' || count.toLowerCase() === 'vari\u00E1vel')) {
+  if (typeof count === 'string' && (count.toLowerCase() === 'variavel' || count.toLowerCase() === 'vari\u00E1vel' || count.toLowerCase() === 'variable')) {
     return `<span style="font-family: var(--font-secondary), sans-serif; font-size: 0.95rem; color: var(--accent-gold);">${count.toUpperCase()}</span>`;
   }
 
@@ -185,7 +185,7 @@ function renderSobreTab(charKey, charData, profile) {
     <!-- Intro Section -->
     <div class="profile-intro-section">
       <div class="profile-intro-image">
-        <img src="${heroImage}" alt="${charData.character}" onerror="this.src='img/official/${formattedCharName}_Icon.webp'">
+        <img src="${heroImage}" alt="${getLocalizedNameSync(charKey, charData.character)}" onerror="this.src='img/official/${formattedCharName}_Icon.webp'">
       </div>
       <div class="profile-intro-stats">
         <div class="stat-rating">
@@ -483,7 +483,7 @@ async function renderGolpesTab(charKey) {
   <div class="profile-tab-panel">
     <div class="variants-total-header">${t('profile.totalMoves')} ${totalMoves}</div>
     ${renderMoveGroup(t('profile.specialMoves'), specialMoves)}
-    ${renderMoveGroup('BLOCKBUSTERS', blockbusters)}
+    ${renderMoveGroup(t('profile.blockbusters'), blockbusters)}
     ${renderMoveGroup(t('profile.others'), others)}
   </div>
   `;

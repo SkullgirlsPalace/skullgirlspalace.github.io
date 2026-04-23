@@ -65,8 +65,8 @@ export function createVariantCard(variant, charKey, index = 0) {
 
   // Build content - check if we have build or arsenal data
   let builds = variant.builds ? [...variant.builds].sort((a, b) => {
-    const aIsAttack = a.title.toLowerCase().includes('ataque');
-    const bIsAttack = b.title.toLowerCase().includes('ataque');
+    const aIsAttack = a.title.toLowerCase().includes('ataque') || a.title.toLowerCase().includes('attack');
+    const bIsAttack = b.title.toLowerCase().includes('ataque') || b.title.toLowerCase().includes('attack');
     if (aIsAttack && !bIsAttack) return -1;
     if (bIsAttack && !aIsAttack) return 1;
     return 0;
@@ -74,7 +74,7 @@ export function createVariantCard(variant, charKey, index = 0) {
   const buildText = variant.recommended_build || '';
   const hasBuildContent = !!(builds || buildText || arsenalHTML || variant.marquee_ability);
 
-  const rawSAName = variant.signature_ability?.name || `${t('variant.ability')} Especial`;
+  const rawSAName = variant.signature_ability?.name || t('variant.specialAbility');
  const saName = getLocalizedAbilityNameSync(variant.name, rawSAName);
 
   const isNew = isNewVariant(variant.name);

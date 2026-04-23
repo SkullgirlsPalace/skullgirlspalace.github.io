@@ -5,7 +5,7 @@
 // =====================================================
 
 import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
-import { t } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
 
 // ========== MODAL HTML ==========
 
@@ -228,10 +228,10 @@ function downloadModifierJSON(modifierData, keys) {
   if (keys.length === 1) {
     const key = keys[0];
     content = JSON.stringify({ [key]: modifierData[key] }, null, 2);
-    filename = `modificador-${key}.json`;
+    filename = getCurrentLanguage() === 'en' ? `modifier-${key}.json` : `modificador-${key}.json`;
   } else {
     content = JSON.stringify(modifierData, null, 2);
-    filename = 'todos-modificadores.json';
+    filename = getCurrentLanguage() === 'en' ? 'all-modifiers.json' : 'todos-modificadores.json';
   }
 
   triggerDownload(content, filename, 'application/json');
@@ -288,7 +288,7 @@ function downloadModifierTXT(modifierData, keys) {
     }
   }
 
-  const filename = keys.length === 1 ? `modificador-${keys[0]}.txt` : 'todos-modificadores.txt';
+  const filename = keys.length === 1 ? (getCurrentLanguage() === 'en' ? `modifier-${keys[0]}.txt` : `modificador-${keys[0]}.txt`) : (getCurrentLanguage() === 'en' ? 'all-modifiers.txt' : 'todos-modificadores.txt');
   triggerDownload(lines.join('\n'), filename, 'text/plain');
 }
 

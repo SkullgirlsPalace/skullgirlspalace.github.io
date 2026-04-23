@@ -98,5 +98,11 @@ export const EXCLUSIVE_VARIANTS = {
  * @returns {Object|null} Exclusive data or null
  */
 export function getExclusiveData(variantName) {
-	return EXCLUSIVE_VARIANTS[variantName] || null;
+	const data = EXCLUSIVE_VARIANTS[variantName];
+	if (!data) return null;
+	const lang = getCurrentLanguage();
+	if (lang === 'en') {
+		return { ...data, source: data.source_en || data.source, category: data.category_en || data.category };
+	}
+	return data;
 }

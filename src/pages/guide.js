@@ -554,9 +554,9 @@ function renderGlossary() {
 
   const cards = glossaryKeys.map(key => {
     const attr = getLocalizedAttribute(key) || ATTRIBUTE_DATA[key];
-    const maxLabel = attr.max && attr.max !== 'Indefinido'
+    const maxLabel = attr.max && attr.max !== 'Indefinido' && attr.max !== 'Undefined'
       ? `<span class="attribute-max">${t('tooltip.maxLabel')}${attr.max}</span>`
-      : (attr.max === 'Indefinido' ? `<span class="attribute-max">${t('tooltip.maxLabel')}${t('guide.maxUndefined')}</span>` : '');
+      : ((attr.max === 'Indefinido' || attr.max === 'Undefined') ? `<span class="attribute-max">${t('tooltip.maxLabel')}${t('guide.maxUndefined')}</span>` : '');
 
     return `
       <div class="attribute-card">

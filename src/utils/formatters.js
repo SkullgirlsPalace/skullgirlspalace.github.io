@@ -82,7 +82,7 @@ export function formatText(text, variantName = null) {
     // Wrap ELEMENTO keyword for variants with element effects
     if (variantName && hasElementEffects(variantName)) {
         workingText = workingText.replace(
-            /(?<![\wÀ-ÿ])ELEMENTOS?(?![\wÀ-ÿ])/g,
+            /(?<![\wÀ-ÿ])(ELEMENTOS?|ELEMENTS?)(?![\wÀ-ÿ])/gi,
             (match) => `<span class="attr-highlight element-table" data-attr-key="element_table" data-variant="${variantName}"><img loading="lazy" src="img/official/all_elements.gif" width="256" height="256" class="inline-effect-icon" alt="">${match}</span>`
         );
     }

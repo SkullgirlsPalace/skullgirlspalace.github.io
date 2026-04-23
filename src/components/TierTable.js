@@ -9,7 +9,7 @@ import { CLASS_ICONS, getLocalizedVariantClasses, getLocalizedClassName, getLoca
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
-import { t } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
 
 /**
  * Create rank badge HTML
@@ -118,8 +118,8 @@ export function createTierTable(charKey, charData) {
       };
       const imgPath = getVariantImage(charKey, variant.name, 0);
 
-      const elementStr = variant.element || 'Neutro';
-      const elementInfo = getElementMap()[elementStr] || getElementMap()['Neutro'];
+      const elementStr = variant.element || (getCurrentLanguage() === 'en' ? 'Neutral' : 'Neutro');
+      const elementInfo = getElementMap()[elementStr] || getElementMap()['Neutro'] || getElementMap()['Neutral'];
       const elementClass = elementInfo.class;
 
       const rarityKey = variant.rarityKey || 'diamante';

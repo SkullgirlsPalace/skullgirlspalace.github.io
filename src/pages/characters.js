@@ -22,7 +22,7 @@ export function render() {
     <h2>${t('characters.selectCharacter')}</h2>
     <button class="export-trigger-btn" onclick="toggleExportModal()" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
       <span class="btn-icon">📥</span>
-      Export
+      ${t('characters.export')}
     </button>
   </div>
 
