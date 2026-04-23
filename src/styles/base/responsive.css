@@ -799,6 +799,81 @@
     .extras-boss-name {
         font-size: 0.9rem;
     }
+
+    /* ===== SEARCH BAR MOBILE ===== */
+
+    .search-bar-container {
+        margin-bottom: 8px;
+    }
+
+    .search-input-wrapper {
+        padding: 8px 12px;
+        gap: 8px;
+        border-radius: 10px;
+    }
+
+    .variant-search-input {
+        font-size: 0.85rem;
+    }
+
+    .search-results-dropdown {
+        max-height: 320px;
+    }
+
+    .search-result-item {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .search-result-portrait {
+        width: 38px;
+        height: 38px;
+    }
+
+    .search-result-name {
+        font-size: 0.82rem;
+    }
+
+    .search-result-char {
+        font-size: 0.7rem;
+    }
+
+    .search-result-element {
+        width: 18px;
+        height: 18px;
+    }
+
+    .search-result-rarity {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Class filter grid on mobile */
+    .class-grid {
+        gap: 4px;
+    }
+
+    .class-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Character badge (todos mode) on mobile */
+    .variant-char-badge {
+        bottom: 6px;
+        left: 6px;
+        padding: 3px 8px 3px 3px;
+        gap: 4px;
+    }
+
+    .variant-char-badge img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .variant-char-badge span {
+        font-size: 0.65rem;
+    }
 }
 
 /* ===== VERY SMALL SCREENS (< 360px) ===== */

@@ -1,4 +1,4 @@
-import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS, CHARACTER_COLORS } from '../config/constants.js';
+import { ELEMENT_MAP, RARITY_LABELS, RARITY_ICONS, CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
@@ -94,6 +94,15 @@ export function createVariantCard(variant, charKey, index = 0) {
         </div>
     ` : '';
 
+    // Character badge for "Todos" mode
+    const charBadgeHTML = variant._charName ? `
+        <div class="variant-char-badge">
+            <img loading="lazy" src="${CHARACTER_ICONS[variant._charKey] || 'img/official/Annie_Icon.webp'}" alt="${variant._charName}"
+                 onerror="this.src='img/official/Annie_Icon.webp'">
+            <span>${variant._charName}</span>
+        </div>
+    ` : '';
+
     // Helper to render a specific build's content
     const renderBuildContent = (b, isFirst = false) => {
         const bArsenal = formatArsenal(b.recommended_arsenal || '', charKey);
@@ -132,10 +141,15 @@ export function createVariantCard(variant, charKey, index = 0) {
         `;
     };
 
+    // Use variant-specific charKey for "todos" mode
+    const effectiveCharKey = variant._charKey || charKey;
+    const effectiveCharColor = CHARACTER_COLORS[effectiveCharKey] || 'var(--accent-gold)';
+
     return `
-        <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s">
+        <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s; --char-accent: ${effectiveCharColor}">
             ${newBadgeHTML}
             ${exclusiveBadgeHTML}
+            ${charBadgeHTML}
             <div class="variant-left-section">
                 <img src="${portraitUrl}" alt="${variant.name}" class="variant-portrait" loading="lazy"
                      onerror="this.src='img/official/Annie_Icon.webp'">
@@ -611,7 +625,10 @@ export function renderVariants(containerId, variants, charKey) {
     }
 
     container.innerHTML = variants
-        .map((variant, index) => createVariantCard(variant, charKey, index))
+        .map((variant, index) => {
+            const effectiveCharKey = variant._charKey || charKey;
+            return createVariantCard(variant, effectiveCharKey, index);
+        })
         .join('');
 
     // Attach event listeners for tab switching

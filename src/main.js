@@ -8,7 +8,7 @@ import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switch
 import { loadAllCharacters, loadTierData, loadExtrasData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
-import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
+import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
 
@@ -36,6 +36,12 @@ window.handleSortClick = handleSortClick;
 window.handleClearFilters = handleClearFilters;
 window.handleToggleFilter = handleToggleFilter;
 window.handleToggleCharDropdown = handleToggleCharDropdown;
+
+// Search handlers
+window.handleSearchInput = handleSearchInput;
+window.handleSearchClear = handleSearchClear;
+window.handleSearchResultClick = handleSearchResultClick;
+window.handleSearchFocus = handleSearchFocus;
 
 
 // Calculator handlers (specific handlers registered by statistics.js init)
@@ -111,7 +117,7 @@ window.toggleExtrasSection = function (header) {
 window.onFiltersChanged = () => {
     const state = getState();
     if (state.currentCharacter) {
-        if (state.currentTab === 'builds') {
+        if (state.currentTab === 'builds' || state.currentCharacter === 'todos') {
             refreshVariants(state.currentCharacter);
         } else if (state.currentTab === 'tier') {
             // Re-render tier view to apply filters

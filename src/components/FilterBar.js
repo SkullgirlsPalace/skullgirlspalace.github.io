@@ -1,11 +1,18 @@
 // =====================================================
 // FILTER BAR COMPONENT
-// Renders filter controls for rarity, element, and sorting
+// Renders filter controls for rarity, element, class, sorting, and search
 // =====================================================
 
 import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar } from '../state/store.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getCharacters } from '../services/dataService.js';
+import { flattenVariants } from '../utils/sorting.js';
+import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
+import { getVariantImage } from '../data/variantImages.js';
+import { ELEMENT_MAP, RARITY_ICONS } from '../config/constants.js';
+
+// Debounce timer for search
+let searchDebounceTimer = null;
 
 /**
  * Create filter bar HTML
@@ -13,6 +20,21 @@ import { getCharacters } from '../services/dataService.js';
  */
 export function createFilterBar() {
     return `
+        <!-- Search Bar (above filter controls) -->
+        <div class="search-bar-container" id="search-bar-container">
+            <div class="search-input-wrapper">
+                <img loading="lazy" src="img/official/icon_filter.webp" alt="" class="search-icon"
+                     onerror="this.src='img/official/filter.webp'">
+                <input type="text" id="variant-search-input" class="variant-search-input"
+                       placeholder="Pesquisar variante ou personagem..."
+                       oninput="handleSearchInput(this.value)"
+                       onfocus="handleSearchFocus()"
+                       autocomplete="off" spellcheck="false">
+                <button class="search-clear-btn" id="search-clear-btn" onclick="handleSearchClear()" title="Limpar pesquisa">✕</button>
+            </div>
+            <div class="search-results-dropdown" id="search-results-dropdown"></div>
+        </div>
+
         <div class="filter-bar">
             <!-- Dynamic Filter/Clear Button -->
             <div class="filter-controls">
@@ -86,6 +108,28 @@ export function createFilterBar() {
 
                 <div class="vertical-separator"></div>
 
+                <!-- Class/Role Grid (2x2) -->
+                <div class="filter-grid class-grid">
+                    <button class="filter-btn class-btn" data-variant-class="Ofensivo"
+                        onclick="handleFilterClick('variantClass', 'Ofensivo')" title="Ofensivo">
+                        <img loading="lazy" src="img/modifiers/buffs/Enrage.webp" alt="Ofensivo">
+                    </button>
+                    <button class="filter-btn class-btn" data-variant-class="Defensivo"
+                        onclick="handleFilterClick('variantClass', 'Defensivo')" title="Defensivo">
+                        <img loading="lazy" src="img/modifiers/buffs/Armor.webp" alt="Defensivo">
+                    </button>
+                    <button class="filter-btn class-btn" data-variant-class="Suporte de Utilidade"
+                        onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')" title="Suporte de Utilidade">
+                        <img loading="lazy" src="img/modifiers/buffs/FinalStand.webp" alt="Suporte">
+                    </button>
+                    <button class="filter-btn class-btn" data-variant-class="Coringa"
+                        onclick="handleFilterClick('variantClass', 'Coringa')" title="Coringa">
+                        <img loading="lazy" src="img/modifiers/buffs/Deadeye.webp" alt="Coringa">
+                    </button>
+                </div>
+
+                <div class="vertical-separator"></div>
+
                 <!-- Sort Section -->
                 <div class="filter-section right">
                     <div class="sort-header">
@@ -132,7 +176,6 @@ export function updateFilterUI() {
     const { filters, sort } = state.tabState[tab];
 
     // Update Rarity Buttons
-    // Do NOT highlight all buttons if none are specifically selected (showing all)
     document.querySelectorAll('.rarity-btn').forEach(btn => {
         if (filters.rarity.length > 0 && filters.rarity.includes(btn.dataset.rarity)) {
             btn.classList.add('active');
@@ -144,6 +187,16 @@ export function updateFilterUI() {
     // Update Element Buttons
     document.querySelectorAll('.element-btn').forEach(btn => {
         if (filters.element.length > 0 && filters.element.includes(btn.dataset.element)) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Update Class Buttons
+    document.querySelectorAll('.class-btn').forEach(btn => {
+        const cls = btn.dataset.variantClass;
+        if (filters.variantClass && filters.variantClass.length > 0 && filters.variantClass.includes(cls)) {
             btn.classList.add('active');
         } else {
             btn.classList.remove('active');
@@ -168,7 +221,6 @@ export function updateFilterUI() {
         btn.innerText = sortLabels[btn.dataset.sort] || btn.dataset.sort;
 
         if (btn.dataset.sort === sort.type) {
-            // ONLY add .active highlight if it's NOT the default sort
             if (sort.type !== defaultSortType || sort.direction !== defaultSortDir) {
                 btn.classList.add('active');
             }
@@ -178,9 +230,9 @@ export function updateFilterUI() {
     });
 
     // Dynamic Filter/Clear button logic
-    // Clear button only appears if user has manually changed something away from baseline
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
+        (filters.variantClass && filters.variantClass.length > 0) ||
         sort.type !== defaultSortType ||
         sort.direction !== defaultSortDir;
 
@@ -217,13 +269,19 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     if (!dropdownContent || !characters) return;
 
     // Update the button label with the current character
-    const char = characters[currentCharKey];
-    if (char && currentLabel) {
-        const masteryIcon = getMasteryIcon(currentCharKey);
-        currentLabel.innerHTML = `
-            <img loading="lazy" src="${masteryIcon}" alt="" style="width:24px; height:24px; object-fit:contain;">
-            ${char.character}
-        `;
+    if (currentCharKey === 'todos') {
+        if (currentLabel) {
+            currentLabel.innerHTML = `📋 Todos os Personagens`;
+        }
+    } else {
+        const char = characters[currentCharKey];
+        if (char && currentLabel) {
+            const masteryIcon = getMasteryIcon(currentCharKey);
+            currentLabel.innerHTML = `
+                <img loading="lazy" src="${masteryIcon}" alt="" style="width:24px; height:24px; object-fit:contain;">
+                ${char.character}
+            `;
+        }
     }
 
     // Populate the dropdown list
@@ -231,7 +289,17 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         return characters[a].character.localeCompare(characters[b].character);
     });
 
-    dropdownContent.innerHTML = sortedCharKeys.map(charKey => {
+    // Add "Todos" option first
+    let dropdownHTML = `
+        <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
+                onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
+            <span class="todos-icon">📋</span>
+            <span>Todos os Personagens</span>
+        </button>
+        <div class="char-dropdown-divider"></div>
+    `;
+
+    dropdownHTML += sortedCharKeys.map(charKey => {
         const charData = characters[charKey];
         const mIcon = getMasteryIcon(charKey);
         const activeClass = charKey === currentCharKey ? 'active' : '';
@@ -244,13 +312,170 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
             </button>
         `;
     }).join('');
+
+    dropdownContent.innerHTML = dropdownHTML;
 }
+
+// ========== SEARCH FUNCTIONS ==========
+
+/**
+ * Normalize text for search (remove accents, lowercase)
+ */
+function normalizeText(text) {
+    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+/**
+ * Handle search input with debounce
+ */
+export function handleSearchInput(query) {
+    clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+        performSearch(query);
+    }, 150);
+}
+
+/**
+ * Perform the actual search
+ */
+function performSearch(query) {
+    const resultsContainer = document.getElementById('search-results-dropdown');
+    const clearBtn = document.getElementById('search-clear-btn');
+
+    if (!query || query.trim().length < 2) {
+        if (resultsContainer) {
+            resultsContainer.innerHTML = '';
+            resultsContainer.classList.remove('active');
+        }
+        if (clearBtn) clearBtn.style.display = 'none';
+        return;
+    }
+
+    if (clearBtn) clearBtn.style.display = 'flex';
+
+    const characters = getCharacters();
+    if (!characters) return;
+
+    const normalizedQuery = normalizeText(query.trim());
+    const results = [];
+
+    for (const [charKey, charData] of Object.entries(characters)) {
+        const variants = flattenVariants(charData.variants);
+        for (const variant of variants) {
+            const normalizedName = normalizeText(variant.name);
+            const normalizedChar = normalizeText(charData.character);
+            
+            // Search by variant name or character name
+            if (normalizedName.includes(normalizedQuery) || normalizedChar.includes(normalizedQuery)) {
+                results.push({
+                    ...variant,
+                    _charKey: charKey,
+                    _charName: charData.character
+                });
+            }
+        }
+    }
+
+    renderSearchResults(results.slice(0, 15), resultsContainer);
+}
+
+/**
+ * Render search results in the dropdown
+ */
+function renderSearchResults(results, container) {
+    if (!container) return;
+
+    if (results.length === 0) {
+        container.innerHTML = `
+            <div class="search-no-results">
+                <span>Nenhuma variante encontrada</span>
+            </div>
+        `;
+        container.classList.add('active');
+        return;
+    }
+
+    container.innerHTML = results.map(variant => {
+        const elementInfo = ELEMENT_MAP[variant.element] || {};
+        const rarityIcon = RARITY_ICONS[variant.rarityKey] || '';
+        const portraitUrl = getVariantImage(variant._charKey, variant.name, 0);
+
+        return `
+            <button class="search-result-item" onclick="handleSearchResultClick('${variant._charKey}')">
+                <img loading="lazy" src="${portraitUrl}" alt="${variant.name}" class="search-result-portrait"
+                     onerror="this.src='img/official/Annie_Icon.webp'">
+                <div class="search-result-info">
+                    <span class="search-result-name">${variant.name}</span>
+                    <span class="search-result-char">${variant._charName}</span>
+                </div>
+                <div class="search-result-badges">
+                    ${elementInfo.iconPath ? `<img loading="lazy" src="${elementInfo.iconPath}" alt="${variant.element}" class="search-result-element">` : ''}
+                    ${rarityIcon ? `<img loading="lazy" src="${rarityIcon}" alt="${variant.rarityKey}" class="search-result-rarity">` : ''}
+                </div>
+            </button>
+        `;
+    }).join('');
+
+    container.classList.add('active');
+}
+
+/**
+ * Handle clicking a search result
+ */
+export function handleSearchResultClick(charKey) {
+    const input = document.getElementById('variant-search-input');
+    const dropdown = document.getElementById('search-results-dropdown');
+
+    if (input) input.value = '';
+    if (dropdown) {
+        dropdown.innerHTML = '';
+        dropdown.classList.remove('active');
+    }
+
+    const clearBtn = document.getElementById('search-clear-btn');
+    if (clearBtn) clearBtn.style.display = 'none';
+
+    // Navigate to the character
+    if (window.openCharacterDetails) {
+        window.openCharacterDetails(charKey, 'builds');
+    }
+}
+
+/**
+ * Handle search clear button
+ */
+export function handleSearchClear() {
+    const input = document.getElementById('variant-search-input');
+    const dropdown = document.getElementById('search-results-dropdown');
+    const clearBtn = document.getElementById('search-clear-btn');
+
+    if (input) {
+        input.value = '';
+        input.focus();
+    }
+    if (dropdown) {
+        dropdown.innerHTML = '';
+        dropdown.classList.remove('active');
+    }
+    if (clearBtn) clearBtn.style.display = 'none';
+}
+
+/**
+ * Handle search input focus - show results if there's text
+ */
+export function handleSearchFocus() {
+    const input = document.getElementById('variant-search-input');
+    if (input && input.value.trim().length >= 2) {
+        performSearch(input.value);
+    }
+}
+
+// ========== FILTER HANDLERS ==========
 
 // Global handlers (will be attached to window in main.js)
 export function handleFilterClick(type, value) {
     toggleFilter(type, value);
     updateFilterUI();
-    // Trigger re-render (will be connected in main.js)
     if (window.onFiltersChanged) {
         window.onFiltersChanged();
     }
@@ -278,14 +503,13 @@ export function handleMainFilterAction() {
     
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
+        (filters.variantClass && filters.variantClass.length > 0) ||
         sort.type !== 'score' ||
         sort.direction !== 'desc';
 
     if (hasActiveFilters && window.innerWidth <= 768) {
-        // Only act as CLEAR on mobile
         handleClearFilters();
     } else {
-        // Toggle filter panel (if applicable)
         handleToggleFilter();
     }
 }
@@ -320,3 +544,12 @@ export function handleToggleCharDropdown() {
         }
     }
 }
+
+// ========== CLOSE SEARCH ON OUTSIDE CLICK ==========
+document.addEventListener('click', (e) => {
+    const searchContainer = document.getElementById('search-bar-container');
+    const dropdown = document.getElementById('search-results-dropdown');
+    if (searchContainer && dropdown && !searchContainer.contains(e.target)) {
+        dropdown.classList.remove('active');
+    }
+});

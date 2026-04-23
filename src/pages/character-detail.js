@@ -14,12 +14,40 @@ import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
 
 /**
+ * Get all variants across all characters (for "Todos" mode)
+ * Each variant gets _charKey and _charName properties
+ * @returns {Array} Flat array of all variants
+ */
+function getAllVariants() {
+    const characters = getCharacters();
+    if (!characters) return [];
+
+    const allVariants = [];
+    for (const [charKey, charData] of Object.entries(characters)) {
+        const variants = flattenVariants(charData.variants);
+        variants.forEach(v => {
+            allVariants.push({
+                ...v,
+                _charKey: charKey,
+                _charName: charData.character
+            });
+        });
+    }
+    return allVariants;
+}
+
+/**
  * Render character detail page
- * @param {string} charKey - Character key
+ * @param {string} charKey - Character key (or 'todos' for all)
  * @param {string} initialTab - Initial tab ('builds' or 'tier')
  * @returns {string} HTML string
  */
 export function render(charKey, initialTab = 'builds') {
+    // Handle "Todos" mode
+    if (charKey === 'todos') {
+        return renderTodosPage(initialTab);
+    }
+
     const charData = getCharacter(charKey);
     if (!charData) {
         return `
@@ -81,6 +109,76 @@ export function render(charKey, initialTab = 'builds') {
 
             ${renderProfileModal(charKey)}
         </section>
+    `;
+}
+
+/**
+ * Render "Todos" (all characters) page
+ */
+function renderTodosPage(initialTab = 'builds') {
+    const state = getState();
+    const currentTab = state.currentTab || initialTab;
+
+    return `
+        <section class="section character-detail" id="character-detail" style="--char-accent: var(--accent-gold)" data-current-tab="${currentTab}" data-todos-mode="true">
+            <!-- Header Content -->
+            <div class="character-detail-header fade-in">
+                <button class="btn-back pill" onclick="navigateTo('characters')">
+                    <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
+                </button>
+                
+                <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span style="font-size: 2.5rem;">📋</span>
+                        <h2 style="margin: 0; font-size: 2.2rem;">TODAS AS VARIANTES</h2>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
+                        Exibindo variantes de todos os personagens
+                    </p>
+                </div>
+                
+                <!-- Tab Navigation (only Builds in todos mode) -->
+                <div class="detail-tabs">
+                    <button class="tab-btn active" data-tab="builds">
+                        BUILDS
+                    </button>
+                </div>
+            </div>
+
+            ${createFilterBar()}
+
+            <div class="detail-content" id="detail-content">
+                ${renderTodosBuildsTab()}
+            </div>
+        </section>
+    `;
+}
+
+/**
+ * Render builds tab for "Todos" mode
+ */
+function renderTodosBuildsTab() {
+    const state = getState();
+    const { filters, sort } = state.tabState.builds;
+
+    let variants = getAllVariants();
+    variants = filterVariants(variants, filters);
+    variants = sortVariants(variants, sort, filters);
+
+    let variantsHTML = '';
+    if (variants.length === 0) {
+        variantsHTML = '<p style="color: var(--text-muted); padding: 20px; text-align: center;">Nenhuma variante encontrada com estes filtros.</p>';
+    } else {
+        variantsHTML = `<div class="variants-grid" id="variants-container"></div>`;
+    }
+
+    return `
+        <div class="builds-tab-content">
+            <p class="todos-count" style="color: var(--text-muted); text-align: center; margin-bottom: 16px; font-size: 0.85rem;">
+                ${variants.length} variantes encontradas
+            </p>
+            ${variantsHTML}
+        </div>
     `;
 }
 
@@ -147,8 +245,12 @@ export async function init(charKey, initialTab = 'builds') {
 
     setCurrentCharacter(charKey);
 
+    // For "todos" mode, force builds tab
+    if (charKey === 'todos') {
+        initialTab = 'builds';
+    }
+
     // Force render of the initial tab content with clean filters
-    // This handles both 'builds' and 'tier' tabs correctly
     await switchTab(charKey, initialTab);
 
     // Update filter UI
@@ -160,15 +262,26 @@ export async function init(charKey, initialTab = 'builds') {
  * @param {string} charKey - Character key
  */
 export function refreshVariants(charKey) {
-    const charData = getCharacter(charKey);
-    if (!charData) return;
-
     const state = getState();
     const { filters, sort } = state.tabState.builds;
 
-    let variants = flattenVariants(charData.variants);
+    let variants;
+    if (charKey === 'todos') {
+        variants = getAllVariants();
+    } else {
+        const charData = getCharacter(charKey);
+        if (!charData) return;
+        variants = flattenVariants(charData.variants);
+    }
+
     variants = filterVariants(variants, filters);
     variants = sortVariants(variants, sort, filters);
+
+    // Update count for todos mode
+    const countEl = document.querySelector('.todos-count');
+    if (countEl) {
+        countEl.textContent = `${variants.length} variantes encontradas`;
+    }
 
     renderVariants('variants-container', variants, charKey);
 }
@@ -179,19 +292,15 @@ export function refreshVariants(charKey) {
  * @param {string} tab - Tab to switch to
  */
 export async function switchTab(charKey, tab) {
-    // Get current state BEFORE updating tab to check if we are changing context
+    // For "todos" mode, only builds tab is supported
+    if (charKey === 'todos') {
+        tab = 'builds';
+    }
+
     const state = getState();
     const previousTab = state.currentTab;
 
     setCurrentTab(tab);
-
-    // Only apply default sort if we are actually CHANGING tabs.
-    // This prevents resetting the user's sort preference when switching characters 
-    // while staying on the same tab (e.g. browsing Tier Lists).
-    // Also applies if previousTab is undefined (first load).
-    // No longer resetting sort on tab switch. 
-    // Users want their chosen filters and sorting to remain as they set them.
-    // We only update the active tab in the state.
 
     // Update tab button states
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -205,15 +314,22 @@ export async function switchTab(charKey, tab) {
     }
 
     // Re-render content
-    const charData = getCharacter(charKey);
     const contentEl = document.getElementById('detail-content');
-    if (contentEl && charData) {
-        contentEl.innerHTML = tab === 'builds'
-            ? renderBuildsTab(charKey, charData)
-            : renderTierTab(charKey, charData);
+    if (contentEl) {
+        if (charKey === 'todos') {
+            contentEl.innerHTML = renderTodosBuildsTab();
+            refreshVariants('todos');
+        } else {
+            const charData = getCharacter(charKey);
+            if (charData) {
+                contentEl.innerHTML = tab === 'builds'
+                    ? renderBuildsTab(charKey, charData)
+                    : renderTierTab(charKey, charData);
 
-        if (tab === 'builds') {
-            refreshVariants(charKey);
+                if (tab === 'builds') {
+                    refreshVariants(charKey);
+                }
+            }
         }
     }
 

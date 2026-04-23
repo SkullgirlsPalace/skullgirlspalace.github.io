@@ -107,6 +107,14 @@ export function filterVariants(variants, filters) {
         });
     }
 
+    // Class/Role Filter (multi-select)
+    if (filters.variantClass && filters.variantClass.length > 0) {
+        filtered = filtered.filter(v => {
+            const classes = getVariantClasses(v.name);
+            return classes.some(cls => filters.variantClass.includes(cls));
+        });
+    }
+
     return filtered;
 }
 
