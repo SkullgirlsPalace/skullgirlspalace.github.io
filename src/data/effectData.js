@@ -4,483 +4,624 @@
 // and Technical Terminology in Skullgirls Mobile
 // =====================================================
 
+import { getCurrentLanguage } from '../i18n/translations.js';
+
 export const EFFECT_DATA = {
-    // --- TERMINOLOGIA TÉCNICA ---
-    ataque: {
-        keys: ['ATQ', 'ATK', 'Ataque', 'ATAQUE', 'Attack'],
-        name: 'ATQ / Ataque',
-        type: 'term',
-        detailed: 'Representa o dano base do seu lutador.'
-    },
-    vida: {
-        keys: ['HP', 'VIDA', 'VD', 'Vida'],
-        name: 'Vida (VD)',
-        type: 'term',
-        detailed: 'Representa a saúde do seu lutador. Se chegar a zero, o personagem é derrotado.'
-    },
-    critless: {
-        keys: ['Critless', 'critless', 'Sem Crítico', 'sem crítico', 'CRITLESS'],
-        name: 'Critless (Sem Crítico)',
-        type: 'buff-term',
-        color: '#ffdd44',
-        detailed: 'Estratégia de não investir em Taxa e Dano Crítico para contornar habilidades de punição por acerto crítico.',
-        explicacao: 'O conceito de <strong style="color:#fff">Critless</strong> consiste em NÃO melhorar os nós de Taxa Crítica e Dano Crítico na Árvore de Habilidades do personagem, mantendo-os fora também da sua Build.\n\nEvitar acertos críticos é fundamental para lidar contra variantes defensivas específicas (como Painwheels com Sangue Maculado ou modificadores com reflexão de dano na qual dependem de sofrer Dano Crítico para punir você. Essa escolha reduz seu potencial de ataque direto, sendo mais aconselhada para personagens com muita Vida, Cura ou Ataque Baixo.\n\n<strong>Dica:</strong> AGARRÕES nunca causam acertos críticos, mesmo se você tiver o Efeito Positivo Precisão\n\nAvalie cuidadosamente antes de criar uma variante <em>Critless</em>, pois isso pode limitar um pouco o desempenho dela contra outros oponentes comuns.'
-    },
-    signature_abilities: {
-        keys: ['Habilidades Características', 'Habilidade Característica', 'Signature Abilities'],
-        name: 'Habilidades Características',
-        type: 'term',
-        detailed: 'São as habilidades passivas que tornam cada Variante única no jogo.'
-    },
-    marquee_abilities: {
-        keys: ['Habilidade Superior', 'Habilidades Superiores', 'Marquee Abilities'],
-        name: 'Habilidade Superior',
-        type: 'term',
-        detailed: 'Uma habilidade adicional que pode ser escolhida entre duas opções após o personagem finalizar sua árvore de habilidades.'
-    },
-    special_moves: {
-        keys: ['Golpes Especiais', 'Golpe Especial', 'Special Moves'],
-        name: 'Golpes Especiais',
-        type: 'term',
-        detailed: 'Golpes Especiais são os golpesredondos, são mais "simples" que os Blockbusters, eles podem ser usados com mais frequência (Reat. Especial e Níveis carrega mais rápido) e podem ser repetidos.'
-    },
-    tag_in: {
-        keys: ['Assistência', 'Tag In', 'Ataque de Assistência'],
-        name: 'Assistência (Tag In)',
-        type: 'term',
-        detailed: 'Permite que um aliado entre na luta realizando um ataque.'
-    },
-    buff: {
-        keys: ['Efeito Positivo', 'EF. POS.', 'EF. POSITIVO', 'EFEITOS POSITIVOS', 'EFEITO POSITIVO', 'Buff'],
-        name: 'Efeito Positivo (EF. POS.)',
-        type: 'buff-term',
-        color: '#6fbf73',
-        detailed: 'Ícones coloridos que aparecem abaixo da barra de vida.'
-    },
-    debuff: {
-        keys: ['Efeito Negativo', 'EF. NEG.', 'EF. NEGATIVO', 'EFEITOS NEGATIVOS', 'EFEITO NEGATIVO', 'Debuff'],
-        name: 'Efeito Negativo (EF. NEG.)',
-        type: 'debuff-term',
-        color: '#f06868',
-        detailed: 'Ícones vermelhos que aparecem abaixo da barra de vida.'
-    },
-    permanent_modifier: {
-        keys: ['Modificador Permanente', 'Efeito Permanente', 'Permanent Modifier'],
-        name: 'Efeito Permanente',
-        type: 'term',
-        color: '#b0bec5',
-        icon: 'img/modifiers/permanent/Permanent.webp',
-        stacks: 5,
-        detailed: 'O Efeito com está borda não pode ser removido.',
-        explicacao: 'O Efeito com está borda não pode ser removido.'
-    },
+  // --- TERMINOLOGIA TÉCNICA ---
+  ataque: {
+    keys: ['ATQ', 'ATK', 'Ataque', 'ATAQUE', 'Attack'],
+    name: 'ATQ / Ataque',
+    name_en: 'ATK / Attack',
+    type: 'term',
+    detailed: 'Representa o dano base do seu lutador.',
+    detailed_en: 'Represents your fighter\'s base damage.'
+  },
+  vida: {
+    keys: ['HP', 'VIDA', 'VD', 'Vida'],
+    name: 'Vida (VD)',
+    name_en: 'Health (HP)',
+    type: 'term',
+    detailed: 'Representa a saúde do seu lutador. Se chegar a zero, o personagem é derrotado.',
+    detailed_en: 'Represents your fighter\'s health. If it reaches zero, the character is defeated.'
+  },
+  critless: {
+    keys: ['Critless', 'critless', 'Sem Crítico', 'sem crítico', 'CRITLESS'],
+    name: 'Critless (Sem Crítico)',
+    name_en: 'Critless',
+    type: 'buff-term',
+    color: '#ffdd44',
+    detailed: 'Estratégia de não investir em Taxa e Dano Crítico para contornar habilidades de punição por acerto crítico.',
+    detailed_en: 'A strategy of not investing in Crit Rate and Crit Damage to bypass abilities that punish critical hits.',
+    explicacao: 'O conceito de <strong style="color:#fff">Critless</strong> consiste em NÃO melhorar os nós de Taxa Crítica e Dano Crítico na Árvore de Habilidades do personagem, mantendo-os fora também da sua Build.\n\nEvitar acertos críticos é fundamental para lidar contra variantes defensivas específicas (como Painwheels com Sangue Maculado ou modificadores com reflexão de dano na qual dependem de sofrer Dano Crítico para punir você. Essa escolha reduz seu potencial de ataque direto, sendo mais aconselhada para personagens com muita Vida, Cura ou Ataque Baixo.\n\n<strong>Dica:</strong> AGARRÕES nunca causam acertos críticos, mesmo se você tiver o Efeito Positivo Precisão\n\nAvalie cuidadosamente antes de criar uma variante <em>Critless</em>, pois isso pode limitar um pouco o desempenho dela contra outros oponentes comuns.',
+    explicacao_en: 'The concept of <strong style="color:#fff">Critless</strong> consists of NOT upgrading the Crit Rate and Crit Damage nodes in the character\'s Skill Tree, keeping them out of your Build as well.\n\nAvoiding critical hits is essential to deal with specific defensive variants (such as Painwheels with Tainted Blood or modifiers with damage reflection that depend on receiving Critical Damage to punish you). This choice reduces your direct attack potential, being more advisable for characters with high Health, Healing, or low Attack.\n\n<strong>Tip:</strong> THROWS never cause critical hits, even if you have the Precision Buff.\n\nEvaluate carefully before creating a <em>Critless</em> variant, as it may somewhat limit their performance against other common opponents.'
+  },
+  signature_abilities: {
+    keys: ['Habilidades Características', 'Habilidade Característica', 'Signature Abilities'],
+    name: 'Habilidades Características',
+    name_en: 'Signature Abilities',
+    type: 'term',
+    detailed: 'São as habilidades passivas que tornam cada Variante única no jogo.',
+    detailed_en: 'These are the passive abilities that make each Variant unique in the game.'
+  },
+  marquee_abilities: {
+    keys: ['Habilidade Superior', 'Habilidades Superiores', 'Marquee Abilities'],
+    name: 'Habilidade Superior',
+    name_en: 'Marquee Ability',
+    type: 'term',
+    detailed: 'Uma habilidade adicional que pode ser escolhida entre duas opções após o personagem finalizar sua árvore de habilidades.',
+    detailed_en: 'An additional ability that can be chosen from two options after the character completes their skill tree.'
+  },
+  special_moves: {
+    keys: ['Golpes Especiais', 'Golpe Especial', 'Special Moves'],
+    name: 'Golpes Especiais',
+    name_en: 'Special Moves',
+    type: 'term',
+    detailed: 'Golpes Especiais são os golpesredondos, são mais "simples" que os Blockbusters, eles podem ser usados com mais frequência (Reat. Especial e Níveis carrega mais rápido) e podem ser repetidos.',
+    detailed_en: 'Special Moves are simpler than Blockbusters, they can be used more frequently (Special Cooldown and Levels charge faster) and can be repeated.'
+  },
+  tag_in: {
+    keys: ['Assistência', 'Tag In', 'Ataque de Assistência'],
+    name: 'Assistência (Tag In)',
+    name_en: 'Tag In (Assist)',
+    type: 'term',
+    detailed: 'Permite que um aliado entre na luta realizando um ataque.',
+    detailed_en: 'Allows an ally to enter the fight performing an attack.'
+  },
+  buff: {
+    keys: ['Efeito Positivo', 'EF. POS.', 'EF. POSITIVO', 'EFEITOS POSITIVOS', 'EFEITO POSITIVO', 'Buff'],
+    name: 'Efeito Positivo (EF. POS.)',
+    name_en: 'Buff (BUFF)',
+    type: 'buff-term',
+    color: '#6fbf73',
+    detailed: 'Ícones coloridos que aparecem abaixo da barra de vida.',
+    detailed_en: 'Colored icons that appear below the health bar.'
+  },
+  debuff: {
+    keys: ['Efeito Negativo', 'EF. NEG.', 'EF. NEGATIVO', 'EFEITOS NEGATIVOS', 'EFEITO NEGATIVO', 'Debuff'],
+    name: 'Efeito Negativo (EF. NEG.)',
+    name_en: 'Debuff (DEBUFF)',
+    type: 'debuff-term',
+    color: '#f06868',
+    detailed: 'Ícones vermelhos que aparecem abaixo da barra de vida.',
+    detailed_en: 'Red icons that appear below the health bar.'
+  },
+  permanent_modifier: {
+    keys: ['Modificador Permanente', 'Efeito Permanente', 'Permanent Modifier'],
+    name: 'Efeito Permanente',
+    name_en: 'Permanent Effect',
+    type: 'term',
+    color: '#b0bec5',
+    icon: 'img/modifiers/permanent/Permanent.webp',
+    stacks: 5,
+    detailed: 'O Efeito com está borda não pode ser removido.',
+    detailed_en: 'The Effect with this border cannot be removed.',
+    explicacao: 'O Efeito com está borda não pode ser removido.',
+    explicacao_en: 'The Effect with this border cannot be removed.'
+  },
 
-    // --- EFEITOS POSITIVOS (BUFFS) ---
-    armor: {
-        keys: ['Armadura', 'Armor'],
-        name: 'Armadura',
-        type: 'buff',
-        color: '#4488ff',
-        icon: 'img/modifiers/buffs/Armor.webp',
-        stacks: 5,
-        scaling: '20% > 40% > 60% > 80% > 100%',
-        detailed: 'Reduz o dano sofrido em 20%.',
-        explicacao: 'Reduz dano em 20%. Removido por Quebra de Armadura.'
-    },
-    auto_block: {
-        keys: ['Bloqueio Automático', 'Auto Block', 'Bloq. Automático'],
-        name: 'Bloqueio Automático',
-        type: 'buff',
-        color: '#4488ff',
-        icon: 'img/modifiers/buffs/Auto_Block.webp',
-        stacks: 5,
-        scaling: '10% > 20% > 30% > 40% > 50%',
-        detailed: '10% de chance de BLOQUEAR automaticamente o próximo GOLPE.',
-        explicacao: '10% chance de Bloquear Automaticamente. Removido por Quebra de Guarda. Olho-Morto Anula este Efeito.'
-    },
-    barrier: {
-        keys: ['Barreira', 'Barrier'],
-        name: 'Barreira',
-        type: 'buff',
-        color: '#888899',
-        icon: 'img/modifiers/buffs/Barrier.webp',
-        stacks: 5,
-        scaling: '10% > 20% > 30% > 40% > 50%',
-        detailed: 'Ganhe 10% de vida temporária.',
-        explicacao: 'Vida Temporária baseada em 10% da Vida Máxima, basicamente uma Vida adicional.'
-    },
-    blessing: {
-        keys: ['Benção', 'Blessing'],
-        name: 'Benção',
-        type: 'buff',
-        color: '#ffdd44',
-        icon: 'img/modifiers/buffs/Blessing.webp',
-        stacks: 5,
-        scaling: '20% > 20% > 30% > 40% > 50%',
-        detailed: 'RESSUSCITE com 20% de VIDA ao ser DERROTADO.',
-        explicacao: 'Revive com 10% de Vida por acúmulo. Quietus anula este efeito.'
-    },
-    deadeye: {
-        keys: ['Olho-Morto', 'Deadeye'],
-        name: 'Olho-Morto',
-        type: 'buff',
-        color: '#aa44dd',
-        icon: 'img/modifiers/buffs/Deadeye.webp',
-        stacks: 1,
-        detailed: 'Os Ataques ignoram a DEFESA do oponente e não ativam os efeitos de BLOQUEIO AUTOMÁTICO, INABALÁVEL, ESQUIVA e ESPINHOS.',
-        explicacao: 'Ignora Defesa, Bloqueio Automático, Inabalável, Esquiva e Espinhos.'
-    },
-    enrage: {
-        keys: ['Fúria', 'Enrage'],
-        name: 'Fúria',
-        type: 'buff',
-        color: '#ff4444',
-        icon: 'img/modifiers/buffs/Enrage.webp',
-        stacks: 5,
-        scaling: '20% > 40% > 60% > 80% > 100%',
-        detailed: 'Aumenta o dano em 20%.',
-        explicacao: 'Aumenta o Dano em 20%. Remove Incapacitação.'
-    },
-    evasion: {
-        keys: ['Esquiva', 'Evasão', 'Evasion'],
-        name: 'Esquiva',
-        type: 'buff',
-        icon: 'img/modifiers/buffs/Evasion.webp',
-        stacks: 5,
-        detailed: 'O próximo GOLPE será esquivado.',
-        explicacao: 'Esquiva de qualquer Ataque. Não Esquiva de Blockbuster Indefensável e Olho-Morto.'
-    },
-    final_stand: {
-        keys: ['Resistência Final', 'Final Stand'],
-        name: 'Resistência Final',
-        type: 'buff',
-        color: '#ffdd44',
-        icon: 'img/modifiers/buffs/FinalStand.webp',
-        stacks: 1,
-        detailed: 'Impede a morte.',
-        explicacao: 'A Vida não cai abaixo de 1 Vida. Bloqueia Destruição. Quietus anula este Efeito.'
-    },
-    haste: {
-        keys: ['Aceleração', 'Haste'],
-        name: 'Aceleração',
-        type: 'buff',
-        color: '#aa44dd',
-        icon: 'img/modifiers/buffs/Haste.webp',
-        stacks: 1,
-        detailed: 'Aumenta a velocidade de ganho do MEDIDOR DE BLOCKBUSTER em 100%.',
-        explicacao: '+100% ganho de medidor. Remove Lentidão.'
-    },
-    heavy_regen: {
-        keys: ['Regeneração Forte', 'Heavy Regen'],
-        name: 'Regeneração Forte',
-        type: 'buff',
-        color: '#44cc66',
-        icon: 'img/modifiers/buffs/HeavyRegen.webp',
-        stacks: 1,
-        detailed: 'Regenera 2% da VIDA MÁXIMA a cada segundo.',
-        explicacao: 'Cura 2% de Vida por segundo. Remove Sangramento.'
-    },
-    immunity: {
-        keys: ['Imunidade', 'Immunity'],
-        name: 'Imunidade',
-        type: 'buff',
-        color: '#ffdd44',
-        icon: 'img/modifiers/buffs/Immune.webp',
-        stacks: 1,
-        detailed: 'Dá imunidade a todos os EFEITOS NEGATIVOS.',
-        explicacao: 'Impede o ganho de novos Efeitos Negativos, Efeitos Negativos já aplicados não serão removidos.'
-    },
-    invincible: {
-        keys: ['Invencível', 'Invincible'],
-        name: 'Invencível',
-        type: 'buff',
-        color: '#ffdd44',
-        icon: 'img/modifiers/buffs/Invincible.webp',
-        stacks: 1,
-        detailed: 'Reduz o dano sofrido em 100%.',
-        explicacao: 'Impede dano de todos os golpes, sangramentos, drenagens e reflexão de dano. Não Anula Destruição.'
-    },
-    miasma: {
-        keys: ['Miasma'],
-        name: 'Miasma',
-        type: 'buff',
-        color: '#44cc66',
-        icon: 'img/modifiers/buffs/Miasma.webp',
-        stacks: 5,
-        scaling: '1% > 2% > 3% > 4% > 5%',
-        detailed: 'Drena 2% de VIDA e MEDIDOR por seg de oponentes próximos.',
-        explicacao: 'Drena 1% de Vida e Medidor do oponente. Bloqueio de Cura e Polaridade Inversa não impedem a Drenagem de Vida e Blockbuster.'
-    },
-    precision: {
-        keys: ['Precisão', 'Precision'],
-        name: 'Precisão',
-        type: 'buff',
-        color: '#ffdd44',
-        icon: 'img/modifiers/buffs/Precision.webp',
-        stacks: 5,
-        detailed: 'Garante que o próximo GOLPE seja CRÍTICO. GOLPES DE PRECISÃO não ativam as HABILIDADES CARACTERÍSTICAS do oponente.',
-        explicacao: 'Acerto Crítico garantido e não ativa Habilidades Características.'
-    },
-    regen: {
-        keys: ['Regeneração', 'Regen'],
-        name: 'Regeneração',
-        type: 'buff',
-        color: '#44cc66',
-        icon: 'img/modifiers/buffs/Regen.webp',
-        stacks: 5,
-        scaling: '1% > 2% > 3% > 4% > 5%',
-        detailed: 'Regenera 1% da VIDA MÁXIMA a cada segundo.',
-        explicacao: 'Cura 1% de Vida por segundo. Remove Sangramento.'
-    },
-    thorns: {
-        keys: ['Espinhos', 'Thorns'],
-        name: 'Espinhos',
-        type: 'buff',
-        color: '#aa44dd',
-        icon: 'img/modifiers/buffs/Thorns.webp',
-        stacks: 5,
-        scaling: '20% > 40% > 60% > 80% > 100%',
-        detailed: 'Reflita 20% do dano ao agressor.',
-        explicacao: 'Reflete 20% do dano por acúmulo. Olho-Morto ignora este efeito.'
-    },
-    unflinching: {
-        keys: ['Inabalável', 'Unflinching'],
-        name: 'Inabalável',
-        type: 'buff',
-        color: '#ffdd44',
-        icon: 'img/modifiers/buffs/Unflinching.webp',
-        stacks: 1,
-        detailed: 'Não reaja a golpes.',
-        explicacao: 'O personagem não será derrubado por ataques normais ou a maioria dos golpes especiais, golpes Blockbusters e Agarrões ainda podem derrubar. Olho-Morto Ignora este Efeito.'
-    },
+  // --- EFEITOS POSITIVOS (BUFFS) ---
+  armor: {
+    keys: ['Armadura', 'Armor'],
+    name: 'Armadura',
+    name_en: 'Armor',
+    type: 'buff',
+    color: '#4488ff',
+    icon: 'img/modifiers/buffs/Armor.webp',
+    stacks: 5,
+    scaling: '20% > 40% > 60% > 80% > 100%',
+    detailed: 'Reduz o dano sofrido em 20%.',
+    detailed_en: 'Reduces damage taken by 20%.',
+    explicacao: 'Reduz dano em 20%. Removido por Quebra de Armadura.',
+    explicacao_en: 'Reduces damage by 20%. Removed by Armor Break.'
+  },
+  auto_block: {
+    keys: ['Bloqueio Automático', 'Auto Block', 'Bloq. Automático'],
+    name: 'Bloqueio Automático',
+    name_en: 'Auto Block',
+    type: 'buff',
+    color: '#4488ff',
+    icon: 'img/modifiers/buffs/Auto_Block.webp',
+    stacks: 5,
+    scaling: '10% > 20% > 30% > 40% > 50%',
+    detailed: '10% de chance de BLOQUEAR automaticamente o próximo GOLPE.',
+    detailed_en: '10% chance to automatically BLOCK the next HIT.',
+    explicacao: '10% chance de Bloquear Automaticamente. Removido por Quebra de Guarda. Olho-Morto Anula este Efeito.',
+    explicacao_en: '10% chance to Auto Block. Removed by Guard Break. Deadeye ignores this effect.'
+  },
+  barrier: {
+    keys: ['Barreira', 'Barrier'],
+    name: 'Barreira',
+    name_en: 'Barrier',
+    type: 'buff',
+    color: '#888899',
+    icon: 'img/modifiers/buffs/Barrier.webp',
+    stacks: 5,
+    scaling: '10% > 20% > 30% > 40% > 50%',
+    detailed: 'Ganhe 10% de vida temporária.',
+    detailed_en: 'Gain 10% temporary health.',
+    explicacao: 'Vida Temporária baseada em 10% da Vida Máxima, basicamente uma Vida adicional.',
+    explicacao_en: 'Temporary Health based on 10% of Max HP, essentially additional Health.'
+  },
+  blessing: {
+    keys: ['Benção', 'Blessing'],
+    name: 'Benção',
+    name_en: 'Blessing',
+    type: 'buff',
+    color: '#ffdd44',
+    icon: 'img/modifiers/buffs/Blessing.webp',
+    stacks: 5,
+    scaling: '20% > 20% > 30% > 40% > 50%',
+    detailed: 'RESSUSCITE com 20% de VIDA ao ser DERROTADO.',
+    detailed_en: 'REVIVE with 20% HEALTH when DEFEATED.',
+    explicacao: 'Revive com 10% de Vida por acúmulo. Quietus anula este efeito.',
+    explicacao_en: 'Revives with 10% Health per stack. Quietus nullifies this effect.'
+  },
+  deadeye: {
+    keys: ['Olho-Morto', 'Deadeye'],
+    name: 'Olho-Morto',
+    name_en: 'Deadeye',
+    type: 'buff',
+    color: '#aa44dd',
+    icon: 'img/modifiers/buffs/Deadeye.webp',
+    stacks: 1,
+    detailed: 'Os Ataques ignoram a DEFESA do oponente e não ativam os efeitos de BLOQUEIO AUTOMÁTICO, INABALÁVEL, ESQUIVA e ESPINHOS.',
+    detailed_en: 'Attacks ignore the opponent\'s DEFENSE and do not trigger AUTO BLOCK, UNFLINCHING, EVASION and THORNS effects.',
+    explicacao: 'Ignora Defesa, Bloqueio Automático, Inabalável, Esquiva e Espinhos.',
+    explicacao_en: 'Ignores Defense, Auto Block, Unflinching, Evasion and Thorns.'
+  },
+  enrage: {
+    keys: ['Fúria', 'Enrage'],
+    name: 'Fúria',
+    name_en: 'Enrage',
+    type: 'buff',
+    color: '#ff4444',
+    icon: 'img/modifiers/buffs/Enrage.webp',
+    stacks: 5,
+    scaling: '20% > 40% > 60% > 80% > 100%',
+    detailed: 'Aumenta o dano em 20%.',
+    detailed_en: 'Increases damage by 20%.',
+    explicacao: 'Aumenta o Dano em 20%. Remove Incapacitação.',
+    explicacao_en: 'Increases damage by 20%. Removes Cripple.'
+  },
+  evasion: {
+    keys: ['Esquiva', 'Evasão', 'Evasion'],
+    name: 'Esquiva',
+    name_en: 'Evasion',
+    type: 'buff',
+    icon: 'img/modifiers/buffs/Evasion.webp',
+    stacks: 5,
+    detailed: 'O próximo GOLPE será esquivado.',
+    detailed_en: 'The next HIT will be evaded.',
+    explicacao: 'Esquiva de qualquer Ataque. Não Esquiva de Blockbuster Indefensável e Olho-Morto.',
+    explicacao_en: 'Evades any Attack. Cannot evade Unblockable Blockbusters and Deadeye.'
+  },
+  final_stand: {
+    keys: ['Resistência Final', 'Final Stand'],
+    name: 'Resistência Final',
+    name_en: 'Final Stand',
+    type: 'buff',
+    color: '#ffdd44',
+    icon: 'img/modifiers/buffs/FinalStand.webp',
+    stacks: 1,
+    detailed: 'Impede a morte.',
+    detailed_en: 'Prevents death.',
+    explicacao: 'A Vida não cai abaixo de 1 Vida. Bloqueia Destruição. Quietus anula este Efeito.',
+    explicacao_en: 'Health cannot drop below 1 HP. Blocks Doom. Quietus nullifies this effect.'
+  },
+  haste: {
+    keys: ['Aceleração', 'Haste'],
+    name: 'Aceleração',
+    name_en: 'Haste',
+    type: 'buff',
+    color: '#aa44dd',
+    icon: 'img/modifiers/buffs/Haste.webp',
+    stacks: 1,
+    detailed: 'Aumenta a velocidade de ganho do MEDIDOR DE BLOCKBUSTER em 100%.',
+    detailed_en: 'Increases BLOCKBUSTER METER gain speed by 100%.',
+    explicacao: '+100% ganho de medidor. Remove Lentidão.',
+    explicacao_en: '+100% meter gain. Removes Slow.'
+  },
+  heavy_regen: {
+    keys: ['Regeneração Forte', 'Heavy Regen'],
+    name: 'Regeneração Forte',
+    name_en: 'Heavy Regen',
+    type: 'buff',
+    color: '#44cc66',
+    icon: 'img/modifiers/buffs/HeavyRegen.webp',
+    stacks: 1,
+    detailed: 'Regenera 2% da VIDA MÁXIMA a cada segundo.',
+    detailed_en: 'Regenerates 2% of MAX HEALTH every second.',
+    explicacao: 'Cura 2% de Vida por segundo. Remove Sangramento.',
+    explicacao_en: 'Heals 2% Health per second. Removes Bleed.'
+  },
+  immunity: {
+    keys: ['Imunidade', 'Immunity'],
+    name: 'Imunidade',
+    name_en: 'Immunity',
+    type: 'buff',
+    color: '#ffdd44',
+    icon: 'img/modifiers/buffs/Immune.webp',
+    stacks: 1,
+    detailed: 'Dá imunidade a todos os EFEITOS NEGATIVOS.',
+    detailed_en: 'Grants immunity to all DEBUFFS.',
+    explicacao: 'Impede o ganho de novos Efeitos Negativos, Efeitos Negativos já aplicados não serão removidos.',
+    explicacao_en: 'Prevents gaining new Debuffs. Already applied Debuffs will not be removed.'
+  },
+  invincible: {
+    keys: ['Invencível', 'Invincible'],
+    name: 'Invencível',
+    name_en: 'Invincible',
+    type: 'buff',
+    color: '#ffdd44',
+    icon: 'img/modifiers/buffs/Invincible.webp',
+    stacks: 1,
+    detailed: 'Reduz o dano sofrido em 100%.',
+    detailed_en: 'Reduces damage taken by 100%.',
+    explicacao: 'Impede dano de todos os golpes, sangramentos, drenagens e reflexão de dano. Não Anula Destruição.',
+    explicacao_en: 'Prevents damage from all hits, bleeds, drains and damage reflection. Does not negate Doom.'
+  },
+  miasma: {
+    keys: ['Miasma'],
+    name: 'Miasma',
+    name_en: 'Miasma',
+    type: 'buff',
+    color: '#44cc66',
+    icon: 'img/modifiers/buffs/Miasma.webp',
+    stacks: 5,
+    scaling: '1% > 2% > 3% > 4% > 5%',
+    detailed: 'Drena 2% de VIDA e MEDIDOR por seg de oponentes próximos.',
+    detailed_en: 'Drains 2% HEALTH and METER per second from nearby opponents.',
+    explicacao: 'Drena 1% de Vida e Medidor do oponente. Bloqueio de Cura e Polaridade Inversa não impedem a Drenagem de Vida e Blockbuster.',
+    explicacao_en: 'Drains 1% of the opponent\'s Health and Meter. Heal Block and Inverse Polarity do not prevent Health and Blockbuster Drain.'
+  },
+  precision: {
+    keys: ['Precisão', 'Precision'],
+    name: 'Precisão',
+    name_en: 'Precision',
+    type: 'buff',
+    color: '#ffdd44',
+    icon: 'img/modifiers/buffs/Precision.webp',
+    stacks: 5,
+    detailed: 'Garante que o próximo GOLPE seja CRÍTICO. GOLPES DE PRECISÃO não ativam as HABILIDADES CARACTERÍSTICAS do oponente.',
+    detailed_en: 'Guarantees the next HIT will be CRITICAL. PRECISION HITS do not trigger the opponent\'s SIGNATURE ABILITIES.',
+    explicacao: 'Acerto Crítico garantido e não ativa Habilidades Características.',
+    explicacao_en: 'Guaranteed Critical Hit and does not trigger Signature Abilities.'
+  },
+  regen: {
+    keys: ['Regeneração', 'Regen'],
+    name: 'Regeneração',
+    name_en: 'Regen',
+    type: 'buff',
+    color: '#44cc66',
+    icon: 'img/modifiers/buffs/Regen.webp',
+    stacks: 5,
+    scaling: '1% > 2% > 3% > 4% > 5%',
+    detailed: 'Regenera 1% da VIDA MÁXIMA a cada segundo.',
+    detailed_en: 'Regenerates 1% of MAX HEALTH every second.',
+    explicacao: 'Cura 1% de Vida por segundo. Remove Sangramento.',
+    explicacao_en: 'Heals 1% Health per second. Removes Bleed.'
+  },
+  thorns: {
+    keys: ['Espinhos', 'Thorns'],
+    name: 'Espinhos',
+    name_en: 'Thorns',
+    type: 'buff',
+    color: '#aa44dd',
+    icon: 'img/modifiers/buffs/Thorns.webp',
+    stacks: 5,
+    scaling: '20% > 40% > 60% > 80% > 100%',
+    detailed: 'Reflita 20% do dano ao agressor.',
+    detailed_en: 'Reflects 20% of damage to the attacker.',
+    explicacao: 'Reflete 20% do dano por acúmulo. Olho-Morto ignora este efeito.',
+    explicacao_en: 'Reflects 20% damage per stack. Deadeye ignores this effect.'
+  },
+  unflinching: {
+    keys: ['Inabalável', 'Unflinching'],
+    name: 'Inabalável',
+    name_en: 'Unflinching',
+    type: 'buff',
+    color: '#ffdd44',
+    icon: 'img/modifiers/buffs/Unflinching.webp',
+    stacks: 1,
+    detailed: 'Não reaja a golpes.',
+    detailed_en: 'Do not react to hits.',
+    explicacao: 'O personagem não será derrubado por ataques normais ou a maioria dos golpes especiais, golpes Blockbusters e Agarrões ainda podem derrubar. Olho-Morto Ignora este Efeito.',
+    explicacao_en: 'The character will not be knocked down by normal attacks or most special moves. Blockbuster moves and Throws can still knock down. Deadeye ignores this effect.'
+  },
 
-    // --- EFEITOS NEGATIVOS (DEBUFFS) ---
-    armor_break: {
-        keys: ['Quebra de Armadura', 'Armor Break', 'Quebra de Arm.'],
-        name: 'Quebra de Armadura',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/ArmorBreak.webp',
-        stacks: 1,
-        detailed: 'Aumenta o dano sofrido em 20%.',
-        explicacao: '+20% dano recebido. Remove Armadura.'
-    },
-    bleed: {
-        keys: ['Sangramento', 'Bleed'],
-        name: 'Sangramento',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Bleed.webp',
-        stacks: 5,
-        scaling: '1% > 2% > 3% > 4% > 5%',
-        detailed: 'Drena 1% da VIDA MÁXIMA da vítima a cada segundo.',
-        explicacao: 'Remove 1% da Vida Máxima por Segundo até 1 de Vida. Remove Regeneração.'
-    },
-    cripple: {
-        keys: ['Incapacitação', 'Cripple'],
-        name: 'Incapacitação',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Cripple.webp',
-        stacks: 1,
-        detailed: 'Reduz o dano infligido em 20%.',
-        explicacao: '-20% dano causado. Remove Fúria.'
-    },
-    curse: {
-        keys: ['Maldição', 'Curse'],
-        name: 'Maldição',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Curse.webp',
-        stacks: 1,
-        detailed: 'Impede de ganhar EFEITOS POSITIVOS.',
-        explicacao: 'Impede o ganho de novos Efeitos Positivos.'
-    },
-    death_mark: {
-        keys: ['Marca da Morte', 'Death Mark'],
-        name: 'Marca da Morte',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/DeathMark.webp',
-        stacks: 1,
-        detailed: 'Aumenta em 50% o dano sofrido por CRÍTICOS e reduz em 50% a CAPACIDADE DE BLOQUEIO.',
-        explicacao: 'Aumenta em +50% o Dano Sofrido por Críticos e reduz em 50% a Capacidade de Bloqueio.'
-    },
-    doom: {
-        keys: ['Destruição', 'Doom'],
-        name: 'Destruição',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Doom.webp',
-        stacks: 1,
-        detailed: 'APÓS X segundos, o lutador afetado é morto.',
-        explicacao: 'Morte instantânea ao expirar. Ignora Invencibilidade.'
-    },
-    fatigue: {
-        keys: ['Fadiga', 'Fatigue'],
-        name: 'Fadiga',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Fatigue.webp',
-        stacks: 1,
-        detailed: 'ASSISTÊNCIAS E GOLPES ESPECIAIS levem o dobro do tempo para reativar. Após X segundos, o Lutador atingido tem 50% de chance de ficar ATORDOADO por 2 seg.',
-        explicacao: 'Recarga de Golpes Especiais e Assistência 50% mais lenta, ao expirar tem 50% de chance infligir Atordoamento.'
-    },
-    guard_break: {
-        keys: ['Quebra de Guarda', 'Guard Break'],
-        name: 'Quebra de Guarda',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Guard_Break.webp',
-        stacks: 5,
-        scaling: '10% > 20% > 30% > 40% > 50%',
-        detailed: '10% de chance do bloqueio falhar durante um BLOQUEIO.',
-        explicacao: '10% chance de falhar a Guarda. Remove Bloqueio Automático.'
-    },
-    heavy_bleed: {
-        keys: ['Sangramento Forte', 'Heavy Bleed'],
-        name: 'Sangramento Forte',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/HeavyBleed.webp',
-        stacks: 1,
-        detailed: 'Drena 2% da VIDA MÁXIMA da vítima a cada segundo.',
-        explicacao: 'Remove 2% da Vida Máxima por Segundo. Remove Regeneração.'
-    },
-    hex: {
-        keys: ['Feitiço', 'Hex'],
-        name: 'Feitiço',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Hex.webp',
-        stacks: 1,
-        detailed: 'HABILIDADES CARACTERÍSTICAS desativadas.',
-        explicacao: 'Desativa Habilidades Características.'
-    },
-    immobilize: {
-        keys: ['Imobilização', 'Immobilize'],
-        name: 'Imobilização',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Immobilize.webp',
-        stacks: 1,
-        detailed: 'Impede o personagem de se mover.',
-        explicacao: 'Impede o personagem de se mover.'
-    },
-    inverse_polarity: {
-        keys: ['Polaridade Inversa', 'Inverse Polarity'],
-        name: 'Polaridade Inversa',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/InversePolarity.webp',
-        stacks: 1,
-        detailed: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.',
-        explicacao: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.'
-    },
-    heal_block: {
-        keys: ['Bloqueio de Cura', 'Heal Block'],
-        name: 'Bloqueio de Cura',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/HealBlock.webp',
-        stacks: 1,
-        detailed: 'Bloqueia todo tipo de cura.',
-        explicacao: 'Impede o personagem de ser curado.'
-    },
-    lock_block: {
-        keys: ['Desativar Blockbusters', 'Lock Block Buster', 'Desativar Blockbuster'],
-        name: 'Desativar Blockbusters',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/LockBlock.webp',
-        stacks: 1,
-        detailed: 'Desativa BLOCKBUSTER.',
-        explicacao: 'Bloqueia o uso de Blockbusters e não permite carregar Blockbusters pendentes.'
-    },
-    lock_special: {
-        keys: ['Desativar Especiais', 'Lock Special', 'Desabilitam GOLPES ESPECIAIS'],
-        name: 'Desativar Especiais',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/LockSpecial.webp',
-        stacks: 1,
-        detailed: 'Desativa GOLPES ESPECIAIS.',
-        explicacao: 'Bloqueia o uso de Golpes Especiais e desativa a Recarga dos Golpes Especiais.'
-    },
-    lock_tag: {
-        keys: ['Desativar Assistências', 'Lock Tag', 'Desativar Assistência'],
-        name: 'Desativar Assistências',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/LockTag.webp',
-        stacks: 1,
-        detailed: 'Desativa ASSISTÊNCIAS.',
-        explicacao: 'Bloqueia Assistências e impede a recarga da Assistência.'
-    },
-    power_surge: {
-        keys: ['Oscilação de Energia', 'Power Surge'],
-        name: 'Oscilação de Energia',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/PowerSurge.webp',
-        stacks: 5,
-        scaling: '5% > 10% > 15% > 20% > 25%',
-        detailed: 'Sofra dano igual a 5% da VIDA MÁXIMA ao usar um BLOCKBUSTER.',
-        explicacao: 'Sofre 5% de dano igual a sua Vida Máxima ao usar Blockbuster.'
-    },
-    quietus: {
-        keys: ['Quietus'],
-        name: 'Quietus',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Quietus.webp',
-        stacks: 1,
-        detailed: 'A RESITÊNCIA da vítima é ignorada e os efeitos de RESISTÊNCIA FINAL e BENÇÃO são contornados.',
-        explicacao: 'Ignora Resistência, Resistência Final e Benção.'
-    },
-    slime: {
-        keys: ['Gosma', 'Slime'],
-        name: 'Gosma',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Slime.webp',
-        stacks: 5,
-        scaling: '2% > 4% > 6% > 8% > 10%',
-        detailed: 'Sofra dano igual a 2% VIDA MÁXIMA sempre que um EF. POSITIVO for recebido.',
-        explicacao: 'Sofre 2% de dano igual a sua Vida Máxima ao ganhar EF. POS.'
-    },
-    slow: {
-        keys: ['Lentidão', 'Slow'],
-        name: 'Lentidão',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Slow.webp',
-        stacks: 5,
-        scaling: '50% > 100% > 150% > 200% > 250%',
-        detailed: 'Diminui a velocidade de ganho do MEDIDOR DE BLOCKBUSTER em 50%.',
-        explicacao: 'Seus Blockbuster demoram -50% para carregar. Remove Aceleração.'
-    },
-    stun: {
-        keys: ['Atordoamento', 'Stun'],
-        name: 'Atordoamento',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Stun.webp',
-        stacks: 1,
-        detailed: 'Atordoa a vítima.',
-        explicacao: 'Atordoamento impede todas as ações até o efeito expirar.'
-    },
-    wither: {
-        keys: ['Definhar', 'Wither'],
-        name: 'Definhar',
-        type: 'debuff',
-        color: '#ff4444',
-        icon: 'img/modifiers/debuffs/Wither.webp',
-        stacks: 5,
-        scaling: '5% > 10% > 15% > 20% > 25%',
-        detailed: 'Perca 10% a cada segundo no MEDIDOR DE BLOCKBUSTER.',
-        explicacao: 'Remove 5% de Medidor de Blockbuster por segundo.'
-    }
+  // --- EFEITOS NEGATIVOS (DEBUFFS) ---
+  armor_break: {
+    keys: ['Quebra de Armadura', 'Armor Break', 'Quebra de Arm.'],
+    name: 'Quebra de Armadura',
+    name_en: 'Armor Break',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/ArmorBreak.webp',
+    stacks: 1,
+    detailed: 'Aumenta o dano sofrido em 20%.',
+    detailed_en: 'Increases damage taken by 20%.',
+    explicacao: '+20% dano recebido. Remove Armadura.',
+    explicacao_en: '+20% damage received. Removes Armor.'
+  },
+  bleed: {
+    keys: ['Sangramento', 'Bleed'],
+    name: 'Sangramento',
+    name_en: 'Bleed',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Bleed.webp',
+    stacks: 5,
+    scaling: '1% > 2% > 3% > 4% > 5%',
+    detailed: 'Drena 1% da VIDA MÁXIMA da vítima a cada segundo.',
+    detailed_en: 'Drains 1% of the victim\'s MAX HEALTH every second.',
+    explicacao: 'Remove 1% da Vida Máxima por Segundo até 1 de Vida. Remove Regeneração.',
+    explicacao_en: 'Removes 1% of Max Health per second down to 1 HP. Removes Regen.'
+  },
+  cripple: {
+    keys: ['Incapacitação', 'Cripple'],
+    name: 'Incapacitação',
+    name_en: 'Cripple',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Cripple.webp',
+    stacks: 1,
+    detailed: 'Reduz o dano infligido em 20%.',
+    detailed_en: 'Reduces damage dealt by 20%.',
+    explicacao: '-20% dano causado. Remove Fúria.',
+    explicacao_en: '-20% damage dealt. Removes Enrage.'
+  },
+  curse: {
+    keys: ['Maldição', 'Curse'],
+    name: 'Maldição',
+    name_en: 'Curse',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Curse.webp',
+    stacks: 1,
+    detailed: 'Impede de ganhar EFEITOS POSITIVOS.',
+    detailed_en: 'Prevents gaining BUFFS.',
+    explicacao: 'Impede o ganho de novos Efeitos Positivos.',
+    explicacao_en: 'Prevents gaining new Buffs.'
+  },
+  death_mark: {
+    keys: ['Marca da Morte', 'Death Mark'],
+    name: 'Marca da Morte',
+    name_en: 'Death Mark',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/DeathMark.webp',
+    stacks: 1,
+    detailed: 'Aumenta em 50% o dano sofrido por CRÍTICOS e reduz em 50% a CAPACIDADE DE BLOQUEIO.',
+    detailed_en: 'Increases damage taken from CRITS by 50% and reduces BLOCK CAPACITY by 50%.',
+    explicacao: 'Aumenta em +50% o Dano Sofrido por Críticos e reduz em 50% a Capacidade de Bloqueio.',
+    explicacao_en: 'Increases Critical damage taken by +50% and reduces Block Capacity by 50%.'
+  },
+  doom: {
+    keys: ['Destruição', 'Doom'],
+    name: 'Destruição',
+    name_en: 'Doom',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Doom.webp',
+    stacks: 1,
+    detailed: 'APÓS X segundos, o lutador afetado é morto.',
+    detailed_en: 'AFTER X seconds, the affected fighter is killed.',
+    explicacao: 'Morte instantânea ao expirar. Ignora Invencibilidade.',
+    explicacao_en: 'Instant death upon expiration. Ignores Invincible.'
+  },
+  fatigue: {
+    keys: ['Fadiga', 'Fatigue'],
+    name: 'Fadiga',
+    name_en: 'Fatigue',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Fatigue.webp',
+    stacks: 1,
+    detailed: 'ASSISTÊNCIAS E GOLPES ESPECIAIS levem o dobro do tempo para reativar. Após X segundos, o Lutador atingido tem 50% de chance de ficar ATORDOADO por 2 seg.',
+    detailed_en: 'ASSISTS and SPECIAL MOVES take double the time to reactivate. After X seconds, the affected Fighter has a 50% chance to be STUNNED for 2 sec.',
+    explicacao: 'Recarga de Golpes Especiais e Assistência 50% mais lenta, ao expirar tem 50% de chance infligir Atordoamento.',
+    explicacao_en: 'Special Moves and Assist cooldown 50% slower, upon expiration has a 50% chance to inflict Stun.'
+  },
+  guard_break: {
+    keys: ['Quebra de Guarda', 'Guard Break'],
+    name: 'Quebra de Guarda',
+    name_en: 'Guard Break',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Guard_Break.webp',
+    stacks: 5,
+    scaling: '10% > 20% > 30% > 40% > 50%',
+    detailed: '10% de chance do bloqueio falhar durante um BLOQUEIO.',
+    detailed_en: '10% chance for blocking to fail during a BLOCK.',
+    explicacao: '10% chance de falhar a Guarda. Remove Bloqueio Automático.',
+    explicacao_en: '10% chance to fail a Guard. Removes Auto Block.'
+  },
+  heavy_bleed: {
+    keys: ['Sangramento Forte', 'Heavy Bleed'],
+    name: 'Sangramento Forte',
+    name_en: 'Heavy Bleed',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/HeavyBleed.webp',
+    stacks: 1,
+    detailed: 'Drena 2% da VIDA MÁXIMA da vítima a cada segundo.',
+    detailed_en: 'Drains 2% of the victim\'s MAX HEALTH every second.',
+    explicacao: 'Remove 2% da Vida Máxima por Segundo. Remove Regeneração.',
+    explicacao_en: 'Removes 2% of Max Health per second. Removes Regen.'
+  },
+  hex: {
+    keys: ['Feitiço', 'Hex'],
+    name: 'Feitiço',
+    name_en: 'Hex',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Hex.webp',
+    stacks: 1,
+    detailed: 'HABILIDADES CARACTERÍSTICAS desativadas.',
+    detailed_en: 'SIGNATURE ABILITIES disabled.',
+    explicacao: 'Desativa Habilidades Características.',
+    explicacao_en: 'Disables Signature Abilities.'
+  },
+  immobilize: {
+    keys: ['Imobilização', 'Immobilize'],
+    name: 'Imobilização',
+    name_en: 'Immobilize',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Immobilize.webp',
+    stacks: 1,
+    detailed: 'Impede o personagem de se mover.',
+    detailed_en: 'Prevents the character from moving.',
+    explicacao: 'Impede o personagem de se mover.',
+    explicacao_en: 'Prevents the character from moving.'
+  },
+  inverse_polarity: {
+    keys: ['Polaridade Inversa', 'Inverse Polarity'],
+    name: 'Polaridade Inversa',
+    name_en: 'Inverse Polarity',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/InversePolarity.webp',
+    stacks: 1,
+    detailed: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.',
+    detailed_en: 'Inverts any type of Regeneration and deals damage instead of healing.',
+    explicacao: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.',
+    explicacao_en: 'Inverts any type of Regeneration and deals damage instead of healing.'
+  },
+  heal_block: {
+    keys: ['Bloqueio de Cura', 'Heal Block'],
+    name: 'Bloqueio de Cura',
+    name_en: 'Heal Block',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/HealBlock.webp',
+    stacks: 1,
+    detailed: 'Bloqueia todo tipo de cura.',
+    detailed_en: 'Blocks all types of healing.',
+    explicacao: 'Impede o personagem de ser curado.',
+    explicacao_en: 'Prevents the character from being healed.'
+  },
+  lock_block: {
+    keys: ['Desativar Blockbusters', 'Lock Block Buster', 'Desativar Blockbuster'],
+    name: 'Desativar Blockbusters',
+    name_en: 'Lock Blockbuster',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/LockBlock.webp',
+    stacks: 1,
+    detailed: 'Desativa BLOCKBUSTER.',
+    detailed_en: 'Disables BLOCKBUSTERS.',
+    explicacao: 'Bloqueia o uso de Blockbusters e não permite carregar Blockbusters pendentes.',
+    explicacao_en: 'Blocks the use of Blockbusters and prevents charging pending Blockbusters.'
+  },
+  lock_special: {
+    keys: ['Desativar Especiais', 'Lock Special', 'Desabilitam GOLPES ESPECIAIS'],
+    name: 'Desativar Especiais',
+    name_en: 'Lock Special',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/LockSpecial.webp',
+    stacks: 1,
+    detailed: 'Desativa GOLPES ESPECIAIS.',
+    detailed_en: 'Disables SPECIAL MOVES.',
+    explicacao: 'Bloqueia o uso de Golpes Especiais e desativa a Recarga dos Golpes Especiais.',
+    explicacao_en: 'Blocks the use of Special Moves and disables Special Move cooldowns.'
+  },
+  lock_tag: {
+    keys: ['Desativar Assistências', 'Lock Tag', 'Desativar Assistência'],
+    name: 'Desativar Assistências',
+    name_en: 'Lock Tag Out',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/LockTag.webp',
+    stacks: 1,
+    detailed: 'Desativa ASSISTÊNCIAS.',
+    detailed_en: 'Disables ASSISTS.',
+    explicacao: 'Bloqueia Assistências e impede a recarga da Assistência.',
+    explicacao_en: 'Blocks Assists and prevents Assist cooldown.'
+  },
+  power_surge: {
+    keys: ['Oscilação de Energia', 'Power Surge'],
+    name: 'Oscilação de Energia',
+    name_en: 'Power Surge',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/PowerSurge.webp',
+    stacks: 5,
+    scaling: '5% > 10% > 15% > 20% > 25%',
+    detailed: 'Sofra dano igual a 5% da VIDA MÁXIMA ao usar um BLOCKBUSTER.',
+    detailed_en: 'Suffer damage equal to 5% of MAX HEALTH when using a BLOCKBUSTER.',
+    explicacao: 'Sofre 5% de dano igual a sua Vida Máxima ao usar Blockbuster.',
+    explicacao_en: 'Suffers 5% damage equal to your Max Health when using a Blockbuster.'
+  },
+  quietus: {
+    keys: ['Quietus'],
+    name: 'Quietus',
+    name_en: 'Quietus',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Quietus.webp',
+    stacks: 1,
+    detailed: 'A RESITÊNCIA da vítima é ignorada e os efeitos de RESISTÊNCIA FINAL e BENÇÃO são contornados.',
+    detailed_en: 'The victim\'S RESISTANCE is ignored and FINAL STAND and BLESSING effects are bypassed.',
+    explicacao: 'Ignora Resistência, Resistência Final e Benção.',
+    explicacao_en: 'Ignores Resistance, Final Stand and Blessing.'
+  },
+  slime: {
+    keys: ['Gosma', 'Slime'],
+    name: 'Gosma',
+    name_en: 'Slime',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Slime.webp',
+    stacks: 5,
+    scaling: '2% > 4% > 6% > 8% > 10%',
+    detailed: 'Sofra dano igual a 2% VIDA MÁXIMA sempre que um EF. POSITIVO for recebido.',
+    detailed_en: 'Suffer damage equal to 2% MAX HEALTH whenever a BUFF is received.',
+    explicacao: 'Sofre 2% de dano igual a sua Vida Máxima ao ganhar EF. POS.',
+    explicacao_en: 'Suffers 2% damage equal to your Max Health when gaining a Buff.'
+  },
+  slow: {
+    keys: ['Lentidão', 'Slow'],
+    name: 'Lentidão',
+    name_en: 'Slow',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Slow.webp',
+    stacks: 5,
+    scaling: '50% > 100% > 150% > 200% > 250%',
+    detailed: 'Diminui a velocidade de ganho do MEDIDOR DE BLOCKBUSTER em 50%.',
+    detailed_en: 'Decreases BLOCKBUSTER METER gain speed by 50%.',
+    explicacao: 'Seus Blockbuster demoram -50% para carregar. Remove Aceleração.',
+    explicacao_en: 'Your Blockbusters take 50% longer to charge. Removes Haste.'
+  },
+  stun: {
+    keys: ['Atordoamento', 'Stun'],
+    name: 'Atordoamento',
+    name_en: 'Stun',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Stun.webp',
+    stacks: 1,
+    detailed: 'Atordoa a vítima.',
+    detailed_en: 'Stuns the victim.',
+    explicacao: 'Atordoamento impede todas as ações até o efeito expirar.',
+    explicacao_en: 'Stun prevents all actions until the effect expires.'
+  },
+  wither: {
+    keys: ['Definhar', 'Wither'],
+    name: 'Definhar',
+    name_en: 'Wither',
+    type: 'debuff',
+    color: '#ff4444',
+    icon: 'img/modifiers/debuffs/Wither.webp',
+    stacks: 5,
+    scaling: '5% > 10% > 15% > 20% > 25%',
+    detailed: 'Perca 10% a cada segundo no MEDIDOR DE BLOCKBUSTER.',
+    detailed_en: 'Lose 10% per second from the BLOCKBUSTER METER.',
+    explicacao: 'Remove 5% de Medidor de Blockbuster por segundo.',
+    explicacao_en: 'Removes 5% Blockbuster Meter per second.'
+  }
 };
 
 /**
@@ -489,16 +630,36 @@ export const EFFECT_DATA = {
  * @returns {Array<{pattern: string, effectKey: string}>}
  */
 export function getEffectPatterns() {
-    const patterns = [];
-    for (const [effectKey, effect] of Object.entries(EFFECT_DATA)) {
-        // Auto-highlight buffs, debuffs, AND buff-term/debuff-term (generic effect names)
-        if (effect.type === 'buff' || effect.type === 'debuff' || effect.type === 'buff-term' || effect.type === 'debuff-term') {
-            for (const key of effect.keys) {
-                patterns.push({ pattern: key, effectKey });
-            }
-        }
+  const patterns = [];
+  for (const [effectKey, effect] of Object.entries(EFFECT_DATA)) {
+    // Auto-highlight buffs, debuffs, AND buff-term/debuff-term (generic effect names)
+    if (effect.type === 'buff' || effect.type === 'debuff' || effect.type === 'buff-term' || effect.type === 'debuff-term') {
+      for (const key of effect.keys) {
+        patterns.push({ pattern: key, effectKey });
+      }
     }
-    // Sort by pattern length descending so longer matches take priority
-    patterns.sort((a, b) => b.pattern.length - a.pattern.length);
-    return patterns;
+  }
+  // Sort by pattern length descending so longer matches take priority
+  patterns.sort((a, b) => b.pattern.length - a.pattern.length);
+  return patterns;
+}
+
+/**
+ * Get localized effect data for a given key and language.
+ * Falls back to PT-BR if English fields are missing or language is pt-BR.
+ * @param {string} key - Effect key in EFFECT_DATA
+ * @param {string} [lang] - Language code ('pt-BR' or 'en'). Defaults to current language.
+ * @returns {object|null} Localized effect entry or null if key not found
+ */
+export function getLocalizedEffect(key, lang) {
+  if (!lang) lang = getCurrentLanguage();
+  const effect = EFFECT_DATA[key];
+  if (!effect) return null;
+  if (lang === 'pt-BR' || !effect.name_en) return effect;
+  return {
+    ...effect,
+    name: effect.name_en,
+    detailed: effect.detailed_en || effect.detailed,
+    explicacao: effect.explicacao_en || effect.explicacao
+  };
 }

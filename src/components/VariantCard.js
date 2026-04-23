@@ -5,7 +5,6 @@ import { getState } from '../state/store.js';
 import { getLocalizedClassName, getLocalizedVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
 import { isNewVariant } from '../data/newContent.js';
-import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
 import { t, getCurrentLanguage, getLocalizedNameSync, getLocalizedAbilityNameSync, getLocalizedSADescSync } from '../i18n/index.js';
 
 /**

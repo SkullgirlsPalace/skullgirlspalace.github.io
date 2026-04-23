@@ -6,7 +6,8 @@
 import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar } from '../state/store.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getCharacters } from '../services/dataService.js';
-import { t, getCurrentLanguage, getElementMap, getRarityLabels } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
+import { getElementMap, getRarityLabels } from '../config/constants.js';
 
 /**
  * Create filter bar HTML

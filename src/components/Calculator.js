@@ -5,7 +5,17 @@
 // =====================================================
 
 import { formatNumber } from '../utils/formatters.js';
-import { t } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
+
+function guildaTierLabel(tier) {
+    const map = {
+        bronze: t('rarity.bronze'),
+        prata: t('rarity.silver'),
+        ouro: t('rarity.gold'),
+        diamante: t('rarity.diamond')
+    };
+    return map[tier] || tier;
+}
 
 // Store loaded data
 let statsData = null;
@@ -28,7 +38,7 @@ export function createCalculator() {
   <div class="calculator-box">
     <!-- TAB BAR -->
     <div class="calc-tab-bar">
-      <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')"><img loading="lazy" src="img/official/CanopyCoin.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> ${t('calc.earnings')}</button>
+      <button class="calc-tab active" data-tab="ganhos" onclick="switchCalcTab('ganhos')"><img loading="lazy" src="img/official/CanopyCoin.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.altCoins')}"> ${t('calc.earnings')}</button>
       <button class="calc-tab" data-tab="custos" onclick="switchCalcTab('custos')">📈 ${t('calc.costs')}</button>
     </div>
 
@@ -71,18 +81,18 @@ export function createCalculator() {
 
               <span class="toggle-label">${t('calc.pfCharacter')}</span>
               <div class="toggle-group exclusive" id="dp-faixa-toggles">
-                <button class="toggle-btn" data-source="bronze" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> ${t('rarity.bronze')}</button>
-                <button class="toggle-btn" data-source="prata" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> ${t('rarity.silver')}</button>
-                <button class="toggle-btn" data-source="ouro" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> ${t('rarity.gold')}</button>
-                <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> ${t('rarity.diamond')}</button>
+                <button class="toggle-btn" data-source="bronze" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.bronze')}"> ${t('rarity.bronze')}</button>
+                <button class="toggle-btn" data-source="prata" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.silver')}"> ${t('rarity.silver')}</button>
+                <button class="toggle-btn" data-source="ouro" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.gold')}"> ${t('rarity.gold')}</button>
+                <button class="toggle-btn active" data-source="diamante" data-type="dpFaixa"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.diamond')}"> ${t('rarity.diamond')}</button>
                 <button class="toggle-btn off" data-source="nenhum" data-type="dpFaixa">${t('calc.noParticipate')}</button>
               </div>
 
               <span class="toggle-label">${t('calc.pfRanking')}</span>
               <div class="toggle-group exclusive" id="dp-rank-toggles">
-                <button class="toggle-btn" data-source="top10percent" data-type="dpRank">Top 10%</button>
-                <button class="toggle-btn active" data-source="top30percent" data-type="dpRank">Top 30%</button>
-                <button class="toggle-btn" data-source="top60percent" data-type="dpRank">Top 60%</button>
+                <button class="toggle-btn" data-source="top10percent" data-type="dpRank">${t('calc.top10')}</button>
+                <button class="toggle-btn active" data-source="top30percent" data-type="dpRank">${t('calc.top30')}</button>
+                <button class="toggle-btn" data-source="top60percent" data-type="dpRank">${t('calc.top60')}</button>
               </div>
 
               <span class="toggle-label">${t('calc.pfMonthly')}</span>
@@ -94,8 +104,8 @@ export function createCalculator() {
 
               <span class="toggle-label">${t('calc.pfMedicis')}</span>
               <div class="toggle-group exclusive" id="dp-medicis-toggles">
-                <button class="toggle-btn" data-source="top100" data-type="dpMedicis">Top 100</button>
-                <button class="toggle-btn active" data-source="top10percent" data-type="dpMedicis">Top 10%</button>
+                <button class="toggle-btn" data-source="top100" data-type="dpMedicis">${t('calc.top100')}</button>
+                <button class="toggle-btn active" data-source="top10percent" data-type="dpMedicis">${t('calc.top10')}</button>
                 <button class="toggle-btn off" data-source="nenhum" data-type="dpMedicis">${t('calc.noParticipate')}</button>
               </div>
             </div>
@@ -131,10 +141,10 @@ export function createCalculator() {
 
               <span class="toggle-label">${t('calc.battleTier')}</span>
               <div class="toggle-group exclusive" id="guilda-tier-toggles">
-                <button class="toggle-btn" data-source="bronze" data-type="guildaTier"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> ${t('rarity.bronze')}</button>
-                <button class="toggle-btn" data-source="prata" data-type="guildaTier"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> ${t('rarity.silver')}</button>
-                <button class="toggle-btn" data-source="ouro" data-type="guildaTier"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> ${t('rarity.gold')}</button>
-                <button class="toggle-btn active" data-source="diamante" data-type="guildaTier"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> ${t('rarity.diamond')}</button>
+                <button class="toggle-btn" data-source="bronze" data-type="guildaTier"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.bronze')}"> ${t('rarity.bronze')}</button>
+                <button class="toggle-btn" data-source="prata" data-type="guildaTier"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.silver')}"> ${t('rarity.silver')}</button>
+                <button class="toggle-btn" data-source="ouro" data-type="guildaTier"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.gold')}"> ${t('rarity.gold')}</button>
+                <button class="toggle-btn active" data-source="diamante" data-type="guildaTier"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.diamond')}"> ${t('rarity.diamond')}</button>
                 <button class="toggle-btn off" data-source="nenhum" data-type="guildaTier">${t('calc.noParticipateGuild')}</button>
               </div>
 
@@ -154,7 +164,7 @@ export function createCalculator() {
 
         <div class="calc-results">
           <div id="earnings-result" class="result-box">
-            <h4><img loading="lazy" src="img/official/Theonite.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Teonita"> ${t('calc.estimatedResult')}</h4>
+            <h4><img loading="lazy" src="img/official/Theonite.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.altTheonite')}"> ${t('calc.estimatedResult')}</h4>
             <div class="result-grid">
               <div class="result-card coins">
                 <span class="result-label">${t('calc.monthlyCoins')}</span>
@@ -184,10 +194,10 @@ export function createCalculator() {
 
               <span class="toggle-label">${t('calc.moveRarity')}</span>
               <div class="toggle-group exclusive" id="golpe-raridade-toggles">
-                <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> ${t('rarity.bronze')}</button>
-                <button class="toggle-btn" data-source="prata" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> ${t('rarity.silver')}</button>
-                <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> ${t('rarity.gold')}</button>
-                <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> ${t('rarity.diamond')}</button>
+                <button class="toggle-btn" data-source="bronze" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.bronze')}"> ${t('rarity.bronze')}</button>
+                <button class="toggle-btn" data-source="prata" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.silver')}"> ${t('rarity.silver')}</button>
+                <button class="toggle-btn" data-source="ouro" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.gold')}"> ${t('rarity.gold')}</button>
+                <button class="toggle-btn active" data-source="diamante" data-type="golpeRaridade"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.diamond')}"> ${t('rarity.diamond')}</button>
                 <button class="toggle-btn off" data-source="nenhum" data-type="golpeRaridade">${t('calc.noMoves')}</button>
               </div>
 
@@ -197,9 +207,9 @@ export function createCalculator() {
 
               <span class="toggle-label">${t('calc.desiredLevel')}</span>
               <div class="toggle-group exclusive" id="golpe-nivel-toggles">
-                <button class="toggle-btn" data-source="9" data-type="golpeNivel">Lv 9</button>
-                <button class="toggle-btn" data-source="12" data-type="golpeNivel">Lv 12</button>
-                <button class="toggle-btn active" data-source="15" data-type="golpeNivel">Lv 15</button>
+                <button class="toggle-btn" data-source="9" data-type="golpeNivel">${t('calc.lv')} 9</button>
+                <button class="toggle-btn" data-source="12" data-type="golpeNivel">${t('calc.lv')} 12</button>
+                <button class="toggle-btn active" data-source="15" data-type="golpeNivel">${t('calc.lv')} 15</button>
                 <button class="toggle-btn" data-source="custom" data-type="golpeNivel">${t('calc.custom')}</button>
               </div>
 
@@ -229,10 +239,10 @@ export function createCalculator() {
 
               <span class="toggle-label">${t('calc.astroRarity')}</span>
               <div class="toggle-group exclusive" id="astro-raridade-toggles">
-                <button class="toggle-btn" data-source="bronze" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Bronze"> ${t('rarity.bronze')} (Lv 5)</button>
-                <button class="toggle-btn" data-source="prata" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Prata"> ${t('rarity.silver')} (Lv 10)</button>
-                <button class="toggle-btn" data-source="ouro" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Ouro"> ${t('rarity.gold')} (Lv 15)</button>
-                <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="Diamante"> ${t('rarity.diamond')} (Lv 20)</button>
+                <button class="toggle-btn" data-source="bronze" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_bronze.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.bronze')}"> ${t('rarity.bronze')} (${t('calc.lv')} 5)</button>
+                <button class="toggle-btn" data-source="prata" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_prata.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.silver')}"> ${t('rarity.silver')} (${t('calc.lv')} 10)</button>
+                <button class="toggle-btn" data-source="ouro" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_ouro.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.gold')}"> ${t('rarity.gold')} (${t('calc.lv')} 15)</button>
+                <button class="toggle-btn active" data-source="diamante" data-type="astroRaridade"><img loading="lazy" src="img/official/icone_diamante.webp" style="height: 1.2em; vertical-align: -0.2em; margin-right: 0.2rem;" alt="${t('rarity.diamond')}"> ${t('rarity.diamond')} (${t('calc.lv')} 20)</button>
                 <button class="toggle-btn" data-source="custom" data-type="astroRaridade">${t('calc.custom')}</button>
                 <button class="toggle-btn off" data-source="nenhum" data-type="astroRaridade">${t('calc.noAstro')}</button>
               </div>
@@ -257,7 +267,7 @@ export function createCalculator() {
 
         <div class="calc-results">
           <div id="build-cost-result" class="result-box">
-            <h4><img loading="lazy" src="img/official/CanopyCoin.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> ${t('calc.totalBuildCost')}</h4>
+            <h4><img loading="lazy" src="img/official/CanopyCoin.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.altCoins')}"> ${t('calc.totalBuildCost')}</h4>
             <div id="build-cost-breakdown" class="breakdown-box styled"></div>
           </div>
         </div>
@@ -437,7 +447,7 @@ export function initToggleButtons() {
 export function updateDiamanteSlider(value) {
   const display = document.getElementById('diamante-pontos-display');
   if (display) {
-    display.textContent = parseInt(value).toLocaleString('pt-BR');
+    display.textContent = parseInt(value).toLocaleString(getCurrentLanguage() === 'en' ? 'en-US' : 'pt-BR');
   }
   calculateEarnings();
 }
@@ -554,7 +564,7 @@ export function calculateEarnings() {
     totalTeonita += dpTeonitaTotal;
 
     breakdown.push({
-      nome: `PF ${rarityLabel(dpFaixa)}`,
+      nome: `${t('calc.pf')} ${rarityLabel(dpFaixa)}`,
       coins: dpTotal,
       teonita: dpTeonitaTotal
     });
@@ -566,7 +576,7 @@ export function calculateEarnings() {
     const mensalTeonita = disputas.mensal?.rankings?.padrao?.teonita || 0;
     totalCoins += mensalCoins;
     totalTeonita += mensalTeonita;
-    breakdown.push({ nome: 'PF ' + t('calc.pfMonthly').replace(/PF /, ''), coins: mensalCoins, teonita: mensalTeonita });
+    breakdown.push({ nome: t('calc.pfMonthly'), coins: mensalCoins, teonita: mensalTeonita });
   }
 
   // === DP MEDICIS ===
@@ -578,7 +588,7 @@ export function calculateEarnings() {
     const medicisFreq = disputas.medicis?.regra?.ocorrenciasMensais || 4;
     const medicisTotal = (medicisPadrao + medicisRankBonus) * medicisFreq;
     totalCoins += medicisTotal;
-    breakdown.push({ nome: 'PF ' + t('calc.pfMedicis').replace(/PF /, ''), coins: medicisTotal });
+    breakdown.push({ nome: t('calc.pfMedicis'), coins: medicisTotal });
   }
 
   // === REINOS PARALELOS ===
@@ -590,7 +600,13 @@ export function calculateEarnings() {
     const reinoFreq = reinos.regra?.ocorrenciasMensais || 9;
     const reinoTotal = reinoReward * reinoFreq;
     totalCoins += reinoTotal;
-    const reinoNome = reinos.dificuldades?.[reinosDif]?.nome || reinosDif;
+        const reinoNome = reinosDif === 'basico' ? t('calc.basic')
+            : reinosDif === 'avancado' ? t('calc.advanced')
+            : reinosDif === 'especialista' ? t('calc.expert')
+            : reinosDif === 'mestre' ? t('calc.master')
+            : reinosDif === 'pesadelo' ? t('calc.nightmare')
+            : reinosDif === 'semDo' ? t('calc.noMercy')
+            : (reinos.dificuldades?.[reinosDif]?.nome || reinosDif);
     breakdown.push({ nome: `${t('calc.parallelRealms')} (${reinoNome})`, coins: reinoTotal });
   }
 
@@ -620,7 +636,7 @@ export function calculateEarnings() {
 
       const tierTotal = tierReward * 4; // 4 batalhas semanais por m\u00EAs
       totalCoins += tierTotal;
-      breakdown.push({ nome: `${t('calc.guild')} (${tierData.nome})`, coins: tierTotal });
+        breakdown.push({ nome: `${t('calc.guild')} (${guildaTierLabel(guildaTier)})`, coins: tierTotal });
     }
   }
 
@@ -781,7 +797,7 @@ export function calculateBuildCost() {
         </li>
         ${golpesResult.custoPersonagem ? `
         <li>
-          <span>${t('calc.characterRarity')} ${rarityLabel(golpesResult.raridade)}${golpesResult.isShiny ? ' shiny' : ''}</span>
+          <span>${t('calc.characterRarity')} ${rarityLabel(golpesResult.raridade)}${golpesResult.isShiny ? t('calc.shiny') : ''}</span>
           <span class="value">${formatNumber(golpesResult.custoPersonagem)}</span>
         </li>
         ` : ''}
@@ -809,7 +825,7 @@ export function calculateBuildCost() {
   html += `
   <div class="cost-total">
     <div class="total-row">
-      <span class="total-label"><img loading="lazy" src="img/official/CanopyCoin.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="Moedas"> ${t('calc.totalCoins')}</span>
+      <span class="total-label"><img loading="lazy" src="img/official/CanopyCoin.webp" style="height: 1.8em; vertical-align: -0.4em; margin-right: 0.2rem;" alt="${t('calc.altCoins')}"> ${t('calc.totalCoins')}</span>
       <span class="total-value coins">${formatNumber(totalCoins)}</span>
     </div>
     ${totalPo > 0 ? `

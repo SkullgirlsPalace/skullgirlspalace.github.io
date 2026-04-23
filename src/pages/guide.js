@@ -3,8 +3,8 @@
 // Tutorials, Buffs, and Debuffs reference
 // =====================================================
 
-import { EFFECT_DATA } from '../data/effectData.js';
-import { ATTRIBUTE_DATA } from '../data/attributeData.js';
+import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
+import { ATTRIBUTE_DATA, getLocalizedAttribute } from '../data/attributeData.js';
 import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
 import { formatConstraint } from '../utils/formatters.js';
@@ -240,7 +240,7 @@ function renderEffects(type, containerId) {
 
   const effects = Object.entries(EFFECT_DATA)
     .filter(([key, e]) => e.type === type && key !== 'permanent_modifier')
-    .map(([key, e]) => e)
+    .map(([key, e]) => getLocalizedEffect(key) || e)
     .sort((a, b) => a.name.localeCompare(b.name));
 
   let html = '';
@@ -390,7 +390,7 @@ function renderSpecialEffects(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  const effect = EFFECT_DATA.permanent_modifier;
+  const effect = getLocalizedEffect('permanent_modifier') || EFFECT_DATA.permanent_modifier;
   if (!effect) return;
 
   const stacks = effect.stacks ? `${effect.stacks}x` : '-';
@@ -497,10 +497,11 @@ function renderBossCard(mods) {
 }
 
 function getCategoryClass(name) {
-  if (name.toLowerCase().includes('forte')) return 'cat-strong';
-  if (name.toLowerCase().includes('bom')) return 'cat-good';
-  if (name.toLowerCase().includes('mediano')) return 'cat-medium';
-  if (name.toLowerCase().includes('ruim')) return 'cat-weak';
+  const n = name.toLowerCase();
+  if (n.includes('forte') || n.includes('strong')) return 'cat-strong';
+  if (n.includes('bom') || n.includes('good')) return 'cat-good';
+  if (n.includes('mediano') || n.includes('average')) return 'cat-medium';
+  if (n.includes('ruim') || n.includes('weak')) return 'cat-weak';
   return '';
 }
 
@@ -552,7 +553,7 @@ function renderGlossary() {
   });
 
   const cards = glossaryKeys.map(key => {
-    const attr = ATTRIBUTE_DATA[key];
+    const attr = getLocalizedAttribute(key) || ATTRIBUTE_DATA[key];
     const maxLabel = attr.max && attr.max !== 'Indefinido'
       ? `<span class="attribute-max">${t('tooltip.maxLabel')}${attr.max}</span>`
       : (attr.max === 'Indefinido' ? `<span class="attribute-max">${t('tooltip.maxLabel')}${t('guide.maxUndefined')}</span>` : '');

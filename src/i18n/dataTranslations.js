@@ -112,61 +112,6 @@ export async function getEnglishAbilityName(ptName) {
 }
 
 /**
- * Get English SA1 for a variant
- * @param {string} ptName - PT-BR variant name
- * @returns {Promise<string>} English SA1 or empty string
- */
-export async function getEnglishSA1(ptName) {
-  const mapping = await buildNameMapping();
-  const cleanPtName = cleanName(ptName);
-  return mapping[cleanPtName]?.SA1 || '';
-}
-
-/**
- * Get English SA2 for a variant
- * @param {string} ptName - PT-BR variant name
- * @returns {Promise<string>} English SA2 or empty string
- */
-export async function getEnglishSA2(ptName) {
-  const mapping = await buildNameMapping();
-  const cleanPtName = cleanName(ptName);
-  return mapping[cleanPtName]?.SA2 || '';
-}
-
-/**
- * Get full English signature ability description
- * @param {string} ptName - PT-BR variant name
- * @returns {Promise<string>} Formatted English ability description
- */
-export async function getEnglishSignatureAbility(ptName) {
-  const mapping = await buildNameMapping();
-  const cleanPtName = cleanName(ptName);
-  const data = mapping[cleanPtName];
-
-  if (!data || !data.SA1) {
-    return '';
-  }
-
-  let desc = `[SA1]: ${data.SA1}`;
-  if (data.SA2) {
-    desc += `\n\n[SA2]: ${data.SA2}`;
-  }
-
-  return desc;
-}
-
-/**
- * Get English variant data for a PT-BR variant name
- * @param {string} ptName - Variant name in PT-BR
- * @returns {Promise<Object|null>} English variant data or null
- */
-export async function getEnglishVariantData(ptName) {
-  const mapping = await buildNameMapping();
-  const cleanPtName = cleanName(ptName);
-  return mapping[cleanPtName] || null;
-}
-
-/**
  * Preload all Krazete data for faster access
  */
 export async function preloadKrazeteData() {
@@ -199,98 +144,10 @@ export async function getLocalizedAbilityName(ptName, abilityNamePTBR) {
   }
   return getEnglishAbilityName(ptName);
 }
-
-/**
- * Clear cached mapping (call when language changes)
- */
-export function clearTranslationCache() {
-  // Keep nameMapping intact - it's the source of reverse lookups
-  // The language check in sync functions handles PT-BR return
-}
-
-/**
- * Get translation mapping (for compatibility)
- * @returns {Promise<Object>} Complete mapping object
- */
-export async function getTranslationMapping() {
-  return buildNameMapping();
-}
-
-/**
- * Update all variant cards with English translations
- * Call this after language change (deprecated - use reactive approach instead)
- */
-export async function updateVariantTranslations() {
-  const lang = getCurrentLanguage();
-  if (lang === 'pt-BR') return;
-
-  const mapping = await buildNameMapping();
-
-  // Update variant names in cards
-  document.querySelectorAll('.variant-header h3').forEach(el => {
-    const ptName = el.textContent.trim();
-    if (mapping[ptName]) {
-      el.textContent = mapping[ptName].name;
-    }
-  });
-
-  // Update ability names
-  document.querySelectorAll('.ability-box h4 span:last-child').forEach(el => {
-    const abilityName = el.textContent.trim();
-    const card = el.closest('.variant-card');
-    if (card) {
-      const nameEl = card.querySelector('.variant-header h3');
-      if (nameEl) {
-        const enName = nameEl.textContent.trim();
-        for (const [ptName, enData] of Object.entries(mapping)) {
-          if (enData.name === enName) {
-            el.textContent = enData.ability.toUpperCase();
-            break;
-          }
-        }
-      }
-    }
-  });
-
-  // Update SA descriptions
-  document.querySelectorAll('.ability-box p').forEach(el => {
-    const card = el.closest('.variant-card');
-    if (!card) return;
-
-    const nameEl = card.querySelector('.variant-header h3');
-    if (!nameEl) return;
-
-    const enName = nameEl.textContent.trim();
-    for (const [ptName, enData] of Object.entries(mapping)) {
-      if (enData.name === enName) {
-        const currentText = el.textContent;
-        if (currentText.includes('[HAB') || currentText.includes('[SA')) {
-          let newDesc = `[SA1]: ${enData.SA1}`;
-          if (enData.SA2) {
-            newDesc += `\n\n[SA2]: ${enData.SA2}`;
-          }
-          el.textContent = newDesc;
-        }
-        break;
-      }
-    }
-  });
-}
-
-// =====================================================
-// SYNCHRONOUS HELPERS
 // These read from the cached nameMapping, so they only
 // work after preloadKrazeteData() has resolved.
 // Use them in synchronous render paths (e.g. VariantCard.js).
 // =====================================================
-
-/**
- * Check whether the name mapping has been loaded
- * @returns {boolean} true if nameMapping is populated
- */
-export function isDataLoaded() {
-  return nameMapping !== null;
-}
 
 /**
  * Synchronous localized variant name (English if lang !== pt-BR)
@@ -337,20 +194,4 @@ export function getLocalizedSADescSync(ptName, saDescPTBR) {
   return desc;
 }
 
-/**
- * Reverse lookup: English name back to PT-BR name
- * Needed because images are keyed by PT-BR name
- * @param {string} enName - Variant name in English
- * @returns {string} PT-BR name or fallback to enName
- */
-export function getOriginalName(enName) {
-  if (!nameMapping) return enName;
-  const cleanEnName = cleanName(enName);
-  for (const [ptName, data] of Object.entries(nameMapping)) {
-    if (cleanName(data.name) === cleanEnName) return ptName;
-  }
-  return enName;
-}
-
 // Export cache for direct access if needed
-export { krazeteEN, krazetePTBR };

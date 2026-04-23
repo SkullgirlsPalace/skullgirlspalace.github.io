@@ -4,7 +4,7 @@
 // as JSON or TXT
 // =====================================================
 
-import { EFFECT_DATA } from '../data/effectData.js';
+import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
 import { t } from '../i18n/index.js';
 
 // ========== MODAL HTML ==========
@@ -17,10 +17,11 @@ export function renderModifierExportModal() {
   const debuffs = [];
 
   for (const [key, effect] of Object.entries(EFFECT_DATA)) {
-    if (effect.type === 'buff') {
-      buffs.push({ key, ...effect });
-    } else if (effect.type === 'debuff') {
-      debuffs.push({ key, ...effect });
+    const localized = getLocalizedEffect(key) || effect;
+    if (localized.type === 'buff') {
+      buffs.push({ key, ...localized });
+    } else if (localized.type === 'debuff') {
+      debuffs.push({ key, ...localized });
     }
   }
 
@@ -206,7 +207,7 @@ function handleModifierExportDownload() {
   const modifierData = {};
   for (const key of selectedKeys) {
     if (EFFECT_DATA[key]) {
-      modifierData[key] = EFFECT_DATA[key];
+      modifierData[key] = getLocalizedEffect(key) || EFFECT_DATA[key];
     }
   }
 

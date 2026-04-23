@@ -18,7 +18,7 @@ import { getCurrentLanguage, t } from '../i18n/index.js';
 export function createCharacterCard(charKey, charData, index = 0, onClick = 'openCharacterDetails') {
   const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
   const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.webp`;
-  const newBadgeHTML = isNewCharacter(charKey) ? '<img loading="lazy" src="img/official/new_icon_U.webp" alt="Novo" class="new-badge">' : '';
+  const newBadgeHTML = isNewCharacter(charKey) ? `<img loading="lazy" src="img/official/new_icon_U.webp" alt="${t('common.altNew')}" class="new-badge">` : '';
 
   // Get character name based on current language
   const currentLang = getCurrentLanguage();

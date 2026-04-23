@@ -10,7 +10,7 @@ import { getCharacterProfile } from '../data/characterProfiles.js';
 import { MOVE_DATA } from '../data/movesimages.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText } from '../utils/formatters.js';
-import { EFFECT_DATA } from '../data/effectData.js';
+import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
 import { t, getCurrentLanguage } from '../i18n/index.js';
 
 let currentProfileTab = 'about';
@@ -622,7 +622,7 @@ export function showMarqueeDisclaimer(charKey, marqueeName = '') {
  * Show a disclaimer for the "Critless" strategy
  */
 export function showCritlessDisclaimer() {
-  const critless = EFFECT_DATA.critless;
+  const critless = getLocalizedEffect('critless');
 
   if (!critless) return;
 

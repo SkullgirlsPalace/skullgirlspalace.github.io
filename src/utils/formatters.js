@@ -3,8 +3,9 @@
 // Text formatting, parsing, and display helpers
 // =====================================================
 
-import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
+import { getEffectPatterns, getLocalizedEffect } from '../data/effectData.js';
 import { hasElementEffects } from '../data/elementEffectsData.js';
+import { getCurrentLanguage } from '../i18n/translations.js';
 
 /**
  * Format ability/description text
@@ -46,7 +47,7 @@ export function formatText(text, variantName = null) {
         workingText = workingText.replace(regex, (match) => {
             const marker = `\x00EFF_${replacements.length}\x00`;
             // Determine type for styling
-            const effect = EFFECT_DATA[effectKey];
+            const effect = getLocalizedEffect(effectKey);
             const typeClass = effect ? effect.type : 'term';
             
             const iconHtml = (effect && effect.icon) ? `<img loading="lazy" src="${effect.icon}" class="inline-effect-icon" alt="">` : '';
@@ -199,7 +200,8 @@ export function getMasteryIcon(charKey) {
  * @returns {string} Formatted number string
  */
 export function formatNumber(num) {
-    return new Intl.NumberFormat('pt-BR').format(num);
+    const locale = getCurrentLanguage() === 'en' ? 'en-US' : 'pt-BR';
+    return new Intl.NumberFormat(locale).format(num);
 }
 
 import { getAttributePatterns } from '../data/attributeData.js';
@@ -258,7 +260,9 @@ export function formatBuildText(text) {
 export function formatConstraint(constraint) {
     if (!constraint) return '';
 
-    const mapping = {
+    const lang = getCurrentLanguage();
+
+    const mappingPT = {
         'Boss': 'Chefe (Nó Central)',
         'Triplo (Topo)': 'Nó Triplo (Topo)',
         'Duo (Esquerdo)': 'Nó Duplo (Esquerdo)',
@@ -267,7 +271,7 @@ export function formatConstraint(constraint) {
         'Single (Esquerdo)': 'Nó Solo (Esquerdo)',
         'Single (Direito)': 'Nó Solo (Direito)',
         'Single': 'Nó Solo',
-        'Ambos': 'Ambos', // Keep as is or refine if user specifies
+        'Ambos': 'Ambos',
         'Personagem': 'Nome do Personagem',
         'Def. Fogo': 'Def. Fogo',
         'Def. Água': 'Def. Água',
@@ -276,15 +280,31 @@ export function formatConstraint(constraint) {
         'Def. Trevas': 'Def. Trevas'
     };
 
+    const mappingEN = {
+        'Boss': 'Boss (Central Node)',
+        'Triple (Top)': 'Triple Node (Top)',
+        'Duo (Left)': 'Duo Node (Left)',
+        'Duo (Right)': 'Duo Node (Right)',
+        'Duo': 'Duo Node',
+        'Single (Left)': 'Single Node (Left)',
+        'Single (Right)': 'Single Node (Right)',
+        'Single': 'Single Node',
+        'Both': 'Both',
+        'Personagem': 'Character Name',
+        'Def. Fire': 'Def. Fire',
+        'Def. Water': 'Def. Water',
+        'Def. Wind': 'Def. Wind',
+        'Def. Light': 'Def. Light',
+        'Def. Dark': 'Def. Dark'
+    };
+
+    const mapping = lang === 'en' ? mappingEN : mappingPT;
+
     // Check for exact match first
     if (mapping[constraint]) {
         return mapping[constraint];
     }
 
-    // Handle character-specific constraints (e.g., "Marie", "Annie")
-    // If it's a known character name, we can leave it as is or format it.
-    // The user mentioned "Nome do personagem" as a correction, so we might want to 
-    // detect characters.
-    
+    // Character-specific constraints stay as-is across languages
     return constraint;
 }

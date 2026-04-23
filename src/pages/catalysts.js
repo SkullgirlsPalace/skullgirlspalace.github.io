@@ -135,10 +135,11 @@ function renderCotw(element) {
  * @returns {string} CSS class
  */
 function getCategoryClass(name) {
-	if (name.toLowerCase().includes('forte')) return 'cat-strong';
-	if (name.toLowerCase().includes('bom')) return 'cat-good';
-	if (name.toLowerCase().includes('mediano')) return 'cat-medium';
-	if (name.toLowerCase().includes('ruim')) return 'cat-weak';
+	const n = name.toLowerCase();
+	if (n.includes('forte') || n.includes('strong')) return 'cat-strong';
+	if (n.includes('bom') || n.includes('good')) return 'cat-good';
+	if (n.includes('mediano') || n.includes('average')) return 'cat-medium';
+	if (n.includes('ruim') || n.includes('weak')) return 'cat-weak';
 	return '';
 }
 
