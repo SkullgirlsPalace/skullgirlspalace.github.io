@@ -510,6 +510,9 @@ function formatCatalystText(text) {
   text = text.replace(/^\*\s*/, '');
   text = text.replace(/^###\s*/, '');
   text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Replace slash-separated level values with the last (max) value
+  // e.g. "1/2/3/4/5/6 seconds" -> "6 seconds"
+  text = text.replace(/\b(\d+\.?\d*)(?:\/\d+\.?\d*)+\b/g, (match) => match.split('/').pop());
   text = text.replace(/\(\+\)/g, '<span class="notation notation-plus" style="color: #4ade80;">(+)</span>');
   text = text.replace(/\(=\)/g, '<span class="notation notation-equal" style="color: #fbbf24;">(=)</span>');
   text = text.replace(/\(-\)/g, '<span class="notation notation-minus" style="color: #f87171;">(-)</span>');

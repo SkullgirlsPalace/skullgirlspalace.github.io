@@ -28,7 +28,7 @@ export function createFilterBar() {
   ];
 
   const elementButtons = elementKeys.map(({ key, enKey }) => {
-    const info = elementMap[key] || {};
+    const info = Object.values(elementMap).find(e => e.key === key) || {};
     const label = t(`element.${enKey}`);
     return `
       <button class="filter-btn element-btn" data-element="${key}"

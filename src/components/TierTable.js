@@ -9,7 +9,7 @@ import { CLASS_ICONS, getLocalizedVariantClasses, getLocalizedClassName, getLoca
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
-import { t, getCurrentLanguage } from '../i18n/index.js';
+import { t, getCurrentLanguage, getLocalizedNameSync } from '../i18n/index.js';
 
 /**
  * Create rank badge HTML
@@ -128,9 +128,10 @@ export function createTierTable(charKey, charData) {
 
       const variantClasses = getLocalizedVariantClasses(variant.name);
 
-      const charCellContent = `
-        <img loading="lazy" src="${imgPath}" alt="${variant.name}" onerror="this.src='img/official/Annie_Icon.webp'">
-        <span>${variant.name}</span>
+      const localizedName = getLocalizedNameSync(variant.name);
+   const charCellContent = `
+        <img loading="lazy" src="${imgPath}" alt="${localizedName}" onerror="this.src='img/official/Annie_Icon.webp'">
+        <span>${localizedName}</span>
       `;
 
       return `

@@ -55,9 +55,51 @@ export const translations = {
       allCharacters: 'Todos os Personagens'
     },
     // Guide page
-    guide: {
-      title: 'Guia'
-    },
+  guide: {
+    title: 'Guia',
+    tutorials: 'Tutoriais',
+    statistics: 'Estatísticas',
+    modifiers: 'Modificadores',
+    catalysts: 'Catalisadores',
+    passiveIncomeTitle: 'Renda Passiva',
+    passiveIncomeDesc: 'Aprenda a maximizar seus ganhos diários e semanais sem gastar teonitas.',
+    maxStats: 'Estatísticas Máximas',
+    hideImage: 'Ocultar Imagem',
+    showImage: 'Mostrar Imagem',
+    exportModifiers: 'Exportar Modificadores',
+    positiveEffects: 'Efeitos Positivos',
+    negativeEffects: 'Efeitos Negativos',
+    permanentEffect: 'Efeito Permanente',
+    icon: 'Ícone',
+    name: 'Nome',
+    effectDesc: 'Descrição do Efeito',
+    max: 'Máx',
+    maxUndefined: 'Indefinido',
+    gameDescription: 'Descrição do Jogo',
+    explanation: 'Explicação',
+    scaling: 'Escala',
+    weekModifiers: 'Modificadores da Semana',
+    loadingCatalysts: 'Carregando catalisadores...',
+    errorCatalysts: 'Erro ao carregar catalisadores.',
+    riftCatalysts: 'Catalisadores da Fenda',
+    catalystsLoaded: 'Catalisadores Carregados',
+    noModifiersElement: 'Nenhum modificador encontrado para este elemento.'
+  },
+  filter: {
+    filterBtn: 'Filtrar',
+    clear: 'Limpar',
+    clearAll: 'Limpar Tudo',
+    score: 'Pontuação',
+    atk: 'ATQ',
+    hp: 'HP',
+    alpha: 'Alfabético',
+    element: 'Elemento',
+    category: 'Categoria',
+    organize: 'Organizar',
+    changeCharacter: 'Trocar Personagem',
+    chooseCharacter: 'Escolher Personagem'
+  },
+
     // Calculator page
     calc: {
         title: 'Calculadora',
@@ -195,10 +237,26 @@ export const translations = {
       element: 'Elemento'
     },
     // Tier List
-    tier: {
-      tierlistTitle: 'Tier List',
-      chooseChar: 'Escolha um personagem para ver sua tier list.'
-    },
+  tier: {
+    tierlistTitle: 'Tier List',
+    chooseChar: 'Escolha um personagem para ver sua tier list.',
+    variant: 'Variante',
+    dpAttack: 'DP Ataque',
+    parallelRealms: 'Reinos Paralelos',
+    riftAttack: 'Fenda Ataque',
+    riftDefense: 'Fenda Defesa',
+    notes: 'Notas',
+    rankSS: 'Rank absoluto. Dominante no meta, essencial para qualquer conta.',
+    rankS: 'Rank excelente. Altamente competitivo e versátil.',
+    rankA: 'Rank ótimo. Sólido e confiável na maioria dos cenários.',
+    rankB: 'Rank bom. Viável com investimento adequado.',
+    rankC: 'Rank mediano. Funcional mas limitado em cenários competitivos.',
+    rankI: 'Rank inferior. Difícil de usar efetivamente.',
+    rankNA: 'Não aplicável. Sem dados suficientes para avaliação.',
+    classes: 'Classes',
+    defensive: 'Defensivo',
+    noVariants: 'Nenhuma variante encontrada.'
+  },
     // Catalysts
     catalysts: {
       title: 'Catalisadores',
@@ -301,6 +359,31 @@ export const translations = {
   variants: 'Variantes',
   weight: 'Peso'
  },
+  tooltip: {
+    element: 'Elemento',
+    buffEffect: 'Efeito Buff',
+    debuffEffect: 'Efeito Debuff',
+    elementEffects: 'Efeitos por Elemento',
+    clickForDetails: 'Clique para detalhes',
+    max: 'Máx: {value}',
+    maximum: 'Máximo: {value}',
+    maxLabel: 'Máx: ',
+    stack: 'Acúmulo: {value}',
+    scaling: 'Escala: {value}',
+    elementTable: 'Tabela de Elementos',
+    critlessGuide: 'Guia Critless',
+    summary: 'Resumo',
+    explanation: 'Explicação',
+    moveDescription: 'Descrição do Golpe',
+    description: 'Descrição',
+    accumulation: 'Acúmulo',
+    positiveEffect: 'Efeito Positivo',
+    negativeEffect: 'Efeito Negativo',
+    term: 'Termo',
+    classRole: 'Classe/Função',
+    close: 'Fechar'
+  },
+
  // Error messages
  error: {
   pageLoad: 'Erro ao carregar página',
@@ -359,10 +442,52 @@ export const translations = {
       searchPlaceholder: 'Search character...',
       allCharacters: 'All Characters'
     },
-    // Guide page
-    guide: {
-      title: 'Guide'
-    },
+  // Guide page
+  guide: {
+    title: 'Guide',
+    tutorials: 'Tutorials',
+    statistics: 'Statistics',
+    modifiers: 'Modifiers',
+    catalysts: 'Catalysts',
+    passiveIncomeTitle: 'Passive Income',
+    passiveIncomeDesc: 'Learn how to maximize your daily and weekly earnings without spending theonites.',
+    maxStats: 'Max Stats',
+    hideImage: 'Hide Image',
+    showImage: 'Show Image',
+    exportModifiers: 'Export Modifiers',
+    positiveEffects: 'Positive Effects',
+    negativeEffects: 'Negative Effects',
+    permanentEffect: 'Permanent Effect',
+    icon: 'Icon',
+    name: 'Name',
+    effectDesc: 'Effect Description',
+    max: 'Max',
+    maxUndefined: 'Undefined',
+    gameDescription: 'Game Description',
+    explanation: 'Explanation',
+    scaling: 'Scaling',
+    weekModifiers: 'Week Modifiers',
+    loadingCatalysts: 'Loading catalysts...',
+    errorCatalysts: 'Error loading catalysts.',
+    riftCatalysts: 'Rift Catalysts',
+    catalystsLoaded: 'Catalysts Loaded',
+    noModifiersElement: 'No modifiers found for this element.'
+  },
+  filter: {
+    filterBtn: 'Filter',
+    clear: 'Clear',
+    clearAll: 'Clear All',
+    score: 'Score',
+    atk: 'ATK',
+    hp: 'HP',
+    alpha: 'Alphabetical',
+    element: 'Element',
+    category: 'Category',
+    organize: 'Organize',
+    changeCharacter: 'Change Character',
+    chooseCharacter: 'Choose Character'
+  },
+
     // Calculator page
     calc: {
         title: 'Calculator',
@@ -500,10 +625,26 @@ export const translations = {
       element: 'Element'
     },
     // Tier List
-    tier: {
-      tierlistTitle: 'Tier List',
-      chooseChar: 'Choose a character to view their tier list.'
-    },
+  tier: {
+    tierlistTitle: 'Tier List',
+    chooseChar: 'Choose a character to view their tier list.',
+    variant: 'Variant',
+    dpAttack: 'DP Attack',
+    parallelRealms: 'Parallel Realms',
+    riftAttack: 'Rift Attack',
+    riftDefense: 'Rift Defense',
+    notes: 'Notes',
+    rankSS: 'Absolute rank. Dominant in the meta, essential for any account.',
+    rankS: 'Excellent rank. Highly competitive and versatile.',
+    rankA: 'Great rank. Solid and reliable in most scenarios.',
+    rankB: 'Good rank. Viable with proper investment.',
+    rankC: 'Average rank. Functional but limited in competitive scenarios.',
+    rankI: 'Inferior rank. Difficult to use effectively.',
+    rankNA: 'Not applicable. Insufficient data for evaluation.',
+    classes: 'Classes',
+    defensive: 'Defensive',
+    noVariants: 'No variants found.'
+  },
     // Catalysts
     catalysts: {
       title: 'Catalysts',
@@ -606,6 +747,31 @@ export const translations = {
   variants: 'Variants',
   weight: 'Weight'
  },
+  tooltip: {
+    element: 'Element',
+    buffEffect: 'Buff Effect',
+    debuffEffect: 'Debuff Effect',
+    elementEffects: 'Element Effects',
+    clickForDetails: 'Click for details',
+    max: 'Max: {value}',
+    maximum: 'Maximum: {value}',
+    maxLabel: 'Max: ',
+    stack: 'Stack: {value}',
+    scaling: 'Scaling: {value}',
+    elementTable: 'Element Table',
+    critlessGuide: 'Critless Guide',
+    summary: 'Summary',
+    explanation: 'Explanation',
+    moveDescription: 'Move Description',
+    description: 'Description',
+    accumulation: 'Accumulation',
+    positiveEffect: 'Positive Effect',
+    negativeEffect: 'Negative Effect',
+    term: 'Term',
+    classRole: 'Class/Role',
+    close: 'Close'
+  },
+
  // Error messages
  error: {
   pageLoad: 'Error loading page',
