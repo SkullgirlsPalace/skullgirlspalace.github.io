@@ -1,0 +1,1982 @@
+{
+    "an-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm2_burst.png",
+        "SA1": "On HIT, inflict GUARD BREAK for 5/7/10 seconds."
+    },
+    "an-sm-ccut-g": {
+        "name": "Crescent Cut",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm5_crescentcut.png",
+        "SA1": "50% chance on BLOCK to inflict GUARD BREAK for 5/7/10 seconds."
+    },
+    "an-sm-dpillar-g": {
+        "name": "Destruction Pillar",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm4_destructionpillar.png",
+        "SA1": "On CRITICAL HIT, deal an additional 5/7/10% of the opponent's MAX HEALTH."
+    },
+    "an-sm-nknuckle-g": {
+        "name": "North Knuckle",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm6_northknuckle.png",
+        "SA1": "Gain UNFLINCHING for 5/7/10 seconds if used with a COMBO COUNT of at least 15."
+    },
+    "an-sm-oTake-g": {
+        "name": "Saturn Slash",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "an-sm-reentry-g": {
+        "name": "Re-Entry",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm7_reentry.png",
+        "SA1": "Gain ENRAGE for 5/7/10 seconds if the third hit is a CRITICAL HIT."
+    },
+    "an-sm-taunt-g": {
+        "name": "Reflection Nebula",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain AUTO-BLOCK for 10/12/15 seconds.",
+        "SA2": "If used to counter an attack, inflict IMMOBILIZE for 5 seconds."
+    },
+    "bb-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm4_burst.png",
+        "SA1": "On HIT, inflict CRIPPLE for 5/7/10 seconds."
+    },
+    "bb-sm-clar-g": {
+        "name": "Sweet Clarinet",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm7_sweetclarinet.png",
+        "SA1": "Reduces the opponent's BLOCKBUSTER METER by 6/7/8% per landed HIT."
+    },
+    "bb-sm-cymb-g": {
+        "name": "Cymbal Clash",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm5_cymbalclash.png",
+        "SA1": "20/35% chance on HIT to STUN opponent for 3/4 seconds."
+    },
+    "bb-sm-knuck-g": {
+        "name": "Brass Knuckles",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm1_brassknuckles.png",
+        "SA1": "50/100% chance on HIT to inflict BLEED for 4/6 seconds."
+    },
+    "bb-sm-noise-g": {
+        "name": "Noise Cancel",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm8_noisecancel.png",
+        "SA1": "If used to counter an attack, STUN opponent for 2/3/4 seconds."
+    },
+    "bb-sm-oTake-g": {
+        "name": "Take Five",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm6_takefive.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "bb-sm-step-g": {
+        "name": "Giant Step",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm2_giantstep.png",
+        "SA1": "Removes all BUFFS from the opponent and disables their SPECIAL MOVES for 4/8/12 seconds on HIT."
+    },
+    "bb-sm-step-g_": {
+        "name": "Bagpipe Blues",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain ARMOR for 10/15/20 seconds."
+    },
+    "bd-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm2_burst.png",
+        "SA1": "On HIT, inflict DEATH MARK for 5/7/10 seconds."
+    },
+    "bd-sm-counter-g": {
+        "name": "Counter, Strike!",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm6_counterstrike.png",
+        "SA1": "If used to counter an attack, inflict HEAL BLOCK for 4/8/12 seconds."
+    },
+    "bd-sm-deathp-g": {
+        "name": "Death Pendulum",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm8_deathpendulum.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "bd-sm-mousetr-g": {
+        "name": "Medici Mousetrap",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm7_medicimousetrap.png",
+        "SA1": "On HIT, DISABLE BLOCKBUSTERS and inflict IMMOBILIZE for 8/10/12 seconds."
+    },
+    "bd-sm-oTake-g": {
+        "name": "See You Around",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "bd-sm-onslaught-g": {
+        "name": "Onslaught",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm4_onslaught.png",
+        "SA1": "Gain DEADEYE for 5/7/10 seconds on HIT."
+    },
+    "bd-sm-taunt-g": {
+        "name": "It's Apple Juice",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain DEADEYE for 10/12/15 seconds."
+    },
+    "bd-sm-tea-g": {
+        "name": "Tea Slip",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_sm5_teaslip.png",
+        "SA1": "Has a 50/75/100% chance to remove all DEBUFFs when used."
+    },
+    "be-sm-blitz-g": {
+        "name": "Wulf Blitzer",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm4_wulfblitzer.png",
+        "SA1": "25/50% chance on HIT to inflict ARMOR BREAK for 5/7 seconds."
+    },
+    "be-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm2_burst.png",
+        "SA1": "On HIT, inflict SLOW for 5/7/10 seconds."
+    },
+    "be-sm-hurt-g": {
+        "name": "Hurting Hurdle",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm8_hurtinghurdle.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "be-sm-oTake-g": {
+        "name": "Striker Kick",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "be-sm-shoot-g": {
+        "name": "Wulf Shoot",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm5_wulfshoot.png"
+    },
+    "be-sm-sweep-g": {
+        "name": "Gigan Arm Sweep",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm6_giganarmsweep.png",
+        "SA1": "On HIT, inflict BLEED for 4/8/12 seconds and gain 10/15/20% BLOCKBUSTER METER. Also, deals 15/20/25% more damage while in HYPE MODE."
+    },
+    "be-sm-taunt-g": {
+        "name": "Aroo Ready?",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain HASTE for 10/12/15 seconds."
+    },
+    "ce-sm-bButt-g": {
+        "name": "Battle Butt",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm6_battlebutt.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 4/8/12 seconds."
+    },
+    "ce-sm-bSlam-g": {
+        "name": "Butt Slam",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm2_buttslam.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "ce-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm9_burst.png",
+        "SA1": "On HIT, inflict CRIPPLE for 5/7/10 seconds."
+    },
+    "ce-sm-copter-g": {
+        "name": "Cerecopter",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm3_cerecopter.png",
+        "SA1": "10/20% chance on HIT to inflict ARMOR BREAK for 5/7 seconds."
+    },
+    "ce-sm-horse-g": {
+        "name": "Pummel Horse",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm5_pummelhorse.png",
+        "SA1": "10/20% chance on HIT to inflict BLEED for 5/7 seconds."
+    },
+    "ce-sm-load-g": {
+        "name": "Lock n' Load",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm4_locknload.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "ce-sm-mGR-g": {
+        "name": "Merry Go-rilla",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm7_merrygorilla.png"
+    },
+    "ce-sm-oTake-g": {
+        "name": "Hammer Toss",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm8_snapback.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "ce-sm-taunt-g": {
+        "name": "Medici Muscle",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_sm1_taunt.png",
+        "SA1": "TAUNT your opponent to gain ARMOR for 10/12/15 seconds."
+    },
+    "do-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm2_burst.png",
+        "SA1": "On HIT, inflict HEAL BLOCK for 5/7/10 seconds."
+    },
+    "do-sm-buzz-g": {
+        "name": "Bogus Buzzard",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm8_bogusbuzzard.png",
+        "SA1": "On HIT, inflict HEAL BLOCK for 4/8/12 seconds."
+    },
+    "do-sm-flesh-g": {
+        "name": "Flesh Step",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm7_fleshstep.png"
+    },
+    "do-sm-hBomb-g": {
+        "name": "Hornet Bomber",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm4_hornetbomber.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "do-sm-luger-g": {
+        "name": "Luger Replica",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm5_lugerreplica.png",
+        "SA1": "On HIT, inflict a random DEBUFF for 4/8/12 seconds."
+    },
+    "do-sm-oTake-g": {
+        "name": "Chimeram",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "do-sm-slide-g": {
+        "name": "Cilia Slide",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm6_ciliaslide.png",
+        "SA1": "On HIT, inflict SLOW for 4/8/12 seconds."
+    },
+    "do-sm-taunt-g": {
+        "name": "False Intentions",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain a random BUFF for 10/12/15 seconds."
+    },
+    "el-sm-anubis-g": {
+        "name": "Weight Of Anubis",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm8_weightofanubis.png"
+    },
+    "el-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm3_burst.png",
+        "SA1": "On HIT, inflict CURSE for 5/7/10 seconds."
+    },
+    "el-sm-chaos-g": {
+        "name": "Chaos Banish",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm10_chaosbanish.png",
+        "SA1": "Removes all BUFFS from the opponent and inflicts HEAL BLOCK for 4/8/12 seconds (also applies on BLOCK)."
+    },
+    "el-sm-dive-g": {
+        "name": "Dive of Horus",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm9_diveofhorus.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "el-sm-khat-g": {
+        "name": "Upper Khat",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm4_upperkhat.png",
+        "SA1": "25/50% chance on HIT to STUN opponent for 4/6 seconds."
+    },
+    "el-sm-oTake-g": {
+        "name": "Exile from Aaru",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm2_snapback.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "el-sm-sphynx-g": {
+        "name": "Middle of the Sphynx",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm6_middleofthesphynx.png",
+        "SA1": "On HIT, reduce opponent BLOCKBUSTER METER by 25/35/50%."
+    },
+    "el-sm-spiral-g": {
+        "name": "Osiris Spiral",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm5_osirisspiral.png",
+        "SA1": "5/10% chance on HIT to inflict HEAVY BLEED for 5/10 seconds."
+    },
+    "el-sm-taunt-g": {
+        "name": "Scarlet Ladies",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm1_taunt.png",
+        "SA1": "TAUNT your opponent to gain REGEN for 10/12/15 seconds."
+    },
+    "el-sm-throne-g": {
+        "name": "Throne of Isis",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_sm7_throneofisis.png"
+    },
+    "fi-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm4_burst.png",
+        "SA1": "On HIT, inflict BLEED for 5/7/10 seconds."
+    },
+    "fi-sm-drill-g": {
+        "name": "Drillationship",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm6_drillationship.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "fi-sm-hBall-g": {
+        "name": "Hairball",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm2_hairball.png"
+    },
+    "fi-sm-oTake-g": {
+        "name": "Lash Out",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm5_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "fi-sm-spike-g": {
+        "name": "Ringlet Spike",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm3_ringletspike.png",
+        "SA1": "On HIT, inflict BLEED for 4/8/12 seconds."
+    },
+    "fi-sm-taunt-g": {
+        "name": "Born With It",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm7_taunt.png",
+        "SA1": "TAUNT your opponent to gain ENRAGE for 10/12/15 seconds."
+    },
+    "fi-sm-twist-g": {
+        "name": "French Twist",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm1_frenchtwist.png",
+        "SA1": "25/50% chance on HIT to inflict BLEED for 3/5 seconds."
+    },
+    "fu-sm-aClone-g": {
+        "name": "Forever a Clone",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm6_foreveraclone.png",
+        "SA1": "On HIT, inflict HEAL BLOCK for 10/12/15 seconds. HEALTH drains slowly while a Clone is primed."
+    },
+    "fu-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm4_burst.png",
+        "SA1": "On HIT, inflict FATIGUE for 15/13/10 seconds."
+    },
+    "fu-sm-drill-g": {
+        "name": "Drillationship",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm6_drillationship.png",
+        "SA1": "Inflict DEATH MARK, ARMOR BREAK, and CRIPPLE for 10/12/15 seconds each if the final hit lands as a CRITICAL HIT."
+    },
+    "fu-sm-lDart-g": {
+        "name": "Love Dart",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm4_lovedart.png",
+        "SA1": "On HIT, drain 5/10/15% BLOCKBUSTER METER or 15/20/25% if the opponent is far away."
+    },
+    "fu-sm-lobs-g": {
+        "name": "Lobs of Love",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm5_lobsoflove.png",
+        "SA1": "UNBLOCKABLE if the opponent is far away. On HIT, drain 5/10/15% BLOCKBUSTER METER or 15/20/25% if the opponent is far away."
+    },
+    "fu-sm-oTake-g": {
+        "name": "Lash Out",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_sm5_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "fu-sm-swarm-g": {
+        "name": "Swarm Embrace",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm7_swarmembrace.png",
+        "SA1": "On HIT, inflict FATIGUE for 15/13/10 seconds. HEALTH drains slowly while a Clone is primed."
+    },
+    "fu-sm-taunt-g": {
+        "name": "Breakdown",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain MIASMA for 10/12/15 seconds and regain 5% HEALTH."
+    },
+    "ma-sm-ballroom-g": {
+        "name": "Marie Go 'Round",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm4_mariegoround.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 4/8/12 seconds."
+    },
+    "ma-sm-bellows-g": {
+        "name": "Bellows Blast",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm7_bellowsblast.png",
+        "SA1": "50/75/100% chance on HIT (includes blocked hits) to transfer 1 DEBUFF from self to the opponent."
+    },
+    "ma-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm2_burst.png",
+        "SA1": "On HIT, inflict QUIETUS for 10/12/15 seconds."
+    },
+    "ma-sm-cclog-g": {
+        "name": "Suction Obstruction",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm6_suctionobstruction.png"
+    },
+    "ma-sm-haymaker-g": {
+        "name": "Hilgard's Haymaker",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm8_hilgardshaymaker.png",
+        "SA1": "SKELETAL SUMMON: On HIT, inflict QUIETUS for 5/7/10 seconds."
+    },
+    "ma-sm-hoptoit-g": {
+        "name": "Hop To It",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm5_hoptoit.png",
+        "SA1": "SKELETAL SUMMON: 15/20/25% chance on HIT to inflict HEAVY BLEED for 5 seconds."
+    },
+    "ma-sm-oTake-g": {
+        "name": "Formal Challenge",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "ma-sm-taunt-g": {
+        "name": "A Moment's Time",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain a random BUFF for 10/12/15 seconds. Also inflict WITHER for 10 seconds if CHARGED."
+    },
+    "mf-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm2_burst.png",
+        "SA1": "On HIT, inflict DEATH MARK for 5/7/10 seconds."
+    },
+    "mf-sm-fiber-g": {
+        "name": "Fiber Upper",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm4_fiberupper.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 4/8/12 seconds."
+    },
+    "mf-sm-gato-g": {
+        "name": "El Gato",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm5_elgato.png",
+        "SA1": "25/35/50% chance on CRITICAL HIT to inflict STUN for 4 seconds."
+    },
+    "mf-sm-oTake-g": {
+        "name": "Cat-apult",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "mf-sm-taunt-g": {
+        "name": "Nyaaawn",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain 1/2/3 stack(s) of PRECISION."
+    },
+    "ms-sm-scrat-g": {
+        "name": "Cat Scratch",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm7_catscratch.png",
+        "SA1": "Each HIT has a 15/25/35% chance to inflict DEATH MARK for 10 seconds, or ARMOR BREAK for 10 seconds if the attack is BLOCKED."
+    },
+    "ms-sm-slide-g": {
+        "name": "Cat Slide",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_sm6_catslide.png",
+        "SA1": "Deal 25/35/50% bonus damage against enemies suffering from a DEBUFF."
+    },
+    "pa-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm3_burst.png",
+        "SA1": "On HIT, DISABLE BLOCKBUSTERS for 5/7/10 seconds."
+    },
+    "pa-sm-call-g": {
+        "name": "Egret Call",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm5_egretcall.png",
+        "SA1": "TAUNT your opponent to gain 1/2/3 stack(s) of PRECISION."
+    },
+    "pa-sm-moto-g": {
+        "name": "Egret Moto",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm7_egretmoto.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 4/8/12 seconds."
+    },
+    "pa-sm-oTake-g": {
+        "name": "Banishment",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm2_snapback.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "pa-sm-sacrif-g": {
+        "name": "Egret Dive",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm6_egretdive.png",
+        "SA1": "If used to counter an attack, STUN opponent for 3/4/5 seconds."
+    },
+    "pa-sm-shot-g": {
+        "name": "Napalm Shot",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm4_napalmshot.png",
+        "SA1": "50/100% chance on HIT to inflict BLEED for 5/8 seconds."
+    },
+    "pa-sm-taunt-g": {
+        "name": "Bâillement",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm1_taunt.png",
+        "SA1": "TAUNT your opponent to gain IMMUNITY for 10/12/15 seconds."
+    },
+    "pa-sm-toss-g": {
+        "name": "Napalm Toss",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm8_napalmtoss.png"
+    },
+    "pa-sm-trig-g": {
+        "name": "Napalm Trigger",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_sm9_napalmtrigger.png"
+    },
+    "pe-sm-aShow-g": {
+        "name": "George at the Air Show",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm6_george_airshow.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 4/8/12 seconds."
+    },
+    "pe-sm-bang-g": {
+        "name": "BANG, BANG, BANG!",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm2_bang.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "pe-sm-boxcar-g": {
+        "name": "Boxcar George",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm5_george_boxcar.png",
+        "SA1": "25/50% chance on HIT to inflict BLEED for 4/8 seconds."
+    },
+    "pe-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm9_burst.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 5/7/10 seconds."
+    },
+    "pe-sm-gDO-g": {
+        "name": "George's Day Out",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm4_george_walk.png"
+    },
+    "pe-sm-oTake-g": {
+        "name": "Who's On Second?",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm8_snapback.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "pe-sm-taunt-g": {
+        "name": "Hi Hi Birdie",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_sm1_taunt.png",
+        "SA1": "TAUNT your opponent to gain IMMUNITY for 10/12/15 seconds."
+    },
+    "pw-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm7_burst.png",
+        "SA1": "On HIT, inflict DEATH MARK for 5/7/10 seconds."
+    },
+    "pw-sm-grudge-g": {
+        "name": "Violet Grudge",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm4_violetgrudge.png",
+        "SA1": "5/10% chance on HIT to inflict HEAVY BLEED for 5/10 seconds."
+    },
+    "pw-sm-lily-g": {
+        "name": "Cruel Lily",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm5_cruellily.png",
+        "SA1": "15/25% chance on HIT to inflict BLEED for 2/4 seconds."
+    },
+    "pw-sm-oTake-g": {
+        "name": "Snapdragon",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm2_snapdragon.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "pw-sm-pinion-g": {
+        "name": "Pinion Dash",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm6_piniondash.png"
+    },
+    "pw-sm-sting-g": {
+        "name": "Gae Bolga Stinger",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm1_gaebolgastinger.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "pw-sm-taunt-g": {
+        "name": "Smile!",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain ENRAGE for 10/12/15 seconds."
+    },
+    "rf-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm2_burst.png",
+        "SA1": "On HIT, inflict POWER SURGE for 5/7/10 seconds."
+    },
+    "rf-sm-oTake-g": {
+        "name": "Connection Sever",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "rf-sm-phas-g": {
+        "name": "Phaser Burn",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm5_phaserburn.png",
+        "SA1": "15/25/35% chance on HIT to REMOVE 1 opponent BUFF and inflict STUN for 3 seconds."
+    },
+    "rf-sm-rHaz-g": {
+        "name": "Rotation Hazard!",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm6_rotationhazard.png",
+        "SA1": "15/20/25% chance on HIT to TRANSFER 1 DEBUFF to the opponent."
+    },
+    "rf-sm-spin-g": {
+        "name": "Fidget Spin",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm8_fidgetspin.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "rf-sm-tBeam-g": {
+        "name": "Theonite Beam",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm4_theonitebeam.png",
+        "SA1": "On HIT, DISABLES TAG INS, SPECIAL MOVES, or BLOCKBUSTERS for 5/7/10 seconds.",
+        "SA2": "Inflicts ARMOR BREAK for 10 seconds if BLOCKED."
+    },
+    "rf-sm-taunt-g": {
+        "name": "Really Talks!",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain BARRIER for 10/12/15 seconds."
+    },
+    "rf-sm-vCut-g": {
+        "name": "Variable Cutter",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_sm7_variablecutter.png",
+        "SA1": "50% chance on HIT to inflict STUN for 4 seconds and POWER SURGE for 10/12/15 seconds if the opponent is DASHING."
+    },
+    "sq-sm-ash-g": {
+        "name": "Ashes to Ashes",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm8_ashestoashes.png",
+        "SA1": "15/20/25% chance on HIT to inflict WITHER for 5 seconds."
+    },
+    "sq-sm-bite-g": {
+        "name": "Drag 'n' Bite",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm4_dragnbite.png",
+        "SA1": "10/15/20% chance on HIT to remove all BUFFS from the opponent."
+    },
+    "sq-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm2_burst.png",
+        "SA1": "On HIT, inflict CURSE for 5/7/10 seconds."
+    },
+    "sq-sm-cStag-g": {
+        "name": "Center Stage",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm7_centerstage.png"
+    },
+    "sq-sm-chor-g": {
+        "name": "The Silver Chord",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm5_thesilverchord.png",
+        "SA1": "25/35/50% chance on HIT to TRANSFER 1 BUFF from the opponent to yourself."
+    },
+    "sq-sm-drau-g": {
+        "name": "Draugen Punch",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm6_draugenpunch.png",
+        "SA1": "On HIT, inflict CURSE for 5/7/10 seconds if used while CHARGED."
+    },
+    "sq-sm-oTake-g": {
+        "name": "Basso Buffo",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "sq-sm-taunt-g": {
+        "name": "Snake Charmer",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain IMMUNITY for 10/12/15 seconds."
+    },
+    "um-sm-bobbl-g": {
+        "name": "Bobblin' Bubble",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm4_bobblinbubble.png",
+        "SA1": "On HIT, inflict SLIME for 10/12/15 seconds."
+    },
+    "um-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm2_burst.png",
+        "SA1": "On HIT, inflict SLIME for 10/12/15 seconds."
+    },
+    "um-sm-carousel-g": {
+        "name": "Carousel Kick",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm8_carouselkick.png",
+        "SA1": "Has a 25/50/100% increased chance to land a CRITICAL HIT."
+    },
+    "um-sm-oTake-g": {
+        "name": "Gesundheit",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm1_outtake.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "um-sm-salt-g": {
+        "name": "Salt Grinder",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm6_saltgrinder.png"
+    },
+    "um-sm-slurp-g": {
+        "name": "Slurp 'n' Slide",
+        "type": "sm",
+        "gear": 2,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm7_slurpnslide.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 4/8/12 seconds."
+    },
+    "um-sm-taunt-g": {
+        "name": "Hug It Out",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm3_taunt.png",
+        "SA1": "TAUNT your opponent to gain 1/2/3 stacks of BLESSING for 15 seconds."
+    },
+    "um-sm-wishm-g": {
+        "name": "Wish Maker",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_sm5_wishmaker.png",
+        "SA1": "On HIT, DISABLES TAG INS, SPECIAL MOVES, or BLOCKBUSTERS for 5/7/10 seconds."
+    },
+    "va-sm-burst-g": {
+        "name": "Burst",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm4_burst.png",
+        "SA1": "On HIT, inflict BLEED for 5/7/10 seconds."
+    },
+    "va-sm-dCross-g": {
+        "name": "Dead Cross",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm3_shuriken.png",
+        "SA1": "25/50% chance on HIT to inflict BLEED for 5/8 seconds."
+    },
+    "va-sm-mDrop-g": {
+        "name": "Mortuary Drop",
+        "type": "sm",
+        "gear": 3,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm9_mortuarydrop.png",
+        "SA1": "25/50/75% chance to STUN opponent for 4 seconds if Valentine is benefiting from REGEN."
+    },
+    "va-sm-oTake-g": {
+        "name": "Triage!",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm2_snapback.png",
+        "ability": "Outtake",
+        "SA1": "Forces the opponent to TAG OUT on HIT, removing all COMBAT EFFECTS."
+    },
+    "va-sm-taunt-g": {
+        "name": "Chocoglycemia",
+        "type": "sm",
+        "gear": 0,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm1_taunt.png",
+        "SA1": "TAUNT your opponent to gain REGEN for 10/12/15 seconds."
+    },
+    "va-sm-vialA-g": {
+        "name": "Vial Hazard: Type A",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm5_vialhazarda.png",
+        "SA1": "Reduces opponent BLOCKBUSTER METER by 25/35/50% (on HIT or BLOCK)."
+    },
+    "va-sm-vialB-g": {
+        "name": "Vial Hazard: Type B",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm6_vialhazardb.png",
+        "SA1": "25/35/50% chance to remove all opponent BUFFS (on HIT or BLOCK)."
+    },
+    "va-sm-vialC-g": {
+        "name": "Vial Hazard: Type C",
+        "type": "sm",
+        "gear": 1,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_sm7_vialhazardc.png",
+        "SA1": "25/35/50% chance to inflict STUN for 4 seconds (on HIT or BLOCK)."
+    },
+    "an-bb-beam-g": {
+        "name": "Sagan Beam",
+        "type": "bb",
+        "gear": 3,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb2_saganbeam.png",
+        "SA1": "25/35/50% of the damage dealt is regained as HEALTH."
+    },
+    "an-bb-magicgirl-g": {
+        "name": "Photo Bop",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb5_photobop.png",
+        "SA1": "Transfer all DEBUFFS to the opponent.",
+        "SA2": "Opponents below 25% HEALTH have a 25/35/50% chance of being instantly defeated."
+    },
+    "an-bb-meteor-g": {
+        "name": "Meteor Strike",
+        "type": "bb",
+        "gear": 3,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb1_meteorstrike.png",
+        "SA1": "50/75/100% increased CRIT CHANCE if the opponent has a fully charge BLOCKBUSTER."
+    },
+    "an-bb-pillar-g": {
+        "name": "Pillar of Creation",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb4_pillarofcreation.png",
+        "SA1": "HEAL teammates for 50/75/100% of the damage dealt if used with a COMBO COUNT of at least 30."
+    },
+    "an-bb-slingshot-g": {
+        "name": "Gravity Slingshot",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/annie_bb3_gravityslingshot.png",
+        "SA1": "5% chance on HIT to inflict IMMOBILIZE for 10/12/15 seconds."
+    },
+    "bb-bb-aTrain-g": {
+        "name": "Take the 'A' Train",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb6_t2_taketheatrain.png",
+        "SA1": "On COMBO HITS higher than 10, reduces the opponent's BLOCKBUSTER METER by 8/10/12% per landed HIT."
+    },
+    "bb-bb-extend-g": {
+        "name": "Beat Extend",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb4_t1_beatextend.png",
+        "SA1": "Deals 2/5/8% bonus damage per COMBO HIT."
+    },
+    "bb-bb-ssJazz-g_": {
+        "name": "Super-Sonic Jazz",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb1_t1_supersonicjazz.png",
+        "SA1": "15% chance on HIT to inflict HEAVY BLEED for 5/7/10 seconds."
+    },
+    "bb-bb-strike-g": {
+        "name": "Strike Up the Band",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb2_t3_strikeuptheband.png",
+        "SA1": "Gain 3 stacks of REGEN for 8/10/12 seconds."
+    },
+    "bb-bb-tuba-g": {
+        "name": "Tuba Tuba",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb5_t3_tubatuba.png",
+        "SA1": "35% chance on HIT to remove 1 opponent BUFF. The final HIT has a 50/75/100% chance to inflict STUN for 6 seconds."
+    },
+    "bb-bb-tympan-g": {
+        "name": "Tympani Drive",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/bigband_bb3_t2_tympanidrive.png",
+        "SA1": "25% chance on HIT to inflict ARMOR BREAK for 5/7/10 seconds."
+    },
+    "bd-bb-doormat-g": {
+        "name": "Door Mat",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb1_doormat.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 5/7/10 seconds."
+    },
+    "bd-bb-empower-g": {
+        "name": "Empower",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb3_empower.png",
+        "SA1": "On HIT, inflict CURSE for 5/7/10 seconds."
+    },
+    "bd-bb-gift-g": {
+        "name": "Parting Gift",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb4_partinggift.png",
+        "SA1": "Deals an additional 10/15/20% damage for each DEBUFF stack on the opponent."
+    },
+    "bd-bb-girls-g": {
+        "name": "Girls' Night",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb5_girlsnight.png",
+        "SA1": "25% chance on HIT to inflict DEATH MARK for 10/12/15 seconds (also applies on blocked hits)."
+    },
+    "bd-bb-last-g": {
+        "name": "Last Call",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb6_lastcall.png",
+        "SA1": "Gain ENRAGE and DEADEYE for 10/12/15 seconds if used to defeat an opponent."
+    },
+    "bd-bb-stage-g": {
+        "name": "Stage Hazard",
+        "type": "bb",
+        "gear": 3,
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/blackdahlia_bb2_stagehazard.png",
+        "SA1": "50/75/100% chance on BLOCK to inflict GUARD BREAK for 10 seconds."
+    },
+    "be-bb-aWulf-g": {
+        "name": "Airwulf",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb2_t2_airwulf.png",
+        "SA1": "25/50/100% chance on HIT to inflict ARMOR BREAK and HEAL BLOCK for 10 seconds."
+    },
+    "be-bb-arm-g": {
+        "name": "Gigantic Arm",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb1_t1_giganticarm.png",
+        "SA1": "15/20/25% chance on HIT to STUN opponent for 4/6 seconds and has a 25/50/100% increased chance to land a CRITICAL HIT while in HYPE MODE."
+    },
+    "be-bb-mania-g": {
+        "name": "Wulfamania!",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb6_t3_wulfamania.png",
+        "SA1": "If used to defeat an opponent, instantly recover 25/35/50% of Beowulf's MAX HEALTH. Effect is doubled if used in HYPE MODE."
+    },
+    "be-bb-pummel-g_": {
+        "name": "Lupine Pummel",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb5_t2_lupinepummel.png",
+        "SA1": "15/25/35% chance on HIT to inflict GUARD BREAK and CURSE for 10 seconds."
+    },
+    "be-bb-sault-g": {
+        "name": "Three Wulf Moonsault",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb3_t3_threewulfmoonsault.png",
+        "SA1": "25/50/100% chance on HIT to remove 1 opponent BUFF. Defeated opponents cannot be revived if used in HYPE MODE."
+    },
+    "be-bb-trepak-g": {
+        "name": "Geatish Trepak",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/beowulf_bb4_t1_geatishtrepak.png",
+        "SA1": "25/35/50% bonus damage if used in HYPE MODE."
+    },
+    "ce-bb-dDrop-g": {
+        "name": "Diamond Drop",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb5_t1_diamonddrop.png",
+        "SA1": "If used to defeat an opponent, gain HEAVY REGEN for 5/8/10 seconds."
+    },
+    "ce-bb-dynamo-g": {
+        "name": "Diamond Dynamo",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb2_t1_diamonddynamo.png",
+        "SA1": "Deals 2/5/8% bonus damage per COMBO HIT."
+    },
+    "ce-bb-excell-g": {
+        "name": "Excellebella",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb4_t2_excellebella.png",
+        "SA1": "15/25% chance on HIT to STUN opponent for 4/6 seconds."
+    },
+    "ce-bb-forever-g": {
+        "name": "Diamonds are Forever",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb1_t2_diamondsareforever.png",
+        "SA1": "15/25/35% bonus damage if opponent is in the air."
+    },
+    "ce-bb-gBag-g": {
+        "name": "Grab Bag",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb6_t3_grabbag.png",
+        "SA1": "If used to defeat an opponent, gain 2 stacks of ARMOR for 10/12/15 seconds."
+    },
+    "ce-bb-uShow-g": {
+        "name": "Ultimate Showstopper",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/cerebella_bb3_t3_ultimateshowstopper.png",
+        "SA1": "If used to defeat an opponent, gain 2 random BUFFS for 10/12/15 seconds."
+    },
+    "do-bb-array-g": {
+        "name": "Megalith Array",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb6_megalitharray.png",
+        "SA1": "Reduces the opponent's BLOCKBUSTER METER by 3/4/5% per landed HIT."
+    },
+    "do-bb-beast-g": {
+        "name": "Beast Of Gehenna",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb1_beastofgehenna.png",
+        "SA1": "25/35/50% chance to set opponent's SPECIAL MOVE and TAG INS on COOLDOWN"
+    },
+    "do-bb-cLives-g": {
+        "name": "Catellite Lives",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb5_catellitelives.png",
+        "SA1": "2/3/5% chance on HIT to remove all BUFFS."
+    },
+    "do-bb-gun-g": {
+        "name": "Gun Blades",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb2_gunblades.png",
+        "SA1": "25/35/50% chance on HIT to inflict BLEED and HEAL BLOCK for 10 seconds."
+    },
+    "do-bb-legion-g": {
+        "name": "Nightmare Legion",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb3_nightmarelegion.png",
+        "SA1": "If used to defeat an opponent, gain 3 random BUFF(S) for 10/12/15 seconds."
+    },
+    "do-bb-wagon-g": {
+        "name": "Bandwagon Rushdown",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/double_bb4_bandwagon.png",
+        "SA1": "25/35/50% chance on HIT to inflict HEX for 10 seconds."
+    },
+    "el-bb-khep-g": {
+        "name": "Khepri Sun",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb2_t2_kheprisun.png",
+        "SA1": "Deal 25/35/50% bonus damage if the opponent is suffering a DEBUFF."
+    },
+    "el-bb-lady-g": {
+        "name": "Lady of Slaughter",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t3_ladyofslaughter.png",
+        "SA1": "50/75/100% chance to inflict a random DEBUFF for 10 seconds and set the opponent's SPECIAL MOVES and TAG INS on COOLDOWN."
+    },
+    "el-bb-nekh-g": {
+        "name": "Nekhbet Breaker",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb3_t2_nekhbetbreaker.png",
+        "SA1": "25/35/50% chance on HIT to inflict ARMOR BREAK for 8 seconds."
+    },
+    "el-bb-sBite-g": {
+        "name": "Sekhmet's Bite",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsbite.png",
+        "SA1": "25/35/50% chance on HIT to inflict ARMOR BREAK and CURSE for 10 seconds."
+    },
+    "el-bb-sFury-g": {
+        "name": "Sekhmet's Fury",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsfury.png",
+        "SA1": "25/35/50% chance on HIT to gain ENRAGE and HASTE for 10 seconds."
+    },
+    "el-bb-sTurn-g": {
+        "name": "Sekhmet's Turn",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/eliza_bb1_t1_sekhmetsturn.png",
+        "SA1": "25/35/50% chance on HIT to inflict BLEED and HEALBLOCK for 10 seconds."
+    },
+    "fi-bb-blow-g": {
+        "name": "Blowout",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb6_t3_blowout.png",
+        "SA1": "Reduces opponent's BLOCKBUSTER METER by 25/35/50%."
+    },
+    "fi-bb-fenrir-g": {
+        "name": "Fenrir Drive",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb3_t3_fenrirdrive.png",
+        "SA1": "25/35/50% bonus damage if opponent has a BLEED effect."
+    },
+    "fi-bb-gregor-g": {
+        "name": "Gregor Samson",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb1_t1_gregorsamson.png",
+        "SA1": "10/15/20% chance on HIT to inflict BLEED for 5 seconds."
+    },
+    "fi-bb-temper-g": {
+        "name": "Drill Tempered",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb5_t1_drilltempered.png",
+        "SA1": "5/10/15% chance on HIT to remove all BUFFS."
+    },
+    "fi-bb-tricho-g": {
+        "name": "Trichobezoar",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb2_t2_trichobezoar.png",
+        "SA1": "15/25/35% bonus damage if opponent is in the air."
+    },
+    "fi-bb-widow-g": {
+        "name": "Widow's Peak",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb4_t2_widowspeak.png",
+        "SA1": "50/75/100% chance on HIT to inflict CRIPPLE and ARMOR BREAK for 10 seconds."
+    },
+    "fu-bb-drill-g": {
+        "name": "Drill of My Dreams",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb5_t1_drilltempered.png",
+        "SA1": "Deals 2/5/8% bonus damage per COMBO HIT."
+    },
+    "fu-bb-friend-g": {
+        "name": "Best Friends Forever!",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb3_bestfriendsforever.png",
+        "SA1": "15/20/25% chance on HIT to transfer all DEBUFFS to the opponent and all opponent BUFFS to yourself."
+    },
+    "fu-bb-hHeels-g": {
+        "name": "Head over Heels",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb6_headoverheels.png",
+        "SA1": "Deals an additional 5/10/15% damage for every 10% HEALTH missing from Fukua."
+    },
+    "fu-bb-kiss-g": {
+        "name": "Goodnight Kiss",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb1_goodnightkiss.png",
+        "SA1": "10/15/25% chance on HIT to inflict WITHER and FATIGUE for 10 seconds each."
+    },
+    "fu-bb-snugg-g": {
+        "name": "Inevitable Snuggle",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/fukua_bb4_inevitablesnuggle.png",
+        "SA1": "Gain 1/2/3 stack(s) of MIASMA for 10 seconds if used to defeat an opponent.",
+        "SA2": "50% of the damage dealt is regained as HEALTH."
+    },
+    "fu-bb-tShy-g": {
+        "name": "Twice Shy",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/filia_bb6_t3_blowout.png",
+        "SA1": "Deals 25/35/50% bonus damage if the opponent is above 50% HEALTH.",
+        "SA2": "50% of the damage dealt is regained as HEALTH."
+    },
+    "ma-bb-carpal-g": {
+        "name": "Carpal Pummel",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb3_carpalpummel.png",
+        "SA1": "SKELETAL SUMMON: 20/35% chance on HIT to inflict STUN for 3/4 seconds. UNBLOCKABLE if the opponent is suffering from QUIETUS."
+    },
+    "ma-bb-hilgard-g": {
+        "name": "Hilgard's Howl",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb1_hilgardshowl.png",
+        "SA1": "SKELETAL SUMMON: 35% chance on HIT to inflict QUIETUS for 10/12/15 seconds."
+    },
+    "ma-bb-hoover-g": {
+        "name": "Hoover Maneuver",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb4_hoovermaneuver.png",
+        "SA1": "25/35/50% of the damage dealt is regained as HEALTH."
+    },
+    "ma-bb-repetitive-g": {
+        "name": "Repetitive Skeleton Impact",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb6_repetitiveskeletonimpact.png",
+        "SA1": "SKELETAL SUMMON: Inflicts INVERSE POLARITY for 10/12/15 seconds on HIT. Deals 50% bonus damage if CHARGED."
+    },
+    "ma-bb-scrub-g": {
+        "name": "Scrub 'n' Smash",
+        "type": "bb",
+        "gear": 3,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb2_scrubnsmash.png",
+        "SA1": "25/50/75% chance on HIT to remove all BUFFS."
+    },
+    "ma-bb-weight-g": {
+        "name": "Weight of our Will",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/marie_bb5_weightofourwill.png",
+        "SA1": "Reduces the opponent's BLOCKBUSTER METER by 2/3/4% per landed HIT."
+    },
+    "mf-bb-dMemb-g": {
+        "name": "Fifth of Dismember",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb5_fifthofdismember.png",
+        "SA1": "Deals 50/75/100% bonus damage if the opponent is below 50% HEALTH. Sacrifices 25% of your current HEALTH."
+    },
+    "mf-bb-edge-g": {
+        "name": "Feral Edge",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb4_feraledge.png",
+        "SA1": "Deals additional damage equal to 5/7/10% of the opponent's MAX HEALTH if the final hit is a CRITICAL HIT."
+    },
+    "mf-bb-fever-g": {
+        "name": "Cat Scratch Fever",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb2_catscratchfever.png",
+        "SA1": "Deals 3/5/8% bonus damage per COMBO HIT and inflicts DEATH MARK for 10 seconds (also applies on BLOCK)."
+    },
+    "mf-bb-omnom-g": {
+        "name": "OMNOMNOM",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb3_omnomnom.png",
+        "SA1": "25/35/50% of the damage dealt is regained as HEALTH."
+    },
+    "mf-bb-paws-g": {
+        "name": "Hit Paws",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/msfortune_bb1_hitpaws.png",
+        "SA1": "25/35/50% chance on HIT inflict BLEED for 5 seconds."
+    },
+    "pa-bb-canopy-g": {
+        "name": "Canopy Bounce",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb4_t1_forbearance.png",
+        "SA1": "25/35/50% chance on HIT to remove all BUFFS."
+    },
+    "pa-bb-iBrig-g": {
+        "name": "Inferno Brigade",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb3_t3_infernobrigade.png",
+        "SA1": "50/75/100% bonus damage while at least 3 TEARS are active."
+    },
+    "pa-bb-mBrig-g": {
+        "name": "Motor Brigade",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb2_t2_motorbrigade.png",
+        "SA1": "15/25% chance on HIT to STUN opponent for 4/6 seconds."
+    },
+    "pa-bb-scope-g": {
+        "name": "Silent Scope",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb1_t1_silentscope.png",
+        "SA1": "Has a 15/25/35% increased chance to land a CRITICAL HIT."
+    },
+    "pa-bb-shower-g": {
+        "name": "Napalm Shower",
+        "type": "bb",
+        "gear": 0,
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/parasoul_bb5_t2_napalmshower.png"
+    },
+    "pe-bb-airport-g": {
+        "name": "Deadly Airport",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb7_t3_deadlyairport.png",
+        "SA1": "15/25% chance on HIT to inflict HEAVY BLEED for 5/10 seconds."
+    },
+    "pe-bb-argus-g": {
+        "name": "Argus Agony",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb5_t1_argusagony.png",
+        "SA1": "5/10% chance on HIT to inflict ARMOR BREAK for 3/5 seconds."
+    },
+    "pe-bb-doom-g": {
+        "name": "Impending Doom",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb6_t1_impendingdoom.png",
+        "SA1": "15/25% chance on HIT to STUN opponent for 4/6 seconds."
+    },
+    "pe-bb-fellow-g": {
+        "name": "Good Fellows",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb2_t3_goodfellows.png",
+        "SA1": "5/10% chance on HIT to inflict ARMOR BREAK for 5/8 seconds."
+    },
+    "pe-bb-lenny-g": {
+        "name": "Lonesome Lenny",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb1_t2_lonesomelenny.png",
+        "SA1": "On HIT, inflict 1/2/3 random DEBUFF(S) for 10 seconds."
+    },
+    "pe-bb-wagon-g": {
+        "name": "Bandwagon Rushdown",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/peacock_bb4_t2_bandwagon.png",
+        "SA1": "15/25/35% chance on HIT to remove all BUFFS."
+    },
+    "pw-bb-bOver-g": {
+        "name": "Buer Overdrive",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb3_t3_bueroverdrive.png",
+        "SA1": "Reduces the opponent's BLOCKBUSTER METER by 3/5/7% per landed HIT."
+    },
+    "pw-bb-crawl-g": {
+        "name": "Death Crawl",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb1_t1_deathcrawl.png",
+        "SA1": "5/10% chance on HIT to inflict BLEED for 3/6 seconds."
+    },
+    "pw-bb-instal-g": {
+        "name": "Hatred Install",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb4_t1_hatredinstall.png",
+        "SA1": "25/50/100% chance on HIT to gain ENRAGE for 10 seconds."
+    },
+    "pw-bb-reaper-g": {
+        "name": "Fracture Reaper",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb5_t2_fracturereaper.png",
+        "SA1": "15/20/25% chance on HIT to inflict DEATH MARK for 10 seconds."
+    },
+    "pw-bb-thresh-g": {
+        "name": "Buer Thresher",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/painwheel_bb2_t2_buerthresher.png",
+        "SA1": "15/25% chance on HIT to inflict ARMOR BREAK for 5/10 seconds."
+    },
+    "rf-bb-battery-g": {
+        "name": "ASSAULT BATTERY",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb2_assaultbattery.png",
+        "SA1": "10/15/20% chance on HIT to inflict POWER SURGE for 10 seconds."
+    },
+    "rf-bb-break-g": {
+        "name": "CIRCUIT BREAKER",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb3_circuitbreaker.png",
+        "SA1": "While in detonation mode, HITS reduce BLOCKBUSTER METER by 5/7/10%.",
+        "SA2": "Sacrifices 10% of your MAX HEALTH."
+    },
+    "rf-bb-canonA-g": {
+        "name": "CATASTROPHE CANNON ALPHA",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb1_catastrophecannonalpha.png",
+        "SA1": "CRITICAL HITS inflict WITHER for 5/7/10 seconds."
+    },
+    "rf-bb-canonO-g": {
+        "name": "CATASTROPHE CANNON OMEGA",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb5_catastrophecannonomega.png",
+        "SA1": "2/3/5% chance on HIT to REMOVE 1 opponent BUFF and deal an additional 2% HEALTH for each BUFF removed. Defeated opponents cannot be revived."
+    },
+    "rf-bb-magnet-g": {
+        "name": "MAGNETIC TRAP",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/robofortune_bb4_magnetictrap.png",
+        "SA1": "25/35/50% of the damage dealt is regained as HEALTH. Gain BARRIER for 10 seconds on HIT."
+    },
+    "sq-bb-bat-g": {
+        "name": "Battle Opera",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb2_battleopera.png",
+        "SA1": "25% chance on HIT to inflict WITHER for 5/7/10 seconds."
+    },
+    "sq-bb-dai-g": {
+        "name": "Daisy Pusher",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb1_daisypusher.png",
+        "SA1": "Deals 25/35/50% bonus damage to opponents who are below 25% HEALTH."
+    },
+    "sq-bb-dnd-g": {
+        "name": "Drag 'n' Drop",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb4_dragndrop.png",
+        "SA1": "On HIT, inflict ARMOR BREAK for 5/7/10 seconds."
+    },
+    "sq-bb-inf-g": {
+        "name": "Inferno of Leviathan",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb3_infernoofleviathan.png",
+        "SA1": "25% chance on HIT to inflict WITHER and HEAL BLOCK for 5/7/10 seconds."
+    },
+    "sq-bb-rod-g": {
+        "name": "Rage of the Dragon",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/squigly_bb5_rageofthedragon.png",
+        "SA1": "Inflicts CURSE for 5/7/10 seconds.",
+        "SA2": "Deals 50% bonus damage if used when below 10% HEALTH."
+    },
+    "um-bb-acid-g": {
+        "name": "Acid Reflux",
+        "type": "bb",
+        "gear": 3,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb2_acidreflux.png",
+        "SA1": "50% chance on HIT to inflict SLIME for 10/12/15 seconds."
+    },
+    "um-bb-feed-g": {
+        "name": "Feeding Time",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb6_feedingtime.png",
+        "SA1": "25/35/50% of the damage dealt is regained as HEALTH. Defeated opponents cannot be revived."
+    },
+    "um-bb-project-g": {
+        "name": "Projection Lens",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb4_projectionlens.png",
+        "SA1": "10/15/20% chance on HIT to inflict POWER SURGE for 10 seconds."
+    },
+    "um-bb-rush-g": {
+        "name": "Hungern Rush",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb1_hungernrush.png",
+        "SA1": "15/20/25% bonus damage if used while OVERSTUFFED."
+    },
+    "um-bb-tongue-g": {
+        "name": "Tongue Twister",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb5_tonguetwister.png",
+        "SA1": "35% chance on HIT to inflict SLIME for 10/12/15 seconds.",
+        "SA2": "35% of the damage dealt is regained as HEALTH."
+    },
+    "um-bb-under-g": {
+        "name": "Under The Weather",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/umbrella_bb3_undertheweather.png",
+        "SA1": "25% chance on HIT if used while RAVENOUS to inflict WITHER for 5/7/10 seconds."
+    },
+    "va-bb-check-g": {
+        "name": "Checkmate Incision",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb1_t1_checkmateincision.png",
+        "SA1": "25/35/50% chance on HIT to inflict BLEED for 5 seconds."
+    },
+    "va-bb-countA-g": {
+        "name": "Countervenom: Sedative",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb5_t1_countervenomsedative.png",
+        "SA1": "Reduces opponent BLOCKBUSTER METER by 15/25/35% on HIT."
+    },
+    "va-bb-countB-g": {
+        "name": "Countervenom: Detox",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb6_t1_countervenomdetox.png",
+        "SA1": "15/25/35% chance on HIT to remove all BUFFS."
+    },
+    "va-bb-countO-g": {
+        "name": "Countervenom: Paralysis",
+        "type": "bb",
+        "gear": 4,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb7_t1_countervenomparalysis.png",
+        "SA1": "15/25/35% chance on HIT to STUN opponent for 5 seconds."
+    },
+    "va-bb-dOA-g": {
+        "name": "Dead On Arrival",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb3_t3_deadonarrival.png",
+        "SA1": "If used to defeat an opponent, gain HEAVY REGEN for 10/12/15 seconds."
+    },
+    "va-bb-eKG-g": {
+        "name": "EKG Flatliner",
+        "type": "bb",
+        "gear": 6,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb2_t3_ekgflatliner.png",
+        "SA1": "25/35/50% bonus damage if opponent is suffering BLEED."
+    },
+    "va-bb-forbid-g": {
+        "name": "Forbidden Procedure",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb4_t2_forbiddenprocedure.png",
+        "SA1": "When HITTING the body of a fallen teammate, RESURRECT them with {0:P0} HEALTH."
+    },
+    "va-bb-laryng-g": {
+        "name": "Laryngectomy",
+        "type": "bb",
+        "gear": 5,
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/valentine_bb8_t2_laryngectomy.png",
+        "SA1": "10/15/20% chance on HIT to inflict HEAVY BLEED for 10 seconds."
+    }
+}

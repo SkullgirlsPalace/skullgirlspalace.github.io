@@ -60,7 +60,7 @@ describe('statistics.js', () => {
         it('should include intro card', () => {
             const html = render();
             expect(html).toContain('intro-card');
-            expect(html).toContain('Calcule seus ganhos');
+            expect(html).toContain('stats-intro');
         });
 
         it('should call createCalculator', async () => {

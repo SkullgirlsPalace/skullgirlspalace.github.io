@@ -35,7 +35,9 @@ describe('ExportCharacterData.js', () => {
     it('should contain selection controls', async () => {
       const { renderExportModal } = await import('../../../src/components/ExportCharacterData.js');
       const html = renderExportModal();
-      expect(html).toContain('Selecionar');
+      // Selection controls are rendered via i18n keys (export.selectAll / export.deselectAll)
+      // Check for the structural button elements instead of hardcoded translated text
+      expect(html).toContain('export-select-all-btn');
     });
   });
 

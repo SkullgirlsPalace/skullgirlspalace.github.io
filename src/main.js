@@ -6,7 +6,7 @@
 // Core imports
 import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switchDetailTab } from './router.js';
 import { loadAllCharacters, loadTierData } from './services/dataService.js';
-import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
+import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer, handleToggleLanguageMenu, handleSelectLanguage } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
@@ -14,6 +14,8 @@ import { initAttributeTooltips } from './components/AttributeTooltip.js';
 import { toggleExportModal } from './components/ExportCharacterData.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
+import { setLanguage, getCurrentLanguage, t } from './i18n/index.js';
+import { preloadKrazeteData } from './i18n/dataTranslations.js';
 
 // ========== GLOBAL HANDLER REGISTRATION ==========
 // These need to be globally accessible for onclick handlers in HTML
@@ -29,6 +31,10 @@ window.scrollToBottom = scrollToBottom;
 window.handleToggleAboutDrawer = handleToggleAboutDrawer;
 window.handleToggleMobileMenu = handleToggleMobileMenu;
 window.handleToggleDisclaimer = handleToggleDisclaimer;
+
+// Language handlers
+window.handleToggleLanguageMenu = handleToggleLanguageMenu;
+window.handleSelectLanguage = handleSelectLanguage;
 
 // Filter handlers
 window.handleFilterClick = handleFilterClick;
@@ -124,6 +130,14 @@ async function init() {
         await loadTierData();
         console.log('✅ Tier data loaded');
 
+	console.log('🌐 Preloading Krazete translations...');
+	try {
+		await preloadKrazeteData();
+		console.log('✅ Krazete data preloaded');
+	} catch (err) {
+		console.warn('⚠️ Krazete preload failed (will lazy-load):', err);
+	}
+
         console.log('🧭 Initializing router...');
         initRouter();
 
@@ -132,9 +146,9 @@ async function init() {
         console.error('❌ Failed to initialize application:', error);
         document.getElementById('app').innerHTML = `
             <div class="error-page">
-                <h2>Erro ao inicializar a aplicação</h2>
+                <h2>${t('common.initError')}</h2>
                 <p>${error.message}</p>
-                <button onclick="location.reload()">Recarregar</button>
+                <button onclick="location.reload()">${t('common.reload')}</button>
             </div>
         `;
     }
@@ -174,6 +188,27 @@ function setupStaticUI() {
 
     // Initialize attribute tooltip system (delegated events)
     initAttributeTooltips();
+
+    // Re-render static UI on language change
+    window.addEventListener('languageChanged', () => {
+        const navContainer = document.getElementById('nav-container');
+        if (navContainer) navContainer.innerHTML = createNavbar();
+
+        const drawerContainer = document.getElementById('drawer-container');
+        if (drawerContainer) drawerContainer.innerHTML = createAboutDrawer();
+
+        const footerContainer = document.getElementById('footer-container');
+        if (footerContainer) footerContainer.innerHTML = createFooter();
+
+        const scrollNavContainer = document.getElementById('scroll-nav-container');
+        if (scrollNavContainer) {
+            scrollNavContainer.classList.add('scroll-nav');
+            scrollNavContainer.innerHTML = createScrollNav();
+        }
+
+        setupScrollListener();
+        initAttributeTooltips();
+    });
 }
 
 /**

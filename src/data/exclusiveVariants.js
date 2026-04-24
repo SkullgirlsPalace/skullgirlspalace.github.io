@@ -3,69 +3,93 @@
 // Variantes exclusivas e suas fontes de obtenção
 // =====================================================
 
+import { getCurrentLanguage } from '../i18n/translations.js';
+
 export const EXCLUSIVE_VARIANTS = {
-    // === Presentes ===
-    "Confusão Interior": {
-        source: "Obtível em Presente Dourado (Social)",
-        icon: "img/official/gold_gift.webp",
-        category: "Presente"
-    },
-    "Big Baddy": {
-        source: "Obtível em Presente Dourado da Guilda",
-        icon: "img/official/guild_gift.webp",
-        category: "Presente"
-    },
+	// === Gifts ===
+	"Confusão Interior": {
+		source: "Obtível em Presente Dourado (Social)",
+		source_en: "Available from Gold Gift (Social)",
+		icon: "img/official/gold_gift.webp",
+		category: "Presente",
+		category_en: "Gift"
+	},
+	"Big Baddy": {
+		source: "Obtível em Presente Dourado da Guilda",
+		source_en: "Available from Guild Gold Gift",
+		icon: "img/official/guild_gift.webp",
+		category: "Presente",
+		category_en: "Gift"
+	},
 
-    // === Relíquia Elemental ===
-    "Estrela Virtual": {
-        source: "Obtível em Relíquia Elemental (Água)",
-        icon: "img/official/Gacha_ElementalWater.webp",
-        category: "Relíquia Elemental"
-    },
-    "Piro-técnica": {
-        source: "Obtível em Relíquia Elemental (Fogo)",
-        icon: "img/official/Gacha_ElementalFire.webp",
-        category: "Relíquia Elemental"
-    },
-    "Má Sorte": {
-        source: "Obtível em Relíquia Elemental (Ar)",
-        icon: "img/official/Gacha_ElementalAir.webp",
-        category: "Relíquia Elemental"
-    },
-    "Festa Macabra": {
-        source: "Obtível em Relíquia Elemental (Luz)",
-        icon: "img/official/Gacha_ElementalLight.webp",
-        category: "Relíquia Elemental"
-    },
-    "Megassônico": {
-        source: "Obtível em Relíquia Elemental (Trevas)",
-        icon: "img/official/Gacha_ElementalDark.webp",
-        category: "Relíquia Elemental"
-    },
+	// === Elemental Relic ===
+	"Estrela Virtual": {
+		source: "Obtível em Relíquia Elemental (Água)",
+		source_en: "Available from Elemental Relic (Water)",
+		icon: "img/official/Gacha_ElementalWater.webp",
+		category: "Relíquia Elemental",
+		category_en: "Elemental Relic"
+	},
+	"Piro-técnica": {
+		source: "Obtível em Relíquia Elemental (Fogo)",
+		source_en: "Available from Elemental Relic (Fire)",
+		icon: "img/official/Gacha_ElementalFire.webp",
+		category: "Relíquia Elemental",
+		category_en: "Elemental Relic"
+	},
+	"Má Sorte": {
+		source: "Obtível em Relíquia Elemental (Ar)",
+		source_en: "Available from Elemental Relic (Wind)",
+		icon: "img/official/Gacha_ElementalAir.webp",
+		category: "Relíquia Elemental",
+		category_en: "Elemental Relic"
+	},
+	"Festa Macabra": {
+		source: "Obtível em Relíquia Elemental (Luz)",
+		source_en: "Available from Elemental Relic (Light)",
+		icon: "img/official/Gacha_ElementalLight.webp",
+		category: "Relíquia Elemental",
+		category_en: "Elemental Relic"
+	},
+	"Megassônico": {
+		source: "Obtível em Relíquia Elemental (Trevas)",
+		source_en: "Available from Elemental Relic (Dark)",
+		icon: "img/official/Gacha_ElementalDark.webp",
+		category: "Relíquia Elemental",
+		category_en: "Elemental Relic"
+	},
 
-    // === Relíquia Diária ===
-    "Mai-s O Quê?": {
-        source: "Obtível em Relíquia Diária (Raro)",
-        icon: "img/official/Gacha_Daily.webp",
-        category: "Relíquia Diária"
-    },
+	// === Daily Relic ===
+	"Mai-s O Quê?": {
+		source: "Obtível em Relíquia Diária (Raro)",
+		source_en: "Available from Daily Relic (Rare)",
+		icon: "img/official/Gacha_Daily.webp",
+		category: "Relíquia Diária",
+		category_en: "Daily Relic"
+	},
 
-    // === Relíquia de Personagem ===
-    "Favorito dos Fãs": {
-        source: "Obtível em Relíquia de Personagem Beowulf (Raro)",
-        icon: "img/official/Gacha_Char_Beowulf.webp",
-        category: "Relíquia de Personagem"
-    },
-    "Tritura-Números": {
-        source: "Obtível em Relíquia de Personagem Robo-Fortune(Raro)",
-        icon: "img/official/Gacha_Char_RoboFortune.webp",
-        category: "Relíquia de Personagem"
-    },
-    "Ouro Maciço": {
-        source: "Obtível em Relíquia de Personagem Peacock (Raro)",
-        icon: "img/official/Gacha_Char_Peacock.webp",
-        category: "Relíquia de Personagem"
-    }
+	// === Character Relic ===
+	"Favorito dos Fãs": {
+		source: "Obtível em Relíquia de Personagem Beowulf (Raro)",
+		source_en: "Available from Beowulf Character Relic (Rare)",
+		icon: "img/official/Gacha_Char_Beowulf.webp",
+		category: "Relíquia de Personagem",
+		category_en: "Character Relic"
+	},
+	"Tritura-Números": {
+		source: "Obtível em Relíquia de Personagem Robo-Fortune(Raro)",
+		source_en: "Available from Robo-Fortune Character Relic (Rare)",
+		icon: "img/official/Gacha_Char_RoboFortune.webp",
+		category: "Relíquia de Personagem",
+		category_en: "Character Relic"
+	},
+	"Ouro Maciço": {
+		source: "Obtível em Relíquia de Personagem Peacock (Raro)",
+		source_en: "Available from Peacock Character Relic (Rare)",
+		icon: "img/official/Gacha_Char_Peacock.webp",
+		category: "Relíquia de Personagem",
+		category_en: "Character Relic"
+	}
 };
 
 /**
@@ -74,5 +98,11 @@ export const EXCLUSIVE_VARIANTS = {
  * @returns {Object|null} Exclusive data or null
  */
 export function getExclusiveData(variantName) {
-    return EXCLUSIVE_VARIANTS[variantName] || null;
+	const data = EXCLUSIVE_VARIANTS[variantName];
+	if (!data) return null;
+	const lang = getCurrentLanguage();
+	if (lang === 'en') {
+		return { ...data, source: data.source_en || data.source, category: data.category_en || data.category };
+	}
+	return data;
 }

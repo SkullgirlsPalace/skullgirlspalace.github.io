@@ -2,50 +2,70 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Skullgirls Palace - Guias, Builds e mais sobre Skullgirls Mobile.">
-    <meta name="keywords" content="Skullgirls Mobile, builds, tier list, catalisadores, guia, wiki, calculadora">
-    <meta name="author" content="Palácio Branco - Lifi ツ e João Pedro">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+  content="Skullgirls Palace - Guias, Builds e mais sobre Skullgirls Mobile.">
+<meta name="keywords" content="Skullgirls Mobile, builds, tier list, catalisadores, guia, wiki, calculadora">
+<meta name="author" content="Palácio Branco - Lifi ツ e João Pedro">
 
-    <title>Skullgirls Palace</title>
+<title>Skullgirls Palace</title>
 
-    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
-    <link rel="icon" type="image/webp" sizes="32x32" href="img/favicon/MDR.webp">
-    <link rel="apple-touch-icon" href="img/favicon/MDR.webp">
+<link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+<link rel="icon" type="image/webp" sizes="32x32" href="img/favicon/MDR.webp">
+<link rel="apple-touch-icon" href="img/favicon/MDR.webp">
 
-    <link rel="stylesheet" href="src/styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+  // Set initial language before page renders
+  (function() {
+    var lang = localStorage.getItem('language') || 'pt-BR';
+    document.documentElement.lang = lang;
+
+    // Translate loading text based on language
+    var loadingTexts = {
+      'pt-BR': 'Carregando...',
+      'en': 'Loading...'
+    };
+    document.addEventListener('DOMContentLoaded', function() {
+      var loadingEl = document.getElementById('loading-text');
+      if (loadingEl) {
+        loadingEl.textContent = loadingTexts[lang] || loadingTexts['pt-BR'];
+      }
+    });
+  })();
+</script>
 </head>
 
 <body>
-    <!-- Navigation Container (populated by JS) -->
-    <div id="nav-container"></div>
+<!-- Navigation Container (populated by JS) -->
+<div id="nav-container"></div>
 
-    <!-- About Drawer Container (populated by JS) -->
-    <div id="drawer-container"></div>
+<!-- About Drawer Container (populated by JS) -->
+<div id="drawer-container"></div>
 
-    <!-- Main App Container -->
-    <main id="app">
-        <!-- Loading state -->
-        <div class="loading-state"
-            style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
-            <div class="loading-spinner"></div>
-            <p style="color: var(--text-muted); margin-left: 12px;">Carregando...</p>
-        </div>
-    </main>
+<!-- Main App Container -->
+<main id="app">
+<!-- Loading state -->
+<div class="loading-state"
+  style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+  <div class="loading-spinner"></div>
+  <p style="color: var(--text-muted); margin-left: 12px;" id="loading-text">Carregando...</p>
+</div>
+</main>
 
-    <!-- Footer Container (populated by JS) -->
-    <footer id="footer-container"></footer>
+<!-- Footer Container (populated by JS) -->
+<footer id="footer-container"></footer>
 
-    <!-- Scroll Navigation (populated by JS) -->
-    <div id="scroll-nav-container"></div>
+<!-- Scroll Navigation (populated by JS) -->
+<div id="scroll-nav-container"></div>
 
-    <!-- ES6 Module Entry Point -->
-    <script type="module" src="src/main.js"></script>
+<!-- ES6 Module Entry Point -->
+<script type="module" src="src/main.js"></script>
 </body>
 
 </html>

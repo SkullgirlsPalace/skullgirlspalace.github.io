@@ -1,0 +1,538 @@
+{
+    "cat-IArm-NA-g": {
+        "name": "Invincible Armada",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconInvincible.png",
+        "SA1": "50% chance when a teammate is defeated to gain INVINCIBLE for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-IArm-char-g": {
+        "name": "Invincible Armada",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconInvincible.png",
+        "SA1": "100% chance when a teammate is defeated to gain INVINCIBLE for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-aFlin-NA-g": {
+        "name": "The Angry Flinch",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconUnflinching.png",
+        "SA1": "While below 50% HEALTH, 100% chance when KNOCKED DOWN to gain UNFLINCHING for 5/6/7/8/9/10/11/12/13/14/15 seconds and 2 stack(s) of BARRIER."
+    },
+    "cat-aFlin-char-g": {
+        "name": "The Angry Flinch",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconUnflinching.png",
+        "SA1": "While below 65% HEALTH, 100% chance when KNOCKED DOWN to gain UNFLINCHING for 5/6/7/8/9/10/11/12/13/14/15 seconds and 2 stack(s) of BARRIER."
+    },
+    "cat-aImmu-NA-g": {
+        "name": "Autoimmune",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconImmune.png",
+        "SA1": "While suffering from at least 2 DEBUFF(S), 100% chance when suffering another DEBUFF to remove all DEBUFFS and gain IMMUNITY for 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 seconds."
+    },
+    "cat-aImmu-char-g": {
+        "name": "Autoimmune",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconImmune.png",
+        "SA1": "While suffering from at least 1 DEBUFF(S), 100% chance when suffering another DEBUFF to remove all DEBUFFS and gain IMMUNITY for 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 seconds."
+    },
+    "cat-armRa-NA-g": {
+        "name": "Armor Rating",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+        "SA1": "15% chance when HIT to avoid all damage and gain ARMOR for 5/6/7/8/9/10/11/12/13/14/15 seconds if the opponent has over 7 COMBO HITS."
+    },
+    "cat-armRa-char-g": {
+        "name": "Armor Rating",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+        "SA1": "20% chance when HIT to avoid all damage and gain ARMOR for 5/6/7/8/9/10/11/12/13/14/15 seconds if the opponent has over 7 COMBO HITS."
+    },
+    "cat-bBust-NA-g": {
+        "name": "Blockbusted",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockBlock.png",
+        "SA1": "15% chance when HIT to DISABLE opponent BLOCKBUSTERS for 5/6/7/8/9/10/11/12/13/14/15 seconds if the opponent has a fully charged BLOCKBUSTER."
+    },
+    "cat-bBust-char-g": {
+        "name": "Blockbusted",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockBlock.png",
+        "SA1": "25% chance when HIT to DISABLE opponent BLOCKBUSTERS for 5/6/7/8/9/10/11/12/13/14/15 seconds if the opponent has a fully charged BLOCKBUSTER."
+    },
+    "cat-bGuil-NA-g": {
+        "name": "Bleeding Guilty",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconBleed.png",
+        "SA1": "50% chance when inflicting BLEED to increase its duration by 5 seconds.",
+        "SA2": "While the opponent is suffering from BLEED, deal damage equal to 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% of their MAX HEALTH every 3 seconds."
+    },
+    "cat-bGuil-char-g": {
+        "name": "Bleeding Guilty",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconBleed.png",
+        "SA1": "100% chance when inflicting BLEED to increase its duration by 5 seconds.",
+        "SA2": "While the opponent is suffering from BLEED, deal damage equal to 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% of their MAX HEALTH every 3 seconds."
+    },
+    "cat-bonViv-char-g": {
+        "name": "Bone Vivant",
+        "element": "",
+        "character": "<:sp_ma:1247164362528133210>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Marie gains FINAL STAND and inflicts QUIETUS for 10/11/12/13/14/15/16/17/18/19/20 seconds each when suffering a HIT that deals at least 10% of her MAX HEALTH.",
+        "SA2": "While benefiting from FINAL STAND, Marie removes 1 opponent BUFF and regains 5% HEALTH every second."
+    },
+    "cat-cElem-char-g": {
+        "name": "Corrosive Element",
+        "element": "",
+        "character": "<:sp_db:692275933536845884>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Opponents lose 1.5/1.75/2/2.25/2.5/2.75/3/3.25/3.5/3.75/4% HEALTH per second while at ELEMENTAL ADVANTAGE or DISADVANTAGE against Double."
+    },
+    "cat-cOfKno-NA-g": {
+        "name": "Curse Of Knowledge",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCurse.png",
+        "SA1": "50% chance to inflict CURSE for 5/6/7/8/9/10/11/12/13/14/15 seconds when gaining a BUFF."
+    },
+    "cat-cOfKno-char-g": {
+        "name": "Curse Of Knowledge",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCurse.png",
+        "SA1": "100% chance to inflict CURSE for 5/6/7/8/9/10/11/12/13/14/15 seconds when gaining a BUFF."
+    },
+    "cat-crip-NA-g": {
+        "name": "Cripple Decker",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCripple.png",
+        "SA1": "Inflict CRIPPLE for 5/6/7/8/9/10/11/12/13/14/15 seconds and FATIGUE for 18/17/16/15/14/13/12/11/10/9/8 seconds when an opponent attack inflicts at least 10% HEALTH."
+    },
+    "cat-crip-char-g": {
+        "name": "Cripple Decker",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconCripple.png",
+        "SA1": "Inflict CRIPPLE for 5/6/7/8/9/10/11/12/13/14/15 seconds and FATIGUE for 18/17/16/15/14/13/12/11/10/9/8 seconds when an opponent attack inflicts at least 8% HEALTH."
+    },
+    "cat-dBarreled-char-g": {
+        "name": "Double-Barreled",
+        "element": "",
+        "character": "<:sp_bd:1115123780705063043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Black Dahlia gains 2 stacks of ENRAGE for 5/6/7/8/9/10/11/12/13/14/15 seconds when firing a SHOT.",
+        "SA2": "With at least 4 stacks of ENRAGE, SHOTS are UNBLOCKABLE and have a 50% chance to inflict STUN for 3 seconds."
+    },
+    "cat-dNut-elem-g": {
+        "name": "Darknut",
+        "element": "dark",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Dark Element Defenders]: Begin the match with 5 stacks of ARMOR. Each stack is removed when HIT with a COMBO COUNT at any multiple of 10.",
+        "SA2": "Gain a 10% chance to inflict BLEED for 5/6/7/8/9/10/11/12/13/14/15 seconds when HIT while benefiting from ARMOR."
+    },
+    "cat-dOrD-char-g": {
+        "name": "Do Or Die Time",
+        "element": "",
+        "character": "<:sp_beo:684771548414083107>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "After 130/120/110/100/90/80/70/60/50/40/30 seconds have passed in the match, if Beowulf is alive, all teammates gain permanent IMMUNITY and HASTE."
+    },
+    "cat-doomD-NA-g": {
+        "name": "Doomsday Device",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDoom.png",
+        "SA1": "50% chance to inflict a 30/28/26/24/22/20/18/16/14/12/10 second DOOM when falling below 50% HEALTH. DOOM is removed when the opponent is DEFEATED or TAGS OUT."
+    },
+    "cat-doomD-char-g": {
+        "name": "Doomsday Device",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDoom.png",
+        "SA1": "100% chance to inflict a 30/28/26/24/22/20/18/16/14/12/10 second DOOM when falling below 50% HEALTH. DOOM is removed when the opponent is DEFEATED or TAGS OUT."
+    },
+    "cat-dpBuer-char-g": {
+        "name": "Don't Poke The Buer",
+        "element": "",
+        "character": "<:sp_pw:698904045389348914>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Painwheel cannot suffer more than 15% HEALTH from a single HIT.",
+        "SA2": "When any HIT suffered deals 15% HEALTH, REFLECT 25/30/35/40/45/50/55/60/65/70/75% of the damage."
+    },
+    "cat-electF-char-g": {
+        "name": "Electrostatic Field",
+        "element": "",
+        "character": "<:sp_rf:698919676612313168>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "While benefiting from a BUFF, Robo-Fortune gains a 25% chance when HIT to inflict POWER SURGE and INVERSE POLARITY for 5/6/7/8/9/10/11/12/13/14/15 seconds each."
+    },
+    "cat-fArmo-elem-g": {
+        "name": "Frost Armor",
+        "element": "water",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmor.png",
+        "SA1": "[Water Element Defenders]: 10% chance when HIT to gain ARMOR for 2/3/4/5/6/7/8/9/10/11/12 seconds.",
+        "SA2": "When HIT while benefiting from ARMOR, reflect 15% of the incoming damage."
+    },
+    "cat-fFight-NA-g": {
+        "name": "Final Fight",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+        "SA1": "50% chance when the opponent uses a BLOCKBUSTER to gain FINAL STAND for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-fFight-char-g": {
+        "name": "Final Fight",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+        "SA1": "100% chance when the opponent uses a BLOCKBUSTER to gain FINAL STAND for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-fireS-elem-g": {
+        "name": "Fire Starter",
+        "element": "fire",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Fire Element Defenders]: Gain ENRAGE for 10 seconds and 1 stack of PRECISION every 15/14/13/12/11/10/9/8/7/6/5 seconds.",
+        "SA2": "While benefiting from PRECISION, inflict GUARD BREAK on HIT (includes blocked hits)."
+    },
+    "cat-futRes-char-g": {
+        "name": "Futile Resistance",
+        "element": "",
+        "character": "<:sp_bb:684054646528147500>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "While Big Band is above 50% HEALTH, opponents suffer 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% damage when landing a HIT that deals less than 1% of Big Band's MAX HEALTH. While facing BIG BAND, opponents have their PIERCING reduced by 35%."
+    },
+    "cat-gEscap-char-g": {
+        "name": "Great Escape",
+        "element": "",
+        "character": "<:sp_fi:698821373698637894>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Filia has a 50% chance to gain EVASION for every 15/14/13/12/11/10/9/8/7/6/5th combo HIT suffered."
+    },
+    "cat-hPoint-char-g": {
+        "name": "Hollow-Points",
+        "element": "",
+        "character": "<:sp_pe:698879915713626142>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Peacock's projectiles inflict HEAVY BLEED, CRIPPLE, and GUARD BREAK for 5/6/7/8/9/10/11/12/13/14/15 seconds when BLOCKED."
+    },
+    "cat-hWater-elem-g": {
+        "name": "High Waters",
+        "element": "water",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Water Element Defenders]: 10% chance when HIT to gain ARMOR and MIASMA for 10/12/14/16/18/20/22/24/26/28/30 seconds if you have a fully charged BLOCKBUSTER."
+    },
+    "cat-hexT-NA-g": {
+        "name": "Hexy Time",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHex.png",
+        "SA1": "Every 20 seconds, opponents suffer HEX for 3/4/5/6/7/8/9/10/11/12/13 seconds."
+    },
+    "cat-hexT-char-g": {
+        "name": "Hexy Time",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHex.png",
+        "SA1": "Every 15 seconds, opponents suffer HEX for 3/4/5/6/7/8/9/10/11/12/13 seconds."
+    },
+    "cat-iThreat-char-g": {
+        "name": "Imminent Threat",
+        "element": "",
+        "character": "<:sp_pa:698884548678910043>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Parasoul gains PRECISION when spawning a TEAR.",
+        "SA2": "Each CRITICAL HIT landed by either Fighter inflicts BLEED on the opponent and increases Parasoul's CRIT DAMAGE by 50/60/70/80/90/100/110/120/130/140/150%."
+    },
+    "cat-inAir-elem-g": {
+        "name": "Into Thin Air",
+        "element": "wind",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Air Element Defenders]: Every 35/33/31/29/27/25/23/21/19/17/15 seconds, all DEBUFFS are removed and all opponent BLOCKBUSTERS are reset."
+    },
+    "cat-lWeigh-elem-g": {
+        "name": "Light Weight",
+        "element": "light",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "[Light Element Defenders]: Begin the match with 10/12/14/16/18/20/22/24/26/28/30 seconds of UNFLINCHING and IMMUNITY."
+    },
+    "cat-lWord-elem-g": {
+        "name": "Last Words",
+        "element": "light",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconFinalStand.png",
+        "SA1": "[Light Element Defenders]: Once per match, gain a 100% chance when suffering a HIT that would be fatal to gain FINAL STAND for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-markD-NA-g": {
+        "name": "Marked For Deletion",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDeathMark.png",
+        "SA1": "Opponents suffer DEATH MARK for 5/6/7/8/9/10/11/12/13/14/15 seconds when falling below 50% HEALTH.",
+        "SA2": "10% chance on HIT to instantly defeat opponents if they are suffering from DEATH MARK (includes blocked hits)."
+    },
+    "cat-markD-char-g": {
+        "name": "Marked For Deletion",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconDeathMark.png",
+        "SA1": "Opponents suffer DEATH MARK for 5/6/7/8/9/10/11/12/13/14/15 seconds when falling below 75% HEALTH.",
+        "SA2": "10% chance on HIT to instantly defeat opponents if they are suffering from DEATH MARK (includes blocked hits)."
+    },
+    "cat-megaL-char-g": {
+        "name": "Megalixir",
+        "element": "",
+        "character": "<:sp_va:698852651617746974>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "All teammates gain 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% BLOCKBUSTER METER per second while Valentine is the active Fighter and benefiting from REGEN. "
+    },
+    "cat-noHeal-NA-g": {
+        "name": "No High Heals",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHealBlock.png",
+        "SA1": "The opponent suffers HEAL BLOCK for 5 seconds every 12/11.5/11/10.5/10/9.5/9/8.5/8/7.5/7 seconds while above 45% HEALTH."
+    },
+    "cat-noHeal-char-g": {
+        "name": "No High Heals",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHealBlock.png",
+        "SA1": "The opponent suffers HEAL BLOCK for 5 seconds every 12/11.5/11/10.5/10/9.5/9/8.5/8/7.5/7 seconds while above 25% HEALTH."
+    },
+    "cat-oPeriod-char-g": {
+        "name": "Orbital Period",
+        "element": "",
+        "character": "<:sp_an:767922687204524032>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "When Annie BLOCKS a HIT, she inflicts a 20/19/18/17/16/15/14/13/12/11/10 second DEATH MARK, which is removed when she suffers a 10 HIT COMBO. If DEATH MARK expires, opponents suffer IMMOBILIZE for 15 seconds. "
+    },
+    "cat-overL-elem-g": {
+        "name": "Overload",
+        "element": "wind",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+        "SA1": "[Air Element Defenders]: Gain 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6% BLOCKBUSTER METER per second if the opponent has a fully charged BLOCKBUSTER.",
+        "SA2": "Also gain a 25% chance to inflict a 5 second STUN."
+    },
+    "cat-pHaste-NA-g": {
+        "name": "Post Haste",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHaste.png",
+        "SA1": "25% chance when HIT with a BLOCKBUSTER to gain HASTE for 10 seconds.",
+        "SA2": "When gaining HASTE, also gain 30/32/34/36/38/40/42/44/46/48/50% BLOCKBUSTER METER."
+    },
+    "cat-pHaste-char-g": {
+        "name": "Post Haste",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconHaste.png",
+        "SA1": "50% chance when HIT with a BLOCKBUSTER to gain HASTE for 10 seconds.",
+        "SA2": "When gaining HASTE, also gain 30/32/34/36/38/40/42/44/46/48/50% BLOCKBUSTER METER."
+    },
+    "cat-pMones-char-g": {
+        "name": "Pharaohmones",
+        "element": "",
+        "character": "<:sp_el:692287012450992219>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Eliza gains a 20% chance when HIT to inflict HEX and CURSE for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-pRage-NA-g": {
+        "name": "Primal Rage",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+        "SA1": "Gain ENRAGE for 15 seconds and 5/6/7/8/9/10/11/12/13/14/15% BLOCKBUSTER METER for every 10 COMBO HITS suffered."
+    },
+    "cat-pRage-char-g": {
+        "name": "Primal Rage",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+        "SA1": "Gain ENRAGE for 15 seconds and 5/6/7/8/9/10/11/12/13/14/15% BLOCKBUSTER METER for every 5 COMBO HITS suffered."
+    },
+    "cat-rOoze-char-g": {
+        "name": "Rhythm and Ooze",
+        "element": "",
+        "character": "<:sp_um:969082448082268241>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Umbrella gains 1 stack of MIASMA every 13/12/11/10/9/8/7/6/5/4/3 seconds. MIASMA is removed when Umbrella is KNOCKED DOWN.",
+        "SA2": "When reaching 5 stacks of MIASMA, opponents suffer 2 stacks of permanent SLIME."
+    },
+    "cat-rTemp-elem-g": {
+        "name": "Rising Temperatures",
+        "element": "fire",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconEnrage.png",
+        "SA1": "[Fire Element Defenders]: Gain a 10/12/14/16/18/20/22/24/26/28/30 second ENRAGE every 5 seconds. DASH ATTACKS and BLOCKBUSTERS are UNBLOCKABLE while benefiting from at least 2 stacks of ENRAGE."
+    },
+    "cat-recB-NA-g": {
+        "name": "Record Breaker",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmorBreak.png",
+        "SA1": "Each HIT has a 25% chance to inflict ARMOR BREAK and GUARD BREAK for 5/6/7/8/9/10/11/12/13/14/15 seconds.",
+        "SA2": "Landing a CRITICAL HIT will convert ARMOR BREAK to a permanent ARMOR BREAK."
+    },
+    "cat-recB-char-g": {
+        "name": "Record Breaker",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconArmorBreak.png",
+        "SA1": "Each HIT has a 50% chance to inflict ARMOR BREAK and GUARD BREAK for 5/6/7/8/9/10/11/12/13/14/15 seconds.",
+        "SA2": "Landing a CRITICAL HIT will convert ARMOR BREAK to a permanent ARMOR BREAK."
+    },
+    "cat-regX-NA-g": {
+        "name": "Regeneration X",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconRegen.png",
+        "SA1": "50% chance when gaining REGEN to increase its duration by 2/3/4/5/6/7/8/9/10/11/12 seconds and immediately recover 15% HEALTH."
+    },
+    "cat-regX-char-g": {
+        "name": "Regeneration X",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconRegen.png",
+        "SA1": "100% chance when gaining REGEN to increase its duration by 2/3/4/5/6/7/8/9/10/11/12 seconds and immediately recover 15% HEALTH."
+    },
+    "cat-rtSend-char-g": {
+        "name": "Return To Sender",
+        "element": "",
+        "character": "<:sp_sq:698909665077231776>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Once per match while suffering from a DEBUFF, Squigly gains a 50/55/60/65/70/75/80/85/90/95/100% chance when defeated to RESURRECT with 50% HEALTH and TRANSFER all her DEBUFFS to her opponent."
+    },
+    "cat-sDark-elem-g": {
+        "name": "Shot In The Dark",
+        "element": "dark",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+        "SA1": "[Dark Element Defenders]: 100% chance when BLOCKING a HIT to DRAIN 5/6/7/8/9/10/11/12/13/14/15% BLOCKBUSTER METER."
+    },
+    "cat-sPost-char-g": {
+        "name": "Scratching Post",
+        "element": "",
+        "character": "<:sp_mf:698837829467242496>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Ms. Fortune inflicts SLOW and DEATH MARK for 2/3/4/5/6/7/8/9/10/11/12 seconds when her attacks are BLOCKED.",
+        "SA2": "When reaching 5 stacks of SLOW, the opponent becomes STUNNED for 3 seconds."
+    },
+    "cat-sPowder-char-g": {
+        "name": "Sleeping Powder",
+        "element": "",
+        "character": "<:sp_fu:698919709336141886>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Fukua has a 10% chance when HIT to inflict FATIGUE for 15/14/13/12/11/10/9/8/7/6/5 seconds and DRAIN 10% of the opponent's BLOCKBUSTER METER. "
+    },
+    "cat-slomo-NA-g": {
+        "name": "Super Slo-Mo",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconSlow.png",
+        "SA1": "Opponents suffer SLOW for 5/6/7/8/9/10/11/12/13/14/15 seconds after every 5 seconds not using a BLOCKBUSTER."
+    },
+    "cat-slomo-char-g": {
+        "name": "Super Slo-Mo",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconSlow.png",
+        "SA1": "Opponents suffer SLOW for 5/6/7/8/9/10/11/12/13/14/15 seconds after every 3 seconds not using a BLOCKBUSTER."
+    },
+    "cat-specE-NA-g": {
+        "name": "Special Exception",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockSpecial.png",
+        "SA1": "50% chance when using a SPECIAL MOVE to DISABLE opponent SPECIAL MOVES for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-specE-char-g": {
+        "name": "Special Exception",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockSpecial.png",
+        "SA1": "100% chance when using a SPECIAL MOVE to DISABLE opponent SPECIAL MOVES for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-strongA-char-g": {
+        "name": "Strong-Armed",
+        "element": "",
+        "character": "<:sp_cb:685401170495537152>",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/SkullModifierIcon.png",
+        "SA1": "Cerebella has an 50/55/60/65/70/75/80/85/90/95/100% chance to gain UNFLINCHING for 5 seconds when BLOCKING any attack."
+    },
+    "cat-stunG-NA-g": {
+        "name": "Stun Grenade",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+        "SA1": "Projectiles inflict 200% BONUS DAMAGE when BLOCKED and have a 25% chance on HIT to STUN the opponent for 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 second(s)."
+    },
+    "cat-stunG-char-g": {
+        "name": "Stun Grenade",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconStun.png",
+        "SA1": "Projectiles inflict 200% BONUS DAMAGE when BLOCKED and have a 50% chance on HIT to STUN the opponent for 1/1.5/2/2.5/3/3.5/4/4.5/5/5.5/6 second(s)."
+    },
+    "cat-tBPrec-NA-g": {
+        "name": "To Be Precise",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconPrecision.png",
+        "SA1": "Gain 3 stack(s) of PRECISION every 15/14/13/12/11/10/9/8/7/6/5 seconds."
+    },
+    "cat-tBPrec-char-g": {
+        "name": "To Be Precise",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconPrecision.png",
+        "SA1": "Gain 5 stack(s) of PRECISION every 15/14/13/12/11/10/9/8/7/6/5 seconds."
+    },
+    "cat-tagNG-NA-g": {
+        "name": "Tag N' Gag",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockTag.png",
+        "SA1": "50% chance when TAGGING OUT to inflict DISABLE TAG INS and IMMOBILIZE for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-tagNG-char-g": {
+        "name": "Tag N' Gag",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconLockTag.png",
+        "SA1": "100% chance when TAGGING OUT to inflict DISABLE TAG INS and IMMOBILIZE for 5/6/7/8/9/10/11/12/13/14/15 seconds."
+    },
+    "cat-withF-NA-g": {
+        "name": "Wither Forecast",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+        "SA1": "Every 10 seconds, opponents suffer WITHER for 5/6/7/8/9/10/11/12/13/14/15 seconds. WITHER is removed if the opponent uses a BLOCKBUSTER."
+    },
+    "cat-withF-char-g": {
+        "name": "Wither Forecast",
+        "element": "",
+        "character": "",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/official/BuffIconWither.png",
+        "SA1": "Every 7 seconds, opponents suffer WITHER for 5/6/7/8/9/10/11/12/13/14/15 seconds. WITHER is removed if the opponent uses a BLOCKBUSTER."
+    }
+}

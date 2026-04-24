@@ -12,6 +12,7 @@ import { renderVariants } from '../components/VariantCard.js';
 import { createFilterBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
 import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
+import { t, getLocalizedNameSync } from '../i18n/index.js';
 
 /**
  * Render character detail page
@@ -28,7 +29,7 @@ export function render(charKey, initialTab = 'builds') {
                     <button class="btn-back" onclick="navigateTo('characters')">
                         ←
                     </button>
-                    <h2>Personagem não encontrado</h2>
+                    <h2>${t('detail.characterNotFound')}</h2>
                 </div>
             </section>
         `;
@@ -49,14 +50,14 @@ export function render(charKey, initialTab = 'builds') {
                 
                 <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
                     <div style="display: flex; align-items: center; gap: 15px;">
-                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${charData.character}" class="char-select-icon"
+                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${getLocalizedNameSync(charKey, charData.character)}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'" style="width: 64px; height: 64px; object-fit: contain;">
-                        <h2 style="margin: 0; font-size: 2.5rem;">${charData.character.toUpperCase()}</h2>
+                        <h2 style="margin: 0; font-size: 2.5rem;">${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
                     </div>
                     
-                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="Sobre ${charData.character}">
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charKey, charData.character)}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
-                        <span>Informações</span>
+                        <span>${t('variant.information')}</span>
                     </button>
                 </div>
                 
@@ -64,11 +65,11 @@ export function render(charKey, initialTab = 'builds') {
                 <div class="detail-tabs">
                     <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
                             onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
-                        BUILDS
+                        ${t('variant.builds')}
                     </button>
                     <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
                             onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
-                        TIER LIST
+                        ${t('variant.tierList')}
                     </button>
                 </div>
             </div>
@@ -102,7 +103,7 @@ function renderBuildsTab(charKey, charData) {
     // Generate variant cards HTML
     let variantsHTML = '';
     if (variants.length === 0) {
-        variantsHTML = '<p style="color: var(--text-muted); padding: 20px; text-align: center;">Nenhuma variante encontrada com estes filtros.</p>';
+          variantsHTML = `<p style="color: var(--text-muted); padding: 20px; text-align: center;">${t('detail.noVariantsFilters')}</p>`;
     } else {
         variantsHTML = `<div class="variants-grid" id="variants-container"></div>`;
     }

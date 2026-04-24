@@ -64,7 +64,7 @@ describe('characters.js page', () => {
     it('should render the export trigger button', () => {
       const exportBtn = document.querySelector('.export-trigger-btn');
       expect(exportBtn).not.toBeNull();
-      expect(exportBtn.textContent).toContain('Exportar');
+      expect(exportBtn.getAttribute('onclick')).toContain('toggleExportModal');
     });
   });
 });
