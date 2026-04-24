@@ -30,8 +30,17 @@
 }
 
 .lang-flag {
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
+}
+
+.flag-icon {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .lang-code {
@@ -99,7 +108,12 @@
 }
 
 .lang-option .lang-flag {
-  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.lang-option .flag-icon {
+  width: 22px;
 }
 
 /* Responsive */

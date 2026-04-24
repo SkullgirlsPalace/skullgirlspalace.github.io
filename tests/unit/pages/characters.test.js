@@ -9,11 +9,6 @@ vi.mock('../../../src/services/dataService.js', () => ({
     getCharacters: vi.fn(() => [{ key: 'filia', name: 'Filia' }])
 }));
 
-vi.mock('../../../src/components/ExportCharacterData.js', () => ({
-    renderExportModal: vi.fn(() => '<div class="export-modal">Export Modal</div>'),
-    initExportModal: vi.fn()
-}));
-
 import { render, init } from '../../../src/pages/characters.js';
 
 describe('characters.js', () => {
@@ -29,11 +24,6 @@ describe('characters.js', () => {
             expect(html).toContain('Escolha um Personagem');
         });
 
-        it('should include export modal', () => {
-            const html = render();
-            expect(html).toContain('Export Modal');
-        });
-
         it('should include character grid', () => {
             const html = render();
             expect(html).toContain('characterGrid');
@@ -45,11 +35,6 @@ describe('characters.js', () => {
             expect(html).toContain('navigateTo');
         });
 
-        it('should include export button', () => {
-            const html = render();
-            expect(html).toContain('export-trigger-btn');
-            expect(html).toContain('toggleExportModal');
-        });
     });
 
     describe('init', () => {
@@ -67,12 +52,6 @@ describe('characters.js', () => {
                 [{ key: 'filia', name: 'Filia' }],
                 'openCharacterDetails'
             );
-        });
-
-        it('should call initExportModal', async () => {
-            const { initExportModal } = await import('../../../src/components/ExportCharacterData.js');
-            init();
-            expect(initExportModal).toHaveBeenCalled();
         });
 
         it('should not render grid if no characters', async () => {

@@ -9,11 +9,6 @@ vi.mock('../../../src/services/dataService.js', () => ({
   getCharacters: vi.fn(() => null),
 }));
 
-vi.mock('../../../src/components/ExportCharacterData.js', () => ({
-  renderExportModal: vi.fn(() => '<div class="export-modal-mock"></div>'),
-  initExportModal: vi.fn(),
-}));
-
 describe('characters.js page', () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -59,12 +54,6 @@ describe('characters.js page', () => {
     it('should render the back button', () => {
       const backBtn = document.querySelector('.btn-back');
       expect(backBtn).not.toBeNull();
-    });
-
-    it('should render the export trigger button', () => {
-      const exportBtn = document.querySelector('.export-trigger-btn');
-      expect(exportBtn).not.toBeNull();
-      expect(exportBtn.getAttribute('onclick')).toContain('toggleExportModal');
     });
   });
 });

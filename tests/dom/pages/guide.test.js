@@ -1,10 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // Mock heavy dependencies
-vi.mock('../../../src/components/ExportModifierData.js', () => ({
-  renderModifierExportModal: vi.fn(() => '<div class="modifier-export-modal-mock"></div>'),
-  initModifierExportModal: vi.fn(),
-}));
 
 vi.mock('../../../src/services/dataService.js', () => ({
   loadCatalysts: vi.fn(() => Promise.resolve(null)),

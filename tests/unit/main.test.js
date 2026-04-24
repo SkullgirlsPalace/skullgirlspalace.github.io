@@ -49,10 +49,6 @@ vi.mock('../../src/components/AttributeTooltip.js', () => ({
     initAttributeTooltips: vi.fn()
 }));
 
-vi.mock('../../src/components/ExportCharacterData.js', () => ({
-    toggleExportModal: vi.fn()
-}));
-
 vi.mock('../../src/pages/character-detail.js', () => ({
     refreshVariants: vi.fn(),
     switchTab: vi.fn()
@@ -138,10 +134,6 @@ describe('main.js', () => {
             expect(window.handleClearFilters).toBeDefined();
         });
 
-        it('should register export handler globally', async () => {
-            await import('../../src/main.js');
-            expect(window.toggleExportModal).toBeDefined();
-        });
     });
 
     describe('switchVariantTab', () => {

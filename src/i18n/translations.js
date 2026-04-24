@@ -66,7 +66,6 @@ export const translations = {
     maxStats: 'Estatísticas Máximas',
     hideImage: 'Ocultar Imagem',
     showImage: 'Mostrar Imagem',
-    exportModifiers: 'Exportar Modificadores',
     positiveEffects: 'Efeitos Positivos',
     negativeEffects: 'Efeitos Negativos',
     permanentEffect: 'Efeito Permanente',
@@ -85,6 +84,15 @@ export const translations = {
     catalystsLoaded: 'Catalisadores Carregados',
     noModifiersElement: 'Nenhum modificador encontrado para este elemento.'
   },
+  element: {
+    fire: 'Fogo',
+    water: 'Água',
+    wind: 'Vento',
+    light: 'Luz',
+    dark: 'Trevas',
+    neutral: 'Neutro'
+  },
+
   filter: {
     filterBtn: 'Filtrar',
     clear: 'Limpar',
@@ -454,7 +462,6 @@ export const translations = {
     maxStats: 'Max Stats',
     hideImage: 'Hide Image',
     showImage: 'Show Image',
-    exportModifiers: 'Export Modifiers',
     positiveEffects: 'Positive Effects',
     negativeEffects: 'Negative Effects',
     permanentEffect: 'Permanent Effect',
@@ -473,6 +480,15 @@ export const translations = {
     catalystsLoaded: 'Catalysts Loaded',
     noModifiersElement: 'No modifiers found for this element.'
   },
+  element: {
+    fire: 'Fire',
+    water: 'Water',
+    wind: 'Wind',
+    light: 'Light',
+    dark: 'Dark',
+    neutral: 'Neutral'
+  },
+
   filter: {
     filterBtn: 'Filter',
     clear: 'Clear',

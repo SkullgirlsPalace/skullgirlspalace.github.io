@@ -19,7 +19,7 @@ export function render() {
       <div class="home-language-selector">
         <div class="language-selector" id="homeLanguageSelector">
           <button class="language-btn" onclick="handleToggleHomeLanguageMenu()">
-            <span class="lang-flag">${currentLang === 'pt-BR' ? '🇧🇷' : '🇺🇸'}</span>
+            <span class="lang-flag">${currentLang === 'pt-BR' ? '<img src="img/official/flag_pt.webp" alt="PT" class="flag-icon">' : '<img src="img/official/flag_en.webp" alt="EN" class="flag-icon">'}</span>
             <span class="lang-code">${currentLang === 'pt-BR' ? 'PT' : 'EN'}</span>
             <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12">
               <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
@@ -27,11 +27,11 @@ export function render() {
           </button>
           <div class="language-dropdown" id="homeLanguageDropdown">
             <button class="lang-option ${currentLang === 'pt-BR' ? 'active' : ''}" onclick="handleSelectLanguage('pt-BR')">
-              <span class="lang-flag">🇧🇷</span>
+              <span class="lang-flag"><img src="img/official/flag_pt.webp" alt="PT" class="flag-icon"></span>
               <span>Português</span>
             </button>
             <button class="lang-option ${currentLang === 'en' ? 'active' : ''}" onclick="handleSelectLanguage('en')">
-              <span class="lang-flag">🇺🇸</span>
+              <span class="lang-flag"><img src="img/official/flag_en.webp" alt="EN" class="flag-icon"></span>
               <span>English</span>
             </button>
           </div>
