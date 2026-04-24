@@ -48,7 +48,7 @@ describe('characters.js', () => {
         it('should include export button', () => {
             const html = render();
             expect(html).toContain('export-trigger-btn');
-            expect(html).toContain('Exportar');
+            expect(html).toContain('toggleExportModal');
         });
     });
 

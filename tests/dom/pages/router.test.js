@@ -1,5 +1,21 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
+// Mock Navigation to prevent module-level document.addEventListener side effect
+vi.mock('../../../src/components/Navigation.js', () => ({
+  createNavbar: vi.fn(() => ''),
+  createAboutDrawer: vi.fn(() => ''),
+  createScrollNav: vi.fn(() => ''),
+  updateNavbarVisibility: vi.fn(),
+  updateActiveNavLink: vi.fn(),
+  scrollToTop: vi.fn(),
+  scrollToBottom: vi.fn(),
+  handleToggleAboutDrawer: vi.fn(),
+  handleToggleMobileMenu: vi.fn(),
+  handleToggleDisclaimer: vi.fn(),
+  handleToggleLanguageMenu: vi.fn(),
+  handleSelectLanguage: vi.fn(),
+}));
+
 // Mock window.location
 let hashValue = '';
 vi.stubGlobal('window', {

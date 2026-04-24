@@ -3,15 +3,20 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 // Mock dependencies
 vi.mock('../../../src/data/effectData.js', () => ({
     EFFECT_DATA: {
-        buffs: { regen: { name: 'Regen', description: 'Regenerates HP', type: 'buff' } },
-        debuffs: { bleed: { name: 'Bleed', description: 'DoT damage', type: 'debuff' } }
-    }
+        permanent_modifier: { name: 'Permanent Effect', type: 'term', color: '#b0bec5', icon: 'img/modifiers/permanent/Permanent.webp', stacks: 5, detailed: 'Cannot be removed.', explicacao: 'Cannot be removed.' },
+        regen: { name: 'Regen', type: 'buff', color: '#44cc66', icon: 'img/modifiers/buffs/Regen.webp', stacks: 5, detailed: 'Regenerates HP.' },
+        bleed: { name: 'Bleed', type: 'debuff', color: '#ff4444', icon: 'img/modifiers/debuffs/Bleed.webp', stacks: 5, detailed: 'DoT damage.' }
+    },
+    getLocalizedEffect: vi.fn(() => null),
+    getEffectPatterns: vi.fn(() => [])
 }));
 
 vi.mock('../../../src/data/attributeData.js', () => ({
-    ATTRIBUTE_DATA: [
-        { key: 'hp', name: 'HP', description: 'Health points' }
-    ]
+    ATTRIBUTE_DATA: {
+        hp: { keys: ['HP'], name: 'HP', name_en: 'HP', summary: 'Health points', summary_en: 'Health points', detailed: 'Your health.', detailed_en: 'Your health.' }
+    },
+    getLocalizedAttribute: vi.fn(() => null),
+    getAttributePatterns: vi.fn(() => [])
 }));
 
 vi.mock('../../../src/components/ExportModifierData.js', () => ({
@@ -64,19 +69,18 @@ describe('guide.js', () => {
         it('should include tutorials content', () => {
             const html = render();
             expect(html).toContain('tab-tutorials');
-            expect(html).toContain('Renda Passiva');
+            // Content is i18n-driven (passiveIncomeTitle key)
+            expect(html).toContain('tutorial-renda-passiva');
         });
 
         it('should include statistics tab', () => {
             const html = render();
             expect(html).toContain('tab-statistics');
-            expect(html).toContain('Estatísticas');
         });
 
         it('should include modifiers tab', () => {
             const html = render();
             expect(html).toContain('tab-modifiers');
-            expect(html).toContain('Efeitos Positivos');
         });
 
         it('should include catalysts tab', () => {

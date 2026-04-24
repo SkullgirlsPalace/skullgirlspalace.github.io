@@ -52,6 +52,30 @@ vi.mock('../../../src/pages/character-profile.js', () => ({
   renderProfileModal: vi.fn(() => '<div class="profile-modal-mock"></div>'),
 }));
 
+vi.mock('../../../src/i18n/index.js', () => {
+  const translationMap = {
+    'variant.builds': 'BUILDS',
+    'variant.tierList': 'TIER LIST',
+    'detail.characterNotFound': 'não encontrado',
+    'detail.filters': 'Filtros',
+    'detail.sortBy': 'Ordenar por',
+    'detail.rarity': 'Raridade',
+    'detail.element': 'Elemento',
+    'variant.class': 'CLASSE',
+    'variant.information': 'Informações',
+    'profile.critlessRecommended': 'Recomendado Critless',
+    'profile.close': 'Fechar',
+  };
+  return {
+    t: vi.fn((key) => translationMap[key] || key),
+    getCurrentLanguage: vi.fn(() => 'pt-BR'),
+    getLocalizedNameSync: vi.fn((charKey, fallbackName) => fallbackName || charKey),
+    getLocalizedAbilityNameSync: vi.fn((charKey, abilityName, fallback) => fallback || abilityName),
+    getLocalizedSADescSync: vi.fn(() => null),
+    preloadKrazeteData: vi.fn(() => Promise.resolve()),
+  };
+});
+
 const mockCharData = {
   character: 'Filia',
   variants: {
@@ -142,6 +166,8 @@ describe('character-detail.js page', () => {
     it('should render the character icon', () => {
       const icon = document.querySelector('.char-select-icon');
       expect(icon).not.toBeNull();
+      // alt is populated by getLocalizedNameSync(charKey, charData.character)
+      // with mock returning fallbackName, it should be mockCharData.character = 'Filia'
       expect(icon.getAttribute('alt')).toBe('Filia');
     });
 

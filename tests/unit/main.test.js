@@ -22,7 +22,11 @@ vi.mock('../../src/components/Navigation.js', () => ({
     scrollToBottom: vi.fn(),
     handleToggleAboutDrawer: vi.fn(),
     handleToggleMobileMenu: vi.fn(),
-    handleToggleDisclaimer: vi.fn()
+    handleToggleDisclaimer: vi.fn(),
+    handleToggleLanguageMenu: vi.fn(),
+    handleSelectLanguage: vi.fn(),
+    updateNavbarVisibility: vi.fn(),
+    updateActiveNavLink: vi.fn()
 }));
 
 vi.mock('../../src/components/Footer.js', () => ({
@@ -56,6 +60,21 @@ vi.mock('../../src/pages/character-detail.js', () => ({
 
 vi.mock('../../src/state/store.js', () => ({
     getState: vi.fn(() => ({ currentCharacter: null, currentTab: 'builds' }))
+}));
+
+vi.mock('../../src/i18n/index.js', () => ({
+    t: vi.fn((key) => key),
+    getCurrentLanguage: vi.fn(() => 'pt-BR'),
+    setLanguage: vi.fn(),
+}));
+
+vi.mock('../../src/i18n/dataTranslations.js', () => ({
+    preloadKrazeteData: vi.fn(() => Promise.resolve()),
+    getLocalizedName: vi.fn(),
+    getLocalizedAbilityName: vi.fn(),
+    getLocalizedNameSync: vi.fn((k, f) => f || k),
+    getLocalizedAbilityNameSync: vi.fn((k, n, f) => f || n),
+    getLocalizedSADescSync: vi.fn(() => null),
 }));
 
 describe('main.js', () => {
@@ -235,12 +254,12 @@ describe('main.js', () => {
         });
 
         it('should call initRouter', async () => {
-            const { initRouter } = await import('../../src/router.js');
-
             vi.resetModules();
             await import('../../src/main.js');
 
-            expect(initRouter).toHaveBeenCalled();
+            // After resetModules, re-import the mocked router to get the fresh spy
+            const { initRouter: freshInitRouter } = await import('../../src/router.js');
+            expect(freshInitRouter).toHaveBeenCalled();
         });
 
         it('should show error page on failure', async () => {
