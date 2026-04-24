@@ -275,19 +275,24 @@
     padding: 6px 12px;
     border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 10;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    max-width: 72px; /* Only show icon initially */
+    overflow: hidden;
 }
 
 .exclusive-badge.shifted {
     right: 90px;
 }
 
-.exclusive-badge:hover {
+.exclusive-badge:hover,
+.exclusive-badge.expanded {
     border-color: var(--accent-gold);
     background: linear-gradient(135deg, rgba(30, 30, 35, 0.98), rgba(10, 10, 15, 0.9));
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 168, 75, 0.2);
+    max-width: 400px; /* Expand to show text */
 }
 
 .exclusive-icon {
@@ -301,6 +306,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    transition-delay: 0s;
+}
+
+.exclusive-badge:hover .exclusive-text-group,
+.exclusive-badge.expanded .exclusive-text-group {
+    opacity: 1;
+    transition-delay: 0.15s;
 }
 
 .exclusive-label {

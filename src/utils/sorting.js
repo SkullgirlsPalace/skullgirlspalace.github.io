@@ -7,6 +7,7 @@ import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js
 import { parseStatValue } from './formatters.js';
 import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
 import { isNewVariant } from '../data/newContent.js';
+import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
 
 /**
  * Sort variants based on sort configuration
@@ -118,6 +119,21 @@ export function filterVariants(variants, filters) {
         filtered = filtered.filter(v => {
             const classes = getVariantClasses(v.name);
             return classes.some(cls => filters.variantClass.includes(cls));
+        });
+    }
+
+    // Effects Filter (multi-select: specific effect keys like 'armor', 'bleed')
+    if (filters.efeitos && filters.efeitos.length > 0) {
+        filtered = filtered.filter(v => {
+            if (!v.signature_ability || !v.signature_ability.description) return false;
+            const desc = v.signature_ability.description.toLowerCase();
+            
+            return filters.efeitos.every(effectKey => {
+                const effectData = EFFECT_DATA[effectKey];
+                if (!effectData) return false;
+                
+                return effectData.keys.some(key => desc.includes(key.toLowerCase()));
+            });
         });
     }
 

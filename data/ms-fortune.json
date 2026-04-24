@@ -197,7 +197,7 @@
                 },
                 "signature_ability": {
                     "name": "ATAQUE-SURPRESA",
-                    "description": "[HAB 1]: Cada **GOLPE NA CABEÇA** tem 25% de **chance de TRANSFERIR 1 EF. POS. do opon. e converter em 3 cam. de PRECISÃO.**\n\n[HC 2]: **GOLPES PRECISOS** dão ESQUIVA e infligem MARCA DA MORTE por 10 s. Cada camada de ESQUIVA é removida após esquivar-se de um GOLPE."
+                    "description": "Cada **GOLPE NA CABEÇA** tem 25% de **chance de TRANSFERIR 1 EF. POS. do opon. e converter em 3 cam. de PRECISÃO.**\n\n**GOLPES PRECISOS** dão ESQUIVA e infligem MARCA DA MORTE por 10 s. Cada camada de ESQUIVA é removida após esquivar-se de um GOLPE."
                 },
                 "marquee_ability": "BUP",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

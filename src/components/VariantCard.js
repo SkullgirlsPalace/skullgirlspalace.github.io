@@ -84,7 +84,7 @@ export function createVariantCard(variant, charKey, index = 0) {
     // Check if variant is exclusive
     const exclusiveData = getExclusiveData(variant.name);
     const exclusiveBadgeHTML = exclusiveData ? `
-        <div class="exclusive-badge ${isNew ? 'shifted' : ''}">
+        <div class="exclusive-badge ${isNew ? 'shifted' : ''}" onclick="this.classList.toggle('expanded')">
             <img loading="lazy" src="${exclusiveData.icon}" alt="Exclusivo" class="exclusive-icon"
                  onerror="this.style.display='none'">
             <div class="exclusive-text-group">

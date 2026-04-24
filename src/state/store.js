@@ -20,11 +20,11 @@ const state = {
     // Tab-Specific Filters & Sorting
     tabState: {
         builds: {
-            filters: { rarity: [], element: [], variantClass: [] },
+            filters: { rarity: [], element: [], variantClass: [], efeitos: [] },
             sort: { type: 'score', direction: 'desc' }
         },
         tier: {
-            filters: { rarity: [], element: [], variantClass: [] },
+            filters: { rarity: [], element: [], variantClass: [], efeitos: [] },
             sort: { type: 'class', direction: 'desc' }
         }
     },
@@ -124,7 +124,7 @@ export function toggleFilter(type, value) {
 
 export function clearFilters() {
     const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
-    state.tabState[tab].filters = { rarity: [], element: [], variantClass: [] };
+    state.tabState[tab].filters = { rarity: [], element: [], variantClass: [], efeitos: [] };
     state.tabState[tab].sort = tab === 'tier' 
         ? { type: 'class', direction: 'desc' }
         : { type: 'score', direction: 'desc' };
@@ -135,8 +135,8 @@ export function clearFilters() {
  * Resets ALL filters for ALL tabs. Used on character navigation.
  */
 export function resetAllFilters() {
-    state.tabState.builds.filters = { rarity: [], element: [], variantClass: [] };
-    state.tabState.tier.filters = { rarity: [], element: [], variantClass: [] };
+    state.tabState.builds.filters = { rarity: [], element: [], variantClass: [], efeitos: [] };
+    state.tabState.tier.filters = { rarity: [], element: [], variantClass: [], efeitos: [] };
     state.tabState.builds.sort = { type: 'score', direction: 'desc' };
     state.tabState.tier.sort = { type: 'class', direction: 'desc' };
     notifySubscribers();

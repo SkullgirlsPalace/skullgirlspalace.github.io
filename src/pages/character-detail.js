@@ -71,17 +71,27 @@ export function render(charKey, initialTab = 'builds') {
         <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
-                <button class="btn-back pill" onclick="navigateTo('characters')">
-                    <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
-                </button>
-                
                 <div class="header-top-row">
+                    <div class="header-left">
+                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                            <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
+                        </button>
+                    </div>
                     <div class="char-title-row">
                         <img loading="lazy" src="${charIcon}" alt="${charData.character}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'">
                         <h2>${charData.character.toUpperCase()}</h2>
                     </div>
-                    ${createSearchBar()}
+                    <div class="header-right">
+                        ${createSearchBar()}
+                    </div>
+                </div>
+                
+                <div class="header-middle-row">
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="Sobre ${charData.character}">
+                        <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
+                        <span>Ficha de ${charData.character}</span>
+                    </button>
                 </div>
                 
                 <div class="header-bottom-row">
@@ -96,13 +106,12 @@ export function render(charKey, initialTab = 'builds') {
                             TIER LIST
                         </button>
                     </div>
-                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="Sobre ${charData.character}">
-                        <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
-                        <span>Informações</span>
-                    </button>
                 </div>
             </div>
 
+            <div id="variants-count-container" style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 4px;">
+                <p class="variants-count" id="variants-count"></p>
+            </div>
             ${createFilterBar()}
 
             <div class="detail-content" id="detail-content">
@@ -125,19 +134,22 @@ function renderTodosPage(initialTab = 'builds') {
         <section class="section character-detail" id="character-detail" style="--char-accent: var(--accent-gold)" data-current-tab="${currentTab}" data-todos-mode="true">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
-                <button class="btn-back pill" onclick="navigateTo('characters')">
-                    <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
-                </button>
-                
                 <div class="header-top-row">
+                    <div class="header-left">
+                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                            <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
+                        </button>
+                    </div>
                     <div class="char-title-row">
                         <span style="font-size: 2rem;">📋</span>
                         <h2>TODAS AS VARIANTES</h2>
                     </div>
-                    ${createSearchBar()}
+                    <div class="header-right">
+                        ${createSearchBar()}
+                    </div>
                 </div>
                 
-                <div class="header-bottom-row">
+                <div class="header-bottom-row" style="margin-top: 16px;">
                     <!-- Tab Navigation -->
                     <div class="detail-tabs">
                         <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
@@ -152,6 +164,9 @@ function renderTodosPage(initialTab = 'builds') {
                 </div>
             </div>
 
+            <div id="variants-count-container" style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 4px;">
+                <p class="variants-count" id="variants-count"></p>
+            </div>
             ${createFilterBar()}
 
             <div class="detail-content" id="detail-content">
@@ -205,9 +220,6 @@ function renderTodosBuildsTab() {
 
     return `
         <div class="builds-tab-content">
-            <p class="variants-count" id="variants-count">
-                ${variants.length} variantes encontradas
-            </p>
             ${variantsHTML}
         </div>
     `;
@@ -238,9 +250,6 @@ function renderBuildsTab(charKey, charData) {
 
     return `
         <div class="builds-tab-content">
-            <p class="variants-count" id="variants-count">
-                ${variants.length} variantes encontradas
-            </p>
             ${variantsHTML}
         </div>
     `;
@@ -339,6 +348,11 @@ export async function switchTab(charKey, tab) {
 
     // Re-render content
     const contentEl = document.getElementById('detail-content');
+    const countContainer = document.getElementById('variants-count-container');
+    if (countContainer) {
+        countContainer.style.display = tab === 'builds' ? 'flex' : 'none';
+    }
+    
     if (contentEl) {
         if (charKey === 'todos') {
             if (tab === 'tier') {

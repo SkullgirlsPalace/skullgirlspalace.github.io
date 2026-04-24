@@ -10,6 +10,7 @@ import { flattenVariants } from '../utils/sorting.js';
 import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { ELEMENT_MAP, RARITY_ICONS } from '../config/constants.js';
+import { EFFECT_DATA } from '../data/effectData.js';
 
 // Debounce timer for search
 let searchDebounceTimer = null;
@@ -25,8 +26,8 @@ export function createSearchBar() {
     return `
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
-                <img loading="lazy" src="img/official/icon_filter.webp" alt="" class="search-icon"
-                     onerror="this.src='img/official/filter.webp'">
+                <img loading="lazy" src="img/official/ZoomIn.webp" alt="Pesquisar" class="search-icon"
+                     onerror="this.style.display='none'">
                 <input type="text" id="variant-search-input" class="variant-search-input"
                        placeholder="Pesquisar variante..."
                        oninput="handleSearchInput(this.value)"
@@ -44,6 +45,24 @@ export function createSearchBar() {
  * @returns {string} HTML string
  */
 export function createFilterBar() {
+    const buffs = [];
+    const debuffs = [];
+    for (const [key, data] of Object.entries(EFFECT_DATA)) {
+        if (data.icon && (data.type === 'buff' || data.type === 'buff-term')) buffs.push({key, ...data});
+        if (data.icon && (data.type === 'debuff' || data.type === 'debuff-term')) debuffs.push({key, ...data});
+    }
+
+    const createEffectGrid = (effects, isBuff) => {
+        return effects.map(e => `
+            <button class="filter-btn effect-btn ${isBuff ? 'buff' : 'debuff'}" 
+                data-effect-key="${e.key}" 
+                onclick="handleFilterClick('efeitos', '${e.key}')" 
+                title="${e.name}">
+                <img loading="lazy" src="${e.icon}" alt="${e.name}">
+            </button>
+        `).join('');
+    };
+
     return `
         <div class="filter-bar">
             <!-- Unified Filter/Clear Button -->
@@ -115,24 +134,67 @@ export function createFilterBar() {
 
                 <div class="vertical-separator"></div>
 
-                <!-- Sort + Class Section -->
+                <!-- Sort Section -->
                 <div class="filter-section right">
                     <div class="sort-header">
                         <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
-                        ORGANIZAR / CLASSE
+                        ORGANIZAR
                     </div>
                     <div class="sort-group">
                         <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
                         <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
                         <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">VIDA</button>
                         <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
-                        <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">ELEMENTO</button>
-                        <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">CATEGORIA</button>
-                        <div style="width:1px; height:20px; background:rgba(255,255,255,0.2); margin: 0 4px;"></div>
-                        <button class="sort-btn class-filter-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">OFENSIVO</button>
-                        <button class="sort-btn class-filter-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">DEFENSIVO</button>
-                        <button class="sort-btn class-filter-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')">SUPORTE</button>
-                        <button class="sort-btn class-filter-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')">CORINGA</button>
+                    </div>
+
+                    <!-- Advanced Filters Dropdown -->
+                    <div class="advanced-filters-dropdown" id="advanced-filters-dropdown">
+                        <button class="advanced-filters-btn" onclick="handleToggleAdvancedFilters()">
+                            <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
+                            <span>Filtros Avançados</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="advanced-filters-content" id="advanced-filters-content">
+                            <div class="adv-filter-group">
+                                <span class="adv-filter-label">ORDENAR POR</span>
+                                <div class="sort-group">
+                                    <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">ELEMENTO</button>
+                                    <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">CATEGORIA</button>
+                                </div>
+                            </div>
+                            <div class="adv-filter-group">
+                                <span class="adv-filter-label">FILTRAR POR CLASSE</span>
+                                <div class="sort-group">
+                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">
+                                        <img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> OFENSIVO
+                                    </button>
+                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">
+                                        <img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> DEFENSIVO
+                                    </button>
+                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')">
+                                        <img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> SUPORTE
+                                    </button>
+                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')">
+                                        <img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> CORINGA
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="adv-filter-group" id="adv-filter-effects-pos">
+                                <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">EFEITOS POSITIVOS <span>▼</span></span>
+                                <div class="filter-grid effects-grid collapsible-content">
+                                    ${createEffectGrid(buffs, true)}
+                                </div>
+                            </div>
+                            <div class="adv-filter-group" id="adv-filter-effects-neg">
+                                <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">EFEITOS NEGATIVOS <span>▼</span></span>
+                                <div class="filter-grid effects-grid collapsible-content">
+                                    ${createEffectGrid(debuffs, false)}
+                                </div>
+                            </div>
+                            <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
+                                <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">Limpar Filtros Avançados</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -192,6 +254,27 @@ export function updateFilterUI() {
         }
     });
 
+    // Update Effect Buttons
+    document.querySelectorAll('.effect-btn').forEach(btn => {
+        const effect = btn.dataset.effectKey;
+        if (filters.efeitos && filters.efeitos.length > 0 && filters.efeitos.includes(effect)) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Hide effects on tier list
+    const posEffectsGrp = document.getElementById('adv-filter-effects-pos');
+    const negEffectsGrp = document.getElementById('adv-filter-effects-neg');
+    if (tab === 'tier') {
+        if (posEffectsGrp) posEffectsGrp.style.display = 'none';
+        if (negEffectsGrp) negEffectsGrp.style.display = 'none';
+    } else {
+        if (posEffectsGrp) posEffectsGrp.style.display = 'flex';
+        if (negEffectsGrp) negEffectsGrp.style.display = 'flex';
+    }
+
     // Update Sort Buttons
     const sortLabels = {
         'score': 'PONTUAÇÃO',
@@ -222,6 +305,7 @@ export function updateFilterUI() {
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
         (filters.variantClass && filters.variantClass.length > 0) ||
+        (filters.efeitos && filters.efeitos.length > 0) ||
         sort.type !== defaultSortType ||
         sort.direction !== defaultSortDir;
 
@@ -531,6 +615,7 @@ export function handleMainFilterAction() {
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
         (filters.variantClass && filters.variantClass.length > 0) ||
+        (filters.efeitos && filters.efeitos.length > 0) ||
         sort.type !== defaultSortType ||
         sort.direction !== 'desc';
 
@@ -573,11 +658,47 @@ export function handleToggleCharDropdown() {
     }
 }
 
-// ========== CLOSE SEARCH ON OUTSIDE CLICK ==========
+export function handleToggleAdvancedFilters() {
+    const dropdown = document.getElementById('advanced-filters-dropdown');
+    const content = document.getElementById('advanced-filters-content');
+    if (dropdown && content) {
+        dropdown.classList.toggle('active');
+        content.classList.toggle('active');
+    }
+}
+
+// ========== CLOSE DROPDOWNS ON OUTSIDE CLICK / SCROLL ==========
 document.addEventListener('click', (e) => {
+    // Search
     const searchContainer = document.getElementById('search-bar-container');
-    const dropdown = document.getElementById('search-results-dropdown');
-    if (searchContainer && dropdown && !searchContainer.contains(e.target)) {
-        dropdown.classList.remove('active');
+    const searchDropdown = document.getElementById('search-results-dropdown');
+    if (searchContainer && searchDropdown && !searchContainer.contains(e.target)) {
+        searchDropdown.classList.remove('active');
+    }
+
+    // Advanced Filters
+    const advDropdown = document.getElementById('advanced-filters-dropdown');
+    const advContent = document.getElementById('advanced-filters-content');
+    if (advDropdown && advContent && !advDropdown.contains(e.target)) {
+        advDropdown.classList.remove('active');
+        advContent.classList.remove('active');
     }
 });
+
+window.addEventListener('scroll', () => {
+    // Close advanced filters on scroll
+    const advDropdown = document.getElementById('advanced-filters-dropdown');
+    const advContent = document.getElementById('advanced-filters-content');
+    if (advDropdown && advContent && advContent.classList.contains('active')) {
+        advDropdown.classList.remove('active');
+        advContent.classList.remove('active');
+    }
+}, { passive: true });
+
+export function handleClearAdvancedFilters() {
+    const state = getState();
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    state.tabState[tab].filters.variantClass = [];
+    state.tabState[tab].filters.efeitos = [];
+    import('../state/store.js').then(module => module.notifySubscribers());
+}

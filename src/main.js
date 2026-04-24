@@ -8,7 +8,7 @@ import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switch
 import { loadAllCharacters, loadTierData, loadExtrasData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
-import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction } from './components/FilterBar.js';
+import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction, handleToggleAdvancedFilters } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
 
@@ -36,6 +36,7 @@ window.handleSortClick = handleSortClick;
 window.handleClearFilters = handleClearFilters;
 window.handleToggleFilter = handleToggleFilter;
 window.handleToggleCharDropdown = handleToggleCharDropdown;
+window.handleToggleAdvancedFilters = handleToggleAdvancedFilters;
 
 // Search handlers
 window.handleSearchInput = handleSearchInput;
@@ -245,6 +246,16 @@ function setupScrollListener() {
                 const atBottom = scrollY >= docHeight - windowHeight - 100;
                 const isScrollable = docHeight > windowHeight + 100;
                 scrollBottomBtn.classList.toggle('visible', isScrollable && !atBottom);
+            }
+
+            // Floating search bar logic
+            const searchBar = document.getElementById('search-bar-container');
+            if (searchBar) {
+                if (scrollY > 150) {
+                    searchBar.classList.add('floating');
+                } else {
+                    searchBar.classList.remove('floating');
+                }
             }
         };
 
