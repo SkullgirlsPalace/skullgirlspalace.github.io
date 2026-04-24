@@ -19,11 +19,6 @@ vi.mock('../../../src/data/attributeData.js', () => ({
     getAttributePatterns: vi.fn(() => [])
 }));
 
-vi.mock('../../../src/components/ExportModifierData.js', () => ({
-    renderModifierExportModal: vi.fn(() => '<div class="export-modal">Export Modal</div>'),
-    initModifierExportModal: vi.fn()
-}));
-
 vi.mock('../../../src/services/dataService.js', () => ({
     loadCatalysts: vi.fn(),
     loadFendaData: vi.fn()
@@ -88,11 +83,6 @@ describe('guide.js', () => {
             expect(html).toContain('tab-catalysts');
         });
 
-        it('should include export modal', () => {
-            const html = render();
-            expect(html).toContain('Export Modal');
-        });
-
         it('should include switchGuideTab function calls', () => {
             const html = render();
             expect(html).toContain('switchGuideTab');
@@ -100,14 +90,6 @@ describe('guide.js', () => {
     });
 
     describe('init', () => {
-        it('should call initModifierExportModal', async () => {
-            const { initModifierExportModal } = await import('../../../src/components/ExportModifierData.js');
-
-            init();
-
-            expect(initModifierExportModal).toHaveBeenCalled();
-        });
-
         it('should register global functions', () => {
             init();
 

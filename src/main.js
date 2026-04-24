@@ -11,7 +11,6 @@ import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
-import { toggleExportModal } from './components/ExportCharacterData.js';
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 import { setLanguage, getCurrentLanguage, t } from './i18n/index.js';
@@ -46,9 +45,6 @@ window.handleToggleCharDropdown = handleToggleCharDropdown;
 
 // Calculator handlers (specific handlers registered by statistics.js init)
 window.handleCalculateEarnings = handleCalculateEarnings;
-
-// Export handlers
-window.toggleExportModal = toggleExportModal;
 
 // ========== VARIANT CARD TAB HANDLER ==========
 /**

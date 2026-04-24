@@ -5,7 +5,6 @@
 
 import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
 import { ATTRIBUTE_DATA, getLocalizedAttribute } from '../data/attributeData.js';
-import { renderModifierExportModal, initModifierExportModal } from '../components/ExportModifierData.js';
 import { loadCatalysts, loadFendaData } from '../services/dataService.js';
 import { formatConstraint } from '../utils/formatters.js';
 import { t, getCurrentLanguage } from '../i18n/index.js';
@@ -70,18 +69,6 @@ export function render() {
 
     <!-- MODIFIERS TAB (Unified) -->
     <div id="tab-modifiers" class="guide-tab-content">
-
-      <!-- Export Button -->
-      <div class="export-trigger-section">
-        <button class="export-trigger-btn" onclick="toggleModifierExportModal()">
-          <span class="btn-icon">📥</span>
-          ${t('guide.exportModifiers')}
-        </button>
-      </div>
-
-      <!-- Export Modal (hidden by default) -->
-      ${renderModifierExportModal()}
-
 
       <!-- BUFFS SECTION -->
       <div class="modifiers-section">
@@ -206,9 +193,6 @@ export function init() {
   // Register global tab switcher
   window.switchGuideTab = switchGuideTab;
   window.toggleStatsImage = toggleStatsImage;
-
-  // Initialize modifier export modal listeners
-  initModifierExportModal();
 
   // Trigger lazy loading if needed
   if (window.setupLazyLoading) window.setupLazyLoading();
