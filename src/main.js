@@ -243,9 +243,11 @@ function setupScrollListener() {
 
             if (scrollBottomBtn) {
                 // Show if not near the bottom and page is actually scrollable
+                // Hide completely on the home/initial menu
+                const isHome = !window.location.hash || window.location.hash === '#' || window.location.hash === '#/';
                 const atBottom = scrollY >= docHeight - windowHeight - 100;
                 const isScrollable = docHeight > windowHeight + 100;
-                scrollBottomBtn.classList.toggle('visible', isScrollable && !atBottom);
+                scrollBottomBtn.classList.toggle('visible', !isHome && isScrollable && !atBottom);
             }
 
             // Floating search bar logic

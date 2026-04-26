@@ -135,20 +135,24 @@ export function createFilterBar() {
                 <div class="vertical-separator"></div>
 
                 <!-- Sort Section -->
-                <div class="filter-section right">
+                <div class="filter-section center" style="margin: 0 auto; display: flex; align-items: center; gap: 12px;">
                     <div class="sort-header">
                         <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
                         ORGANIZAR
                     </div>
-                    <div class="sort-group">
+                    <div class="sort-group grid-2x2">
                         <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
+                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
                         <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
                         <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">VIDA</button>
-                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
                     </div>
+                </div>
 
+                <div class="vertical-separator"></div>
+
+                <div class="filter-section right">
                     <!-- Advanced Filters Dropdown -->
-                    <div class="advanced-filters-dropdown" id="advanced-filters-dropdown">
+                    <div class="advanced-filters-dropdown" id="advanced-filters-dropdown" style="margin-left: 0;">
                         <button class="advanced-filters-btn" onclick="handleToggleAdvancedFilters()">
                             <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
                             <span>Filtros Avançados</span>

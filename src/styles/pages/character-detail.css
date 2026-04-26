@@ -7,7 +7,6 @@
     width: 100%;
     margin-bottom: 24px;
     padding-top: 12px;
-    padding-left: 60px;
 }
 
 /* Top row: title left + search right */
@@ -29,7 +28,32 @@
     justify-content: flex-end;
 }
 
-/* Title row: icon + name horizontally aligned */
+.centered-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+/* Middle row: ficha button */
+.header-middle-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+/* Bottom row: tabs */
+.header-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .char-title-row {
     display: flex;
     align-items: center;
@@ -50,28 +74,6 @@
     height: 52px;
     object-fit: contain;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
-}
-
-/* Bottom row: tabs */
-.header-bottom-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.header-middle-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 24px;
-}
-
-.header-center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
 }
 
 .character-detail-header .section-header {

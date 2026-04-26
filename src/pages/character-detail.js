@@ -77,11 +77,13 @@ export function render(charKey, initialTab = 'builds') {
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
-                    <div class="char-title-row">
+                    
+                    <div class="char-title-row centered-title">
                         <img loading="lazy" src="${charIcon}" alt="${charData.character}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'">
                         <h2>${charData.character.toUpperCase()}</h2>
                     </div>
+                    
                     <div class="header-right">
                         ${createSearchBar()}
                     </div>
@@ -140,10 +142,12 @@ function renderTodosPage(initialTab = 'builds') {
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
-                    <div class="char-title-row">
+                    
+                    <div class="char-title-row centered-title">
                         <span style="font-size: 2rem;">📋</span>
                         <h2>TODAS AS VARIANTES</h2>
                     </div>
+                    
                     <div class="header-right">
                         ${createSearchBar()}
                     </div>

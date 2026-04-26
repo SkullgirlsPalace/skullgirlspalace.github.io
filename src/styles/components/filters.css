@@ -614,6 +614,12 @@
     flex-wrap: wrap;
 }
 
+.sort-group.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+}
+
 .sort-btn {
     background: var(--bg-secondary);
     color: var(--text-secondary);
