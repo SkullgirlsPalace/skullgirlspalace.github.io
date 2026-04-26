@@ -1,2 +1,11 @@
 raw_images/
 node_modules/
+
+# Claude Code configuration (local only)
+.claude/
+
+# Memory system
+.remember/
+
+# Agent directives (project-specific)
+CLAUDE.md

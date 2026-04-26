@@ -5,7 +5,11 @@
 
 import { renderCharacterGrid } from '../components/CharacterCard.js';
 import { getCharacters } from '../services/dataService.js';
+<<<<<<< HEAD
 
+=======
+import { t } from '../i18n/index.js';
+>>>>>>> origin/main
 
 /**
  * Render characters page
@@ -18,17 +22,14 @@ export function render() {
                 <button class="btn-back" onclick="navigateTo('')">
                     ←
                 </button>
-                <h2>Escolha um Personagem</h2>
-
+                <h2>${t('characters.selectCharacter')}</h2>
             </div>
-            
 
-
-            <div class="character-grid" id="characterGrid">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-    `;
+  <div class="character-grid" id="characterGrid">
+    <!-- Populated by JS -->
+  </div>
+</section>
+`;
 }
 
 /**
@@ -39,6 +40,4 @@ export function init() {
     if (characters) {
         renderCharacterGrid('characterGrid', characters, 'openCharacterDetails');
     }
-
-
 }

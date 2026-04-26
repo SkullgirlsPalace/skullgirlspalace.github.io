@@ -13,6 +13,7 @@ import * as guide from './pages/guide.js';
 import * as tutorialRendaPassiva from './pages/tutorialRendaPassiva.js';
 import { updateNavbarVisibility, updateActiveNavLink } from './components/Navigation.js';
 import { setCurrentSection } from './state/store.js';
+import { t } from './i18n/index.js';
 
 const routes = {
     '': home,
@@ -106,9 +107,9 @@ async function handleRouteChange() {
         console.error('Error rendering page:', err);
         appContainer.innerHTML = `
             <div class="error-page">
-                <h2>Erro ao carregar página</h2>
+                <h2>${t('error.pageLoad')}</h2>
                 <p>${err.message}</p>
-                <button onclick="navigateTo('')">Voltar ao Início</button>
+                <button onclick="navigateTo('')">${t('error.backToHome')}</button>
             </div>
         `;
     }
@@ -131,6 +132,11 @@ async function handleRouteChange() {
 export function initRouter() {
     // Listen for hash changes
     window.addEventListener('hashchange', handleRouteChange);
+
+    // Re-render current page on language change
+    window.addEventListener('languageChanged', () => {
+        handleRouteChange();
+    });
 
     // Handle initial route
     handleRouteChange();

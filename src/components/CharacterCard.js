@@ -3,8 +3,9 @@
 // Renders a character card in the grid
 // =====================================================
 
-import { CHARACTER_ICONS, CHARACTER_COLORS } from '../config/constants.js';
+import { CHARACTER_ICONS, CHARACTER_COLORS, CHARACTER_NAMES_EN } from '../config/constants.js';
 import { isNewCharacter } from '../data/newContent.js';
+import { getCurrentLanguage, t } from '../i18n/index.js';
 
 /**
  * Create character card HTML
@@ -15,20 +16,26 @@ import { isNewCharacter } from '../data/newContent.js';
  * @returns {string} HTML string
  */
 export function createCharacterCard(charKey, charData, index = 0, onClick = 'openCharacterDetails') {
-    const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
-    const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.webp`;
-    const newBadgeHTML = isNewCharacter(charKey) ? '<img loading="lazy" src="img/official/new_icon_U.webp" alt="Novo" class="new-badge">' : '';
+  const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
+  const iconPath = CHARACTER_ICONS[charKey] || `img/${charKey}/icon.webp`;
+  const newBadgeHTML = isNewCharacter(charKey) ? `<img loading="lazy" src="img/official/new_icon_U.webp" alt="${t('common.altNew')}" class="new-badge">` : '';
 
-    return `
-        <div class="character-card animate-in" 
-             style="animation-delay: ${index * 0.03}s; --char-accent: ${charColor}"
-             onclick="${onClick}('${charKey}')">
-            ${newBadgeHTML}
-            <img src="${iconPath}" alt="${charData.character}" loading="lazy" 
-                 onerror="this.src='img/official/Annie_Icon.webp'">
-            <div class="name">${charData.character.toUpperCase()}</div>
-        </div>
-    `;
+  // Get character name based on current language
+  const currentLang = getCurrentLanguage();
+  const displayName = currentLang === 'en'
+    ? (CHARACTER_NAMES_EN[charKey] || charData.character)
+    : charData.character;
+
+  return `
+<div class="character-card animate-in"
+  style="animation-delay: ${index * 0.03}s; --char-accent: ${charColor}"
+  onclick="${onClick}('${charKey}')">
+  ${newBadgeHTML}
+  <img src="${iconPath}" alt="${displayName}" loading="lazy"
+  onerror="this.src='img/official/Annie_Icon.webp'">
+  <div class="name">${displayName.toUpperCase()}</div>
+</div>
+`;
 }
 
 /**
@@ -38,17 +45,29 @@ export function createCharacterCard(charKey, charData, index = 0, onClick = 'ope
  * @param {Function} onClickFn - Click handler function name
  */
 export function renderCharacterGrid(containerId, characters, onClickFn = 'openCharacterDetails') {
-    const container = document.getElementById(containerId);
-    if (!container) return;
+  const container = document.getElementById(containerId);
+  if (!container) return;
 
-    // Sort characters alphabetically
-    const sortedChars = Object.entries(characters)
-        .filter(([key, data]) => data && data.character)
-        .sort((a, b) => a[1].character.localeCompare(b[1].character));
+  const currentLang = getCurrentLanguage();
 
-    container.innerHTML = sortedChars
-        .map(([charKey, charData], index) =>
-            createCharacterCard(charKey, charData, index, onClickFn)
-        )
-        .join('');
+  // Sort characters alphabetically based on current language
+  const sortedChars = Object.entries(characters)
+    .filter(([key, data]) => data && data.character)
+    .sort((a, b) => {
+      if (currentLang === 'en') {
+        // Use English names for sorting
+        const nameA = CHARACTER_NAMES_EN[a[0]] || a[1].character;
+        const nameB = CHARACTER_NAMES_EN[b[0]] || b[1].character;
+        return nameA.localeCompare(nameB);
+      } else {
+        // Use PT-BR names for sorting
+        return a[1].character.localeCompare(b[1].character);
+      }
+    });
+
+  container.innerHTML = sortedChars
+    .map(([charKey, charData], index) =>
+      createCharacterCard(charKey, charData, index, onClickFn)
+    )
+    .join('');
 }

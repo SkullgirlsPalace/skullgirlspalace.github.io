@@ -12,6 +12,7 @@
 
 /* Components */
 @import 'components/navbar.css';
+@import 'components/language-selector.css';
 @import 'components/buttons.css';
 @import 'components/cards.css';
 @import 'components/hero.css';

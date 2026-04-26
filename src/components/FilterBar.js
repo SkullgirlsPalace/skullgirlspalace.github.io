@@ -9,8 +9,9 @@ import { getCharacters } from '../services/dataService.js';
 import { flattenVariants } from '../utils/sorting.js';
 import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { ELEMENT_MAP, RARITY_ICONS } from '../config/constants.js';
+import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';
 import { EFFECT_DATA } from '../data/effectData.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
 
 // Debounce timer for search
 let searchDebounceTimer = null;
@@ -26,14 +27,14 @@ export function createSearchBar() {
     return `
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
-                <img loading="lazy" src="img/official/ZoomIn.webp" alt="Pesquisar" class="search-icon"
+                <img loading="lazy" src="img/official/ZoomIn.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
                      onerror="this.style.display='none'">
                 <input type="text" id="variant-search-input" class="variant-search-input"
-                       placeholder="Pesquisar variante..."
+                       placeholder="${t('characters.searchPlaceholder')}"
                        oninput="handleSearchInput(this.value)"
                        onfocus="handleSearchFocus()"
                        autocomplete="off" spellcheck="false">
-                <button class="search-clear-btn" id="search-clear-btn" onclick="handleSearchClear()" title="Limpar pesquisa">✕</button>
+                <button class="search-clear-btn" id="search-clear-btn" onclick="handleSearchClear()" title="${t('filter.clear')}">✕</button>
             </div>
             <div class="search-results-dropdown" id="search-results-dropdown"></div>
         </div>
@@ -63,6 +64,13 @@ export function createFilterBar() {
         `).join('');
     };
 
+    const scoreLabel = t('filter.score').toUpperCase();
+    const atkLabel = t('filter.atk').toUpperCase();
+    const hpLabel = t('filter.hp').toUpperCase();
+    const alphaLabel = t('filter.alpha').toUpperCase();
+    const elementLabel = t('filter.element').toUpperCase();
+    const categoryLabel = t('filter.category').toUpperCase();
+
     return `
         <div class="filter-bar">
             <!-- Unified Filter/Clear Button -->
@@ -72,8 +80,11 @@ export function createFilterBar() {
                         <img loading="lazy" class="icon-default" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
                         <img loading="lazy" class="icon-active" src="img/official/constraints_no.webp" alt="">
                     </div>
-                    <span class="text-default">Filtrar</span>
-                    <span class="text-active">Limpar</span>
+                    <span class="text-default">${t('filter.filterBtn')}</span>
+                    <span class="text-active">${t('filter.clear')}</span>
+                </button>
+                <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="${t('filter.clearAll')}">
+                    <img loading="lazy" src="img/official/constraints_no.webp" alt="${t('filter.clear')}">
                 </button>
             </div>
             
@@ -85,20 +96,20 @@ export function createFilterBar() {
                 <!-- Rarity Grid (2x2) -->
                 <div class="filter-grid rarity-grid">
                     <button class="filter-btn rarity-btn" data-rarity="bronze"
-                        onclick="handleFilterClick('rarity', 'bronze')" title="Bronze">
-                        <img loading="lazy" src="img/official/icone_bronze.webp" alt="Bronze">
+                        onclick="handleFilterClick('rarity', 'bronze')" title="${t('rarity.bronze')}">
+                        <img loading="lazy" src="img/official/icone_bronze.webp" alt="${t('rarity.bronze')}">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="prata"
-                        onclick="handleFilterClick('rarity', 'prata')" title="Prata">
-                        <img loading="lazy" src="img/official/icone_prata.webp" alt="Prata">
+                        onclick="handleFilterClick('rarity', 'prata')" title="${t('rarity.silver')}">
+                        <img loading="lazy" src="img/official/icone_prata.webp" alt="${t('rarity.silver')}">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="ouro"
-                        onclick="handleFilterClick('rarity', 'ouro')" title="Ouro">
-                        <img loading="lazy" src="img/official/icone_ouro.webp" alt="Ouro">
+                        onclick="handleFilterClick('rarity', 'ouro')" title="${t('rarity.gold')}">
+                        <img loading="lazy" src="img/official/icone_ouro.webp" alt="${t('rarity.gold')}">
                     </button>
                     <button class="filter-btn rarity-btn" data-rarity="diamante"
-                        onclick="handleFilterClick('rarity', 'diamante')" title="Diamante">
-                        <img loading="lazy" src="img/official/icone_diamante.webp" alt="Diamante">
+                        onclick="handleFilterClick('rarity', 'diamante')" title="${t('rarity.diamond')}">
+                        <img loading="lazy" src="img/official/icone_diamante.webp" alt="${t('rarity.diamond')}">
                     </button>
                 </div>
 
@@ -107,28 +118,28 @@ export function createFilterBar() {
                 <!-- Element Grid (3x2) -->
                 <div class="filter-grid element-grid">
                     <button class="filter-btn element-btn" data-element="fogo"
-                        onclick="handleFilterClick('element', 'fogo')" title="Fogo">
-                        <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="Fogo">
+                        onclick="handleFilterClick('element', 'fogo')" title="${t('element.fire')}">
+                        <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${t('element.fire')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="agua"
-                        onclick="handleFilterClick('element', 'agua')" title="Água">
-                        <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="Água">
+                        onclick="handleFilterClick('element', 'agua')" title="${t('element.water')}">
+                        <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${t('element.water')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="ar"
-                        onclick="handleFilterClick('element', 'ar')" title="Ar">
-                        <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="Ar">
+                        onclick="handleFilterClick('element', 'ar')" title="${t('element.wind')}">
+                        <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${t('element.wind')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="luz"
-                        onclick="handleFilterClick('element', 'luz')" title="Luz">
-                        <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="Luz">
+                        onclick="handleFilterClick('element', 'luz')" title="${t('element.light')}">
+                        <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${t('element.light')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="trevas"
-                        onclick="handleFilterClick('element', 'trevas')" title="Trevas">
-                        <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="Trevas">
+                        onclick="handleFilterClick('element', 'trevas')" title="${t('element.dark')}">
+                        <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${t('element.dark')}">
                     </button>
                     <button class="filter-btn element-btn" data-element="neutro"
-                        onclick="handleFilterClick('element', 'neutro')" title="Neutro">
-                        <img loading="lazy" src="img/official/ElementalNeutralBackless.webp" alt="Neutro">
+                        onclick="handleFilterClick('element', 'neutro')" title="${t('element.neutral')}">
+                        <img loading="lazy" src="img/official/ElementalNeutralBackless.webp" alt="${t('element.neutral')}">
                     </button>
                 </div>
 
@@ -138,13 +149,13 @@ export function createFilterBar() {
                 <div class="filter-section center" style="margin: 0 auto; display: flex; align-items: center; gap: 12px;">
                     <div class="sort-header">
                         <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
-                        ORGANIZAR
+                        ${t('filter.organize')}
                     </div>
                     <div class="sort-group grid-2x2">
-                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">PONTUAÇÃO</button>
-                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">ORDEM ALFABÉTICA</button>
-                        <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">ATAQUE</button>
-                        <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">VIDA</button>
+                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
+                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
+                        <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
+                        <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
                     </div>
                 </div>
 
@@ -155,19 +166,19 @@ export function createFilterBar() {
                     <div class="advanced-filters-dropdown" id="advanced-filters-dropdown" style="margin-left: 0;">
                         <button class="advanced-filters-btn" onclick="handleToggleAdvancedFilters()">
                             <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
-                            <span>Filtros Avançados</span>
+                            <span>${t('detail.filters')}</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="advanced-filters-content" id="advanced-filters-content">
                             <div class="adv-filter-group">
-                                <span class="adv-filter-label">ORDENAR POR</span>
+                                <span class="adv-filter-label">${t('detail.sortBy')}</span>
                                 <div class="sort-group">
-                                    <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">ELEMENTO</button>
-                                    <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">CATEGORIA</button>
+                                    <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
+                                    <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
                                 </div>
                             </div>
                             <div class="adv-filter-group">
-                                <span class="adv-filter-label">FILTRAR POR CLASSE</span>
+                                <span class="adv-filter-label">${t('filter.category')}</span>
                                 <div class="sort-group">
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">
                                         <img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> OFENSIVO
@@ -184,19 +195,19 @@ export function createFilterBar() {
                                 </div>
                             </div>
                             <div class="adv-filter-group" id="adv-filter-effects-pos">
-                                <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">EFEITOS POSITIVOS <span>▼</span></span>
+                                <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span>
                                 <div class="filter-grid effects-grid collapsible-content">
                                     ${createEffectGrid(buffs, true)}
                                 </div>
                             </div>
                             <div class="adv-filter-group" id="adv-filter-effects-neg">
-                                <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">EFEITOS NEGATIVOS <span>▼</span></span>
+                                <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span>
                                 <div class="filter-grid effects-grid collapsible-content">
                                     ${createEffectGrid(debuffs, false)}
                                 </div>
                             </div>
                             <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-                                <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">Limpar Filtros Avançados</button>
+                                <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAll')}</button>
                             </div>
                         </div>
                     </div>
@@ -206,10 +217,10 @@ export function createFilterBar() {
 
                 <!-- Character Navigator -->
                 <div class="filter-section right character-nav">
-                    <div class="sort-header" id="char-nav-header">MUDE O PERSONAGEM</div>
+                    <div class="sort-header" id="char-nav-header">${t('filter.changeCharacter')}</div>
                     <div class="char-dropdown" id="char-dropdown">
                         <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
-                            <span id="current-char-label">Escolher Personagem</span>
+                            <span id="current-char-label">${t('filter.chooseCharacter')}</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="char-dropdown-content" id="char-dropdown-content">
@@ -220,15 +231,115 @@ export function createFilterBar() {
             </div>
         </div>
     `;
+    `;
+  }).join('');
+
+  // Rarity filter buttons - keys are PT-BR internal keys
+  const rarityKeys = [
+    { key: 'bronze', enKey: 'bronze' },
+    { key: 'prata', enKey: 'silver' },
+    { key: 'ouro', enKey: 'gold' },
+    { key: 'diamante', enKey: 'diamond' }
+  ];
+
+  const rarityButtons = rarityKeys.map(({ key, enKey }) => {
+    const label = t(`rarity.${enKey}`);
+    return `
+      <button class="filter-btn rarity-btn" data-rarity="${key}"
+        onclick="handleFilterClick('rarity', '${key}')" title="${label}">
+        <img loading="lazy" src="img/official/icone_${key}.webp" alt="${label}">
+      </button>
+    `;
+  }).join('');
+
+  // Sort labels
+  const scoreLabel = t('filter.score').toUpperCase();
+  const atkLabel = t('filter.atk').toUpperCase();
+  const hpLabel = t('filter.hp').toUpperCase();
+  const alphaLabel = t('filter.alpha').toUpperCase();
+  const elementLabel = t('filter.element').toUpperCase();
+  const categoryLabel = t('filter.category').toUpperCase();
+
+  return `
+  <div class="filter-bar">
+    <!-- Dynamic Filter/Clear Button -->
+    <div class="filter-controls">
+      <button id="main-filter-btn" class="filter-toggle-btn" onclick="handleMainFilterAction()">
+        <div class="btn-icon-wrapper">
+          <img loading="lazy" class="icon-default" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
+          <img loading="lazy" class="icon-active" src="img/official/constraints_no.webp" alt="">
+        </div>
+        <span class="text-default">${t('filter.filterBtn')}</span>
+        <span class="text-active">${t('filter.clear')}</span>
+      </button>
+      <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="${t('filter.clearAll')}">
+        <img loading="lazy" src="img/official/constraints_no.webp" alt="${t('filter.clear')}">
+      </button>
+    </div>
+
+    <div class="vertical-separator"></div>
+
+    <!-- Collapsible Filter Content -->
+    <div class="filter-content" id="filter-content">
+
+      <!-- Rarity Grid (2x2) -->
+      <div class="filter-grid rarity-grid">
+        ${rarityButtons}
+      </div>
+
+      <div class="vertical-separator"></div>
+
+      <!-- Element Grid (3x2) -->
+      <div class="filter-grid element-grid">
+        ${elementButtons}
+      </div>
+
+      <div class="vertical-separator"></div>
+
+      <!-- Sort Section -->
+      <div class="filter-section right">
+        <div class="sort-header">
+          <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
+          ${t('filter.organize')}
+        </div>
+        <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
+        <div class="sort-group">
+          <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
+          <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
+          <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
+          <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
+          <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
+          <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
+        </div>
+      </div>
+
+      <div class="vertical-separator"></div>
+
+      <!-- Character Navigator -->
+      <div class="filter-section right character-nav">
+        <div class="sort-header" id="char-nav-header">${t('filter.changeCharacter')}</div>
+        <div class="char-dropdown" id="char-dropdown">
+          <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
+            <span id="current-char-label">${t('filter.chooseCharacter')}</span>
+            <span class="dropdown-arrow">\u25BC</span>
+          </button>
+          <div class="char-dropdown-content" id="char-dropdown-content">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  `;
 }
 
 /**
  * Update filter UI to reflect current state
  */
 export function updateFilterUI() {
-    const state = getState();
-    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
-    const { filters, sort } = state.tabState[tab];
+  const state = getState();
+  const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+  const { filters, sort } = state.tabState[tab];
 
     // Update Rarity Buttons
     document.querySelectorAll('.rarity-btn').forEach(btn => {
@@ -281,12 +392,12 @@ export function updateFilterUI() {
 
     // Update Sort Buttons
     const sortLabels = {
-        'score': 'PONTUAÇÃO',
-        'atk': 'ATAQUE',
-        'hp': 'VIDA',
-        'name': 'ORDEM ALFABÉTICA',
-        'element': 'ELEMENTO',
-        'class': 'CATEGORIA'
+        'score': t('filter.score').toUpperCase(),
+        'atk': t('filter.atk').toUpperCase(),
+        'hp': t('filter.hp').toUpperCase(),
+        'name': t('filter.alpha').toUpperCase(),
+        'element': t('filter.element').toUpperCase(),
+        'class': t('filter.category').toUpperCase()
     };
 
     const defaultSortType = tab === 'tier' ? 'class' : 'score';
@@ -314,11 +425,21 @@ export function updateFilterUI() {
         sort.direction !== defaultSortDir;
 
     const mainBtn = document.getElementById('main-filter-btn');
+    const desktopClearBtn = document.getElementById('desktop-clear-btn');
+
     if (mainBtn) {
         if (hasActiveFilters) {
             mainBtn.classList.add('can-clear');
         } else {
             mainBtn.classList.remove('can-clear');
+        }
+    }
+
+    if (desktopClearBtn) {
+        if (hasActiveFilters) {
+            desktopClearBtn.classList.add('visible');
+        } else {
+            desktopClearBtn.classList.remove('visible');
         }
     }
 }
@@ -329,16 +450,16 @@ export function updateFilterUI() {
  * @param {string} currentTab - Current tab ('builds' or 'tier')
  */
 export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
-    const dropdownContent = document.getElementById('char-dropdown-content');
-    const currentLabel = document.getElementById('current-char-label');
-    const characters = getCharacters();
+  const dropdownContent = document.getElementById('char-dropdown-content');
+  const currentLabel = document.getElementById('current-char-label');
+  const characters = getCharacters();
 
-    if (!dropdownContent || !characters) return;
+  if (!dropdownContent || !characters) return;
 
     // Update the button label with the current character
     if (currentCharKey === 'todos') {
         if (currentLabel) {
-            currentLabel.innerHTML = `📋 Todos os Perso.`;
+            currentLabel.innerHTML = `📋 ${t('characters.allCharacters')}`;
         }
     } else {
         const char = characters[currentCharKey];
@@ -351,17 +472,17 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         }
     }
 
-    // Populate the dropdown list
-    const sortedCharKeys = Object.keys(characters).sort((a, b) => {
-        return characters[a].character.localeCompare(characters[b].character);
-    });
+  // Populate the dropdown list
+  const sortedCharKeys = Object.keys(characters).sort((a, b) => {
+    return characters[a].character.localeCompare(characters[b].character);
+  });
 
     // Add "Todos" option first
     let dropdownHTML = `
         <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
                 onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
             <span class="todos-icon">📋</span>
-            <span>Todos os Perso.</span>
+            <span>${t('characters.allCharacters')}</span>
         </button>
         <div class="char-dropdown-divider"></div>
     `;
@@ -587,30 +708,39 @@ export function handleSearchFocus() {
 
 // Global handlers (will be attached to window in main.js)
 export function handleFilterClick(type, value) {
+<<<<<<< HEAD
     toggleFilter(type, value);
     updateFilterUI();
     if (window.onFiltersChanged) {
         window.onFiltersChanged();
     }
+=======
+  toggleFilter(type, value);
+  updateFilterUI();
+  if (window.onFiltersChanged) {
+    window.onFiltersChanged();
+  }
+>>>>>>> origin/main
 }
 
 export function handleSortClick(sortType) {
-    toggleSort(sortType);
-    updateFilterUI();
-    if (window.onFiltersChanged) {
-        window.onFiltersChanged();
-    }
+  toggleSort(sortType);
+  updateFilterUI();
+  if (window.onFiltersChanged) {
+    window.onFiltersChanged();
+  }
 }
 
 export function handleClearFilters() {
-    clearFilters();
-    updateFilterUI();
-    if (window.onFiltersChanged) {
-        window.onFiltersChanged();
-    }
+  clearFilters();
+  updateFilterUI();
+  if (window.onFiltersChanged) {
+    window.onFiltersChanged();
+  }
 }
 
 export function handleMainFilterAction() {
+<<<<<<< HEAD
     const state = getState();
     const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
     const { filters, sort } = state.tabState[tab];
@@ -629,37 +759,51 @@ export function handleMainFilterAction() {
     } else {
         handleToggleFilter();
     }
+=======
+  const state = getState();
+  const { filters, sort } = state;
+
+  const hasActiveFilters = filters.rarity.length > 0 ||
+    filters.element.length > 0 ||
+    sort.type !== 'score' ||
+    sort.direction !== 'desc';
+
+  if (hasActiveFilters && window.innerWidth <= 768) {
+    handleClearFilters();
+  } else {
+    handleToggleFilter();
+  }
+>>>>>>> origin/main
 }
 
 export function handleToggleFilter() {
-    const filterContent = document.getElementById('filter-content');
-    const filterBtn = document.getElementById('main-filter-btn');
-    const filterBar = document.querySelector('.filter-bar');
+  const filterContent = document.getElementById('filter-content');
+  const filterBtn = document.getElementById('main-filter-btn');
+  const filterBar = document.querySelector('.filter-bar');
 
-    if (filterContent) {
-        filterContent.classList.toggle('active');
-        filterBtn?.classList.toggle('active');
-        filterBar?.classList.toggle('active');
-    }
+  if (filterContent) {
+    filterContent.classList.toggle('active');
+    filterBtn?.classList.toggle('active');
+    filterBar?.classList.toggle('active');
+  }
 }
 
 export function handleToggleCharDropdown() {
-    const dropdown = document.getElementById('char-dropdown');
-    const content = document.getElementById('char-dropdown-content');
-    if (dropdown && content) {
-        dropdown.classList.toggle('active');
-        content.classList.toggle('active');
+  const dropdown = document.getElementById('char-dropdown');
+  const content = document.getElementById('char-dropdown-content');
+  if (dropdown && content) {
+    dropdown.classList.toggle('active');
+    content.classList.toggle('active');
 
-        // Scroll to active item if opening
-        if (content.classList.contains('active')) {
-            const activeItem = content.querySelector('.char-dropdown-item.active');
-            if (activeItem) {
-                setTimeout(() => {
-                    activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
-                }, 50);
-            }
-        }
+    if (content.classList.contains('active')) {
+      const activeItem = content.querySelector('.char-dropdown-item.active');
+      if (activeItem) {
+        setTimeout(() => {
+          activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }, 50);
+      }
     }
+  }
 }
 
 export function handleToggleAdvancedFilters() {

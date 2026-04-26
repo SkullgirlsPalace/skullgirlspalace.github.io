@@ -182,3 +182,12 @@
     opacity: 1;
 }
 
+
+/* ========== HOME LANGUAGE SELECTOR ========== */
+.home-language-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
