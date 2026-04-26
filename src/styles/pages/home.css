@@ -37,8 +37,9 @@
 
 .hub-about-link {
     position: absolute;
-    top: -20px;
-    left: 0;
+    top: 16px;
+    left: 16px;
+    z-index: 2000;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -85,7 +86,7 @@
     gap: 12px;
     align-items: center;
     background: linear-gradient(135deg, rgba(212, 168, 75, 0.05) 0%, rgba(10, 10, 15, 0.4) 100%);
-    padding: 40px;
+    padding: 24px;
     border-radius: var(--border-radius);
     border: var(--border-accent);
     position: relative;
@@ -107,7 +108,7 @@
     max-width: 360px;
     background: rgba(10, 10, 15, 0.6);
     border: 1px solid rgba(212, 168, 75, 0.15);
-    padding: 16px;
+    padding: 20px;
     border-radius: 4px;
     position: relative;
     overflow: hidden;
@@ -117,7 +118,7 @@
 
 .hub-btn span {
     font-family: 'Washington', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-primary);
     position: relative;
     z-index: 1;
@@ -141,7 +142,7 @@
 }
 
 .hub-btn .hub-icon {
-    height: 28px;
+    height: 34px;
     width: auto;
     filter: brightness(1.2);
     position: relative;

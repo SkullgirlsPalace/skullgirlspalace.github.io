@@ -7,6 +7,7 @@ import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js
 import { parseStatValue } from './formatters.js';
 import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
 import { isNewVariant } from '../data/newContent.js';
+import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
 
 /**
  * Sort variants based on sort configuration
@@ -31,8 +32,14 @@ export function sortVariants(variants, sortConfig, filters = null) {
             const isBNew = isNewVariant(b.name);
 
             if (isANew !== isBNew) {
-                // Return -1 to push new variants up regardless of `direction` for normal base sorting
                 return isANew ? -1 : 1; 
+            }
+            // Among New variants, sort alphabetically by character name
+            if (isANew && isBNew) {
+                const charNameA = (a._charName || a.name).toLowerCase();
+                const charNameB = (b._charName || b.name).toLowerCase();
+                const cmp = charNameA.localeCompare(charNameB);
+                if (cmp !== 0) return cmp;
             }
         }
 
@@ -104,6 +111,29 @@ export function filterVariants(variants, filters) {
         filtered = filtered.filter(v => {
             const elementInfo = ELEMENT_MAP[v.element];
             return elementInfo && filters.element.includes(elementInfo.key);
+        });
+    }
+
+    // Class/Role Filter (multi-select)
+    if (filters.variantClass && filters.variantClass.length > 0) {
+        filtered = filtered.filter(v => {
+            const classes = getVariantClasses(v.name);
+            return classes.some(cls => filters.variantClass.includes(cls));
+        });
+    }
+
+    // Effects Filter (multi-select: specific effect keys like 'armor', 'bleed')
+    if (filters.efeitos && filters.efeitos.length > 0) {
+        filtered = filtered.filter(v => {
+            if (!v.signature_ability || !v.signature_ability.description) return false;
+            const desc = v.signature_ability.description.toLowerCase();
+            
+            return filters.efeitos.every(effectKey => {
+                const effectData = EFFECT_DATA[effectKey];
+                if (!effectData) return false;
+                
+                return effectData.keys.some(key => desc.includes(key.toLowerCase()));
+            });
         });
     }
 

@@ -37,13 +37,12 @@ export function render() {
     <!-- TUTORIALS TAB -->
     <div id="tab-tutorials" class="guide-tab-content active">
       <div class="tutorial-grid" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
-
         <div class="tutorial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; text-align: center; cursor: pointer; transition: transform 0.2s, border-color 0.2s;" onclick="navigateTo('tutorial-renda-passiva')" onmouseover="this.style.borderColor='var(--accent-gold)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)';">
           <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">📜 ${t('guide.passiveIncomeTitle')}</h3>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">${t('guide.passiveIncomeDesc')}</p>
         </div>
-
       </div>
+    </div>
     </div>
 
     <!-- STATISTICS TAB -->

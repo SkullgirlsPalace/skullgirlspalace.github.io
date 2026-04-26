@@ -144,13 +144,19 @@ export function updateNavbarVisibility(section) {
  * @param {string} section - Current section
  */
 export function updateActiveNavLink(section) {
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.classList.remove('active');
-    const onclick = link.getAttribute('onclick');
-    if (onclick && onclick.includes(`'${section}'`)) {
-      link.classList.add('active');
-    }
-  });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+        const onclick = link.getAttribute('onclick');
+        
+        let targetSection = section;
+        if (section && section.startsWith('character')) {
+            targetSection = 'characters';
+        }
+        
+        if (onclick && onclick.includes(`'${targetSection}'`)) {
+            link.classList.add('active');
+        }
+    });
 }
 
 // Scroll functions

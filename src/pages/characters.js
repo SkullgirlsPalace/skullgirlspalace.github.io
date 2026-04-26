@@ -12,14 +12,14 @@ import { t } from '../i18n/index.js';
  * @returns {string} HTML string
  */
 export function render() {
-  return `
-<section class="section character-selection" id="character-selection">
-  <div class="section-header">
-    <button class="btn-back" onclick="navigateTo('')">
-      ←
-    </button>
-    <h2>${t('characters.selectCharacter')}</h2>
-  </div>
+    return `
+        <section class="section character-selection" id="character-selection">
+            <div class="section-header">
+                <button class="btn-back" onclick="navigateTo('')">
+                    ←
+                </button>
+                <h2>${t('characters.selectCharacter')}</h2>
+            </div>
 
   <div class="character-grid" id="characterGrid">
     <!-- Populated by JS -->
@@ -32,8 +32,8 @@ export function render() {
  * Initialize characters page
  */
 export function init() {
-  const characters = getCharacters();
-  if (characters) {
-    renderCharacterGrid('characterGrid', characters, 'openCharacterDetails');
-  }
+    const characters = getCharacters();
+    if (characters) {
+        renderCharacterGrid('characterGrid', characters, 'openCharacterDetails');
+    }
 }

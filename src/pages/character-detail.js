@@ -9,18 +9,46 @@ import { CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
 import { renderVariants } from '../components/VariantCard.js';
-import { createFilterBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
+import { createFilterBar, createSearchBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
 import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
 import { t, getLocalizedNameSync } from '../i18n/index.js';
 
 /**
+ * Get all variants across all characters (for "Todos" mode)
+ * Each variant gets _charKey and _charName properties
+ * @returns {Array} Flat array of all variants
+ */
+function getAllVariants() {
+    const characters = getCharacters();
+    if (!characters) return [];
+
+    const allVariants = [];
+    for (const [charKey, charData] of Object.entries(characters)) {
+        const variants = flattenVariants(charData.variants);
+        variants.forEach(v => {
+            allVariants.push({
+                ...v,
+                _charKey: charKey,
+                _charName: charData.character
+            });
+        });
+    }
+    return allVariants;
+}
+
+/**
  * Render character detail page
- * @param {string} charKey - Character key
+ * @param {string} charKey - Character key (or 'todos' for all)
  * @param {string} initialTab - Initial tab ('builds' or 'tier')
  * @returns {string} HTML string
  */
 export function render(charKey, initialTab = 'builds') {
+    // Handle "Todos" mode
+    if (charKey === 'todos') {
+        return renderTodosPage(initialTab);
+    }
+
     const charData = getCharacter(charKey);
     if (!charData) {
         return `
@@ -36,7 +64,7 @@ export function render(charKey, initialTab = 'builds') {
     }
 
     const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
-    const masteryIcon = getMasteryIcon(charKey);
+    const charIcon = CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp';
     const state = getState();
     const currentTab = state.currentTab || initialTab;
 
@@ -44,36 +72,49 @@ export function render(charKey, initialTab = 'builds') {
         <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
-                <button class="btn-back pill" onclick="navigateTo('characters')">
-                    <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
-                </button>
-                
-                <div class="char-title-centered" style="flex-direction: column; align-items: center; gap: 12px; margin-bottom: 24px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${getLocalizedNameSync(charKey, charData.character)}" class="char-select-icon"
-                             onerror="this.src='img/official/Annie_Icon.webp'" style="width: 64px; height: 64px; object-fit: contain;">
-                        <h2 style="margin: 0; font-size: 2.5rem;">${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
+                <div class="header-top-row">
+                    <div class="header-left">
+                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                            <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
+                        </button>
                     </div>
                     
+                    <div class="char-title-row centered-title">
+                        <img loading="lazy" src="${charIcon}" alt="${getLocalizedNameSync(charKey, charData.character)}" class="char-select-icon"
+                             onerror="this.src='img/official/Annie_Icon.webp'">
+                        <h2>${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
+                    </div>
+                    
+                    <div class="header-right">
+                        ${createSearchBar()}
+                    </div>
+                </div>
+                
+                <div class="header-middle-row">
                     <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charKey, charData.character)}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
-                        <span>${t('variant.information')}</span>
+                        <span>${t('detail.profileOf')} ${getLocalizedNameSync(charKey, charData.character)}</span>
                     </button>
                 </div>
                 
-                <!-- Tab Navigation -->
-                <div class="detail-tabs">
-                    <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
-                            onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
-                        ${t('variant.builds')}
-                    </button>
-                    <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
-                            onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
-                        ${t('variant.tierList')}
-                    </button>
+                <div class="header-bottom-row">
+                    <!-- Tab Navigation -->
+                    <div class="detail-tabs">
+                        <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
+                                onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
+                            ${t('variant.builds')}
+                        </button>
+                        <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
+                                onclick="switchDetailTab('${charKey}', 'tier')" data-tab="tier">
+                            ${t('variant.tierList')}
+                        </button>
+                    </div>
                 </div>
             </div>
 
+            <div id="variants-count-container" style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 4px;">
+                <p class="variants-count" id="variants-count"></p>
+            </div>
             ${createFilterBar()}
 
             <div class="detail-content" id="detail-content">
@@ -82,6 +123,110 @@ export function render(charKey, initialTab = 'builds') {
 
             ${renderProfileModal(charKey)}
         </section>
+    `;
+}
+
+/**
+ * Render "Todos" (all characters) page
+ */
+function renderTodosPage(initialTab = 'builds') {
+    const state = getState();
+    const currentTab = state.currentTab || initialTab;
+
+    return `
+        <section class="section character-detail" id="character-detail" style="--char-accent: var(--accent-gold)" data-current-tab="${currentTab}" data-todos-mode="true">
+            <!-- Header Content -->
+            <div class="character-detail-header fade-in">
+                <div class="header-top-row">
+                    <div class="header-left">
+                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                            <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
+                        </button>
+                    </div>
+                    
+                    <div class="char-title-row centered-title">
+                        <span style="font-size: 2rem;">📋</span>
+                        <h2>TODAS AS VARIANTES</h2>
+                    </div>
+                    
+                    <div class="header-right">
+                        ${createSearchBar()}
+                    </div>
+                </div>
+                
+                <div class="header-bottom-row" style="margin-top: 16px;">
+                    <!-- Tab Navigation -->
+                    <div class="detail-tabs">
+                        <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
+                                onclick="switchDetailTab('todos', 'builds')" data-tab="builds">
+                            BUILDS
+                        </button>
+                        <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
+                                onclick="switchDetailTab('todos', 'tier')" data-tab="tier">
+                            TIER LIST
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="variants-count-container" style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 4px;">
+                <p class="variants-count" id="variants-count"></p>
+            </div>
+            ${createFilterBar()}
+
+            <div class="detail-content" id="detail-content">
+                ${currentTab === 'tier' ? renderTodosTierRedirect() : renderTodosBuildsTab()}
+            </div>
+        </section>
+    `;
+}
+
+/**
+ * Render tier redirect for Todos mode - defaults to Annie
+ */
+function renderTodosTierRedirect() {
+    const characters = getCharacters();
+    if (!characters) return '<p>Carregando...</p>';
+    
+    // Get first character alphabetically (Annie)
+    const sortedKeys = Object.keys(characters).sort((a, b) => 
+        characters[a].character.localeCompare(characters[b].character)
+    );
+    const firstCharKey = sortedKeys[0] || 'annie';
+    const firstCharData = characters[firstCharKey];
+    
+    if (firstCharData) {
+        return `
+            <div class="tier-tab-content">
+                ${createTierView(firstCharKey, firstCharData)}
+            </div>
+        `;
+    }
+    return '<p style="color: var(--text-muted); text-align: center;">Nenhuma tier list disponível.</p>';
+}
+
+/**
+ * Render builds tab for "Todos" mode
+ */
+function renderTodosBuildsTab() {
+    const state = getState();
+    const { filters, sort } = state.tabState.builds;
+
+    let variants = getAllVariants();
+    variants = filterVariants(variants, filters);
+    variants = sortVariants(variants, sort, filters);
+
+    let variantsHTML = '';
+    if (variants.length === 0) {
+        variantsHTML = '<p style="color: var(--text-muted); padding: 20px; text-align: center;">Nenhuma variante encontrada com estes filtros.</p>';
+    } else {
+        variantsHTML = `<div class="variants-grid" id="variants-container"></div>`;
+    }
+
+    return `
+        <div class="builds-tab-content">
+            ${variantsHTML}
+        </div>
     `;
 }
 
@@ -149,7 +294,6 @@ export async function init(charKey, initialTab = 'builds') {
     setCurrentCharacter(charKey);
 
     // Force render of the initial tab content with clean filters
-    // This handles both 'builds' and 'tier' tabs correctly
     await switchTab(charKey, initialTab);
 
     // Update filter UI
@@ -161,15 +305,26 @@ export async function init(charKey, initialTab = 'builds') {
  * @param {string} charKey - Character key
  */
 export function refreshVariants(charKey) {
-    const charData = getCharacter(charKey);
-    if (!charData) return;
-
     const state = getState();
     const { filters, sort } = state.tabState.builds;
 
-    let variants = flattenVariants(charData.variants);
+    let variants;
+    if (charKey === 'todos') {
+        variants = getAllVariants();
+    } else {
+        const charData = getCharacter(charKey);
+        if (!charData) return;
+        variants = flattenVariants(charData.variants);
+    }
+
     variants = filterVariants(variants, filters);
     variants = sortVariants(variants, sort, filters);
+
+    // Update variant count for all modes
+    const countEl = document.getElementById('variants-count');
+    if (countEl) {
+        countEl.textContent = `${variants.length} variantes encontradas`;
+    }
 
     renderVariants('variants-container', variants, charKey);
 }
@@ -180,19 +335,10 @@ export function refreshVariants(charKey) {
  * @param {string} tab - Tab to switch to
  */
 export async function switchTab(charKey, tab) {
-    // Get current state BEFORE updating tab to check if we are changing context
     const state = getState();
     const previousTab = state.currentTab;
 
     setCurrentTab(tab);
-
-    // Only apply default sort if we are actually CHANGING tabs.
-    // This prevents resetting the user's sort preference when switching characters 
-    // while staying on the same tab (e.g. browsing Tier Lists).
-    // Also applies if previousTab is undefined (first load).
-    // No longer resetting sort on tab switch. 
-    // Users want their chosen filters and sorting to remain as they set them.
-    // We only update the active tab in the state.
 
     // Update tab button states
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -206,15 +352,31 @@ export async function switchTab(charKey, tab) {
     }
 
     // Re-render content
-    const charData = getCharacter(charKey);
     const contentEl = document.getElementById('detail-content');
-    if (contentEl && charData) {
-        contentEl.innerHTML = tab === 'builds'
-            ? renderBuildsTab(charKey, charData)
-            : renderTierTab(charKey, charData);
+    const countContainer = document.getElementById('variants-count-container');
+    if (countContainer) {
+        countContainer.style.display = tab === 'builds' ? 'flex' : 'none';
+    }
+    
+    if (contentEl) {
+        if (charKey === 'todos') {
+            if (tab === 'tier') {
+                contentEl.innerHTML = renderTodosTierRedirect();
+            } else {
+                contentEl.innerHTML = renderTodosBuildsTab();
+                refreshVariants('todos');
+            }
+        } else {
+            const charData = getCharacter(charKey);
+            if (charData) {
+                contentEl.innerHTML = tab === 'builds'
+                    ? renderBuildsTab(charKey, charData)
+                    : renderTierTab(charKey, charData);
 
-        if (tab === 'builds') {
-            refreshVariants(charKey);
+                if (tab === 'builds') {
+                    refreshVariants(charKey);
+                }
+            }
         }
     }
 

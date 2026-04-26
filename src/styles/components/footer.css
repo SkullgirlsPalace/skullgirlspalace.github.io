@@ -3,10 +3,10 @@
    ===================================================== */
 
 #footer-container {
-    background-color: var(--card-bg);
-    border-top: 1px solid rgba(226, 175, 59, 0.2);
-    padding: 1.5rem 1.5rem 0.5rem;
-    margin-top: 2rem;
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 1.5rem 1rem;
+    margin-top: 6rem;
     font-family: 'Inter', sans-serif;
 }
 
