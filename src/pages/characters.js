@@ -5,11 +5,7 @@
 
 import { renderCharacterGrid } from '../components/CharacterCard.js';
 import { getCharacters } from '../services/dataService.js';
-<<<<<<< HEAD
-
-=======
 import { t } from '../i18n/index.js';
->>>>>>> origin/main
 
 /**
  * Render characters page

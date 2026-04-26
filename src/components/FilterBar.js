@@ -231,106 +231,6 @@ export function createFilterBar() {
             </div>
         </div>
     `;
-    `;
-  }).join('');
-
-  // Rarity filter buttons - keys are PT-BR internal keys
-  const rarityKeys = [
-    { key: 'bronze', enKey: 'bronze' },
-    { key: 'prata', enKey: 'silver' },
-    { key: 'ouro', enKey: 'gold' },
-    { key: 'diamante', enKey: 'diamond' }
-  ];
-
-  const rarityButtons = rarityKeys.map(({ key, enKey }) => {
-    const label = t(`rarity.${enKey}`);
-    return `
-      <button class="filter-btn rarity-btn" data-rarity="${key}"
-        onclick="handleFilterClick('rarity', '${key}')" title="${label}">
-        <img loading="lazy" src="img/official/icone_${key}.webp" alt="${label}">
-      </button>
-    `;
-  }).join('');
-
-  // Sort labels
-  const scoreLabel = t('filter.score').toUpperCase();
-  const atkLabel = t('filter.atk').toUpperCase();
-  const hpLabel = t('filter.hp').toUpperCase();
-  const alphaLabel = t('filter.alpha').toUpperCase();
-  const elementLabel = t('filter.element').toUpperCase();
-  const categoryLabel = t('filter.category').toUpperCase();
-
-  return `
-  <div class="filter-bar">
-    <!-- Dynamic Filter/Clear Button -->
-    <div class="filter-controls">
-      <button id="main-filter-btn" class="filter-toggle-btn" onclick="handleMainFilterAction()">
-        <div class="btn-icon-wrapper">
-          <img loading="lazy" class="icon-default" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
-          <img loading="lazy" class="icon-active" src="img/official/constraints_no.webp" alt="">
-        </div>
-        <span class="text-default">${t('filter.filterBtn')}</span>
-        <span class="text-active">${t('filter.clear')}</span>
-      </button>
-      <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="${t('filter.clearAll')}">
-        <img loading="lazy" src="img/official/constraints_no.webp" alt="${t('filter.clear')}">
-      </button>
-    </div>
-
-    <div class="vertical-separator"></div>
-
-    <!-- Collapsible Filter Content -->
-    <div class="filter-content" id="filter-content">
-
-      <!-- Rarity Grid (2x2) -->
-      <div class="filter-grid rarity-grid">
-        ${rarityButtons}
-      </div>
-
-      <div class="vertical-separator"></div>
-
-      <!-- Element Grid (3x2) -->
-      <div class="filter-grid element-grid">
-        ${elementButtons}
-      </div>
-
-      <div class="vertical-separator"></div>
-
-      <!-- Sort Section -->
-      <div class="filter-section right">
-        <div class="sort-header">
-          <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
-          ${t('filter.organize')}
-        </div>
-        <div class="vertical-separator" style="height: 30px; margin: 0 12px; width: 1px; background: rgba(255,255,255,0.1);"></div>
-        <div class="sort-group">
-          <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
-          <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
-          <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
-          <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
-          <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
-          <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
-        </div>
-      </div>
-
-      <div class="vertical-separator"></div>
-
-      <!-- Character Navigator -->
-      <div class="filter-section right character-nav">
-        <div class="sort-header" id="char-nav-header">${t('filter.changeCharacter')}</div>
-        <div class="char-dropdown" id="char-dropdown">
-          <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
-            <span id="current-char-label">${t('filter.chooseCharacter')}</span>
-            <span class="dropdown-arrow">\u25BC</span>
-          </button>
-          <div class="char-dropdown-content" id="char-dropdown-content">
-            <!-- Populated dynamically -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  `;
 }
 
 /**
@@ -708,19 +608,11 @@ export function handleSearchFocus() {
 
 // Global handlers (will be attached to window in main.js)
 export function handleFilterClick(type, value) {
-<<<<<<< HEAD
     toggleFilter(type, value);
     updateFilterUI();
     if (window.onFiltersChanged) {
         window.onFiltersChanged();
     }
-=======
-  toggleFilter(type, value);
-  updateFilterUI();
-  if (window.onFiltersChanged) {
-    window.onFiltersChanged();
-  }
->>>>>>> origin/main
 }
 
 export function handleSortClick(sortType) {
@@ -740,7 +632,6 @@ export function handleClearFilters() {
 }
 
 export function handleMainFilterAction() {
-<<<<<<< HEAD
     const state = getState();
     const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
     const { filters, sort } = state.tabState[tab];
@@ -759,21 +650,6 @@ export function handleMainFilterAction() {
     } else {
         handleToggleFilter();
     }
-=======
-  const state = getState();
-  const { filters, sort } = state;
-
-  const hasActiveFilters = filters.rarity.length > 0 ||
-    filters.element.length > 0 ||
-    sort.type !== 'score' ||
-    sort.direction !== 'desc';
-
-  if (hasActiveFilters && window.innerWidth <= 768) {
-    handleClearFilters();
-  } else {
-    handleToggleFilter();
-  }
->>>>>>> origin/main
 }
 
 export function handleToggleFilter() {

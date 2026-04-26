@@ -630,18 +630,12 @@ export function renderVariants(containerId, variants, charKey) {
     return;
   }
 
-<<<<<<< HEAD
     container.innerHTML = variants
         .map((variant, index) => {
             const effectiveCharKey = variant._charKey || charKey;
             return createVariantCard(variant, effectiveCharKey, index);
         })
         .join('');
-=======
-  container.innerHTML = variants
-    .map((variant, index) => createVariantCard(variant, charKey, index))
-    .join('');
->>>>>>> origin/main
 
   // Attach event listeners for tab switching
   container.querySelectorAll('.variant-tab-btn').forEach(btn => {

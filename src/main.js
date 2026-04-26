@@ -11,10 +11,7 @@ import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction, handleToggleAdvancedFilters } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
 import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
 import { setLanguage, getCurrentLanguage, t } from './i18n/index.js';
@@ -58,11 +55,7 @@ window.handleMainFilterAction = handleMainFilterAction;
 // Calculator handlers (specific handlers registered by statistics.js init)
 window.handleCalculateEarnings = handleCalculateEarnings;
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/main
 // ========== VARIANT CARD TAB HANDLER ==========
 /**
  * Switch between tabs within a variant card (Habilidade, Build, Arsenal)
