@@ -16,7 +16,7 @@
 @import 'components/buttons.css';
 @import 'components/cards.css';
 @import 'components/hero.css';
-@import 'components/filters.css?v=3';
+@import 'components/filters.css';
 @import 'components/section-header.css';
 @import 'components/modals.css';
 @import 'components/tooltips.css';
@@ -33,9 +33,9 @@
 @import 'pages/character-detail.css';
 @import 'pages/statistics.css';
 @import 'pages/catalysts.css';
-@import 'pages/tierlist.css?v=1.20';
+@import 'pages/tierlist.css';
 @import 'pages/guide.css';
 @import 'pages/character-profile.css';
 
 /* Responsive (must be last to override all above) */
-@import 'base/responsive.css?v=1.06';
+@import 'base/responsive.css';

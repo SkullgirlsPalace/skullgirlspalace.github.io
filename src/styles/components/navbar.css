@@ -8,6 +8,7 @@
     height: 60px;
     background: rgba(15, 15, 22, 0.95);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(212, 168, 75, 0.03);
     display: flex;
     align-items: center;
@@ -69,9 +70,8 @@
     height: 16px;
     width: auto;
     filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
+    -webkit-filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
 }
-
-
 
 .nav-links {
     display: flex;
