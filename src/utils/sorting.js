@@ -122,19 +122,24 @@ export function filterVariants(variants, filters) {
         });
     }
 
-    // Effects Filter (multi-select: specific effect keys like 'armor', 'bleed')
+    // Effects Filter (multi-select: OR logic - show variants matching ANY selected effect)
+    // Soft Filter: if filtering by effects yields no results, keep the previous results
     if (filters.efeitos && filters.efeitos.length > 0) {
-        filtered = filtered.filter(v => {
+        const effectsFiltered = filtered.filter(v => {
             if (!v.signature_ability || !v.signature_ability.description) return false;
             const desc = v.signature_ability.description.toLowerCase();
             
-            return filters.efeitos.every(effectKey => {
+            return filters.efeitos.some(effectKey => {
                 const effectData = EFFECT_DATA[effectKey];
                 if (!effectData) return false;
                 
                 return effectData.keys.some(key => desc.includes(key.toLowerCase()));
             });
         });
+
+        if (effectsFiltered.length > 0) {
+            filtered = effectsFiltered;
+        }
     }
 
     return filtered;

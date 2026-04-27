@@ -111,7 +111,7 @@
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     font-size: 0.8rem;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: none;
     cursor: pointer;
     transition: all 0.2s ease;
     flex-shrink: 0;
@@ -199,6 +199,11 @@
         flex-direction: column;
         align-items: center;
         gap: 16px;
+    }
+    
+    .centered-title {
+        position: static;
+        transform: none;
     }
     
     .header-left, .header-right {

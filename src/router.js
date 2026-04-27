@@ -71,6 +71,12 @@ async function handleRouteChange() {
     const appContainer = document.getElementById('app');
     if (!appContainer) return;
 
+    // Redirect 'characters' directly to all variants view
+    if (route === 'characters') {
+        window.location.hash = 'character/todos/builds';
+        return;
+    }
+
     // Determine which page to render
     let pageModule = routes[route];
     let pageParams = params;

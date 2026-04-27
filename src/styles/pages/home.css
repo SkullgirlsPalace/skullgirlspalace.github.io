@@ -10,19 +10,6 @@
     overflow: hidden;
 }
 
-.hub-top-bar {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    padding-left: 10px;
-}
-
-.hub-about-top {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-}
-
 .hub-container {
     max-width: 900px;
     width: 100%;
@@ -33,33 +20,7 @@
     margin-bottom: 20px;
     position: relative;
     width: 100%;
-}
-
-.hub-about-link {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--text-secondary);
-    font-family: 'TBCinema', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 8px;
-    transition: all var(--transition-fast);
-}
-
-.hub-about-link:hover {
-    color: var(--accent-gold);
-}
-
-.hub-about-link img {
-    height: 16px;
-    width: auto;
-    filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
+    padding-top: 60px; /* Prevent overlap with top actions */
 }
 
 .hub-hero h1 {
@@ -183,11 +144,46 @@
 }
 
 
-/* ========== HOME LANGUAGE SELECTOR ========== */
-.home-language-selector {
+/* ========== HOME TOP ACTIONS ========== */
+.home-top-actions {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 100;
+}
+
+.home-about-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  text-transform: lowercase;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-about-link:hover {
+  color: var(--accent-gold);
+  background: rgba(212, 168, 75, 0.1);
+  border-color: rgba(212, 168, 75, 0.3);
+}
+
+.home-about-link img {
+  height: 16px;
+  width: auto;
+  filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
+.home-language-selector {
+  position: relative;
 }
 

@@ -54,7 +54,7 @@ export function render(charKey, initialTab = 'builds') {
         return `
             <section class="section character-detail">
                 <div class="section-header">
-                    <button class="btn-back" onclick="navigateTo('characters')">
+                    <button class="btn-back" onclick="navigateTo('')">
                         ←
                     </button>
                     <h2>${t('detail.characterNotFound')}</h2>
@@ -74,7 +74,7 @@ export function render(charKey, initialTab = 'builds') {
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
                     <div class="header-left">
-                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                        <button class="btn-back pill" onclick="navigateTo('')">
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
@@ -139,14 +139,13 @@ function renderTodosPage(initialTab = 'builds') {
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
                     <div class="header-left">
-                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                        <button class="btn-back pill" onclick="navigateTo('')">
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
                     
                     <div class="char-title-row centered-title">
-                        <span style="font-size: 2rem;">📋</span>
-                        <h2>TODAS AS VARIANTES</h2>
+                        <h2>${t('detail.allVariants')}</h2>
                     </div>
                     
                     <div class="header-right">

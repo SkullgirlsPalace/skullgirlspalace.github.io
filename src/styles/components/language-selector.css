@@ -37,8 +37,9 @@
 }
 
 .flag-icon {
-  width: 20px;
-  height: auto;
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
   border-radius: 2px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
@@ -113,7 +114,8 @@
 }
 
 .lang-option .flag-icon {
-  width: 22px;
+  width: 24px;
+  height: 16px;
 }
 
 /* Responsive */

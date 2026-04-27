@@ -3,11 +3,11 @@
 // Renders filter controls for rarity, element, class, sorting, and search
 // =====================================================
 
-import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar } from '../state/store.js';
+import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar, clearAdvancedFilters } from '../state/store.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getCharacters } from '../services/dataService.js';
 import { flattenVariants } from '../utils/sorting.js';
-import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
+import { getVariantClasses, getLocalizedClassName, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';
 import { EFFECT_DATA } from '../data/effectData.js';
@@ -27,7 +27,7 @@ export function createSearchBar() {
     return `
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
-                <img loading="lazy" src="img/official/ZoomIn.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
+                <img loading="lazy" src="img/official/Search.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
                      onerror="this.style.display='none'">
                 <input type="text" id="variant-search-input" class="variant-search-input"
                        placeholder="${t('characters.searchPlaceholder')}"
@@ -54,14 +54,21 @@ export function createFilterBar() {
     }
 
     const createEffectGrid = (effects, isBuff) => {
-        return effects.map(e => `
+        const lang = getCurrentLanguage();
+        return effects.map(e => {
+            const displayName = lang === 'en' && e.name_en ? e.name_en : e.name;
+            // Get short name (first word or key part)
+            const shortName = displayName.split(' ')[0].split('/')[0];
+            return `
             <button class="filter-btn effect-btn ${isBuff ? 'buff' : 'debuff'}" 
                 data-effect-key="${e.key}" 
                 onclick="handleFilterClick('efeitos', '${e.key}')" 
-                title="${e.name}">
-                <img loading="lazy" src="${e.icon}" alt="${e.name}">
+                title="${displayName}">
+                <img loading="lazy" src="${e.icon}" alt="${displayName}">
+                <span class="effect-label">${displayName}</span>
             </button>
-        `).join('');
+        `;
+        }).join('');
     };
 
     const scoreLabel = t('filter.score').toUpperCase();
@@ -82,9 +89,6 @@ export function createFilterBar() {
                     </div>
                     <span class="text-default">${t('filter.filterBtn')}</span>
                     <span class="text-active">${t('filter.clear')}</span>
-                </button>
-                <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="${t('filter.clearAll')}">
-                    <img loading="lazy" src="img/official/constraints_no.webp" alt="${t('filter.clear')}">
                 </button>
             </div>
             
@@ -181,16 +185,16 @@ export function createFilterBar() {
                                 <span class="adv-filter-label">${t('filter.category')}</span>
                                 <div class="sort-group">
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> OFENSIVO
+                                        <img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> ${getLocalizedClassName('Ofensivo').toUpperCase()}
                                     </button>
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> DEFENSIVO
+                                        <img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> ${getLocalizedClassName('Defensivo').toUpperCase()}
                                     </button>
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> SUPORTE
+                                        <img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> ${t('filter.supportShort').toUpperCase()}
                                     </button>
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> CORINGA
+                                        <img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> ${getLocalizedClassName('Coringa').toUpperCase()}
                                     </button>
                                 </div>
                             </div>
@@ -207,7 +211,7 @@ export function createFilterBar() {
                                 </div>
                             </div>
                             <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-                                <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAll')}</button>
+                                <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAdvanced')}</button>
                             </div>
                         </div>
                     </div>
@@ -325,21 +329,12 @@ export function updateFilterUI() {
         sort.direction !== defaultSortDir;
 
     const mainBtn = document.getElementById('main-filter-btn');
-    const desktopClearBtn = document.getElementById('desktop-clear-btn');
 
     if (mainBtn) {
         if (hasActiveFilters) {
             mainBtn.classList.add('can-clear');
         } else {
             mainBtn.classList.remove('can-clear');
-        }
-    }
-
-    if (desktopClearBtn) {
-        if (hasActiveFilters) {
-            desktopClearBtn.classList.add('visible');
-        } else {
-            desktopClearBtn.classList.remove('visible');
         }
     }
 }
@@ -359,7 +354,7 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     // Update the button label with the current character
     if (currentCharKey === 'todos') {
         if (currentLabel) {
-            currentLabel.innerHTML = `📋 ${t('characters.allCharacters')}`;
+            currentLabel.innerHTML = `${t('characters.allCharacters')}`;
         }
     } else {
         const char = characters[currentCharKey];
@@ -381,7 +376,6 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     let dropdownHTML = `
         <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
                 onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
-            <span class="todos-icon">📋</span>
             <span>${t('characters.allCharacters')}</span>
         </button>
         <div class="char-dropdown-divider"></div>
@@ -709,20 +703,12 @@ document.addEventListener('click', (e) => {
     }
 });
 
-window.addEventListener('scroll', () => {
-    // Close advanced filters on scroll
-    const advDropdown = document.getElementById('advanced-filters-dropdown');
-    const advContent = document.getElementById('advanced-filters-content');
-    if (advDropdown && advContent && advContent.classList.contains('active')) {
-        advDropdown.classList.remove('active');
-        advContent.classList.remove('active');
-    }
-}, { passive: true });
+// Remove scroll listener for advanced filters — only close on click outside
 
 export function handleClearAdvancedFilters() {
-    const state = getState();
-    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
-    state.tabState[tab].filters.variantClass = [];
-    state.tabState[tab].filters.efeitos = [];
-    import('../state/store.js').then(module => module.notifySubscribers());
+    clearAdvancedFilters();
+    updateFilterUI();
+    if (window.onFiltersChanged) {
+        window.onFiltersChanged();
+    }
 }

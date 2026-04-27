@@ -2,7 +2,7 @@ import { getElementMap, getRarityLabels, getLocalizedRarityLabel, getLocalizedEl
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
-import { getLocalizedClassName, getLocalizedVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
+import { getLocalizedClassName, getLocalizedVariantClasses, getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
 import { isNewVariant } from '../data/newContent.js';
 import { CHARACTER_PROFILES } from '../data/characterProfiles.js';

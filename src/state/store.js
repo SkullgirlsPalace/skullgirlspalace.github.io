@@ -77,7 +77,7 @@ export function subscribe(callback) {
 /**
  * Notify all subscribers of state change
  */
-function notifySubscribers() {
+export function notifySubscribers() {
     subscribers.forEach(callback => callback(state));
 }
 
@@ -128,6 +128,21 @@ export function clearFilters() {
     state.tabState[tab].sort = tab === 'tier' 
         ? { type: 'class', direction: 'desc' }
         : { type: 'score', direction: 'desc' };
+    notifySubscribers();
+}
+
+export function clearAdvancedFilters() {
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    state.tabState[tab].filters.variantClass = [];
+    state.tabState[tab].filters.efeitos = [];
+    
+    // Reset sort if it was an advanced sort
+    const currentSort = state.tabState[tab].sort.type;
+    if (currentSort === 'element' || currentSort === 'class') {
+        state.tabState[tab].sort = tab === 'tier' 
+            ? { type: 'class', direction: 'desc' }
+            : { type: 'score', direction: 'desc' };
+    }
     notifySubscribers();
 }
 

@@ -568,6 +568,10 @@
     border-radius: 8px;
     padding: 16px;
     width: max-content;
+    max-width: 90vw;
+    max-height: 75vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -578,6 +582,19 @@
     transform: translateY(-10px);
     pointer-events: none;
     transition: all 0.2s ease;
+}
+
+/* Custom scrollbar for advanced filters dropdown */
+.advanced-filters-content::-webkit-scrollbar {
+    width: 6px;
+}
+.advanced-filters-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.advanced-filters-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
 }
 
 .advanced-filters-dropdown.active .advanced-filters-content {
@@ -720,47 +737,77 @@
 /* ========== EFFECTS FILTER GRID ========== */
 .effects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
     gap: 8px;
     margin-top: 6px;
-    max-height: 140px;
+    max-height: 280px;
     overflow-y: auto;
     padding-right: 4px;
 }
 
 .effect-btn {
-    width: 36px;
-    height: 36px;
-    padding: 4px;
+    width: auto;
+    height: auto;
+    min-width: 68px;
+    padding: 8px 4px 6px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 4px;
 }
 
 .effect-btn img {
-    width: 24px;
-    height: 24px;
+    width: 27px;
+    height: 32px;
     object-fit: contain;
+}
+
+.effect-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.2;
+    max-width: 80px;
+    white-space: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 
 .effect-btn:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+.effect-btn:hover .effect-label {
+    color: var(--text-primary);
 }
 
 .effect-btn.active.buff {
     background: rgba(111, 191, 115, 0.2);
     border-color: rgba(111, 191, 115, 0.6);
+    box-shadow: 0 0 8px rgba(111, 191, 115, 0.2);
+}
+
+.effect-btn.active.buff .effect-label {
+    color: #6fbf73;
 }
 
 .effect-btn.active.debuff {
     background: rgba(240, 104, 104, 0.2);
     border-color: rgba(240, 104, 104, 0.6);
+    box-shadow: 0 0 8px rgba(240, 104, 104, 0.2);
+}
+
+.effect-btn.active.debuff .effect-label {
+    color: #f06868;
 }
 
 .effects-grid::-webkit-scrollbar {
@@ -775,7 +822,6 @@
     border-radius: 4px;
 }
 
-
 /* Floating Search Bar */
 .search-bar-container.floating {
     position: fixed;
@@ -787,20 +833,10 @@
     border-radius: 10px;
     animation: slideInDownSearch 0.3s ease;
 }
-@media (max-width: 768px) {
-    .search-bar-container.floating {
-        top: auto;
-        bottom: 80px;
-        right: 20px;
-        width: calc(100% - 40px);
-        max-width: 300px;
-    }
-}
 @keyframes slideInDownSearch {
     from { transform: translateY(-20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
-
 
 /* Collapsible Content */
 .collapsible-content {
@@ -809,7 +845,6 @@
 .collapsible-content.active {
     display: grid;
 }
-
 
 /* Fix Image Size and Cutoffs */
 .class-filter-icon-btn {
@@ -827,14 +862,18 @@
     width: 24px;
     height: 24px;
 }
-.filter-btn img {
+.filter-btn:not(.effect-btn) img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     padding: 2px;
-}
-.effect-btn {
-    width: 32px;
-    height: 32px;
-}
+
+
+
+
+
+
+
+
+
 
