@@ -460,352 +460,402 @@ const CHARACTER_PROFILES = {
 };
 
 const CHARACTER_PROFILES_EN = {
-  "annie": {
-    playstyle_en: "Annie is a fast fighter focused on long ground combos and constant pressure. She uses her Parasite Sagan to control space and extend combos with her Star Power Mode, which adds extra properties to her attacks.",
-    biography_en: "For all intents and purposes, Annie is a young TV actress and host of \"Annie of the Stars\", a variety show based on the myths, legends, and lore of the titular character. The show has been on the air for years, mixing live actors with animation, and many actresses have played the lead role.\n\nAt least... that's what Annie wants you to think! In reality, there has always been only one Annie. Cursed by the Skullheart to never grow up, Annie has been alive for centuries. During that time, she has taken on the personal mission of stopping the Skullheart once and for all. To this end, she has acquired many skills and items, including her remote parasite, Sagan. Even her television work serves to help her achieve her goal, as she hopes to educate the world about the dangers of the Skullheart.",
-    birthday_en: "June 12",
-    likes_en: "Fight choreography, passionate monologues, nature walks, the Higgs boson, star fruit, cheese, meteor showers, fans, quantum superposition, practical clothing, the Special Emergency Strategy and Rescue Service, old songs",
-    dislikes_en: "Tomatoes, plagiarism, bad buffet service, shady agents, renaissance fairs, the Fermi paradox, random musical numbers, brown M&Ms, flat earthers",
-    characterAbility: {
-      title_en: "STAR POWER",
-      description_en: "Annie now fills the STAR POWER meter over time and can activate it when the meter is above 50%. During STAR POWER MODE, Annie's basic attacks produce STARS that deal full damage on BLOCKED HITS, and many of Annie's SPECIAL MOVES have additional properties."
+    "annie": {
+        playstyle_en: "Annie is a fast fighter focused on long ground combos and constant pressure. She uses her Parasite Sagan to control space and extend combos with her Star Power Mode, which adds extra properties to her attacks.",
+        biography_en: "To all appearances, Annie is a young television actress and the host of \"Annie Of The Stars,\" a TV variety show based on the myths, legends, and folklore of the titular character. The show has been on the air for years, mixing live-action and animation with multiple actresses playing the lead role.\n\nAt least... that's what Annie wants you to believe! In truth, there has only ever been one Annie. Cursed by the Skull Heart to never grow up, Annie has been alive for centuries. Over that time, she's made it her personal quest to stop the Skull Heart once and for all. To that end, she has acquired numerous skills and items, including her remote parasite, Sagan. Even performing on television works to further her goals as she hopes to educate the world about the dangers of the Skull Heart.\n\nFiercer than she looks, bravest in the cosmos, she is ANNIE OF THE STARS!",
+        birthday_en: "June 12",
+        bloodType_en: "AB",
+        height_en: "5' 1\"",
+        weight_en: "110 lbs",
+        likes_en: "Fight choreography, Passionate monologues, Nature hikes, The Higgs boson, Star fruit, Cheese, Meteor showers, Adoring fans, Quantum superposition, Practical outfits, The Special Tactics and Rescue Service, Old-timey music",
+        dislikes_en: "Tomatoes, Plagiarism, Bad craft services, Sleazy agents, Renaissance fairs, The Fermi Paradox, Random musical numbers, Brown M&Ms, Flat-Earthers",
+        characterAbility: {
+            title_en: "STAR POWER",
+            description_en: "Annie now builds up STAR POWER meter over time, and can activate STAR POWER when above 50% meter. During STAR POWER MODE, Annie's basic attacks produce STARS that deal full damage on BLOCKED HITS, and many of Annie's SPECIAL MOVES have additional properties."
+        },
+        superiorAbility1: {
+            title_en: "EVENT HORIZON",
+            description_en: "REDSHIFT - Each SPECIAL MOVE or BLOCKBUSTER used grants 25% bonus damage to SPECIAL MOVES and BLOCKBUSTERS for the rest of the combo.\n\nBLUESHIFT - Opponents deal 40% less damage on each COMBO HIT under 5."
+        },
+        prestigeAbility: {
+            title_en: "STARBURST",
+            description_en: "Annie charges this ability when using STAR POWER METER.\n\nCHARGE RATE: 2% per 1% STAR POWER METER spent.\n\nACTIVATION EFFECT: Annie's STAR POWER STARS deal 50% bonus damage."
+        }
     },
-    superiorAbility1: {
-      title_en: "EVENT HORIZON",
-      description_en: "REDSHIFT - Each SPECIAL MOVE or BLOCKBUSTER used grants 25% extra damage to SPECIAL MOVES and BLOCKBUSTERS for the rest of the combo.\n\nBLUESHIFT - The opponent deals 40% less damage with each COMBO HIT below 5."
+    "beowulf": {
+        playstyle_en: "Beowulf is a fighter focused on grabs and close-quarters combat, using his folding chair and 'Hype Mode'. He can throw the chair to control distance or use it to power up his attacks. By building Hype, he performs 'unblockable' grabs that ignore defenses and maintains constant pressure.",
+        biography_en: "Known world-wide for felling the Gigan warrior Grendel and for his illustrious career in the ring, Beowulf had secured himself a spot in the history books as a champion. But a mediocre acting career after leaving the ring tarnished his legacy.\n\nNow, as the Canopy Kingdom faces a new threat, Beowulf enters the ring once more, determined to relive the glory, and in doing so stumbles upon the truth about his past... Will Beowulf be able to overcome this new threat to the city and his legacy? Or is this his final taste of the spotlight?",
+        birthday_en: "March 31",
+        bloodType_en: "O",
+        height_en: "6' 7\"",
+        weight_en: "287 lbs",
+        likes_en: "Hunting, Working, Snug sweaters, Tour buses, Boots, Ladders, Fluorescent light tubes, Guaranteed money contracts, Microbrews, The sound of an excited crowd, Merchandise, Chamomile tea",
+        dislikes_en: "Professional writing staff, Refined sugar, Allen keys, Snakes, Disqualifications, Taking vacation time, Spray on tans, Indoor voices, Being told what to do, Being told what to wear, Potatoes",
+        characterAbility: {
+            title_en: "HYPE MODE",
+            description_en: "Get 1 Hype Charge with every THROW and every 30 seconds. 3 Hype Charges lets you trigger HYPE MODE! During HYPE MODE, THROWS cannot be broken, and many attacks feature surprising upgrades."
+        },
+        superiorAbility1: {
+            title_en: "TITLE FIGHT",
+            description_en: "CHALLENGER - Beowulf regains 2% HEALTH per second while his HEALTH% is LOWER than his opponent's.\n\nDEFENDING CHAMP - Beowulf deals 20% bonus damage anytime his HEALTH% is HIGHER than his opponent's."
+        },
+        prestigeAbility: {
+            title_en: "NOW OR NEVER",
+            description_en: "Beowulf charges this ability when entering HYPE MODE.\n\nCHARGE RATE: 50% per HYPE MODE ENTRY.\n\nACTIVATION EFFECT: Beowulf deals 15% bonus damage in HYPE MODE for every 20 seconds elapsed during the match."
+        }
     },
-    prestigeAbility: {
-      title_en: "STAR BURST",
-      description_en: "Annie charges this ability when she uses the STAR POWER METER.\n\nCHARGE RATE: 2% per 1% of STAR POWER METER spent.\n\nACTIVATION EFFECT: Annie's STAR POWER STARS deal 120% extra damage."
+    "big-band": {
+        playstyle_en: "Big Band is the game's fortress, possessing the highest Health and Defense. A specialist in counter-attacks and impenetrable defense, his abilities revolve around Combo, Pressure, and Damage Absorption mechanics, punishing predictable opponents with Massive Musical retaliations.",
+        biography_en: "Ben Birdland has seen a lot in his time, including the worst of the Grand War. But nothing was worse than what he saw as a beat cop in New Meridian. When he ran afoul of his crooked unit he was given a violent early retirement, and his broken body was left to spend the rest of its days in an iron lung.\n\nThat would have been the end of Ben's story if it hadn't drawn the ears of the Anti-Skullgirl Labs. With little left to lose, he agreed to be rebuilt with their experimental procedures. Melded with the machinery that allows him to breathe and a powerful array of pneumatic weaponry, he was reborn as \"Big Band.\"\n\nNow a senior member of Lab 8, he's become a father figure of sorts to the younger ASG soldiers. A firm believer in their cause, he has stayed with the project through its controversies and still sees his place on the front lines against the Skullgirl. His technology may be dated, but he more than makes up for it with experience and fortissimo.",
+        birthday_en: "December 15",
+        bloodType_en: "B",
+        height_en: "7' 7\"",
+        weight_en: "5000 lbs (95 lbs organic)",
+        likes_en: "A good beat, Shoe polish, Brass polish, 4-part harmony, Autumn Leaves, The flat 5th, The spirit of the law, Gin (neat)",
+        dislikes_en: "Punks, Corruption, Unresolved dissonance, Carelessness, Electric shavers, Smoothies, Narrow spaces",
+        characterAbility: {
+            title_en: "CAN'T STOP THE BEAT",
+            description_en: "While dashing, Big Band can absorb ONE hit without being interrupted (but will take damage normally)."
+        },
+        superiorAbility1: {
+            title_en: "MAESTRO",
+            description_en: "SOLOIST - Gain HEAVY REGEN for 10 seconds and take 50% less damage when absorbing the first HIT while DASHING.\n\nFRONTMAN - Take 15% less damage and gain 20% RESISTANCE while Big Band has living teammates."
+        },
+        prestigeAbility: {
+            title_en: "BLAST BEAT",
+            description_en: "Big Band charges this ability on every 10th COMBO HIT landed on him or the opponent.\n\nCHARGE RATE: 15% per 10th COMBO HIT.\n\nACTIVATION EFFECT: Big Band's DASH ATTACKS gain a 25% chance to be UNBLOCKABLE and grant ENRAGE for 5 seconds."
+        }
+    },
+    "black-dahlia": {
+        playstyle_en: "Equipped with a multipurpose weapon, Black Dahlia shines in mid-range arena control. Her projectiles (fire, ice, shock, etc.) apply unique penalties, allowing a dynamic style with explosive traps and strong zone control.",
+        biography_en: "Black Dahlia is the right hand assassin of Lorenzo Medici, head of the mighty Medici crime syndicate that rules New Meridian from the shadows. A former agent of the Anti-Skullgirl Labs, Black Dahlia was mortally wounded decades ago in a confrontation with a Skullgirl and rebuilt with experimental cybernetic technology. The experience left her with an unquenchable thirst for blood and fascination with the despair and suffering of others.\n\nShe betrayed her peers to fight as a hired hitwoman for whomever could keep her paid (and entertained). After Medici Tower is destroyed by the Skullgirl, Lorenzo sends Black Dahlia off on a killing spree to stop Marie and retrieve the stolen Life Gem from Ms. Fortune.\n\nHowever, Black Dahlia finds herself jaded with her employer and drawn to the forbidden thrills only the Skull Heart can provide...",
+        birthday_en: "August 18",
+        bloodType_en: "O",
+        height_en: "5' 9\"",
+        weight_en: "350 lbs (100 lbs organic)",
+        likes_en: "Bunnies, Ottomo, Frogs, Boot Knives, Arsenic, Old Lace, Red Velvet Petit Fours, Gigan Sea Pearls, False Passports, Uncut Gems, \"Apple Juice\"",
+        dislikes_en: "Tom, Ben Birdland, Vitale, Oversight, Cheap Champagne (hiccups), Easy Prey, Loose Ends, Meddling Kids, Blue Hair, Morality, Mansplaining",
+        characterAbility: {
+            title_en: "SHARPSHOOTER",
+            description_en: "Tap the SHARPSHOOTER button to fire SHOTS! Tap the RELOAD button to load 6 new SHOTS. When reloading, the third shot type is determined by Black Dahlia's ELEMENT and the sixth is random."
+        },
+        superiorAbility1: {
+            title_en: "CLOCKWORK ORIGINS",
+            description_en: "METAL BREAKDOWN - SPECIAL SHOTS inflict 20% bonus damage and inflict ARMOR BREAK for 10 seconds (also applies on blocked hits).\n\nNO TIME TO DIE - 50% chance when the opponent lands a CRITICAL HIT to gain REGEN and HASTE for 10 seconds each."
+        },
+        prestigeAbility: {
+            title_en: "TRIGGER MORTIS",
+            description_en: "Black Dahlia charges this ability each time she FIRES a SHOT.\n\nCHARGE RATE: 17% per SHOT fired.\n\nACTIVATION EFFECT: Black Dahlia inflicts DEATH MARK and gains DEADEYE for 10 seconds each when RELOADING."
+        }
+    },
+    "cerebella": {
+        playstyle_en: "Cerebella is an extremely hard-hitting fighter who mixes brute force and aerial grabs. Focused on close-quarters combat, she destabilizes opponents with Vice-Versa's armored rushes and highly punishing combos with high damage.",
+        biography_en: "The biggest sensation in the Cirque des Cartes, Cerebella is a tumbling, soaring dynamo of star power: throughout the Canopy Kingdom, she's admired for her enormous strength and alluring curves. Sadly, this acrobatic orphan only desires the attention of one man, mobster Vitale Medici, who took her in and became the closest thing to a father she's ever known.\n\nWhile inherently good, Cerebella serves the mafia as a leg-breaker when not performing in the circus. Cerebella is the only person capable of controlling her powerful Living Weapon hat, Vice-Versa, so Vitale is stingy with his affections to keep her fighting in his corner.",
+        birthday_en: "April 11",
+        bloodType_en: "B",
+        height_en: "5' 6\"",
+        weight_en: "130 lbs",
+        likes_en: "Competition, Showing off, Cats, Professional wrestling, Sudoku, Flirting, Pleasing Vitale, Teasing her roommate Feng",
+        dislikes_en: "Badmouthing of the Circus, Badmouthing of Vitale, Angry people, Quitters, Cockroaches",
+        characterAbility: {
+            title_en: "BALANCING ACT",
+            description_en: "THROW BREAKS cause enemies to be STAGGERED."
+        },
+        superiorAbility1: {
+            title_en: "CENTER STAGE",
+            description_en: "UPPER HAND - THROWS reduce BLOCKBUSTER METER by 20%.\n\nRING LEADER - THROWS DISABLE the opponents TAG INS and SPECIAL MOVES for 15 seconds."
+        },
+        prestigeAbility: {
+            title_en: "THE HARDER THEY FALL",
+            description_en: "Cerebella charges this ability each time she THROWS or is THROWN by her opponent.\n\nCHARGE RATE: 20% per THROW.\n\nACTIVATION EFFECT: Cerebella's THROWS deal bonus damage equal to 50% of her opponent's remaining HEALTH percentage."
+        }
+    },
+    "double": {
+        playstyle_en: "Double has the unique ability to transform her shape during combat. With a volatile style and high offensive capacity disguised in the forms of other characters, she is the game's 'wildcard', capitalizing on chaos to surprise opponents.",
+        biography_en: "Double's origins are a complete mystery. Seemingly without a will or motive of its own, this formless monster aids the Skullgirl.\n\nDouble is capable of transforming its nightmarish form into that of any person, but often appears as a smiling nun. It can frequently be found in the Grand Cathedral of the Divine Trinity, listening to confessions and attending to the catacombs beneath.",
+        birthday_en: "Unknown",
+        bloodType_en: "All/None",
+        height_en: "Varies",
+        weight_en: "Varies",
+        likes_en: "Nothing",
+        dislikes_en: "Nothing",
+        characterAbility: {
+            title_en: "TRANSMUTATION",
+            description_en: "After BLOCKING without being hit for 1 second, Double will switch to a new random element.\n\nWhen at an ELEMENTAL ADVANTAGE, Double's damage increases by 10%.\n\nWhen at an ELEMENTAL DISADVANTAGE, opponent damage decreases by 10%."
+        },
+        superiorAbility1: {
+            title_en: "ENTROPY",
+            description_en: "CHAOS - When at an ELEMENTAL ADVANTAGE, inflict a random DEBUFF for 15 seconds when landing a CRITICAL HIT.\n\nVOLATILITY - Every 10 seconds, gain a random BUFF for 10 seconds."
+        },
+        prestigeAbility: {
+            title_en: "DOUBLE JEOPARDY",
+            description_en: "Double charges this ability each time she TRANSMUTES.\n\nCHARGE RATE: 12% per TRANSMUTATION.\n\nACTIVATION EFFECT: The effects of Double's ELEMENTAL ADVANTAGE are increased by 40%."
+        }
+    },
+    "eliza": {
+        playstyle_en: "Eliza and her parasite Sekhmet and her bodyguards. When using a Sekhmet Blockbuster, Sekhmet enters the field being immune to Normal Attacks and Special Moves. She is a Control and Support character being very useful in various situations where the opponent is difficult to deal with.",
+        biography_en: "Eliza is the celebrity diva of New Meridian's premiere nightclub, Bastet's Den. Unbeknownst to the club's patrons, however, she's also been host to the skeletal Parasite Sekhmet for untold years. Widely known for her blood drive charities, in reality these serve to feed Sekhmet and maintain Eliza's ageless beauty. Recently discovered and blackmailed by the Medici into pursuing the Skull Heart, Eliza's ancient ambitions stir once more...",
+        birthday_en: "October 17",
+        bloodType_en: "Any",
+        height_en: "5' 11\"",
+        weight_en: "160 lbs (on average)",
+        likes_en: "Beer, Kushari, Dolma, Old Fashioneds, Board games (especially Senet), Bathing, Dressing up, Cats, Sunny weather, Dancing, Singing, Being in the spotlight, Blood, Conquest, Samson",
+        dislikes_en: "Human arrogance, Prejudice against Parasites, Plebians, Missed opportunities, Philanthropy, X-rays, Living small, Trinitism, Historical inaccuracies, Unhealthy blood, Losing her nose, Samson",
+        characterAbility: {
+            title_en: "WARRIOR GODDESS",
+            description_en: "BLOCKBUSTERS involving Sekhmet now leave Eliza in Sekhmet Mode for a short duration. All damage taken while in Sekhmet Mode is recoverable."
+        },
+        superiorAbility1: {
+            title_en: "BLOODLINE",
+            description_en: "BLOOD OATH - Whenever a teammate is defeated, Eliza regains 50% HEALTH.\n\nRITUAL SACRIFICE - Whenever a teammate is defeated, Eliza gains 100% BLOCKBUSTER METER."
+        },
+        prestigeAbility: {
+            title_en: "FEAST AND FAMINE",
+            description_en: "Eliza charges this ability each time she enters SEKHMET MODE.\n\nCHARGE RATE: 25% per ENTRY.\n\nACTIVATION EFFECT: Eliza gains a 5% chance on each NON-BLOCKBUSTER HIT in SEKHMET MODE (including blocked hits) to REMOVE 1 opponent BUFF and gain 5% HEALTH."
+        }
+    },
+    "filia": {
+        playstyle_en: "Filia is focused on agility and short-range pressure. She can heal herself and cause constant bleeding while inflicting a good amount of damage with her varied combos.",
+        biography_en: "Filia was once just an average schoolgirl, but one day woke up without any memories and a second mouth on the back of her head. She was now playing host to a Parasite named Samson, an unruly mop of demonic hair with incredible power.\n\nWith no memories or anyone to turn to for help, if she ever hopes to piece together her past and survive the inevitable clash with the Skullgirl, Filia will need to trust this mysterious being.",
+        birthday_en: "March 18",
+        bloodType_en: "AB",
+        height_en: "5' 4\"",
+        weight_en: "142 lbs",
+        likes_en: "Eating, Coffee, Milkshakes, Reading and learning, Radio dramas, Comics, Romance novels, Dogs",
+        dislikes_en: "Samson's bluffing and gambling, Seeing innocents get hurt, Hair getting tangled, Being lied to, Side-effects of Samson's parasitism",
+        characterAbility: {
+            title_en: "FLASH BACK",
+            description_en: "Back-dashing just before being HIT will allow Filia to EVADE an opponent's attack, avoiding all damage."
+        },
+        superiorAbility1: {
+            title_en: "BLOODLETTING",
+            description_en: "LEECH - 25% of the damage Filia inflicts is regained as HEALTH.\n\nTHE FIRST CUT - Every HIT has a 15% chance to convert all active BLEEDS to permanent BLEEDS."
+        },
+        prestigeAbility: {
+            title_en: "BOB AND WEAVE",
+            description_en: "Filia charges this ability each time she HITS an attacking opponent or is HIT while attacking.\n\nCHARGE RATE: 20% per HIT.\n\nACTIVATION EFFECT: Filia EVADES all projectiles while DASHING and has a 50% chance to inflict DEATH MARK for 5 seconds when HITTING an attacking opponent."
+        }
+    },
+    "fukua": {
+        playstyle_en: "Despite looking like Filia, Fukua focuses on medium-range, long-range, and high-damage attacks. She has phantom projections that steal her vitality and have various uses. She mixes safe long-range routine attacks with effective close-quarters rushes.",
+        biography_en: "One of Brain Drain's less-socially-acceptable hobbies is cloning, and often he forces the souls of dead warriors to inhabit these clones. Fukua is the result of a fortunate - or unfortunate - Lab Zero accident: a union of two souls. One, a once-proud warrior known for her brute strength in close combat; the other a silent assassin who specialized in ranged weapons for her kills.\n\nTogether as one, Fukua possesses the best of both specialties... but relationships formed under intense circumstances often don't last.",
+        birthday_en: "Unknown",
+        bloodType_en: "AB",
+        height_en: "5' 4\"",
+        weight_en: "142 lbs",
+        likes_en: "Unknown",
+        dislikes_en: "Unknown",
+        characterAbility: {
+            title_en: "SANGUINE SHADOWS",
+            description_en: "All of the damage Fukua receives is inflicted as non-permanent SCRATCH DAMAGE."
+        },
+        superiorAbility1: {
+            title_en: "UNTETHERED ENTITY",
+            description_en: "SPECTRAL SPITE - Deal 1% bonus damage for every 5% HEALTH missing.\n\nWRAITH'S WRATH - Reduce damage taken by 1% for every 5% HEALTH missing."
+        },
+        prestigeAbility: {
+            title_en: "DREAM EATER",
+            description_en: "Fukua charges this ability each time she or the opponent uses a BLOCKBUSTER.\n\nCHARGE RATE: 25% per BLOCKBUSTER.\n\nACTIVATION EFFECT: Fukua drains 5% of the opponent's BLOCKBUSTER METER and inflicts HEAL BLOCK for 5 seconds when using a BLOCKBUSTER."
+        }
+    },
+    "marie": {
+        playstyle_en: "Marie uses her skeletons in serial attacks to pressure adversaries along with Hilgard, her main ally. She is a very strong character for maintaining pressure, controlling the field, and can revive allies and prevent opponent resurrection.",
+        biography_en: "Marie Korbel was Hilgard's orphanage's clumsiest, but most enthusiastic, self-appointed maid until raiders attacked her newfound family. Desperate, Marie wished on the Skull Heart for the power to protect those she loved. The wish was granted, but at a terrible cost. Marie awoke as a twisted being of destruction: The Skullgirl. With friends gone and home razed, Marie had nothing left but vengeance. Her fierce determination allowed her to keep her murderous rampage focused on the Medici Mafia, but every passing moment the Skull Heart pushed her to ever more severe acts of destruction.\n\nYet the impossible has happened. The Skull Heart has been destroyed while Marie herself has been spared. She is now a Skullgirl unchained, freed from the diabolical machinations of the Skull Heart's unseen masters. Marie is uncertain what to make of her new reality, but one thing is certain: She vows to be the last Skullgirl.",
+        birthday_en: "April 3",
+        bloodType_en: "SG (formerly O)",
+        height_en: "4' 9\"",
+        weight_en: "94 lbs",
+        likes_en: "Tidiness, Protecting the Innocent, Fond Memories, Apples, Jams and Jellies, Books, Patricia, Hilgard's orphanage, Rommelgrad, Justice",
+        dislikes_en: "The Medici, War, Weapons, Criminals, Mice, The Anti-Skullgirl Project, The Skull Heart, Powerlessness, Suspicious Nun, Fragile Vases",
+        characterAbility: {
+            title_en: "REST AND RESURRECTION",
+            description_en: "Hold down the REST AND RESURRECTION button to build a MORTUARY CHARGE. When charged, tap the button to REVIVE nearby defeated allies and INCINERATE nearby opponent corpses!"
+        },
+        superiorAbility1: {
+            title_en: "CORPSE ARTISAN",
+            description_en: "IMPROVED INCINERATION - Gain 25% BLOCKBUSTER METER and ENRAGE when INCINERATING a dead body.\n\nREINFORCED REVIVAL - While Marie is alive, teammates gain permanent ARMOR and an additional 25% HEALTH when REVIVED."
+        },
+        prestigeAbility: {
+            title_en: "CALL OF THE GRAVE",
+            description_en: "Marie charges this ability each time a BUFF or DEBUFF expires on either Fighter while she is TAGGED IN.\n\nCHARGE RATE: 14% per BUFF or DEBUFF expiration.\n\nACTIVATION EFFECT: Marie inflicts QUIETUS for 10 seconds each time she uses a MORTUARY CHARGE."
+        }
+    },
+    "ms-fortune": {
+        playstyle_en: "Ms. Fortune gains unparalleled area control by using her detachable head as an on-screen assist. If she prefers to remain whole, she attacks avidly with extremely fast punishing combos based on short-range rushes and high damage.",
+        biography_en: "A feline feral, Nadia Fortune is the last surviving member of the Fishbone Gang, a notorious band of otherwise Dagonian thieves. Their last mission ended in tragedy: a failed attempt to steal the mysterious Life Gem from Lorenzo Medici resulted in their grisly deaths. Before meeting her own doom, Ms. Fortune swallowed the Life Gem and managed to digest it. The Gem's power permeated her entire body, making it truly undying... even after being cut into several pieces.\n\nNow hiding in the shadows of Little Innsmouth, Ms. Fortune plots to avenge her fallen comrades.",
+        birthday_en: "November 24",
+        bloodType_en: "B",
+        height_en: "5' 8\"",
+        weight_en: "127 lbs",
+        likes_en: "Making friends, Sunlit naps, Volleyball, Bowling, Golf, Parkour, Subjecting others to terrible puns, Yu-Wan's restaurant, Dim Sum, The Fishbone Gang, Robbing from rich, Giving to poor, Potato chips",
+        dislikes_en: "The Medici Mafia, Black Dahlia, Sushi, Cops, Bullies, Marsupials, Loud noises, Lemonade",
+        characterAbility: {
+            title_en: "HEAD GAMES",
+            description_en: "Tap the HEAD GAMES button to enter HEADLESS MODE. Ms. Fortune's head can attack independent of her body. But be careful: Ms. Fortune will also suffer any additional damage inflicted to her head!"
+        },
+        superiorAbility1: {
+            title_en: "I CAN HAS BUFF?",
+            description_en: "MLEM - Gain REGEN for 20 seconds after every 10 seconds not suffering a HIT (includes blocked hits).\n\nBOOP - Gain ENRAGE for 20 seconds after every 10 seconds not suffering a HIT (includes blocked hits)."
+        },
+        prestigeAbility: {
+            title_en: "FUR AND BLUR",
+            description_en: "Ms. Fortune charges this ability based on her MOVE SPEED.\n\nCHARGE RATE: 1.5% of her MOVE SPEED.\n\nACTIVATION EFFECT: Ms. Fortune gains EVASION and inflicts GUARD BREAK for 5 seconds each every 10 seconds."
+        }
+    },
+    "painwheel": {
+        playstyle_en: "Painwheel has devastating charged attacks executed through the blade on her back. Focusing on her means dealing with her reflective damage and lethal counter-attacks where opponents hurt themselves and receive massive damage back; she is a character with low health but very high damage.",
+        biography_en: "Once a normal schoolgirl named Carol, Painwheel was kidnapped by Valentine and delivered to the Anti-Skullgirls Labs' secretive Lab Zero. There she was implanted with the synthetic Buer Drive and Gae Bolga parasites and infused with experimental Skullgirl blood, transforming her into the monster she is today. Violent and unstable as a result of these experiments, as a precaution she's mentally controlled by Lab Zero's powerful psychic director, Brain Drain.\n\nFueled by rage, she draws her power from her pain and fury. Despite that, the soul of that scared young girl still lives on inside this monstrous body, desperately fighting off the onslaught of voices that would control her.",
+        birthday_en: "October 23",
+        bloodType_en: "SG",
+        height_en: "5' 1\"",
+        weight_en: "375 lbs",
+        likes_en: "Flowers, Gardening, Walking on the beach at sunset, Family, Sound of wind chimes, Dogs, Nostalgic memories, Friends, Magenta, Proper etiquette",
+        dislikes_en: "ASG Labs, Valentine, Brain Drain, The Skullgirl, The Skull Heart, People, Her Body, Mind Control, Torture, Pain, Frustration, Gossip, Styrofoam sounds, Loud noises, Bad puns",
+        characterAbility: {
+            title_en: "FLIGHT RISK",
+            description_en: "Tap the FLIGHT RISK button to hover in the air! Tap the button again to land. While flying, gain access to new actions by swiping and tapping."
+        },
+        superiorAbility1: {
+            title_en: "TORTURED SOUL",
+            description_en: "TAINTED BLOOD - When an opponent lands a CRITICAL HIT, 100% of the damage will be reflected back.\n\nGRUDGE - When the opponent lands a CRITICAL HIT, gain ENRAGE for 20 seconds and ARMOR for 5 seconds."
+        },
+        prestigeAbility: {
+            title_en: "NOWHERE TO HIDE",
+            description_en: "Painwheel charges this ability each time she or her opponent lands a CRITICAL HIT.\n\nCHARGE RATE: 4% per CRITICAL HIT.\n\nACTIVATION EFFECT: Painwheel inflicts GUARD BREAK for 5 seconds when using a BLOCKBUSTER."
+        }
+    },
+    "parasoul": {
+        playstyle_en: "Parasoul uses the explosive tears of her Living Umbrella as traps to manage the field and amplify her damage. She combines sharp close-quarters skills with absolute screen control through her allied troops intervening, allowing her to extend combos with deadly precision attacks, whether at long or short range.",
+        biography_en: "Few know the terrors of the Skullgirl as intimately as Parasoul does: seven years ago her own mother became the Skullgirl that nearly destroyed the world. This tragic past has made her fiercely protective of both her country and her family, and these two priorities frequently come into conflict.\n\nParasoul is now the crown princess of the Canopy Kingdom and leader of its elite military squad, the Black Egrets. Wielding the living umbrella, Krieg, she fights with grace, poise and cunning to defend her family honor and destroy the Skull Heart so no one can repeat her mother's terrible mistake.",
+        birthday_en: "December 22",
+        bloodType_en: "A",
+        height_en: "5' 10\"",
+        weight_en: "156 lbs",
+        likes_en: "Logic, Wine, Chess, Fencing, Training, Tennis, Diplomacy, Philosophy, Black Egret troops, Secretly watching 'Annie: Girl of the Stars,\" Her sister Umbrella",
+        dislikes_en: "Overly emotional people, Relying on others, Those who speak ill of her family, Injustice, The Medici Mafia, The Skullgirl, Her sister's antics",
+        characterAbility: {
+            title_en: "TEARFUL",
+            description_en: "Certain attacks will now spawn a TEAR. Using a CHARGE ATTACK will detonate all active TEARS, damaging opponents caught in the blast."
+        },
+        superiorAbility1: {
+            title_en: "HYPER-CRITICAL",
+            description_en: "CRITICAL THINKING - Parasoul gains a 25% bonus to CRIT RATE per ACTIVE TEAR.\n\nCRITICAL MASS - Parasoul gains a 20% bonus to CRIT DAMAGE per ACTIVE TEAR."
+        },
+        prestigeAbility: {
+            title_en: "DEADLY ACCURACY",
+            description_en: "Parasoul charges this ability each time she spawns a TEAR.\n\nCHARGE RATE: 12% per TEAR.\n\nACTIVATION EFFECT: Parasoul gains PRECISION every 2 second(s) while near a TEAR."
+        }
+    },
+    "peacock": {
+        playstyle_en: "Peacock is a very strong character for long-range field control, she can be very unpredictable and has a good arsenal. She has a strong field presence due to her ease in breaking defenses, applying combos, and pressuring safely.",
+        biography_en: "Once a war orphan slave named Patricia, Peacock's body was gruesomely mutilated by slave traders that captured her. She was rescued by Dr. Avian's Anti-Skullgirls Labs, and rebuilt with a reality-defying arsenal of biomechanical weaponry: the Argus System augmented her body, and the Avery Unit gave her access to unprecedented weaponry.\n\nAlas, they couldn't do anything for her mind: Peacock's damaged psyche and abiding love of cartoons shaped her new \"toys\" into a terrifying gang of cronies, who she has no qualms using to paint the town red... with blood. Terrifying as she is, she may be the kingdom's best bet against the Skullgirl.",
+        birthday_en: "November 13",
+        bloodType_en: "B",
+        height_en: "4' 6\"",
+        weight_en: "94 lbs (Varies)",
+        likes_en: "Cartoons, TV Show \"Annie: Girl of the Stars,\" Movies, Violence, Junk food, Fast Cars, Explosives, Cigars, Being in charge",
+        dislikes_en: "Weaklings, Bureaucracy, Authority figures, People, The Skull Heart, Nerds, Salad, Chopsticks",
+        characterAbility: {
+            title_en: "THE HOLE IDEA",
+            description_en: "Tap THE HOLE IDEA button to vanish into a hole, avoiding some attacks. Tap elsewhere to emerge with a wallop! Otherwise, tap the button again or wait 2 seconds to exit without attacking."
+        },
+        superiorAbility1: {
+            title_en: "TOONTIME",
+            description_en: "SPECIAL FEATURE - When Peacock uses a SPECIAL MOVE, there is a 20% chance that the COOLDOWN will immediately reset.\n\nCAST PARTY - When Peacock or any teammate uses a TAG IN, there is a 50% chance that the attack will be UNBLOCKABLE."
+        },
+        prestigeAbility: {
+            title_en: "MANIC MUNITIONS",
+            description_en: "Peacock charges this ability each time she or the opponent is damaged by a PROJECTILE.\n\nCHARGE RATE: 3% per PROJECTILE.\n\nACTIVATION EFFECT: Peacock has a 25% chance to gain 1 stack of ENRAGE for 5 seconds, HASTE for 5 seconds, or PRECISION when using a SPECIAL MOVE."
+        }
+    },
+    "robo-fortune": {
+        playstyle_en: "With powerful laser beams, Robo-Fortune is a long-range specialist, using combos that punish opponents from afar and from the air. Besides having a robust arsenal for combos and attacks at different ranges, she has good abilities and is difficult to punish, making her a persistent threat.",
+        biography_en: "Robo-Fortune is the creation of Brain Drain, the psychic director of ASG Lab Zero, and stands as a testament to her maniacal creator's unmatched pride and petulance. Built to demonstrate loyalty and cunning, Robo-Fortune fails to deliver either to any measurable degree. Employing cutting-edge technology, she sets out to hunt down the Skullgirl, and to engage in easily avoidable conflicts.\n\nIs the ASG Project's latest creation the ultimate cybernetic soldier? Have Brain Drain's mechanical machinations set the world on a treacherous path? Is Robo-Fortune's faulty programming more of a feature than a bug? Has science gone too far?!",
+        birthday_en: "January 31",
+        bloodType_en: "10W-30 Synthetic Oil",
+        height_en: "5' 6\"",
+        weight_en: "440 lbs",
+        likes_en: "Honey pots, Integers less than or equal to 1, Books about dragons, NAND gates, 0x5f3759df, Unrolled loops of strings, Mice, Rebeccapurple, IEEE (except after C!), Setplay",
+        dislikes_en: "Disorder, Incompatible file formats, DES, Unsalted passwords (salted tastes better!), Bleeding hearts, Weakly-typed languages, vi, Fonts that make O and 0 look too similar, Checkins without comments, Moire patterns",
+        characterAbility: {
+            title_en: "HEADRONE HARDWARE",
+            description_en: "Tap the LAUNCH button to launch HEADRONES. Use HEADRONES to ram enemies, set proximity mines, and fire a barrage of missiles!"
+        },
+        superiorAbility1: {
+            title_en: "NETWORK PROTOCOL",
+            description_en: "DDOS - Inflict POWER SURGE for 15 seconds after every 2 seconds while near the opponent.\n\nPING CHECK - Gain ENRAGE for 15 seconds after every 2 seconds while far away from the opponent."
+        },
+        prestigeAbility: {
+            title_en: "GEIGER COUNTER",
+            description_en: "Robo-Fortune charges this ability each time she gains a BUFF or inflicts a DEBUFF.\n\nCHARGE RATE: 7% per BUFF or DEBUFF.\n\nACTIVATION EFFECT: Robo-Fortune gains 5 stacks of PRECISION and reflects 5% of the damage she takes for every BUFF on her or the opponent (max 100%)."
+        }
+    },
+    "squigly": {
+        playstyle_en: "Squigly needs to patiently charge her abilities through Leviathan, her companion who helps improve the effectiveness of moves and enhances the damage flow to perform better in different situations; a very versatile and fun character for effective combos.",
+        biography_en: "Squigly is the last \"surviving\" member of the Contiello family, a long lineage of opera singers and among the Medicis’ most valued clients. Fourteen years ago, Squigly's mother Selene obtained the Skull Heart, resulting in Lorenzo Medici ordering an attack on the Contiello family. Fraught with despair, Selene became the Skullgirl and revived her family as an undead army. What spared Squigly from becoming a mindless minion was the intervention of the Parasite Leviathan, the Contiello family's friend and guardian.\n\nThe battle between the Skullgirl and Lorenzo threatened to spread across New Meridian if not for Squigly and the intervention of the ASG. With the Skullgirl's defeat, the power that animated Squigly faded, putting her to rest. Lorenzo generously paid for the Contiellos' funeral and has not had conflicts with the Medicis’ other clients since.\n\nFourteen years later, Bloody Marie's emergence has stirred Squigly from her long slumber...",
+        birthday_en: "November 2",
+        bloodType_en: "Embalmed (formerly A-)",
+        height_en: "5' 3\"",
+        weight_en: "118 lbs",
+        likes_en: "Leviathan, Her family, Tradition, Reading up on current events, Animals (particularly birds and snakes), Music, Singing, Noodles, Cream soda, Cake, Burgers, Gardening, The smell of incense, Bubble baths, Not being dead",
+        dislikes_en: "The Medici, Black Dahlia, Double, The Skull Heart, Rude people, Dishonesty, Not taking karaoke seriously, Thunderstorms, Being dead",
+        characterAbility: {
+            title_en: "WYRM'S TAIL",
+            description_en: "Holding down the WYRM'S TAIL button will store up to 2 DRAGON CHARGES. DRAGON CHARGES are consumed to make certain attacks more powerful!"
+        },
+        superiorAbility1: {
+            title_en: "FRIGHT NIGHT",
+            description_en: "EVIL DEAD - While enemies are nearby Squigly's dead body, teammates’ HITS inflict CURSE and WITHER for 15 seconds.\n\nDEAD ALIVE - While teammates are near Squigly's dead body, suffering a HIT will grant them FINAL STAND for 15 seconds."
+        },
+        prestigeAbility: {
+            title_en: "STAY TOMBED",
+            description_en: "Squigly charges this ability each time she gains or uses a DRAGON CHARGE.\n\nCHARGE RATE: 12% per DRAGON CHARGE gained or used.\n\nACTIVATION EFFECT: Any currently defeated opponents can no longer be revived and Squigly gains a DRAGON CHARGE every 2 seconds while near a dead body."
+        }
+    },
+    "umbrella": {
+        playstyle_en: "Umbrella's gameplay revolves around Hungern's (Umbrella) hunger meter. With a full meter (stuffed), the character becomes slow, deals more damage, and facilitates some interactions. Half meter (satiated) is her normal stage. Empty meter (hungry) she becomes faster, but her damage decreases.",
+        biography_en: "The youngest princess of the Canopy Kingdom, Umbrella is rarely seen outside the halls of the royal palace in Canopolis. She has grown up sheltered, with her only true friend being a family heirloom: the Living Weapon Hungern. Together, they fight evil and kick butt in the name of justice, just like Umbrella's big sister: Parasoul! Or at least they would if Parasoul would let them out of the palace!\n\nThe rise of a new Skullgirl may just give Umbrella the adventure she wants. But, when she finds out the truths about herself and her family, will she wish she had stayed home?",
+        birthday_en: "July 17",
+        bloodType_en: "O(?)",
+        height_en: "3' 10\"",
+        weight_en: "60 lbs",
+        likes_en: "Her sister Parasoul (most of the time), Hungern, Ice cream, Drawing, TV, Amphibians, Scary B Movies, Rainy days, Pro wrestling, Justice!, Hungern's origami",
+        dislikes_en: "Her sister Parasoul (the rest of the time), Home Schooling, Annie of The Stars TV Show, Stuffy fancy dresses, Fois Gras, Getting caught, Egret Operation S.I.T.T.E.R.S., The Princess Wave, Skinned knees, Crying over spilled milk",
+        characterAbility: {
+            title_en: "HUNGERN'S HUNGER",
+            description_en: "Unlocks Hungern's Hunger Meter. THROWS fill the meter and BUBBLE-based moves (including tapping the meter button) empty it. Basic attacks deal more damage while OVERSTUFFED and are faster while HUNGRY. Certain moves are empowered by Hungern's state!"
+        },
+        superiorAbility1: {
+            title_en: "JAWS OF DEFEAT",
+            description_en: "SWEET VICTORY - Gain 2 stacks of ENRAGE for 15 seconds when defeating an opponent.\n\nBITTER END - Once per match, gain FINAL STAND and HEAVY REGEN for 15 seconds each when falling below 25% HEALTH."
+        },
+        prestigeAbility: {
+            title_en: "GUT REACTION",
+            description_en: "Umbrella charges this ability each time she gains or loses HUNGER.\n\nCHARGE RATE: 1% per 1% HUNGER gained or lost.\n\nACTIVATION EFFECT: Umbrella gains 5% HEALTH and inflicts SLIME for 10 seconds when HITTING an attacking opponent."
+        }
+    },
+    "valentine": {
+        playstyle_en: "The ninja nurse mixes medical tools to poison opponents or revive defeated allies. A very useful support character, she has reasonable damage, with effective moves to inflict effects, simple combos and more. Her main role is to heal, revive allies, and incapacitate opponents when needed.",
+        biography_en: "Valentine is the only survivor of the Last Hope, a group of special Anti-Skullgirl Lab operatives. Before meeting their end at the hands of the Skullgirl, the Last Hope worked for the mysterious Lab Zero and performed duties ranging from reconnaissance and sabotage to advanced research.\n\nNow Valentine dutifully serves the Skullgirl, carrying out her will from the shadows. She keeps to herself, so much of her true nature and personality are unknown.",
+        birthday_en: "December 25",
+        bloodType_en: "A",
+        height_en: "6'",
+        weight_en: "160 lbs",
+        likes_en: "Alcohol, The Scientific Method, Studying things from afar, Snakes, Wolves, Classical music, Punctuality, Careful planning, Taking things apart, News and non-fiction reading, Mind games, Chess, Acoustic guitar, Meat, Eastern culture, Dark chocolate",
+        dislikes_en: "Needless formality, Sentimentality, Weak people, Cooking, Bedside manner, Brain Drain, Back pain, Candy",
+        characterAbility: {
+            title_en: "SIPHON",
+            description_en: "More of the damage Valentine receives is inflicted as non-permanent SCRATCH DAMAGE. 75% of the damage Valentine deals is regained as HEALTH, but only up to her current SCRATCH DAMAGE threshold."
+        },
+        superiorAbility1: {
+            title_en: "COMBAT CLINIC",
+            description_en: "TRAUMA CENTER - While Valentine is alive, teammates gain FINAL STAND for 15 seconds when suffering a HIT that deals more than 10% HEALTH.\n\nICU - Valentine gains HEAVY REGEN for 20 seconds when suffering a DEBUFF."
+        },
+        prestigeAbility: {
+            title_en: "REANIMATOR",
+            description_en: "Valentine charges this ability each time she recovers HEALTH when TAGGING IN.\n\nCHARGE RATE: 4% for each 1% HEALTH recovered.\n\nACTIVATION EFFECT: All defeated teammates are REVIVED with 10% HEALTH and Valentine continuously gains 0.75% HEALTH per second."
+        }
     }
-  },
-  "beowulf": {
-    playstyle_en: "Beowulf is a fighter focused on grabs and close-quarters combat, using his folding chair and 'Hype Mode'. He can throw the chair to control distance or use it to power up his attacks. By building Hype, he performs 'unblockable' grabs that ignore defenses and maintains constant pressure.",
-    biography_en: "Recognized worldwide for having defeated Grendel, the Gigan warrior, and for his illustrious career in the ring, Beowulf secured a place in history books as a champion. However, a mediocre acting career after leaving the rings tarnished his legacy.\n\nNow, with the Canopian Kingdom facing a new threat, Beowulf will enter the ring once more, determined to bring back the glory days. And in doing so, he will face the truth about his past... will Beowulf be able to overcome this new threat to the city and his legacy? Or will this be his last time in the spotlight?",
-    birthday_en: "March 31",
-    likes_en: "Hunting, fighting for real, sweaters, tour buses, boots, stairs, fluorescent lamps, guaranteed-money contracts, craft beers, the sound of an excited crowd, official merchandise, chamomile tea",
-    dislikes_en: "Professional screenwriters, refined sugar, hex keys, snakes, disqualifications, taking vacations, tanning sprays, speaking quietly, being told what to do or wear, potatoes",
-    characterAbility: {
-      title_en: "HYPE MODE",
-      description_en: "Gain 1 Hype Charge with each THROW and every 30 seconds. 3 Hype Charges allow activating HYPE MODE! In HYPE MODE, THROWS cannot be interrupted, and many attacks feature exciting improvements!"
-    },
-    superiorAbility1: {
-      title_en: "TITLE FIGHT",
-      description_en: "CHALLENGER - Beowulf recovers 2% HEALTH per second while HEALTH% is LOWER than the opponent's.\n\nTITLE DEFENDER - Beowulf deals 20% extra damage whenever his HEALTH% is GREATER than the opponent's."
-    },
-    prestigeAbility: {
-      title_en: "NOW OR NEVER",
-      description_en: "Beowulf charges this ability when entering HYPE MODE.\n\nCHARGE RATE: 50% per ENTRY.\n\nACTIVATION EFFECT: Beowulf deals 30% extra damage in HYPE MODE for each 20 seconds elapsed during the fight."
-    }
-  },
-  "big-band": {
-    playstyle_en: "Big Band is the game's fortress, possessing the highest Health and Defense. A specialist in counter-attacks and impenetrable defense, his abilities revolve around Combo, Pressure, and Damage Absorption mechanics, punishing predictable opponents with Massive Musical retaliations.",
-    biography_en: "Ben Birdland has seen it all in life, including the worst of the Grand War. But what he saw as a cop in New Meridian surpassed everything else. When he rebelled against his corrupt unit, they gave him an early disability retirement, with his destroyed body condemned to live the rest of his days in an iron lung.\n\nThis would have been the end of Ben's story if it hadn't reached the ears of the Anti-Skullgirl Labs. With little to lose, he accepted being rebuilt through experimental procedures. Fused with machines that allow him to breathe and an array of powerful pneumatic weapons, he was reborn as \"Big Band\".\n\nNow a senior member of Lab 8, he has become a father figure to the ASG's young soldiers. Firmly believing in the cause, he has stayed on the project despite all the controversies and still wants to be on the front lines against the Skullgirl. His technology may be outdated, but his experience and spirit make him a formidable fighter.",
-    birthday_en: "December 15",
-    likes_en: "A good beat, shoe polish, metal polish, music for 4 instruments, autumn leaves, augmented 4th, the spirit of the law, gin, cleaning",
-    dislikes_en: "Hooligans, corruption, poorly resolved dissonance, lack of care, electric razors, vitamins, tight spaces",
-    characterAbility: {
-      title_en: "THE BEAT GOES ON",
-      description_en: "When DASHING IN, Big Band can absorb ONE hit without being interrupted (but takes damage normally)."
-    },
-    superiorAbility1: {
-      title_en: "MAESTRO",
-      description_en: "SOLOIST - Gain HEAVY REGEN for 10s and take 50% less damage when absorbing the first HIT while DASHING IN.\n\nBANDLEADER - Take 15% less damage and gain 30% RESISTANCE while Big Band has living allies."
-    },
-    prestigeAbility: {
-      title_en: "EXPLOSIVE BEAT",
-      description_en: "Big Band charges this ability every 10th COMBO HIT that hits him or the opponent.\n\nCHARGE RATE: 15% per 10th COMBO HIT\n\nACTIVATION EFFECT: Big Band's DASH-IN ATTACKS gain a 60% chance to be UNBLOCKABLE and grant ENRAGE for 5 seconds."
-    }
-  },
-  "black-dahlia": {
-    playstyle_en: "Equipped with a multipurpose weapon, Black Dahlia shines in mid-range arena control. Her projectiles (fire, ice, shock, etc.) apply unique penalties, allowing a dynamic style with explosive traps and strong zone control.",
-    biography_en: "Black Dahlia is the assassin and right-hand woman of Lorenzo Medici, boss of the powerful Medici crime syndicate that rules New Meridian from the shadows. A former Anti-Skullgirl Labs agent, Black Dahlia was mortally wounded decades ago in a confrontation with a Skullgirl and rebuilt with experimental cybernetic technology. The experience left her with an insatiable bloodlust and a fascination with the despair and suffering of others.\n\nShe betrayed her colleagues to become a hired assassin for whoever could keep her well-paid (and entertained). After the Medici Tower was destroyed by the Skullgirl, Lorenzo sent Black Dahlia to stop Marie and recover the Life Gem stolen by Ms. Fortune. However, Dahlia finds herself bored with her employer and drawn to the forbidden emotions that only the Skullheart can provide...",
-    birthday_en: "August 18",
-    likes_en: "Rabbits, Ottomo, frogs, boot knives, arsenic, old lace, red velvet petit fours, giant pearls, fake passports, raw gems, \"apple juice\"",
-    dislikes_en: "Tom, Ben Birdland, Vitale, supervision, cheap champagne (gives hiccups), easy prey, unfinished business, snooping children, blue hair, morality, mansplaining",
-    characterAbility: {
-      title_en: "SHARPSHOOTER",
-      description_en: "Tap the SHARPSHOOTER button to fire SHOTS! Tap the RELOAD button to load 6 new SHOTS. When reloading, the third shot's type is determined by Dahlia's ELEMENT, and the sixth is random."
-    },
-    superiorAbility1: {
-      title_en: "MECHANICAL ORIGIN",
-      description_en: "METAL DISCHARGE - SPECIAL SHOTS deal 30% extra damage and ARMOR BREAK for 10s (also applies to blocked hits).\n\nNO TIME TO DIE - When the opponent lands a CRITICAL HIT, 50% chance to gain REGEN and HASTE for 10s each."
-    },
-    prestigeAbility: {
-      title_en: "MORTIS TRIGGER",
-      description_en: "Black Dahlia charges this ability whenever she FIRES a SHOT.\n\nCHARGE RATE: 17% per SHOT fired.\n\nACTIVATION EFFECT: Black Dahlia inflicts DEATH MARK and gains DEADEYE for 15 seconds upon RELOADING."
-    }
-  },
-  "cerebella": {
-    playstyle_en: "Cerebella is an extremely hard-hitting fighter who mixes brute force and aerial grabs. Focused on close-quarters combat, she destabilizes opponents with Vice-Versa's armored rushes and highly punishing combos with high damage.",
-    biography_en: "The biggest star of the Cirque des Cartes, Cerebella is a rolling, flying dynamo of stardom: she is admired throughout the Canopian Kingdom for her enormous strength and alluring curves. Unfortunately, this orphaned acrobat only desires the attention of one man, the mobster Vitale Medici, who adopted her and became the closest thing to a father she has ever known.\n\nDespite having a good heart, Cerebella works as a mafia enforcer when not performing at the circus. Cerebella is the only one capable of controlling her powerful Living Weapon hat, Vice-Versa, so Vitale carefully doses his affections to keep her fighting on his side.",
-    birthday_en: "April 11",
-    likes_en: "Competition, showing off, cats, professional Greco-Roman wrestling, sudoku, flirting, pleasing Vitale, teasing Feng, her roommate",
-    dislikes_en: "People badmouthing the circus, people badmouthing Vitale, angry people, giving up, cockroaches",
-    characterAbility: {
-      title_en: "BALANCING ACT",
-      description_en: "THROW INTERRUPTS leave opponents STAGGERED."
-    },
-    superiorAbility1: {
-      title_en: "CENTER STAGE",
-      description_en: "ADVANTAGE - THROWS reduce 30% of the opponent's BLOCKBUSTER METER.\n\nRINGMASTER - THROWS DISABLE the opponent's ASSISTS and SPECIAL MOVES for 15 seconds."
-    },
-    prestigeAbility: {
-      title_en: "THE BIGGER THEY ARE",
-      description_en: "Cerebella charges this ability whenever she THROWS or is THROWN by the opponent.\n\nCHARGE RATE: 20% per THROW.\n\nACTIVATION EFFECT: Cerebella's THROWS deal extra damage equal to 100% of the opponent's remaining HEALTH percentage."
-    }
-  },
-  "double": {
-    playstyle_en: "Double has the unique ability to transform her shape during combat. With a volatile style and high offensive capacity disguised in the forms of other characters, she is the game's 'wildcard', capitalizing on chaos to surprise opponents.",
-    biography_en: "Double's origins are a complete mystery. With no apparent will or motive of her own, this bizarre monster aids the Skullgirl.\n\nDouble is capable of transforming her grotesque form into that of anyone, but frequently appears as a smiling nun. She often stays at the Grand Cathedral of the Divine Trinity, hearing confessions and tending to the underground catacombs.",
-    birthday_en: "Unknown",
-    likes_en: "Nothing",
-    dislikes_en: "Nothing",
-    characterAbility: {
-      title_en: "TRANSMUTATION",
-      description_en: "After BLOCKING without being hit for 1 second, Double changes to a random element.\n\nWhen at ELEMENTAL ADVANTAGE, Double's damage increases by 10%.\n\nWhen at ELEMENTAL DISADVANTAGE, the opponent's damage decreases by 10%."
-    },
-    superiorAbility1: {
-      title_en: "ENTROPY",
-      description_en: "CHAOS - While at ELEMENTAL ADVANTAGE, inflict a random DEBUFF for 15 seconds when landing a CRITICAL HIT.\n\nVOLATILITY - Receive a random BUFF for 10 seconds every 10 seconds."
-    },
-    prestigeAbility: {
-      title_en: "DOUBLE OR NOTHING",
-      description_en: "Double charges this ability whenever she TRANSMUTES.\n\nCHARGE RATE: 13% per TRANSMUTATION.\n\nACTIVATION EFFECT: Double's ELEMENTAL ADVANTAGE effects increase by 100%."
-    }
-  },
-  "eliza": {
-    playstyle_en: "Eliza and her parasite Sekhmet and her bodyguards. When using a Sekhmet Blockbuster, Sekhmet enters the field being immune to Normal Attacks and Special Moves. She is a Control and Support character being very useful in various situations where the opponent is difficult to deal with.",
-    biography_en: "Eliza is the celebrity diva of New Meridian's newly opened nightclub, Bastet's Den. What the clientele doesn't know, however, is that she is also the host of the skeletal Parasite Sekhmet for countless years. She is widely known for her blood donation charities, which actually serve only to feed Sekhmet and maintain Eliza's eternal beauty. Recently discovered and blackmailed by the Medici family into pursuing the Skullheart, Eliza's ancient ambitions have been ignited once more...",
-    birthday_en: "October 17",
-    bloodType_en: "Any",
-    likes_en: "Beer, kushari, dolmas, Old Fashioned cocktails, board games (especially Senet), soaking baths, dressing up, cats, sunny weather, dancing, singing, attention, blood, conquering, Samson",
-    dislikes_en: "Human arrogance, prejudice against Parasites, commoners, missed opportunities, philanthropy, x-rays, living in small places, Trinityism, historical inaccuracy, sick blood, losing her nose, Samson",
-    characterAbility: {
-      title_en: "WAR GODDESS",
-      description_en: "BLOCKBUSTERS involving Sekhmet now leave Eliza in Sekhmet Mode for a short time. All damage taken in Sekhmet Mode is recoverable."
-    },
-    superiorAbility1: {
-      title_en: "BLOODLINE",
-      description_en: "BLOOD OATH - Whenever an ally is defeated, Eliza recovers 50% HEALTH.\n\nRITUAL SACRIFICE - Whenever an ally is defeated, Eliza gains 100% BLOCKBUSTER METER."
-    },
-    prestigeAbility: {
-      title_en: "FEAST AND FAMINE",
-      description_en: "Eliza charges this ability whenever she enters SEKHMET MODE.\n\nCHARGE RATE: 25% per ENTRY.\n\nACTIVATION EFFECT: Eliza gains a 20% chance on each NON-BLOCKBUSTER HIT in SEKHMET MODE (including blocked hits) to REMOVE 1 BUFF from the opponent and gain 5% HEALTH."
-    }
-  },
-  "filia": {
-    playstyle_en: "Filia is focused on agility and short-range pressure. She can heal herself and cause constant bleeding while inflicting a good amount of damage with her varied combos.",
-    biography_en: "There was a time when Filia was just an ordinary student, but one day she woke up with no memories and a second mouth on the back of her head. She had become the host of a Parasite named Samson, a rebellious demonic hairdo with incredible powers.\n\nWith no memory or anyone to turn to for help, if she ever wants to piece together her past and survive the inevitable clash with the Skullgirl, Filia will have to trust this mysterious being.",
-    birthday_en: "March 18",
-    likes_en: "Eating, coffee, milkshakes, reading and learning, radio dramas, comic books, novels, dogs",
-    dislikes_en: "Samson's bluffs and gambles, seeing innocents harmed, tangled hair, lies, side effects of Samson's parasitism",
-    characterAbility: {
-      title_en: "FLASHBACK",
-      description_en: "Dashing back just before receiving a HIT makes Filia EVADE the opponent's attack, avoiding damage."
-    },
-    superiorAbility1: {
-      title_en: "BLEEDOUT",
-      description_en: "BLOODSUCKER - 35% of damage inflicted by Filia is recovered as HEALTH.\n\nFIRST CUT - Each HIT has a 15% chance to convert all active BLEEDS into permanent."
-    },
-    prestigeAbility: {
-      title_en: "TOP PONY",
-      description_en: "Filia charges this ability whenever she HITS an attacking opponent or is HIT while attacking.\n\nCHARGE RATE: 20% per HIT.\n\nACTIVATION EFFECT: Filia EVADES all projectiles while DASHING IN and has 100% chance to inflict DEATH MARK for 5 seconds when HITTING an attacking opponent."
-    }
-  },
-  "fukua": {
-    playstyle_en: "Despite looking like Filia, Fukua focuses on medium-range, long-range, and high-damage attacks. She has phantom projections that steal her vitality and have various uses. She mixes safe long-range routine attacks with effective close-quarters rushes.",
-    biography_en: "One of Brain Drain's less socially acceptable hobbies is cloning, and he often forces the souls of fallen warriors to inhabit these clones. Fukua is the result of a happy - or unhappy - accident at Lab Zero: a union of two souls. One, of a once-proud warrior, known for brute force in close combat; the other, of a silent assassin, specialized in long-range killing weapons. Together, they are Fukua, possessing the best of both specialties... but relationships formed under intense circumstances generally don't last.",
-    birthday_en: "Unknown",
-    likes_en: "Unknown",
-    dislikes_en: "Unknown",
-    characterAbility: {
-      title_en: "BLOODSHADOW",
-      description_en: "All damage Fukua receives is inflicted as non-permanent SCRATCH damage."
-    },
-    superiorAbility1: {
-      title_en: "FREE ENTITY",
-      description_en: "SPECTRAL MALEVOLENCE - Deal 1% bonus damage for every 5% HEALTH lost.\n\nAPPARITION'S WRATH - Reduce incoming damage by 1% for every 5% HEALTH lost."
-    },
-    prestigeAbility: {
-      title_en: "DREAM EATER",
-      description_en: "Fukua charges this ability whenever she or the opponent uses a BLOCKBUSTER.\n\nCHARGE RATE: 25% per BLOCKBUSTER.\n\nACTIVATION EFFECT: Fukua drains 10% of the opponent's BLOCKBUSTER METER and inflicts HEAL BLOCK for 5 seconds when using a BLOCKBUSTER."
-    }
-  },
-  "marie": {
-    playstyle_en: "Marie uses her skeletons in serial attacks to pressure adversaries along with Hilgard, her main ally. She is a very strong character for maintaining pressure, controlling the field, and can revive allies and prevent opponent resurrection.",
-    biography_en: "Marie Korbel was the most awkward girl at the Hilgard Orphanage, but she was also an enthusiastic self-appointed cleaner until bandits attacked her new family. Desperate, Marie asked the Skullheart for the power to protect those she loved. Her wish was granted, but at a terrible price. Marie awoke as a twisted creature of destruction: the Skullgirl. With her friends dead and her home destroyed, Marie had nothing left but vengeance. Her fierce determination allowed her to focus her murderous fury on the Medici Mafia, but all the while the Skullheart pressured her to commit more egregious acts of destruction.\n\nBut the impossible happened. The Skullheart was destroyed and Marie herself was spared. She is now a Skullgirl without limitations, free from the diabolical plans of the Skullheart's hidden masters. Marie doesn't know what to do with her new reality, but one thing is certain: she swore to be the last Skullgirl.",
-    birthday_en: "April 3",
-    bloodType_en: "SG (formerly O)",
-    likes_en: "Organization, Protecting the Innocent, Cherished Memories, Apples, Jellies and Gelatin, Books, Patricia, the Hilgard Orphanage, Rommelgrad, Justice",
-    dislikes_en: "The Medicis, War, Weapons, Criminals, Rats, The Anti-Skullgirl Project, the Skullheart, Powerlessness, Suspicious Nun, Fragile Vessels",
-    characterAbility: {
-      title_en: "REST AND RESURRECTION",
-      description_en: "Hold the REST AND RESURRECTION button to charge a MORTUARY CHARGE. When charged, tap the button to REVIVE nearby defeated allies and INCINERATE nearby opponent corpses!"
-    },
-    superiorAbility1: {
-      title_en: "CADAVER ARTISAN",
-      description_en: "ENHANCED INCINERATION - Gain 25% BLOCKBUSTER METER and ENRAGE when INCINERATING a corpse.\n\nREINFORCED RESURRECTION - While Marie is alive, allies gain permanent ARMOR and 25% additional HEALTH when REVIVED."
-    },
-    prestigeAbility: {
-      title_en: "GRAVE CALLING",
-      description_en: "Marie charges this ability whenever a BUFF or DEBUFF expires on any fighter while she is ON BENCH.\n\nCHARGE RATE: 14% per expired BUFF or DEBUFF.\n\nACTIVATION EFFECT: Marie inflicts QUIETUS for 15 seconds whenever she uses a MORTUARY CHARGE."
-    }
-  },
-  "ms-fortune": {
-    playstyle_en: "Ms. Fortune gains unparalleled area control by using her detachable head as an on-screen assist. If she prefers to remain whole, she attacks avidly with extremely fast punishing combos based on short-range rushes and high damage.",
-    biography_en: "A feral half-cat, Nadia Fortune is the last living member of the Fishbone Gang, a notorious band of Dagonian thieves (with the exception of herself). Their final mission ended in tragedy: a failed attempt to steal the mysterious Life Gem from Lorenzo Medici culminated in their horrible deaths. Before joining them, Ms. Fortune swallowed the Life Gem and managed to digest it.\n\nThe Gem's power permeated her entire body, making her unable to die... even after being cut into several pieces. Currently, Ms. Fortune hides in the shadows of Little Innsmouth and plots to avenge her fallen comrades.",
-    birthday_en: "November 24",
-    likes_en: "Making friends, napping in the sun, volleyball, bowling, golf, parkour, tormenting others with horrible puns, Yu-Wan's restaurant, Dim Sum, the Fishbone Gang, stealing from the rich, giving to the poor, potato chips",
-    dislikes_en: "The Medici Mafia, Black Dahlia, sushi, cops, bullies, marsupials, loud noises, lemonade",
-    characterAbility: {
-      title_en: "MIND GAMES",
-      description_en: "Tap the MIND GAMES button to enter HEADLESS MODE. Ms. Fortune's head can attack independently of her body. But beware: Ms. Fortune also takes additional damage to her head!"
-    },
-    superiorAbility1: {
-      title_en: "GOT A BUFF?",
-      description_en: "BARF - Gain REGEN for 20 seconds after each 10 seconds without taking a hit (includes blocked hits).\n\nBLEGH - Gain ENRAGE for 20 seconds after each 10 seconds without taking a hit (includes blocked hits)."
-    },
-    prestigeAbility: {
-      title_en: "FURRY BLUR",
-      description_en: "Ms. Fortune charges this ability based on her MOVEMENT SPEED.\n\nCHARGE RATE: 1.5% of her MOVEMENT SPEED.\n\nACTIVATION EFFECT: Ms. Fortune gains EVASION and inflicts GUARD BREAK every 5 seconds for 5 seconds."
-    }
-  },
-  "painwheel": {
-    playstyle_en: "Painwheel has devastating charged attacks executed through the blade on her back. Focusing on her means dealing with her reflective damage and lethal counter-attacks where opponents hurt themselves and receive massive damage back; she is a character with low health but very high damage.",
-    biography_en: "Once a normal student named Carol, Painwheel was kidnapped by Valentine and delivered to the discreet Lab Zero within the Anti-Skullgirl Labs. There, she received the implant of a synthetic Buer Motor and Gae Bolga parasites, as well as an experimental Skullgirl blood transfusion, which transformed her into the monster she is today. Violent and unstable due to these experiments, she is mentally controlled by the powerful psychic director of Lab Zero, Brain Drain, as a precaution.\n\nFueled by fury, she transforms her pain and hatred into power. Despite this, the soul of that frightened little girl still lives within this monstrous body, desperately fighting against the multitude of voices that want to control her.",
-    birthday_en: "October 23",
-    likes_en: "Flowers, gardening, beach walks at sunset, family, the sound of a wind chime, dogs, nostalgic memories, friends, magenta, good manners",
-    dislikes_en: "ASG Lab, Valentine, Brain Drain, the Skullgirl, the Skullheart, people, her body, mind control, torture, pain, frustration, gossip, styrofoam sounds, loud noises, bad puns",
-    characterAbility: {
-      title_en: "FLIGHT RISK",
-      description_en: "Tap the FLIGHT RISK button to float! Tap again to land. While airborne, swipe and tap to gain access to new actions."
-    },
-    superiorAbility1: {
-      title_en: "TORMENTED SOUL",
-      description_en: "BLOODIED - When the opponent lands a CRITICAL HIT, 100% of the damage is reflected back.\n\nGRUDGE - When the opponent lands a CRITICAL HIT, gain ENRAGE for 20 seconds and ARMOR for 5 seconds."
-    },
-    prestigeAbility: {
-      title_en: "NOWHERE TO HIDE",
-      description_en: "Painwheel charges this ability whenever she or her opponent lands a CRITICAL HIT.\n\nCHARGE RATE: 4% per CRITICAL HIT.\n\nACTIVATION EFFECT: Painwheel inflicts GUARD BREAK for 10 seconds when using a BLOCKBUSTER."
-    }
-  },
-  "parasoul": {
-    playstyle_en: "Parasoul uses the explosive tears of her Living Umbrella as traps to manage the field and amplify her damage. She combines sharp close-quarters skills with absolute screen control through her allied troops intervening, allowing her to extend combos with deadly precision attacks, whether at long or short range.",
-    biography_en: "Few know the terrors of the Skullgirl as intimately as Parasoul: seven years ago, her own mother became the Skullgirl that nearly destroyed the world. This tragic past made her want to protect both her country and her family tooth and nail, but these two priorities frequently come into conflict.\n\nToday, Parasoul is the princess of the Canopian Kingdom and leader of the elite military squadron Black Egrets. Wielding Krieg, the living umbrella, she fights with grace, posture, and cunning to defend her family's honor and to destroy the Skullheart so no one repeats her mother's terrible mistake.",
-    birthday_en: "December 22",
-    likes_en: "Logic, wine, chess, fencing, training, tennis, diplomacy, philosophy, the Black Egrets, secretly watching \"Annie: Girl of the Stars\", her sister Umbrella",
-    dislikes_en: "Overly emotional people, depending on others, people badmouthing her family, injustice, the Medici Mafia, the Skullgirl, her sister's antics",
-    characterAbility: {
-      title_en: "TEARFUL",
-      description_en: "Certain attacks generate a TEAR. A CHARGE ATTACK detonates all active TEARS, dealing damage to opponents hit by the explosion."
-    },
-    superiorAbility1: {
-      title_en: "HYPERCRITICAL",
-      description_en: "CRITICAL THINKING - Parasoul gains a 25% CRITICAL HIT CHANCE bonus for each ACTIVE TEAR.\n\nCRITICAL MASS - Parasoul gains a 20% CRITICAL DAMAGE bonus for each ACTIVE TEAR."
-    },
-    prestigeAbility: {
-      title_en: "DEADLY ACCURACY",
-      description_en: "Parasoul charges this ability whenever a TEAR appears.\n\nCHARGE RATE: 12% per TEAR.\n\nACTIVATION EFFECT: Parasoul gains PRECISION every 2 second(s) while near a TEAR."
-    }
-  },
-  "peacock": {
-    playstyle_en: "Peacock is a very strong character for long-range field control, she can be very unpredictable and has a good arsenal. She has a strong field presence due to her ease in breaking defenses, applying combos, and pressuring safely.",
-    biography_en: "Once a war orphan and slave named Patricia, Peacock's body was horribly mutilated by the slave merchants who captured her. She was saved by the Anti-Skullgirl Labs' Dr. Avian and rebuilt with a surreal arsenal of biomechanical weapons: the Argus System enhanced her body and the Avery Unit gave her access to never-conceived weapons.\n\nHowever, nothing could be done for her mind: Peacock's destroyed psyche and her love for cartoons transformed her new \"toys\" into a frightening gang of thugs, whom she has no problem ordering to paint the town red... with blood. As frightening as she is, she may be the kingdom's best choice to face the Skullgirl.",
-    birthday_en: "November 13",
-    likes_en: "Cartoons, the TV show \"Annie: Girl of the Stars\", movies, violence, junk food, fast cars, explosives, cigars, bossing around",
-    dislikes_en: "Weaklings, bureaucracy, authority figures, people, the Skullheart, nerds, salad, chopsticks",
-    characterAbility: {
-      title_en: "DEEP POCKET",
-      description_en: "Tap the DEEP POCKET button to disappear into a hole, avoiding some attacks. Tap elsewhere to emerge attacking, or tap again or wait 2 seconds to exit without attacking."
-    },
-    superiorAbility1: {
-      title_en: "CARTOON MARATHON",
-      description_en: "SPECIAL EPISODE - When Peacock uses a SPECIAL MOVE, there is a 30% chance to immediately reset the COOLDOWN.\n\nCAST PARTY - When Peacock or an ally use an ASSIST ATTACK there is a 50% chance the attack is UNBLOCKABLE."
-    },
-    prestigeAbility: {
-      title_en: "MANIACAL MUNITIONS",
-      description_en: "Peacock charges this ability whenever she or the opponent takes damage from a PROJECTILE.\n\nCHARGE RATE: 3% per PROJECTILE.\n\nACTIVATION EFFECT: Peacock has a 50% chance to gain 1 stack of ENRAGE for 5 seconds, HASTE for 5 seconds, or PRECISION when using a SPECIAL MOVE."
-    }
-  },
-  "robo-fortune": {
-    playstyle_en: "With powerful laser beams, Robo-Fortune is a long-range specialist, using combos that punish opponents from afar and from the air. Besides having a robust arsenal for combos and attacks at different ranges, she has good abilities and is difficult to punish, making her a persistent threat.",
-    biography_en: "Robo-Fortune was created by Brain Drain, the psychic director of ASG Lab Zero, and serves as a demonstration of her maniacal creator's unmatched hubris and pride. Built to demonstrate loyalty and cunning, Robo-Fortune fails to exhibit any measure of either. Making use of cutting-edge technology, she sets out to hunt the Skullgirl and take part in easily avoidable conflicts.\n\nIs the ASG Project's newest creation the supreme cybernetic soldier? Have Brain Drain's mechanical machinations put the world on a dangerous path? Is Robo-Fortune's shoddy programming a feature, not a bug? Has science gone too far?!",
-    birthday_en: "January 31",
-    bloodType_en: "Synthetic Oil 10W-30",
-    likes_en: "Baits, integers less than or equal to 1, books about dragons, logic gates, 0x5f3759df, unrolled string loops, mice, rebeccapurple, IEEE (except after C!), setplay",
-    dislikes_en: "Disorder, incompatible file formats, DES, unsalted passwords (they taste like nothing!), bleeding hearts, poorly-written tongues, iv, fonts that make O and 0 look alike, commentless check-ins, Moire patterns",
-    characterAbility: {
-      title_en: "HEADBANGER HARDWARE",
-      description_en: "Tap the LAUNCH button to launch the HEADBANGERS. Use the HEADBANGERS to attack enemies, place proximity mines, and fire a missile barrage!"
-    },
-    superiorAbility1: {
-      title_en: "NETWORK PROTOCOL",
-      description_en: "DDOS - Inflict POWER SURGE for 15 seconds after each 3 seconds while near the opponent.\n\nPING CHECK - Gain ENRAGE for 15 seconds after each 2 seconds while far from the opponent."
-    },
-    prestigeAbility: {
-      title_en: "GEIGER COUNTER",
-      description_en: "Robo-Fortune charges this ability whenever she gains a BUFF or inflicts a DEBUFF.\n\nCHARGE RATE: 7% per BUFF or DEBUFF.\n\nACTIVATION EFFECT: Robo-Fortune gains 5 stacks of PRECISION and reflects 20% of damage taken for each BUFF she or the opponent has (max 100%)."
-    }
-  },
-  "squigly": {
-    playstyle_en: "Squigly needs to patiently charge her abilities through Leviathan, her companion who helps improve the effectiveness of moves and enhances the damage flow to perform better in different situations; a very versatile and fun character for effective combos.",
-    biography_en: "Squigly is the last \"survivor\" of the Contiello family, a long lineage of opera singers, and is among the Medicis' most valued clients. Fourteen years ago, Squigly's mother, Selene, obtained the Skullheart, which led Lorenzo Medici to order an attack on the Contiello family. Desperate, Selene became the Skullgirl and resurrected her family as an army of undead. What saved Squigly from losing her free will was the intervention of the Parasite Leviathan, friend and guardian of the Contiello family.\n\nIf not for Squigly and the ASG's intervention, the battle between the Skullgirl and Lorenzo would have spread across New Meridian. With the Skullgirl's defeat, the power that animated Squigly weakened, putting her to sleep. Lorenzo paid generously for the Contiello family's funeral and has had no further conflicts with the Medicis' other clients since.\n\nFourteen years later, the appearance of Bloody Marie woke Squigly from her long slumber...",
-    birthday_en: "November 2",
-    bloodType_en: "Embalmed (formerly A-)",
-    likes_en: "Leviathan, her family, tradition, reading about current events, animals (especially birds and snakes), music, singing, pasta, vanilla soda, cake, burgers, gardening, the smell of incense, bubble baths, not being dead",
-    dislikes_en: "The Medici family, Black Dahlia, Double, the Skullheart, rude people, dishonesty, those who don't take karaoke seriously, thunderstorms, being dead",
-    characterAbility: {
-      title_en: "DRAGON'S TAIL",
-      description_en: "Holding the DRAGON'S TAIL button stores up to 2 DRAGON CHARGES. DRAGON CHARGES are consumed to make certain attacks more powerful!"
-    },
-    superiorAbility1: {
-      title_en: "FRIGHT NIGHT",
-      description_en: "EVIL DEAD - While enemies are near Squigly's body, allies' HITS inflict CURSE and WITHER for 15 seconds.\n\nUNDEAD - While allies are near Squigly's body, taking a HIT grants them FINAL STAND for 15 seconds."
-    },
-    prestigeAbility: {
-      title_en: "DON'T LEAVE THE TOMB",
-      description_en: "Squigly charges this ability whenever she gains or uses a DRAGON CHARGE.\n\nCHARGE RATE: 12% per DRAGON CHARGE gained or used.\n\nACTIVATION EFFECT: Any currently defeated opponents can no longer be revived, and Squigly gains a DRAGON CHARGE every 2 seconds while near a corpse."
-    }
-  },
-  "umbrella": {
-    playstyle_en: "Umbrella's gameplay revolves around Hungern's (Umbrella) hunger meter. With a full meter (stuffed), the character becomes slow, deals more damage, and facilitates some interactions. Half meter (satiated) is her normal stage. Empty meter (hungry) she becomes faster, but her damage decreases.",
-    biography_en: "Umbrella is the youngest princess of the Canopian Kingdom and is rarely seen outside the halls of the royal palace in Canopolis. She grew up isolated, and her only true friend is a family heirloom: the Living Weapon Hungern. Together, they face evil and enter the fray in the name of justice, just like Umbrella's older sister: Parasoul! Or at least that's what they would do if they could leave the palace!\n\nThe emergence of a new Skullgirl might provide Umbrella with the adventure she wants. But when she discovers the truth about herself and her family, will she wish she had stayed home?",
-    birthday_en: "July 17",
-    likes_en: "Her sister Parasoul (most of the time), Hungern, ice cream, drawing, TV, amphibians, B-horror movies, rainy days, professional wrestling, justice!, Hungern origami",
-    dislikes_en: "Her sister Parasoul (the rest of the time), homeschool, Annie of the Stars TV show, stuffy fancy dresses, foie gras, getting caught, Operation B.A.B.A.S. Egrets, the princess wave, scraped knees, crying over spilled milk",
-    characterAbility: {
-      title_en: "HUNGERN'S HUNGER",
-      description_en: "Unlocks Hungern's Hunger Meter. THROWS fill the meter and BUBBLE-based moves (including tapping the meter button) empty it. Basic attacks deal more damage while STUFFED and are faster while HUNGRY. Certain moves are empowered by Hungern's state!"
-    },
-    superiorAbility1: {
-      title_en: "JAWS OF DEFEAT",
-      description_en: "SWEET VICTORY - Gain 2 stacks of ENRAGE for 15 seconds when defeating an opponent.\n\nBITTER END - Once per fight, gain FINAL STAND and HEAVY REGEN for 15 seconds each when below 25% HEALTH."
-    },
-    prestigeAbility: {
-      title_en: "VISCERAL REACTION",
-      description_en: "Umbrella charges this ability whenever she gains or loses HUNGER.\n\nCHARGE RATE: 1% per 1% HUNGER gained or lost.\n\nACTIVATION EFFECT: Umbrella gains 5% HEALTH and inflicts OOZE for 15 seconds when HITTING an attacking opponent."
-    }
-  },
-  "valentine": {
-    playstyle_en: "The ninja nurse mixes medical tools to poison opponents or revive defeated allies. A very useful support character, she has reasonable damage, with effective moves to inflict effects, simple combos and more. Her main role is to heal, revive allies, and incapacitate opponents when needed.",
-    biography_en: "Valentine is the sole survivor of Last Hope, a group of special agents from the Anti-Skullgirl Labs. Before being wiped out by the Skullgirl, Last Hope worked for the mysterious Lab Zero and performed tasks ranging from reconnaissance and sabotage to advanced research.\n\nNow, Valentine faithfully serves the Skullgirl, carrying out her will from the shadows. She is quite introverted, so much of her true nature and personality is unknown.",
-    birthday_en: "December 25",
-    likes_en: "Alcohol, the scientific method, studying things from afar, snakes, wolves, classical music, punctuality, careful planning, disassembling things, news and non-fiction writing, mind games, chess, acoustic guitar, meat, Eastern culture, dark chocolate",
-    dislikes_en: "Unnecessary formality, sentimentality, weak people, cooking, talking to the sick, Brain Drain, back pain, sweets",
-    characterAbility: {
-      title_en: "SYPHON",
-      description_en: "More of the damage Valentine receives is inflicted as non-permanent SCRATCH damage. 75% of Valentine's damage is recovered as HEALTH, but only up to the limit of her current SCRATCH DAMAGE."
-    },
-    superiorAbility1: {
-      title_en: "COMBAT CLINIC",
-      description_en: "TRAUMA CENTER - While Valentine is alive, allies gain FINAL STAND for 15s when taking a HIT that removes more than 10% HEALTH.\n\nICU - Valentine gains HEAVY REGEN for 20 seconds upon receiving a DEBUFF."
-    },
-    prestigeAbility: {
-      title_en: "REANIMATOR",
-      description_en: "Valentine charges this ability whenever she recovers HEALTH upon TAGGING IN.\n\nCHARGE RATE: 4% per 1% HEALTH recovered.\n\nACTIVATION EFFECT: All defeated allies are REVIVED with 10% HEALTH, and Valentine continuously gains 2% HEALTH per second."
-    }
-  }
 };
 
 /**

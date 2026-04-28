@@ -147,7 +147,8 @@ export function createFilterBar() {
                     </button>
                 </div>
 
-                <div class="vertical-separator"></div>
+                <div class="vertical-separator hide-on-mobile"></div>
+                <div class="horizontal-divider-mobile"></div>
 
                 <!-- Sort Section -->
                 <div class="filter-section center" style="margin: 0 auto; display: flex; align-items: center; gap: 12px;">
@@ -163,7 +164,8 @@ export function createFilterBar() {
                     </div>
                 </div>
 
-                <div class="vertical-separator"></div>
+                <div class="vertical-separator hide-on-mobile"></div>
+                <div class="horizontal-divider-mobile"></div>
 
                 <div class="filter-section right">
                     <!-- Advanced Filters Dropdown -->
@@ -183,15 +185,15 @@ export function createFilterBar() {
                             </div>
                             <div class="adv-filter-group">
                                 <span class="adv-filter-label">${t('filter.category')}</span>
-                                <div class="sort-group">
+                                <div class="sort-group grid-2x2">
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">
                                         <img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> ${getLocalizedClassName('Ofensivo').toUpperCase()}
                                     </button>
-                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> ${getLocalizedClassName('Defensivo').toUpperCase()}
-                                    </button>
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')">
                                         <img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> ${t('filter.supportShort').toUpperCase()}
+                                    </button>
+                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">
+                                        <img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> ${getLocalizedClassName('Defensivo').toUpperCase()}
                                     </button>
                                     <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')">
                                         <img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> ${getLocalizedClassName('Coringa').toUpperCase()}

@@ -63,13 +63,11 @@ export function render(charKey, initialTab = 'builds') {
         `;
     }
 
-    const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
-    const charIcon = CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp';
     const state = getState();
     const currentTab = state.currentTab || initialTab;
 
     return `
-        <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
+        <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charData.element]}" data-current-tab="${currentTab}">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
@@ -80,20 +78,20 @@ export function render(charKey, initialTab = 'builds') {
                     </div>
                     
                     <div class="char-title-row centered-title">
-                        <img loading="lazy" src="${charIcon}" alt="${getLocalizedNameSync(charKey, charData.character)}" class="char-select-icon"
+                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${getLocalizedNameSync(charData.character)}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'">
-                        <h2>${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
+                        <h2>${getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)}</h2>
                     </div>
                     
                     <div class="header-right">
-                        ${createSearchBar()}
+                        ${currentTab !== 'tier' ? createSearchBar() : ''}
                     </div>
                 </div>
                 
                 <div class="header-middle-row">
-                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charKey, charData.character)}">
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charData.character)}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
-                        <span>${t('detail.profileOf')} ${getLocalizedNameSync(charKey, charData.character)}</span>
+                        <span>${t('detail.profileOf')} ${getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)}</span>
                     </button>
                 </div>
                 
@@ -149,7 +147,7 @@ function renderTodosPage(initialTab = 'builds') {
                     </div>
                     
                     <div class="header-right">
-                        ${createSearchBar()}
+                        ${currentTab !== 'tier' ? createSearchBar() : ''}
                     </div>
                 </div>
                 

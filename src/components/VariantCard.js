@@ -87,13 +87,17 @@ export function createVariantCard(variant, charKey, index = 0) {
 
     // Check if variant is exclusive
     const exclusiveData = getExclusiveData(variant.name);
-    const exclusiveBadgeHTML = exclusiveData ? `
-        <div class="exclusive-badge ${isNew ? 'shifted' : ''}" onclick="this.classList.toggle('expanded')">
+        <div class="exclusive-badge ${isNew ? 'shifted' : ''}" onclick="document.getElementById('${exclusiveOverlayId}').classList.add('active')">
             <img loading="lazy" src="${exclusiveData.icon}" alt="${t('variant.exclusive')}" class="exclusive-icon"
                  onerror="this.style.display='none'">
-            <div class="exclusive-text-group">
-                <span class="exclusive-label">${t('variant.exclusive')}</span>
-                <span class="exclusive-source">${exclusiveData.source}</span>
+        </div>
+        <div class="exclusive-overlay" id="${exclusiveOverlayId}" onclick="this.classList.remove('active')">
+            <div class="exclusive-overlay-content" onclick="event.stopPropagation()">
+                <img loading="lazy" src="${exclusiveData.icon}" alt="${t('variant.exclusive')}" class="exclusive-overlay-icon"
+                     onerror="this.style.display='none'">
+                <span class="exclusive-overlay-label">${t('variant.exclusive')}</span>
+                <span class="exclusive-overlay-source">${exclusiveData.source}</span>
+                <button class="exclusive-overlay-close" onclick="document.getElementById('${exclusiveOverlayId}').classList.remove('active')">✕</button>
             </div>
         </div>
     ` : '';

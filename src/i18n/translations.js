@@ -245,7 +245,7 @@ export const translations = {
       sortBy: 'Ordenar por',
       rarity: 'Raridade',
       element: 'Elemento',
-      profileOf: 'ficha',
+      profileOf: 'Ficha de',
       aboutChar: 'Sobre',
       noVariantsFilters: 'Nenhuma variante encontrada com estes filtros.',
       allVariants: 'TODAS AS VARIANTES'
@@ -647,7 +647,7 @@ export const translations = {
       sortBy: 'Sort by',
       rarity: 'Rarity',
       element: 'Element',
-      profileOf: 'Sheet',
+      profileOf: 'Profile of',
       aboutChar: 'About',
       noVariantsFilters: 'No variants found with these filters.',
       allVariants: 'ALL VARIANTS'

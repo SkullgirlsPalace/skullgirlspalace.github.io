@@ -145,7 +145,21 @@
 
     /* Detail header */
     .char-title-centered h2 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+    }
+    
+    .char-title-row h2 {
+        font-size: 1.6rem;
+    }
+
+    .char-info-btn-centered {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+    
+    .char-info-icon-centered {
+        width: 20px;
+        height: 20px;
     }
 
     .char-title-centered .char-mastery-icon {
@@ -169,8 +183,8 @@
     .filter-bar {
         flex-direction: row;
         flex-wrap: wrap;
-        padding: 8px 12px;
-        gap: 8px 16px;
+        padding: 6px 10px;
+        gap: 6px 8px;
         align-items: center;
         justify-content: center;
     }
@@ -189,8 +203,9 @@
 
     .filter-bar > .vertical-separator {
         display: block !important;
-        height: 32px;
+        height: 38px;
         margin: 0 4px;
+        align-self: center;
     }
 
     .filter-content > .vertical-separator {
@@ -199,12 +214,13 @@
 
     .rarity-grid + .vertical-separator {
         display: block !important;
-        height: 32px;
+        height: 38px;
         margin: 0 4px;
+        align-self: center;
     }
 
     .filter-toggle-btn {
-        padding: 6px 8px;
+        padding: 5px 7px;
         min-width: auto;
         font-size: 0;
     }
@@ -214,12 +230,12 @@
     }
 
     .filter-toggle-btn img {
-        height: 22px;
+        height: 18px;
         margin: 0;
     }
 
     .filter-grid {
-        gap: 4px;
+        gap: 3px;
     }
 
     .rarity-grid {
@@ -229,8 +245,13 @@
     }
 
     .filter-btn {
-        width: 32px;
-        height: 32px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .filter-btn img {
+        width: 20px;
+        height: 20px;
     }
 
     .filter-section.right {
@@ -239,19 +260,101 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        margin-top: 6px;
-        padding-top: 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 4px;
+        padding-top: 2px;
+        border-top: none;
+    }
+
+    .horizontal-divider-mobile {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        margin: 6px 0;
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .sort-header {
+        font-size: 0.7rem;
+        gap: 4px;
+        margin-right: 4px;
+    }
+
+    .sort-header img {
+        height: 14px;
     }
 
     .sort-group {
         justify-content: center;
-        gap: 6px;
+        gap: 4px;
     }
 
     .sort-btn {
-        padding: 6px 10px;
-        font-size: 0.75rem;
+        padding: 4px 8px;
+        font-size: 0.65rem;
+    }
+
+    /* Fix vertical separator height between rarity and element grids */
+    .filter-bar > .vertical-separator,
+    .rarity-grid + .vertical-separator {
+        min-height: 28px;
+        align-self: stretch;
+    }
+
+    /* Add spacing between filter icons row and sort section */
+    .filter-section.right {
+        margin-top: 6px;
+        padding-top: 8px;
+    }
+
+    /* Advanced filters sub-menu positioning on mobile */
+    .advanced-filters-content {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        max-width: 92vw;
+        width: max-content;
+    }
+
+    .advanced-filters-dropdown.active .advanced-filters-content {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    /* Exclusive badge on mobile - icon only, opens overlay */
+    .exclusive-badge {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        max-width: 52px;
+        padding: 4px 8px;
+        z-index: 15;
+        cursor: pointer;
+    }
+
+    .exclusive-badge.shifted {
+        right: 60px;
+    }
+
+    .exclusive-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    /* Variant name centering on mobile */
+    .variant-header h3 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .variant-char-subtitle {
+        text-align: center;
+    }
+
+    .variant-classes-display {
+        justify-content: center;
     }
 
     .variant-card {
@@ -265,6 +368,10 @@
     }
 
     .variant-info {
+        align-items: center;
+    }
+
+    .variant-header {
         align-items: center;
     }
 
@@ -674,10 +781,23 @@
     /* Character nav dropdown on mobile */
     .character-nav {
         width: 100%;
+        max-width: 220px;
     }
 
     .char-dropdown {
         min-width: 100%;
+        max-width: 220px;
+    }
+
+    .char-dropdown-btn {
+        font-size: 0.82rem;
+        height: 38px;
+        padding: 0 10px;
+    }
+
+    .char-dropdown-item {
+        padding: 10px 12px;
+        font-size: 0.85rem;
     }
 
     /* Back arrow for character detail header */
@@ -836,6 +956,52 @@
     .class-filter-btn {
         padding: 5px 8px;
         font-size: 0.65rem;
+    }
+
+    /* Advanced filters mobile - bigger element/category buttons */
+    .advanced-filters-content .filter-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .advanced-filters-content .class-filter-btn {
+        padding: 10px 14px;
+        font-size: 0.78rem;
+    }
+
+    /* Fix effects grid overlap on mobile */
+    .advanced-filters-content .effects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+        gap: 8px;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+
+    .advanced-filters-content .effect-btn {
+        min-width: 72px;
+        padding: 6px 4px 5px;
+    }
+
+    .advanced-filters-content .effect-btn img {
+        width: 24px;
+        height: 28px;
+    }
+
+    .advanced-filters-content .effect-label {
+        font-size: 0.62rem;
+        max-width: 100%;
+        word-break: break-word;
+    }
+
+    /* Advanced filters content full width on mobile */
+    .advanced-filters-content {
+        width: 92vw;
+        max-width: 92vw;
+        padding: 12px;
+    }
+
+    .advanced-filters-content .adv-filter-group {
+        width: 100%;
     }
 
     /* Character subtitle (todos mode) on mobile */
