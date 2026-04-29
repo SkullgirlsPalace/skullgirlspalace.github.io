@@ -49,8 +49,8 @@ export function createFilterBar() {
     const buffs = [];
     const debuffs = [];
     for (const [key, data] of Object.entries(EFFECT_DATA)) {
-        if (data.icon && (data.type === 'buff' || data.type === 'buff-term')) buffs.push({key, ...data});
-        if (data.icon && (data.type === 'debuff' || data.type === 'debuff-term')) debuffs.push({key, ...data});
+        if (data.icon && (data.type === 'buff' || data.type === 'buff-term')) buffs.push({ key, ...data });
+        if (data.icon && (data.type === 'debuff' || data.type === 'debuff-term')) debuffs.push({ key, ...data });
     }
 
     const createEffectGrid = (effects, isBuff) => {
@@ -244,9 +244,9 @@ export function createFilterBar() {
  * Update filter UI to reflect current state
  */
 export function updateFilterUI() {
-  const state = getState();
-  const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
-  const { filters, sort } = state.tabState[tab];
+    const state = getState();
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    const { filters, sort } = state.tabState[tab];
 
     // Update Rarity Buttons
     document.querySelectorAll('.rarity-btn').forEach(btn => {
@@ -348,11 +348,11 @@ export function updateFilterUI() {
  * @param {string} currentTab - Current tab ('builds' or 'tier')
  */
 export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
-  const dropdownContent = document.getElementById('char-dropdown-content');
-  const currentLabel = document.getElementById('current-char-label');
-  const characters = getCharacters();
+    const dropdownContent = document.getElementById('char-dropdown-content');
+    const currentLabel = document.getElementById('current-char-label');
+    const characters = getCharacters();
 
-  if (!dropdownContent || !characters) return;
+    if (!dropdownContent || !characters) return;
 
     // Update the button label with the current character
     if (currentCharKey === 'todos') {
@@ -370,10 +370,10 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         }
     }
 
-  // Populate the dropdown list
-  const sortedCharKeys = Object.keys(characters).sort((a, b) => {
-    return characters[a].character.localeCompare(characters[b].character);
-  });
+    // Populate the dropdown list
+    const sortedCharKeys = Object.keys(characters).sort((a, b) => {
+        return characters[a].character.localeCompare(characters[b].character);
+    });
 
     // Add "Todos" option first if not in Tier List tab
     let dropdownHTML = '';
@@ -469,7 +469,7 @@ function performSearch(query) {
         for (const variant of variants) {
             const normalizedName = normalizeText(variant.name);
             const normalizedChar = normalizeText(charData.character);
-            
+
             // Search by variant name or character name
             if (normalizedName.includes(normalizedQuery) || normalizedChar.includes(normalizedQuery)) {
                 results.push({
@@ -557,7 +557,7 @@ export function handleSearchResultClick(charKey, variantName) {
     // Navigate to the character
     if (window.openCharacterDetails) {
         window.openCharacterDetails(charKey, 'builds');
-        
+
         // After navigation, scroll to the specific variant card
         if (variantName) {
             setTimeout(() => {
@@ -616,26 +616,26 @@ export function handleFilterClick(type, value) {
 }
 
 export function handleSortClick(sortType) {
-  toggleSort(sortType);
-  updateFilterUI();
-  if (window.onFiltersChanged) {
-    window.onFiltersChanged();
-  }
+    toggleSort(sortType);
+    updateFilterUI();
+    if (window.onFiltersChanged) {
+        window.onFiltersChanged();
+    }
 }
 
 export function handleClearFilters() {
-  clearFilters();
-  updateFilterUI();
-  if (window.onFiltersChanged) {
-    window.onFiltersChanged();
-  }
+    clearFilters();
+    updateFilterUI();
+    if (window.onFiltersChanged) {
+        window.onFiltersChanged();
+    }
 }
 
 export function handleMainFilterAction() {
     const state = getState();
     const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
     const { filters, sort } = state.tabState[tab];
-    
+
     const defaultSortType = tab === 'tier' ? 'class' : 'score';
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
@@ -653,33 +653,33 @@ export function handleMainFilterAction() {
 }
 
 export function handleToggleFilter() {
-  const filterContent = document.getElementById('filter-content');
-  const filterBtn = document.getElementById('main-filter-btn');
-  const filterBar = document.querySelector('.filter-bar');
+    const filterContent = document.getElementById('filter-content');
+    const filterBtn = document.getElementById('main-filter-btn');
+    const filterBar = document.querySelector('.filter-bar');
 
-  if (filterContent) {
-    filterContent.classList.toggle('active');
-    filterBtn?.classList.toggle('active');
-    filterBar?.classList.toggle('active');
-  }
+    if (filterContent) {
+        filterContent.classList.toggle('active');
+        filterBtn?.classList.toggle('active');
+        filterBar?.classList.toggle('active');
+    }
 }
 
 export function handleToggleCharDropdown() {
-  const dropdown = document.getElementById('char-dropdown');
-  const content = document.getElementById('char-dropdown-content');
-  if (dropdown && content) {
-    dropdown.classList.toggle('active');
-    content.classList.toggle('active');
+    const dropdown = document.getElementById('char-dropdown');
+    const content = document.getElementById('char-dropdown-content');
+    if (dropdown && content) {
+        dropdown.classList.toggle('active');
+        content.classList.toggle('active');
 
-    if (content.classList.contains('active')) {
-      const activeItem = content.querySelector('.char-dropdown-item.active');
-      if (activeItem) {
-        setTimeout(() => {
-          activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        }, 50);
-      }
+        if (content.classList.contains('active')) {
+            const activeItem = content.querySelector('.char-dropdown-item.active');
+            if (activeItem) {
+                setTimeout(() => {
+                    activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                }, 50);
+            }
+        }
     }
-  }
 }
 
 export function handleToggleAdvancedFilters() {

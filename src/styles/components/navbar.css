@@ -19,6 +19,13 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        background: rgba(15, 15, 22, 1); /* Solid background on mobile */
+        backdrop-filter: none;
+    }
+}
+
 .navbar.hidden-nav {
     transform: translateY(-100%);
     opacity: 0;
@@ -94,6 +101,26 @@
 .nav-links li a.active {
     color: var(--accent-gold);
     background: rgba(212, 168, 75, 0.1);
+}
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.active {
+    display: block;
+    opacity: 1;
 }
 
 .hamburger {

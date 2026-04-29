@@ -43,7 +43,8 @@
 /* ========== SEARCH BAR ========== */
 .search-bar-container {
     position: relative;
-    width: 280px; /* Reference: Encantadora de Serpentes + space */
+    width: 280px;
+    /* Reference: Encantadora de Serpentes + space */
     max-width: 100%;
     z-index: 100;
     flex-shrink: 0;
@@ -59,7 +60,8 @@
     gap: 8px;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-sm);
-    height: 44px; /* Increased to avoid cutting off images */
+    height: 44px;
+    /* Increased to avoid cutting off images */
     box-sizing: border-box;
 }
 
@@ -136,7 +138,7 @@
     overflow-y: auto;
     z-index: 200;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
-    
+
     /* Hidden by default */
     display: none;
     opacity: 0;
@@ -247,14 +249,23 @@
 
 /* Search match highlight */
 .search-match-highlight {
-    color: #90ee90; /* light green */
+    color: #90ee90;
+    /* light green */
     font-weight: 700;
 }
 
 /* Flash highlight when scrolling to a variant from search */
 @keyframes searchFlash {
-    0%, 100% { box-shadow: none; }
-    25%, 75% { box-shadow: 0 0 20px rgba(124, 252, 124, 0.4), inset 0 0 0 2px rgba(124, 252, 124, 0.3); }
+
+    0%,
+    100% {
+        box-shadow: none;
+    }
+
+    25%,
+    75% {
+        box-shadow: 0 0 20px rgba(124, 252, 124, 0.4), inset 0 0 0 2px rgba(124, 252, 124, 0.3);
+    }
 }
 
 .search-highlight-flash {
@@ -334,16 +345,16 @@
     border: 1px solid var(--accent-gold);
     color: var(--text-primary);
     font-weight: 800;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 6px 14px;
-    border-radius: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all var(--transition-fast);
     box-shadow: 0 0 10px rgba(212, 168, 75, 0.2);
     height: auto;
-    min-width: 70px;
+    min-width: 85px;
 }
 
 .filter-toggle-btn:hover,
@@ -454,10 +465,10 @@
 
 .vertical-separator {
     width: 1px;
-    background: rgba(255, 255, 255, 0.15);
-    margin: 8px 8px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 8px 16px;
     align-self: stretch;
-    min-height: 24px;
+    min-height: 32px;
 }
 
 /* Grids */
@@ -480,17 +491,17 @@
 .filter-btn {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 4px;
+    padding: 6px;
     cursor: pointer;
     transition: all var(--transition-fast);
     opacity: 0.65;
     position: relative;
-    width: 34px;
-    height: 34px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .filter-btn img {
@@ -533,15 +544,15 @@
 .advanced-filters-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--text-secondary);
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 8px 16px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
     transition: all 0.2s ease;
 }
@@ -577,7 +588,7 @@
     gap: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     z-index: 150;
-    
+
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
@@ -588,10 +599,12 @@
 .advanced-filters-content::-webkit-scrollbar {
     width: 6px;
 }
+
 .advanced-filters-content::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
 .advanced-filters-content::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
@@ -725,7 +738,7 @@
     .vertical-separator {
         display: none;
     }
-    
+
     .class-filter-inline {
         border-left: none;
         padding-left: 0;
@@ -813,10 +826,12 @@
 .effects-grid::-webkit-scrollbar {
     width: 4px;
 }
+
 .effects-grid::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
 .effects-grid::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
@@ -829,19 +844,28 @@
     right: 20px;
     z-index: 999;
     width: 250px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     animation: slideInDownSearch 0.3s ease;
 }
+
 @keyframes slideInDownSearch {
-    from { transform: translateY(-20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Collapsible Content */
 .collapsible-content {
     display: none;
 }
+
 .collapsible-content.active {
     display: grid;
 }
@@ -853,28 +877,21 @@
     gap: 6px;
     justify-content: flex-start;
 }
+
 .class-filter-icon-btn img {
     width: 16px;
     height: 16px;
     object-fit: contain;
 }
+
 .search-icon {
     width: 24px;
     height: 24px;
 }
+
 .filter-btn:not(.effect-btn) img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     padding: 2px;
 }
-
-
-
-
-
-
-
-
-
-

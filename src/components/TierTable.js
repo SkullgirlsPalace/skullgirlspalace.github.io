@@ -129,7 +129,7 @@ export function createTierTable(charKey, charData) {
       const variantClasses = getLocalizedVariantClasses(variant.name);
 
       const localizedName = getLocalizedNameSync(variant.name);
-   const charCellContent = `
+      const charCellContent = `
         <img loading="lazy" src="${imgPath}" alt="${localizedName}" onerror="this.src='img/official/Annie_Icon.webp'">
         <span>${localizedName}</span>
       `;
@@ -237,7 +237,7 @@ export function createTierView(charKey, charData) {
     </div>
     <div class="class-dictionary" id="class-dict">
       ${Object.entries(CLASS_ICONS).map(([cls, info]) => {
-        return `
+    return `
       <div class="class-dict-item">
         <img src="${info.icon}" alt="${getLocalizedClassName(cls)}" class="class-dict-icon" style="--class-color: ${info.color}">
         <div class="class-dict-text">
@@ -246,7 +246,7 @@ export function createTierView(charKey, charData) {
         </div>
       </div>
       `;
-      }).join('')}
+  }).join('')}
     </div>
   </div>
 
@@ -255,7 +255,7 @@ export function createTierView(charKey, charData) {
 }
 
 // Global UI handler for legend sections
-window.toggleLegendSection = function(id) {
+window.toggleLegendSection = function (id) {
   const element = document.getElementById(id);
   const btn = element.closest('.legend-section').querySelector('.legend-toggle-btn');
 

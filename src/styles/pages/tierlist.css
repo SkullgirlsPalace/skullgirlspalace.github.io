@@ -524,7 +524,8 @@
     opacity: 1;
 }
 
-.rank-dictionary, .class-dictionary {
+.rank-dictionary,
+.class-dictionary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
@@ -532,7 +533,8 @@
     transition: all 0.3s ease;
 }
 
-.rank-dictionary.hidden, .class-dictionary.hidden {
+.rank-dictionary.hidden,
+.class-dictionary.hidden {
     display: none;
 }
 
@@ -661,7 +663,8 @@
     opacity: 1;
 }
 
-.rank-dictionary, .class-dictionary {
+.rank-dictionary,
+.class-dictionary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 16px;
@@ -669,7 +672,8 @@
     transition: all 0.3s ease;
 }
 
-.rank-dictionary.hidden, .class-dictionary.hidden {
+.rank-dictionary.hidden,
+.class-dictionary.hidden {
     display: none;
 }
 

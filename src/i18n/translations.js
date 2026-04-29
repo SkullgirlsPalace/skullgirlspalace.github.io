@@ -356,7 +356,7 @@ export const translations = {
   height: 'Altura',
   likes: 'Gosta',
   marqueeDetails: 'Detalhes do Marquee',
-  moves: 'Movimentos',
+  moves: 'Golpes',
   noDescription: 'Sem descrição disponível.',
   noMoves: 'Nenhum movimento disponível.',
   noVariants: 'Nenhuma variante disponível.',

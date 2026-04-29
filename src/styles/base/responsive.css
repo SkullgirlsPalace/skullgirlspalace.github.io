@@ -9,8 +9,13 @@
 
     /* ===== PHASE 1: NAVBAR & GLOBAL LAYOUT ===== */
 
+    :root {
+        --navbar-height: 70px;
+    }
+
     .navbar {
-        padding: 0 12px;
+        height: var(--navbar-height);
+        padding: 0 16px;
     }
 
     .navbar-brand {
@@ -38,20 +43,20 @@
         left: auto;
         bottom: 0;
         width: 65%;
-        background: rgba(10, 10, 15, 0.98);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: rgba(15, 15, 20, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        padding: 24px 16px;
-        gap: 16px;
-        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 32px 24px;
+        gap: 20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
         border-bottom: none;
         display: flex !important;
         transform: translateX(100%);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         z-index: 999;
-        align-items: flex-end;
-        text-align: right;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .nav-links.active {
@@ -74,7 +79,8 @@
     }
 
     main {
-        padding: 4px 12px 12px 12px; /* Reduced top padding to move search bar up */
+        padding: 4px 12px 12px 12px;
+        /* Reduced top padding to move search bar up */
         padding-top: calc(var(--navbar-height) + 4px);
     }
 
@@ -119,38 +125,46 @@
 
     /* Section header - title + export overlap fix */
     .section-header {
-        flex-wrap: wrap;
-        position: relative;
-        gap: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         padding: 0 4px;
+        margin-bottom: 24px;
+        gap: 12px;
     }
 
     .section-header h2 {
-        font-size: 1.3rem;
-        text-align: center;
-        width: 100%;
-        order: 1;
+        font-size: 1.2rem;
+        text-align: left;
+        margin: 0;
+        flex-grow: 1;
     }
 
     .section-header .btn-back {
-        order: 0;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        font-weight: 900;
-        font-size: 1.5rem;
-        min-width: 44px;
-        width: 44px;
-        height: 36px;
-    }
-
-    .section-header .export-trigger-btn {
         position: static !important;
         transform: none !important;
-        order: 2;
-        font-size: 0.8rem;
-        padding: 6px 12px;
+        margin-right: 0;
+    }
+
+    /* Move search bar next to back button on mobile */
+    .search-bar-container {
+        margin: 0 !important;
+        width: auto !important;
+        flex-shrink: 1;
+        max-width: 180px;
+    }
+
+    .search-input-wrapper {
+        padding: 6px 10px !important;
+    }
+
+    .variant-search-input {
+        font-size: 0.85rem !important;
+    }
+
+    .search-icon {
+        width: 14px !important;
     }
 
     /* ===== PHASE 3: CHARACTER DETAIL & FILTER BAR ===== */
@@ -159,7 +173,7 @@
     .char-title-centered h2 {
         font-size: 1.6rem;
     }
-    
+
     .char-title-row h2 {
         font-size: 1.6rem;
     }
@@ -168,7 +182,7 @@
         font-size: 0.95rem;
         padding: 8px 16px;
     }
-    
+
     .char-info-icon-centered {
         width: 20px;
         height: 20px;
@@ -213,18 +227,21 @@
         display: contents;
     }
 
-    .filter-bar > .vertical-separator {
+    .filter-bar>.vertical-separator {
         display: block !important;
-        height: 38px;
-        margin: 0 4px;
+        height: 34px;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.2) !important;
+        margin: 0 10px !important;
         align-self: center;
+        flex-shrink: 0;
     }
 
-    .filter-content > .vertical-separator {
+    .filter-content>.vertical-separator {
         display: none !important;
     }
 
-    .rarity-grid + .vertical-separator {
+    .rarity-grid+.vertical-separator {
         display: block !important;
         height: 38px;
         margin: 0 4px;
@@ -257,13 +274,13 @@
     }
 
     .filter-btn {
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
     }
 
     .filter-btn img {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     .filter-section.right {
@@ -310,8 +327,8 @@
     }
 
     /* Fix vertical separator height between rarity and element grids */
-    .filter-bar > .vertical-separator,
-    .rarity-grid + .vertical-separator {
+    .filter-bar>.vertical-separator,
+    .rarity-grid+.vertical-separator {
         min-height: 28px;
         align-self: stretch;
     }
@@ -450,6 +467,7 @@
         align-items: stretch;
         width: 100%;
     }
+
     .arsenal-move {
         padding: 12px 10px;
         height: 100%;
@@ -707,13 +725,15 @@
     .scroll-nav {
         bottom: 24px;
         right: 16px;
-        z-index: 10000; /* Higher than footer/navbar */
+        z-index: 10000;
+        /* Higher than footer/navbar */
     }
 
     .scroll-nav-btn {
         width: 44px !important;
         height: 44px !important;
-        opacity: 0.8; /* Subtle but visible */
+        opacity: 0.8;
+        /* Subtle but visible */
     }
 
     /* ===== TIER LIST MOBILE ===== */
@@ -743,7 +763,8 @@
     }
 
     .tier-table th:first-child {
-        background: #111116; /* Solid background to prevent text bleed */
+        background: #111116;
+        /* Solid background to prevent text bleed */
         z-index: 11;
     }
 
@@ -777,6 +798,60 @@
 
     .tier-table td {
         padding: 12px 6px;
+    }
+
+    /* Main container top padding adjustment */
+    main {
+        padding-top: calc(var(--navbar-height) + 10px) !important;
+    }
+
+    .character-detail-header {
+        margin-bottom: 12px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .header-top-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 4px !important;
+        margin-bottom: 16px !important;
+        gap: 12px !important;
+    }
+
+    .header-top-row .header-left {
+        order: 1;
+        flex: 0 0 auto;
+    }
+
+    .header-top-row .centered-title {
+        order: 2;
+        flex: 1 1 auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header-top-row .header-right {
+        order: 3;
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .char-title-row h2 {
+        font-size: 1.1rem !important;
+        white-space: nowrap;
+    }
+
+    .header-top-row .btn-back {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
 
     .tier-intro-box {

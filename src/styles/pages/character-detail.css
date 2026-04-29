@@ -19,7 +19,8 @@
     position: relative;
 }
 
-.header-left, .header-right {
+.header-left,
+.header-right {
     flex: 1;
     display: flex;
 }
@@ -202,7 +203,7 @@
         padding-left: 0;
         padding-top: 50px;
     }
-    
+
     .header-top-row {
         flex-direction: row;
         flex-wrap: wrap;
@@ -211,7 +212,7 @@
         gap: 8px;
         margin-bottom: 10px;
     }
-    
+
     .centered-title {
         position: static;
         transform: none;
@@ -236,34 +237,36 @@
     .header-middle-row {
         margin-bottom: 10px;
     }
-    
-    .char-title-row h2, .char-title-centered h2 {
+
+    .char-title-row h2,
+    .char-title-centered h2 {
         font-size: 1.8rem;
         white-space: normal;
         text-align: center;
         line-height: 1.1;
         margin-bottom: 4px;
     }
-    
-    .char-title-row .char-select-icon, .char-title-centered .char-mastery-icon {
+
+    .char-title-row .char-select-icon,
+    .char-title-centered .char-mastery-icon {
         width: 44px;
         height: 44px;
     }
-    
+
     .search-bar-container {
         width: 180px;
     }
-    
+
     .header-bottom-row {
         flex-direction: column;
         align-items: center;
         gap: 8px;
     }
-    
+
     .detail-tabs {
         justify-content: center;
     }
-    
+
     .tab-btn {
         padding: 10px 20px;
         font-size: 0.85rem;

@@ -19,12 +19,6 @@ export function createNavbar() {
     <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
   </div>
   <div class="navbar-right">
-    <ul class="nav-links" id="navLinks">
-      <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
-    </ul>
     <div class="nav-actions">
       <div class="language-selector" id="languageSelector">
         <button class="language-btn" onclick="handleToggleLanguageMenu()">
@@ -47,6 +41,13 @@ export function createNavbar() {
       </div>
       <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
     </div>
+    <div class="nav-overlay" id="navOverlay" onclick="handleToggleMobileMenu()"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
+    </ul>
   </div>
 </nav>
 `;
@@ -180,7 +181,14 @@ export function handleToggleAboutDrawer() {
 }
 
 export function handleToggleMobileMenu() {
-  document.getElementById('navLinks')?.classList.toggle('active');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+  
+  if (navLinks && overlay) {
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+  }
 }
 
 export function handleToggleDisclaimer() {
