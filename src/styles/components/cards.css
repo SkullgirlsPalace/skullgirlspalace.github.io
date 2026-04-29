@@ -259,6 +259,11 @@
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
 
+/* Mobile variant classes are hidden on desktop by default */
+.mobile-classes {
+    display: none;
+}
+
 
 /* Exclusive Badge Styling */
 .exclusive-badge {

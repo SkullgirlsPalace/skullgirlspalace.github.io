@@ -95,9 +95,9 @@ export const translations = {
 
     filter: {
       filterBtn: 'Filtrar',
-      clear: 'Limpar Filtros',
+      clear: 'Limpar',
       clearAll: 'Limpar Tudo',
-      clearAdvanced: 'Limpar Filtros Avançados',
+      clearAdvanced: 'Limpar',
       score: 'Pontuação',
       atk: 'Ataque',
       hp: 'Vida',
@@ -499,7 +499,7 @@ export const translations = {
       filterBtn: 'Filter',
       clear: 'Clear Filters',
       clearAll: 'Clear All',
-      clearAdvanced: 'Clear Advanced Filters',
+      clearAdvanced: 'Clear',
       score: 'Score',
       atk: 'Attack',
       hp: 'Health',

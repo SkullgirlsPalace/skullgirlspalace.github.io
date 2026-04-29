@@ -153,11 +153,11 @@ export function createFilterBar() {
                 <!-- Sort Section -->
                 <div class="filter-section center" style="margin: 0 auto; display: flex; align-items: center; gap: 12px;">
                     <div class="sort-header">
-                        <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
+                        <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="" style="height: 14px; width: auto;">
                         ${t('filter.organize')}
                     </div>
                     <div class="sort-group grid-2x2">
-                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
+                        <button class="sort-btn active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
                         <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
                         <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
                         <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
@@ -178,7 +178,7 @@ export function createFilterBar() {
                         <div class="advanced-filters-content" id="advanced-filters-content">
                             <div class="adv-filter-group">
                                 <span class="adv-filter-label">${t('detail.sortBy')}</span>
-                                <div class="sort-group">
+                                <div class="sort-group grid-2x2" style="justify-content: flex-start; text-align: left;">
                                     <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
                                     <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
                                 </div>
@@ -219,7 +219,8 @@ export function createFilterBar() {
                     </div>
                 </div>
 
-                <div class="vertical-separator"></div>
+                <div class="vertical-separator hide-on-mobile"></div>
+                <div class="horizontal-divider-mobile"></div>
 
                 <!-- Character Navigator -->
                 <div class="filter-section right character-nav">
@@ -374,14 +375,17 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     return characters[a].character.localeCompare(characters[b].character);
   });
 
-    // Add "Todos" option first
-    let dropdownHTML = `
-        <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
-                onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
-            <span>${t('characters.allCharacters')}</span>
-        </button>
-        <div class="char-dropdown-divider"></div>
-    `;
+    // Add "Todos" option first if not in Tier List tab
+    let dropdownHTML = '';
+    if (currentTab !== 'tier') {
+        dropdownHTML += `
+            <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
+                    onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
+                <span>${t('characters.allCharacters')}</span>
+            </button>
+            <div class="char-dropdown-divider"></div>
+        `;
+    }
 
     dropdownHTML += sortedCharKeys.map(charKey => {
         const charData = characters[charKey];

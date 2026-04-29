@@ -76,15 +76,16 @@ export function render() {
  * Initialize home page
  */
 export function init() {
-  // Setup language selector click outside handler
-  const selector = document.getElementById('homeLanguageSelector');
-  if (selector) {
+  // Setup language selector click outside handler globally once
+  if (!window._homeLangListenerAdded) {
     document.addEventListener('click', (e) => {
+      const selector = document.getElementById('homeLanguageSelector');
       const dropdown = document.getElementById('homeLanguageDropdown');
       if (selector && dropdown && !selector.contains(e.target)) {
         dropdown.classList.remove('active');
       }
     });
+    window._homeLangListenerAdded = true;
   }
 }
 

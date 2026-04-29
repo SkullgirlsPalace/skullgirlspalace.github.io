@@ -164,7 +164,7 @@ export function createVariantCard(variant, charKey, index = 0) {
             <div class="variant-left-section">
                 <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name)}" class="variant-portrait" loading="lazy"
                      onerror="this.src='img/official/Annie_Icon.webp'">
-                <div class="variant-classes-display">
+                <div class="variant-classes-display desktop-classes">
                     ${classesHTML}
                 </div>
             </div>
@@ -172,6 +172,9 @@ export function createVariantCard(variant, charKey, index = 0) {
                 <div class="variant-header">
                     <h3>${getLocalizedNameSync(variant.name)}</h3>
                     ${charSubtitleHTML}
+                    <div class="variant-classes-display mobile-classes">
+                        ${classesHTML}
+                    </div>
                     <div class="variant-meta">
                         <span class="element-badge ${elementInfo.class}">
                             <img loading="lazy" src="${elementInfo.iconPath}" alt="${elementDisplayName}">

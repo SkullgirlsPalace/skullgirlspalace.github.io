@@ -332,6 +332,18 @@ export function refreshVariants(charKey) {
  * @param {string} tab - Tab to switch to
  */
 export async function switchTab(charKey, tab) {
+    if (charKey === 'todos' && tab === 'tier') {
+        const { getCharacters } = await import('../services/dataService.js');
+        const characters = getCharacters();
+        const sortedKeys = Object.keys(characters).sort((a, b) => 
+            characters[a].character.localeCompare(characters[b].character)
+        );
+        const firstCharKey = sortedKeys[0] || 'annie';
+        
+        window.history.replaceState(null, '', `#character/${firstCharKey}/tier`);
+        return init(firstCharKey, 'tier');
+    }
+
     const state = getState();
     const previousTab = state.currentTab;
 
