@@ -205,74 +205,16 @@
         font-size: 0.85rem;
     }
 
-    /* Filter bar */
-    .filter-bar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 6px 10px;
-        gap: 6px 8px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .filter-controls {
-        order: -1;
-        margin-right: 0;
-        flex-wrap: nowrap;
-        gap: 4px;
-        flex-shrink: 0;
-    }
-
-    .filter-content {
-        display: contents;
-    }
-
-    .filter-bar>.vertical-separator {
-        display: block !important;
-        height: 34px;
-        width: 1px;
-        background: rgba(255, 255, 255, 0.2) !important;
-        margin: 0 10px !important;
-        align-self: center;
-        flex-shrink: 0;
-    }
-
-    .filter-content>.vertical-separator {
+    /* ── DUAL FILTER BAR: show mobile, hide desktop ── */
+    .desktop-filter-bar {
         display: none !important;
     }
 
-    .rarity-grid+.vertical-separator {
-        display: block !important;
-        height: 38px;
-        margin: 0 4px;
-        align-self: center;
+    .mobile-filter-bar {
+        display: flex !important;
     }
 
-    .filter-toggle-btn {
-        padding: 5px 7px;
-        min-width: auto;
-        font-size: 0;
-    }
-
-    .filter-toggle-btn span {
-        display: none;
-    }
-
-    .filter-toggle-btn img {
-        height: 18px;
-        margin: 0;
-    }
-
-    .filter-grid {
-        gap: 3px;
-    }
-
-    .rarity-grid {
-        padding-right: 0 !important;
-        border-right: none !important;
-        margin-right: 0 !important;
-    }
-
+    /* Compact filter buttons on mobile */
     .filter-btn {
         width: 34px;
         height: 34px;
@@ -283,42 +225,8 @@
         height: 18px;
     }
 
-    .filter-section.right {
-        margin-left: 0;
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 4px;
-        padding-top: 2px;
-        border-top: none;
-    }
-
-    .horizontal-divider-mobile {
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        margin: 6px 0;
-    }
-
-    .hide-on-mobile {
-        display: none !important;
-    }
-
-    .sort-header {
-        font-size: 0.7rem;
-        gap: 4px;
-        margin-right: 4px;
-    }
-
-    .sort-header img {
-        height: 14px;
-    }
-
-    .sort-group {
-        justify-content: center;
-        gap: 4px;
+    .filter-grid {
+        gap: 3px;
     }
 
     .sort-btn {
@@ -326,20 +234,16 @@
         font-size: 0.65rem;
     }
 
-    /* Fix vertical separator height between rarity and element grids */
-    .filter-bar>.vertical-separator,
-    .rarity-grid+.vertical-separator {
-        min-height: 28px;
-        align-self: stretch;
+    .sort-header {
+        font-size: 0.7rem;
+        gap: 4px;
     }
 
-    /* Add spacing between filter icons row and sort section */
-    .filter-section.right {
-        margin-top: 6px;
-        padding-top: 8px;
+    .sort-header img {
+        height: 14px;
     }
 
-    /* Advanced filters sub-menu positioning on mobile */
+    /* Advanced filters dropdown on mobile — center aligned */
     .advanced-filters-content {
         right: auto;
         left: 50%;

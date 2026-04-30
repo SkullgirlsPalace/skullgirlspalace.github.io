@@ -272,29 +272,150 @@
     animation: searchFlash 2s ease;
 }
 
-/* ========== FILTER BAR ========== */
+/* ========== FILTER BAR — BASE ========== */
 .filter-bar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     background: var(--bg-card);
     border: var(--border-subtle);
     border-radius: var(--border-radius);
     padding: 8px 16px;
     margin-bottom: 12px;
     box-shadow: var(--shadow-sm);
-    gap: 0;
     width: 100%;
     min-width: 0;
     transition: all 0.4s ease;
+    box-sizing: border-box;
 }
 
-/* Active state */
-.filter-bar.active {
-    background: var(--bg-card);
-    border: var(--border-subtle);
-    padding: 8px 16px;
-    box-shadow: var(--shadow-sm);
+/* ========== DESKTOP FILTER BAR ========== */
+.desktop-filter-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
+}
+
+/* ========== MOBILE FILTER BAR (hidden on desktop) ========== */
+.mobile-filter-bar {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 12px;
+}
+
+/* ── Mobile rows ── */
+.mobile-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 0;
+}
+
+.mobile-row--icons {
+    gap: 0;
+    align-items: center;
+}
+
+.mobile-row--sort {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 2px 0;
+}
+
+.mobile-row--controls {
+    gap: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+/* Thin horizontal divider between mobile rows */
+.mobile-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    margin: 8px 0;
+    flex-shrink: 0;
+}
+
+/* Vertical thin line between toggle btn and icon grids on mobile */
+.mobile-icon-separator {
+    width: 1px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 10px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+/* Vertical thin line between adv-filters and char nav on mobile row 3 */
+.mobile-controls-separator {
+    width: 1px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 10px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.mobile-icon-grids {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.mobile-char-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.mobile-char-nav .sort-header {
+    font-size: 0.65rem;
+    margin-right: 0;
+    white-space: nowrap;
+}
+
+.mobile-adv-dropdown {
+    flex: 1;
+    min-width: 0;
+    margin-left: 0;
+}
+
+.filter-toggle-btn--mobile {
+    padding: 8px;
+    min-width: auto;
+    flex-shrink: 0;
+}
+
+.filter-toggle-btn--mobile span {
+    display: none;
+}
+
+.filter-toggle-btn--mobile img {
+    height: 20px;
+    margin: 0;
+}
+
+.mobile-sort-group {
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+/* Legacy desktop-only helpers */
+.horizontal-divider-mobile {
+    display: none;
+}
+
+.hide-on-mobile {
+    /* Only relevant inside desktop-filter-bar; mobile bar has its own structure */
 }
 
 .filter-controls {
@@ -313,6 +434,37 @@
     margin-left: auto;
     white-space: nowrap;
     flex-wrap: wrap;
+}
+
+.filter-section-sort {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.filter-section-char {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 200px;
+}
+
+.desktop-char-nav {
+    margin-left: auto;
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 220px;
+}
+
+.desktop-char-nav .sort-header {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .filter-label {
@@ -719,33 +871,7 @@
     border-color: var(--accent-gold) !important;
 }
 
-/* Responsive adjustment */
-@media (max-width: 1100px) {
-    .filter-bar {
-        justify-content: center;
-    }
-
-    .filter-section.right {
-        margin-left: 0;
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 8px;
-        border-top: 1px solid var(--border-subtle);
-        padding-top: 8px;
-    }
-
-    .vertical-separator {
-        display: none;
-    }
-
-    .class-filter-inline {
-        border-left: none;
-        padding-left: 0;
-        margin-left: 0;
-        justify-content: center;
-    }
-}
+/* Responsive adjustment for tablet intermediate sizes handled by dual-bar (768px breakpoint only) */
 
 /* ========== EFFECTS FILTER GRID ========== */
 .effects-grid {
