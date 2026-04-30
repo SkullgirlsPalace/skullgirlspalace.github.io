@@ -352,15 +352,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     gap: 8px;
     flex: 1;
 }
 
+.mobile-icon-grids .rarity-grid {
+    flex: 2;
+}
+
+.mobile-icon-grids .element-grid {
+    flex: 3;
+}
+
 .mobile-icon-grids .filter-btn {
-    width: 36px;
-    height: 36px;
-    padding: 4px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-width: 46px;
+    padding: 6px;
+    margin: 0 auto;
 }
 
 .mobile-char-nav {
