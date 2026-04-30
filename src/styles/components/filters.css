@@ -352,9 +352,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 4px;
     flex: 1;
-    min-width: 0;
+    width: 100%;
+}
+
+.mobile-icon-grids .rarity-grid {
+    flex: 2;
+}
+
+.mobile-icon-grids .element-grid {
+    flex: 3;
+}
+
+.mobile-icon-grids .filter-btn {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    padding: 6px;
 }
 
 .mobile-char-nav {
@@ -886,12 +902,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 6px;
 }
 
 .effect-btn img {
-    width: 27px;
-    height: 32px;
+    width: 38px;
+    height: 44px;
     object-fit: contain;
 }
 

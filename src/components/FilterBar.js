@@ -215,6 +215,7 @@ export function createFilterBar() {
                         <button class="filter-btn rarity-btn" data-rarity="ouro" onclick="handleFilterClick('rarity', 'ouro')" title="${t('rarity.gold')}"><img loading="lazy" src="img/official/icone_ouro.webp" alt="${t('rarity.gold')}"></button>
                         <button class="filter-btn rarity-btn" data-rarity="diamante" onclick="handleFilterClick('rarity', 'diamante')" title="${t('rarity.diamond')}"><img loading="lazy" src="img/official/icone_diamante.webp" alt="${t('rarity.diamond')}"></button>
                     </div>
+                    <div class="mobile-icon-separator" style="margin: 0 4px; height: 40px;"></div>
                     <div class="filter-grid element-grid">
                         <button class="filter-btn element-btn" data-element="fogo" onclick="handleFilterClick('element', 'fogo')" title="${t('element.fire')}"><img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${t('element.fire')}"></button>
                         <button class="filter-btn element-btn" data-element="agua" onclick="handleFilterClick('element', 'agua')" title="${t('element.water')}"><img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${t('element.water')}"></button>
