@@ -129,7 +129,7 @@ export function createTierTable(charKey, charData) {
       const variantClasses = getLocalizedVariantClasses(variant.name);
 
       const localizedName = getLocalizedNameSync(variant.name);
-   const charCellContent = `
+      const charCellContent = `
         <img loading="lazy" src="${imgPath}" alt="${localizedName}" onerror="this.src='img/official/Annie_Icon.webp'">
         <span>${localizedName}</span>
       `;
@@ -200,11 +200,11 @@ export function createTierView(charKey, charData) {
 
   <!-- Rank Explanations Dictionary -->
   <div class="legend-section">
-    <div class="legend-header">
-      <span class="legend-title">${t('tier.notes')}</span>
-      <button class="legend-toggle-btn" onclick="toggleLegendSection('rank-dict')">\u25BC</button>
+    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('rank-dict')">
+      <span class="legend-title iluminado">${t('tier.notes')}</span>
+      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
     </div>
-    <div class="rank-dictionary" id="rank-dict">
+    <div class="rank-dictionary hidden" id="rank-dict">
       <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
         <p>${t('tier.rankSS')}</p>
       </div>
@@ -231,13 +231,13 @@ export function createTierView(charKey, charData) {
 
   <!-- Class Role Legend -->
   <div class="legend-section">
-    <div class="legend-header">
-      <span class="legend-title">${t('tier.classes')}</span>
-      <button class="legend-toggle-btn" onclick="toggleLegendSection('class-dict')">\u25BC</button>
+    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('class-dict')">
+      <span class="legend-title iluminado">${t('tier.classes')}</span>
+      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
     </div>
-    <div class="class-dictionary" id="class-dict">
+    <div class="class-dictionary hidden" id="class-dict">
       ${Object.entries(CLASS_ICONS).map(([cls, info]) => {
-        return `
+    return `
       <div class="class-dict-item">
         <img src="${info.icon}" alt="${getLocalizedClassName(cls)}" class="class-dict-icon" style="--class-color: ${info.color}">
         <div class="class-dict-text">
@@ -246,7 +246,7 @@ export function createTierView(charKey, charData) {
         </div>
       </div>
       `;
-      }).join('')}
+  }).join('')}
     </div>
   </div>
 
@@ -255,7 +255,7 @@ export function createTierView(charKey, charData) {
 }
 
 // Global UI handler for legend sections
-window.toggleLegendSection = function(id) {
+window.toggleLegendSection = function (id) {
   const element = document.getElementById(id);
   const btn = element.closest('.legend-section').querySelector('.legend-toggle-btn');
 

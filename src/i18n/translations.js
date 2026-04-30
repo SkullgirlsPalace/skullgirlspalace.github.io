@@ -51,8 +51,8 @@ export const translations = {
     characters: {
       title: 'Personagens',
       selectCharacter: 'Escolha um Personagem',
-      searchPlaceholder: 'Buscar personagem...',
-      allCharacters: 'Todos os Personagens'
+      searchPlaceholder: 'Pesquisar Variantes',
+      allCharacters: 'Todas as Variantes'
     },
     // Guide page
   guide: {
@@ -93,20 +93,22 @@ export const translations = {
     neutral: 'Neutro'
   },
 
-  filter: {
-    filterBtn: 'Filtrar',
-    clear: 'Limpar',
-    clearAll: 'Limpar Tudo',
-    score: 'Pontuação',
-    atk: 'ATQ',
-    hp: 'HP',
-    alpha: 'Alfabético',
-    element: 'Elemento',
-    category: 'Categoria',
-    organize: 'Organizar',
-    changeCharacter: 'Trocar Personagem',
-    chooseCharacter: 'Escolher Personagem'
-  },
+    filter: {
+      filterBtn: 'Filtrar',
+      clear: 'Limpar',
+      clearAll: 'Limpar Tudo',
+      clearAdvanced: 'Limpar',
+      score: 'Pontuação',
+      atk: 'Ataque',
+      hp: 'Vida',
+      alpha: 'Ordem Alfabética',
+      element: 'Elemento',
+      category: 'Categoria',
+      organize: 'Organizar',
+      changeCharacter: 'Trocar Personagem',
+      chooseCharacter: 'Escolher Personagem',
+      supportShort: 'Suporte'
+    },
 
     // Calculator page
     calc: {
@@ -226,7 +228,7 @@ export const translations = {
       recommendedBuild: 'BUILD RECOMENDADA',
       recommendedArsenal: 'ARSENAL RECOMENDADO',
       recommendedMarquee: 'HABILIDADE SUPERIOR RECOMENDADA',
-      attack: 'ATQ',
+      attack: 'Ataque',
       health: 'Vida',
       power: 'Pontuação',
       noVariants: 'Nenhuma variante encontrada com estes filtros.',
@@ -239,10 +241,14 @@ export const translations = {
     // Character Detail
     detail: {
       characterNotFound: 'Personagem não encontrado',
-      filters: 'Filtros',
+      filters: 'Filtros Avançados',
       sortBy: 'Ordenar por',
       rarity: 'Raridade',
-      element: 'Elemento'
+      element: 'Elemento',
+      profileOf: 'Ficha de',
+      aboutChar: 'Sobre',
+      noVariantsFilters: 'Nenhuma variante encontrada com estes filtros.',
+      allVariants: 'TODAS AS VARIANTES'
     },
     // Tier List
   tier: {
@@ -346,11 +352,11 @@ export const translations = {
   essentialData: 'Dados Essenciais',
   essentialDataNA: 'Dados essenciais não disponíveis.',
   expandAlt: 'Expandir/Recolher alternativas',
-  health: 'Saúde',
+  health: 'Vida',
   height: 'Altura',
   likes: 'Gosta',
   marqueeDetails: 'Detalhes do Marquee',
-  moves: 'Movimentos',
+  moves: 'Golpes',
   noDescription: 'Sem descrição disponível.',
   noMoves: 'Nenhum movimento disponível.',
   noVariants: 'Nenhuma variante disponível.',
@@ -447,8 +453,8 @@ export const translations = {
     characters: {
       title: 'Characters',
       selectCharacter: 'Select a Character',
-      searchPlaceholder: 'Search character...',
-      allCharacters: 'All Characters'
+      searchPlaceholder: 'Search Variants',
+      allCharacters: 'All Variants'
     },
   // Guide page
   guide: {
@@ -489,20 +495,22 @@ export const translations = {
     neutral: 'Neutral'
   },
 
-  filter: {
-    filterBtn: 'Filter',
-    clear: 'Clear',
-    clearAll: 'Clear All',
-    score: 'Score',
-    atk: 'ATK',
-    hp: 'HP',
-    alpha: 'Alphabetical',
-    element: 'Element',
-    category: 'Category',
-    organize: 'Organize',
-    changeCharacter: 'Change Character',
-    chooseCharacter: 'Choose Character'
-  },
+    filter: {
+      filterBtn: 'Filter',
+      clear: 'Clear Filters',
+      clearAll: 'Clear All',
+      clearAdvanced: 'Clear',
+      score: 'Score',
+      atk: 'Attack',
+      hp: 'Health',
+      alpha: 'Alphabetical Order',
+      element: 'Elemento',
+      category: 'Category',
+      organize: 'Organize',
+      changeCharacter: 'Change Character',
+      chooseCharacter: 'Choose Character',
+      supportShort: 'Support'
+    },
 
     // Calculator page
     calc: {
@@ -622,8 +630,8 @@ export const translations = {
       recommendedBuild: 'RECOMMENDED BUILD',
       recommendedArsenal: 'RECOMMENDED ARSENAL',
       recommendedMarquee: 'RECOMMENDED MARQUEE ABILITY',
-      attack: 'ATK',
-      health: 'HP',
+      attack: 'Attack',
+      health: 'Health',
       power: 'Power',
       noVariants: 'No variants found with these filters.',
       class: 'CLASS',
@@ -635,10 +643,14 @@ export const translations = {
     // Character Detail
     detail: {
       characterNotFound: 'Character not found',
-      filters: 'Filters',
+      filters: 'Advanced Filters',
       sortBy: 'Sort by',
       rarity: 'Rarity',
-      element: 'Element'
+      element: 'Element',
+      profileOf: 'Profile of',
+      aboutChar: 'About',
+      noVariantsFilters: 'No variants found with these filters.',
+      allVariants: 'ALL VARIANTS'
     },
     // Tier List
   tier: {

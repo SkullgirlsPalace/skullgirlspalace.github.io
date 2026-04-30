@@ -2,7 +2,7 @@ import { getElementMap, getRarityLabels, getLocalizedRarityLabel, getLocalizedEl
 import { getVariantImage } from '../data/variantImages.js';
 import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
-import { getLocalizedClassName, getLocalizedVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
+import { getLocalizedClassName, getLocalizedVariantClasses, getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
 import { isNewVariant } from '../data/newContent.js';
 import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
@@ -87,13 +87,19 @@ export function createVariantCard(variant, charKey, index = 0) {
 
     // Check if variant is exclusive
     const exclusiveData = getExclusiveData(variant.name);
+    const exclusiveOverlayId = `exclusive-${charKey}-${index}`;
     const exclusiveBadgeHTML = exclusiveData ? `
-        <div class="exclusive-badge ${isNew ? 'shifted' : ''}" onclick="this.classList.toggle('expanded')">
+        <div class="exclusive-badge ${isNew ? 'shifted' : ''}" onclick="document.getElementById('${exclusiveOverlayId}').classList.add('active')">
             <img loading="lazy" src="${exclusiveData.icon}" alt="${t('variant.exclusive')}" class="exclusive-icon"
                  onerror="this.style.display='none'">
-            <div class="exclusive-text-group">
-                <span class="exclusive-label">${t('variant.exclusive')}</span>
-                <span class="exclusive-source">${exclusiveData.source}</span>
+        </div>
+        <div class="exclusive-overlay" id="${exclusiveOverlayId}" onclick="this.classList.remove('active')">
+            <div class="exclusive-overlay-content" onclick="event.stopPropagation()">
+                <img loading="lazy" src="${exclusiveData.icon}" alt="${t('variant.exclusive')}" class="exclusive-overlay-icon"
+                     onerror="this.style.display='none'">
+                <span class="exclusive-overlay-label">${t('variant.exclusive')}</span>
+                <span class="exclusive-overlay-source">${exclusiveData.source}</span>
+                <button class="exclusive-overlay-close" onclick="document.getElementById('${exclusiveOverlayId}').classList.remove('active')">✕</button>
             </div>
         </div>
     ` : '';
@@ -158,7 +164,7 @@ export function createVariantCard(variant, charKey, index = 0) {
             <div class="variant-left-section">
                 <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name)}" class="variant-portrait" loading="lazy"
                      onerror="this.src='img/official/Annie_Icon.webp'">
-                <div class="variant-classes-display">
+                <div class="variant-classes-display desktop-classes">
                     ${classesHTML}
                 </div>
             </div>
@@ -166,6 +172,9 @@ export function createVariantCard(variant, charKey, index = 0) {
                 <div class="variant-header">
                     <h3>${getLocalizedNameSync(variant.name)}</h3>
                     ${charSubtitleHTML}
+                    <div class="variant-classes-display mobile-classes">
+                        ${classesHTML}
+                    </div>
                     <div class="variant-meta">
                         <span class="element-badge ${elementInfo.class}">
                             <img loading="lazy" src="${elementInfo.iconPath}" alt="${elementDisplayName}">

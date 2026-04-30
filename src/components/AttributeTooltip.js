@@ -426,42 +426,46 @@ function hideDetailModal() {
  * Should be called once during app initialization.
  */
 export function initAttributeTooltips() {
- // Hover: show tooltip
- document.addEventListener('mouseenter', (e) => {
- const target = e.target.closest('.attr-highlight');
- if (target) {
- showTooltip(target);
- }
- }, true); // capture phase for delegation
+  // Hover: show tooltip
+  document.addEventListener('mouseenter', (e) => {
+    if (!e.target || !e.target.closest) return;
+    const target = e.target.closest('.attr-highlight');
+    if (target) {
+      showTooltip(target);
+    }
+  }, true); // capture phase for delegation
 
- document.addEventListener('mouseleave', (e) => {
- if (e.target.closest('.attr-highlight')) {
- hideTooltip();
- }
- }, true);
+  document.addEventListener('mouseleave', (e) => {
+    if (!e.target || !e.target.closest) return;
+    if (e.target.closest('.attr-highlight')) {
+      hideTooltip();
+    }
+  }, true);
 
- // Click: show detail modal
- document.addEventListener('click', (e) => {
- const target = e.target.closest('.attr-highlight');
- if (target) {
- e.preventDefault();
- showDetailModal(target);
- }
- });
+  // Click: show detail modal
+  document.addEventListener('click', (e) => {
+    if (!e.target || !e.target.closest) return;
+    const target = e.target.closest('.attr-highlight');
+    if (target) {
+      e.preventDefault();
+      showDetailModal(target);
+    }
+  });
 
- // Touch: show tooltip on first tap, modal on second tap
- let lastTouched = null;
- document.addEventListener('touchend', (e) => {
- const target = e.target.closest('.attr-highlight');
+  // Touch: show tooltip on first tap, modal on second tap
+  let lastTouched = null;
+  document.addEventListener('touchend', (e) => {
+    if (!e.target || !e.target.closest) return;
+    const target = e.target.closest('.attr-highlight');
 
- if (!target) {
- // Tapped outside - hide tooltip if visible
- if (activeTooltip && !e.target.closest('.attr-tooltip')) {
- hideTooltip();
- }
- lastTouched = null;
- return;
- }
+    if (!target) {
+      // Tapped outside - hide tooltip if visible
+      if (activeTooltip && e.target.closest && !e.target.closest('.attr-tooltip')) {
+        hideTooltip();
+      }
+      lastTouched = null;
+      return;
+    }
 
  e.preventDefault();
 

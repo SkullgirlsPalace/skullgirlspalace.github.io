@@ -1,0 +1,322 @@
+{
+    "bdrain-gphantasm-a1": {
+        "name": "Blastermind",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "When finished, inflicts a permanent DOOM for 30/26/22/20 seconds. DOOM is removed if the opponent TAGS OUT."
+    },
+    "bdrain-gphantasm-d1": {
+        "name": "Psy Ops",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "When finished, DRAINS 20/25/30/35% BLOCKBUSTER METER from the opponent."
+    },
+    "bdrain-gphantasm-f1": {
+        "name": "Claws of Death",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "When finished, grants 2 stack(s) of ENRAGE for 10/12/14/15 seconds."
+    },
+    "bdrain-gphantasm-l1": {
+        "name": "Sensory Overlord",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "35/40/45/50% of the damage dealt is regained as HEALTH. "
+    },
+    "bdrain-gphantasm-w1": {
+        "name": "Tinkering Terror",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am4_gendophantasmsmall.png",
+        "SA1": "When finished, converts up to 3 DEBUFFS into MIASMA for 10/12/14/15 seconds."
+    },
+    "bdrain-hdetach-a1": {
+        "name": "Blastermind",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Periodically inflicts one of the following DEBUFFS for 8/10/11/12 seconds: WITHER, FATIGUE, or HEX"
+    },
+    "bdrain-hdetach-d1": {
+        "name": "Psy Ops",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Periodically inflicts one of the following DEBUFFS for 8/10/11/12 seconds: BLEED, HEAL BLOCK, or HEX"
+    },
+    "bdrain-hdetach-f1": {
+        "name": "Claws of Death",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Periodically inflicts one of the following DEBUFFS for 8/10/11/12 seconds: GUARD BREAK, DEATH MARK, or HEX"
+    },
+    "bdrain-hdetach-l1": {
+        "name": "Sensory Overlord",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Periodically inflicts one of the following DEBUFFS for 8/10/11/12 seconds: POWER SURGE, QUIETUS, or HEX"
+    },
+    "bdrain-hdetach-w1": {
+        "name": "Tinkering Terror",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am1_headdetachsmall.png",
+        "SA1": "Periodically inflicts one of the following DEBUFFS for 8/10/11/12 seconds: SLIME, DISABLE SPECIAL MOVES, or HEX"
+    },
+    "bdrain-msummon-a1": {
+        "name": "Blastermind",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "25/50/75/100% chance on HIT to remove up to 2 BUFFS from the opponent."
+    },
+    "bdrain-msummon-d1": {
+        "name": "Psy Ops",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "25/50/75/100% chance on HIT to inflict HEAVY BLEED for 12 seconds."
+    },
+    "bdrain-msummon-f1": {
+        "name": "Claws of Death",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "25/50/75/100% chance on BLOCK to inflict 1 stack(s) of GUARD BREAK for 12 seconds."
+    },
+    "bdrain-msummon-l1": {
+        "name": "Sensory Overlord",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "Has a 25/50/75/100% increased chance to land a CRITICAL HIT."
+    },
+    "bdrain-msummon-w1": {
+        "name": "Tinkering Terror",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am3_minionsummonsmall.png",
+        "SA1": "25/50/75/100% chance on HIT to inflict ARMOR BREAK and DEATH MARK for 12 seconds each."
+    },
+    "bdrain-psyjumble-a1": {
+        "name": "Blastermind",
+        "element": "air",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "Deals an additional 10/12/14/15% damage for each DEBUFF stack on the opponent."
+    },
+    "bdrain-psyjumble-d1": {
+        "name": "Psy Ops",
+        "element": "dark",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "10% chance on HIT to DISABLE the opponent's SPECIAL MOVES or BLOCKBUSTERS for 10/12/14/15 seconds."
+    },
+    "bdrain-psyjumble-f1": {
+        "name": "Claws of Death",
+        "element": "fire",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "10/12/14/15% chance on HIT to transfer 1 BUFF from the opponent to yourself."
+    },
+    "bdrain-psyjumble-l1": {
+        "name": "Sensory Overlord",
+        "element": "light",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "10% chance on HIT to inflict INVERSE POLARITY for 10/12/14/15 seconds."
+    },
+    "bdrain-psyjumble-w1": {
+        "name": "Tinkering Terror",
+        "element": "water",
+        "character": "Brain Drain",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/braindrain_am2_psychicjumblesmall.png",
+        "SA1": "10% chance on HIT to grant 1 stack(s) of BARRIER for 10/12/14/15 seconds."
+    },
+    "min-coolkids-d1": {
+        "name": "Knight Shift",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "Reduces the opponent's BLOCKBUSTER METER by 2/2.3/2.6/3% per landed HIT."
+    },
+    "min-coolkids-f1": {
+        "name": "Karpe Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "10/12/14/15% chance on HIT to remove 1 BUFF from the opponent."
+    },
+    "min-coolkids-l1": {
+        "name": "Small Fry",
+        "element": "light",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "10/12/14/15% chance on HIT to inflict INVERSE POLARITY for 15 seconds."
+    },
+    "min-coolkids-n1": {
+        "name": "Trident True",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "15% chance on HIT to grant ENRAGE, ARMOR, REGEN, THORNS, BLESSING or BARRIER for 15/17/19/20 seconds."
+    },
+    "min-coolkids-w1": {
+        "name": "Raw Talent",
+        "element": "water",
+        "character": "Minette",
+        "stars": 3,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am2_coolkidsdrinktimesmall.png",
+        "SA1": "10/12/14/15% chance on HIT to transfer 1 DEBUFF from yourself to the opponent."
+    },
+    "min-dimsum-d1": {
+        "name": "Knight Shift",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "BUFF DISH grants DEADEYE for 8/10/11/12 seconds. DEBUFF DISH inflicts 2 stack(s) of WITHER for 8/10/11/12 seconds."
+    },
+    "min-dimsum-f1": {
+        "name": "Karpe Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "BUFF DISH grants 2 stack(s) of ENRAGE for 8/10/11/12 seconds. DEBUFF DISH inflicts 2 stack(s) of GUARD BREAK for 8/10/11/12 seconds."
+    },
+    "min-dimsum-l1": {
+        "name": "Small Fry",
+        "element": "light",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "BUFF DISH grants IMMUNITY for 8/10/11/12 seconds. DEBUFF DISH inflicts QUIETUS for 8/10/11/12 seconds."
+    },
+    "min-dimsum-n1": {
+        "name": "Trident True",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "BUFF DISH grants 2 stack(s) of BARRIER for 10/12/14/15 seconds. DEBUFF DISH inflicts HEX for 8/10/11/12 seconds."
+    },
+    "min-dimsum-w1": {
+        "name": "Raw Talent",
+        "element": "water",
+        "character": "Minette",
+        "stars": 2,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am3_dimsumcartsmall.png",
+        "SA1": "BUFF DISH grants 2 stack(s) of AUTO-BLOCK for 8/10/11/12 seconds. DEBUFF DISH inflicts CURSE for 8/10/11/12 seconds."
+    },
+    "min-jattack-d1": {
+        "name": "Knight Shift",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "50/65/80/100% chance on BLOCK to inflict 2 stack(s) of GUARD BREAK for 12 seconds."
+    },
+    "min-jattack-f1": {
+        "name": "Karpe Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "Deals an additional 5/10/15/20% damage for each BUFF stack on the opponent."
+    },
+    "min-jattack-l1": {
+        "name": "Small Fry",
+        "element": "light",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "DRAINS the opponent's BLOCKBUSTER METER by 10/15/20/25% on HIT."
+    },
+    "min-jattack-n1": {
+        "name": "Trident True",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "20/25/30/35% of the damage dealt is regained as HEALTH. "
+    },
+    "min-jattack-w1": {
+        "name": "Raw Talent",
+        "element": "water",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am4_jawsattacksmall.png",
+        "SA1": "50/65/80/100% chance on HIT to inflict HEAVY BLEED for 12 seconds."
+    },
+    "min-tgrab-d1": {
+        "name": "Knight Shift",
+        "element": "dark",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "25/35/45/60% chance on HIT to inflict STUN for 4 seconds."
+    },
+    "min-tgrab-f1": {
+        "name": "Karpe Diem",
+        "element": "fire",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "50/65/80/100% chance on HIT to inflict 2 stack(s) of SLIME for 12 seconds."
+    },
+    "min-tgrab-l1": {
+        "name": "Small Fry",
+        "element": "light",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "Deals an additional 5/7/9/10% of the opponent's MAX HEALTH if they are suffering from a DEBUFF."
+    },
+    "min-tgrab-n1": {
+        "name": "Trident True",
+        "element": "neutral",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "50/65/80/100% chance on HIT to DISABLE BLOCKBUSTERS for 12 seconds."
+    },
+    "min-tgrab-w1": {
+        "name": "Raw Talent",
+        "element": "water",
+        "character": "Minette",
+        "stars": 1,
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/move/minette_am1_tentaclegrabsmall.png",
+        "SA1": "50/65/80/100% chance on HIT to inflict ARMOR BREAK and DEATH MARK for 12 seconds each."
+    }
+}

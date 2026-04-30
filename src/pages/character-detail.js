@@ -54,7 +54,7 @@ export function render(charKey, initialTab = 'builds') {
         return `
             <section class="section character-detail">
                 <div class="section-header">
-                    <button class="btn-back" onclick="navigateTo('characters')">
+                    <button class="btn-back" onclick="navigateTo('')">
                         ←
                     </button>
                     <h2>${t('detail.characterNotFound')}</h2>
@@ -63,37 +63,35 @@ export function render(charKey, initialTab = 'builds') {
         `;
     }
 
-    const charColor = CHARACTER_COLORS[charKey] || 'var(--accent-gold)';
-    const charIcon = CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp';
     const state = getState();
     const currentTab = state.currentTab || initialTab;
 
     return `
-        <section class="section character-detail" id="character-detail" style="--char-accent: ${charColor}" data-current-tab="${currentTab}">
+        <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charData.element]}" data-current-tab="${currentTab}">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
                     <div class="header-left">
-                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                        <button class="btn-back pill" onclick="navigateTo('')">
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
                     
                     <div class="char-title-row centered-title">
-                        <img loading="lazy" src="${charIcon}" alt="${getLocalizedNameSync(charKey, charData.character)}" class="char-select-icon"
+                        <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${getLocalizedNameSync(charData.character)}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'">
-                        <h2>${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
+                        <h2>${getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)}</h2>
                     </div>
                     
                     <div class="header-right">
-                        ${createSearchBar()}
+                        ${currentTab !== 'tier' ? createSearchBar() : ''}
                     </div>
                 </div>
                 
                 <div class="header-middle-row">
-                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charKey, charData.character)}">
+                    <button class="char-info-btn-centered" onclick="openProfileModal('${charKey}')" title="${t('detail.aboutChar')} ${getLocalizedNameSync(charData.character)}">
                         <img src="img/official/IconInfo.webp" alt="Info" class="char-info-icon-centered">
-                        <span>${t('detail.profileOf')} ${getLocalizedNameSync(charKey, charData.character)}</span>
+                        <span>${t('detail.profileOf')} ${getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)}</span>
                     </button>
                 </div>
                 
@@ -139,18 +137,17 @@ function renderTodosPage(initialTab = 'builds') {
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
                     <div class="header-left">
-                        <button class="btn-back pill" onclick="navigateTo('characters')">
+                        <button class="btn-back pill" onclick="navigateTo('')">
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
                     
                     <div class="char-title-row centered-title">
-                        <span style="font-size: 2rem;">📋</span>
-                        <h2>TODAS AS VARIANTES</h2>
+                        <h2>${t('detail.allVariants')}</h2>
                     </div>
                     
                     <div class="header-right">
-                        ${createSearchBar()}
+                        ${currentTab !== 'tier' ? createSearchBar() : ''}
                     </div>
                 </div>
                 
@@ -335,6 +332,18 @@ export function refreshVariants(charKey) {
  * @param {string} tab - Tab to switch to
  */
 export async function switchTab(charKey, tab) {
+    if (charKey === 'todos' && tab === 'tier') {
+        const { getCharacters } = await import('../services/dataService.js');
+        const characters = getCharacters();
+        const sortedKeys = Object.keys(characters).sort((a, b) => 
+            characters[a].character.localeCompare(characters[b].character)
+        );
+        const firstCharKey = sortedKeys[0] || 'annie';
+        
+        const { navigateTo } = await import('../router.js');
+        return navigateTo(`character/${firstCharKey}/tier`);
+    }
+
     const state = getState();
     const previousTab = state.currentTab;
 

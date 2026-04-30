@@ -17,38 +17,37 @@ export function createNavbar() {
 <nav class="navbar hidden-nav" id="navbar">
   <div class="navbar-brand">
     <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
-    <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="about-link">
-      <img loading="lazy" src="img/official/IconInfo.webp" alt="">
-      <span>${t('nav.about')}</span>
-    </a>
   </div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
-    <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
-    <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
-    <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
-  </ul>
-  <div class="nav-actions">
-    <div class="language-selector" id="languageSelector">
-      <button class="language-btn" onclick="handleToggleLanguageMenu()">
-        <span class="lang-flag">${currentLang === 'pt-BR' ? '<img src="img/official/flag_pt.webp" alt="PT" class="flag-icon">' : '<img src="img/official/flag_en.webp" alt="EN" class="flag-icon">'}</span>
-        <span class="lang-code">${currentLang === 'pt-BR' ? 'PT' : 'EN'}</span>
-        <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12">
-          <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        </svg>
-      </button>
-      <div class="language-dropdown" id="languageDropdown">
-        <button class="lang-option ${currentLang === 'pt-BR' ? 'active' : ''}" onclick="handleSelectLanguage('pt-BR')">
-          <span class="lang-flag"><img src="img/official/flag_pt.webp" alt="PT" class="flag-icon"></span>
-          <span>Português</span>
+  <div class="navbar-right">
+    <div class="nav-actions">
+      <div class="language-selector" id="languageSelector">
+        <button class="language-btn" onclick="handleToggleLanguageMenu()">
+          <span class="lang-flag">${currentLang === 'pt-BR' ? '<img src="img/official/flag_pt.webp" alt="PT" class="flag-icon">' : '<img src="img/official/flag_en.webp" alt="EN" class="flag-icon">'}</span>
+          <span class="lang-code">${currentLang === 'pt-BR' ? 'PT-BR' : 'EN'}</span>
+          <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12">
+            <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          </svg>
         </button>
-        <button class="lang-option ${currentLang === 'en' ? 'active' : ''}" onclick="handleSelectLanguage('en')">
-          <span class="lang-flag"><img src="img/official/flag_en.webp" alt="EN" class="flag-icon"></span>
-          <span>English</span>
-        </button>
+        <div class="language-dropdown" id="languageDropdown">
+          <button class="lang-option ${currentLang === 'pt-BR' ? 'active' : ''}" onclick="handleSelectLanguage('pt-BR')">
+            <span class="lang-flag"><img src="img/official/flag_pt.webp" alt="PT" class="flag-icon"></span>
+            <span>${currentLang === 'pt-BR' ? 'Português Brasil' : 'Portuguese Brazilian'}</span>
+          </button>
+          <button class="lang-option ${currentLang === 'en' ? 'active' : ''}" onclick="handleSelectLanguage('en')">
+            <span class="lang-flag"><img src="img/official/flag_en.webp" alt="EN" class="flag-icon"></span>
+            <span>${currentLang === 'pt-BR' ? 'Inglês' : 'English'}</span>
+          </button>
+        </div>
       </div>
+      <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
     </div>
-    <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
+    <div class="nav-overlay" id="navOverlay" onclick="handleToggleMobileMenu()"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
+    </ul>
   </div>
 </nav>
 `;
@@ -182,7 +181,14 @@ export function handleToggleAboutDrawer() {
 }
 
 export function handleToggleMobileMenu() {
-  document.getElementById('navLinks')?.classList.toggle('active');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+  
+  if (navLinks && overlay) {
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+  }
 }
 
 export function handleToggleDisclaimer() {

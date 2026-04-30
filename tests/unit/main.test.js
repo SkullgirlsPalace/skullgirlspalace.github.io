@@ -11,7 +11,8 @@ vi.mock('../../src/router.js', () => ({
 
 vi.mock('../../src/services/dataService.js', () => ({
     loadAllCharacters: vi.fn(),
-    loadTierData: vi.fn()
+    loadTierData: vi.fn(),
+    loadExtrasData: vi.fn()
 }));
 
 vi.mock('../../src/components/Navigation.js', () => ({
@@ -38,7 +39,16 @@ vi.mock('../../src/components/FilterBar.js', () => ({
     handleSortClick: vi.fn(),
     handleClearFilters: vi.fn(),
     handleToggleFilter: vi.fn(),
-    handleToggleCharDropdown: vi.fn()
+    handleToggleCharDropdown: vi.fn(),
+    handleToggleCharDropdownMobile: vi.fn(),
+    handleSearchInput: vi.fn(),
+    handleSearchClear: vi.fn(),
+    handleSearchResultClick: vi.fn(),
+    handleSearchFocus: vi.fn(),
+    handleMainFilterAction: vi.fn(),
+    handleToggleAdvancedFilters: vi.fn(),
+    handleToggleAdvancedFiltersMobile: vi.fn(),
+    handleClearAdvancedFilters: vi.fn(),
 }));
 
 vi.mock('../../src/components/Calculator.js', () => ({

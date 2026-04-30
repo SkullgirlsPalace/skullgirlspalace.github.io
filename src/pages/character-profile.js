@@ -37,7 +37,7 @@ export function renderProfileModal(charKeyRaw) {
       <div class="profile-modal-header">
         <img loading="lazy" src="${charIcon}" alt="${charData.character}" class="profile-modal-icon"
           onerror="this.src='img/official/Annie_Icon.webp'">
-        <h2>${getLocalizedNameSync(charKey, charData.character).toUpperCase()}</h2>
+        <h2>${t('detail.profileOf').toUpperCase()} ${(getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)).toUpperCase()}</h2>
       </div>
 
       <!-- Tab Navigation -->

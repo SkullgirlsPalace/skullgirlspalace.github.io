@@ -3,11 +3,11 @@
 // Renders filter controls for rarity, element, class, sorting, and search
 // =====================================================
 
-import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar } from '../state/store.js';
+import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar, clearAdvancedFilters } from '../state/store.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getCharacters } from '../services/dataService.js';
 import { flattenVariants } from '../utils/sorting.js';
-import { getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
+import { getVariantClasses, getLocalizedClassName, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';
 import { EFFECT_DATA } from '../data/effectData.js';
@@ -27,7 +27,7 @@ export function createSearchBar() {
     return `
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
-                <img loading="lazy" src="img/official/ZoomIn.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
+                <img loading="lazy" src="img/official/Search.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
                      onerror="this.style.display='none'">
                 <input type="text" id="variant-search-input" class="variant-search-input"
                        placeholder="${t('characters.searchPlaceholder')}"
@@ -49,19 +49,26 @@ export function createFilterBar() {
     const buffs = [];
     const debuffs = [];
     for (const [key, data] of Object.entries(EFFECT_DATA)) {
-        if (data.icon && (data.type === 'buff' || data.type === 'buff-term')) buffs.push({key, ...data});
-        if (data.icon && (data.type === 'debuff' || data.type === 'debuff-term')) debuffs.push({key, ...data});
+        if (data.icon && (data.type === 'buff' || data.type === 'buff-term')) buffs.push({ key, ...data });
+        if (data.icon && (data.type === 'debuff' || data.type === 'debuff-term')) debuffs.push({ key, ...data });
     }
 
     const createEffectGrid = (effects, isBuff) => {
-        return effects.map(e => `
+        const lang = getCurrentLanguage();
+        return effects.map(e => {
+            const displayName = lang === 'en' && e.name_en ? e.name_en : e.name;
+            // Get short name (first word or key part)
+            const shortName = displayName.split(' ')[0].split('/')[0];
+            return `
             <button class="filter-btn effect-btn ${isBuff ? 'buff' : 'debuff'}" 
                 data-effect-key="${e.key}" 
                 onclick="handleFilterClick('efeitos', '${e.key}')" 
-                title="${e.name}">
-                <img loading="lazy" src="${e.icon}" alt="${e.name}">
+                title="${displayName}">
+                <img loading="lazy" src="${e.icon}" alt="${displayName}">
+                <span class="effect-label">${displayName}</span>
             </button>
-        `).join('');
+        `;
+        }).join('');
     };
 
     const scoreLabel = t('filter.score').toUpperCase();
@@ -71,9 +78,88 @@ export function createFilterBar() {
     const elementLabel = t('filter.element').toUpperCase();
     const categoryLabel = t('filter.category').toUpperCase();
 
+    const rarityGrid = `
+        <div class="filter-grid rarity-grid">
+            <button class="filter-btn rarity-btn" data-rarity="bronze" onclick="handleFilterClick('rarity', 'bronze')" title="${t('rarity.bronze')}"><img loading="lazy" src="img/official/icone_bronze.webp" alt="${t('rarity.bronze')}"></button>
+            <button class="filter-btn rarity-btn" data-rarity="prata" onclick="handleFilterClick('rarity', 'prata')" title="${t('rarity.silver')}"><img loading="lazy" src="img/official/icone_prata.webp" alt="${t('rarity.silver')}"></button>
+            <button class="filter-btn rarity-btn" data-rarity="ouro" onclick="handleFilterClick('rarity', 'ouro')" title="${t('rarity.gold')}"><img loading="lazy" src="img/official/icone_ouro.webp" alt="${t('rarity.gold')}"></button>
+            <button class="filter-btn rarity-btn" data-rarity="diamante" onclick="handleFilterClick('rarity', 'diamante')" title="${t('rarity.diamond')}"><img loading="lazy" src="img/official/icone_diamante.webp" alt="${t('rarity.diamond')}"></button>
+        </div>`;
+
+    const elementGrid = `
+        <div class="filter-grid element-grid">
+            <button class="filter-btn element-btn" data-element="fogo" onclick="handleFilterClick('element', 'fogo')" title="${t('element.fire')}"><img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${t('element.fire')}"></button>
+            <button class="filter-btn element-btn" data-element="agua" onclick="handleFilterClick('element', 'agua')" title="${t('element.water')}"><img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${t('element.water')}"></button>
+            <button class="filter-btn element-btn" data-element="ar" onclick="handleFilterClick('element', 'ar')" title="${t('element.wind')}"><img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${t('element.wind')}"></button>
+            <button class="filter-btn element-btn" data-element="luz" onclick="handleFilterClick('element', 'luz')" title="${t('element.light')}"><img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${t('element.light')}"></button>
+            <button class="filter-btn element-btn" data-element="trevas" onclick="handleFilterClick('element', 'trevas')" title="${t('element.dark')}"><img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${t('element.dark')}"></button>
+            <button class="filter-btn element-btn" data-element="neutro" onclick="handleFilterClick('element', 'neutro')" title="${t('element.neutral')}"><img loading="lazy" src="img/official/ElementalNeutralBackless.webp" alt="${t('element.neutral')}"></button>
+        </div>`;
+
+    const sortSection = `
+        <div class="filter-section center" style="margin: 0 auto; display: flex; align-items: center; gap: 12px;">
+            <div class="sort-header">
+                <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="" style="height: 14px; width: auto;">
+                ${t('filter.organize')}
+            </div>
+            <div class="sort-group grid-2x2">
+                <button class="sort-btn active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
+                <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
+                <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
+                <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
+            </div>
+        </div>`;
+
+    const advancedFilters = `
+        <div class="filter-section right">
+            <div class="advanced-filters-dropdown" id="advanced-filters-dropdown" style="margin-left: 0;">
+                <button class="advanced-filters-btn" onclick="handleToggleAdvancedFilters()">
+                    <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
+                    <span>${t('detail.filters')}</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="advanced-filters-content" id="advanced-filters-content">
+                    <div class="adv-filter-group">
+                        <span class="adv-filter-label">${t('detail.sortBy')}</span>
+                        <div class="sort-group grid-2x2" style="justify-content: flex-start; text-align: left;">
+                            <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
+                            <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
+                        </div>
+                    </div>
+                    <div class="adv-filter-group">
+                        <span class="adv-filter-label">${t('filter.category')}</span>
+                        <div class="sort-group grid-2x2">
+                            <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')"><img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> ${getLocalizedClassName('Ofensivo').toUpperCase()}</button>
+                            <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')"><img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> ${t('filter.supportShort').toUpperCase()}</button>
+                            <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')"><img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> ${getLocalizedClassName('Defensivo').toUpperCase()}</button>
+                            <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')"><img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> ${getLocalizedClassName('Coringa').toUpperCase()}</button>
+                        </div>
+                    </div>
+                    <div class="adv-filter-group" id="adv-filter-effects-pos"><span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span><div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div></div>
+                    <div class="adv-filter-group" id="adv-filter-effects-neg"><span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span><div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div></div>
+                    <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;"><button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAdvanced')}</button></div>
+                </div>
+            </div>
+        </div>`;
+
+    const characterNav = `
+        <div class="filter-section right character-nav">
+            <div class="sort-header" id="char-nav-header">${t('filter.changeCharacter')}</div>
+            <div class="char-dropdown" id="char-dropdown">
+                <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
+                    <span id="current-char-label">${t('filter.chooseCharacter')}</span>
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="char-dropdown-content" id="char-dropdown-content"></div>
+            </div>
+        </div>`;
+
     return `
-        <div class="filter-bar">
-            <!-- Unified Filter/Clear Button -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  DESKTOP FILTER BAR  (display:none on mobile via CSS)  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="filter-bar desktop-filter-bar">
+
             <div class="filter-controls">
                 <button id="main-filter-btn" class="filter-toggle-btn" onclick="handleMainFilterAction()">
                     <div class="btn-icon-wrapper">
@@ -83,147 +169,133 @@ export function createFilterBar() {
                     <span class="text-default">${t('filter.filterBtn')}</span>
                     <span class="text-active">${t('filter.clear')}</span>
                 </button>
-                <button id="desktop-clear-btn" class="clear-filters-btn" onclick="handleClearFilters()" title="${t('filter.clearAll')}">
-                    <img loading="lazy" src="img/official/constraints_no.webp" alt="${t('filter.clear')}">
-                </button>
             </div>
-            
+
             <div class="vertical-separator"></div>
 
-            <!-- Collapsible Filter Content -->
-            <div class="filter-content" id="filter-content">
+            ${rarityGrid}
 
-                <!-- Rarity Grid (2x2) -->
-                <div class="filter-grid rarity-grid">
-                    <button class="filter-btn rarity-btn" data-rarity="bronze"
-                        onclick="handleFilterClick('rarity', 'bronze')" title="${t('rarity.bronze')}">
-                        <img loading="lazy" src="img/official/icone_bronze.webp" alt="${t('rarity.bronze')}">
-                    </button>
-                    <button class="filter-btn rarity-btn" data-rarity="prata"
-                        onclick="handleFilterClick('rarity', 'prata')" title="${t('rarity.silver')}">
-                        <img loading="lazy" src="img/official/icone_prata.webp" alt="${t('rarity.silver')}">
-                    </button>
-                    <button class="filter-btn rarity-btn" data-rarity="ouro"
-                        onclick="handleFilterClick('rarity', 'ouro')" title="${t('rarity.gold')}">
-                        <img loading="lazy" src="img/official/icone_ouro.webp" alt="${t('rarity.gold')}">
-                    </button>
-                    <button class="filter-btn rarity-btn" data-rarity="diamante"
-                        onclick="handleFilterClick('rarity', 'diamante')" title="${t('rarity.diamond')}">
-                        <img loading="lazy" src="img/official/icone_diamante.webp" alt="${t('rarity.diamond')}">
-                    </button>
-                </div>
+            <div class="vertical-separator"></div>
 
-                <div class="vertical-separator"></div>
+            ${elementGrid}
 
-                <!-- Element Grid (3x2) -->
-                <div class="filter-grid element-grid">
-                    <button class="filter-btn element-btn" data-element="fogo"
-                        onclick="handleFilterClick('element', 'fogo')" title="${t('element.fire')}">
-                        <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${t('element.fire')}">
-                    </button>
-                    <button class="filter-btn element-btn" data-element="agua"
-                        onclick="handleFilterClick('element', 'agua')" title="${t('element.water')}">
-                        <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${t('element.water')}">
-                    </button>
-                    <button class="filter-btn element-btn" data-element="ar"
-                        onclick="handleFilterClick('element', 'ar')" title="${t('element.wind')}">
-                        <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${t('element.wind')}">
-                    </button>
-                    <button class="filter-btn element-btn" data-element="luz"
-                        onclick="handleFilterClick('element', 'luz')" title="${t('element.light')}">
-                        <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${t('element.light')}">
-                    </button>
-                    <button class="filter-btn element-btn" data-element="trevas"
-                        onclick="handleFilterClick('element', 'trevas')" title="${t('element.dark')}">
-                        <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${t('element.dark')}">
-                    </button>
-                    <button class="filter-btn element-btn" data-element="neutro"
-                        onclick="handleFilterClick('element', 'neutro')" title="${t('element.neutral')}">
-                        <img loading="lazy" src="img/official/ElementalNeutralBackless.webp" alt="${t('element.neutral')}">
-                    </button>
-                </div>
+            <div class="vertical-separator"></div>
 
-                <div class="vertical-separator"></div>
+            ${sortSection}
 
-                <!-- Sort Section -->
-                <div class="filter-section center" style="margin: 0 auto; display: flex; align-items: center; gap: 12px;">
-                    <div class="sort-header">
-                        <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
-                        ${t('filter.organize')}
+            <div class="vertical-separator"></div>
+
+            ${advancedFilters}
+
+            <div class="vertical-separator"></div>
+
+            ${characterNav}
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!--  MOBILE FILTER BAR  (display:none on desktop via CSS)  -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <div class="filter-bar mobile-filter-bar">
+
+            <!-- ROW 1: Toggle button + icon grids -->
+            <div class="mobile-row mobile-row--icons">
+                <button id="main-filter-btn-mobile" class="filter-toggle-btn filter-toggle-btn--mobile" onclick="handleMainFilterAction()">
+                    <div class="btn-icon-wrapper">
+                        <img loading="lazy" class="icon-default" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
+                        <img loading="lazy" class="icon-active" src="img/official/constraints_no.webp" alt="">
                     </div>
-                    <div class="sort-group grid-2x2">
-                        <button class="sort-btn builds-only active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
-                        <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
-                        <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
-                        <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
+                    <span class="text-default">${t('filter.filterBtn')}</span>
+                    <span class="text-active">${t('filter.clear')}</span>
+                </button>
+                <div class="mobile-icon-separator"></div>
+                <div class="mobile-icon-grids">
+                    <div class="filter-grid rarity-grid">
+                        <button class="filter-btn rarity-btn" data-rarity="bronze" onclick="handleFilterClick('rarity', 'bronze')" title="${t('rarity.bronze')}"><img loading="lazy" src="img/official/icone_bronze.webp" alt="${t('rarity.bronze')}"></button>
+                        <button class="filter-btn rarity-btn" data-rarity="prata" onclick="handleFilterClick('rarity', 'prata')" title="${t('rarity.silver')}"><img loading="lazy" src="img/official/icone_prata.webp" alt="${t('rarity.silver')}"></button>
+                        <button class="filter-btn rarity-btn" data-rarity="ouro" onclick="handleFilterClick('rarity', 'ouro')" title="${t('rarity.gold')}"><img loading="lazy" src="img/official/icone_ouro.webp" alt="${t('rarity.gold')}"></button>
+                        <button class="filter-btn rarity-btn" data-rarity="diamante" onclick="handleFilterClick('rarity', 'diamante')" title="${t('rarity.diamond')}"><img loading="lazy" src="img/official/icone_diamante.webp" alt="${t('rarity.diamond')}"></button>
+                    </div>
+                    <div class="mobile-icon-separator" style="margin: 0 4px; height: 40px;"></div>
+                    <div class="filter-grid element-grid">
+                        <button class="filter-btn element-btn" data-element="fogo" onclick="handleFilterClick('element', 'fogo')" title="${t('element.fire')}"><img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${t('element.fire')}"></button>
+                        <button class="filter-btn element-btn" data-element="agua" onclick="handleFilterClick('element', 'agua')" title="${t('element.water')}"><img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${t('element.water')}"></button>
+                        <button class="filter-btn element-btn" data-element="ar" onclick="handleFilterClick('element', 'ar')" title="${t('element.wind')}"><img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${t('element.wind')}"></button>
+                        <button class="filter-btn element-btn" data-element="luz" onclick="handleFilterClick('element', 'luz')" title="${t('element.light')}"><img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${t('element.light')}"></button>
+                        <button class="filter-btn element-btn" data-element="trevas" onclick="handleFilterClick('element', 'trevas')" title="${t('element.dark')}"><img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${t('element.dark')}"></button>
+                        <button class="filter-btn element-btn" data-element="neutro" onclick="handleFilterClick('element', 'neutro')" title="${t('element.neutral')}"><img loading="lazy" src="img/official/ElementalNeutralBackless.webp" alt="${t('element.neutral')}"></button>
                     </div>
                 </div>
+            </div>
 
-                <div class="vertical-separator"></div>
+            <div class="mobile-divider"></div>
 
-                <div class="filter-section right">
-                    <!-- Advanced Filters Dropdown -->
-                    <div class="advanced-filters-dropdown" id="advanced-filters-dropdown" style="margin-left: 0;">
-                        <button class="advanced-filters-btn" onclick="handleToggleAdvancedFilters()">
-                            <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
-                            <span>${t('detail.filters')}</span>
-                            <span class="dropdown-arrow">▼</span>
-                        </button>
-                        <div class="advanced-filters-content" id="advanced-filters-content">
-                            <div class="adv-filter-group">
-                                <span class="adv-filter-label">${t('detail.sortBy')}</span>
-                                <div class="sort-group">
-                                    <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
-                                    <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
-                                </div>
+            <!-- ROW 2: Sort controls -->
+            <div class="mobile-row mobile-row--sort">
+                <div class="sort-header">
+                    <img loading="lazy" src="img/official/icon_sort.webp" onerror="this.style.display='none'" alt="">
+                    ${t('filter.organize')}
+                </div>
+                <div class="sort-group mobile-sort-group">
+                    <button class="sort-btn active" data-sort="score" onclick="handleSortClick('score')">${scoreLabel}</button>
+                    <button class="sort-btn" data-sort="name" onclick="handleSortClick('name')">${alphaLabel}</button>
+                    <button class="sort-btn builds-only" data-sort="atk" onclick="handleSortClick('atk')">${atkLabel}</button>
+                    <button class="sort-btn builds-only" data-sort="hp" onclick="handleSortClick('hp')">${hpLabel}</button>
+                </div>
+            </div>
+
+            <div class="mobile-divider"></div>
+
+            <!-- ROW 3: Advanced filters -->
+            <div class="mobile-row mobile-row--adv">
+                <div class="advanced-filters-dropdown mobile-adv-dropdown" id="advanced-filters-dropdown-mobile">
+                    <button class="advanced-filters-btn" onclick="handleToggleAdvancedFiltersMobile()">
+                        <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
+                        <span>${t('detail.filters')}</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="advanced-filters-content" id="advanced-filters-content-mobile">
+                        <div class="adv-filter-group">
+                            <span class="adv-filter-label">${t('detail.sortBy')}</span>
+                            <div class="sort-group grid-2x2">
+                                <button class="sort-btn" data-sort="element" onclick="handleSortClick('element')">${elementLabel}</button>
+                                <button class="sort-btn" data-sort="class" onclick="handleSortClick('class')">${categoryLabel}</button>
                             </div>
-                            <div class="adv-filter-group">
-                                <span class="adv-filter-label">${t('filter.category')}</span>
-                                <div class="sort-group">
-                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> OFENSIVO
-                                    </button>
-                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> DEFENSIVO
-                                    </button>
-                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> SUPORTE
-                                    </button>
-                                    <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')">
-                                        <img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> CORINGA
-                                    </button>
-                                </div>
+                        </div>
+                        <div class="adv-filter-group">
+                            <span class="adv-filter-label">${t('filter.category')}</span>
+                            <div class="sort-group grid-2x2">
+                                <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Ofensivo" onclick="handleFilterClick('variantClass', 'Ofensivo')"><img loading="lazy" src="${CLASS_ICONS['Ofensivo']?.icon}" alt=""> ${getLocalizedClassName('Ofensivo').toUpperCase()}</button>
+                                <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Suporte de Utilidade" onclick="handleFilterClick('variantClass', 'Suporte de Utilidade')"><img loading="lazy" src="${CLASS_ICONS['Suporte de Utilidade']?.icon}" alt=""> ${t('filter.supportShort').toUpperCase()}</button>
+                                <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Defensivo" onclick="handleFilterClick('variantClass', 'Defensivo')"><img loading="lazy" src="${CLASS_ICONS['Defensivo']?.icon}" alt=""> ${getLocalizedClassName('Defensivo').toUpperCase()}</button>
+                                <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')"><img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> ${getLocalizedClassName('Coringa').toUpperCase()}</button>
                             </div>
-                            <div class="adv-filter-group" id="adv-filter-effects-pos">
-                                <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span>
-                                <div class="filter-grid effects-grid collapsible-content">
-                                    ${createEffectGrid(buffs, true)}
-                                </div>
-                            </div>
-                            <div class="adv-filter-group" id="adv-filter-effects-neg">
-                                <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span>
-                                <div class="filter-grid effects-grid collapsible-content">
-                                    ${createEffectGrid(debuffs, false)}
-                                </div>
-                            </div>
-                            <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
-                                <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAll')}</button>
-                            </div>
+                        </div>
+                        <div class="adv-filter-group" id="adv-filter-effects-pos-mobile">
+                            <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span>
+                            <div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div>
+                        </div>
+                        <div class="adv-filter-group" id="adv-filter-effects-neg-mobile">
+                            <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span>
+                            <div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div>
+                        </div>
+                        <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
+                            <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAdvanced')}</button>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="vertical-separator"></div>
+            <div class="mobile-divider"></div>
 
-                <!-- Character Navigator -->
-                <div class="filter-section right character-nav">
-                    <div class="sort-header" id="char-nav-header">${t('filter.changeCharacter')}</div>
-                    <div class="char-dropdown" id="char-dropdown">
-                        <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
-                            <span id="current-char-label">${t('filter.chooseCharacter')}</span>
+            <!-- ROW 4: Char nav -->
+            <div class="mobile-row mobile-row--char">
+                <div class="mobile-char-nav">
+                    <div class="char-dropdown" id="char-dropdown-mobile">
+                        <button class="char-dropdown-btn" onclick="handleToggleCharDropdownMobile()">
+                            <span id="current-char-label-mobile">${t('filter.chooseCharacter')}</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
-                        <div class="char-dropdown-content" id="char-dropdown-content">
+                        <div class="char-dropdown-content" id="char-dropdown-content-mobile">
                             <!-- Populated dynamically -->
                         </div>
                     </div>
@@ -237,9 +309,9 @@ export function createFilterBar() {
  * Update filter UI to reflect current state
  */
 export function updateFilterUI() {
-  const state = getState();
-  const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
-  const { filters, sort } = state.tabState[tab];
+    const state = getState();
+    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
+    const { filters, sort } = state.tabState[tab];
 
     // Update Rarity Buttons
     document.querySelectorAll('.rarity-btn').forEach(btn => {
@@ -316,7 +388,7 @@ export function updateFilterUI() {
         }
     });
 
-    // Unified Filter/Clear button logic
+    // Unified Filter/Clear button logic — sync both desktop and mobile buttons
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
         (filters.variantClass && filters.variantClass.length > 0) ||
@@ -324,24 +396,18 @@ export function updateFilterUI() {
         sort.type !== defaultSortType ||
         sort.direction !== defaultSortDir;
 
-    const mainBtn = document.getElementById('main-filter-btn');
-    const desktopClearBtn = document.getElementById('desktop-clear-btn');
-
-    if (mainBtn) {
-        if (hasActiveFilters) {
-            mainBtn.classList.add('can-clear');
-        } else {
-            mainBtn.classList.remove('can-clear');
+    ['main-filter-btn', 'main-filter-btn-mobile'].forEach(id => {
+        const btn = typeof document !== 'undefined' ? document.getElementById(id) : null;
+        if (btn) {
+            btn.classList.toggle('can-clear', hasActiveFilters);
         }
-    }
+    });
 
-    if (desktopClearBtn) {
-        if (hasActiveFilters) {
-            desktopClearBtn.classList.add('visible');
-        } else {
-            desktopClearBtn.classList.remove('visible');
-        }
-    }
+    // Sync mobile effects visibility too
+    ['adv-filter-effects-pos-mobile', 'adv-filter-effects-neg-mobile'].forEach((id, i) => {
+        const el = typeof document !== 'undefined' ? document.getElementById(id) : null;
+        if (el) el.style.display = tab === 'tier' ? 'none' : 'flex';
+    });
 }
 
 /**
@@ -350,48 +416,41 @@ export function updateFilterUI() {
  * @param {string} currentTab - Current tab ('builds' or 'tier')
  */
 export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
-  const dropdownContent = document.getElementById('char-dropdown-content');
-  const currentLabel = document.getElementById('current-char-label');
-  const characters = getCharacters();
+    const characters = getCharacters();
+    if (!characters) return;
 
-  if (!dropdownContent || !characters) return;
-
-    // Update the button label with the current character
+    // Build the label HTML
+    let labelHTML;
     if (currentCharKey === 'todos') {
-        if (currentLabel) {
-            currentLabel.innerHTML = `📋 ${t('characters.allCharacters')}`;
-        }
+        labelHTML = t('characters.allCharacters');
     } else {
         const char = characters[currentCharKey];
-        if (char && currentLabel) {
+        if (char) {
             const masteryIcon = getMasteryIcon(currentCharKey);
-            currentLabel.innerHTML = `
-                <img loading="lazy" src="${masteryIcon}" alt="" style="width:24px; height:24px; object-fit:contain;">
-                ${char.character}
-            `;
+            labelHTML = `<img loading="lazy" src="${masteryIcon}" alt="" style="width:24px; height:24px; object-fit:contain;"> ${char.character}`;
         }
     }
 
-  // Populate the dropdown list
-  const sortedCharKeys = Object.keys(characters).sort((a, b) => {
-    return characters[a].character.localeCompare(characters[b].character);
-  });
+    // Build the dropdown items HTML
+    const sortedCharKeys = Object.keys(characters).sort((a, b) =>
+        characters[a].character.localeCompare(characters[b].character)
+    );
 
-    // Add "Todos" option first
-    let dropdownHTML = `
-        <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
-                onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
-            <span class="todos-icon">📋</span>
-            <span>${t('characters.allCharacters')}</span>
-        </button>
-        <div class="char-dropdown-divider"></div>
-    `;
+    let dropdownHTML = '';
+    if (currentTab !== 'tier') {
+        dropdownHTML += `
+            <button class="char-dropdown-item todos-item ${currentCharKey === 'todos' ? 'active' : ''}" 
+                    onclick="openCharacterDetails('todos', '${currentTab}'); handleToggleCharDropdown();">
+                <span>${t('characters.allCharacters')}</span>
+            </button>
+            <div class="char-dropdown-divider"></div>
+        `;
+    }
 
     dropdownHTML += sortedCharKeys.map(charKey => {
         const charData = characters[charKey];
         const mIcon = getMasteryIcon(charKey);
         const activeClass = charKey === currentCharKey ? 'active' : '';
-
         return `
             <button class="char-dropdown-item ${activeClass}" 
                     onclick="openCharacterDetails('${charKey}', '${currentTab}'); handleToggleCharDropdown();">
@@ -401,7 +460,15 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
         `;
     }).join('');
 
-    dropdownContent.innerHTML = dropdownHTML;
+    // Apply to both desktop and mobile char dropdowns
+    ['char-dropdown-content', 'char-dropdown-content-mobile'].forEach(id => {
+        const content = typeof document !== 'undefined' ? document.getElementById(id) : null;
+        if (content) content.innerHTML = dropdownHTML;
+    });
+    ['current-char-label', 'current-char-label-mobile'].forEach(id => {
+        const label = typeof document !== 'undefined' ? document.getElementById(id) : null;
+        if (label && labelHTML) label.innerHTML = labelHTML;
+    });
 }
 
 // ========== SEARCH FUNCTIONS ==========
@@ -469,7 +536,7 @@ function performSearch(query) {
         for (const variant of variants) {
             const normalizedName = normalizeText(variant.name);
             const normalizedChar = normalizeText(charData.character);
-            
+
             // Search by variant name or character name
             if (normalizedName.includes(normalizedQuery) || normalizedChar.includes(normalizedQuery)) {
                 results.push({
@@ -557,7 +624,7 @@ export function handleSearchResultClick(charKey, variantName) {
     // Navigate to the character
     if (window.openCharacterDetails) {
         window.openCharacterDetails(charKey, 'builds');
-        
+
         // After navigation, scroll to the specific variant card
         if (variantName) {
             setTimeout(() => {
@@ -616,26 +683,26 @@ export function handleFilterClick(type, value) {
 }
 
 export function handleSortClick(sortType) {
-  toggleSort(sortType);
-  updateFilterUI();
-  if (window.onFiltersChanged) {
-    window.onFiltersChanged();
-  }
+    toggleSort(sortType);
+    updateFilterUI();
+    if (window.onFiltersChanged) {
+        window.onFiltersChanged();
+    }
 }
 
 export function handleClearFilters() {
-  clearFilters();
-  updateFilterUI();
-  if (window.onFiltersChanged) {
-    window.onFiltersChanged();
-  }
+    clearFilters();
+    updateFilterUI();
+    if (window.onFiltersChanged) {
+        window.onFiltersChanged();
+    }
 }
 
 export function handleMainFilterAction() {
     const state = getState();
     const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
     const { filters, sort } = state.tabState[tab];
-    
+
     const defaultSortType = tab === 'tier' ? 'class' : 'score';
     const hasActiveFilters = filters.rarity.length > 0 ||
         filters.element.length > 0 ||
@@ -653,33 +720,43 @@ export function handleMainFilterAction() {
 }
 
 export function handleToggleFilter() {
-  const filterContent = document.getElementById('filter-content');
-  const filterBtn = document.getElementById('main-filter-btn');
-  const filterBar = document.querySelector('.filter-bar');
-
-  if (filterContent) {
-    filterContent.classList.toggle('active');
-    filterBtn?.classList.toggle('active');
-    filterBar?.classList.toggle('active');
-  }
+    // Legacy: no-op since desktop filter is always visible and mobile has its own structure
 }
 
 export function handleToggleCharDropdown() {
-  const dropdown = document.getElementById('char-dropdown');
-  const content = document.getElementById('char-dropdown-content');
-  if (dropdown && content) {
-    dropdown.classList.toggle('active');
-    content.classList.toggle('active');
+    const dropdown = document.getElementById('char-dropdown');
+    const content = document.getElementById('char-dropdown-content');
+    if (dropdown && content) {
+        dropdown.classList.toggle('active');
+        content.classList.toggle('active');
 
-    if (content.classList.contains('active')) {
-      const activeItem = content.querySelector('.char-dropdown-item.active');
-      if (activeItem) {
-        setTimeout(() => {
-          activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
-        }, 50);
-      }
+        if (content.classList.contains('active')) {
+            const activeItem = content.querySelector('.char-dropdown-item.active');
+            if (activeItem) {
+                setTimeout(() => {
+                    activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                }, 50);
+            }
+        }
     }
-  }
+}
+
+export function handleToggleCharDropdownMobile() {
+    const dropdown = document.getElementById('char-dropdown-mobile');
+    const content = document.getElementById('char-dropdown-content-mobile');
+    if (dropdown && content) {
+        dropdown.classList.toggle('active');
+        content.classList.toggle('active');
+
+        if (content.classList.contains('active')) {
+            const activeItem = content.querySelector('.char-dropdown-item.active');
+            if (activeItem) {
+                setTimeout(() => {
+                    activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                }, 50);
+            }
+        }
+    }
 }
 
 export function handleToggleAdvancedFilters() {
@@ -691,7 +768,17 @@ export function handleToggleAdvancedFilters() {
     }
 }
 
-// ========== CLOSE DROPDOWNS ON OUTSIDE CLICK / SCROLL ==========
+export function handleToggleAdvancedFiltersMobile() {
+    const dropdown = document.getElementById('advanced-filters-dropdown-mobile');
+    const content = document.getElementById('advanced-filters-content-mobile');
+    if (dropdown && content) {
+        dropdown.classList.toggle('active');
+        content.classList.toggle('active');
+    }
+}
+
+// ========== CLOSE DROPDOWNS ON OUTSIDE CLICK ==========
+if (typeof document !== 'undefined' && document.addEventListener) {
 document.addEventListener('click', (e) => {
     // Search
     const searchContainer = document.getElementById('search-bar-container');
@@ -700,29 +787,45 @@ document.addEventListener('click', (e) => {
         searchDropdown.classList.remove('active');
     }
 
-    // Advanced Filters
+    // Desktop Advanced Filters
     const advDropdown = document.getElementById('advanced-filters-dropdown');
     const advContent = document.getElementById('advanced-filters-content');
     if (advDropdown && advContent && !advDropdown.contains(e.target)) {
         advDropdown.classList.remove('active');
         advContent.classList.remove('active');
     }
-});
 
-window.addEventListener('scroll', () => {
-    // Close advanced filters on scroll
-    const advDropdown = document.getElementById('advanced-filters-dropdown');
-    const advContent = document.getElementById('advanced-filters-content');
-    if (advDropdown && advContent && advContent.classList.contains('active')) {
-        advDropdown.classList.remove('active');
-        advContent.classList.remove('active');
+    // Mobile Advanced Filters
+    const mobileAdvDropdown = document.getElementById('advanced-filters-dropdown-mobile');
+    const mobileAdvContent = document.getElementById('advanced-filters-content-mobile');
+    if (mobileAdvDropdown && mobileAdvContent && !mobileAdvDropdown.contains(e.target)) {
+        mobileAdvDropdown.classList.remove('active');
+        mobileAdvContent.classList.remove('active');
     }
-}, { passive: true });
+
+    // Char dropdown (shared between desktop and mobile via same id)
+    const charDropdown = document.getElementById('char-dropdown');
+    const charContent = document.getElementById('char-dropdown-content');
+    if (charDropdown && charContent && !charDropdown.contains(e.target)) {
+        charDropdown.classList.remove('active');
+        charContent.classList.remove('active');
+    }
+
+    const charDropdownMobile = document.getElementById('char-dropdown-mobile');
+    const charContentMobile = document.getElementById('char-dropdown-content-mobile');
+    if (charDropdownMobile && charContentMobile && !charDropdownMobile.contains(e.target)) {
+        charDropdownMobile.classList.remove('active');
+        charContentMobile.classList.remove('active');
+    }
+});
+}
+
+// Remove scroll listener for advanced filters — only close on click outside
 
 export function handleClearAdvancedFilters() {
-    const state = getState();
-    const tab = state.currentTab === 'tier' ? 'tier' : 'builds';
-    state.tabState[tab].filters.variantClass = [];
-    state.tabState[tab].filters.efeitos = [];
-    import('../state/store.js').then(module => module.notifySubscribers());
+    clearAdvancedFilters();
+    updateFilterUI();
+    if (window.onFiltersChanged) {
+        window.onFiltersChanged();
+    }
 }

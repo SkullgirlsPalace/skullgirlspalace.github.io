@@ -216,18 +216,16 @@
 
 .variant-classes-display {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 .variant-class-wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 4px;
+    gap: 4px;
 }
 
 .variant-class-label {
@@ -261,6 +259,11 @@
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
 
+/* Mobile variant classes are hidden on desktop by default */
+.mobile-classes {
+    display: none;
+}
+
 
 /* Exclusive Badge Styling */
 .exclusive-badge {
@@ -271,28 +274,13 @@
     align-items: center;
     gap: 8px;
     background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     padding: 6px 12px;
     border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    max-width: 72px; /* Only show icon initially */
-    overflow: hidden;
-}
-
-.exclusive-badge.shifted {
-    right: 90px;
-}
-
-.exclusive-badge:hover,
-.exclusive-badge.expanded {
-    border-color: var(--accent-gold);
-    background: linear-gradient(135deg, rgba(30, 30, 35, 0.98), rgba(10, 10, 15, 0.9));
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 168, 75, 0.2);
-    max-width: 400px; /* Expand to show text */
+    cursor: default;
 }
 
 .exclusive-icon {
@@ -302,37 +290,77 @@
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
 }
 
-.exclusive-text-group {
+.exclusive-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.exclusive-overlay.active {
+    display: flex;
+}
+
+.exclusive-overlay-content {
+    background: linear-gradient(135deg, rgba(30, 30, 40, 0.98), rgba(15, 15, 20, 0.98));
+    border: 1px solid var(--accent-gold);
+    border-radius: 16px;
+    padding: 32px 28px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.3s ease;
-    transition-delay: 0s;
+    align-items: center;
+    gap: 12px;
+    max-width: 300px;
+    width: 85vw;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 168, 75, 0.15);
+    position: relative;
+    cursor: default;
 }
 
-.exclusive-badge:hover .exclusive-text-group,
-.exclusive-badge.expanded .exclusive-text-group {
-    opacity: 1;
-    transition-delay: 0.15s;
+.exclusive-overlay-icon {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
 }
 
-.exclusive-label {
+.exclusive-overlay-label {
     font-family: 'Dodam', 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     color: var(--accent-gold);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    line-height: 1.1;
+    letter-spacing: 1px;
 }
 
-.exclusive-source {
+.exclusive-overlay-source {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    white-space: nowrap;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.exclusive-overlay-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.exclusive-overlay-close:hover {
+    color: #fff;
 }
 
 /* New Badge Styling */

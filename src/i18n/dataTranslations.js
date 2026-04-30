@@ -19,7 +19,7 @@ async function loadKrazeteEN() {
   if (krazeteEN) return krazeteEN;
 
   try {
-    const res = await fetch('data/krazete/stanleyDB_ENGLISH.json');
+    const res = await fetch('data/krazete/ENGLISH-Variants.json');
     krazeteEN = await res.json();
     return krazeteEN;
   } catch (err) {
@@ -36,7 +36,7 @@ async function loadKrazetePTBR() {
   if (krazetePTBR) return krazetePTBR;
 
   try {
-    const res = await fetch('data/krazete/stanleyDB_PT-BR.json');
+    const res = await fetch('data/krazete/PT-BR-Variantes.json');
     krazetePTBR = await res.json();
     return krazetePTBR;
   } catch (err) {
