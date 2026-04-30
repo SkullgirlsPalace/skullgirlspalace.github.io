@@ -510,6 +510,11 @@
     text-transform: uppercase;
 }
 
+.legend-title.iluminado {
+    color: var(--accent-gold);
+    text-shadow: 0 0 8px rgba(212, 168, 75, 0.6);
+}
+
 .legend-toggle-btn {
     background: transparent;
     border: none;

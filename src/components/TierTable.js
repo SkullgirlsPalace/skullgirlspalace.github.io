@@ -200,11 +200,11 @@ export function createTierView(charKey, charData) {
 
   <!-- Rank Explanations Dictionary -->
   <div class="legend-section">
-    <div class="legend-header">
-      <span class="legend-title">${t('tier.notes')}</span>
-      <button class="legend-toggle-btn" onclick="toggleLegendSection('rank-dict')">\u25BC</button>
+    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('rank-dict')">
+      <span class="legend-title iluminado">${t('tier.notes')}</span>
+      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
     </div>
-    <div class="rank-dictionary" id="rank-dict">
+    <div class="rank-dictionary hidden" id="rank-dict">
       <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
         <p>${t('tier.rankSS')}</p>
       </div>
@@ -231,11 +231,11 @@ export function createTierView(charKey, charData) {
 
   <!-- Class Role Legend -->
   <div class="legend-section">
-    <div class="legend-header">
-      <span class="legend-title">${t('tier.classes')}</span>
-      <button class="legend-toggle-btn" onclick="toggleLegendSection('class-dict')">\u25BC</button>
+    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('class-dict')">
+      <span class="legend-title iluminado">${t('tier.classes')}</span>
+      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
     </div>
-    <div class="class-dictionary" id="class-dict">
+    <div class="class-dictionary hidden" id="class-dict">
       ${Object.entries(CLASS_ICONS).map(([cls, info]) => {
     return `
       <div class="class-dict-item">

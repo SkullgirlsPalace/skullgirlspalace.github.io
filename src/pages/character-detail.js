@@ -340,8 +340,8 @@ export async function switchTab(charKey, tab) {
         );
         const firstCharKey = sortedKeys[0] || 'annie';
         
-        window.history.replaceState(null, '', `#character/${firstCharKey}/tier`);
-        return init(firstCharKey, 'tier');
+        const { navigateTo } = await import('../router.js');
+        return navigateTo(`character/${firstCharKey}/tier`);
     }
 
     const state = getState();
