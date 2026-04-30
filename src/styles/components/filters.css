@@ -411,9 +411,7 @@
     display: none;
 }
 
-.hide-on-mobile {
-    /* Only relevant inside desktop-filter-bar; mobile bar has its own structure */
-}
+
 
 .filter-controls {
     display: flex;

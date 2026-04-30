@@ -419,8 +419,6 @@
         gap: 8px;
         margin-bottom: 20px;
         padding-bottom: 6px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
     }
 
     .guide-tabs::-webkit-scrollbar {
@@ -436,7 +434,6 @@
     /* Effects table */
     .effects-table-container {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
     .effects-table th,
@@ -615,7 +612,7 @@
 
     .tier-label {
         width: 100%;
-        min-height: auto;
+        min-height: 0;
         padding: 12px;
     }
 
@@ -648,7 +645,6 @@
 
     .tier-table-wrapper {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
         margin-left: 0;
         justify-content: flex-start;
     }
@@ -833,8 +829,6 @@
     .extras-sub-tabs {
         width: 100%;
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
         flex-wrap: nowrap;
         justify-content: flex-start;
     }
