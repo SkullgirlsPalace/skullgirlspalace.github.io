@@ -794,7 +794,15 @@
     }
 
     .char-dropdown {
+        width: 100%;
         min-width: 100%;
+        max-width: none;
+    }
+
+    #char-dropdown-content-mobile {
+        width: 100%;
+        left: 0;
+        transform: none;
         max-width: none;
     }
 
@@ -971,6 +979,11 @@
         height: 44px;
     }
 
+    .advanced-filters-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .advanced-filters-content .class-filter-btn {
         padding: 10px 14px;
         font-size: 0.78rem;
@@ -978,34 +991,44 @@
 
     /* Fix effects grid overlap on mobile */
     .advanced-filters-content .effects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 8px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns ensure enough space for text */
+        gap: 12px;
         max-height: 450px;
         overflow-y: auto;
-        padding: 15px 4px 15px 4px; /* Sufficient padding to prevent cut-offs */
+        padding: 15px 4px;
+        width: 100%;
     }
 
     .advanced-filters-content .effect-btn {
-        min-width: 76px;
-        padding: 8px 4px 6px;
+        min-width: 0;
+        width: 100%;
+        min-height: 90px;
+        padding: 10px 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
     }
 
     .advanced-filters-content .effect-btn img {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 6px;
     }
 
     .advanced-filters-content .effect-label {
-        font-size: 0.75rem; 
-        max-width: 100%;
+        font-size: 0.7rem; 
+        width: 100%;
+        text-align: center;
         word-wrap: break-word;
         word-break: break-word;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: none;
-        letter-spacing: normal;
-        color: var(--text-primary);
-        line-height: 1.2;
-        margin-top: 2px;
+        color: var(--text-secondary);
+        line-height: 1.1;
     }
 
     /* Advanced filters content full width on mobile */

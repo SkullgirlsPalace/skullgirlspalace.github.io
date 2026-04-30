@@ -248,7 +248,7 @@ export function createFilterBar() {
             <!-- ROW 3: Advanced filters -->
             <div class="mobile-row mobile-row--adv">
                 <div class="advanced-filters-dropdown mobile-adv-dropdown" id="advanced-filters-dropdown-mobile">
-                    <button class="advanced-filters-btn" onclick="handleToggleAdvancedFiltersMobile()" style="width: 100%; justify-content: center;">
+                    <button class="advanced-filters-btn" onclick="handleToggleAdvancedFiltersMobile()">
                         <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
                         <span>${t('detail.filters')}</span>
                         <span class="dropdown-arrow">▼</span>
@@ -289,13 +289,13 @@ export function createFilterBar() {
 
             <!-- ROW 4: Char nav -->
             <div class="mobile-row mobile-row--char">
-                <div class="mobile-char-nav" style="align-items: center; width: 100%;">
-                    <div class="char-dropdown" id="char-dropdown-mobile" style="width: 100%;">
-                        <button class="char-dropdown-btn" onclick="handleToggleCharDropdownMobile()" style="width: 100%; justify-content: center;">
+                <div class="mobile-char-nav">
+                    <div class="char-dropdown" id="char-dropdown-mobile">
+                        <button class="char-dropdown-btn" onclick="handleToggleCharDropdownMobile()">
                             <span id="current-char-label-mobile">${t('filter.chooseCharacter')}</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
-                        <div class="char-dropdown-content" id="char-dropdown-content-mobile" style="left: 50%; transform: translateX(-50%); width: max-content; min-width: 200px;">
+                        <div class="char-dropdown-content" id="char-dropdown-content-mobile">
                             <!-- Populated dynamically -->
                         </div>
                     </div>
