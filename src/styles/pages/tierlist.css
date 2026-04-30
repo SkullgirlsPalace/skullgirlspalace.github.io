@@ -187,6 +187,7 @@
     color: #fff;
     flex-shrink: 0;
     transition: all var(--transition-fast);
+    -webkit-user-select: none;
     user-select: none;
     cursor: default;
 }
@@ -395,6 +396,7 @@
     z-index: 1000;
     display: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -556,6 +558,7 @@
     position: fixed;
     z-index: 10000;
     background: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border: 1px solid var(--accent-gold);
     border-radius: 12px;

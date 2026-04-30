@@ -44,8 +44,8 @@
         bottom: 0;
         width: 65%;
         background: rgba(15, 15, 20, 0.95);
-        backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 32px 24px;
         gap: 20px;
@@ -794,12 +794,12 @@
     /* Character nav dropdown on mobile */
     .character-nav {
         width: 100%;
-        max-width: 220px;
+        max-width: none;
     }
 
     .char-dropdown {
         min-width: 100%;
-        max-width: 220px;
+        max-width: none;
     }
 
     .char-dropdown-btn {
@@ -984,26 +984,34 @@
 
     /* Fix effects grid overlap on mobile */
     .advanced-filters-content .effects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(76px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
         gap: 8px;
-        max-height: 250px;
+        max-height: 450px;
         overflow-y: auto;
+        padding: 15px 4px 15px 4px; /* Sufficient padding to prevent cut-offs */
     }
 
     .advanced-filters-content .effect-btn {
-        min-width: 72px;
-        padding: 6px 4px 5px;
+        min-width: 76px;
+        padding: 8px 4px 6px;
     }
 
     .advanced-filters-content .effect-btn img {
-        width: 24px;
-        height: 28px;
+        width: 36px;
+        height: 36px;
     }
 
     .advanced-filters-content .effect-label {
-        font-size: 0.62rem;
+        font-size: 0.75rem; 
         max-width: 100%;
+        word-wrap: break-word;
         word-break: break-word;
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: normal;
+        color: var(--text-primary);
+        line-height: 1.2;
+        margin-top: 2px;
     }
 
     /* Advanced filters content full width on mobile */
