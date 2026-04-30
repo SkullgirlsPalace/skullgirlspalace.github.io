@@ -8,7 +8,7 @@ import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switch
 import { loadAllCharacters, loadTierData, loadExtrasData } from './services/dataService.js';
 import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer, handleToggleLanguageMenu, handleSelectLanguage } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
-import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction, handleToggleAdvancedFilters, handleClearAdvancedFilters } from './components/FilterBar.js';
+import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleToggleCharDropdownMobile, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction, handleToggleAdvancedFilters, handleToggleAdvancedFiltersMobile, handleClearAdvancedFilters } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
 import { initAttributeTooltips } from './components/AttributeTooltip.js';
 
@@ -42,7 +42,9 @@ window.handleSortClick = handleSortClick;
 window.handleClearFilters = handleClearFilters;
 window.handleToggleFilter = handleToggleFilter;
 window.handleToggleCharDropdown = handleToggleCharDropdown;
+window.handleToggleCharDropdownMobile = handleToggleCharDropdownMobile;
 window.handleToggleAdvancedFilters = handleToggleAdvancedFilters;
+window.handleToggleAdvancedFiltersMobile = handleToggleAdvancedFiltersMobile;
 
 // Search handlers
 window.handleSearchInput = handleSearchInput;

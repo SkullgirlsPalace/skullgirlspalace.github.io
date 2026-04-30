@@ -204,6 +204,8 @@ export function createFilterBar() {
                         <img loading="lazy" class="icon-default" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
                         <img loading="lazy" class="icon-active" src="img/official/constraints_no.webp" alt="">
                     </div>
+                    <span class="text-default">${t('filter.filterBtn')}</span>
+                    <span class="text-active">${t('filter.clear')}</span>
                 </button>
                 <div class="mobile-icon-separator"></div>
                 <div class="mobile-icon-grids">
@@ -242,10 +244,10 @@ export function createFilterBar() {
 
             <div class="mobile-divider"></div>
 
-            <!-- ROW 3: Advanced filters + Char nav -->
-            <div class="mobile-row mobile-row--controls">
+            <!-- ROW 3: Advanced filters -->
+            <div class="mobile-row mobile-row--adv">
                 <div class="advanced-filters-dropdown mobile-adv-dropdown" id="advanced-filters-dropdown-mobile">
-                    <button class="advanced-filters-btn" onclick="handleToggleAdvancedFiltersMobile()">
+                    <button class="advanced-filters-btn" onclick="handleToggleAdvancedFiltersMobile()" style="width: 100%; justify-content: center;">
                         <img loading="lazy" src="img/official/icon_filter.webp" onerror="this.src='img/official/filter.webp'" alt="">
                         <span>${t('detail.filters')}</span>
                         <span class="dropdown-arrow">▼</span>
@@ -280,17 +282,19 @@ export function createFilterBar() {
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="mobile-controls-separator"></div>
+            <div class="mobile-divider"></div>
 
-                <div class="mobile-char-nav">
-                    <div class="sort-header">${t('filter.changeCharacter')}</div>
-                    <div class="char-dropdown" id="char-dropdown">
-                        <button class="char-dropdown-btn" onclick="handleToggleCharDropdown()">
-                            <span id="current-char-label">${t('filter.chooseCharacter')}</span>
+            <!-- ROW 4: Char nav -->
+            <div class="mobile-row mobile-row--char">
+                <div class="mobile-char-nav" style="align-items: center; width: 100%;">
+                    <div class="char-dropdown" id="char-dropdown-mobile" style="width: 100%;">
+                        <button class="char-dropdown-btn" onclick="handleToggleCharDropdownMobile()" style="width: 100%; justify-content: center;">
+                            <span id="current-char-label-mobile">${t('filter.chooseCharacter')}</span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
-                        <div class="char-dropdown-content" id="char-dropdown-content">
+                        <div class="char-dropdown-content" id="char-dropdown-content-mobile" style="left: 50%; transform: translateX(-50%); width: max-content; min-width: 200px;">
                             <!-- Populated dynamically -->
                         </div>
                     </div>
@@ -456,11 +460,11 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
     }).join('');
 
     // Apply to both desktop and mobile char dropdowns
-    ['char-dropdown-content'].forEach(id => {
+    ['char-dropdown-content', 'char-dropdown-content-mobile'].forEach(id => {
         const content = document.getElementById(id);
         if (content) content.innerHTML = dropdownHTML;
     });
-    ['current-char-label'].forEach(id => {
+    ['current-char-label', 'current-char-label-mobile'].forEach(id => {
         const label = document.getElementById(id);
         if (label && labelHTML) label.innerHTML = labelHTML;
     });
@@ -736,6 +740,24 @@ export function handleToggleCharDropdown() {
     }
 }
 
+export function handleToggleCharDropdownMobile() {
+    const dropdown = document.getElementById('char-dropdown-mobile');
+    const content = document.getElementById('char-dropdown-content-mobile');
+    if (dropdown && content) {
+        dropdown.classList.toggle('active');
+        content.classList.toggle('active');
+
+        if (content.classList.contains('active')) {
+            const activeItem = content.querySelector('.char-dropdown-item.active');
+            if (activeItem) {
+                setTimeout(() => {
+                    activeItem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                }, 50);
+            }
+        }
+    }
+}
+
 export function handleToggleAdvancedFilters() {
     const dropdown = document.getElementById('advanced-filters-dropdown');
     const content = document.getElementById('advanced-filters-content');
@@ -785,6 +807,13 @@ document.addEventListener('click', (e) => {
     if (charDropdown && charContent && !charDropdown.contains(e.target)) {
         charDropdown.classList.remove('active');
         charContent.classList.remove('active');
+    }
+
+    const charDropdownMobile = document.getElementById('char-dropdown-mobile');
+    const charContentMobile = document.getElementById('char-dropdown-content-mobile');
+    if (charDropdownMobile && charContentMobile && !charDropdownMobile.contains(e.target)) {
+        charDropdownMobile.classList.remove('active');
+        charContentMobile.classList.remove('active');
     }
 });
 

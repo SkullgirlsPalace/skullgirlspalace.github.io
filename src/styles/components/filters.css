@@ -319,15 +319,14 @@
 .mobile-row--sort {
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 2px 0;
 }
 
-.mobile-row--controls {
-    gap: 0;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+.mobile-row--adv, .mobile-row--char {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 /* Thin horizontal divider between mobile rows */
@@ -342,17 +341,7 @@
 /* Vertical thin line between toggle btn and icon grids on mobile */
 .mobile-icon-separator {
     width: 1px;
-    height: 38px;
-    background: rgba(255, 255, 255, 0.15);
-    margin: 0 10px;
-    flex-shrink: 0;
-    align-self: center;
-}
-
-/* Vertical thin line between adv-filters and char nav on mobile row 3 */
-.mobile-controls-separator {
-    width: 1px;
-    height: 38px;
+    height: 48px;
     background: rgba(255, 255, 255, 0.15);
     margin: 0 10px;
     flex-shrink: 0;
@@ -390,24 +379,16 @@
 }
 
 .filter-toggle-btn--mobile {
-    padding: 8px;
+    padding: 6px 12px;
     min-width: auto;
     flex-shrink: 0;
 }
 
-.filter-toggle-btn--mobile span {
-    display: none;
-}
-
 .filter-toggle-btn--mobile img {
-    height: 20px;
+    height: 18px;
     margin: 0;
 }
 
-.mobile-sort-group {
-    gap: 4px;
-    flex-wrap: wrap;
-}
 
 /* Legacy desktop-only helpers */
 .horizontal-divider-mobile {
@@ -794,6 +775,13 @@
     display: flex;
     gap: 4px;
     flex-wrap: wrap;
+}
+
+.sort-group.mobile-sort-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    flex: 1;
 }
 
 .sort-group.grid-2x2 {
