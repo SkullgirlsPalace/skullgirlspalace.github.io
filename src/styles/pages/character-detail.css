@@ -5,8 +5,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 40px;
-    padding-top: 15px;
+    margin-bottom: 32px;
+    padding-top: 12px;
 }
 
 /* Top row: title left + search right */
@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     position: relative;
 }
 
@@ -201,7 +201,7 @@
 @media (max-width: 768px) {
     .character-detail-header {
         padding-left: 0;
-        padding-top: 50px;
+        padding-top: 75px; /* Increased to give space below the floating search bar */
     }
 
     .header-top-row {
@@ -240,17 +240,17 @@
 
     .char-title-row h2,
     .char-title-centered h2 {
-        font-size: 1.8rem;
+        font-size: 2.2rem; /* Increased size */
         white-space: normal;
         text-align: center;
         line-height: 1.1;
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
 
     .char-title-row .char-select-icon,
     .char-title-centered .char-mastery-icon {
-        width: 44px;
-        height: 44px;
+        width: 56px; /* Increased size */
+        height: 56px;
     }
 
     .search-bar-container {

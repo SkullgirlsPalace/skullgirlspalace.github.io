@@ -706,8 +706,7 @@
 
     .character-detail-header {
         position: relative;
-        margin-bottom: 24px !important;
-        padding-top: 65px !important;
+        margin-bottom: 12px !important;
         padding-bottom: 0 !important;
     }
 
@@ -745,23 +744,8 @@
     }
 
     .char-title-row h2 {
-        font-size: 1.5rem !important;
+        font-size: 1.1rem !important;
         white-space: nowrap;
-    }
-
-    .char-title-row .char-select-icon {
-        width: 58px !important;
-        height: 58px !important;
-    }
-
-    .header-middle-row {
-        margin-top: 10px;
-        margin-bottom: 18px !important;
-    }
-
-    .char-info-btn-centered {
-        padding: 8px 18px !important;
-        font-size: 0.85rem !important;
     }
 
     .header-top-row .btn-back {
