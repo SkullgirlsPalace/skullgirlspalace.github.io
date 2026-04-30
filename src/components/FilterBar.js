@@ -397,7 +397,7 @@ export function updateFilterUI() {
         sort.direction !== defaultSortDir;
 
     ['main-filter-btn', 'main-filter-btn-mobile'].forEach(id => {
-        const btn = document.getElementById(id);
+        const btn = typeof document !== 'undefined' ? document.getElementById(id) : null;
         if (btn) {
             btn.classList.toggle('can-clear', hasActiveFilters);
         }
@@ -405,7 +405,7 @@ export function updateFilterUI() {
 
     // Sync mobile effects visibility too
     ['adv-filter-effects-pos-mobile', 'adv-filter-effects-neg-mobile'].forEach((id, i) => {
-        const el = document.getElementById(id);
+        const el = typeof document !== 'undefined' ? document.getElementById(id) : null;
         if (el) el.style.display = tab === 'tier' ? 'none' : 'flex';
     });
 }
@@ -462,11 +462,11 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
 
     // Apply to both desktop and mobile char dropdowns
     ['char-dropdown-content', 'char-dropdown-content-mobile'].forEach(id => {
-        const content = document.getElementById(id);
+        const content = typeof document !== 'undefined' ? document.getElementById(id) : null;
         if (content) content.innerHTML = dropdownHTML;
     });
     ['current-char-label', 'current-char-label-mobile'].forEach(id => {
-        const label = document.getElementById(id);
+        const label = typeof document !== 'undefined' ? document.getElementById(id) : null;
         if (label && labelHTML) label.innerHTML = labelHTML;
     });
 }
@@ -778,6 +778,7 @@ export function handleToggleAdvancedFiltersMobile() {
 }
 
 // ========== CLOSE DROPDOWNS ON OUTSIDE CLICK ==========
+if (typeof document !== 'undefined' && document.addEventListener) {
 document.addEventListener('click', (e) => {
     // Search
     const searchContainer = document.getElementById('search-bar-container');
@@ -817,6 +818,7 @@ document.addEventListener('click', (e) => {
         charContentMobile.classList.remove('active');
     }
 });
+}
 
 // Remove scroll listener for advanced filters — only close on click outside
 

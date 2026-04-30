@@ -31,6 +31,7 @@ vi.stubGlobal('window', {
 
 vi.stubGlobal('document', {
   getElementById: vi.fn(() => ({ innerHTML: '', classList: { remove: vi.fn() } })),
+  addEventListener: vi.fn(),
 });
 
 describe('router.js', () => {

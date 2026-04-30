@@ -40,6 +40,7 @@ vi.mock('../../../src/components/VariantCard.js', () => ({
 
 vi.mock('../../../src/components/FilterBar.js', () => ({
   createFilterBar: vi.fn(() => '<div class="filter-bar-mock"></div>'),
+  createSearchBar: vi.fn(() => ''),
   updateFilterUI: vi.fn(),
   updateCharacterNav: vi.fn(),
 }));
@@ -140,10 +141,10 @@ describe('character-detail.js page', () => {
       expect(section).not.toBeNull();
     });
 
-    it('should display the character name in uppercase', () => {
-      const h2 = document.querySelector('.char-title-centered h2');
+    it('should display the character name', () => {
+      const h2 = document.querySelector('.char-title-row h2');
       expect(h2).not.toBeNull();
-      expect(h2.textContent.trim()).toBe('FILIA');
+      expect(h2.textContent.trim()).toBe('Filia');
     });
 
     it('should render the BUILDS tab button', () => {

@@ -71,7 +71,7 @@ describe('home.js page', () => {
     });
 
     it('should render the about link', () => {
-      const aboutLink = document.querySelector('.hub-about-link');
+      const aboutLink = document.querySelector('.home-about-link');
       expect(aboutLink).not.toBeNull();
     });
 
