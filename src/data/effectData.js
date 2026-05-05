@@ -663,3 +663,23 @@ export function getLocalizedEffect(key, lang) {
     explicacao: effect.explicacao_en || effect.explicacao
   };
 }
+
+/**
+ * Retorna a URL do ícone de um efeito com base no seu nome localizado.
+ * @param {string} effectName 
+ * @returns {string|null}
+ */
+export function getEffectIconByName(effectName) {
+  if (!effectName) return null;
+  const normalized = effectName.trim().toLowerCase();
+  
+  // Remover multiplicadores como (x2) ou (x3) para a busca
+  const cleanName = normalized.replace(/\s*\([^)]+\)$/, '').trim();
+  
+  for (const effect of Object.values(EFFECT_DATA)) {
+    if (effect.keys && effect.keys.some(k => k.toLowerCase() === cleanName)) {
+      return effect.icon || null;
+    }
+  }
+  return null;
+}

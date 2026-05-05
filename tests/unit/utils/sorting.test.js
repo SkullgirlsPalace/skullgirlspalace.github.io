@@ -1,5 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { sortVariants, filterVariants, flattenVariants } from '../../../src/utils/sorting.js';
+import { sortVariants, filterVariants } from '../../../src/utils/sorting.js';
+import { flattenVariants } from '../../../src/utils/variantUtils.js';
 
 // Mock constants
 vi.mock('../../../src/config/constants.js', () => ({
@@ -28,7 +29,8 @@ vi.mock('../../../src/data/variantClasses.js', () => ({
 
 // Mock newContent
 vi.mock('../../../src/data/newContent.js', () => ({
-  isNewVariant: vi.fn(() => false)
+  isNewVariant: vi.fn(() => false),
+  NEW_VARIANTS: []
 }));
 
 describe('sorting.js', () => {

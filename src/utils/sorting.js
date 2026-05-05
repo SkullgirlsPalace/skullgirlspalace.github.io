@@ -6,7 +6,8 @@
 import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js';
 import { parseStatValue } from './formatters.js';
 import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
-import { isNewVariant } from '../data/newContent.js';
+import { isNewVariant, NEW_VARIANTS } from '../data/newContent.js';
+import { flattenVariants } from './variantUtils.js';
 import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
 
 /**
@@ -34,12 +35,17 @@ export function sortVariants(variants, sortConfig, filters = null) {
             if (isANew !== isBNew) {
                 return isANew ? -1 : 1; 
             }
-            // Among New variants, sort alphabetically by character name
+            // Among New variants, sort by their order in NEW_VARIANTS array
             if (isANew && isBNew) {
-                const charNameA = (a._charName || a.name).toLowerCase();
-                const charNameB = (b._charName || b.name).toLowerCase();
-                const cmp = charNameA.localeCompare(charNameB);
-                if (cmp !== 0) return cmp;
+                const getNewIndex = (name) => {
+                    const norm = name.trim().toLowerCase();
+                    return NEW_VARIANTS.findIndex(v => v.toLowerCase() === norm);
+                };
+                const indexA = getNewIndex(a.name);
+                const indexB = getNewIndex(b.name);
+                if (indexA !== -1 && indexB !== -1) {
+                    return indexA - indexB;
+                }
             }
         }
 
@@ -145,19 +151,4 @@ export function filterVariants(variants, filters) {
     return filtered;
 }
 
-/**
- * Flatten variants from nested rarity structure
- * @param {Object} variantsObj - { diamante: [...], ouro: [...], ... }
- * @returns {Array} Flat array with rarityKey added to each variant
- */
-export function flattenVariants(variantsObj) {
-    if (!variantsObj) return [];
 
-    const allVariants = [];
-    Object.entries(variantsObj).forEach(([rarity, variants]) => {
-        variants.forEach(v => {
-            allVariants.push({ ...v, rarityKey: rarity });
-        });
-    });
-    return allVariants;
-}

@@ -4,13 +4,16 @@
 // =====================================================
 
 import { getCharacter } from '../services/dataService.js';
-import { flattenVariants } from '../utils/sorting.js';
+import { flattenVariants } from '../utils/variantUtils.js';
 
 // Nomes das variantes que ganharam destaque NEW
 export const NEW_VARIANTS = [
-    "Poder Floral",
-    "Ouro Maciço",
-    "Guardião do Cometa"
+    "Fluxo de Mana",
+    "Vira a balança",
+    "Mana Flow",
+    "Scale Tipper",
+    "Isca Sortuda",
+    "Lucky Lure"
 ];
 
 /**
@@ -19,7 +22,9 @@ export const NEW_VARIANTS = [
  * @returns {boolean}
  */
 export function isNewVariant(variantName) {
-    return NEW_VARIANTS.includes(variantName);
+    if (!variantName) return false;
+    const normalizedName = variantName.trim().toLowerCase();
+    return NEW_VARIANTS.some(name => name.toLowerCase() === normalizedName);
 }
 
 /**

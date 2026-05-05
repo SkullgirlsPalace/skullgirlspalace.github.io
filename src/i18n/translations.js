@@ -375,8 +375,8 @@ export const translations = {
  },
   tooltip: {
     element: 'Elemento',
-    buffEffect: 'Efeito Buff',
-    debuffEffect: 'Efeito Debuff',
+    buffEffect: 'Efeito Positivo',
+    debuffEffect: 'Efeito Negativo',
     elementEffects: 'Efeitos por Elemento',
     clickForDetails: 'Clique para detalhes',
     max: 'Máx: {value}',

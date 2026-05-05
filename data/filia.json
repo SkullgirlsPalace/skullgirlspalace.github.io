@@ -224,6 +224,28 @@
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
                 "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
+            },
+            {
+                "name": "Vira a balança",
+                "title_formatted": "Vira a balança - Trevas - Ouro",
+                "element": "Trevas",
+                "color_hex": "#800080",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/filia/Scale_Tipper.webp"
+                },
+                "stats": {
+                    "attack": "9,293",
+                    "health": "63,572",
+                    "power": "23,501"
+                },
+                "signature_ability": {
+                    "name": "BALANÇA DA OBEDIÊNCIA",
+                    "description": "[HAB 1]: **Enquanto Filia tiver mais EFEITOS POSITIVOS ou menos EFEITOS NEGATIVOS que o oponente**, transfere 1 EFEITO POSITIVO do oponente a cada 2 segundos e inflige 1 EFEITO NEGATIVO aleatório por segundo durante 7 segundos.\n\n[HAB 2]: **Quando o total de EFEITOS POSITIVOS e EFEITOS NEGATIVOS entre os dois lutadores for maior ou igual a 17**, o oponente sofre PERDIÇÃO permanente por 10 segundos, ignorando todos os efeitos que impedem EFEITOS NEGATIVOS."
+                },
+                "marquee_ability": "Sanguessuga",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Senta a Pua!, Espinho Trançado, Espinho Trançado, Espinho Trançado, Espinho Trançado"
             }
         ],
         "prata": [

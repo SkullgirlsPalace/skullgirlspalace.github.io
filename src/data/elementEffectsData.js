@@ -21,7 +21,7 @@ export const ELEMENT_EFFECTS = {
       "Ar": ["Regenera\u00e7\u00e3o"],
       "Fogo": ["Inabal\u00e1vel"],
       "\u00c1gua": ["Acelera\u00e7\u00e3o"],
-      "Trevas": ["F\u00faria"],
+      "Trevas": ["Olho-Morto"],
       "Luz": ["Precis\u00e3o"],
       "Neutro": ["Barreira"]
     },
@@ -29,7 +29,7 @@ export const ELEMENT_EFFECTS = {
       "Wind": ["Regen"],
       "Fire": ["Unflinching"],
       "Water": ["Haste"],
-      "Dark": ["Enrage"],
+      "Dark": ["Deadeye"],
       "Light": ["Precision"],
       "Neutral": ["Barrier"]
     }

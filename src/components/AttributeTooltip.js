@@ -5,7 +5,7 @@
 // =====================================================
 
 import { getLocalizedAttribute } from '../data/attributeData.js';
-import { getLocalizedEffect } from '../data/effectData.js';
+import { getLocalizedEffect, getEffectIconByName } from '../data/effectData.js';
 import { getMoveData } from '../data/movesimages.js';
 import { getElementEffects } from '../data/elementEffectsData.js';
 import { getElementMap, getLocalizedElementName, elementToPT } from '../config/constants.js';
@@ -102,48 +102,63 @@ function buildElementTableHTML(data, compact = false) {
 
  const elementMap = getElementMap();
 
- let rows = elements.map(el => {
- // ELEMENT_MAP may need a PT-BR key for icon lookup; convert EN keys if needed
- const lookupKey = elementMap[el] ? el : elementToPT(el);
- const elInfo = elementMap[lookupKey];
- if (!elInfo) return '';
- const buffs = (data.buffs && data.buffs[el]) || [];
- const debuffs = (data.debuffs && data.debuffs[el]) || [];
- if (buffs.length === 0 && debuffs.length === 0) return '';
+  const formatEffects = (effects) => {
+    if (!effects || effects.length === 0) return '\u2014';
+    return effects.map(name => {
+      const iconUrl = getEffectIconByName(name);
+      if (iconUrl) {
+        return `<span style="display:inline-flex; align-items:center; gap:4px;"><img src="${iconUrl}" style="width:20px;height:20px;object-fit:contain;" alt="">${name}</span>`;
+      }
+      return name;
+    }).join('<br>');
+  };
 
- const buffText = buffs.length > 0 ? buffs.join(', ') : '\u2014';
- const debuffText = debuffs.length > 0 ? debuffs.join(', ') : '';
+  let rows = elements.map(el => {
+    // ELEMENT_MAP may need a PT-BR key for icon lookup; convert EN keys if needed
+    const lookupKey = elementMap[el] ? el : elementToPT(el);
+    const elInfo = elementMap[lookupKey];
+    if (!elInfo) return '';
+    const buffs = (data.buffs && data.buffs[el]) || [];
+    const debuffs = (data.debuffs && data.debuffs[el]) || [];
+    if (buffs.length === 0 && debuffs.length === 0) return '';
 
- // getLocalizedElementName expects a PT-BR key; convert EN keys if needed
- const ptKey = elementMap[el] ? el : elementToPT(el);
- const localizedName = getLocalizedElementName(ptKey);
+    const buffText = formatEffects(buffs);
+    const debuffText = formatEffects(debuffs);
 
- return `
- <tr class="element-row">
- <td class="element-cell">
- <img loading="lazy" src="${elInfo.iconPath}" alt="${localizedName}" class="element-table-icon">
- <span class="element-table-name">${localizedName}</span>
- </td>
- <td class="buff-cell">${buffText}</td>
- ${hasDebuffs ? `<td class="debuff-cell">${debuffText || '\u2014'}</td>` : ''}
- </tr>
- `;
- }).filter(Boolean).join('');
+    // getLocalizedElementName expects a PT-BR key; convert EN keys if needed
+    const ptKey = elementMap[el] ? el : elementToPT(el);
+    const localizedName = getLocalizedElementName(ptKey);
 
- return `
- <table class="element-effects-table">
- <thead>
- <tr>
- <th>${t('tooltip.element')}</th>
- <th class="buff-header">${t('tooltip.buffEffect')}</th>
- ${hasDebuffs ? `<th class="debuff-header">${t('tooltip.debuffEffect')}</th>` : ''}
- </tr>
- </thead>
- <tbody>
- ${rows}
- </tbody>
- </table>
- `;
+    return `
+    <tr class="element-row">
+      <td class="element-cell" style="font-size: 1.05rem;">
+        <img loading="lazy" src="${elInfo.iconPath}" alt="${localizedName}" class="element-table-icon">
+        <span class="element-table-name">${localizedName}</span>
+      </td>
+      <td class="buff-cell" style="font-size: 1.05rem;">${buffText}</td>
+      ${hasDebuffs ? `<td class="debuff-cell" style="font-size: 1.05rem;">${debuffText || '\u2014'}</td>` : ''}
+    </tr>
+    `;
+  }).filter(Boolean).join('');
+
+  return `
+  <table class="element-effects-table">
+    <thead>
+      <tr>
+        <th style="font-size: 1.1rem;">${t('tooltip.element')}</th>
+        <th class="buff-header" style="font-size: 1.1rem;">
+          ${t('tooltip.buffEffect')}
+        </th>
+        ${hasDebuffs ? `<th class="debuff-header" style="font-size: 1.1rem;">
+          ${t('tooltip.debuffEffect')}
+        </th>` : ''}
+      </tr>
+    </thead>
+    <tbody>
+      ${rows}
+    </tbody>
+  </table>
+  `;
 }
 
 /**

@@ -52,12 +52,16 @@ export function createVariantCard(variant, charKey, index = 0) {
   const classesHTML = variantClasses.map(cls => {
     const info = CLASS_ICONS[cls.key];
     if (!info) return '';
+    let displayName = cls.localized;
+    if (displayName.toLowerCase() === 'suporte de utilidade') {
+        displayName = 'Suporte';
+    }
     return `
       <div class="variant-class-wrapper">
         <span class="variant-class-label">${t('variant.class')}</span>
         <span class="variant-class-tag attr-highlight" data-attr-key="class_${cls.key}" style="--class-color: ${info.color}">
           <img src="${info.icon}" alt="${cls.localized}">
-          ${cls.localized.toUpperCase()}
+          <span class="class-name-text">${displayName.toUpperCase()}</span>
         </span>
       </div>
     `;
@@ -81,9 +85,7 @@ export function createVariantCard(variant, charKey, index = 0) {
  const saName = getLocalizedAbilityNameSync(variant.name, rawSAName);
 
   const isNew = isNewVariant(variant.name);
-  const newBadgeHTML = isNew ? `
-    <img loading="lazy" src="img/official/new_icon_U.webp" alt="${t('variant.new')}" class="new-badge">
-  ` : '';
+  const badgeHTML = isNew ? `<img loading="lazy" src="img/official/new_icon_U.webp" alt="${t('variant.new')}" class="new-badge">` : '';
 
     // Check if variant is exclusive
     const exclusiveData = getExclusiveData(variant.name);
@@ -159,7 +161,7 @@ export function createVariantCard(variant, charKey, index = 0) {
 
     return `
         <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s; --char-accent: ${effectiveCharColor}" data-variant-name="${variant.name}">
-            ${newBadgeHTML}
+            ${badgeHTML}
             ${exclusiveBadgeHTML}
             <div class="variant-left-section">
                 <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name)}" class="variant-portrait" loading="lazy"

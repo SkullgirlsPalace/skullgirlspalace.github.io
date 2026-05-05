@@ -42,7 +42,7 @@
         },
         "ability": "Candy Flush",
         "SA1": "While Umbrella is alive, the active Fighter has a 30/40/50% chance to gain a BUFF based on a random teammate's ELEMENT for 7 seconds when landing a CRITICAL HIT.",
-        "SA2": "While Umbrella is alive, increase the active Fighter's CRIT DAMAGE by 10/15/20% per stack of REGEN on the Fighter."
+        "SA2": "While Umbrella is alive, the active Fighter's CRITICAL DAMAGE is increased by 5/10/15% per stack of REGENERATION."
     },
     "grandmother": {
         "name": "Grand Mother",
@@ -2228,6 +2228,21 @@
         "SA1": "Using a SPECIAL MOVE sacrifices 10% of Eliza's MAX HEALTH to gain 15/25/35% BLOCKBUSTER METER and HEAVY REGEN for 10 seconds.",
         "SA2": "Gain BLESSING and IMMUNITY for 20/25/30 seconds each when entering SEKHMET MODE."
     },
+    "manaflow": {
+        "name": "Mana Flow",
+        "rarity": "diamond",
+        "element": "fire",
+        "character": "<:sp_sq:698909665077231776> Squigly",
+        "image": "img/portrait/sq/mFlow.webp",
+        "stats": {
+            "atk": "617",
+            "hp": "3753",
+            "fs": "870"
+        },
+        "ability": "Quick Cast",
+        "SA1": "Squigly's standard BLOCKBUSTERS consume all DRAGON CHARGES to gain additional effects per DRAGON CHARGE. Gain 15/20/25% BLOCKBUSTER METER when gaining a DRAGON CHARGE and automatically gain 25% DRAGON CHARGE per second.",
+        "SA2": "When using a BLOCKBUSTER, gain permanent PRECISION until the COMBO ends. Permanently gain 10/15/20% ATTACK when spending a DRAGON CHARGE."
+    },
     "materiagirl": {
         "name": "Materia Girl",
         "rarity": "gold",
@@ -3712,6 +3727,21 @@
         "ability": "RIGOR MORTIS",
         "SA1": "Gain UNFLINCHING after facing the same opponent for 25/20/15 seconds. UNFLINCHING is removed when the opponent TAGS OUT or dies.",
         "SA2": "Cannot suffer more than 15/10/5% of your MAX HEALTH from a single HIT."
+    },
+    "scaletipper": {
+        "name": "Scale Tipper",
+        "rarity": "gold",
+        "element": "dark",
+        "character": "<:sp_fi:698821373698637894> Filia",
+        "image": "img/portrait/fi/sTipper.webp",
+        "stats": {
+            "atk": "248",
+            "hp": "1698",
+            "fs": "372"
+        },
+        "ability": "Scales of Obedience",
+        "SA1": "While Filia has more BUFFS or fewer DEBUFFS than the opponent, transfer 1 opponent BUFF every 4/3/2 seconds and inflict 1 random DEBUFF every second for 7 seconds.",
+        "SA2": "When the current number of BUFFS and DEBUFFS between both Fighters is more than or equal to 25/20/17, the opponent suffers permanent DOOM for 10 seconds, bypassing all DEBUFF preventing effects."
     },
     "scarletviper": {
         "name": "Scarlet Viper",
