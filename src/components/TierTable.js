@@ -8,7 +8,8 @@ import { getVariantImage } from '../data/variantImages.js';
 import { CLASS_ICONS, getLocalizedVariantClasses, getLocalizedClassName, getLocalizedClassDescription } from '../data/variantClasses.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
-import { flattenVariants, filterVariants, sortVariants } from '../utils/sorting.js';
+import { filterVariants, sortVariants } from '../utils/sorting.js';
+import { flattenVariants } from '../utils/variantUtils.js';
 import { t, getCurrentLanguage, getLocalizedNameSync } from '../i18n/index.js';
 
 /**

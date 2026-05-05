@@ -6,7 +6,7 @@
 import { getState, toggleFilter, toggleSort, clearFilters, toggleFilterBar, clearAdvancedFilters } from '../state/store.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { getCharacters } from '../services/dataService.js';
-import { flattenVariants } from '../utils/sorting.js';
+import { flattenVariants } from '../utils/variantUtils.js';
 import { getVariantClasses, getLocalizedClassName, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
 import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';

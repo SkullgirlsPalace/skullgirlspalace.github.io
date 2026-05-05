@@ -42,7 +42,7 @@
         },
         "ability": "Doce Ostentação\r",
         "SA1": "Enquanto Umbrella estiver viva, o Lutador ativo tem 30/40/50% de chance de ganhar um BUFF baseado no ELEMENTO de um aliado aleatório por 7 segundos ao acertar um GOLPE CRÍTICO.\r",
-        "SA2": "Enquanto Umbrella estiver viva, o DANO CRÍTICO do Lutador ativo aumenta em 10/15/20% por acúmulo de REGENERAÇÃO.\r"
+        "SA2": "Enquanto Umbrella estiver viva, o DANO CRÍTICO do Lutador ativo aumenta em 5/10/15% por acúmulo de REGENERAÇÃO."
     },
     "grandmother": {
         "name": "Grande Mãe",
@@ -2228,6 +2228,21 @@
         "SA1": "Usar um G. ESP. sacrifica 10% da VIDA MÁX. da Eliza e dá 15/25/35% do MED. DE BLOCKBUSTER e REGENERAÇÃO FORTE por 10 seg.",
         "SA2": "Ganhe BÊNÇÃO e IMUNIDADE por 20/25/30 segundos cada ao entrar no MODO SEKHMET."
     },
+    "manaflow": {
+        "name": "Fluxo de Mana\r",
+        "rarity": "diamond",
+        "element": "fire",
+        "character": "<:sp_sq:698909665077231776> Squigly",
+        "image": "img/portrait/sq/mFlow.webp",
+        "stats": {
+            "atk": "617",
+            "hp": "3753",
+            "fs": "870"
+        },
+        "ability": "Conjuração rápida\r",
+        "SA1": "Os BLOCKBUSTERS padrão da Squigly consomem todas as CARGAS DE DRAGÃO para ganhar efeitos adicionais por CARGA DE DRAGÃO. Ganhe 15/20/25% de MEDIDOR DE BLOCKBUSTER ao ganhar uma CARGA DE DRAGÃO e ganhe automaticamente 25% de CARGA DE DRAGÃO por segundo.\r",
+        "SA2": "Ao usar um BLOCKBUSTER, ganhe PRECISÃO permanente até o fim do COMBO. Ao gastar uma CARGA DE DRAGÃO, ganhe permanentemente 10/15/20% de ATAQUE.\r"
+    },
     "materiagirl": {
         "name": "Garota Material",
         "rarity": "gold",
@@ -3712,6 +3727,21 @@
         "ability": "RIGOR MORTIS",
         "SA1": "Ganhe INABALÁVEL após enfrentar o mesmo oponente por 25/20/15 s. É removido quando o oponente SAI DA ASSISTÊNCIA ou morre.",
         "SA2": "Não pode perder mais de 15/10/5% de sua VIDA MÁXIMA com um único GOLPE."
+    },
+    "scaletipper": {
+        "name": "Vira a balança\r",
+        "rarity": "gold",
+        "element": "dark",
+        "character": "<:sp_fi:698821373698637894> Filia",
+        "image": "img/portrait/fi/sTipper.webp",
+        "stats": {
+            "atk": "248",
+            "hp": "1698",
+            "fs": "372"
+        },
+        "ability": "Balança da obediência\r",
+        "SA1": "Enquanto Filia tiver mais EFEITOS POSITIVOS ou menos EFEITOS NEGATIVOS que o oponente, transfere 1 EFEITO POSITIVO do oponente a cada 4/3/2 segundos e inflige 1 EFEITO NEGATIVO aleatório por segundo durante 7 segundos.\r",
+        "SA2": "Quando o total de EFEITOS POSITIVOS e EFEITOS NEGATIVOS entre os dois lutadores for maior ou igual a 25/20/17, o oponente sofre PERDIÇÃO permanente por 10 segundos, ignorando todos os efeitos que impedem EFEITOS NEGATIVOS.\r"
     },
     "scarletviper": {
         "name": "Víbora Escarlate",
