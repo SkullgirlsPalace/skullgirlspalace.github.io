@@ -29,9 +29,12 @@ vi.mock('../../../src/utils/formatters.js', () => ({
 }));
 
 vi.mock('../../../src/utils/sorting.js', () => ({
-  flattenVariants: vi.fn(() => []),
   filterVariants: vi.fn(v => v),
   sortVariants: vi.fn(v => v),
+}));
+
+vi.mock('../../../src/utils/variantUtils.js', () => ({
+  flattenVariants: vi.fn(() => []),
 }));
 
 vi.mock('../../../src/components/VariantCard.js', () => ({
