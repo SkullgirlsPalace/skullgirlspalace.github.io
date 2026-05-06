@@ -260,14 +260,17 @@ function setupStaticUI() {
     });
 }
 
+let lastScrollY = window.scrollY;
+
 /**
  * Setup scroll event listener for scroll-to-top button
  */
 function setupScrollListener() {
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const scrollBottomBtn = document.getElementById('scrollToBottomBtn');
+    const navbar = document.getElementById('navbar');
 
-    if (scrollTopBtn || scrollBottomBtn) {
+    if (scrollTopBtn || scrollBottomBtn || navbar) {
         const updateScrollButtons = () => {
             const scrollY = window.scrollY;
             const docHeight = document.documentElement.scrollHeight;
@@ -296,6 +299,38 @@ function setupScrollListener() {
                     searchBar.classList.remove('floating');
                 }
             }
+
+            // Auto-hide navbar on scroll down, show on scroll up (for mobile)
+            if (navbar && window.innerWidth <= 768) {
+                const navLinks = document.getElementById('navLinks');
+                const overlay = document.getElementById('navOverlay');
+                const isMenuOpen = navLinks && navLinks.classList.contains('active');
+
+                // If user scrolls, close mobile menu
+                if (isMenuOpen && Math.abs(scrollY - lastScrollY) > 10) {
+                    navLinks.classList.remove('active');
+                    if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+
+                // Hide/show logic
+                if (!navbar.classList.contains('hidden-nav')) {
+                    if (scrollY > lastScrollY && scrollY > 80) {
+                        // Scrolling down - hide
+                        navbar.style.transform = 'translateY(-100%)';
+                        document.body.classList.add('nav-up');
+                    } else if (scrollY < lastScrollY) {
+                        // Scrolling up - show
+                        navbar.style.transform = 'translateY(0)';
+                        document.body.classList.remove('nav-up');
+                    }
+                }
+            } else if (navbar) {
+                // Reset for desktop
+                navbar.style.transform = '';
+                document.body.classList.remove('nav-up');
+            }
+            lastScrollY = scrollY;
         };
 
         window.addEventListener('scroll', updateScrollButtons);

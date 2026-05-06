@@ -130,6 +130,8 @@ async function handleRouteChange() {
 
     // Close mobile hamburger menu on navigation
     document.getElementById('navLinks')?.classList.remove('active');
+    document.getElementById('navOverlay')?.classList.remove('active');
+    document.body.style.overflow = '';
 }
 
 /**
