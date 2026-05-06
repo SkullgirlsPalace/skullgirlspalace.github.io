@@ -149,7 +149,7 @@ const VARIANT_IMAGES = {
         "Djinn Frizz": "img/filia/Filia_14.webp",
         "Escoteira": "img/filia/Filia_11.webp",
         "Descabelada": "img/filia/Filia_1.webp",
-        "Vira a balança": "img/filia/Scale_Tipper.webp"
+        "Vira a Balança": "img/filia/Scale_Tipper.webp"
     },
     "fukua": {
         "Imagem Dividida": "img/fukua/Fukua_12.webp",

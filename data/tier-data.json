@@ -25,10 +25,10 @@
             "parallel": "SS"
         },
         "Vínculo de Alma": {
-            "pf": "S",
-            "riftOff": "S",
+            "pf": "SS",
+            "riftOff": "SS",
             "riftDef": "C",
-            "parallel": "S"
+            "parallel": "SS"
         },
         "Maravilha Eterna": {
             "pf": "B",
@@ -753,6 +753,12 @@
             "riftDef": "I",
             "parallel": "A"
         },
+        "Vira a Balança": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"    
+        },
         "Quartzo Estelar": {
             "pf": "A",
             "riftOff": "A",
@@ -852,10 +858,10 @@
             "parallel": "SS"
             },
         "Poder Floral": {
-            "pf": "N/A",
-            "riftOff": "N/A",
-            "riftDef": "N/A",
-            "parallel": "N/A"
+            "pf": "B",
+            "riftOff": "S",
+            "riftDef": "I",
+            "parallel": "B"
         },
         "Virada do Camaleão": {
             "pf": "C",
@@ -914,10 +920,10 @@
             "parallel": "SS"
             },
         "Guardião do Cometa": {
-            "pf": "N/A",
-            "riftOff": "N/A",
-            "riftDef": "N/A",
-            "parallel": "N/A"
+            "pf": "SS",
+            "riftOff": "A",
+            "riftDef": "I",
+            "parallel": "SS"
         },
         "Octoplasma": {
             "pf": "A",
@@ -1518,6 +1524,12 @@
             "riftOff": "C",
             "riftDef": "I",
             "parallel": "S"
+        },
+        "Fluxo de Mana": {
+            "pf": "N/A",
+            "riftOff": "N/A",
+            "riftDef": "N/A",
+            "parallel": "N/A"
         },
         "Frio de Matar": {
             "pf": "C",
