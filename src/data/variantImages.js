@@ -148,7 +148,8 @@ const VARIANT_IMAGES = {
         "Borrão Azul": "img/filia/Filia_15.webp",
         "Djinn Frizz": "img/filia/Filia_14.webp",
         "Escoteira": "img/filia/Filia_11.webp",
-        "Descabelada": "img/filia/Filia_1.webp"
+        "Descabelada": "img/filia/Filia_1.webp",
+        "Vira a balança": "img/filia/Scale_Tipper.webp"
     },
     "fukua": {
         "Imagem Dividida": "img/fukua/Fukua_12.webp",
@@ -296,7 +297,8 @@ const VARIANT_IMAGES = {
         "Morta de Calor": "img/squigly/Squigly_4.webp",
         "Quebra-Morto": "img/squigly/Squigly_5.webp",
         "Medo do Palco": "img/squigly/Squigly_1.webp",
-        "Branca de Medo": "img/squigly/Squigly_2.webp"
+        "Branca de Medo": "img/squigly/Squigly_2.webp",
+        "Fluxo de Mana": "img/squigly/Mana_Flow.webp"
     },
     'umbrella': {
         "Desejo de Morte": "img/umbrella/Umbrella_15.webp",
