@@ -6,7 +6,7 @@
     align-items: center;
     width: 100%;
     margin-bottom: 32px;
-    padding-top: 12px;
+    padding-top: 24px;
 }
 
 /* Top row: title left + search right */
@@ -15,8 +15,9 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     position: relative;
+    min-height: 44px;
 }
 
 .header-left,
@@ -44,7 +45,7 @@
 .header-middle-row {
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 /* Bottom row: tabs */
