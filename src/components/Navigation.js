@@ -104,7 +104,8 @@ export function createAboutDrawer() {
           <p>${t('about.disclaimerText2')}</p>
         </div>
       </div>
-      <p style="font-size: 0.85rem; margin-top: 15px;">${t('about.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.serverName')}</a>.</p>
+      <p style="font-size: 0.85rem; margin-top: 20px;">${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: bold;">LivePix</a></p>
+      <p style="font-size: 0.85rem; margin-top: 10px;">${t('about.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.serverName')}</a>.</p>
     </div>
   </div>
 </aside>
