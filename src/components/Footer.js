@@ -42,6 +42,7 @@ export function createFooter() {
 
   <div class="footer-section">
     <h4>${t('footer.feedbackTitle')}</h4>
+    <p style="margin-bottom: 8px;">${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: bold;">LivePix</a></p>
     <p>${t('footer.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank">${t('footer.serverName')}</a>.</p>
   </div>
 </div>

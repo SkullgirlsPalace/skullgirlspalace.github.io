@@ -45,7 +45,9 @@ export const translations = {
       disclaimerText1: 'Projeto de Fã - Não afiliado à Autumn Games ou Hidden Variable Studios.',
       disclaimerText2: 'Todos os assets pertencem aos seus respectivos proprietários.',
       reportBug: 'Encontrou algum erro ou bug? Reporte no',
-      serverName: 'Servidor Palácio Branco'
+      serverName: 'Servidor Palácio Branco',
+      supportTitle: 'Apoie o Projeto',
+      supportDesc: 'Apoie o Projeto'
     },
     // Characters page
     characters: {
@@ -447,7 +449,9 @@ export const translations = {
       disclaimerText1: 'Fan Project - Not affiliated with Autumn Games or Hidden Variable Studios.',
       disclaimerText2: 'All assets belong to their respective owners.',
       reportBug: 'Found an error or bug? Report it on',
-      serverName: 'Palácio Branco Server'
+      serverName: 'Palácio Branco Server',
+      supportTitle: 'Support the Project',
+      supportDesc: 'Support the Project'
     },
     // Characters page
     characters: {
