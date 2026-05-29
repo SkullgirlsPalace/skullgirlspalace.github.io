@@ -202,3 +202,138 @@
 .cotw-card {
     border-left: 3px solid var(--accent-gold);
 }
+
+/* ========== FENDA BASES SECTION ========== */
+.bases-section {
+    padding: 0;
+}
+
+.bases-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.bases-intro {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.bases-maps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 24px;
+}
+
+.base-map-section {
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(13, 17, 23, 0.6);
+}
+
+.base-map-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: linear-gradient(90deg, rgba(212, 168, 75, 0.12) 0%, rgba(0,0,0,0) 100%);
+    border-bottom: 1px solid #30363d;
+}
+
+.base-map-element-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.base-map-title {
+    font-size: 1.3rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.base-nodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0;
+    padding: 16px;
+    gap: 12px;
+}
+
+.base-node {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.base-node-boss {
+    border-color: rgba(212, 168, 75, 0.4);
+    background: rgba(212, 168, 75, 0.04);
+}
+
+.base-node-header {
+    padding: 8px 14px;
+    background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid #30363d;
+}
+
+.base-node-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+}
+
+.base-node-boss .base-node-name {
+    color: var(--accent-gold);
+}
+
+.base-node-mods {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.base-mod-card {
+    margin: 0;
+}
+
+/* Defender / Attacker badge colors */
+.mod-defender {
+    border-left: 3px solid #60a5fa;
+}
+
+.mod-attacker {
+    border-left: 3px solid #f87171;
+}
+
+.mod-defender-badge {
+    color: #60a5fa !important;
+    background: rgba(96, 165, 250, 0.1) !important;
+    border-color: rgba(96, 165, 250, 0.2) !important;
+}
+
+.mod-attacker-badge {
+    color: #f87171 !important;
+    background: rgba(248, 113, 113, 0.1) !important;
+    border-color: rgba(248, 113, 113, 0.2) !important;
+}
+
+@media (max-width: 768px) {
+    .base-nodes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .base-map-title {
+        font-size: 1rem;
+    }
+}

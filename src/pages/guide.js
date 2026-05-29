@@ -1,24 +1,18 @@
 // =====================================================
 // GUIDE PAGE
-// Tutorials, Buffs, and Debuffs reference
+// Statistics, Modifiers, and Tutorials reference
 // =====================================================
 
 import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
 import { ATTRIBUTE_DATA, getLocalizedAttribute } from '../data/attributeData.js';
-import { loadCatalysts, loadFendaData } from '../services/dataService.js';
-import { formatConstraint } from '../utils/formatters.js';
 import { t, getCurrentLanguage } from '../i18n/index.js';
-import { getLocalizedElementName, getElementMap } from '../config/constants.js';
 
 export function render() {
   return `
   <div class="guide-container fade-in">
 
     <div class="guide-tabs">
-      <button class="guide-tab-btn active" onclick="switchGuideTab('tutorials')">
-        📚 ${t('guide.tutorials')}
-      </button>
-      <button class="guide-tab-btn" onclick="switchGuideTab('statistics')">
+      <button class="guide-tab-btn active" onclick="switchGuideTab('statistics')">
         <img loading="lazy" src="img/official/AttackIcon.webp" alt="${t('guide.statistics')}" class="tab-icon">
         ${t('guide.statistics')}
       </button>
@@ -26,27 +20,15 @@ export function render() {
         <img loading="lazy" src="img/official/Button_Modifiers.webp" alt="${t('guide.modifiers')}" class="tab-icon">
         ${t('guide.modifiers')}
       </button>
-      <button class="guide-tab-btn" onclick="switchGuideTab('catalysts')">
-        <img loading="lazy" src="img/official/RiftCoin.webp" alt="${t('guide.catalysts')}" class="tab-icon">
-        ${t('guide.catalysts')}
+      <button class="guide-tab-btn" onclick="switchGuideTab('tutorials')">
+        📚 ${t('guide.tutorials')}
       </button>
     </div>
 
     <div class="guide-content">
 
-    <!-- TUTORIALS TAB -->
-    <div id="tab-tutorials" class="guide-tab-content active">
-      <div class="tutorial-grid" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
-        <div class="tutorial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; text-align: center; cursor: pointer; transition: transform 0.2s, border-color 0.2s;" onclick="navigateTo('tutorial-renda-passiva')" onmouseover="this.style.borderColor='var(--accent-gold)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)';">
-          <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">📜 ${t('guide.passiveIncomeTitle')}</h3>
-          <p style="color: var(--text-secondary); font-size: 0.9rem;">${t('guide.passiveIncomeDesc')}</p>
-        </div>
-      </div>
-    </div>
-    </div>
-
     <!-- STATISTICS TAB -->
-    <div id="tab-statistics" class="guide-tab-content">
+    <div id="tab-statistics" class="guide-tab-content active">
 
       <div class="stats-hero-container">
         <div class="stats-header-row">
@@ -143,41 +125,16 @@ export function render() {
       </div>
     </div>
 
-    <!-- CATALYSTS TAB -->
-    <div id="tab-catalysts" class="guide-tab-content">
-      <h2 class="catalyst-title-main">${t('guide.weekModifiers')}</h2>
-
-      <!-- Catalysts of the Week Section -->
-      <div class="cotw-section">
-        <div class="cotw-filters">
-          <button class="cotw-filter-btn" data-element="water">
-            <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${getLocalizedElementName('\u00C1gua')}"><span>${getLocalizedElementName('\u00C1gua')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="fire">
-            <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${getLocalizedElementName('Fogo')}"><span>${getLocalizedElementName('Fogo')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="wind">
-            <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${getLocalizedElementName('Ar')}"><span>${getLocalizedElementName('Ar')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="light">
-            <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${getLocalizedElementName('Luz')}"><span>${getLocalizedElementName('Luz')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="dark">
-            <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${getLocalizedElementName('Trevas')}"><span>${getLocalizedElementName('Trevas')}</span>
-          </button>
+    <!-- TUTORIALS TAB -->
+    <div id="tab-tutorials" class="guide-tab-content">
+      <div class="tutorial-grid" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+        <div class="tutorial-card" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; text-align: center; cursor: pointer; transition: transform 0.2s, border-color 0.2s;" onclick="navigateTo('tutorial-renda-passiva')" onmouseover="this.style.borderColor='var(--accent-gold)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.transform='translateY(0)';">
+          <h3 style="color: var(--accent-gold); margin-bottom: 0.5rem;">📜 ${t('guide.passiveIncomeTitle')}</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">${t('guide.passiveIncomeDesc')}</p>
         </div>
-        <div class="catalyst-grid" id="cotw-container-guide">
-          <p class="info-state" style="text-align: center; margin: 20px 0;"></p>
-        </div>
-      </div>
-
-      <div style="height: 40px; border-bottom: 1px solid #30363d; margin-bottom: 40px;"></div>
-
-      <div class="catalyst-categories" id="catalyst-container">
-        <!-- Populated by JS -->
-        <div class="loading-state">${t('guide.loadingCatalysts')}</div>
       </div>
     </div>
+
     </div>
   </div>
   `;
@@ -187,7 +144,6 @@ export function init() {
   renderEffects('buff', 'buffs-list');
   renderEffects('debuff', 'debuffs-list');
   renderSpecialEffects('special-list');
-  initCatalysts();
 
   // Register global tab switcher
   window.switchGuideTab = switchGuideTab;

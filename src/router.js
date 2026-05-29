@@ -6,7 +6,7 @@
 import * as home from './pages/home.js';
 import * as characters from './pages/characters.js';
 import * as characterDetail from './pages/character-detail.js';
-import * as catalysts from './pages/catalysts.js';
+import * as fenda from './pages/fenda.js';
 import * as tierlist from './pages/tierlist.js';
 import * as statistics from './pages/statistics.js';
 import * as guide from './pages/guide.js';
@@ -18,7 +18,7 @@ import { t } from './i18n/index.js';
 const routes = {
     '': home,
     'characters': characters,
-    'catalysts': catalysts,
+    'fenda': fenda,
     'tierlist': tierlist,
     'stats': statistics,
     'guide': guide,
@@ -74,6 +74,12 @@ async function handleRouteChange() {
     // Redirect 'characters' directly to all variants view
     if (route === 'characters') {
         window.location.hash = 'character/todos/builds';
+        return;
+    }
+
+    // Redirect old 'catalysts' route to new 'fenda' page
+    if (route === 'catalysts') {
+        window.location.hash = 'fenda';
         return;
     }
 

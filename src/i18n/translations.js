@@ -9,6 +9,7 @@ export const translations = {
     nav: {
       home: 'Início',
       characters: 'Personagens',
+      fenda: 'Fenda',
       guide: 'Guia',
       calculator: 'Calculadora',
       about: 'sobre'
@@ -18,6 +19,7 @@ export const translations = {
       heroTitle: 'Skullgirls Palace',
       heroSubtitle: 'Sua fonte completa de builds, calculadoras e estratégias para Skullgirls Mobile.',
       characters: 'PERSONAGENS',
+      fenda: 'FENDA',
       guide: 'GUIA',
       calculator: 'CALCULADORA',
       hub: 'SKULLGIRLS MOBILE HUB',
@@ -85,6 +87,21 @@ export const translations = {
     riftCatalysts: 'Catalisadores da Fenda',
     catalystsLoaded: 'Catalisadores Carregados',
     noModifiersElement: 'Nenhum modificador encontrado para este elemento.'
+  },
+  // Fenda page
+  fenda: {
+    title: 'Fenda',
+    catalysts: 'Catalisadores',
+    bases: 'Bases',
+    basesTitle: 'Bases da Fenda',
+    basesIntro: 'Veja os modificadores de cada nó do mapa da Fenda por elemento.',
+    allMaps: 'Todos os Mapas',
+    map: 'Mapa',
+    defenderMod: 'Defensor',
+    attackerMod: 'Atacante',
+    loadingBases: 'Carregando bases...',
+    errorLoadBases: 'Erro ao carregar dados da fenda.',
+    noBasesFound: 'Nenhuma base encontrada para este elemento.'
   },
   element: {
     fire: 'Fogo',
@@ -413,6 +430,7 @@ export const translations = {
     nav: {
       home: 'Home',
       characters: 'Characters',
+      fenda: 'Rift',
       guide: 'Guide',
       calculator: 'Calculator',
       about: 'about'
@@ -422,6 +440,7 @@ export const translations = {
       heroTitle: 'Skullgirls Palace',
       heroSubtitle: 'Your complete source for builds, calculators, and strategies for Skullgirls Mobile.',
       characters: 'CHARACTERS',
+      fenda: 'RIFT',
       guide: 'GUIDE',
       calculator: 'CALCULATOR',
       hub: 'SKULLGIRLS MOBILE HUB',
@@ -489,6 +508,21 @@ export const translations = {
     riftCatalysts: 'Rift Catalysts',
     catalystsLoaded: 'Catalysts Loaded',
     noModifiersElement: 'No modifiers found for this element.'
+  },
+  // Fenda page
+  fenda: {
+    title: 'Rift',
+    catalysts: 'Catalysts',
+    bases: 'Bases',
+    basesTitle: 'Rift Bases',
+    basesIntro: 'View modifiers for each node in the Rift map by element.',
+    allMaps: 'All Maps',
+    map: 'Map',
+    defenderMod: 'Defender',
+    attackerMod: 'Attacker',
+    loadingBases: 'Loading bases...',
+    errorLoadBases: 'Error loading rift data.',
+    noBasesFound: 'No bases found for this element.'
   },
   element: {
     fire: 'Fire',

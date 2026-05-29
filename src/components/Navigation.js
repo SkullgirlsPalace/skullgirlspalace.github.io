@@ -45,6 +45,7 @@ export function createNavbar() {
     <ul class="nav-links" id="navLinks">
       <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
       <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
+      <li><a href="javascript:void(0)" onclick="navigateTo('fenda')">${t('nav.fenda')}</a></li>
       <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
       <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
     </ul>

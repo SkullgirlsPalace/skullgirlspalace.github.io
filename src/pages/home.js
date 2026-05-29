@@ -56,6 +56,9 @@ export function render() {
         <button class="hub-btn" onclick="navigateTo('characters')">
           <span>${t('home.characters')}</span>
         </button>
+        <button class="hub-btn" onclick="navigateTo('fenda')">
+          <span>${t('home.fenda')}</span>
+        </button>
         <button class="hub-btn" onclick="navigateTo('guide')">
           <span>${t('home.guide')}</span>
         </button>
