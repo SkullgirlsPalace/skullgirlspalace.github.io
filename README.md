@@ -34,3 +34,7 @@ Estilos que são específicos de uma única página.
 -   `guide.css`: Tabelas e estrutura da página de guias.
 -   `tierlist.css`: Página e editor da Tier List.
 -   `catalysts.css`: Página de catalisadores.
+
+## Dados e traduções
+
+O Krazete é a referência principal do projeto para os dados originais do jogo. As traduções em português podem conter correções manuais editoriais e devem ser preservadas ao atualizar os dados. Consulte [Dados, fontes e atualizações](docs/DADOS-E-FONTES.md) antes de processar ou substituir arquivos de conteúdo.
