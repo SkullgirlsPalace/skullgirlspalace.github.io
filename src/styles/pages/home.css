@@ -147,7 +147,7 @@
 }
 
 .home-about-link img {
-  height: 16px;
+  height: 22px;
   width: auto;
   filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
   -webkit-filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
@@ -163,6 +163,29 @@
     background: transparent;
     border: none;
 }
+
+/* Keep the desktop controls easier to see without growing the mobile header. */
+@media (min-width: 769px) {
+    .home-about-link img {
+        height: 22px;
+    }
+
+    .home-language-selector .language-btn {
+        gap: 9px;
+        padding: 9px 14px;
+    }
+
+    .home-language-selector .flag-icon {
+        width: 30px;
+        height: 20px;
+    }
+
+    .home-language-selector .lang-arrow {
+        width: 14px;
+        height: 14px;
+    }
+}
+
 .home-language-selector .language-btn:hover {
     background: rgba(255, 255, 255, 0.05);
 }

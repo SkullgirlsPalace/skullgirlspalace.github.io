@@ -283,6 +283,51 @@
     margin: 0 auto;
 }
 
+.stats-glossary-search {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stats-glossary-search input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px 0 46px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    outline: none;
+    background: rgba(8, 8, 11, 0.58);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.92rem;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.stats-glossary-search input:focus {
+    border-color: rgba(212, 168, 75, 0.65);
+    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.11);
+}
+
+.stats-glossary-results {
+    min-height: 1.1rem;
+    margin: 0 2px 12px;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+}
+
+.stats-glossary-empty {
+    padding: 26px 16px;
+    border: 1px dashed rgba(212, 168, 75, 0.25);
+    border-radius: 14px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.stats-glossary-empty[hidden],
+.glossary-grid .attribute-card[hidden] {
+    display: none !important;
+}
+
 .glossary-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -387,5 +432,11 @@
 
     .stats-ref-image {
         max-width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .stats-glossary-search input {
+        transition: none;
     }
 }

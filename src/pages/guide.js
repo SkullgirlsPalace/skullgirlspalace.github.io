@@ -46,7 +46,14 @@ export function render() {
       </div>
 
       <div class="stats-glossary-container">
+        <label class="stats-glossary-search">
+          <span class="guide-visually-hidden">${t('guide.searchStatistics')}</span>
+          <span class="guide-catalyst-search-icon" aria-hidden="true">⌕</span>
+          <input id="stats-glossary-search" type="search" placeholder="${t('guide.searchStatistics')}" autocomplete="off">
+        </label>
+        <p class="stats-glossary-results" id="stats-glossary-results" aria-live="polite"></p>
         ${renderGlossary()}
+        <p class="stats-glossary-empty" id="stats-glossary-empty" hidden>${t('guide.noStatisticsMatches')}</p>
       </div>
     </div>
 
@@ -137,6 +144,7 @@ export function render() {
 }
 
 export function init() {
+  initStatisticsGlossary();
   renderEffects('buffs-list', effect => effect.type === 'buff');
   renderEffects('debuffs-list', effect => effect.type === 'debuff');
   renderEffects('special-list', effect => effect.type === 'term' || ['critless', 'buff', 'debuff'].includes(effect.key));
@@ -178,9 +186,47 @@ function renderEffects(containerId, matchesCategory) {
   const effects = Object.entries(EFFECT_DATA)
     .filter(([key, effect]) => matchesCategory({ ...effect, key }))
     .map(([key, effect]) => ({ ...getLocalizedEffect(key) || effect, key }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      const priorityDifference = getTechnicalTermPriority(a) - getTechnicalTermPriority(b);
+      return priorityDifference || a.name.localeCompare(b.name);
+    });
 
   container.innerHTML = effects.map(renderModifierCard).join('');
+}
+
+function getTechnicalTermPriority(effect) {
+  if (effect.key === 'critless') return 2;
+  if (effect.type !== 'term' && !['buff', 'debuff'].includes(effect.key)) return 0;
+
+  const text = [effect.name, effect.detailed, effect.explicacao].filter(Boolean).join(' ');
+  const longestWord = Math.max(0, ...text.split(/\s+/).map(word => word.length));
+  const unusuallyLong = text.length > 420 || longestWord > 26;
+  return unusuallyLong ? 1 : 0;
+}
+
+function initStatisticsGlossary() {
+  const search = document.getElementById('stats-glossary-search');
+  const results = document.getElementById('stats-glossary-results');
+  const emptyState = document.getElementById('stats-glossary-empty');
+  const cards = [...document.querySelectorAll('.attribute-card')];
+  if (!search || !results || !emptyState || cards.length === 0) return;
+
+  const updateResults = () => {
+    const term = normalizeCatalystText(search.value);
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const matches = !term || normalizeCatalystText(card.textContent).includes(term);
+      card.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    results.textContent = t('guide.statisticsResults').replace('{count}', visibleCount.toLocaleString());
+    emptyState.hidden = visibleCount > 0;
+  };
+
+  search.addEventListener('input', updateResults);
+  updateResults();
 }
 
 // =====================================================

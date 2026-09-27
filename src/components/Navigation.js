@@ -70,7 +70,6 @@ export function createAboutDrawer() {
   </div>
   <div class="drawer-content">
     <section class="about-drawer-hero">
-      <span class="about-drawer-mark" aria-hidden="true">SP</span>
       <h1>${t('about.heroTitle')}</h1>
       <p>${t('about.heroSubtitle')}</p>
       <div class="about-actions">
@@ -85,14 +84,8 @@ export function createAboutDrawer() {
 
     <div class="info-cards vertical">
       <section class="card-link about-info-card">
-        <span class="about-card-accent" aria-hidden="true">01</span>
-        <h3>${t('about.buildsTitle')}</h3>
-        <p>${t('about.buildsDesc')}</p>
-      </section>
-      <section class="card-link about-info-card">
-        <span class="about-card-accent" aria-hidden="true">02</span>
-        <h3>${t('about.calculatorTitle')}</h3>
-        <p>${t('about.calculatorDesc')}</p>
+        <h3>${t('about.projectAboutTitle')}</h3>
+        <p>${t('about.projectAboutDesc')}</p>
       </section>
     </div>
 
