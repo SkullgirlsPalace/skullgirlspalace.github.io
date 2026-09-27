@@ -36,6 +36,7 @@
 @import 'pages/tierlist.css';
 @import 'pages/guide.css';
 @import 'pages/character-profile.css';
+@import 'pages/calculator-studio.css';
 
 /* Responsive (must be last to override all above) */
 @import 'base/responsive.css';

@@ -14,7 +14,7 @@ import {
   updateGolpeSlider,
   updateGolpeInicialSlider,
   updateAstroSlider
-} from '../components/Calculator.js';
+} from '../components/CalculatorStudio.js';
 import { loadStatistics } from '../services/dataService.js';
 import { t } from '../i18n/index.js';
 
@@ -34,7 +34,6 @@ export function render() {
 
     <div class="stats-intro">
       <div class="intro-card">
-        <h3>${t('calc.title')}</h3>
         <p>${t('calc.intro')}</p>
       </div>
     </div>
