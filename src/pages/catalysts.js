@@ -5,8 +5,7 @@
 
 import { loadCatalysts } from '../services/dataService.js';
 import { getState, updateCatalystNote } from '../state/store.js';
-import { t, getCurrentLanguage } from '../i18n/index.js';
-import { getLocalizedElementName } from '../config/constants.js';
+import { t } from '../i18n/index.js';
 
 /**
  * Render catalysts page
@@ -26,36 +25,6 @@ export function render() {
 			<p>${t('catalysts.intro')}</p>
 		</div>
 
-		<!-- Catalysts of the Week Section -->
-		<div class="cotw-section">
-			<h2 class="catalyst-title-main">${t('catalysts.weekModifiers')}</h2>
-			<div class="cotw-filters">
-				<button class="cotw-filter-btn" data-element="fire">
-					<img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${getLocalizedElementName('Fogo')}">
-					<span>${getLocalizedElementName('Fogo')}</span>
-				</button>
-				<button class="cotw-filter-btn" data-element="water">
-					<img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${getLocalizedElementName('\u00C1gua')}">
-					<span>${getLocalizedElementName('\u00C1gua')}</span>
-				</button>
-				<button class="cotw-filter-btn" data-element="wind">
-					<img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${getLocalizedElementName('Ar')}">
-					<span>${getLocalizedElementName('Ar')}</span>
-				</button>
-				<button class="cotw-filter-btn" data-element="light">
-					<img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${getLocalizedElementName('Luz')}">
-					<span>${getLocalizedElementName('Luz')}</span>
-				</button>
-				<button class="cotw-filter-btn" data-element="dark">
-					<img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${getLocalizedElementName('Trevas')}">
-					<span>${getLocalizedElementName('Trevas')}</span>
-				</button>
-			</div>
-			<div class="catalyst-grid" id="cotw-container">
-				<p class="info-state" style="text-align: center; margin: 20px 0;">${t('catalysts.selectElement')}</p>
-			</div>
-		</div>
-
 		<div class="catalyst-categories" id="catalyst-container">
 			<!-- Populated by JS -->
 			<div class="loading-state">${t('catalysts.loading')}</div>
@@ -64,9 +33,6 @@ export function render() {
 	`;
 }
 
-// Store catalyst data globally for filtering
-let allCatalystsData = null;
-
 /**
  * Initialize catalysts page
  */
@@ -74,14 +40,14 @@ export async function init() {
 	const container = document.getElementById('catalyst-container');
 	if (!container) return;
 
-	allCatalystsData = await loadCatalysts();
-	if (!allCatalystsData || !allCatalystsData.categories) {
+	const catalystData = await loadCatalysts();
+	if (!catalystData || !catalystData.categories) {
 		container.innerHTML = `<p class="error-state">${t('catalysts.errorLoad')}</p>`;
 		return;
 	}
 
 	// Render general list
-	container.innerHTML = allCatalystsData.categories.map((catObj) => {
+	container.innerHTML = catalystData.categories.map((catObj) => {
 		const categoryClass = getCategoryClass(catObj.category);
 		return `
 		<div class="catalyst-category ${categoryClass}">
@@ -96,37 +62,6 @@ export async function init() {
 	// Attach event listeners for notes
 	attachNoteListeners();
 
-	// Attach event listeners for COTW
-	document.querySelectorAll('.cotw-filter-btn').forEach(btn => {
-		btn.addEventListener('click', (e) => {
-			document.querySelectorAll('.cotw-filter-btn').forEach(b => b.classList.remove('active'));
-			const button = e.currentTarget;
-			button.classList.add('active');
-			renderCotw(button.dataset.element);
-		});
-	});
-}
-
-/**
- * Filter and render Catalysts of the Week based on element
- */
-function renderCotw(element) {
-	const cotwContainer = document.getElementById('cotw-container');
-	if (!cotwContainer || !allCatalystsData) return;
-
-	const filteredItems = [];
-	for (const cat of allCatalystsData.categories) {
-		const matching = cat.items.filter(i => i.element === element);
-		filteredItems.push(...matching);
-	}
-
-	if (filteredItems.length === 0) {
-		cotwContainer.innerHTML = `<p class="info-state">${t('catalysts.noElementFound')}</p>`;
-		return;
-	}
-
-	cotwContainer.innerHTML = filteredItems.map(item => renderCatalystCard(item, true)).join('');
-	attachNoteListeners();
 }
 
 /**
@@ -146,10 +81,9 @@ function getCategoryClass(name) {
 /**
  * Render a single catalyst card
  * @param {Object} item - Catalyst item data
- * @param {boolean} isCotw - If true, restricts sizing/styling slightly if needed
  * @returns {string} HTML string
  */
-function renderCatalystCard(item, isCotw = false) {
+function renderCatalystCard(item) {
 	const state = getState();
 	// Retrieve saved note from state if exists
 	const savedNote = state.userPreferences?.catalystNotes?.[item.name] || item.notes || '';
@@ -158,7 +92,7 @@ function renderCatalystCard(item, isCotw = false) {
 	const formattedDesc = (item.description || '').replace(/\\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
 	return `
-	<div class="catalyst-card ${isCotw ? 'cotw-card' : ''}">
+	<div class="catalyst-card">
 		<div class="catalyst-card-header">
 			<h4>${item.name}</h4>
 			${item.constraint ? `<span class="catalyst-constraint">${item.constraint}</span>` : ''}

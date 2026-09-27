@@ -5,10 +5,9 @@
 
 import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
 import { ATTRIBUTE_DATA, getLocalizedAttribute } from '../data/attributeData.js';
-import { loadCatalysts, loadFendaData } from '../services/dataService.js';
+import { loadCatalysts } from '../services/dataService.js';
 import { formatConstraint } from '../utils/formatters.js';
 import { t } from '../i18n/index.js';
-import { getLocalizedElementName } from '../config/constants.js';
 
 export function render() {
   return `
@@ -24,7 +23,6 @@ export function render() {
         ${t('guide.modifiers')}
       </button>
       <button class="guide-tab-btn" onclick="switchGuideTab('catalysts')">
-        <img loading="lazy" src="img/official/RiftCoin.webp" alt="${t('guide.catalysts')}" class="tab-icon">
         ${t('guide.catalysts')}
       </button>
     </div>
@@ -52,117 +50,86 @@ export function render() {
       </div>
     </div>
 
-    <!-- MODIFIERS TAB (Unified) -->
+    <!-- MODIFIERS TAB -->
     <div id="tab-modifiers" class="guide-tab-content">
+      <section class="guide-modifier-library">
+        <header class="guide-modifier-heading">
+          <span class="guide-modifier-eyebrow">${t('guide.modifierLibraryEyebrow')}</span>
+          <h2>${t('guide.modifiers')}</h2>
+          <p>${t('guide.modifierLibraryDescription')}</p>
+        </header>
 
-      <!-- BUFFS SECTION -->
-      <div class="modifiers-section">
-        <h2 class="section-title" style="color: var(--accent-green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-          <img loading="lazy" src="img/modifiers/buffs/Regen.webp" style="width: 24px; height: 24px;">
-          ${t('guide.positiveEffects')}
-        </h2>
-        <div class="effects-table-container">
-          <table class="effects-table">
-            <thead>
-              <tr>
-                <th>${t('guide.icon')}</th>
-                <th>${t('guide.name')}</th>
-                <th>${t('guide.effectDesc')}</th>
-                <th>${t('guide.max')}</th>
-              </tr>
-            </thead>
-            <tbody id="buffs-list">
-              <!-- Populated by JS -->
-            </tbody>
-          </table>
+        <div class="guide-modifier-tools">
+          <label class="guide-modifier-search">
+            <span class="guide-visually-hidden">${t('guide.searchModifiers')}</span>
+            <span class="guide-modifier-search-icon" aria-hidden="true">⌕</span>
+            <input id="guide-modifier-search" type="search" placeholder="${t('guide.searchModifiers')}" autocomplete="off">
+          </label>
+          <div class="guide-modifier-filters" role="group" aria-label="${t('guide.filterModifierTypes')}">
+            <button type="button" class="guide-modifier-filter" data-modifier-filter="all" aria-pressed="true">${t('guide.allModifiers')}</button>
+            <button type="button" class="guide-modifier-filter" data-modifier-filter="buff" aria-pressed="false">${t('guide.positiveEffects')}</button>
+            <button type="button" class="guide-modifier-filter" data-modifier-filter="debuff" aria-pressed="false">${t('guide.negativeEffects')}</button>
+            <button type="button" class="guide-modifier-filter" data-modifier-filter="technical" aria-pressed="false">${t('guide.technicalTerms')}</button>
+          </div>
+          <p class="guide-modifier-results" id="guide-modifier-results" aria-live="polite"></p>
         </div>
-      </div>
 
-      <div style="height: 40px;"></div> <!-- Spacer -->
+        <div class="guide-modifier-groups">
+          <section class="guide-modifier-group" data-modifier-type="buff">
+            <header class="guide-modifier-group-heading modifier-positive">
+              <img loading="lazy" src="img/modifiers/buffs/Regen.webp" alt="">
+              <h3>${t('guide.positiveEffects')}</h3>
+              <span class="guide-modifier-group-count"></span>
+            </header>
+            <div class="guide-modifier-grid" id="buffs-list"></div>
+          </section>
 
-      <!-- DEBUFFS SECTION -->
-      <div class="modifiers-section">
-        <h2 class="section-title" style="color: var(--accent-red); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-          <img loading="lazy" src="img/modifiers/debuffs/Bleed.webp" style="width: 24px; height: 24px;">
-          ${t('guide.negativeEffects')}
-        </h2>
-        <div class="effects-table-container">
-          <table class="effects-table">
-            <thead>
-              <tr>
-                <th>${t('guide.icon')}</th>
-                <th>${t('guide.name')}</th>
-                <th>${t('guide.effectDesc')}</th>
-                <th>${t('guide.max')}</th>
-              </tr>
-            </thead>
-            <tbody id="debuffs-list">
-              <!-- Populated by JS -->
-            </tbody>
-          </table>
+          <section class="guide-modifier-group" data-modifier-type="debuff">
+            <header class="guide-modifier-group-heading modifier-negative">
+              <img loading="lazy" src="img/modifiers/debuffs/Bleed.webp" alt="">
+              <h3>${t('guide.negativeEffects')}</h3>
+              <span class="guide-modifier-group-count"></span>
+            </header>
+            <div class="guide-modifier-grid" id="debuffs-list"></div>
+          </section>
+
+          <section class="guide-modifier-group" data-modifier-type="technical">
+            <header class="guide-modifier-group-heading modifier-technical">
+              <h3>${t('guide.technicalTerms')}</h3>
+              <span class="guide-modifier-group-count"></span>
+            </header>
+            <div class="guide-modifier-grid" id="special-list"></div>
+          </section>
+
         </div>
-      </div>
-
-      <div style="height: 40px;"></div> <!-- Spacer -->
-
-      <!-- SPECIAL EFFECTS SECTION -->
-      <div class="modifiers-section">
-        <h2 class="section-title" style="color: #b0bec5; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-          <img loading="lazy" src="img/modifiers/permanent/Permanent.webp" style="width: 24px; height: 24px;">
-          ${t('guide.permanentEffect')}
-        </h2>
-        <div class="effects-table-container">
-          <table class="effects-table">
-            <thead>
-              <tr>
-                <th>${t('guide.icon')}</th>
-                <th>${t('guide.name')}</th>
-                <th>${t('guide.effectDesc')}</th>
-                <th>${t('guide.max')}</th>
-              </tr>
-            </thead>
-            <tbody id="special-list">
-              <!-- Populated by JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
+        <p class="guide-modifier-empty" id="guide-modifier-empty" hidden>${t('guide.noModifierMatches')}</p>
+      </section>
     </div>
 
     <!-- CATALYSTS TAB -->
     <div id="tab-catalysts" class="guide-tab-content">
-      <h2 class="catalyst-title-main">${t('guide.weekModifiers')}</h2>
-
-      <!-- Catalysts of the Week Section -->
-      <div class="cotw-section">
-        <div class="cotw-filters">
-          <button class="cotw-filter-btn" data-element="water">
-            <img loading="lazy" src="img/official/ElementalWaterBackless.webp" alt="${getLocalizedElementName('\u00C1gua')}"><span>${getLocalizedElementName('\u00C1gua')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="fire">
-            <img loading="lazy" src="img/official/ElementalFireBackless.webp" alt="${getLocalizedElementName('Fogo')}"><span>${getLocalizedElementName('Fogo')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="wind">
-            <img loading="lazy" src="img/official/ElementalWindBackless.webp" alt="${getLocalizedElementName('Ar')}"><span>${getLocalizedElementName('Ar')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="light">
-            <img loading="lazy" src="img/official/ElementalLightBackless.webp" alt="${getLocalizedElementName('Luz')}"><span>${getLocalizedElementName('Luz')}</span>
-          </button>
-          <button class="cotw-filter-btn" data-element="dark">
-            <img loading="lazy" src="img/official/ElementalDarkBackless.webp" alt="${getLocalizedElementName('Trevas')}"><span>${getLocalizedElementName('Trevas')}</span>
-          </button>
+      <section class="guide-catalyst-library">
+        <header class="guide-catalyst-heading">
+          <span class="guide-catalyst-eyebrow">${t('guide.catalystLibraryEyebrow')}</span>
+          <h2>${t('guide.riftCatalysts')}</h2>
+          <p>${t('guide.catalystLibraryDescription')}</p>
+        </header>
+        <div class="guide-catalyst-tools">
+          <label class="guide-catalyst-search">
+            <span class="guide-visually-hidden">${t('guide.searchCatalysts')}</span>
+            <span class="guide-catalyst-search-icon" aria-hidden="true">⌕</span>
+            <input id="guide-catalyst-search" type="search" placeholder="${t('guide.searchCatalysts')}" autocomplete="off">
+          </label>
+          <div class="guide-catalyst-filter-wrap">
+            <span class="guide-catalyst-filter-label">${t('guide.filterCatalysts')}</span>
+            <div class="guide-catalyst-filters" id="guide-catalyst-filters" role="group" aria-label="${t('guide.filterCatalysts')}"></div>
+          </div>
+          <p class="guide-catalyst-results" id="guide-catalyst-results" aria-live="polite"></p>
         </div>
-        <div class="catalyst-grid" id="cotw-container-guide">
-          <p class="info-state" style="text-align: center; margin: 20px 0;"></p>
+        <div class="catalyst-categories" id="catalyst-container">
+          <div class="loading-state">${t('guide.loadingCatalysts')}</div>
         </div>
-      </div>
-
-      <div style="height: 40px; border-bottom: 1px solid #30363d; margin-bottom: 40px;"></div>
-
-      <div class="catalyst-categories" id="catalyst-container">
-        <!-- Populated by JS -->
-        <div class="loading-state">${t('guide.loadingCatalysts')}</div>
-      </div>
+      </section>
     </div>
     </div>
   </div>
@@ -170,9 +137,10 @@ export function render() {
 }
 
 export function init() {
-  renderEffects('buff', 'buffs-list');
-  renderEffects('debuff', 'debuffs-list');
-  renderSpecialEffects('special-list');
+  renderEffects('buffs-list', effect => effect.type === 'buff');
+  renderEffects('debuffs-list', effect => effect.type === 'debuff');
+  renderEffects('special-list', effect => effect.type === 'term' || ['critless', 'buff', 'debuff'].includes(effect.key));
+  initModifierBrowser();
   initCatalysts();
 
   // Register global tab switcher
@@ -203,41 +171,16 @@ function switchGuideTab(tabName) {
   });
 }
 
-function renderEffects(type, containerId) {
+function renderEffects(containerId, matchesCategory) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   const effects = Object.entries(EFFECT_DATA)
-    .filter(([key, e]) => e.type === type && key !== 'permanent_modifier')
-    .map(([key, e]) => getLocalizedEffect(key) || e)
+    .filter(([key, effect]) => matchesCategory({ ...effect, key }))
+    .map(([key, effect]) => ({ ...getLocalizedEffect(key) || effect, key }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
-  let html = '';
-
-  effects.forEach((effect, index) => {
-    const stacks = effect.stacks ? `${effect.stacks}x` : '-';
-    const effectColor = effect.color || 'var(--text-primary)';
-    html += `
-      <tr class="effect-row">
-        <td class="effect-icon-cell">
-          <div class="effect-icon-wrapper">
-            <img loading="lazy" src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
-          </div>
-        </td>
-        <td class="effect-name-cell">
-          <span class="effect-name" style="color: ${effectColor};">${effect.name}</span>
-        </td>
-        <td class="effect-desc-cell">
-          <p><strong style="color: ${effectColor};">${t('guide.gameDescription')}</strong> ${effect.detailed}</p>
-          ${effect.explicacao ? `<p style="margin-top: 6px;"><strong style="color: ${effectColor};">${t('guide.explanation')}</strong> ${effect.explicacao}</p>` : ''}
-          ${effect.scaling ? `<small class="effect-scaling" style="display: block; margin-top: 6px;">${t('guide.scaling')} ${effect.scaling}</small>` : ''}
-        </td>
-        <td class="effect-stacks-cell">${stacks}</td>
-      </tr>
-    `;
-  });
-
-  container.innerHTML = html;
+  container.innerHTML = effects.map(renderModifierCard).join('');
 }
 
 // =====================================================
@@ -253,32 +196,6 @@ async function initCatalysts() {
     container.innerHTML = `<p class="error-state">${t('guide.errorCatalysts')}</p>`;
     return;
   }
-
-  // Load fenda data for COTW section
-  const fendaData = await loadFendaData();
-
-  // Attach event listeners for COTW in Guide
-  document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const button = e.currentTarget;
-      const isActive = button.classList.contains('active');
-
-      // Remove active from all
-      document.querySelectorAll('#tab-catalysts .cotw-filter-btn').forEach(b => b.classList.remove('active'));
-
-      if (isActive) {
-        // If it was already active, we just deactivated it. Clear the container.
-        const cotwContainer = document.getElementById('cotw-container-guide');
-        if (cotwContainer) {
-          cotwContainer.innerHTML = '<p class="info-state" style="text-align: center; margin: 20px 0;"></p>';
-        }
-      } else {
-        // Otherwise, activate it and render
-        button.classList.add('active');
-        renderCotw(button.dataset.element, 'cotw-container-guide', fendaData);
-      }
-    });
-  });
 
   // Handle Discord embed format
   if (catalysts.embeds && Array.isArray(catalysts.embeds)) {
@@ -325,143 +242,186 @@ async function initCatalysts() {
     }
   }
 
-  // Fallback for other formats
+  // Render the catalog with client-side search and category filters.
   if (Array.isArray(catalysts)) {
-    container.innerHTML = `
-      <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">${t('guide.riftCatalysts')}</h2>
-      <div class="catalyst-grid">
-        ${catalysts.map(cat => renderCatalystCard(cat)).join('')}
-      </div>
-    `;
+    initCatalystCatalog([{ category: t('guide.allCatalysts'), items: catalysts }]);
   } else if (catalysts.categories && Array.isArray(catalysts.categories)) {
-    const categoriesHtml = catalysts.categories.map(catObj => {
-      const categoryClass = getCategoryClass(catObj.category);
-      return `
-        <div class="catalyst-category ${categoryClass}">
-          <h3 style="font-family: 'Washington', sans-serif; color: var(--accent-gold); margin-bottom: 16px;">${catObj.category} \u2B07\uFE0F</h3>
-          <div class="catalyst-grid">
-            ${catObj.items.map(item => renderCatalystCard(item)).join('')}
-          </div>
-        </div>
-      `;
-    }).join('');
-
-    container.innerHTML = `
-      <h2 class="catalyst-title-main" style="margin-top: -10px; margin-bottom: 30px;">${t('guide.riftCatalysts')}</h2>
-      ${categoriesHtml}
-    `;
+    initCatalystCatalog(catalysts.categories);
   } else {
     container.innerHTML = `<p class="info-state">${t('guide.catalystsLoaded')}</p>`;
   }
 }
 
-function renderSpecialEffects(containerId) {
-  const container = document.getElementById(containerId);
-  if (!container) return;
+function initCatalystCatalog(categories) {
+  const container = document.getElementById('catalyst-container');
+  const searchInput = document.getElementById('guide-catalyst-search');
+  const filterContainer = document.getElementById('guide-catalyst-filters');
+  const results = document.getElementById('guide-catalyst-results');
+  if (!container || !searchInput || !filterContainer || !results) return;
 
-  const effect = getLocalizedEffect('permanent_modifier') || EFFECT_DATA.permanent_modifier;
-  if (!effect) return;
+  const validCategories = categories
+    .filter(category => category && typeof category.category === 'string' && Array.isArray(category.items))
+    .map(category => ({ ...category, items: category.items.filter(Boolean) }));
+  let selectedCategory = 'all';
+  let searchTerm = '';
 
-  const stacks = effect.stacks ? `${effect.stacks}x` : '-';
+  const createFilterButton = (value, label, count) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'guide-catalyst-filter';
+    button.dataset.category = value;
+    button.setAttribute('aria-pressed', String(value === selectedCategory));
+    const labelElement = document.createElement('span');
+    labelElement.textContent = label;
+    const countElement = document.createElement('span');
+    countElement.className = 'guide-catalyst-filter-count';
+    countElement.textContent = count.toLocaleString();
+    button.append(labelElement, countElement);
+    return button;
+  };
 
-  const html = `
-    <tr class="effect-row">
-      <td class="effect-icon-cell">
-        <div class="effect-icon-wrapper">
-          <img loading="lazy" src="${effect.icon}" alt="${effect.name}" class="effect-icon-img">
-        </div>
-      </td>
-      <td class="effect-name-cell">
-        <span class="effect-name" style="color: ${effect.color};">${effect.name}</span>
-      </td>
-      <td class="effect-desc-cell">
-        ${effect.explicacao ? `<p><strong style="color: ${effect.color};">${t('guide.explanation')}</strong> ${effect.explicacao}</p>` : ''}
-      </td>
-      <td class="effect-stacks-cell">${stacks}</td>
-    </tr>
-  `;
+  filterContainer.replaceChildren(
+    createFilterButton('all', t('guide.allCatalysts'), validCategories.reduce((count, category) => count + category.items.length, 0)),
+    ...validCategories.map(category => createFilterButton(
+      category.category,
+      category.category,
+      category.items.length
+    ))
+  );
 
-  container.innerHTML = html;
-}
+  const renderResults = () => {
+    const normalizedTerm = normalizeCatalystText(searchTerm);
+    const visibleCategories = validCategories.map(category => {
+      const items = category.items.filter(item => {
+        if (selectedCategory !== 'all' && category.category !== selectedCategory) return false;
+        if (!normalizedTerm) return true;
 
-// Element to rift map mapping
-const ELEMENT_TO_MAP = {
-  water: 1,
-  fire: 2,
-  wind: 3,
-  light: 4,
-  dark: 5
-};
+        const searchableText = normalizeCatalystText([
+          item.name,
+          item.description,
+          item.constraint,
+          item.element,
+          category.category
+        ].filter(Boolean).join(' '));
+        return searchableText.includes(normalizedTerm);
+      });
+      return { ...category, items };
+    }).filter(category => category.items.length > 0);
 
-function renderCotw(element, containerId, fendaData) {
-  const cotwContainer = document.getElementById(containerId);
-  if (!cotwContainer || !fendaData) return;
+    const resultCount = visibleCategories.reduce((count, category) => count + category.items.length, 0);
+    results.textContent = t('guide.catalystResults').replace('{count}', resultCount.toLocaleString());
 
-  const mapNumber = ELEMENT_TO_MAP[element];
-  if (!mapNumber) return;
-
-  const map = fendaData.maps.find(m => m.map === mapNumber);
-  if (!map) {
-    cotwContainer.innerHTML = `<p class="info-state" style="text-align: center; margin: 20px 0;">${t('guide.noModifiersElement')}</p>`;
-    return;
-  }
-
-  // Build cards from all nodes in this map
-  const cards = [];
-  for (const node of map.nodes) {
-    if (node.node === 'Boss') {
-      // Merge all boss modifiers into a single card
-      const allBossMods = [...node.defender_modifiers, ...node.attacker_modifiers];
-      if (allBossMods.length > 0) {
-        cards.push(renderBossCard(allBossMods));
-      }
-    } else {
-      // Defender modifiers
-      for (const mod of node.defender_modifiers) {
-        cards.push(renderRiftModCard(mod, node.node));
-      }
-      // Attacker modifiers
-      for (const mod of node.attacker_modifiers) {
-        cards.push(renderRiftModCard(mod, node.node));
-      }
+    if (resultCount === 0) {
+      container.innerHTML = `<p class="guide-catalyst-empty">${t('guide.noCatalystMatches')}</p>`;
+      return;
     }
-  }
 
-  cotwContainer.innerHTML = cards.join('');
+    container.innerHTML = visibleCategories.map(category => `
+      <section class="catalyst-category ${getCategoryClass(category.category)}">
+        <header class="guide-catalyst-category-heading">
+          <h3>${category.category}</h3>
+          <span>${category.items.length}</span>
+        </header>
+        <div class="catalyst-grid">
+          ${category.items.map(item => renderCatalystCard(item, category.category)).join('')}
+        </div>
+      </section>
+    `).join('');
+  };
+
+  filterContainer.addEventListener('click', event => {
+    const button = event.target.closest('.guide-catalyst-filter');
+    if (!button || !filterContainer.contains(button)) return;
+
+    selectedCategory = button.dataset.category;
+    filterContainer.querySelectorAll('.guide-catalyst-filter').forEach(filter => {
+      filter.setAttribute('aria-pressed', String(filter === button));
+    });
+    renderResults();
+  });
+
+  searchInput.addEventListener('input', () => {
+    searchTerm = searchInput.value;
+    renderResults();
+  });
+
+  renderResults();
 }
 
-function renderRiftModCard(mod, nodeName) {
-  const formattedDesc = (mod.description || '').replace(/\n/g, '<br>');
-
-  return `
-    <div class="catalyst-card cotw-card">
-      <div class="catalyst-card-header">
-        <h4>${mod.name}</h4>
-        <span class="catalyst-constraint">${formatConstraint(nodeName)}</span>
-      </div>
-      <div class="catalyst-description">
-        <p>${formattedDesc}</p>
-      </div>
-    </div>
-  `;
+function normalizeCatalystText(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLocaleLowerCase();
 }
 
-function renderBossCard(mods) {
-  const descriptions = mods.map(mod => {
-    const formattedDesc = (mod.description || '').replace(/\n/g, '<br>');
-    return `<p><strong>${mod.name}</strong></p><p>${formattedDesc}</p>`;
-  }).join('<br>');
+function initModifierBrowser() {
+  const root = document.getElementById('tab-modifiers');
+  const search = document.getElementById('guide-modifier-search');
+  const results = document.getElementById('guide-modifier-results');
+  const emptyState = document.getElementById('guide-modifier-empty');
+  if (!root || !search || !results || !emptyState) return;
+
+  const groups = [...root.querySelectorAll('.guide-modifier-group')];
+  const filters = [...root.querySelectorAll('.guide-modifier-filter')];
+  let selectedType = 'all';
+
+  const updateResults = () => {
+    const term = normalizeCatalystText(search.value);
+    let total = 0;
+
+    groups.forEach(group => {
+      const typeMatches = selectedType === 'all' || group.dataset.modifierType === selectedType;
+      let groupCount = 0;
+
+      group.querySelectorAll('.guide-modifier-card').forEach(card => {
+        const textMatches = !term || normalizeCatalystText(card.textContent).includes(term);
+        const visible = typeMatches && textMatches;
+        card.hidden = !visible;
+        if (visible) groupCount += 1;
+      });
+
+      group.hidden = groupCount === 0;
+      group.querySelector('.guide-modifier-group-count').textContent = groupCount.toLocaleString();
+      total += groupCount;
+    });
+
+    results.textContent = t('guide.modifierResults').replace('{count}', total.toLocaleString());
+    emptyState.hidden = total > 0;
+  };
+
+  filters.forEach(button => {
+    button.addEventListener('click', () => {
+      selectedType = button.dataset.modifierFilter;
+      filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+      updateResults();
+    });
+  });
+
+  search.addEventListener('input', updateResults);
+  updateResults();
+}
+
+function renderModifierCard(effect) {
+  const color = effect.color || 'var(--accent-gold)';
+  const category = effect.key === 'critless' || effect.key === 'buff' || effect.key === 'debuff'
+    ? 'technical'
+    : effect.type === 'buff' ? 'positive' : effect.type === 'debuff' ? 'negative' : 'technical';
+  const details = [
+    effect.detailed ? `<section class="guide-modifier-detail"><h5>${t('guide.gameDescription')}</h5><p>${effect.detailed}</p></section>` : '',
+    effect.explicacao ? `<section class="guide-modifier-detail"><h5>${t('guide.explanation')}</h5><p>${effect.explicacao}</p></section>` : '',
+    effect.scaling ? `<p class="guide-modifier-scaling"><strong>${t('guide.scaling')}:</strong> ${effect.scaling}</p>` : ''
+  ].filter(Boolean).join('');
 
   return `
-    <div class="catalyst-card cotw-card">
-      <div class="catalyst-card-header">
-        <h4>${mods[0].name}</h4>
-        <span class="catalyst-constraint">${formatConstraint('Boss')}</span>
-      </div>
-      <div class="catalyst-description">
-        ${descriptions}
-      </div>
-    </div>
+    <article class="guide-modifier-card modifier-card-${category}">
+      <header class="guide-modifier-card-heading">
+        ${effect.icon ? `<img class="guide-modifier-icon" loading="lazy" src="${effect.icon}" alt="">` : `<span class="guide-modifier-marker" style="--modifier-color: ${color}" aria-hidden="true"></span>`}
+        <h4>${effect.name}</h4>
+        ${effect.stacks ? `<span class="guide-modifier-stacks">${t('guide.max')} ${effect.stacks}x</span>` : ''}
+      </header>
+      <div class="guide-modifier-card-body">${details || `<p>${effect.description || ''}</p>`}</div>
+    </article>
   `;
 }
 
@@ -488,12 +448,13 @@ function formatCatalystText(text) {
   return text;
 }
 
-function renderCatalystCard(item) {
-  // Formatting newlines in description
-  const formattedDesc = (item.description || '').replace(/\\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+function renderCatalystCard(item, category = '') {
+  const formattedDesc = (item.description || '')
+    .replace(/\r?\n/g, '<br>')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
   return `
-    <div class="catalyst-card">
+    <article class="catalyst-card guide-catalyst-card ${getCategoryClass(category)}">
       <div class="catalyst-card-header">
         <h4>${item.name}</h4>
         ${item.constraint ? `<span class="catalyst-constraint">${formatConstraint(item.constraint)}</span>` : ''}
@@ -501,7 +462,7 @@ function renderCatalystCard(item) {
       <div class="catalyst-description">
         <p>${formattedDesc}</p>
       </div>
-    </div>
+    </article>
   `;
 }
 

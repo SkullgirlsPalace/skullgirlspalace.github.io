@@ -93,8 +93,6 @@ export const EFFECT_DATA = {
     color: '#b0bec5',
     icon: 'img/modifiers/permanent/Permanent.webp',
     stacks: 5,
-    detailed: 'O Efeito com está borda não pode ser removido.',
-    detailed_en: 'The Effect with this border cannot be removed.',
     explicacao: 'O Efeito com está borda não pode ser removido.',
     explicacao_en: 'The Effect with this border cannot be removed.'
   },
