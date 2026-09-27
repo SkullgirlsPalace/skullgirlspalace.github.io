@@ -43,10 +43,10 @@ export function createNavbar() {
     </div>
     <div class="nav-overlay" id="navOverlay" onclick="handleToggleMobileMenu()"></div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
+      <li><a href="#">${t('nav.home')}</a></li>
+      <li><a href="#characters">${t('nav.characters')}</a></li>
+      <li><a href="#guide">${t('nav.guide')}</a></li>
+      <li><a href="#stats">${t('nav.calculator')}</a></li>
     </ul>
   </div>
 </nav>
@@ -147,14 +147,14 @@ export function updateNavbarVisibility(section) {
 export function updateActiveNavLink(section) {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
-        const onclick = link.getAttribute('onclick');
+        const href = link.getAttribute('href');
         
         let targetSection = section;
         if (section && section.startsWith('character')) {
             targetSection = 'characters';
         }
         
-        if (onclick && onclick.includes(`'${targetSection}'`)) {
+        if (href === `#${targetSection}`) {
             link.classList.add('active');
         }
     });

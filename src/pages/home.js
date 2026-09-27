@@ -53,15 +53,15 @@ export function render() {
 
       <!-- Menu Buttons -->
       <div class="hub-menu">
-        <button class="hub-btn" onclick="navigateTo('characters')">
+        <a class="hub-btn" href="#characters">
           <span>${t('home.characters')}</span>
-        </button>
-        <button class="hub-btn" onclick="navigateTo('guide')">
+        </a>
+        <a class="hub-btn" href="#guide">
           <span>${t('home.guide')}</span>
-        </button>
-        <button class="hub-btn" onclick="navigateTo('stats')">
+        </a>
+        <a class="hub-btn" href="#stats">
           <span>${t('home.calculator')}</span>
-        </button>
+        </a>
         <button class="hub-btn" onclick="window.open('https://hub.skullgirlsmobile.com', '_blank')">
           <span>${t('home.hub')}</span>
         </button>
