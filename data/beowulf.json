@@ -4,6 +4,28 @@
     "variants": {
         "diamante": [
             {
+                "name": "Baba Yaga",
+                "title_formatted": "Baba Yaga - Neutro - Diamante",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/beowulf/Baba_Yaga.webp"
+                },
+                "stats": {
+                    "attack": "15,130",
+                    "health": "64,032",
+                    "power": "30,488"
+                },
+                "signature_ability": {
+                    "name": "TIROTEIO",
+                    "description": "[HAB 1]: Ao GOLPEAR um oponente no ar, ganha OLHO-MORTO por 10/12/15 segundos. Enquanto estiver sob efeito de OLHO-MORTO, o MODO HYPE é estendido para durar 15 segundos e NOCAUTEAR o oponente concede uma CARGA DE HYPE.\n\n[HAB 2]: Durante o MODO HYPE, após um ARREMESSO, o oponente é lançado ao ar. Durante o MODO HYPE, aplica FEITIÇO por 5/7/10 segundos ao GOLPEAR o oponente no ar."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Gigantic Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            },
+            {
                 "name": "Rei das Feras",
                 "title_formatted": "Rei das Feras - Fogo - Diamante",
                 "element": "Fogo",

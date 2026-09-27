@@ -4,6 +4,28 @@
     "variants": {
         "diamante": [
             {
+                "name": "Verdadeiro Eu",
+                "title_formatted": "Verdadeiro Eu - Água - Diamante",
+                "element": "Água",
+                "color_hex": "#00ffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/fukua/True_Self.webp"
+                },
+                "stats": {
+                    "attack": "15,590",
+                    "health": "50,438",
+                    "power": "28,350"
+                },
+                "signature_ability": {
+                    "name": "KUNG FALSO",
+                    "description": "[HAB 1]: Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Recupera 1/1.5/2% da VIDA MÁXIMA ao ganhar um acúmulo de CHUTE SOMBRIO. O próximo BLOCKBUSTER usado após atingir 10 acúmulos de CHUTE SOMBRIO invocará a MÃO DE GRENDEL para ACERTAR o oponente.\n\n[HAB 2]: Quando a MÃO DE GRENDEL ACERTA com sucesso, ganha INABALÁVEL por 10/12/15 segundos. Ao ganhar um acúmulo de CHUTE SOMBRIO enquanto se beneficia de INABALÁVEL, causa 2/2.5/3% da VIDA MÁXIMA como dano ao oponente e ganha 2/3/4% do MEDIDOR DE BLOCKBUSTER."
+                },
+                "marquee_ability": "Maldade Spectral",
+                "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",
+                "recommended_arsenal": "Uma Vez Mordido..., Conchinha Inevitável, Broca Sonhadora, Tiros de Amor, Tiros de Amor"
+            },
+            {
                 "name": "Imagem Dividida",
                 "title_formatted": "Imagem Dividida - Luz - Diamante",
                 "element": "Luz",

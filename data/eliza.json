@@ -4,6 +4,28 @@
     "variants": {
         "diamante": [
             {
+                "name": "Passatempo Mortal",
+                "title_formatted": "Passatempo Mortal - Fogo - Diamante",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/eliza/Killing_Time.webp"
+                },
+                "stats": {
+                    "attack": "10,003",
+                    "health": "88,051",
+                    "power": "29,160"
+                },
+                "signature_ability": {
+                    "name": "DO ABISMO",
+                    "description": "[HAB 1]: ATAQUES CARREGADOS são estendidos com um golpe extra e podem ser carregados por mais tempo para causar dano adicional. Acertar um ATAQUE CARREGADO concede OLHO-MORTO permanente e adiciona 1/1.5/2% ao MEDIDOR DE BLOCKBUSTER para cada golpe acertado até o fim do combo dela.\n\n[HAB 2]: GOLPES DE BLOCKBUSTER aplicam MALDIÇÃO por 5/7/10 segundos. Se um GOLPE DE BLOCKBUSTER ocorrer após um ATAQUE CARREGADO no mesmo combo, ganha 3/4/5 acúmulos de FÚRIA permanente até o fim do combo dela."
+                },
+                "marquee_ability": "Sacrifício Ritual ou Critless",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
+                "recommended_arsenal": "Mordida da Sekhmet, Exílio do Paraíso (Expulsão), Ascenção, Banir o caos, Peso de Anúbis"
+            },
+            {
                 "name": "Múmia Querida",
                 "title_formatted": "Múmia Querida - Luz - Diamante",
                 "element": "Luz",

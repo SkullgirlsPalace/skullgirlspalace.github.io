@@ -8,12 +8,9 @@ import { flattenVariants } from '../utils/variantUtils.js';
 
 // Nomes das variantes que ganharam destaque NEW
 export const NEW_VARIANTS = [
-    "Fluxo de Mana",
-    "Vira a balança",
-    "Mana Flow",
-    "Scale Tipper",
-    "Isca Sortuda",
-    "Lucky Lure"
+    "Baba Yaga",
+    "Bailarina",
+    "Bellarina"
 ];
 
 /**

@@ -116,6 +116,28 @@
         ],
         "ouro": [
             {
+                "name": "A Amarela",
+                "title_formatted": "A Amarela - Luz - Ouro",
+                "element": "Luz",
+                "color_hex": "#ffff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/squigly/Yellow_One.webp"
+                },
+                "stats": {
+                    "attack": "11,007",
+                    "health": "66,905",
+                    "power": "26,203"
+                },
+                "signature_ability": {
+                    "name": "HABILIDADE AMARELA",
+                    "description": "[HAB 1]: Ganhe BÊNÇÃO a cada 5 segundos. Esta BÊNÇÃO sempre dura 1/1.5/2 segundo(s) e se torna permanente ao usar MOVIMENTOS ESPECIAIS e BLOCKBUSTERS. As BÊNÇÃOS permanentes são removidas quando esta BÊNÇÃO expira.\n\n[HAB 2]: Enquanto estiver com pelo menos 3 acúmulos de BÊNÇÃO permanente, MOVIMENTOS ESPECIAIS e BLOCKBUSTERS ficam INDEFENSÁVEIS e recuperam 25/35/50% do dano causado como VIDA."
+                },
+                "marquee_ability": "",
+                "recommended_build": "ATQ%, Perfura??o, Ganho Medidor e Reat. Especial",
+                "recommended_arsenal": "Inferno do Leviatã, Ópera de batalha, Soco de dragão, Arrastar e morder, O acorde de prata"
+            },
+            {
                 "name": "Frio de Matar",
                 "title_formatted": "Frio de Matar - Água - Ouro",
                 "element": "Água",

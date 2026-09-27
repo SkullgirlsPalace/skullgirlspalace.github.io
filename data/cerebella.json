@@ -94,6 +94,28 @@
         ],
         "ouro": [
             {
+                "name": "Bailarina",
+                "title_formatted": "Bailarina - Neutro - Ouro",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/cerebella/Bellarina.webp"
+                },
+                "stats": {
+                    "attack": "14,040",
+                    "health": "66,868",
+                    "power": "29,739"
+                },
+                "signature_ability": {
+                    "name": "PIRUETA",
+                    "description": "[HAB 1]: Ao acertar um ATAQUE EM DISPARADA, DRENA 15% do MEDIDOR DE BLOCKBUSTER, ganha OLHO-MORTO por 10/12/15 segundos e ganha 5/10/15% de ATAQUE permanente.\n\n[HAB 2]: Enquanto estiver sob efeito de OLHO-MORTO, ganha ESQUIVA por 5/7/10 segundos ao avançar e transfere 1 EFEITO POSITIVO do oponente ao GOLPEAR um oponente no ar."
+                },
+                "marquee_ability": "Vantagem",
+                "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+            },
+            {
                 "name": "Assustadora",
                 "title_formatted": "Assustadora - Trevas - Ouro",
                 "element": "Trevas",

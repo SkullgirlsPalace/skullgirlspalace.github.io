@@ -116,6 +116,28 @@
         ],
         "ouro": [
             {
+                "name": "Desafiante da Morte",
+                "title_formatted": "Desafiante da Morte - Fogo - Ouro",
+                "element": "Fogo",
+                "color_hex": "#ff0000",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/annie/Death_Defier.webp"
+                },
+                "stats": {
+                    "attack": "10,932",
+                    "health": "66,044",
+                    "power": "25,951"
+                },
+                "signature_ability": {
+                    "name": "COLECIONADORA DE DÁDIVAS",
+                    "description": "[HAB 1]: Annie ganha INABALÁVEL e 10/15/20% de PODER ESTELAR ao avançar. Ao ativar PODER ESTELAR com o medidor cheio, esvazia-o instantaneamente para ganhar 1 acúmulo de FÚRIA permanente e 1 acúmulo de MIASMA permanente.\n\n[HAB 2]: Ao sofrer um GOLPE que seria fatal, consome todos os EFEITOS POSITIVOS permanentes em Annie para aplicar ATORDOAMENTO ao oponente por 1.5/2/2.5 segundos e depois recupera 5/10/15% da VIDA MÁXIMA por EFEITO POSITIVO consumido."
+                },
+                "marquee_ability": "Desvio para o Vermelho",
+                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
+                "recommended_arsenal": "Estilingue Gravitacional, Raio Sagan, Pilar de Destruição, Pilar de Destruição, Pilar de Destruição"
+            },
+            {
                 "name": "Maravilha Eterna",
                 "title_formatted": "Maravilha Eterna - Luz - Ouro",
                 "element": "Luz",

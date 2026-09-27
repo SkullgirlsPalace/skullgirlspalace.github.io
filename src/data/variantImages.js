@@ -21,7 +21,8 @@ const VARIANT_IMAGES = {
         "Estrela Ninja": "img/annie/Annie_5.webp",
         "Srta. Mercúrio": "img/annie/Annie_6.webp",
         "Criança Estelar": "img/annie/Annie_1.webp",
-        "Chama Solar": "img/annie/Annie_2.webp"
+        "Chama Solar": "img/annie/Annie_2.webp",
+        "Desafiante da Morte": "img/annie/Death_Defier.webp"
     },
     "beowulf": {
         "Rei das Feras": "img/beowulf/Beowulf_15.webp",
@@ -39,7 +40,8 @@ const VARIANT_IMAGES = {
         "Promotor": "img/beowulf/Beowulf_3.webp",
         "Favorito dos Fãs": "img/beowulf/Beowulf_6.webp",
         "Alma de Pedra": "img/beowulf/Beowulf_2.webp",
-        "Lobo Azarão": "img/beowulf/Beowulf_1.webp"
+        "Lobo Azarão": "img/beowulf/Beowulf_1.webp",
+        "Baba Yaga": "img/beowulf/Baba_Yaga.webp"
     },
     "big-band": {
         "Bandido de Bronze": "img/big-band/Big_Band_15.webp",
@@ -57,7 +59,8 @@ const VARIANT_IMAGES = {
         "Resonant Evil": "img/big-band/Big_Band_4.webp",
         "Desarmonizador": "img/big-band/Big_Band_5.webp",
         "Batidas Rítmicas": "img/big-band/Big_Band_2.webp",
-        "Superjazz": "img/big-band/Big_Band_1.webp"
+        "Superjazz": "img/big-band/Big_Band_1.webp",
+        "Inursuportável": "img/big-band/Unbearable.webp"
     },
     "black-dahlia": {
         "Hóstia Profana": "img/black-dahlia/Black_Dahlia_14.webp",
@@ -93,7 +96,8 @@ const VARIANT_IMAGES = {
         "Ressurgente": "img/cerebella/Cerebella_4.webp",
         "Sentinela de Pedra": "img/cerebella/Cerebella_6.webp",
         "Substituta": "img/cerebella/Cerebella_1.webp",
-        "Cabeça Dura": "img/cerebella/Cerebella_2.webp"
+        "Cabeça Dura": "img/cerebella/Cerebella_2.webp",
+        "Bailarina": "img/cerebella/Bellarina.webp"
     },
     "double": {
         "Criatura de Hábito": "img/double/Double_15.webp",
@@ -130,7 +134,8 @@ const VARIANT_IMAGES = {
         "Víbora Escarlate": "img/eliza/Eliza_4.webp",
         "Sombruma": "img/eliza/Eliza_6.webp",
         "Rainha do Nilo": "img/eliza/Eliza_1.webp",
-        "Decifrada": "img/eliza/Eliza_2.webp"
+        "Decifrada": "img/eliza/Eliza_2.webp",
+        "Passatempo Mortal": "img/eliza/Killing_Time.webp"
     },
     "filia": {
         "Cachinhos Malvados": "img/filia/Filia_8.webp",
@@ -168,7 +173,8 @@ const VARIANT_IMAGES = {
         "Falsa Temida": "img/fukua/Fukua_6.webp",
         "Cópia Aproximada": "img/fukua/Fukua_1.webp",
         "Gêmeo Infernal": "img/fukua/Fukua_2.webp",
-        "Poder Floral": "img/fukua/Flower_Power.webp"
+        "Poder Floral": "img/fukua/Flower_Power.webp",
+        "Verdadeiro Eu": "img/fukua/True_Self.webp"
     },
     "marie": {
         "Megalomaníaca": "img/marie/Marie_14.webp",
@@ -260,6 +266,7 @@ const VARIANT_IMAGES = {
         "Chumbinho": "img/peacock/Peacock_3.webp",
         "Reprise": "img/peacock/Peacock_1.webp",
         "Esboço": "img/peacock/Peacock_2.webp",
+        "Inkfluencer": "img/peacock/Inkfluencer.webp",
         "Ouro Maciço": "img/peacock/Solid_Gold.webp"
     },
     "robo-fortune": {
@@ -298,7 +305,8 @@ const VARIANT_IMAGES = {
         "Quebra-Morto": "img/squigly/Squigly_5.webp",
         "Medo do Palco": "img/squigly/Squigly_1.webp",
         "Branca de Medo": "img/squigly/Squigly_2.webp",
-        "Fluxo de Mana": "img/squigly/Mana_Flow.webp"
+        "Fluxo de Mana": "img/squigly/Mana_Flow.webp",
+        "A Amarela": "img/squigly/Yellow_One.webp"
     },
     'umbrella': {
         "Desejo de Morte": "img/umbrella/Umbrella_15.webp",

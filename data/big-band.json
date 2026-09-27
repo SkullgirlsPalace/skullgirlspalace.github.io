@@ -72,6 +72,28 @@
         ],
         "ouro": [
             {
+                "name": "Inursuportável",
+                "title_formatted": "Inursuportável - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#00ffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/big-band/Unbearable.webp"
+                },
+                "stats": {
+                    "attack": "9,585",
+                    "health": "82,555",
+                    "power": "27,592"
+                },
+                "signature_ability": {
+                    "name": "PREPARAURSO",
+                    "description": "[HAB 1]: Enquanto Big Band tiver colegas de equipe vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 10/12/15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\n\n[HAB 2]: Com um colega de equipe vivo, Big Band sofre 10/15/20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem colegas de equipe vivos, esses efeitos são dobrados."
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resist?ncia e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
+            },
+            {
                 "name": "G.I. JAZZ",
                 "title_formatted": "G.I. JAZZ - Ar - Ouro",
                 "element": "Ar",
