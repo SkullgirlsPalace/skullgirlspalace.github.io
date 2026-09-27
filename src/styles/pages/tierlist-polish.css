@@ -1,0 +1,471 @@
+/* Tier list selection and ranking polish. All rules are presentation-only. */
+
+/* Character selection */
+#tierlist.section {
+    width: min(1240px, calc(100% - 32px));
+    margin-inline: auto;
+}
+
+#tierlist .section-header {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+#tierlist .section-header h2 {
+    grid-column: 2;
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+#tierlist .section-header .btn-back {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#tierlist .tierlist-intro {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    padding: 16px 20px;
+    border: 1px solid rgba(212, 168, 75, 0.18);
+    border-radius: 14px;
+    background: linear-gradient(110deg, rgba(212, 168, 75, 0.075), rgba(255, 255, 255, 0.018) 72%);
+    text-align: center;
+}
+
+#tierlist .tierlist-intro p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+#tierlist .tierlist-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+#tierlist .tierlist-grid .character-card {
+    min-width: 0;
+    padding: 18px 12px 15px;
+    border-color: rgba(255, 255, 255, 0.075);
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.035), var(--bg-card) 58%);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+#tierlist .tierlist-grid .character-card:hover {
+    border-color: rgba(212, 168, 75, 0.48);
+    box-shadow: 0 12px 28px rgba(212, 168, 75, 0.11);
+}
+
+#tierlist .tierlist-grid .character-card::before {
+    background: var(--accent-gold);
+}
+
+#tierlist .tierlist-grid .character-card img {
+    width: clamp(72px, 8vw, 104px);
+    height: clamp(72px, 8vw, 104px);
+    margin-bottom: 10px;
+}
+
+#tierlist .tierlist-grid .character-card .name {
+    font-size: 0.88rem;
+    line-height: 1.3;
+}
+
+/* Character tier view header, tabs and filter controls */
+#character-detail[data-current-tab="tier"] .character-detail-header {
+    margin-bottom: 18px;
+    padding: 20px 20px 16px;
+    border: 1px solid rgba(212, 168, 75, 0.14);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.055), rgba(18, 18, 26, 0.82) 48%);
+}
+
+#character-detail[data-current-tab="tier"] .header-top-row {
+    margin-bottom: 20px;
+}
+
+#character-detail[data-current-tab="tier"] .header-middle-row {
+    margin-bottom: 18px;
+}
+
+#character-detail[data-current-tab="tier"] .detail-tabs {
+    gap: 6px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.22);
+}
+
+#character-detail[data-current-tab="tier"] .tab-btn {
+    min-height: 42px;
+    padding: 10px 22px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+}
+
+#character-detail[data-current-tab="tier"] .tab-btn.active {
+    border-color: rgba(212, 168, 75, 0.36);
+    color: #17130b;
+    background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+    box-shadow: 0 4px 14px rgba(212, 168, 75, 0.16);
+}
+
+#character-detail[data-current-tab="tier"] #variants-count-container {
+    justify-content: flex-end !important;
+    margin: 0 2px 8px !important;
+}
+
+#character-detail[data-current-tab="tier"] .variants-count {
+    margin: 0;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.025);
+    opacity: 1;
+}
+
+#character-detail[data-current-tab="tier"] .desktop-filter-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    padding: 12px 14px;
+    border-color: rgba(212, 168, 75, 0.12);
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.035), var(--bg-card) 55%);
+}
+
+#character-detail[data-current-tab="tier"] .desktop-filter-bar > .vertical-separator {
+    margin-inline: 10px;
+    opacity: 0.55;
+}
+
+#character-detail[data-current-tab="tier"] .desktop-filter-bar .character-nav {
+    width: min(220px, 100%);
+    gap: 5px;
+}
+
+#character-detail[data-current-tab="tier"] .desktop-filter-bar .char-dropdown,
+#character-detail[data-current-tab="tier"] .desktop-filter-bar .char-dropdown-btn {
+    width: 100%;
+}
+
+#character-detail[data-current-tab="tier"] .mobile-filter-bar {
+    border-color: rgba(212, 168, 75, 0.12);
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.035), var(--bg-card) 60%);
+}
+
+/* Ranking legend and table */
+#character-detail[data-current-tab="tier"] .detail-content {
+    animation: tier-content-enter 240ms ease both;
+}
+
+#character-detail[data-current-tab="tier"] .legend-section {
+    margin-bottom: 12px;
+    border-color: rgba(255, 255, 255, 0.075);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.018);
+}
+
+#character-detail[data-current-tab="tier"] .legend-header {
+    min-height: 48px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+#character-detail[data-current-tab="tier"] .legend-title {
+    color: var(--accent-gold);
+    font-size: 0.73rem;
+    letter-spacing: 0.1em;
+}
+
+#character-detail[data-current-tab="tier"] .legend-toggle-btn {
+    opacity: 0.85;
+}
+
+#character-detail[data-current-tab="tier"] .rank-dictionary,
+#character-detail[data-current-tab="tier"] .class-dictionary {
+    gap: 12px;
+    padding: 16px;
+}
+
+#character-detail[data-current-tab="tier"] .dict-item,
+#character-detail[data-current-tab="tier"] .class-dict-item {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.055);
+    border-radius: 11px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+#character-detail[data-current-tab="tier"] .tier-table-wrapper {
+    justify-content: flex-start;
+    margin: 18px 0 28px;
+    border: 1px solid rgba(212, 168, 75, 0.16);
+    border-radius: 16px;
+    background: rgba(13, 13, 18, 0.72);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    scrollbar-color: rgba(212, 168, 75, 0.42) rgba(255, 255, 255, 0.035);
+    scrollbar-width: thin;
+}
+
+#character-detail[data-current-tab="tier"] .tier-table {
+    min-width: 760px;
+    border: 0;
+    border-radius: 16px;
+    background: transparent;
+}
+
+#character-detail[data-current-tab="tier"] .tier-table th {
+    padding: 16px 12px;
+    color: var(--accent-gold-light);
+    background: rgba(212, 168, 75, 0.055);
+    font-size: 0.7rem;
+    line-height: 1.35;
+}
+
+#character-detail[data-current-tab="tier"] .tier-table th:first-child {
+    min-width: 190px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#character-detail[data-current-tab="tier"] .tier-table td {
+    padding: 13px 10px;
+    border-color: rgba(255, 255, 255, 0.055);
+}
+
+#character-detail[data-current-tab="tier"] .tier-table tbody tr {
+    transition: background 160ms ease;
+}
+
+#character-detail[data-current-tab="tier"] .tier-table tbody tr:hover {
+    background: rgba(212, 168, 75, 0.035);
+}
+
+#character-detail[data-current-tab="tier"] .tier-table td:first-child {
+    background: #14141b;
+}
+
+#character-detail[data-current-tab="tier"] .tier-char-cell {
+    width: 190px;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+#character-detail[data-current-tab="tier"] .tier-char-cell img {
+    width: 108px;
+    border-radius: 10px;
+}
+
+#character-detail[data-current-tab="tier"] .tier-char-cell span {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+#character-detail[data-current-tab="tier"] .tier-table .rank-badge {
+    width: 60px;
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    font-size: 1.75rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+@keyframes tier-content-enter {
+    from { opacity: 0.72; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1000px) {
+    #tierlist .tierlist-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    #character-detail[data-current-tab="tier"] .desktop-filter-bar {
+        gap: 8px 2px;
+    }
+
+    #character-detail[data-current-tab="tier"] .desktop-filter-bar > .vertical-separator {
+        margin-inline: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    #tierlist.section {
+        width: min(calc(100% - 24px), 620px);
+    }
+
+    #tierlist .section-header {
+        margin-bottom: 14px;
+    }
+
+    #tierlist .tierlist-intro {
+        margin-bottom: 16px;
+        padding: 13px 15px;
+    }
+
+    #tierlist .tierlist-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    #tierlist .tierlist-grid .character-card {
+        padding: 12px 6px 10px;
+        border-radius: 13px;
+    }
+
+    #tierlist .tierlist-grid .character-card img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 7px;
+    }
+
+    #tierlist .tierlist-grid .character-card .name {
+        font-size: 0.72rem;
+    }
+
+    #character-detail[data-current-tab="tier"] .character-detail-header {
+        margin-bottom: 14px;
+        padding: 14px 10px 12px;
+        border-radius: 15px;
+    }
+
+    #character-detail[data-current-tab="tier"] .header-top-row {
+        margin-bottom: 14px !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .header-middle-row {
+        margin-bottom: 14px;
+    }
+
+    #character-detail[data-current-tab="tier"] .detail-tabs {
+        width: min(100%, 330px);
+    }
+
+    #character-detail[data-current-tab="tier"] .tab-btn {
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.03em;
+    }
+
+    #character-detail[data-current-tab="tier"] .mobile-filter-bar {
+        padding: 9px;
+        border-radius: 14px;
+    }
+
+    #character-detail[data-current-tab="tier"] .mobile-row--sort {
+        gap: 8px;
+    }
+
+    #character-detail[data-current-tab="tier"] .mobile-sort-group {
+        gap: 6px;
+    }
+
+    #character-detail[data-current-tab="tier"] .mobile-sort-group .sort-btn {
+        min-height: 38px;
+        border-radius: 9px;
+    }
+
+    #character-detail[data-current-tab="tier"] .char-dropdown-btn {
+        min-height: 42px;
+    }
+
+    #character-detail[data-current-tab="tier"] .legend-header {
+        min-height: 44px;
+        padding: 10px 12px;
+    }
+
+    #character-detail[data-current-tab="tier"] .rank-dictionary,
+    #character-detail[data-current-tab="tier"] .class-dictionary {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    #character-detail[data-current-tab="tier"] .dict-item,
+    #character-detail[data-current-tab="tier"] .class-dict-item {
+        padding: 9px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table-wrapper {
+        margin-top: 14px;
+        border-radius: 13px;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table {
+        min-width: 680px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:first-child {
+        min-width: 126px;
+        padding-left: 12px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th {
+        padding: 12px 7px;
+        font-size: 0.62rem;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table td {
+        padding: 10px 6px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell {
+        width: 120px;
+        align-items: flex-start;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell img {
+        width: 64px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell span {
+        font-size: 0.7rem;
+        line-height: 1.25;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .rank-badge {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 11px;
+        font-size: 1.15rem !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .text-center {
+        min-width: 84px;
+        width: 84px;
+    }
+}
+
+@media (max-width: 380px) {
+    #tierlist .tierlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #character-detail[data-current-tab="tier"] .mobile-row--icons {
+        align-items: stretch;
+    }
+
+    #character-detail[data-current-tab="tier"] .mobile-icon-separator {
+        margin-inline: 5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #tierlist .tierlist-grid .character-card,
+    #character-detail[data-current-tab="tier"] .detail-content,
+    #character-detail[data-current-tab="tier"] .tier-table tbody tr {
+        animation: none;
+        transition: none;
+    }
+}

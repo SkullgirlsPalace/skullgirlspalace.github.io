@@ -40,5 +40,8 @@
 @import 'pages/character-profile.css';
 @import 'pages/calculator-studio.css';
 
-/* Responsive (must be last to override all above) */
+/* Responsive baseline; scoped page overrides follow. */
 @import 'base/responsive.css';
+
+/* Tier list visual layer: scoped to selection and ranking screens. */
+@import 'pages/tierlist-polish.css';
