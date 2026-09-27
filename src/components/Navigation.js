@@ -59,53 +59,61 @@ export function createNavbar() {
  */
 export function createAboutDrawer() {
   return `
-<div id="drawer-overlay" class="drawer-overlay" onclick="handleToggleAboutDrawer()"></div>
-<aside id="about-drawer" class="about-drawer">
+<div id="drawer-overlay" class="drawer-overlay" aria-hidden="true" onclick="handleToggleAboutDrawer()"></div>
+<aside id="about-drawer" class="about-drawer" role="dialog" aria-modal="true" aria-labelledby="about-drawer-title" aria-hidden="true" tabindex="-1">
   <div class="drawer-header">
-    <h3>${t('about.title')}</h3>
-    <button class="close-drawer" onclick="handleToggleAboutDrawer()">×</button>
+    <div class="drawer-heading">
+      <span class="about-eyebrow">Skullgirls Mobile</span>
+      <h3 id="about-drawer-title">${t('about.title')}</h3>
+    </div>
+    <button class="close-drawer" type="button" aria-label="Close" onclick="handleToggleAboutDrawer()">×</button>
   </div>
   <div class="drawer-content">
-    <div class="hero">
+    <section class="about-drawer-hero">
+      <span class="about-drawer-mark" aria-hidden="true">SP</span>
       <h1>${t('about.heroTitle')}</h1>
       <p>${t('about.heroSubtitle')}</p>
-      <div class="hero-buttons">
-        <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">
+      <div class="about-actions">
+        <a href="https://discord.gg/whZJz92RTt" target="_blank" rel="noopener noreferrer" class="about-action about-action-primary">
           ${t('about.discord')}
         </a>
-        <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank" class="btn btn-secondary">
+        <a href="https://github.com/SkullgirlsPalace/skullgirlspalace.github.io" target="_blank" rel="noopener noreferrer" class="about-action">
           ${t('about.github')}
         </a>
       </div>
-    </div>
+    </section>
 
     <div class="info-cards vertical">
-      <div class="card-link">
+      <section class="card-link about-info-card">
+        <span class="about-card-accent" aria-hidden="true">01</span>
         <h3>${t('about.buildsTitle')}</h3>
         <p>${t('about.buildsDesc')}</p>
-      </div>
-      <div class="card-link">
+      </section>
+      <section class="card-link about-info-card">
+        <span class="about-card-accent" aria-hidden="true">02</span>
         <h3>${t('about.calculatorTitle')}</h3>
         <p>${t('about.calculatorDesc')}</p>
-      </div>
+      </section>
     </div>
 
     <div class="credits-section">
       <h4>${t('about.creditsTitle')}</h4>
       <p>${t('about.creditsDevs')}</p>
-      <p>${t('about.inspiration')} <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
-      <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Fandom Wiki</a>.</p>
+      <p>${t('about.inspiration')} <a href="https://github.com/Krazete" target="_blank" rel="noopener noreferrer">Krazete</a></p>
+      <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
       <p>${t('about.assetsNote')}</p>
 
-      <div class="disclaimer-tooltip" style="margin-top: 20px;">
+      <div class="disclaimer-tooltip about-disclaimer">
         <button class="disclaimer-btn" onclick="handleToggleDisclaimer()" title="${t('about.disclaimerBtn')}">⚠️</button>
         <div class="disclaimer-content" id="disclaimer-content">
           <p><strong>${t('about.disclaimerTitle')}</strong> ${t('about.disclaimerText1')}</p>
           <p>${t('about.disclaimerText2')}</p>
         </div>
       </div>
-      <p style="font-size: 0.85rem; margin-top: 20px;">${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: bold;">LivePix</a></p>
-      <p style="font-size: 0.85rem; margin-top: 10px;">${t('about.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.serverName')}</a>.</p>
+      <div class="about-support">
+        <p>${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" rel="noopener noreferrer">LivePix</a></p>
+        <p>${t('about.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank" rel="noopener noreferrer">${t('about.serverName')}</a>.</p>
+      </div>
     </div>
   </div>
 </aside>
@@ -175,9 +183,16 @@ export function handleToggleAboutDrawer() {
   const drawer = document.getElementById('about-drawer');
   const overlay = document.getElementById('drawer-overlay');
   if (drawer && overlay) {
-    drawer.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
+    const isOpening = !drawer.classList.contains('active');
+    drawer.classList.toggle('active', isOpening);
+    overlay.classList.toggle('active', isOpening);
+    drawer.setAttribute('aria-hidden', String(!isOpening));
+    overlay.setAttribute('aria-hidden', String(!isOpening));
+    document.body.style.overflow = isOpening ? 'hidden' : '';
+
+    if (isOpening) {
+      drawer.querySelector('.close-drawer')?.focus();
+    }
   }
 }
 

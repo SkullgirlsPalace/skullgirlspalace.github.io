@@ -27,6 +27,7 @@
 @import 'components/refactored.css';
 
 @import 'components/footer.css';
+@import 'components/site-chrome.css';
 
 /* Pages */
 @import 'pages/home.css';
