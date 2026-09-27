@@ -42,7 +42,7 @@
         },
         "ability": "Doce Ostentação\r",
         "SA1": "Enquanto Umbrella estiver viva, o Lutador ativo tem 30/40/50% de chance de ganhar um BUFF baseado no ELEMENTO de um aliado aleatório por 7 segundos ao acertar um GOLPE CRÍTICO.\r",
-        "SA2": "Enquanto Umbrella estiver viva, o DANO CRÍTICO do Lutador ativo aumenta em 5/10/15% por acúmulo de REGENERAÇÃO."
+        "SA2": "Enquanto Umbrella estiver viva, o DANO CRÍTICO do Lutador ativo aumenta em 5/10/15% por acúmulo de REGENERAÇÃO.\r"
     },
     "grandmother": {
         "name": "Grande Mãe",
@@ -191,8 +191,8 @@
             "fs": "436"
         },
         "ability": "Quicando e Quebrando\r",
-        "SA1": "Quando Big Band estiver vivo, os oponentes causam 15/25/35% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER.\r",
-        "SA2": "Quando Big Band realizar uma ARRANCADA DE ATAQUE bem-sucedida, drene 5% de VIDA do inimigo. Quando Big Band sofre um GOLPE durante a ARRANCADA, ele ganha 2 acúmulos de ESPINHOS por 5/7/10 s.\r"
+        "SA1": "Quando Big Band estiver vivo, os oponentes causam 20/30/40% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER.\r",
+        "SA2": "Quando Big Band acerta um ATAQUE EM DISPARADA, drena 5% da VIDA do oponente. Quando Big Band sofre um GOLPE durante seu ATAQUE EM DISPARADA, ganha 2 acúmulos de BLOQUEIO AUTOMÁTICO por 5/7/10 segundos.\r"
     },
     "brassbandit": {
         "name": "Bandido de Bronze",
@@ -251,7 +251,7 @@
             "fs": "187"
         },
         "ability": "MEGA BUSTER",
-        "SA1": "Ao GOLPEAR, todos os ataques de RAIO e ENERGIA têm 25% de chance de infligir QUEBRA DE ARMADURA por 10/12/15 segundos.",
+        "SA1": "Todos os ataques de FEIXE e ENERGIA têm 25% de chance em GOLPE de conceder ACELERAÇÃO e aplicar QUEBRA DE ARM. por 8/10/12 segundos cada.\r",
         "SA2": "Recupere 25% de VIDA e ganhe 3/4/5 camadas de BARREIRA ao usar um BLOCKBUSTER de CATEGORIA 3."
     },
     "beatbox": {
@@ -326,8 +326,8 @@
             "fs": "460"
         },
         "ability": "CONGELADA",
-        "SA1": "O dano de ATAQUE aumenta em 1/2/3% da sua VIDA ATUAL.",
-        "SA2": "O dano infligido pelo oponente é reduzido em 1/2/3% por cada GOLPE DE COMBO do oponente."
+        "SA1": "Enquanto estiver perto do oponente, aplica IMOBILIZAR e LENTIDÃO por 7/10/12 segundos a cada 3 segundos. Reduz o ATAQUE do oponente em 3% por cada segundo em que estiver imobilizado até ele SAIR.\r",
+        "SA2": "Cause dano equivalente a 4/5/6% da VIDA MÁXIMA ao oponente quando qualquer lutador for NOCAUTEADO enquanto o oponente estiver IMOBILIZADO.\r"
     },
     "blitzglamour": {
         "name": "Blitz e Glamour",
@@ -385,9 +385,9 @@
             "hp": "1191",
             "fs": "430"
         },
-        "ability": "HEMORRAGIA",
-        "SA1": "10% de chance de infligir SANGRAMENTO FORTE por 5/7/10 segundos ao GOLPEAR.",
-        "SA2": "Ganhe FÚRIA permanente quando a VIDA do oponente cair abaixo de 15/20/25%."
+        "ability": "Zumbido de inseto\r",
+        "SA1": "Para cada 20/15/10% de VIDA que o oponente perder, aplica POLARIDADE INVERSA e DEFINHAR por 10 segundos.\r",
+        "SA2": "Enquanto a % de VIDA de Painwheel for maior que a do oponente, ganha 1 acúmulo de ESQUIVA a cada 10/7/5 segundos.\r"
     },
     "beastking": {
         "name": "Rei das Feras",
@@ -416,8 +416,8 @@
             "fs": "99"
         },
         "ability": "SEGUNDO FÔLEGO",
-        "SA1": "Na ASSISTÊNCIA, ganhe REGENERAÇÃO FORTE e ARMADURA por 5/7/10 segundos.",
-        "SA2": "Na ASSISTÊNCIA, ganhe 20/25/35% no MEDIDOR DE BLOCKBUSTER."
+        "SA1": "Ao fazer TAG-IN, ganha REGENERAÇÃO PESADA por 5/7/10 segundos e 20/25/35% do MEDIDOR DE BLOCKBUSTER.\r",
+        "SA2": "Ao acertar um ATAQUE EM DISPARADA, ganha ARMADURA por 5/7/10 segundos e remove 1 EFEITO NEGATIVO de Big Band.\r"
     },
     "badmsfrosty": {
         "name": "Frio Cortante",
@@ -431,8 +431,23 @@
             "fs": "184"
         },
         "ability": "DANDO UM GELO",
-        "SA1": "CRÍTICOS têm 50% de chance de DESATIVAR os BLOCKBUSTERS do oponente por 4/5/6 segundos.",
-        "SA2": "Também inflige QUEBRA DE ARMADURA por 4/5/6 segundos."
+        "SA1": "50% de chance em GOLPE CRÍTICO de aplicar QUEBRA DE ARM. por 5/7/10 segundos.\r",
+        "SA2": "Ganhe INABALÁVEL por 3/4/5 segundos ao avançar. DESATIVA os BLOCKBUSTERS do oponente enquanto estiver sob efeito de INABALÁVEL.\r"
+    },
+    "bellarina": {
+        "name": "Bailarina\r",
+        "rarity": "gold",
+        "element": "neutral",
+        "character": "<:sp_cb:685401170495537152> Cerebella",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bRina.png",
+        "stats": {
+            "atk": "375",
+            "hp": "1786",
+            "fs": "471"
+        },
+        "ability": "Pirueta\r",
+        "SA1": "Ao acertar um ATAQUE EM DISPARADA, DRENA 15% do MEDIDOR DE BLOCKBUSTER, ganha OLHO-MORTO por 10/12/15 segundos e ganha 5/10/15% de ATAQUE permanente.\r",
+        "SA2": "Enquanto estiver sob efeito de OLHO-MORTO, ganha ESQUIVA por 5/7/10 segundos ao avançar e transfere 1 EFEITO POSITIVO do oponente ao GOLPEAR um oponente no ar.\r"
     },
     "bombshell": {
         "name": "Atração Fatal",
@@ -494,6 +509,21 @@
         "SA1": "Recupera 5/7/10% de VIDA quando um dos lutadores usa um GOLPE ESPECIAL.",
         "SA2": "Recupera 5/10/15% do MEDIDOR DE BLOCKBUSTER quando um dos lutadores usa um BLOCKBUSTER."
     },
+    "babayaga": {
+        "name": "Baba Yaga\r",
+        "rarity": "diamond",
+        "element": "neutral",
+        "character": "<:sp_beo:684771548414083107> Beowulf",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/bYaga.png",
+        "stats": {
+            "atk": "788",
+            "hp": "3335",
+            "fs": "941"
+        },
+        "ability": "Tiroteio\r",
+        "SA1": "Ao GOLPEAR um oponente no ar, ganha OLHO-MORTO por 10/12/15 segundos. Enquanto estiver sob efeito de OLHO-MORTO, o MODO HYPE é estendido para durar 15 segundos e NOCAUTEAR o oponente concede uma CARGA DE HYPE.",
+        "SA2": "Durante o MODO HYPE, após um ARREMESSO, o oponente é lançado ao ar. Durante o MODO HYPE, aplica FEITIÇO por 5/7/10 segundos ao GOLPEAR o oponente no ar.\r"
+    },
     "ironmatron": {
         "name": "Matrona de Ferro",
         "rarity": "gold",
@@ -537,7 +567,7 @@
         },
         "ability": "VAI PASTAR",
         "SA1": "GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 30% de DANO EXTRA e têm uma chance de 50% de infligir GOSMA por 10/12/15 segundos.",
-        "SA2": "Usar um BLOCKBUSTER inflige QUIETUS por 10/12/15 segundos se o oponente estiver sofrendo com GOSMA."
+        "SA2": "Quando o oponente RICOCHETEIA em uma parede, drena 2/3/4% do MEDIDOR DE BLOCKBUSTER por acúmulo de GOSMA nele.\r"
     },
     "cluechaser": {
         "name": "Investigadora\r",
@@ -596,8 +626,8 @@
             "fs": "966"
         },
         "ability": "Músculo de Ferro",
-        "SA1": "Cada 7° GOLPE DE COMBO em Cerebella ou no oponente concede REGENERAÇÃO e ARMADURA por 10/13/15 segundos cada. Enquanto utilizam REGENERAÇÃO ou ARMADURA, BLOCKBUSTERS causam dano aumentado em 30/40/50%.\r",
-        "SA2": "Ganhe 10/12/15% de MEDIDOR DE BLOCKBUSTER e tenha 30/40/50% de chance de atualizar a REATIVAÇÃO de todos os GOLPES ESPECIAIS ao realizar um ARREMESSO.\r"
+        "SA1": "Quando qualquer lutador acerta um ARREMESSO, ganha ARMADURA por 15 segundos. GOLPES DE ARREMESSO de Cerebella aplicam BLOQUEIO DE CURA por 15 segundos, e 50/75/100% do dano causado é recuperado como VIDA.\r",
+        "SA2": "Ao acertar um ARREMESSO, ganha 10/12/15% do MEDIDOR DE BLOCKBUSTER e tem 30/40/50% de chance de redefinir o tempo de recarga de todos os ESPECIAIS. BLOCKBUSTERS causam 30% a mais de dano por acúmulo de ARMADURA em Cerebella.\r"
     },
     "chillguy": {
         "name": "Homem de Gelo\r",
@@ -611,7 +641,7 @@
             "fs": "421"
         },
         "ability": "Fica Frio\r",
-        "SA1": "Ao bloquear um GOLPE, aplica 1 acúmulo de LENTIDÃO por 10/13/15 s. Quando um oponente obtém 5 acúmulos de LENTIDÃO, remove todos os acúmulos de LENTIDÃO e causa ATORDOAMENTO por 6 s.\r",
+        "SA1": "Quando o lutador ativo bloqueia um GOLPE, aplica 1 acúmulo de LENTIDÃO por 10/13/15 segundos. Quando o oponente atinge 5 acúmulos de LENTIDÃO, remove todos os acúmulos de LENTIDÃO e aplica ATORDOAMENTO por 6 segundos.\r",
         "SA2": "Quando qualquer aliado GOLPEAR um oponente atordoado, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por NaN/NaN/NaN s."
     },
     "creatureofhabit": {
@@ -626,8 +656,8 @@
             "fs": "804"
         },
         "ability": "BEBIDA MONSTRO",
-        "SA1": "Se nenhum dos BLOCKBUSTERS da Double estiver totalmente CARREGADO, ganhe 1 camada de MIASMA por 10 segundos a cada 7/6/5 segundos enquanto não estiver BLOQUEANDO.",
-        "SA2": "Ganhe 1 camada de FÚRIA a cada 4/3/2 segundos enquanto um BLOCKBUSTER estiver totalmente carregado. A FÚRIA é removida quando você usa um BLOCKBUSTER."
+        "SA1": "Ganha 1 acúmulo de MIASMA a cada 5/4/3 segundos.\r",
+        "SA2": "Ao atingir 5 acúmulos de MIASMA, converte-os em 5 acúmulos de FÚRIA e recupera 25/35/50% da VIDA MÁXIMA. FÚRIA é removida quando Double é NOCAUTEADA ou SAI.\r"
     },
     "criminalmind": {
         "name": "Mente Criminosa",
@@ -857,6 +887,21 @@
         "SA1": "Inflige 15/20/25% de dano extra a todos os aliados vivos do oponente.",
         "SA2": "Transfere 1 EFEITO POSITIVO do inimigo para você e inflige DEFINHAR por 5/7/10 segundos quando você entrar no MODO SEKHMET."
     },
+    "deathdefier": {
+        "name": "Desafiante da Morte\r",
+        "rarity": "gold",
+        "element": "fire",
+        "character": "<:sp_an:767922687204524032> Annie",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/dDefier.png",
+        "stats": {
+            "atk": "292",
+            "hp": "1764",
+            "fs": "411"
+        },
+        "ability": "Colecionadora de Dádivas\r",
+        "SA1": "Annie ganha INABALÁVEL e 10/15/20% de PODER ESTELAR ao avançar. Ao ativar PODER ESTELAR com o medidor cheio, esvazia-o instantaneamente para ganhar 1 acúmulo de FÚRIA permanente e 1 acúmulo de MIASMA permanente.\r",
+        "SA2": "Ao sofrer um GOLPE que seria fatal, consome todos os EFEITOS POSITIVOS permanentes em Annie para aplicar ATORDOAMENTO ao oponente por 1.5/2/2.5 segundos e depois recupera 5/10/15% da VIDA MÁXIMA por EFEITO POSITIVO consumido.\r"
+    },
     "dreamdemon": {
         "name": "Demônio dos Sonhos",
         "rarity": "diamond",
@@ -869,7 +914,7 @@
             "fs": "835"
         },
         "ability": "INTENÇÕES ASSASSINAS",
-        "SA1": "Inflige MARCA DA MORTE permanente e ganha FÚRIA a cada 25/20/15 segundos enquanto estiver enfrentando o mesmo oponente. A FÚRIA é removida ao SAIR DA ASSISTÊNCIA.",
+        "SA1": "Aplique MARCA DA MORTE permanente e ganhe FÚRIA para cada 20/15/10% de VIDA perdida por qualquer lutador.\r",
         "SA2": "50/75/100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS se o oponente estiver sofrendo de MARCA DA MORTE."
     },
     "doubleexposure": {
@@ -1004,8 +1049,8 @@
             "fs": "408"
         },
         "ability": "NEVASCA FANTASMA",
-        "SA1": "RESSUSCITA com 25% de VIDA e 5 camadas de ARMADURA depois de ficar morta por 60/45/30 segundos. Uma camada de ARMADURA é removida depois de cada GOLPE sofrido.",
-        "SA2": "Causa 50/75/100% de dano extra enquanto se beneficia de ARMADURA."
+        "SA1": "Enquanto Squigly estiver viva, o lutador ativo inflige DEFINHAR por 10 segundos e ganha ARMADURA a cada 15/12/10 segundos. Esses efeitos são removidos quando o lutador ativo é NOCAUTEADO.\r",
+        "SA2": "Quando o lutador ativo estiver se beneficiando da ARMADURA desta habilidade e estiver prestes a sofrer um EFEITO NEGATIVO, remova ARMADURA para impedi-lo e ganhe 20/30/40% do MEDIDOR DE BLOCKBUSTER.\r"
     },
     "dangerprone": {
         "name": "Fã do Perigo\r",
@@ -1152,9 +1197,9 @@
         "character": "<:sp_fi:698821373698637894> Filia",
         "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/fEnds.png",
         "stats": {
-            "atk": "56",
-            "hp": "385",
-            "fs": "85"
+            "atk": "75",
+            "hp": "315",
+            "fs": "90"
         },
         "ability": "CORTA ESSA!",
         "SA1": "Quando GOLPEADA, tem 20% de chance de infligir SANGRAMENTO por 3/5/7 s.",
@@ -1217,8 +1262,8 @@
             "fs": "385"
         },
         "ability": "SERENIDADE",
-        "SA1": "Ao BLOQUEAR com menos de 50% de VIDA, ganhe 5/6/8% de VIDA por segundo.",
-        "SA2": "Ganhe também 5/6/8% no MEDIDOR DE BLOCKBUSTER por segundo."
+        "SA1": "Ao BLOQUEAR, o lutador ativo recupera 4/5/6% de VIDA por segundo. Ao atingir 100% de VIDA, em vez disso ganha BÊNÇÃO por 8/10/12 segundos a cada segundo.\r",
+        "SA2": "Enquanto Painwheel estiver viva e o lutador ativo estiver sob efeito de BÊNÇÃO, concede 1/1.5/2% do MEDIDOR DE BLOCKBUSTER por segundo e 50% de chance em GOLPE CRÍTICO de redefinir os tempos de recarga de ESPECIAIS.\r"
     },
     "freezeframe": {
         "name": "Fica Frio",
@@ -1232,8 +1277,8 @@
             "fs": "853"
         },
         "ability": "CONGELAMENTO",
-        "SA1": "Projéteis têm 25/35/50% de chance de infligir LENTIDÃO e DEFINHAR por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.",
-        "SA2": "Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 25/35/50% do ATAQUE da Peacock e fica ATORDOADO por 3 s."
+        "SA1": "GOLPES DE PROJÉTIL aplicam DEFINHAR por 9 segundos. Quando o oponente atingir 5 acúmulos de DEFINHAR, remova todos os acúmulos de DEFINHAR para aplicar ATORDOAMENTO por 2/3/4 segundos e colocar os MOVIMENTOS ESPECIAIS e TAG-INS do oponente em recarga.\r",
+        "SA2": "Ao remover DEFINHAR do oponente, drena 5/7/9% de VIDA e do MEDIDOR DE BLOCKBUSTER.\r"
     },
     "fatalfray": {
         "name": "Briga Fatal\r",
@@ -1247,8 +1292,8 @@
             "fs": "842"
         },
         "ability": "Fardo do Sacrifício\r",
-        "SA1": "Quando qualquer lutador acertar um GOLPE BLOQUEADO, sofra um EFEITO NEGATIVO aleatório por 5/7/10 segundos e reduza permanentemente o ATAQUE e a DEFESA do oponente em 4%.\r",
-        "SA2": "Quando qualquer lutador usar um MOVIMENTO ESPECIAL, transfira todos os EFEITOS NEGATIVOS para o oponente e ganhe ESQUIVA por 5 segundos e IMUNIDADE por 5/7/10 segundos. Se um EFEITO NEGATIVO foi transferido, cure 2% da VIDA MÁXIMA para cada EFEITO NEGATIVO no oponente.\r"
+        "SA1": "Quando qualquer lutador acerta um GOLPE bloqueado, sofre um EFEITO NEGATIVO aleatório por 5/7/10 segundos e reduz permanentemente o ATAQUE e a DEFESA do oponente em 4% até Ms. Fortune sair ou ser derrotada.\r",
+        "SA2": "Quando qualquer lutador acerta com um MOVIMENTO ESPECIAL, transfere todos os EFEITOS NEGATIVOS para o oponente e ganha ESQUIVA por 5 segundos e IMUNIDADE por 5/7/10 segundos. Se um EFEITO NEGATIVO foi transferido, recupera 2% da VIDA MÁXIMA para cada EFEITO NEGATIVO no oponente.\r"
     },
     "freakyfriday": {
         "name": "Sexta Esquisita",
@@ -1368,7 +1413,7 @@
         },
         "ability": "FANTASMA DA FUKUA",
         "SA1": "Um BLOQUEIO no momento certo dá 1/2/3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.",
-        "SA2": "Enquanto Fukua está se beneficiando de BARREIRA, ela não reage aos ataques de projéteis do oponente e 100/150/200% do dano do projétil é refletido de volta."
+        "SA2": "Enquanto estiver sob efeito de BARREIRA, GOLPES DE PROJÉTIL concedem OLHO-MORTO por 10/12/15 segundos.\r"
     },
     "freshheir": {
         "name": "Vento Ventania",
@@ -1883,6 +1928,21 @@
         "SA1": "Quando derrotada, causa dano equivalente a 25/35/50% de sua VIDA MÁXIMA.",
         "SA2": "Quando derrotada, cura todos os aliados em 25/35/50% de sua VIDA MÁXIMA."
     },
+    "inkfluencer": {
+        "name": "Inkfluencer\r",
+        "rarity": "diamond",
+        "element": "neutral",
+        "character": "<:sp_pe:698879915713626142> Peacock",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/iFluencer.png",
+        "stats": {
+            "atk": "788",
+            "hp": "2919",
+            "fs": "893"
+        },
+        "ability": "SPLASH!\r",
+        "SA1": "PROJÉTEIS que não sejam BLOCKBUSTER aplicam GOSMA e TINTA no oponente por 10 segundos cada e DRENAM 10/15/20% do MEDIDOR DE BLOCKBUSTER ao ACERTAR. BLOCKBUSTERS consomem toda a TINTA no oponente para causar 20% a mais de dano por acúmulo de TINTA (até 5 acúmulos).\r",
+        "SA2": "Ganhe BARREIRA ao entrar ou sair de IDEIA PROFUNDA. Enquanto estiver em IDEIA PROFUNDA, MOVIMENTOS ESPECIAIS recarregam 50/75/100% mais rápido e você ganha 10/20/30% do MEDIDOR DE BLOCKBUSTER por segundo.\r"
+    },
     "icyhot": {
         "name": "Quente com gelo",
         "rarity": "bronze",
@@ -1910,8 +1970,8 @@
             "fs": "201"
         },
         "ability": "CERCAR",
-        "SA1": "Inflige LENTIDÃO por 5/7/10 segundos ao gerar uma LÁGRIMA.",
-        "SA2": "Na EXPLOSÃO DE LÁGRIMAS, inflige DEFINHAR por 5/7/10 segundos por cada LÁGRIMA ativa."
+        "SA1": "Ao gerar uma LÁGRIMA, aplica LENTIDÃO por 5/7/10 segundos. Oponentes ficam IMOBILIZADOS enquanto estiverem perto de uma LÁGRIMA.\r",
+        "SA2": "DRENA 1/1.5/2% de VIDA por segundo enquanto o oponente estiver perto de uma LÁGRIMA.\r"
     },
     "innerpieces": {
         "name": "Confusão Interior",
@@ -2062,6 +2122,21 @@
         "ability": "ENFERMEIRA OU MATADORA?",
         "SA1": "Aliados ganham REGENERAÇÃO permanente na primeira vez que a VIDA cair abaixo de 25/35/50% quando em VANTAGEM ELEMENTAL.",
         "SA2": "Uma vez por luta, quando DERROTADA, RESSUSCITA todos os aliados derrotados com 15/20/25% de VIDA."
+    },
+    "killingtime": {
+        "name": "Passatempo Mortal\r",
+        "rarity": "diamond",
+        "element": "fire",
+        "character": "<:sp_el:692287012450992219> Eliza",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/kTime.png",
+        "stats": {
+            "atk": "521",
+            "hp": "4586",
+            "fs": "900"
+        },
+        "ability": "Do Abismo\r",
+        "SA1": "ATAQUES CARREGADOS são estendidos com um golpe extra e podem ser carregados por mais tempo para causar dano adicional. Acertar um ATAQUE CARREGADO concede OLHO-MORTO permanente e adiciona 1/1.5/2% ao MEDIDOR DE BLOCKBUSTER para cada golpe acertado até o fim do combo dela.\r",
+        "SA2": "GOLPES DE BLOCKBUSTER aplicam MALDIÇÃO por 5/7/10 segundos. Se um GOLPE DE BLOCKBUSTER ocorrer após um ATAQUE CARREGADO no mesmo combo, ganha 3/4/5 acúmulos de FÚRIA permanente até o fim do combo dela.\r"
     },
     "lasthope": {
         "name": "Última Esperança",
@@ -2233,7 +2308,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "img/portrait/sq/mFlow.webp",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/mFlow.png",
         "stats": {
             "atk": "617",
             "hp": "3753",
@@ -2285,8 +2360,8 @@
             "fs": "191"
         },
         "ability": "A RAIVA DA ÁGUA",
-        "SA1": "Enquanto tiver o mesmo elemento do oponente, ganhe 50/75/100% de chance de REFLETIR todos os EF. POS. de um oponente sempre que ele ganhar um EF. POS.",
-        "SA2": "Ganhe 1/2/3 camada(s) de PRECISÃO quando um EFEITO POSITIVO expirar."
+        "SA1": "Enquanto compartilhar o mesmo elemento que o oponente, ganha 1 acúmulo de PRECISÃO a cada 3/2/1 segundo(s), e todos os GOLPES causam 100% de DANO adicional.\r",
+        "SA2": "GOLPES com PRECISÃO de Double causam dano equivalente a 1/1.5/2% da VIDA MÁXIMA aos colegas de equipe do oponente.\r"
     },
     "maskedmenace": {
         "name": "Ameaça Mascarada",
@@ -2540,8 +2615,8 @@
             "fs": "196"
         },
         "ability": "LEI MARCIAL",
-        "SA1": "CRÍTICOS DESATIVAM os BLOCKBUSTERS do oponente por 2/3/4 segundos.",
-        "SA2": "Também DESATIVA os GOLPES ESPECIAIS e ASSISTÊNCIAS do oponente por 2/3/4 segundos."
+        "SA1": "Em GOLPE CRÍTICO, DESATIVA os BLOCKBUSTERS, ESPECIAIS e TAG-INs do oponente por 4/5/6 segundos cada.\r",
+        "SA2": "Enquanto Parasoul estiver viva, aumenta a PRECISÃO do lutador ativo em 3/4/5% por GOLPE CRÍTICO até o COMBO terminar (até 30/40/50%).\r"
     },
     "neuromancer": {
         "name": "Neuromancer",
@@ -2655,13 +2730,13 @@
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
         "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/nyan.png",
         "stats": {
-            "atk": "118",
-            "hp": "924",
-            "fs": "191"
+            "atk": "139",
+            "hp": "840",
+            "fs": "196"
         },
         "ability": "FIREWALL",
-        "SA1": "Ganhe BARREIRA por 5/7/10 segundos ao lançar um CABEÇONE.",
-        "SA2": "Ao usar BARREIRA e sofrer um EF. NEG., ganhe 50/75/100% de chance de converter imediatamente esse efeito em FÚRIA."
+        "SA1": "Ao lançar um DRONE-CABEÇA, ganha INABALÁVEL e BARREIRA por 8/10/12 segundos cada.\r",
+        "SA2": "Enquanto estiver sob efeito de BARREIRA e prestes a sofrer um EFEITO NEGATIVO, tem 50/75/100% de chance de impedi-lo e ganhar FÚRIA por 12 segundos."
     },
     "ogreachiever": {
         "name": "Ogros Têm Camadas",
@@ -2915,8 +2990,8 @@
             "fs": "863"
         },
         "ability": "O RETORNO DA LOUCURA",
-        "SA1": "RESSUSCITE com 25/35/50% de VIDA uma vez por luta. Ganhe também 5 EF. NEGATIVOS aleatórios por 10 seg e 5 camadas de ESPINHOS por 20 seg.",
-        "SA2": "Causa 25/35/50% de dano bônus por cada camada de EF. NEGATIVO aplicada à Squigly."
+        "SA1": "Reflete 10% de todo o dano recebido por EFEITO NEGATIVO em Squigly (máx. 40%). Além disso, uma vez por partida, RESSUSCITA com 25/35/50% de VIDA e 4 EFEITOS NEGATIVOS aleatórios por 15 segundos.\r",
+        "SA2": "Sofre um EFEITO NEGATIVO aleatório por 4/6/8 segundos a cada 4 segundos. GOLPES não-BLOCKBUSTER de Squigly causam dano equivalente a 1% da VIDA MÁXIMA ao oponente por EFEITO NEGATIVO em qualquer lutador (máx. 3%).\r"
     },
     "prototype": {
         "name": "Protótipo",
@@ -2960,8 +3035,8 @@
             "fs": "385"
         },
         "ability": "EMARANHAMENTO",
-        "SA1": "CRÍTICOS têm 50% de chance de infligir LENTIDÃO por 10 s e ATORDOAR por 2/2.5/3 s se o oponente já não estiver sofrendo LENTIDÃO.",
-        "SA2": "Ao GOLPEAR, tem 5/10/15% de chance de infligir SANGRAM. por 5 s se o oponente estiver ATORDOADO."
+        "SA1": "35% de chance ao acertar GOLPE CRÍTICO de ganhar MIASMA por 4/5/6 segundos. Além disso, enquanto o oponente não estiver sofrendo POLARIDADE INVERSA, aplica ATORDOAMENTO por 3/3.5/4 segundos.\r",
+        "SA2": "Enquanto o oponente estiver ATORDOADO, 25/30/35% de chance ao acertar GOLPE CRÍTICO de converter o ATORDOAMENTO dele em POLARIDADE INVERSA por 8 segundos.\r"
     },
     "gustbuster": {
         "name": "Aspiradora de Fantasmas",
@@ -2990,8 +3065,8 @@
             "fs": "415"
         },
         "ability": "ECTOPLASMA",
-        "SA1": "BLOCKBUSTERS causam 50/75/100% de dano extra nos oponentes com um BLOCKBUSTER totalmente carregado.",
-        "SA2": "Quando um EFEITO POSITIVO na Squigly ou no oponente expirar, ganhe 15/20/25% no MEDIDOR DE BLOCKBUSTER."
+        "SA1": "Usar um BLOCKBUSTER aplica GOSMA por 10 segundos. BLOCKBUSTERS causam 50/75/100% de dano adicional a oponentes sofrendo GOSMA.\r",
+        "SA2": "Quando um EFEITO POSITIVO em qualquer lutador expira ou é removido, ganha 15/20/25% do MEDIDOR DE BLOCKBUSTER.\r"
     },
     "primed": {
         "name": "Varia",
@@ -3035,8 +3110,8 @@
             "fs": "195"
         },
         "ability": "SAQUE E DIVERSÃO",
-        "SA1": "O oponente perde 1 EF. POSITIVO a cada 4/3/2 segundos enquanto estiver perto de uma POÇA.",
-        "SA2": "Com Hungern EMPANTURRADO, a Umbrella ganha 3/4/5% de VIDA sempre que um oponente perder um EF. POSITIVO."
+        "SA1": "GOLPES DE POÇA removem 1/2/3 EFEITO(S) POSITIVO(S) do oponente e aplicam IMOBILIZAR por 10 segundos.\r",
+        "SA2": "Enquanto o oponente não tiver EFEITOS POSITIVOS, GOLPES DE POÇA concedem FÚRIA por 5/7/10 segundos.\r"
     },
     "shadowpuppet": {
         "name": "Fantoche Sombrio",
@@ -3126,7 +3201,7 @@
         },
         "ability": "VIVO OU MORTO",
         "SA1": "Uma vez por luta, ao sofrer um GOLPE que seria fatal, ganhe 1/2/3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.",
-        "SA2": "Ao derrotar um oponente, ganhe 2 camadas de FÚRIA por 30 s e 25/35/50% no MEDIDOR DE BLOCKBUSTER."
+        "SA2": "Para cada 20% de VIDA perdida por qualquer lutador, ganha FÚRIA por 15 segundos e 15/20/25% do MEDIDOR DE BLOCKBUSTER.\r"
     },
     "roughcopy": {
         "name": "Cópia Aproximada",
@@ -3170,8 +3245,8 @@
             "fs": "421"
         },
         "ability": "FORÇA DE VONTADE",
-        "SA1": "O 10 º GOLPE DE COMBO que não seja projétil inflige MARCA DA MORTE por 10/12/15 segundos e FADIGA por 25/20/15 segundos.",
-        "SA2": "CRÍTICOS concedem IMUNIDADE por 3/4/5 segundos, INVENCÍVEL por 1 segundo e DANO DE CRÍTICO 25% maior enquanto estiver perto de um oponente sofrendo de MARCA DA MORTE."
+        "SA1": "Cada 5º GOLPE DE COMBO que não seja projétil aplica MARCA DA MORTE por 10/12/15 segundos.\r",
+        "SA2": "Enquanto o oponente estiver sofrendo MARCA DA MORTE, GOLPES CRÍTICOS concedem IMUNIDADE por 3/4/5 segundos, INVENCÍVEL por 1 segundo e 25% de aumento no Dano Crítico.\r"
     },
     "riskyginger": {
         "name": "Ruiva Fatal",
@@ -3245,8 +3320,8 @@
             "fs": "184"
         },
         "ability": "CHUVA FANTASMA",
-        "SA1": "15% de chance de causar QUEBRA DE ARMADURA e OSCILAÇÃO DE ENERGIA por 10/12/15 seg cada quando acertar um GOLPE BLOQUEADO.",
-        "SA2": "Após 5 seg ao lado da Fukua e não ATORDOADOS, os oponentes perdem os EF. POSITIVOS e sofrem FADIGA por 15/13/10 seg."
+        "SA1": "15% de chance ao acertar um GOLPE, incluindo GOLPES bloqueados, de infligir QUEBRA DE ARM. e OSCILAÇÃO DE ENERGIA por 10/12/15 segundos cada.\r",
+        "SA2": "A cada 5 segundos enquanto Fukua estiver no lado do oponente no cenário e não estiver ATORDOADA, os oponentes perdem todos os EFEITOS POSITIVOS atuais e sofrem ATORDOAMENTO por 2/3/4 segundos.\r"
     },
     "reimaged": {
         "name": "Replicada",
@@ -3305,8 +3380,8 @@
             "fs": "437"
         },
         "ability": "AMPLIFICADO E PRONTO",
-        "SA1": "Enquanto Big Band estiver vivo, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 6/8/10 s depois de cada 15 s.",
-        "SA2": "Ao se beneficiar de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO, a duração dela aumenta em 3/4/5 s."
+        "SA1": "Enquanto Big Band estiver vivo, o lutador ativo tem 50% de chance de ganhar ACELERAÇÃO e REGENERAÇÃO PESADA por 5/7/10 segundos ao acertar um ATAQUE EM DISPARADA.\r",
+        "SA2": "Enquanto o lutador ativo estiver sob efeito de ACELERAÇÃO e REGENERAÇÃO, ATAQUES EM DISPARADA causam 50/75/100% de DANO adicional e aplicam MALDIÇÃO por 5/6/7 segundos.\r"
     },
     "rogueagent": {
         "name": "Agente Trapaceira",
@@ -3395,7 +3470,7 @@
             "fs": "884"
         },
         "ability": "Ruptura da Alma\r",
-        "SA1": "Quando não estiver em PODER ESTELAR nem sob efeito de EVASÃO, BLOQUEIOS bem cronometrados concedem 30/40/50% de PODER ESTELAR, 1/2/3 acúmulo(s) de BARREIRA e permitem que Annie DESVIE de todos os ataques por 3 segundos.\r",
+        "SA1": "Enquanto Annie não estiver em PODER ESTELAR, não estiver se beneficiando de ESQUIVA e estiver abaixo de 50% do medidor de PODER ESTELAR, BLOQUEIOS bem cronometrados concedem 30/40/50% do medidor de PODER ESTELAR, 1/2/3 acúmulo(s) de BARREIRA e permitem que Annie ESQUIVE de todos os ataques por 3 segundos.\r",
         "SA2": "Ao ativar o PODER ESTELAR, sacrifique 35% da VIDA MÁXIMA para ganhar DEADEYE por 10/12/15 segundos. Enquanto estiver em PODER ESTELAR, inimigos na reserva sofrem HEX e TODOS os inimigos perdem 1/2/3% de VIDA por segundo.\r"
     },
     "snakecharmer": {
@@ -3410,8 +3485,8 @@
             "fs": "196"
         },
         "ability": "FAVOR INFERNAL",
-        "SA1": "Com CARGA de pelo menos 80/65/50%, usar um GOLPE ESPECIAL inflige IMOBILIZAÇÃO e DESATIVA BLOCKBUSTERS por 10 segundos cada.",
-        "SA2": "Ao usar uma CARGA MORTUÁRIA, todos os aliados ganham 25/35/50% no MEDIDOR DE BLOCKBUSTER e FÚRIA permanente."
+        "SA1": "Ao usar um ESPECIAL, ganha 10/15/20% de CARGA MORTUÁRIA e aplica IMOBILIZAR e DESATIVAÇÃO DE BLOCKBUSTERS por 10 segundos cada. Ao ficar totalmente CARREGADO, também ganha FÚRIA.\r",
+        "SA2": "Ao usar uma CARGA MORTUÁRIA, todos os colegas de equipe ganham 1/2/3% do MEDIDOR DE BLOCKBUSTER a cada segundo e FÚRIA permanente pelo restante da partida.\r"
     },
     "starcrossed": {
         "name": "Má sorte",
@@ -3651,7 +3726,7 @@
         },
         "ability": "DIA DO JULGAMENTO",
         "SA1": "Enquanto a Marie estiver viva, ganha ARMADURA e ESQUIVA permanentes por 10 s para cada 40/35/30% de VIDA perdida por qualquer aliado. Uma camada de ARMADURA é removida sempre que o oponente usa um BLOCKBUSTER.",
-        "SA2": "Enquanto a Marie for a lutadora ativa e tiver ao menos 3 camadas de ARMADURA, inflige ATORDOAMENTO por 2/3/4 s a cada 15 s e DRENA 10% do MEDIDOR DE BLOCKBUSTER a cada 5 s."
+        "SA2": "Enquanto Marie for a lutadora ativa, estiver enfrentando o mesmo oponente e tiver pelo menos 3 acúmulos de ARMADURA, ela aplica ATORDOAMENTO por 2/3/4 segundos a cada 10 segundos e DRENA 10% do MEDIDOR DE BLOCKBUSTER a cada 5 segundos."
     },
     "starshine": {
         "name": "Brilho das Estrelas",
@@ -3733,7 +3808,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "img/portrait/fi/sTipper.webp",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/sTipper.png",
         "stats": {
             "atk": "248",
             "hp": "1698",
@@ -3935,8 +4010,8 @@
             "fs": "93"
         },
         "ability": "POEIRA ESTELAR",
-        "SA1": "No MODO POEIRA ESTELAR, cada GOLPE bloqueado pelo oponente tem 10% de chance de infligir QUEBRA DE GUARDA e LENTIDÃO por 10/12/15 s.",
-        "SA2": "BLOCKBUSTERS causam 25/35/50% de dano extra no MODO POEIRA ESTELAR."
+        "SA1": "Cada GOLPE bloqueado pelo oponente tem 10% de chance de aplicar QUEBRA DE GUARDA e QUEBRA DE ARM. por 10/12/15 segundos cada.\r",
+        "SA2": "ESPECIAIS e BLOCKBUSTERS causam 15/25/35% de DANO adicional.\r"
     },
     "thatsallfolks": {
         "name": "Velhos Tempos",
@@ -4085,8 +4160,8 @@
             "fs": "174"
         },
         "ability": "MORPHA",
-        "SA1": "Ao TRANSMUTAR para uma VANTAGEM ELEMENTAL, cura para 15/20/25% de VIDA.",
-        "SA2": "Ganhe 25/35/50% de chance de CONVERTER qualquer EFEITO NEGATIVO em ARMADURA e REGENERAÇÃO por 10 segundos quando em VANTAGEM ELEMENTAL."
+        "SA1": "ARREMESSOS de Double concedem ARMADURA por 20 segundos e removem 1/2/3 EFEITO(S) NEGATIVO(S) dela.\r",
+        "SA2": "Quando o oponente é DERRUBADO após um ARREMESSO, aplica ATORDOAMENTO por 4 segundos. DRENA 2/3/4% de VIDA por segundo de oponentes ATORDOADOS.\r"
     },
     "idolecho": {
         "name": "Eco de Estrela\r",
@@ -4147,6 +4222,21 @@
         "ability": "PROBLEMA DE TRÊS CORPOS",
         "SA1": "Ganhe IMUNIDADE, INABALÁVEL ou INVENCÍVEL por 9/12/15 seg. ao ativar o PODER ESTELAR. O EF. POS. é removido ao sair do PODER ESTELAR.",
         "SA2": "33% de chance de redefinir todos os tempos dos EF. POS. e ganhar 20/25/30% no medidor de PODER ESTELAR ao usar um GOLPE ESPECIAL."
+    },
+    "trueself": {
+        "name": "Verdadeiro Eu\r",
+        "rarity": "diamond",
+        "element": "water",
+        "character": "<:sp_fu:698919709336141886> Fukua",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/trueself.png",
+        "stats": {
+            "atk": "812",
+            "hp": "2627",
+            "fs": "875"
+        },
+        "ability": "Kung Falso\r",
+        "SA1": "Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Recupera 1/1.5/2% da VIDA MÁXIMA ao ganhar um acúmulo de CHUTE SOMBRIO. O próximo BLOCKBUSTER usado após atingir 10 acúmulos de CHUTE SOMBRIO invocará a MÃO DE GRENDEL para ACERTAR o oponente.\r",
+        "SA2": "Quando a MÃO DE GRENDEL ACERTA com sucesso, ganha INABALÁVEL por 10/12/15 segundos. Ao ganhar um acúmulo de CHUTE SOMBRIO enquanto se beneficia de INABALÁVEL, causa 2/2.5/3% da VIDA MÁXIMA como dano ao oponente e ganha 2/3/4% do MEDIDOR DE BLOCKBUSTER.\r"
     },
     "chameleontwist": {
         "name": "Virada do Camaleão",
@@ -4223,6 +4313,21 @@
         "SA1": "GOLPES de projétil têm 25/35/50% de chance de conceder OLHO-MORTO e BARREIRA por 15 s cada.",
         "SA2": "GOLPES de projétil infligem 25/35/50% de dano extra e concedem ACELERAÇÃO por 10 s ao se beneficiar de OLHO-MORTO."
     },
+    "unbearable": {
+        "name": "Inursuportável\r",
+        "rarity": "gold",
+        "element": "water",
+        "character": "<:sp_bb:684054646528147500> Big Band",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/unbearable.png",
+        "stats": {
+            "atk": "256",
+            "hp": "2205",
+            "fs": "437"
+        },
+        "ability": "PreparaUrso\r",
+        "SA1": "Enquanto Big Band tiver colegas de equipe vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 10/12/15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\r",
+        "SA2": "Com um colega de equipe vivo, Big Band sofre 10/15/20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem colegas de equipe vivos, esses efeitos são dobrados.\r"
+    },
     "unfazed": {
         "name": "Imperturbável",
         "rarity": "gold",
@@ -4265,7 +4370,7 @@
             "fs": "208"
         },
         "ability": "TREINO CLÁSSICO",
-        "SA1": "Ganhe 1 camada de PRECISÃO a cada 20/15/10 golpes de combo.",
+        "SA1": "Ganhe 1 camada de PRECISÃO a cada 15/10/5 golpes de combo.",
         "SA2": "GOLPES DE PRECISÃO dão FÚRIA e infligem QUEBRA DE GUARDA por 5/7/10 segundos."
     },
     "vaporwavevixen": {
@@ -4295,8 +4400,8 @@
             "fs": "196"
         },
         "ability": "Metalmorfose",
-        "SA1": "Ganhe ARMADURA por 5/7/10 segundos quando qualquer lutador usar um GOLPE ESPECIAL.",
-        "SA2": "O uso de um BLOCKBUSTER converte todas as camadas de ARMADURA em MIASMA por 5/7/10 segundos."
+        "SA1": "Quando qualquer lutador usa um ESPECIAL, ganha ARMADURA por 8/10/12 segundos e redefine a duração de todas as ARMADURAS.\r",
+        "SA2": "O uso de um BLOCKBUSTER converte todas as camadas de ARMADURA em MIASMA por 8/10/12 segundos."
     },
     "wulfsbane": {
         "name": "Praga do Lobo",
@@ -4320,13 +4425,13 @@
         "character": "<:sp_pe:698879915713626142> Peacock",
         "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/wCard.png",
         "stats": {
-            "atk": "132",
-            "hp": "809",
-            "fs": "187"
+            "atk": "155",
+            "hp": "735",
+            "fs": "195"
         },
         "ability": "PIADA MORTAL",
-        "SA1": "Inflige um EFEITO NEGATIVO aleatório por 3/4/5 segundos ao usar um GOLPE ESPECIAL.",
-        "SA2": "Se o oponente estiver sofrendo um EFEITO NEGATIVO quando a Peacock for derrotada, a VIDA dele será reduzida em 25/35/50%."
+        "SA1": "Ao usar um ESPECIAL, aplica um EFEITO NEGATIVO aleatório por 4/6/8 segundos. Além disso, uma vez por partida, ao sofrer um GOLPE que seria fatal, recupera 10% da VIDA MÁXIMA por EFEITO NEGATIVO no oponente.\r",
+        "SA2": "Quando Peacock sofre um GOLPE que seria fatal enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, reduz a VIDA do oponente em 25/35/50%.\r"
     },
     "webcrawler": {
         "name": "Escalador de Paredes",
@@ -4340,7 +4445,7 @@
             "fs": "809"
         },
         "ability": "SÓ PENDURADA AQUI",
-        "SA1": "Depois que Painwheel ficar no ar por 1.5 segundos, ela ganha OLHO-MORTO por 10 segundos e inflige QUEBRA de GUARDA por 6/7/8 segundos.",
+        "SA1": "Depois que Painwheel fica no ar por 1 segundo, ganha OLHO-MORTO e aplica QUEBRA DE GUARDA, ambos por 10/11/12 segundos.\r",
         "SA2": "10/12/15% de chance ao GOLPEAR de remover 1 EF. POS. do oponente e ganhar ESQUIVA por 10 seg. enquanto perto de um oponente sofrendo de QUEBRA DE GUARDA."
     },
     "windstalker": {
@@ -4507,6 +4612,21 @@
         "ability": "FIM DE JOGO",
         "SA1": "Ao TRANSMUTAR para o elemento TREVAS, 50/75/100% de chance de infligir um efeito de DESTRUIÇÃO permanente, matando o oponente após 30 s. A DESTRUIÇÃO será removida se a Double for derrotada.",
         "SA2": "Quando derrotada, inflige 1/2/3 camada(s) de SANGRAMENTO permanente."
+    },
+    "yellowone": {
+        "name": "A Amarela\r",
+        "rarity": "gold",
+        "element": "light",
+        "character": "<:sp_sq:698909665077231776> Squigly",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/yOne.png",
+        "stats": {
+            "atk": "294",
+            "hp": "1787",
+            "fs": "415"
+        },
+        "ability": "Habilidade Amarela\r",
+        "SA1": "Ganhe BÊNÇÃO a cada 5 segundos. Esta BÊNÇÃO sempre dura 1/1.5/2 segundo(s) e se torna permanente ao usar MOVIMENTOS ESPECIAIS e BLOCKBUSTERS. As BÊNÇÃOS permanentes são removidas quando esta BÊNÇÃO expira.\r",
+        "SA2": "Enquanto estiver com pelo menos 3 acúmulos de BÊNÇÃO permanente, MOVIMENTOS ESPECIAIS e BLOCKBUSTERS ficam INDEFENSÁVEIS e recuperam 25/35/50% do dano causado como VIDA.\r"
     },
     "protonpulse": {
         "name": "Pulso de Prótons",

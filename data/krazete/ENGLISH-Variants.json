@@ -42,7 +42,7 @@
         },
         "ability": "Candy Flush",
         "SA1": "While Umbrella is alive, the active Fighter has a 30/40/50% chance to gain a BUFF based on a random teammate's ELEMENT for 7 seconds when landing a CRITICAL HIT.",
-        "SA2": "While Umbrella is alive, the active Fighter's CRITICAL DAMAGE is increased by 5/10/15% per stack of REGENERATION."
+        "SA2": "While Umbrella is alive, increase the active Fighter's CRIT DAMAGE by 5/10/15% per stack of REGEN on the Fighter."
     },
     "grandmother": {
         "name": "Grand Mother",
@@ -191,8 +191,8 @@
             "fs": "436"
         },
         "ability": "Burly Bouncer",
-        "SA1": "While Big Band is alive, opponents deal 15/25/35% less damage with SPECIAL HITS and BLOCKBUSTER HITS.",
-        "SA2": "When Big Band successfully lands a DASH ATTACK, drain 5% HEALTH from the enemy. When Big Band is HIT during his DASH ATTACK, he gains 2 stacks of THORNS for 5/7/10 seconds."
+        "SA1": "While Big Band is alive, opponents deal 20/30/40% less damage with SPECIAL HITS and BLOCKBUSTER HITS.",
+        "SA2": "When Big Band successfully lands a DASH ATTACK, drain 5% HEALTH from the enemy. When Big Band is HIT during his DASH ATTACK, he gains 2 stacks of AUTO-BLOCK for 5/7/10 seconds."
     },
     "brassbandit": {
         "name": "Brass Bandit",
@@ -251,7 +251,7 @@
             "fs": "187"
         },
         "ability": "MEGA BUSTER",
-        "SA1": "All BEAM and ENERGY attacks have a 25% chance on HIT to inflict ARMOR BREAK for 10/12/15 seconds.",
+        "SA1": "All BEAM and ENERGY attacks have a 25% chance on HIT to grant HASTE and inflict ARMOR BREAK for 8/10/12 seconds each.",
         "SA2": "Recover 25% HEALTH and gain 3/4/5 stacks of BARRIER when using a TIER 3 BLOCKBUSTER."
     },
     "beatbox": {
@@ -326,8 +326,8 @@
             "fs": "460"
         },
         "ability": "FROZEN OVER",
-        "SA1": "ATTACK damage is increased by 1/2/3% of your CURRENT HEALTH.",
-        "SA2": "Damage inflicted by the opponent is reduced by 1/2/3% per opponent COMBO HIT."
+        "SA1": "While near the opponent, inflict IMMOBILIZE and SLOW for 7/10/12 seconds every 3 seconds, Reduce the opponent's ATTACK by 3% for every second they are IMMOBILIZED until they TAG OUT.",
+        "SA2": "Deal 4/5/6% MAX HEALTH as damage to the opponent when either Fighter is KNOCKED DOWN while the opponent is IMMOBILIZED."
     },
     "blitzglamour": {
         "name": "Blitz & Glamour",
@@ -385,9 +385,9 @@
             "hp": "1191",
             "fs": "430"
         },
-        "ability": "HEMORRHAGE",
-        "SA1": "10% chance on HIT to inflict HEAVY BLEED for 5/7/10 seconds.",
-        "SA2": "Gain permanent ENRAGE when an opponent's HEALTH drops below 15/20/25%."
+        "ability": "Bug Buzz",
+        "SA1": "For each 20/15/10% HEALTH the opponent loses, inflict INVERSE POLARITY and WITHER for 10 seconds.",
+        "SA2": "While Painwheel's HEALTH% is higher than the opponent's, gain 1 stack of EVASION every 10/7/5 seconds."
     },
     "beastking": {
         "name": "Beast King",
@@ -416,8 +416,8 @@
             "fs": "99"
         },
         "ability": "SECOND WIND",
-        "SA1": "On TAG IN, gain HEAVY REGEN and ARMOR for 5/7/10 seconds.",
-        "SA2": "On TAG IN, gain 20/25/35% BLOCKBUSTER METER."
+        "SA1": "On TAG IN, gain HEAVY REGEN for 5/7/10 seconds and 20/25/35% BLOCKBUSTER METER.",
+        "SA2": "Landing a DASH ATTACK grants ARMOR for 5/7/10 seconds and removes 1 DEBUFF from Big Band."
     },
     "badmsfrosty": {
         "name": "Bad Ms Frosty",
@@ -431,8 +431,23 @@
             "fs": "184"
         },
         "ability": "ICE TO SEE YOU",
-        "SA1": "50% chance on CRITICAL HIT to DISABLE the opponent's BLOCKBUSTERS for 4/5/6 seconds.",
-        "SA2": "Also inflicts ARMOR BREAK for 4/5/6 seconds."
+        "SA1": "50% chance on CRITICAL HIT to inflict ARMOR BREAK for 5/7/10 seconds.",
+        "SA2": "Gain UNFLINCHING for 3/4/5 seconds when DASHING. DISABLE the opponent's BLOCKBUSTERS while benefiting from UNFLINCHING."
+    },
+    "bellarina": {
+        "name": "Bellarina",
+        "rarity": "gold",
+        "element": "neutral",
+        "character": "<:sp_cb:685401170495537152> Cerebella",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/ce/bRina.png",
+        "stats": {
+            "atk": "375",
+            "hp": "1786",
+            "fs": "471"
+        },
+        "ability": "Pirouette",
+        "SA1": "When landing a DASH ATTACK, DRAIN 15% BLOCKBUSTER METER, gain DEADEYE for 10/12/15 seconds, and gain permanent 5/10/15% ATTACK.",
+        "SA2": "While benefiting from DEADEYE, gain EVASION for 5/7/10 seconds when DASHING and transfer 1 opponent BUFF when HITTING an AIRBORNE opponent."
     },
     "bombshell": {
         "name": "Bombshell",
@@ -494,6 +509,21 @@
         "SA1": "Regain 5/7/10% HEALTH when either Fighter uses a SPECIAL MOVE.",
         "SA2": "Regain 5/10/15% BLOCKBUSTER METER when either Fighter uses a BLOCKBUSTER."
     },
+    "babayaga": {
+        "name": "Baba Yaga",
+        "rarity": "diamond",
+        "element": "neutral",
+        "character": "<:sp_beo:684771548414083107> Beowulf",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/bYaga.png",
+        "stats": {
+            "atk": "788",
+            "hp": "3335",
+            "fs": "941"
+        },
+        "ability": "Gun Fu",
+        "SA1": "Gain DEADEYE for 10/12/15 seconds when HITTING an opponent in the air. While benefiting from DEADEYE, HYPE MODE is extended to last for 15 seconds and KNOCKING DOWN the opponent grants a HYPE CHARGE.",
+        "SA2": "While in HYPE MODE, after a THROW, the opponent is shot into the air. Inflict HEX for 5/7/10 seconds while in HYPE MODE and hitting the opponent in the air."
+    },
     "ironmatron": {
         "name": "Iron Matron",
         "rarity": "gold",
@@ -537,7 +567,7 @@
         },
         "ability": "OUT TO PASTURE",
         "SA1": "HITS from SKELETAL SUMMONS deal 30% BONUS DAMAGE and have a 50% chance to inflict SLIME for 10/12/15 seconds.",
-        "SA2": "Using a BLOCKBUSTER inflicts QUIETUS for 10/12/15 seconds if the opponent is suffering from SLIME."
+        "SA2": "Drain 2/3/4% BLOCKBUSTER METER per stack of SLIME on the opponent when they BOUNCE off a wall."
     },
     "cluechaser": {
         "name": "Clue Chaser",
@@ -596,8 +626,8 @@
             "fs": "966"
         },
         "ability": "Iron Muscle",
-        "SA1": "Every 7th COMBO HIT landed on Cerebella or the opponent grants REGEN and ARMOR for 10/13/15 seconds each. While benefiting from REGEN or ARMOR, BLOCKBUSTERS deal 30/40/50% increased damage.",
-        "SA2": "Gain 10/12/15% BLOCKBUSTER METER and have a 30/40/50% chance to refresh the COOLDOWN of all SPECIAL MOVES when landing a THROW."
+        "SA1": "When either Fighter lands a THROW, gain ARMOR for 15 seconds. Cerebella's THROW HITS inflict HEAL BLOCK for 15 seconds and 50/75/100% of the damage inflicted is regained as HEALTH.",
+        "SA2": "Gain 10/12/15% BLOCKBUSTER METER and have a 30/40/50% chance to refresh the COOLDOWN of all SPECIAL MOVES when landing a THROW. BLOCKBUSTERS deal 30% increased damage per stack of ARMOR on Cerebella."
     },
     "chillguy": {
         "name": "Chill Guy",
@@ -611,7 +641,7 @@
             "fs": "421"
         },
         "ability": "Chill Out",
-        "SA1": "When blocking a HIT, apply 1 stack of SLOW for 10/13/15 seconds. When the opponent reaches 5 stacks of SLOW, remove all SLOW stacks and inflict STUN for 6 seconds.",
+        "SA1": "When the active Fighter blocks a HIT, inflict 1 stack of SLOW for 10/13/15 seconds. When the opponent reaches 5 stacks of SLOW, remove all SLOW stacks and inflict STUN for 6 seconds.",
         "SA2": "When any teammate HITS a stunned opponent, inflict ARMOR BREAK and gain DEADEYE for 5/8/10 seconds each."
     },
     "creatureofhabit": {
@@ -626,8 +656,8 @@
             "fs": "804"
         },
         "ability": "MONSTER'S BREW",
-        "SA1": "If none of Double's BLOCKBUSTERS are fully CHARGED, gain 1 stack of MIASMA for 10 seconds every 7/6/5 seconds while not BLOCKING.",
-        "SA2": "Gain 1 stack of ENRAGE every 4/3/2 seconds while a BLOCKBUSTER is fully charged. ENRAGE is removed when using a BLOCKBUSTER."
+        "SA1": "Gain 1 stack of MIASMA every 5/4/3 seconds.",
+        "SA2": "When reaching 5 stacks of MIASMA, convert them to 5 stacks of ENRAGE and regain 25/35/50% MAX HEALTH. ENRAGE is removed when Double is KNOCKED DOWN or TAGS OUT."
     },
     "criminalmind": {
         "name": "Criminal Mind",
@@ -857,6 +887,21 @@
         "SA1": "Inflict 15/20/25% bonus damage for each of the opponent's living teammates.",
         "SA2": "Transfer 1 enemy BUFF to yourself and inflict WITHER for 5/7/10 seconds when entering SEKHMET MODE."
     },
+    "deathdefier": {
+        "name": "Death Defier",
+        "rarity": "gold",
+        "element": "fire",
+        "character": "<:sp_an:767922687204524032> Annie",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/an/dDefier.png",
+        "stats": {
+            "atk": "292",
+            "hp": "1764",
+            "fs": "411"
+        },
+        "ability": "Boon Collector",
+        "SA1": "Annie gains UNFLINCHING and 10/15/20% STAR POWER when DASHING. When activating STAR POWER at full meter, instantly empty it to gain 1 stack of permanent ENRAGE and MIASMA each.",
+        "SA2": "When suffering a HIT that would be fatal, consume all permanent BUFFS on Annie to STUN the opponent for 1.5/2/2.5 seconds and then regain 5/10/15% MAX HEALTH per BUFF consumed."
+    },
     "dreamdemon": {
         "name": "Dream Demon",
         "rarity": "diamond",
@@ -869,7 +914,7 @@
             "fs": "835"
         },
         "ability": "MURDEROUS INTENTIONS",
-        "SA1": "Inflict permanent DEATH MARK and gain ENRAGE every 25/20/15 seconds while facing the same opponent. ENRAGE is removed when TAGGING OUT.",
+        "SA1": "Inflict permanent DEATH MARK and gain ENRAGE for every 20/15/10% HEALTH lost by either Fighter.",
         "SA2": "50/75/100% chance for Fukua's DASH ATTACKS to be UNBLOCKABLE if the opponent is suffering from DEATH MARK."
     },
     "doubleexposure": {
@@ -1004,8 +1049,8 @@
             "fs": "408"
         },
         "ability": "WIGHTOUT",
-        "SA1": "RESURRECT with 25% HEALTH and 5 stacks of ARMOR after being dead for 60/45/30 seconds. A stack of ARMOR is removed after every HIT suffered.",
-        "SA2": "Deal 50/75/100% bonus damage while benefiting from ARMOR."
+        "SA1": "While Squigly is alive, the active Fighter inflicts WITHER for 10 seconds and gains ARMOR every 15/12/10 seconds. These effects are removed when the active Fighter is KNOCKED DOWN.",
+        "SA2": "When the active Fighter is benefiting from this ability's ARMOR and is about to suffer a DEBUFF, remove ARMOR to prevent it and gain 20/30/40% BLOCKBUSTER METER."
     },
     "dangerprone": {
         "name": "Danger-Prone",
@@ -1152,9 +1197,9 @@
         "character": "<:sp_fi:698821373698637894> Filia",
         "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/fEnds.png",
         "stats": {
-            "atk": "56",
-            "hp": "385",
-            "fs": "85"
+            "atk": "75",
+            "hp": "315",
+            "fs": "90"
         },
         "ability": "CUT IT OUT!",
         "SA1": "20% chance when HIT to inflict BLEED for 3/5/7 seconds.",
@@ -1217,8 +1262,8 @@
             "fs": "385"
         },
         "ability": "SERENITY",
-        "SA1": "When BLOCKING while below 50% HEALTH, gain 5/6/8% HEALTH per second.",
-        "SA2": "Also gain 5/6/8% BLOCKBUSTER METER per second."
+        "SA1": "While BLOCKING, the active Fighter gains 4/5/6% HEALTH every second. When at 100% HEALTH, gain BLESSING for 8/10/12 seconds every second instead.",
+        "SA2": "While Painwheel is alive and the active Fighter is benefiting from BLESSING, grant 1/1.5/2% BLOCKBUSTER METER per second and a 50% chance on CRITICAL HIT to refresh SPECIAL COOLDOWNS."
     },
     "freezeframe": {
         "name": "Freeze Frame",
@@ -1232,8 +1277,8 @@
             "fs": "853"
         },
         "ability": "FROSTBITE",
-        "SA1": "Projectiles have a 25/35/50% chance on HIT to inflict SLOW and WITHER for 15 seconds. Both effects are removed if the opponent uses a BLOCKBUSTER.",
-        "SA2": "When SLOW or WITHER expires, the opponent suffers damage equal to 25/35/50% of Peacock's ATTACK and is STUNNED for 3 seconds."
+        "SA1": "PROJECTILE HITS inflict WITHER for 9 seconds. When the opponent reaches 5 stacks of WITHER, remove all WITHER stacks to inflict STUN for 2/3/4 seconds and set the opponent's SPECIAL MOVES and TAG-INS on cooldown.",
+        "SA2": "When removing WITHER from the opponent, DRAIN 5/7/9% HEALTH and BLOCKBUSTER METER."
     },
     "fatalfray": {
         "name": "Fatal Fray",
@@ -1247,8 +1292,8 @@
             "fs": "842"
         },
         "ability": "Burden of Sacrifice",
-        "SA1": "When either Fighter lands a BLOCKED HIT, suffer a random DEBUFF for 5/7/10 seconds and permanently decrease the opponent's ATTACK and DEFENSE by 4%.",
-        "SA2": "When either Fighter uses a SPECIAL MOVE, transfer all DEBUFFS to the opponent and gain EVASION for 5 seconds and IMMUNITY for 5/7/10 seconds. If a DEBUFF was transferred, heal for 2% MAX HEALTH for each DEBUFF on the opponent."
+        "SA1": "When either Fighter lands a BLOCKED HIT, suffer a random DEBUFF for 5/7/10 seconds and permanently decrease the opponent's ATTACK and DEFENSE by 4% until Ms. Fortune TAGS OUT or is defeated.",
+        "SA2": "When either Fighter successfully HITS with a SPECIAL MOVE, transfer all DEBUFFS to the opponent and gain EVASION for 5 seconds and IMMUNITY for 5/7/10 seconds. If a DEBUFF was transferred, heal for 2% MAX HEALTH for each DEBUFF on the opponent."
     },
     "freakyfriday": {
         "name": "Freaky Friday",
@@ -1368,7 +1413,7 @@
         },
         "ability": "FUKUA PHANTASM",
         "SA1": "A well-timed BLOCK grants 1/2/3 stacks of BARRIER, and DISABLES opponent BLOCKBUSTERS and TAG INS for 10 seconds.",
-        "SA2": "While Fukua is benefiting from BARRIER she does not react to opponent projectile hits, and 100/150/200% of projectile damage is reflected back."
+        "SA2": "While benefiting from BARRIER, PROJECTILE HITS grant DEADEYE for 10/12/15 seconds."
     },
     "freshheir": {
         "name": "Fresh Heir",
@@ -1883,6 +1928,21 @@
         "SA1": "When defeated, deal damage equivalent to 25/35/50% of your MAX HEALTH.",
         "SA2": "When defeated, heal all teammates by 25/35/50% of your MAX HEALTH."
     },
+    "inkfluencer": {
+        "name": "Inkfluencer",
+        "rarity": "diamond",
+        "element": "neutral",
+        "character": "<:sp_pe:698879915713626142> Peacock",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/iFluencer.png",
+        "stats": {
+            "atk": "788",
+            "hp": "2919",
+            "fs": "893"
+        },
+        "ability": "SPLAT!",
+        "SA1": "NON-BLOCKBUSTER PROJECTILES inflict SLIME and INK the opponent for 10 seconds each, and DRAIN 10/15/20% BLOCKBUSTER METER on HIT. BLOCKBUSTERS consume all INK on the opponent to deal 20% increased damage per stack of INK (up to 5 stacks).",
+        "SA2": "Gain BARRIER when entering or exiting HOLE IDEA. While in HOLE IDEA, SPECIAL MOVES recharge 50/75/100% faster and gain 10/20/30% BLOCKBUSTER METER per second."
+    },
     "icyhot": {
         "name": "Icy Hot",
         "rarity": "bronze",
@@ -1910,8 +1970,8 @@
             "fs": "201"
         },
         "ability": "FENCED IN",
-        "SA1": "Inflict SLOW for 5/7/10 seconds when spawning a TEAR.",
-        "SA2": "On TEAR DETONATION, inflicts WITHER for 5/7/10 seconds per active TEAR."
+        "SA1": "Inflict SLOW for 5/7/10 seconds when spawning a TEAR. Opponents are IMMOBILIZED while near a TEAR.",
+        "SA2": "DRAIN 1/1.5/2% HEALTH per second while opponent is near a TEAR."
     },
     "innerpieces": {
         "name": "Inner Pieces",
@@ -2062,6 +2122,21 @@
         "ability": "PRIDE AND JOY",
         "SA1": "Teammates gain permanent REGEN when first dropping below 25/35/50% HEALTH while at an ELEMENTAL ADVANTAGE.",
         "SA2": "Once per match on DEATH, RESURRECT all defeated teammates with 15/20/25% HEALTH."
+    },
+    "killingtime": {
+        "name": "Killing Time",
+        "rarity": "diamond",
+        "element": "fire",
+        "character": "<:sp_el:692287012450992219> Eliza",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/el/kTime.png",
+        "stats": {
+            "atk": "521",
+            "hp": "4586",
+            "fs": "900"
+        },
+        "ability": "From the Abyss",
+        "SA1": "CHARGE ATTACKS are extended with an extra hit and can be charged longer for extra damage. Landing a CHARGE ATTACK grants permanent DEADEYE and adds 1/1.5/2% BLOCKBUSTER METER for each hit landed until the end of her combo.",
+        "SA2": "BLOCKBUSTER HITS inflict CURSE for 5/7/10 seconds. If a BLOCKBUSTER HIT occurs after a CHARGE ATTACK in the same combo, gain 3/4/5 stacks of permanent ENRAGE until the end of her combo."
     },
     "lasthope": {
         "name": "Last Hope",
@@ -2233,7 +2308,7 @@
         "rarity": "diamond",
         "element": "fire",
         "character": "<:sp_sq:698909665077231776> Squigly",
-        "image": "img/portrait/sq/mFlow.webp",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/mFlow.png",
         "stats": {
             "atk": "617",
             "hp": "3753",
@@ -2285,8 +2360,8 @@
             "fs": "191"
         },
         "ability": "SHAPE OF SLAUGHTER",
-        "SA1": "While sharing the opponent's same element, gain a 50/75/100% chance to MIRROR all of an opponent's BUFFS any time the opponent gains a BUFF.",
-        "SA2": "Gain 1/2/3 stack(s) of PRECISION when a BUFF expires."
+        "SA1": "While sharing the same element as the opponent, gain 1 stack of PRECISION every 3/2/1 second(s) and all HITS deal 100% bonus DAMAGE.",
+        "SA2": "Double's PRECISION HITS deal 1/1.5/2% MAX HEALTH as damage to the opponent's teammates."
     },
     "maskedmenace": {
         "name": "Masked Menace",
@@ -2540,8 +2615,8 @@
             "fs": "196"
         },
         "ability": "MARTIAL LAW",
-        "SA1": "On CRITICAL HIT, DISABLE the opponent's BLOCKBUSTERS for 2/3/4 seconds.",
-        "SA2": "Also DISABLES opponent's SPECIAL MOVES and TAG INS for 2/3/4 seconds."
+        "SA1": "On CRITICAL HIT, DISABLE the opponent's BLOCKBUSTERS, SPECIAL MOVES, and TAG-INs for 4/5/6 seconds each.",
+        "SA2": "While Parasoul is alive, increase the active Fighter's ACCURACY by 3/4/5% per CRITICAL HIT until the COMBO ends (up to 30/40/50%)."
     },
     "neuromancer": {
         "name": "Neuromancer",
@@ -2655,13 +2730,13 @@
         "character": "<:sp_rf:698919676612313168> Robo-Fortune",
         "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/rf/nyan.png",
         "stats": {
-            "atk": "118",
-            "hp": "924",
-            "fs": "191"
+            "atk": "139",
+            "hp": "840",
+            "fs": "196"
         },
         "ability": "FIREWALL",
-        "SA1": "Gain BARRIER for 5/7/10 seconds when launching a HEADRONE.",
-        "SA2": "While benefiting from BARRIER, gain a 50/75/100% chance when suffering a DEBUFF to immediately convert that DEBUFF to ENRAGE."
+        "SA1": "Gain UNFLINCHING and BARRIER for 8/10/12 seconds each when launching a HEADRONE.",
+        "SA2": "While benefiting from BARRIER, and about to suffer a DEBUFF, 50/75/100% chance to prevent it and gain ENRAGE for 12 seconds."
     },
     "ogreachiever": {
         "name": "Ogre Achiever",
@@ -2915,8 +2990,8 @@
             "fs": "863"
         },
         "ability": "MADNESS RETURNS",
-        "SA1": "Once per match, RESURRECT with 25/35/50% HEALTH. Also gain 5 random DEBUFFS for 10 seconds and 5 stacks of THORNS for 20 seconds.",
-        "SA2": "Deal 25/35/50% bonus damage for each active DEBUFF stack applied to Squigly."
+        "SA1": "Reflect 10% of all damage taken per DEBUFF on Squigly (Max 40%). Also, once per match, RESURRECT with 25/35/50% HEALTH and 4 random DEBUFFS for 15 seconds.",
+        "SA2": "Suffer a random DEBUFF for 4/6/8 seconds every 4 seconds. Squigly's NON-BLOCKBUSTER HITS deal 1% MAX HEALTH as damage to the opponent per DEBUFF on either Fighter (max 3%)."
     },
     "prototype": {
         "name": "Prototype",
@@ -2960,8 +3035,8 @@
             "fs": "385"
         },
         "ability": "ENTANGLEMENT",
-        "SA1": "50% chance on CRITICAL HIT to inflict SLOW for 10 seconds and STUN for 2/2.5/3 seconds if the opponent is not already suffering SLOW.",
-        "SA2": "5/10/15% chance on HIT to inflict BLEED for 5 seconds if the opponent is STUNNED."
+        "SA1": "35% chance on CRITICAL HIT to gain MIASMA for 4/5/6 seconds. Also, while the opponent is not suffering from INVERSE POLARITY, inflict STUN for 3/3.5/4 seconds.",
+        "SA2": "While the opponent is STUNNED, 25/30/35% chance on CRITICAL HIT to convert their STUN into INVERSE POLARITY for 8 seconds."
     },
     "gustbuster": {
         "name": "Gust Buster",
@@ -2990,8 +3065,8 @@
             "fs": "415"
         },
         "ability": "ECTOPLASM",
-        "SA1": "BLOCKBUSTERS deal 50/75/100% bonus damage to opponents with a fully charged BLOCKBUSTER.",
-        "SA2": "When a BUFF on Squigly or the opponent expires, gain 15/20/25% BLOCKBUSTER METER."
+        "SA1": "Using a BLOCKBUSTER inflicts SLIME for 10 seconds. BLOCKBUSTERS deal 50/75/100% bonus damage to opponents suffering SLIME.",
+        "SA2": "When a BUFF on either Fighter expires or is removed, gain 15/20/25% BLOCKBUSTER METER."
     },
     "primed": {
         "name": "Primed",
@@ -3035,8 +3110,8 @@
             "fs": "195"
         },
         "ability": "SPILLAGE AND PLUNDER",
-        "SA1": "Opponents lose 1 BUFF every 4/3/2 seconds while near a PUDDLE.",
-        "SA2": "While not RAVENOUS, Umbrella gains 3/4/5% HEALTH whenever an opponent loses a BUFF."
+        "SA1": "PUDDLE HITS remove 1/2/3 opponent BUFF(S) and inflict IMMOBILIZE for 10 seconds.",
+        "SA2": "While the opponent has no BUFFS, PUDDLE HITS grant ENRAGE for 5/7/10 seconds."
     },
     "shadowpuppet": {
         "name": "Shadow Puppet",
@@ -3126,7 +3201,7 @@
         },
         "ability": "DEAD OR ALIVE",
         "SA1": "Once per match when suffering a HIT that would be fatal, gain 1/2/3 stacks of ARMOR and BARRIER. ARMOR lasts for 10 seconds.",
-        "SA2": "When defeating an opponent, gain 2 stacks of ENRAGE for 30 seconds and 25/35/50% BLOCKBUSTER METER."
+        "SA2": "For each 20% HEALTH lost by either Fighter, gain ENRAGE for 15 seconds and 15/20/25% BLOCKBUSTER METER."
     },
     "roughcopy": {
         "name": "Rough Copy",
@@ -3170,8 +3245,8 @@
             "fs": "421"
         },
         "ability": "FORCE OF WILL",
-        "SA1": "The 10th non-projectile COMBO HIT inflicts DEATH MARK for 10/12/15 seconds and FATIGUE for 25/20/15 seconds.",
-        "SA2": "CRITICAL HITS grant IMMUNITY for 3/4/5 seconds, INVINCIBLE for 1 second and 25% increased CRIT DAMAGE while near an opponent suffering from DEATH MARK."
+        "SA1": "Every 5th non-projectile COMBO HIT inflicts DEATH MARK for 10/12/15 seconds.",
+        "SA2": "CRITICAL HITS grant IMMUNITY for 3/4/5 seconds, INVINCIBLE for 1 second and 25% increased CRIT DAMAGE while the opponent is suffering from DEATH MARK."
     },
     "riskyginger": {
         "name": "Risky Ginger",
@@ -3245,8 +3320,8 @@
             "fs": "184"
         },
         "ability": "PHANTOM RAINS",
-        "SA1": "15% chance when landing a BLOCKED HIT to inflict ARMOR BREAK and POWER SURGE for 10/12/15 seconds each.",
-        "SA2": "After 5 seconds while on Fukua's side of the stage and while not STUNNED, opponents lose all current BUFFS and suffer FATIGUE for 15/13/10 seconds."
+        "SA1": "15% chance when landing a HIT (including BLOCKED HITS) to inflict ARMOR BREAK and POWER SURGE for 10/12/15 seconds each.",
+        "SA2": "Every 5 seconds while Fukua is on the opponent's side of the stage and while not STUNNED, opponents lose all current BUFFS and suffer STUN for 2/3/4 seconds."
     },
     "reimaged": {
         "name": "Reimaged",
@@ -3305,8 +3380,8 @@
             "fs": "437"
         },
         "ability": "AMPED AND READY",
-        "SA1": "While Big Band is alive, all teammates gain HASTE and REGEN for 6/8/10 seconds after every 15 seconds.",
-        "SA2": "While benefiting from HASTE and REGEN, DASH ATTACKS inflict CURSE. Also when Big Band or any teammate gains a BUFF while the opponent is suffering from CURSE, its duration is increased by 3/4/5 seconds."
+        "SA1": "While Big Band is alive, the active Fighter has a 50% chance to gain HASTE and HEAVY REGEN for 5/7/10 seconds when landing a DASH ATTACK.",
+        "SA2": "While the active Fighter is benefiting from HASTE and REGEN, DASH ATTACKS deal 50/75/100% bonus DAMAGE and inflict CURSE for 5/6/7 seconds."
     },
     "rogueagent": {
         "name": "Rogue Agent",
@@ -3395,7 +3470,7 @@
             "fs": "884"
         },
         "ability": "Soul Split",
-        "SA1": "While not in STAR POWER and not benefiting from EVASION, well-timed BLOCKS grant 30/40/50% STAR POWER meter, 1/2/3 stack(s) of BARRIER and allows Annie to EVADE all attacks for 3 seconds.",
+        "SA1": "While not in STAR POWER, not benefiting from EVASION, and while below 50% STAR POWER meter, well-timed BLOCKS grant 30/40/50% STAR POWER meter, 1/2/3 stack(s) of BARRIER and allows Annie to EVADE all attacks for 3 seconds.",
         "SA2": "When activating STAR POWER, sacrifice 35% of MAX HEALTH to gain DEADEYE for 10/12/15 seconds. While in STAR POWER, BENCHED opponents suffer HEX and ALL opponents lose 1/2/3% HEALTH every second."
     },
     "snakecharmer": {
@@ -3410,8 +3485,8 @@
             "fs": "196"
         },
         "ability": "INFERNAL FAVOR",
-        "SA1": "While at least 80/65/50% CHARGED, using a SPECIAL MOVE inflicts IMMOBILIZE and DISABLE BLOCKBUSTERS for 10 seconds each.",
-        "SA2": "When using a MORTUARY CHARGE, all teammates gain 25/35/50% BLOCKBUSTER METER and permanent ENRAGE."
+        "SA1": "Using a SPECIAL MOVE grants 10/15/20% MORTUARY CHARGE and inflicts IMMOBILIZE and DISABLE BLOCKBUSTERS for 10 seconds each. When becoming fully CHARGED, also gain ENRAGE.",
+        "SA2": "When using a MORTUARY CHARGE, all teammates gain 1/2/3% BLOCKBUSTER METER every second and permanent ENRAGE for the rest of the match."
     },
     "starcrossed": {
         "name": "Star-Crossed",
@@ -3651,7 +3726,7 @@
         },
         "ability": "JUDGMENT DAY",
         "SA1": "While Marie is alive, she gains permanent ARMOR and EVASION for 10 seconds for every 40/35/30% HEALTH lost by any teammate. 1 stack of ARMOR is removed when her opponent uses a BLOCKBUSTER.",
-        "SA2": "While Marie is the active Fighter and has at least 3 stacks of ARMOR, she inflicts STUN for 2/3/4 seconds every 15 seconds and DRAINS 10% BLOCKBUSTER METER every 5 seconds."
+        "SA2": "While Marie is the active Fighter, is fighting the same opponent, and has at least 3 stacks of ARMOR, she inflicts STUN for 2/3/4 seconds every 10 seconds and DRAINS 10% BLOCKBUSTER METER every 5 seconds."
     },
     "starshine": {
         "name": "Star Shine",
@@ -3733,7 +3808,7 @@
         "rarity": "gold",
         "element": "dark",
         "character": "<:sp_fi:698821373698637894> Filia",
-        "image": "img/portrait/fi/sTipper.webp",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fi/sTipper.png",
         "stats": {
             "atk": "248",
             "hp": "1698",
@@ -3935,8 +4010,8 @@
             "fs": "93"
         },
         "ability": "STAR DUST",
-        "SA1": "While in STAR POWER MODE, each HIT blocked by the opponent has a 10% chance to inflict GUARD BREAK and SLOW for 10/12/15 seconds.",
-        "SA2": "BLOCKBUSTERS deal 25/35/50% bonus damage while in STAR POWER MODE."
+        "SA1": "Each HIT blocked by the opponent has a 10% chance to inflict GUARD BREAK and ARMOR BREAK for 10/12/15 seconds each.",
+        "SA2": "SPECIAL MOVES and BLOCKBUSTERS deal 15/25/35% bonus DAMAGE."
     },
     "thatsallfolks": {
         "name": "That's All Folks!",
@@ -4085,8 +4160,8 @@
             "fs": "174"
         },
         "ability": "MORPHA",
-        "SA1": "When TRANSMUTING to an ELEMENTAL ADVANTAGE, heal for 15/20/25% HEALTH.",
-        "SA2": "Gain a 25/35/50% chance to CONVERT any DEBUFFS into ARMOR and REGEN for 10 seconds when at an ELEMENTAL ADVANTAGE."
+        "SA1": "Double's THROWS grant ARMOR for 20 seconds and remove 1/2/3 DEBUFF(S) from herself.",
+        "SA2": "When the opponent is KNOCKED DOWN after a THROW, inflict STUN for 4 seconds. DRAIN 2/3/4% HEALTH per second from STUNNED opponents."
     },
     "idolecho": {
         "name": "Idol Echo",
@@ -4148,6 +4223,21 @@
         "SA1": "Gain IMMUNITY, UNFLINCHING, or INVINCIBLE for 9/12/15 seconds when activating STAR POWER. The BUFF is removed when exiting STAR POWER.",
         "SA2": "33% chance when using a SPECIAL MOVE to reset all BUFF timers and gain 20/25/30% STAR POWER meter."
     },
+    "trueself": {
+        "name": "True Self",
+        "rarity": "diamond",
+        "element": "water",
+        "character": "<:sp_fu:698919709336141886> Fukua",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/fu/trueself.png",
+        "stats": {
+            "atk": "812",
+            "hp": "2627",
+            "fs": "875"
+        },
+        "ability": "Kung Faux",
+        "SA1": "Fukua's successful KICK attacks grant a stack of SHADOW KICK (max. 10). Regain 1/1.5/2% MAX HEALTH when gaining a SHADOW KICK stack. The next BLOCKBUSTER used after reaching 10 SHADOW KICK stacks will summon GRENDEL'S HAND to HIT the opponent.",
+        "SA2": "When GRENDEL's HAND successfully HITS, gain UNFLINCHING for 10/12/15 seconds. When gaining a SHADOW KICK stack while benefiting from UNFLINCHING, deal 2/2.5/3% MAX HEALTH as damage to the opponent and gain 2/3/4% BLOCKBUSTER METER."
+    },
     "chameleontwist": {
         "name": "Chameleon Twist",
         "rarity": "silver",
@@ -4190,7 +4280,7 @@
             "fs": "105"
         },
         "ability": "THROW DOWN",
-        "SA1": "THROWS deal 15/30/50% bonus damage.",
+        "SA1": "All teammates deal 15/30/50% increased THROW damage.",
         "SA2": "Gain ARMOR for 10/12/15 seconds when THROWING the opponent."
     },
     "untouchable": {
@@ -4222,6 +4312,21 @@
         "ability": "DEATH THROW",
         "SA1": "Projectile HITS have a 25/35/50% chance to grant DEADEYE and BARRIER for 15 seconds each.",
         "SA2": "Projectile HITS inflict 25/35/50% bonus damage and grant HASTE for 10 seconds while benefiting from DEADEYE."
+    },
+    "unbearable": {
+        "name": "Unbearable",
+        "rarity": "gold",
+        "element": "water",
+        "character": "<:sp_bb:684054646528147500> Big Band",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/bb/unbearable.png",
+        "stats": {
+            "atk": "256",
+            "hp": "2205",
+            "fs": "437"
+        },
+        "ability": "Be PreBEARed",
+        "SA1": "While Big Band has living teammates, the active Fighter gains a 35% chance when suffering a DEBUFF to convert it to BARRIER for 10/12/15 seconds and heal all teammates for 5% MAX HEALTH.",
+        "SA2": "With one teammate alive, Big Band takes 10/15/20% reduced damage and gains a 1% chance to instantly defeat the opponent with TIER 3 BLOCKBUSTER HITS. With no teammates alive, these effects are doubled."
     },
     "unfazed": {
         "name": "Unfazed",
@@ -4265,7 +4370,7 @@
             "fs": "208"
         },
         "ability": "CLASSICALLY TRAINED",
-        "SA1": "Gain 1 stack of PRECISION every 20/15/10 COMBO HITS.",
+        "SA1": "Gain 1 stack of PRECISION every 15/10/5 COMBO HITS.",
         "SA2": "PRECISION HITS grant ENRAGE and inflict GUARD BREAK for 5/7/10 seconds."
     },
     "vaporwavevixen": {
@@ -4295,8 +4400,8 @@
             "fs": "196"
         },
         "ability": "METALMORPHOSIS",
-        "SA1": "Gain ARMOR for 5/7/10 seconds when either Fighter uses a SPECIAL MOVE.",
-        "SA2": "Using a BLOCKBUSTER converts all ARMOR stacks into MIASMA for 5/7/10 seconds."
+        "SA1": "Gain ARMOR for 8/10/12 seconds and refresh the timer of all ARMORS when either Fighter uses a SPECIAL MOVE.",
+        "SA2": "Using a BLOCKBUSTER converts all ARMOR stacks into MIASMA for 8/10/12 seconds."
     },
     "wulfsbane": {
         "name": "Wulfsbane",
@@ -4320,13 +4425,13 @@
         "character": "<:sp_pe:698879915713626142> Peacock",
         "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pe/wCard.png",
         "stats": {
-            "atk": "132",
-            "hp": "809",
-            "fs": "187"
+            "atk": "155",
+            "hp": "735",
+            "fs": "195"
         },
         "ability": "KILLING JOKE",
-        "SA1": "Inflict a random DEBUFF for 3/4/5 seconds when using a SPECIAL MOVE.",
-        "SA2": "If the opponent is suffering a DEBUFF when Peacock is defeated, the opponent's HEALTH is reduced by 25/35/50%."
+        "SA1": "Inflict a random DEBUFF for 4/6/8 seconds when using a SPECIAL MOVE. Also, once per match, when suffering a HIT that would be fatal, regain 10% MAX HEALTH per DEBUFF on the opponent.",
+        "SA2": "When Peacock suffers a HIT that would be fatal while the opponent is suffering a DEBUFF, reduce their HEALTH by 25/35/50%."
     },
     "webcrawler": {
         "name": "Web Crawler",
@@ -4340,7 +4445,7 @@
             "fs": "809"
         },
         "ability": "JUST HANGING OUT",
-        "SA1": "After Painwheel has been in the air for 1.5 seconds, gain DEADEYE for 10 seconds and inflict GUARD BREAK for 6/7/8 seconds. ",
+        "SA1": "After Painwheel has been in the air for 1 second, gain DEADEYE and inflict GUARD BREAK for 10/11/12 seconds each.",
         "SA2": "10/12/15% chance on HIT to remove 1 opponent BUFF and gain EVASION for 10 seconds while near an opponent suffering from GUARD BREAK."
     },
     "windstalker": {
@@ -4507,6 +4612,21 @@
         "ability": "GAME OVER",
         "SA1": "50/75/100% chance when TRANSMUTING to the DARK element to inflict a permanent DOOM effect, killing the opponent after 30 seconds. DOOM will be removed if Double is defeated.",
         "SA2": "When defeated, inflict 1/2/3 stack(s) of permanent BLEED."
+    },
+    "yellowone": {
+        "name": "Yellow One",
+        "rarity": "gold",
+        "element": "light",
+        "character": "<:sp_sq:698909665077231776> Squigly",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/sq/yOne.png",
+        "stats": {
+            "atk": "294",
+            "hp": "1787",
+            "fs": "415"
+        },
+        "ability": "Yellow Ability",
+        "SA1": "Gain BLESSING every 5 seconds. This BLESSING always lasts for 1/1.5/2 second(s) and becomes permanent when using SPECIAL MOVES and BLOCKBUSTERS. Permanent BLESSINGS are removed when this BLESSING expires.",
+        "SA2": "While benefiting from at least 3 stacks of permanent BLESSING, SPECIAL MOVES and BLOCKBUSTERS are UNBLOCKABLE and regain 25/35/50% of damage inflicted as HEALTH."
     },
     "protonpulse": {
         "name": "Proton Pulse",
