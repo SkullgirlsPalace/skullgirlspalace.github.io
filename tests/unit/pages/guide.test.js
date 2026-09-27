@@ -36,7 +36,6 @@ describe('guide.js', () => {
 
         // Setup DOM with all necessary containers
         document.body.innerHTML = `
-            <div id="tab-tutorials"></div>
             <div id="tab-statistics"></div>
             <div id="tab-modifiers"></div>
             <div id="tab-catalysts"></div>
@@ -55,17 +54,15 @@ describe('guide.js', () => {
         it('should include tab buttons', () => {
             const html = render();
             expect(html).toContain('guide-tab-btn');
-            expect(html).toContain('tutorials');
             expect(html).toContain('statistics');
             expect(html).toContain('modifiers');
             expect(html).toContain('catalysts');
         });
 
-        it('should include tutorials content', () => {
+        it('should omit the archived passive income tutorial from the site', () => {
             const html = render();
-            expect(html).toContain('tab-tutorials');
-            // Content is i18n-driven (passiveIncomeTitle key)
-            expect(html).toContain('tutorial-renda-passiva');
+            expect(html).not.toContain('tab-tutorials');
+            expect(html).not.toContain('tutorial-renda-passiva');
         });
 
         it('should include statistics tab', () => {

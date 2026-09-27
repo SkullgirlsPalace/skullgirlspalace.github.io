@@ -38,11 +38,6 @@ vi.mock('../../src/pages/guide.js', () => ({
     init: vi.fn()
 }));
 
-vi.mock('../../src/pages/tutorialRendaPassiva.js', () => ({
-    render: vi.fn(() => '<div>Tutorial</div>'),
-    init: vi.fn()
-}));
-
 // Mock Navigation component
 vi.mock('../../src/components/Navigation.js', () => ({
     updateNavbarVisibility: vi.fn(),

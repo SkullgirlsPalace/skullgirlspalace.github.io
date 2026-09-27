@@ -42,20 +42,15 @@ describe('guide.js page', () => {
       expect(container).not.toBeNull();
     });
 
-    it('should render 4 tab buttons', () => {
+    it('should render 3 tab buttons', () => {
       const tabs = document.querySelectorAll('.guide-tab-btn');
-      expect(tabs.length).toBe(4);
+      expect(tabs.length).toBe(3);
     });
 
-    it('should have tutorials tab button active by default', () => {
-      const tutorialsBtn = document.querySelector('.guide-tab-btn.active');
-      expect(tutorialsBtn).not.toBeNull();
-      expect(tutorialsBtn.textContent).toContain('Tutoriais');
-    });
-
-    it('should render the tutorials tab content', () => {
-      const tab = document.querySelector('#tab-tutorials');
-      expect(tab).not.toBeNull();
+    it('should open the statistics tab by default', () => {
+      const button = document.querySelector('.guide-tab-btn.active');
+      const tab = document.querySelector('#tab-statistics');
+      expect(button.getAttribute('onclick')).toContain("'statistics'");
       expect(tab.classList.contains('active')).toBe(true);
     });
 
@@ -96,11 +91,9 @@ describe('guide.js page', () => {
       expect(elements).toContain('dark');
     });
 
-    it('should render the tutorial card for Renda Passiva', () => {
-      const tutorialsTab = document.querySelector('#tab-tutorials');
-      const card = tutorialsTab.querySelector('.tutorial-card');
-      expect(card).not.toBeNull();
-      expect(card.textContent).toContain('Renda Passiva');
+    it('should not expose the Renda Passiva tutorial in the guide', () => {
+      expect(document.querySelector('#tab-tutorials')).toBeNull();
+      expect(document.querySelector('.tutorial-card')).toBeNull();
     });
 
     it('should render the stats image section', () => {
@@ -120,7 +113,7 @@ describe('guide.js page', () => {
 
   describe('init() tab switching', () => {
     it('should register switchGuideTab on window', async () => {
-      document.body.innerHTML = '<div class="guide-tab-btn active" onclick="switchGuideTab(\'tutorials\')"></div><div class="guide-tab-content active" id="tab-tutorials"></div>';
+      document.body.innerHTML = '<div class="guide-tab-btn active" onclick="switchGuideTab(\'statistics\')"></div><div class="guide-tab-content active" id="tab-statistics"></div>';
       const { init } = await import('../../../src/pages/guide.js');
       await init();
       expect(window.switchGuideTab).toBeDefined();
@@ -132,13 +125,13 @@ describe('guide.js page', () => {
       document.body.innerHTML = render();
       await init();
 
-      window.switchGuideTab('statistics');
+      window.switchGuideTab('modifiers');
 
       const statsTab = document.querySelector('#tab-statistics');
-      expect(statsTab.classList.contains('active')).toBe(true);
+      expect(statsTab.classList.contains('active')).toBe(false);
 
-      const tutorialsTab = document.querySelector('#tab-tutorials');
-      expect(tutorialsTab.classList.contains('active')).toBe(false);
+      const modifiersTab = document.querySelector('#tab-modifiers');
+      expect(modifiersTab.classList.contains('active')).toBe(true);
     });
   });
 });
