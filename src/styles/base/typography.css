@@ -51,6 +51,12 @@ html[lang='zh-cn'] .cinematic {
     font-weight: 500;
 }
 
+.number.progression-final {
+    color: var(--accent-gold);
+    font-weight: 800;
+    text-shadow: 0 0 8px rgba(212, 168, 75, 0.35);
+}
+
 /* Rarity Gradients */
 .bronze-gradient {
     background-image: -webkit-linear-gradient(white 10%, #843 70%);

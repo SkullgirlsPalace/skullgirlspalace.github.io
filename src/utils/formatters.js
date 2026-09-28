@@ -76,7 +76,14 @@ export function formatText(text, variantName = null) {
         workingText = workingText.replace(marker, html);
     }
 
-    // Convert numbers to highlighted spans
+    // Highlight each ability's final value in three-rank progressions.
+    // The final rank stays highlighted whether the values increase or decrease.
+    workingText = workingText.replace(
+        /(\d+(?:\.\d+)?%?)\s*\/\s*(\d+(?:\.\d+)?%?)\s*\/\s*(\d+(?:\.\d+)?%?)/g,
+        (_, first, second, final) => `<span class="number">${first}</span>/<span class="number">${second}</span>/<span class="number progression-final">${final}</span>`
+    );
+
+    // Highlight remaining standalone numbers without changing progression markup.
     workingText = workingText.replace(/((?:\?\?\?|\d+(?:\.\d+)?%?))/g, '<span class="number">$1</span>');
 
     // Wrap ELEMENTO keyword for variants with element effects
