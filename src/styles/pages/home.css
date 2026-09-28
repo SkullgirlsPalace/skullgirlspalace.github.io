@@ -28,11 +28,18 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 8px;
+    position: relative;
+    min-height: 4.75rem;
 }
 
 .hub-hero h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
     font-family: 'Washington', sans-serif;
-    font-size: 3.5rem;
+    font-size: clamp(3.5rem, 5vw, 4.25rem);
+    white-space: nowrap;
     background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -46,7 +53,7 @@
     width: min(100%, 640px);
     max-width: 640px;
     padding: 0 16px;
-    margin: 0 auto;
+    margin: 18px auto 0;
     box-sizing: border-box;
     text-align: center;
     line-height: 1.5;
@@ -205,16 +212,19 @@
 /* ========== HOME PAGE MOBILE ========== */
 @media (max-width: 768px) {
     .hero-main-row {
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 12px;
     }
 
     .hero-main-row h1 {
+        position: static;
+        transform: none;
         order: 2;
         width: 100%;
         text-align: center;
-        font-size: 2.2rem;
+        font-size: clamp(2.2rem, 9vw, 3rem);
     }
 
     .home-about-link {
@@ -227,6 +237,10 @@
 
     .hub-hero p {
         font-size: 1rem;
+    }
+
+    .hub-hero p {
+        margin-top: 14px;
     }
 
     .hub-menu {

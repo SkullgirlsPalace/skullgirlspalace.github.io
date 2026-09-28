@@ -32,13 +32,13 @@
 }
 
 #landing-hub .hub-menu {
-    gap: 10px;
-    padding: 20px;
+    gap: 12px;
+    padding: 24px;
 }
 
 #landing-hub .hub-btn {
     border-radius: 12px;
-    padding: 16px 18px;
+    padding: 20px;
 }
 
 #landing-hub .hub-btn:hover {
@@ -622,7 +622,7 @@
 @media (min-width: 769px) {
     #character-detail.character-detail .header-top-row {
         display: grid;
-        grid-template-columns: minmax(44px, 1fr) minmax(0, auto) minmax(0, 1fr);
+        grid-template-columns: minmax(44px, 1fr) minmax(0, 1fr);
         gap: clamp(12px, 2vw, 24px);
         align-items: center;
     }
@@ -633,20 +633,23 @@
     }
 
     #character-detail.character-detail .header-left {
+        grid-column: 1;
         justify-content: flex-start;
     }
 
     #character-detail.character-detail .header-right {
+        grid-column: 2;
         width: 100%;
         justify-content: flex-end;
     }
 
     #character-detail.character-detail .centered-title {
-        position: relative;
-        inset: auto;
-        transform: none;
-        justify-self: center;
-        max-width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        justify-self: auto;
+        max-width: calc(100% - 112px);
         min-width: 0;
     }
 

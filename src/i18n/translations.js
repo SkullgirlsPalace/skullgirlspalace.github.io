@@ -11,12 +11,12 @@ export const translations = {
       characters: 'Personagens',
       guide: 'Guia',
       calculator: 'Calculadora',
-      about: 'sobre'
+      about: 'Sobre'
     },
     // Home page
     home: {
       heroTitle: 'Skullgirls Palace',
-      heroSubtitle: 'Wiki de Skullgirls Mobile.',
+      heroSubtitle: 'Wiki de Skullgirls Mobile',
       characters: 'PERSONAGENS',
       guide: 'GUIA',
       calculator: 'CALCULADORA',
@@ -103,7 +103,7 @@ export const translations = {
   element: {
     fire: 'Fogo',
     water: 'Água',
-    wind: 'Vento',
+    wind: 'Ar',
     light: 'Luz',
     dark: 'Trevas',
     neutral: 'Neutro'
