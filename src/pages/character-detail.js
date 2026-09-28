@@ -68,7 +68,7 @@ export function render(charKey, initialTab = 'builds') {
     const currentTab = state.currentTab || initialTab;
 
     return `
-        <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charData.element]}" data-current-tab="${currentTab}">
+        <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charKey] || 'var(--accent-gold)'}" data-current-tab="${currentTab}">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">

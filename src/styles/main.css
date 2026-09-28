@@ -45,3 +45,6 @@
 
 /* Tier list visual layer: scoped to selection and ranking screens. */
 @import 'pages/tierlist-polish.css';
+
+/* Shared spacing, surfaces and control styling across all screens. */
+@import 'pages/interface-consistency.css';

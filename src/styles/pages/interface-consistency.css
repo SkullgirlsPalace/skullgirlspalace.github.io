@@ -1,0 +1,270 @@
+/* Shared visual language across the Palace screens. Presentation only. */
+
+:root {
+    --surface-border: rgba(255, 255, 255, 0.075);
+    --surface-tint: rgba(212, 168, 75, 0.045);
+}
+
+/* Keep page titles, controls and content surfaces on the same rhythm. */
+.section-header {
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    line-height: 1.2;
+}
+
+#landing-hub .hub-menu,
+.guide-container .guide-header,
+.guide-container .stats-hero-container,
+.guide-container .stats-glossary-container,
+.guide-container .guide-catalyst-library,
+.guide-container .guide-modifier-library,
+#statistics .intro-card,
+#statistics .calculator-box,
+#catalysts .catalysts-intro,
+#catalysts .catalyst-card,
+.calculator-studio {
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+#landing-hub .hub-menu {
+    gap: 10px;
+    padding: 20px;
+}
+
+#landing-hub .hub-btn {
+    border-radius: 12px;
+    padding: 16px 18px;
+}
+
+#landing-hub .hub-btn:hover {
+    transform: translateY(-2px);
+}
+
+.guide-container {
+    max-width: 1240px;
+    padding-bottom: 40px;
+}
+
+.guide-container .guide-header {
+    margin-bottom: 22px;
+    padding: 20px 22px;
+    background: linear-gradient(145deg, var(--surface-tint), var(--bg-card) 56%);
+}
+
+.guide-container .guide-header h1 {
+    margin-bottom: 6px;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+}
+
+.guide-container .guide-header p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.guide-tabs,
+.detail-tabs {
+    gap: 6px;
+    padding: 5px;
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.guide-tabs {
+    margin-bottom: 22px;
+}
+
+.guide-tab-btn,
+.tab-btn {
+    min-height: 42px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 0.82rem;
+    letter-spacing: 0.045em;
+}
+
+.guide-tab-btn.active,
+.tab-btn.active {
+    border-color: rgba(212, 168, 75, 0.36);
+    color: #17130b;
+    background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+    box-shadow: 0 4px 14px rgba(212, 168, 75, 0.16);
+}
+
+/* Detail header uses the same compact framed surface in both tabs. */
+#character-detail.character-detail .character-detail-header {
+    margin-bottom: 18px;
+    padding: 18px 20px 16px;
+    border: 1px solid rgba(212, 168, 75, 0.14);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.05), rgba(18, 18, 26, 0.88) 55%);
+}
+
+#character-detail.character-detail .header-top-row {
+    margin-bottom: 18px;
+}
+
+#character-detail.character-detail .header-middle-row {
+    margin-bottom: 16px;
+}
+
+#character-detail.character-detail .char-title-row h2,
+#character-detail.character-detail .char-title-centered h2 {
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    color: var(--char-accent, var(--accent-gold));
+    color: color-mix(in srgb, var(--char-accent, var(--accent-gold)) 55%, #fff 45%);
+    text-shadow: 0 2px 18px color-mix(in srgb, var(--char-accent, var(--accent-gold)) 24%, transparent);
+}
+
+#character-detail.character-detail .detail-tabs {
+    width: fit-content;
+}
+
+/* Match filters, search fields and data cards to the same border treatment. */
+.desktop-filter-bar,
+.mobile-filter-bar,
+.filters,
+.search-input-wrapper,
+.guide-catalyst-search input,
+.guide-modifier-search input,
+.guide-modifier-filters,
+.stats-glossary-search,
+.catalyst-note-input {
+    border-color: var(--surface-border);
+    border-radius: 12px;
+}
+
+.desktop-filter-bar,
+.mobile-filter-bar {
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.035), var(--bg-card) 60%);
+}
+
+.search-input-wrapper:focus-within,
+.guide-catalyst-search input:focus,
+.guide-modifier-search input:focus,
+.stats-glossary-search:focus-within,
+.catalyst-note-input:focus {
+    border-color: rgba(212, 168, 75, 0.58);
+    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.1);
+}
+
+#catalysts .catalysts-intro {
+    margin-bottom: 22px;
+    padding: 16px 20px;
+    border-color: rgba(212, 168, 75, 0.16);
+    background: linear-gradient(110deg, var(--surface-tint), rgba(255, 255, 255, 0.018) 72%);
+}
+
+#catalysts .catalysts-intro p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+#catalysts .catalyst-card {
+    gap: 12px;
+    padding: 16px;
+    border-color: var(--surface-border);
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.025), var(--bg-card) 60%);
+    background-size: auto;
+}
+
+#catalysts .catalyst-card:hover {
+    border-color: rgba(212, 168, 75, 0.42);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+#catalysts .catalyst-card-header h4 {
+    color: var(--text-primary);
+}
+
+#statistics .intro-card {
+    padding: 20px;
+    background: linear-gradient(145deg, var(--surface-tint), var(--bg-card) 58%);
+}
+
+#statistics .calc-tab.active {
+    color: #17130b;
+    background: rgba(212, 168, 75, 0.11);
+}
+
+#statistics .calc-tab.active::after {
+    background: linear-gradient(90deg, var(--accent-gold-dark), var(--accent-gold-light));
+}
+
+.variant-card {
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 16px;
+    }
+
+    .guide-container {
+        padding-bottom: 24px;
+    }
+
+    .guide-container .guide-header {
+        margin-bottom: 16px;
+        padding: 16px;
+    }
+
+    .guide-tabs {
+        width: 100%;
+        gap: 4px;
+        margin-bottom: 16px;
+    }
+
+    .guide-tab-btn,
+    .tab-btn {
+        padding: 9px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.03em;
+    }
+
+    #character-detail.character-detail .character-detail-header {
+        margin-bottom: 14px;
+        padding: 14px 12px 12px;
+        border-radius: 15px;
+    }
+
+    #character-detail.character-detail .header-top-row,
+    #character-detail.character-detail .header-middle-row {
+        margin-bottom: 12px;
+    }
+
+    #character-detail.character-detail .detail-tabs {
+        width: min(100%, 330px);
+    }
+
+    #character-detail.character-detail .tab-btn {
+        flex: 1;
+    }
+
+    #catalysts .catalysts-intro,
+    #statistics .intro-card {
+        padding: 14px;
+    }
+
+    #catalysts .catalyst-card {
+        padding: 14px;
+    }
+
+    #statistics .calc-tab-content {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #landing-hub .hub-btn,
+    #catalysts .catalyst-card {
+        transition: none;
+    }
+}
