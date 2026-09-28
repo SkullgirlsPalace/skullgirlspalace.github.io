@@ -11,7 +11,7 @@ import { getVariantClasses, getLocalizedClassName, CLASS_ICONS } from '../data/v
 import { getVariantImage } from '../data/variantImages.js';
 import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';
 import { EFFECT_DATA } from '../data/effectData.js';
-import { t, getCurrentLanguage } from '../i18n/index.js';
+import { t, getCurrentLanguage, getLocalizedNameSync } from '../i18n/index.js';
 
 // Debounce timer for search
 let searchDebounceTimer = null;
@@ -534,15 +534,21 @@ function performSearch(query) {
     for (const [charKey, charData] of Object.entries(characters)) {
         const variants = flattenVariants(charData.variants);
         for (const variant of variants) {
+            const localizedName = getLocalizedNameSync(variant.name, variant.signature_ability?.name);
+            const localizedCharName = getLocalizedNameSync(charData.character);
             const normalizedName = normalizeText(variant.name);
+            const normalizedLocalizedName = normalizeText(localizedName);
             const normalizedChar = normalizeText(charData.character);
+            const normalizedLocalizedChar = normalizeText(localizedCharName);
 
             // Search by variant name or character name
-            if (normalizedName.includes(normalizedQuery) || normalizedChar.includes(normalizedQuery)) {
+            if (normalizedName.includes(normalizedQuery) || normalizedLocalizedName.includes(normalizedQuery) ||
+                normalizedChar.includes(normalizedQuery) || normalizedLocalizedChar.includes(normalizedQuery)) {
                 results.push({
                     ...variant,
                     _charKey: charKey,
-                    _charName: charData.character
+                    _charName: localizedCharName,
+                    _localizedName: localizedName
                 });
             }
         }
@@ -581,11 +587,12 @@ function renderSearchResults(results, container, query = '') {
         const elementInfo = ELEMENT_MAP[variant.element] || {};
         const rarityIcon = RARITY_ICONS[variant.rarityKey] || '';
         const portraitUrl = getVariantImage(variant._charKey, variant.name, 0);
-        const highlightedName = highlightMatch(variant.name, query);
+        const displayName = variant._localizedName || getLocalizedNameSync(variant.name, variant.signature_ability?.name);
+        const highlightedName = highlightMatch(displayName, query);
 
         return `
             <button class="search-result-item" onclick="handleSearchResultClick('${variant._charKey}', '${variant.name.replace(/'/g, "\\'")}')">
-                <img loading="lazy" src="${portraitUrl}" alt="${variant.name}" class="search-result-portrait"
+                <img loading="lazy" src="${portraitUrl}" alt="${displayName}" class="search-result-portrait"
                      onerror="this.src='img/official/Annie_Icon.webp'">
                 <div class="search-result-info">
                     <span class="search-result-name">${highlightedName}</span>

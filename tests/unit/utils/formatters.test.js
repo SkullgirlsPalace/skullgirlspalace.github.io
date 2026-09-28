@@ -63,6 +63,11 @@ describe('formatters.js', () => {
       expect(formatText('[HAB 2]: Test Ability')).not.toContain('[HAB 2]:');
     });
 
+    it('should remove English [SA N] prefixes with or without spacing', () => {
+      expect(formatText('[SA1]: Test')).toBe('Test');
+      expect(formatText('[SA 2]: Test')).toBe('Test');
+    });
+
     it('should remove **bold** markdown', () => {
       expect(formatText('**Test**')).toBe('Test');
       expect(formatText('Some **bold** text')).toBe('Some bold text');

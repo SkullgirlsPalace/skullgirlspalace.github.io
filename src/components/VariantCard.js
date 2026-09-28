@@ -36,7 +36,7 @@ export function createVariantCard(variant, charKey, index = 0) {
 
   // Format ability description
   const rawSADesc = variant.signature_ability?.description || t('variant.noDescription');
- const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc);
+ const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc, variant.signature_ability?.name);
  const abilityDesc = formatText(localizedSADesc, variant.name);
 
   // Format arsenal with images
@@ -164,7 +164,7 @@ export function createVariantCard(variant, charKey, index = 0) {
             ${badgeHTML}
             ${exclusiveBadgeHTML}
             <div class="variant-left-section">
-                <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name)}" class="variant-portrait" loading="lazy"
+                <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name, rawSAName)}" class="variant-portrait" loading="lazy"
                      onerror="this.src='img/official/Annie_Icon.webp'">
                 <div class="variant-classes-display desktop-classes">
                     ${classesHTML}
@@ -172,7 +172,7 @@ export function createVariantCard(variant, charKey, index = 0) {
             </div>
             <div class="variant-info">
                 <div class="variant-header">
-                    <h3>${getLocalizedNameSync(variant.name)}</h3>
+                    <h3>${getLocalizedNameSync(variant.name, rawSAName)}</h3>
                     ${charSubtitleHTML}
                     <div class="variant-classes-display mobile-classes">
                         ${classesHTML}

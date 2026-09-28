@@ -26,8 +26,8 @@ export function formatText(text, variantName = null) {
         text = String(text);
     }
 
-    // Remove [HAB 1]: and [HAB 2]: prefixes
-    text = text.replace(/\[HAB \d+\]:\s*/g, '');
+    // Remove source labels used by both PT-BR and English signature abilities.
+    text = text.replace(/\[(?:HAB|SA)\s*\d+\s*\]:?\s*/gi, '');
 
     // Remove **bold** syntax instead of converting to <strong> since it doesn't add readability
     text = text.replace(/\*\*([^*]+)\*\*/g, '$1');

@@ -10,6 +10,7 @@ import { getCurrentLanguage } from './translations.js';
 let krazeteEN = null;
 let krazetePTBR = null;
 let nameMapping = null; // PT-BR name -> { enName, ability, SA1, SA2 }
+let abilityMapping = null; // PT-BR ability name -> English variant data
 
 /**
  * Load Krazete English data
@@ -68,6 +69,7 @@ async function buildNameMapping() {
   ]);
 
   nameMapping = {};
+  abilityMapping = {};
 
   // For each key in PT-BR data, create a mapping
   for (const [key, ptData] of Object.entries(ptbrData)) {
@@ -84,6 +86,13 @@ async function buildNameMapping() {
       SA1: enDataForKey.SA1,
       SA2: enDataForKey.SA2
     };
+
+    // Local variant names are sometimes manually revised and no longer match
+    // Krazete's PT-BR name. The signature ability is a stable secondary key.
+    const ptAbility = cleanName(ptData.ability).toLocaleLowerCase('pt-BR');
+    if (ptAbility) {
+      abilityMapping[ptAbility] = nameMapping[ptName];
+    }
   }
 
   return nameMapping;
@@ -154,12 +163,17 @@ export async function getLocalizedAbilityName(ptName, abilityNamePTBR) {
  * @param {string} ptName - Variant name in PT-BR
  * @returns {string} Localized name or fallback to ptName
  */
-export function getLocalizedNameSync(ptName) {
+export function getLocalizedNameSync(ptName, abilityNamePTBR = '') {
   const lang = getCurrentLanguage();
   if (lang === 'pt-BR') return ptName;
   if (!nameMapping) return ptName; // Fallback if not loaded yet
   const cleanPtName = cleanName(ptName);
-  return nameMapping[cleanPtName]?.name || ptName;
+  return nameMapping[cleanPtName]?.name || getTranslationByAbility(abilityNamePTBR)?.name || ptName;
+}
+
+function getTranslationByAbility(abilityNamePTBR) {
+  if (!abilityMapping || !abilityNamePTBR) return null;
+  return abilityMapping[cleanName(abilityNamePTBR).toLocaleLowerCase('pt-BR')] || null;
 }
 
 /**
@@ -173,7 +187,7 @@ export function getLocalizedAbilityNameSync(ptName, abilityNamePTBR) {
   if (lang === 'pt-BR') return abilityNamePTBR;
   if (!nameMapping) return abilityNamePTBR;
   const cleanPtName = cleanName(ptName);
-  return nameMapping[cleanPtName]?.ability || abilityNamePTBR;
+  return nameMapping[cleanPtName]?.ability || getTranslationByAbility(abilityNamePTBR)?.ability || abilityNamePTBR;
 }
 
 /**
@@ -182,12 +196,12 @@ export function getLocalizedAbilityNameSync(ptName, abilityNamePTBR) {
  * @param {string} saDescPTBR - SA description in PT-BR (fallback)
  * @returns {string} Localized SA description or fallback
  */
-export function getLocalizedSADescSync(ptName, saDescPTBR) {
+export function getLocalizedSADescSync(ptName, saDescPTBR, abilityNamePTBR = '') {
   const lang = getCurrentLanguage();
   if (lang === 'pt-BR') return saDescPTBR;
   if (!nameMapping) return saDescPTBR;
   const cleanPtName = cleanName(ptName);
-  const data = nameMapping[cleanPtName];
+  const data = nameMapping[cleanPtName] || getTranslationByAbility(abilityNamePTBR);
   if (!data || !data.SA1) return saDescPTBR;
   let desc = `[SA1]: ${data.SA1}`;
   if (data.SA2) desc += `\n\n[SA2]: ${data.SA2}`;
