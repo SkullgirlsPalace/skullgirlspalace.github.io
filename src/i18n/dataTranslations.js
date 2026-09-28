@@ -171,6 +171,16 @@ export function getLocalizedNameSync(ptName, abilityNamePTBR = '') {
   return nameMapping[cleanPtName]?.name || getTranslationByAbility(abilityNamePTBR)?.name || ptName;
 }
 
+/** Return the available translated name pair for a Palace variant name. */
+export function getVariantNamePairSync(ptName, abilityNamePTBR = '') {
+  const cleanPtName = cleanName(ptName);
+  const translation = nameMapping?.[cleanPtName] || getTranslationByAbility(abilityNamePTBR);
+  return {
+    ptBR: ptName || '',
+    en: translation?.name || ptName || ''
+  };
+}
+
 function getTranslationByAbility(abilityNamePTBR) {
   if (!abilityMapping || !abilityNamePTBR) return null;
   return abilityMapping[cleanName(abilityNamePTBR).toLocaleLowerCase('pt-BR')] || null;

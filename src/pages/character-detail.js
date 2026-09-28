@@ -5,7 +5,7 @@
 
 import { getCharacter, getCharacters } from '../services/dataService.js';
 import { getState, setCurrentCharacter, setCurrentTab, setFilters, setSort } from '../state/store.js';
-import { CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
+import { CHARACTER_COLORS, CHARACTER_TITLE_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getMasteryIcon } from '../utils/formatters.js';
 import { filterVariants, sortVariants } from '../utils/sorting.js';
 import { flattenVariants } from '../utils/variantUtils.js';
@@ -68,7 +68,7 @@ export function render(charKey, initialTab = 'builds') {
     const currentTab = state.currentTab || initialTab;
 
     return `
-        <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charKey] || 'var(--accent-gold)'}" data-current-tab="${currentTab}">
+        <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charKey] || 'var(--accent-gold)'}; --char-title-accent: ${CHARACTER_TITLE_COLORS[charKey] || 'var(--accent-gold)'}" data-current-tab="${currentTab}">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
@@ -133,7 +133,7 @@ function renderTodosPage(initialTab = 'builds') {
     const currentTab = state.currentTab || initialTab;
 
     return `
-        <section class="section character-detail" id="character-detail" style="--char-accent: var(--accent-gold)" data-current-tab="${currentTab}" data-todos-mode="true">
+        <section class="section character-detail" id="character-detail" style="--char-accent: var(--accent-gold); --char-title-accent: var(--accent-gold)" data-current-tab="${currentTab}" data-todos-mode="true">
             <!-- Header Content -->
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">

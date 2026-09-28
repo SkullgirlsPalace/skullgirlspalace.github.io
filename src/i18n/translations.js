@@ -16,7 +16,7 @@ export const translations = {
     // Home page
     home: {
       heroTitle: 'Skullgirls Palace',
-      heroSubtitle: 'Sua fonte completa de builds, calculadoras e estratégias para Skullgirls Mobile.',
+      heroSubtitle: 'Wiki de Skullgirls Mobile.',
       characters: 'PERSONAGENS',
       guide: 'GUIA',
       calculator: 'CALCULADORA',
@@ -846,12 +846,38 @@ export function getCurrentLanguage() {
   return currentLanguage;
 }
 
+/** Pick the secondary language used for variant search aliases. */
+export function getPreferredSecondaryLanguage() {
+  if (currentLanguage === 'pt-BR') return 'en';
+  if (currentLanguage !== 'en') return 'en';
+
+  const previousLanguage = localStorage.getItem('previousLanguage');
+  if (previousLanguage && previousLanguage !== currentLanguage && translations[previousLanguage]) {
+    return previousLanguage;
+  }
+
+  const detectedLanguages = navigator.languages?.length
+    ? navigator.languages
+    : [navigator.language];
+
+  for (const detectedLanguage of detectedLanguages) {
+    const normalizedLanguage = detectedLanguage?.toLowerCase();
+    if (normalizedLanguage?.startsWith('pt') && currentLanguage !== 'pt-BR') return 'pt-BR';
+    if (normalizedLanguage?.startsWith('en') && currentLanguage !== 'en') return 'en';
+  }
+
+  return 'pt-BR';
+}
+
 /**
  * Set language
  * @param {string} lang - Language code ('pt-BR' or 'en')
  */
 export function setLanguage(lang) {
   if (translations[lang]) {
+    if (currentLanguage !== lang) {
+      localStorage.setItem('previousLanguage', currentLanguage);
+    }
     currentLanguage = lang;
     localStorage.setItem('language', lang);
     document.documentElement.lang = lang;

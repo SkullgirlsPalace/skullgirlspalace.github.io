@@ -6,7 +6,7 @@
 // Core imports
 import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switchDetailTab } from './router.js';
 import { loadAllCharacters, loadTierData, loadExtrasData } from './services/dataService.js';
-import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer, handleToggleLanguageMenu, handleSelectLanguage } from './components/Navigation.js';
+import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleLanguageMenu, handleSelectLanguage } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
 import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleToggleCharDropdownMobile, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction, handleToggleAdvancedFilters, handleToggleAdvancedFiltersMobile, handleClearAdvancedFilters } from './components/FilterBar.js';
 import { handleCalculateEarnings } from './components/Calculator.js';
@@ -30,7 +30,6 @@ window.scrollToBottom = scrollToBottom;
 // Navigation handlers
 window.handleToggleAboutDrawer = handleToggleAboutDrawer;
 window.handleToggleMobileMenu = handleToggleMobileMenu;
-window.handleToggleDisclaimer = handleToggleDisclaimer;
 
 // Language handlers
 window.handleToggleLanguageMenu = handleToggleLanguageMenu;
@@ -293,7 +292,7 @@ function setupScrollListener() {
             // Floating search bar logic
             const searchBar = document.getElementById('search-bar-container');
             if (searchBar) {
-                if (scrollY > 150) {
+                if (scrollY > 150 || window.scrollX > 150) {
                     searchBar.classList.add('floating');
                 } else {
                     searchBar.classList.remove('floating');

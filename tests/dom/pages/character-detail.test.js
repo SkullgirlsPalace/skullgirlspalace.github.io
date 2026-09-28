@@ -21,6 +21,7 @@ vi.mock('../../../src/state/store.js', () => ({
 
 vi.mock('../../../src/config/constants.js', () => ({
   CHARACTER_COLORS: { filia: '#e91e63' },
+  CHARACTER_TITLE_COLORS: { filia: '#ee8cba' },
   CHARACTER_ICONS: { filia: 'img/official/Filia_Icon.webp' },
 }));
 

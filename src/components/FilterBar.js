@@ -9,9 +9,9 @@ import { getCharacters } from '../services/dataService.js';
 import { flattenVariants } from '../utils/variantUtils.js';
 import { getVariantClasses, getLocalizedClassName, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';
+import { ELEMENT_MAP, RARITY_ICONS, CHARACTER_NAMES_EN, elementToEN, elementToPT, getElementMap, getRarityLabels, getLocalizedElementName, getLocalizedRarityLabel } from '../config/constants.js';
 import { EFFECT_DATA } from '../data/effectData.js';
-import { t, getCurrentLanguage, getLocalizedNameSync } from '../i18n/index.js';
+import { t, getCurrentLanguage, getPreferredSecondaryLanguage, getLocalizedNameSync, getVariantNamePairSync } from '../i18n/index.js';
 
 // Debounce timer for search
 let searchDebounceTimer = null;
@@ -477,21 +477,50 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
  * Normalize text for search (remove accents, lowercase)
  */
 function normalizeText(text) {
-    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return String(text || '').toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function getElementSearchNames(element) {
+    const englishName = elementToEN(element);
+    const portugueseName = elementToPT(englishName);
+    return [element, englishName, portugueseName].filter(Boolean);
+}
+
+function getRaritySearchNames(rarityKey) {
+    const englishNames = { diamante: 'Diamond', ouro: 'Gold', prata: 'Silver', bronze: 'Bronze' };
+    return [rarityKey, getLocalizedRarityLabel(rarityKey), englishNames[rarityKey]].filter(Boolean);
 }
 
 /**
  * Highlight matching text with green color
  */
 function highlightMatch(text, query) {
-    if (!query || query.length < 2) return text;
+    if (!query) return text;
     const normalizedText = normalizeText(text);
     const normalizedQuery = normalizeText(query);
     const idx = normalizedText.indexOf(normalizedQuery);
     if (idx === -1) return text;
-    const before = text.substring(0, idx);
-    const match = text.substring(idx, idx + query.length);
-    const after = text.substring(idx + query.length);
+    // Find matching bounds against the original string so accent normalization
+    // cannot shift the highlighted character range.
+    let normalizedIndex = 0;
+    let start = -1;
+    let end = -1;
+    for (let i = 0; i < text.length;) {
+        const point = text.codePointAt(i);
+        const character = String.fromCodePoint(point);
+        const normalizedCharacter = normalizeText(character);
+        if (start === -1 && normalizedIndex === idx) start = i;
+        normalizedIndex += normalizedCharacter.length;
+        if (start !== -1 && normalizedIndex >= idx + normalizedQuery.length) {
+            end = i + character.length;
+            break;
+        }
+        i += character.length;
+    }
+    if (start === -1 || end === -1) return text;
+    const before = text.substring(0, start);
+    const match = text.substring(start, end);
+    const after = text.substring(end);
     return `${before}<span class="search-match-highlight">${match}</span>${after}`;
 }
 
@@ -502,7 +531,7 @@ export function handleSearchInput(query) {
     clearTimeout(searchDebounceTimer);
     searchDebounceTimer = setTimeout(() => {
         performSearch(query);
-    }, 150);
+    }, 60);
 }
 
 /**
@@ -512,7 +541,7 @@ function performSearch(query) {
     const resultsContainer = document.getElementById('search-results-dropdown');
     const clearBtn = document.getElementById('search-clear-btn');
 
-    if (!query || query.trim().length < 2) {
+    if (!query || query.trim().length < 1) {
         if (resultsContainer) {
             resultsContainer.innerHTML = '';
             resultsContainer.classList.remove('active');
@@ -534,35 +563,44 @@ function performSearch(query) {
     for (const [charKey, charData] of Object.entries(characters)) {
         const variants = flattenVariants(charData.variants);
         for (const variant of variants) {
+            const names = getVariantNamePairSync(variant.name, variant.signature_ability?.name);
             const localizedName = getLocalizedNameSync(variant.name, variant.signature_ability?.name);
-            const localizedCharName = getLocalizedNameSync(charData.character);
-            const normalizedName = normalizeText(variant.name);
-            const normalizedLocalizedName = normalizeText(localizedName);
-            const normalizedChar = normalizeText(charData.character);
-            const normalizedLocalizedChar = normalizeText(localizedCharName);
+            const enCharName = CHARACTER_NAMES_EN[charKey] || charData.character;
+            const localizedCharName = getCurrentLanguage() === 'en' ? enCharName : charData.character;
+            const elementNames = getElementSearchNames(variant.element);
+            const rarityNames = getRaritySearchNames(variant.rarityKey);
+            const searchableNames = [names.ptBR, names.en, charData.character, enCharName, ...elementNames, ...rarityNames];
+            const matchingName = searchableNames.find(name => normalizeText(name).includes(normalizedQuery));
 
-            // Search by variant name or character name
-            if (normalizedName.includes(normalizedQuery) || normalizedLocalizedName.includes(normalizedQuery) ||
-                normalizedChar.includes(normalizedQuery) || normalizedLocalizedChar.includes(normalizedQuery)) {
+            if (matchingName) {
+                const variantNames = [names.ptBR, names.en].map(normalizeText);
+                const characterNames = [charData.character, enCharName].map(normalizeText);
+                const rank = variantNames.some(name => name.startsWith(normalizedQuery)) ? 0 :
+                    variantNames.some(name => name.includes(normalizedQuery)) ? 1 :
+                    characterNames.some(name => name.startsWith(normalizedQuery)) ? 2 :
+                    characterNames.some(name => name.includes(normalizedQuery)) ? 3 : 4;
                 results.push({
                     ...variant,
                     _charKey: charKey,
                     _charName: localizedCharName,
-                    _localizedName: localizedName
+                    _localizedName: localizedName,
+                    _alternateName: getPreferredSecondaryLanguage() === 'pt-BR' ? names.ptBR : names.en,
+                    _searchRank: rank
                 });
             }
         }
     }
 
-    // If results found, update last valid; if not, show last valid results
+    results.sort((a, b) => a._searchRank - b._searchRank);
+
+    // Clear stale suggestions when the current query has no matches.
     if (results.length > 0) {
         lastValidResults = results.slice(0, 15);
         lastValidQuery = query.trim();
         renderSearchResults(lastValidResults, resultsContainer, query.trim());
-    } else if (lastValidResults.length > 0) {
-        // Keep showing last valid results when current query has no matches
-        renderSearchResults(lastValidResults, resultsContainer, lastValidQuery);
     } else {
+        lastValidResults = [];
+        lastValidQuery = '';
         renderSearchResults([], resultsContainer, query.trim());
     }
 }
@@ -576,7 +614,7 @@ function renderSearchResults(results, container, query = '') {
     if (results.length === 0) {
         container.innerHTML = `
             <div class="search-no-results">
-                <span>Nenhuma variante encontrada</span>
+                <span>${getCurrentLanguage() === 'en' ? 'No variants found' : 'Nenhuma variante encontrada'}</span>
             </div>
         `;
         container.classList.add('active');
@@ -585,6 +623,7 @@ function renderSearchResults(results, container, query = '') {
 
     container.innerHTML = results.map(variant => {
         const elementInfo = ELEMENT_MAP[variant.element] || {};
+        const localizedElement = getLocalizedElementName(variant.element);
         const rarityIcon = RARITY_ICONS[variant.rarityKey] || '';
         const portraitUrl = getVariantImage(variant._charKey, variant.name, 0);
         const displayName = variant._localizedName || getLocalizedNameSync(variant.name, variant.signature_ability?.name);
@@ -597,10 +636,11 @@ function renderSearchResults(results, container, query = '') {
                 <div class="search-result-info">
                     <span class="search-result-name">${highlightedName}</span>
                     <span class="search-result-char">${variant._charName}</span>
+                    ${variant._alternateName && normalizeText(variant._alternateName) !== normalizeText(displayName) ? `<span class="search-result-alias">${variant._alternateName}</span>` : ''}
                 </div>
                 <div class="search-result-badges">
-                    ${elementInfo.iconPath ? `<img loading="lazy" src="${elementInfo.iconPath}" alt="${variant.element}" class="search-result-element">` : ''}
-                    ${rarityIcon ? `<img loading="lazy" src="${rarityIcon}" alt="${variant.rarityKey}" class="search-result-rarity">` : ''}
+                    ${elementInfo.iconPath ? `<span class="search-result-badge"><img loading="lazy" src="${elementInfo.iconPath}" alt="" class="search-result-element"><span>${localizedElement}</span></span>` : ''}
+                    ${rarityIcon ? `<span class="search-result-badge"><img loading="lazy" src="${rarityIcon}" alt="" class="search-result-rarity"><span>${getLocalizedRarityLabel(variant.rarityKey)}</span></span>` : ''}
                 </div>
             </button>
         `;
@@ -673,7 +713,7 @@ export function handleSearchClear() {
  */
 export function handleSearchFocus() {
     const input = document.getElementById('variant-search-input');
-    if (input && input.value.trim().length >= 2) {
+    if (input && input.value.trim().length >= 1) {
         performSearch(input.value);
     }
 }

@@ -214,8 +214,30 @@
     text-decoration-color: currentColor;
 }
 
-.about-disclaimer {
-    margin-top: 14px;
+.about-legal-note {
+    width: 100%;
+    max-width: 100%;
+    margin: 14px 0 0;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    border: 1px solid rgba(212, 168, 75, 0.16);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.025);
+    overflow-wrap: anywhere;
+}
+
+.about-legal-note p {
+    margin: 0 0 7px;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.about-legal-note p:last-child {
+    margin-bottom: 0;
+}
+
+.about-legal-note strong {
+    color: var(--accent-gold);
 }
 
 .about-support {

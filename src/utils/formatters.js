@@ -100,6 +100,19 @@ export function formatText(text, variantName = null) {
     return workingText;
 }
 
+/**
+ * Reduce three-rank game ability progressions to the final displayed value.
+ * Examples: 10/12/15 seconds -> 15 seconds; 20%/15%/10% -> 10%.
+ */
+export function normalizeAbilityProgressions(text) {
+    if (Array.isArray(text)) text = text.join('\n');
+    if (typeof text !== 'string') text = String(text ?? '');
+
+    const value = String.raw`\d+(?:[.,]\d+)?(?:\s*(?:%|seconds?|second\(s\)|segundos?(?:\(s\))?|s|stacks?(?:\(s\))?|acúmulos?(?:\(s\))?|acumulos?(?:\(s\))?|camadas?))?`;
+    const progression = new RegExp(`${value}(?:\\s*\\/\\s*${value}){2,}`, 'gi');
+    return text.replace(progression, (sequence) => sequence.split('/').at(-1).trim());
+}
+
 import { getMoveData } from '../data/movesimages.js';
 
 /**

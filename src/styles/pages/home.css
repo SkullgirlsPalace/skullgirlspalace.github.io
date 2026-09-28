@@ -43,8 +43,14 @@
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.25rem;
     color: var(--text-secondary);
-    max-width: 500px;
+    width: min(100%, 640px);
+    max-width: 640px;
+    padding: 0 16px;
     margin: 0 auto;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .hub-menu {

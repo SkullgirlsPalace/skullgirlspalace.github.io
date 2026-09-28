@@ -1,6 +1,6 @@
 import { getElementMap, getRarityLabels, getLocalizedRarityLabel, getLocalizedElementName, RARITY_ICONS, CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
+import { formatText, formatArsenal, formatBuildText, normalizeAbilityProgressions } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
 import { getLocalizedClassName, getLocalizedVariantClasses, getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
@@ -37,7 +37,7 @@ export function createVariantCard(variant, charKey, index = 0) {
   // Format ability description
   const rawSADesc = variant.signature_ability?.description || t('variant.noDescription');
  const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc, variant.signature_ability?.name);
- const abilityDesc = formatText(localizedSADesc, variant.name);
+ const abilityDesc = formatText(normalizeAbilityProgressions(localizedSADesc), variant.name);
 
   // Format arsenal with images
   const arsenalHTML = formatArsenal(variant.recommended_arsenal || '', charKey);

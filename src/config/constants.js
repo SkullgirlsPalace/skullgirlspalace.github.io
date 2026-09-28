@@ -43,6 +43,16 @@ export const CHARACTER_COLORS = {
  'squigly': '#800080', 'umbrella': '#ffff00', 'valentine': '#FFFFFF'
 };
 
+// Balanced title colors keep each character recognizable and readable alike.
+export const CHARACTER_TITLE_COLORS = {
+ 'annie': '#62D6CF', 'beowulf': '#C9C9C9', 'big-band': '#C4C46F',
+ 'black-dahlia': '#D07BCF', 'cerebella': '#FF9468', 'double': '#9696EF',
+ 'eliza': '#FFE168', 'filia': '#E0E0E0', 'fukua': '#68C768',
+ 'marie': '#BEBEBE', 'ms-fortune': '#5EBFFA', 'painwheel': '#D6D64F',
+ 'parasoul': '#FF7777', 'peacock': '#F76D6D', 'robo-fortune': '#58CFC8',
+ 'squigly': '#C483EA', 'umbrella': '#E7E75D', 'valentine': '#F2F2F2'
+};
+
 // ── Element Maps (PT-BR and EN) ─────────────────────────
 const ELEMENT_MAP_PT = {
  'Fogo': { class: 'fire', icon: '\u{1F525}', key: 'fogo', iconPath: 'img/official/ElementalFireBackless.webp', statIcon: 'img/official/ElementalIconFire.webp' },

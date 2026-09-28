@@ -96,12 +96,9 @@ export function createAboutDrawer() {
       <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
       <p>${t('about.assetsNote')}</p>
 
-      <div class="disclaimer-tooltip about-disclaimer">
-        <button class="disclaimer-btn" onclick="handleToggleDisclaimer()" title="${t('about.disclaimerBtn')}">⚠️</button>
-        <div class="disclaimer-content" id="disclaimer-content">
-          <p><strong>${t('about.disclaimerTitle')}</strong> ${t('about.disclaimerText1')}</p>
-          <p>${t('about.disclaimerText2')}</p>
-        </div>
+      <div class="about-legal-note">
+        <p><strong>${t('about.disclaimerTitle')}</strong> ${t('about.disclaimerText1')}</p>
+        <p>${t('about.disclaimerText2')}</p>
       </div>
       <div class="about-support">
         <p>${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" rel="noopener noreferrer">LivePix</a></p>
@@ -170,7 +167,6 @@ export function scrollToBottom() {
 }
 
 // Global handlers
-let disclaimerTimer = null;
 
 export function handleToggleAboutDrawer() {
   const drawer = document.getElementById('about-drawer');
@@ -197,22 +193,6 @@ export function handleToggleMobileMenu() {
     navLinks.classList.toggle('active');
     overlay.classList.toggle('active');
     document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-  }
-}
-
-export function handleToggleDisclaimer() {
-  const content = document.getElementById('disclaimer-content');
-  if (!content) return;
-
-  content.classList.toggle('active');
-
-  if (content.classList.contains('active')) {
-    clearTimeout(disclaimerTimer);
-    disclaimerTimer = setTimeout(() => {
-      content.classList.remove('active');
-    }, 7000);
-  } else {
-    clearTimeout(disclaimerTimer);
   }
 }
 
