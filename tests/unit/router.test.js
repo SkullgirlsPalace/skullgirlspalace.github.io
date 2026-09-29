@@ -128,9 +128,14 @@ describe('router.js', () => {
 
         it('should render home page when no hash', async () => {
             const home = await import('../../src/pages/home.js');
+            home.render.mockReturnValue('<section><h1>Skullgirls Palace</h1></section>');
+            appContainer.innerHTML = '<h1 id="initial-home-h1">Skullgirls Palace</h1>';
             window.location.hash = '';
             initRouter();
             expect(home.render).toHaveBeenCalled();
+            expect(appContainer.querySelector('#initial-home-h1')).toBeNull();
+            expect(appContainer.querySelectorAll('h1')).toHaveLength(1);
+            expect(appContainer.querySelector('h1').textContent).toBe('Skullgirls Palace');
         });
 
         it('opens the existing character interface from a clean tier-list path', async () => {

@@ -4,6 +4,12 @@ import path from 'node:path';
 import { collectSeoEntries, SITE_ORIGIN } from '../../../tools/generate-seo-entry-pages.js';
 
 describe('SEO entry shell generator', () => {
+    it('includes a real home H1 in the initial app shell', () => {
+        const shell = fs.readFileSync(path.resolve('index.html'), 'utf8');
+        expect(shell).toMatch(/<main id="app">\s*<h1 id="initial-home-h1">Skullgirls Palace<\/h1>/);
+        expect(shell).not.toMatch(/<noscript>\s*<h1>/);
+    });
+
     it('generates only all-variants and character-level section URLs', () => {
         const entries = collectSeoEntries();
         const urls = entries.map(entry => entry.url);
