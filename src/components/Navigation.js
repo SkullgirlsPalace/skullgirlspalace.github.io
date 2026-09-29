@@ -67,7 +67,7 @@ export function createAboutDrawer() {
   </div>
   <div class="drawer-content">
     <div class="hero">
-      <h1>${t('about.heroTitle')}</h1>
+      <h2>${t('about.heroTitle')}</h2>
       <p>${t('about.heroSubtitle')}</p>
       <div class="hero-buttons">
         <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">

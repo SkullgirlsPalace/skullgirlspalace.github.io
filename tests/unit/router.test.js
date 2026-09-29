@@ -66,6 +66,8 @@ describe('router.js', () => {
         appContainer = document.getElementById('app');
 
         // Reset location hash
+        window.location.pathname = '/';
+        window.history.replaceState(null, '', '/');
         window.location.hash = '';
 
         // Clear any existing hashchange listeners
@@ -97,6 +99,16 @@ describe('router.js', () => {
             navigateTo('');
             expect(window.location.hash).toBe('');
         });
+
+        it('returns from a clean character path to the regular all-variants hash route', () => {
+            window.location.pathname = '/characters/annie/builds/';
+            const pushStateSpy = vi.spyOn(window.history, 'pushState');
+
+            navigateTo('character', 'todos', 'builds');
+
+            expect(pushStateSpy).toHaveBeenCalledWith(null, '', '/');
+            expect(window.location.hash).toBe('character/todos/builds');
+        });
     });
 
     describe('getCurrentRoute', () => {
@@ -120,24 +132,41 @@ describe('router.js', () => {
             initRouter();
             expect(home.render).toHaveBeenCalled();
         });
+
+        it('opens the existing character interface from a clean tier-list path', async () => {
+            const characterDetail = await import('../../src/pages/character-detail.js');
+            window.location.pathname = '/characters/annie/tier-list/';
+            initRouter();
+            expect(characterDetail.render).toHaveBeenCalledWith('annie', 'tier');
+        });
+
+        it('still resolves the existing hash route', async () => {
+            const characterDetail = await import('../../src/pages/character-detail.js');
+            window.location.hash = '#character/annie/builds';
+            initRouter();
+            expect(characterDetail.render).toHaveBeenCalledWith('annie', 'builds');
+        });
     });
 
     describe('openCharacterDetails', () => {
         it('should navigate to character page with default tab', () => {
+            const pushStateSpy = vi.spyOn(window.history, 'pushState');
             openCharacterDetails('filia');
-            expect(window.location.hash).toBe('character/filia/builds');
+            expect(pushStateSpy).toHaveBeenCalledWith(null, '', '/characters/filia/builds/');
         });
 
         it('should navigate to character page with specified tab', () => {
+            const pushStateSpy = vi.spyOn(window.history, 'pushState');
             openCharacterDetails('filia', 'tier');
-            expect(window.location.hash).toBe('character/filia/tier');
+            expect(pushStateSpy).toHaveBeenCalledWith(null, '', '/characters/filia/tier-list/');
         });
     });
 
     describe('openCharacterTier', () => {
         it('should navigate to character tier tab', () => {
+            const pushStateSpy = vi.spyOn(window.history, 'pushState');
             openCharacterTier('peacock');
-            expect(window.location.hash).toBe('character/peacock/tier');
+            expect(pushStateSpy).toHaveBeenCalledWith(null, '', '/characters/peacock/tier-list/');
         });
     });
 
