@@ -46,6 +46,7 @@ export function createNavbar() {
       <li><a href="#">${t('nav.home')}</a></li>
       <li><a href="#characters">${t('nav.characters')}</a></li>
       <li><a href="#guide">${t('nav.guide')}</a></li>
+      <li><a href="#time-converter">${t('nav.timeConverter')}</a></li>
       <li><a href="#stats">${t('nav.calculator')}</a></li>
     </ul>
   </div>

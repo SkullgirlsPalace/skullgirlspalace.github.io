@@ -1,0 +1,101 @@
+.time-converter-section {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.time-converter-card {
+    padding: clamp(18px, 4vw, 32px);
+    background: var(--bg-card);
+    border: var(--border-accent);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.time-converter-card label,
+.time-zone-label {
+    display: block;
+    margin: 0 0 8px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.time-zone-select,
+.event-time-form input {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    margin: 0 0 20px;
+    padding: 10px 12px;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border: var(--border-subtle);
+    border-radius: var(--border-radius-sm);
+    font: inherit;
+}
+
+.event-time-form .btn-primary {
+    width: 100%;
+    min-height: 46px;
+}
+
+.event-time-result {
+    display: grid;
+    gap: 12px;
+    margin-top: 26px;
+    padding-top: 22px;
+    border-top: var(--border-subtle);
+}
+
+.event-time-result[hidden],
+.time-converter-error[hidden] {
+    display: none;
+}
+
+.event-time-result > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px 16px;
+}
+
+.event-time-result span {
+    color: var(--text-secondary);
+}
+
+.event-time-result strong {
+    color: var(--text-primary);
+    text-align: right;
+}
+
+.event-countdown-row strong {
+    color: var(--accent-gold-light);
+    font-variant-numeric: tabular-nums;
+    font-size: clamp(1.05rem, 4vw, 1.45rem);
+}
+
+.event-countdown-row strong.event-countdown-near {
+    color: var(--accent-gold-light);
+    text-shadow: var(--shadow-glow);
+}
+
+.time-converter-error {
+    margin: 12px 0 0;
+    color: #ff9c9c;
+}
+
+@media (max-width: 520px) {
+    .time-converter-card {
+        padding: 18px 14px;
+    }
+
+    .event-time-result > div {
+        display: grid;
+        gap: 4px;
+    }
+
+    .event-time-result strong {
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+}

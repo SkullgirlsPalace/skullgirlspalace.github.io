@@ -10,6 +10,7 @@ import * as catalysts from './pages/catalysts.js';
 import * as tierlist from './pages/tierlist.js';
 import * as statistics from './pages/statistics.js';
 import * as guide from './pages/guide.js';
+import * as timeConverter from './pages/time-converter.js';
 import { updateNavbarVisibility, updateActiveNavLink } from './components/Navigation.js';
 import { setCurrentSection } from './state/store.js';
 import { t } from './i18n/index.js';
@@ -22,7 +23,8 @@ const routes = {
     'catalysts': catalysts,
     'tierlist': tierlist,
     'stats': statistics,
-    'guide': guide
+    'guide': guide,
+    'time-converter': timeConverter
 };
 
 // Current route state

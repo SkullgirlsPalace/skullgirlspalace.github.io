@@ -10,6 +10,7 @@ export const translations = {
       home: 'Início',
       characters: 'Personagens',
       guide: 'Guia',
+      timeConverter: 'Fuso horário',
       calculator: 'Calculadora',
       about: 'Sobre'
     },
@@ -99,6 +100,11 @@ export const translations = {
     errorCatalysts: 'Erro ao carregar catalisadores.',
     riftCatalysts: 'Catalisadores da Fenda',
     catalystsLoaded: 'Catalisadores Carregados'
+  },
+  timeConverter: {
+    title: 'Conversor de Fuso Horário', yourZone: 'Seu fuso', announcement: 'Horário do anúncio',
+    date: 'Data do anúncio', convert: 'Converter horário', original: 'Horário original',
+    local: 'Horário no fuso selecionado', utc: 'Horário em UTC', countdown: 'Tempo restante'
   },
   element: {
     fire: 'Fogo',
@@ -425,6 +431,7 @@ export const translations = {
       home: 'Home',
       characters: 'Characters',
       guide: 'Guide',
+      timeConverter: 'Time zone',
       calculator: 'Calculator',
       about: 'about'
     },
@@ -514,6 +521,11 @@ export const translations = {
     errorCatalysts: 'Error loading catalysts.',
     riftCatalysts: 'Rift Catalysts',
     catalystsLoaded: 'Catalysts Loaded',
+  },
+  timeConverter: {
+    title: 'Time Zone Converter', yourZone: 'Your time zone', announcement: 'Announcement time',
+    date: 'Announcement date', convert: 'Convert time', original: 'Original announcement',
+    local: 'Selected time zone', utc: 'Time in UTC', countdown: 'Time remaining'
   },
   element: {
     fire: 'Fire',
