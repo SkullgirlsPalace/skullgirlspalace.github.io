@@ -38,6 +38,7 @@ function renderEntryShell(template, { url, title, description, h1 }) {
     const safeTitle = escapeHtml(title);
     const safeDescription = escapeHtml(description);
     const safeH1 = escapeHtml(h1);
+    const lineEnding = template.includes('\r\n') ? '\r\n' : '\n';
     let html = template;
 
     html = setOnce(html, /<title>[\s\S]*?<\/title>/i, `<title>${safeTitle}</title>`, 'title');
@@ -48,8 +49,9 @@ function renderEntryShell(template, { url, title, description, h1 }) {
     html = setOnce(html, /<meta property="og:url" content="[^"]*">/i, `<meta property="og:url" content="${canonical}">`, 'Open Graph URL');
     html = setOnce(html, /<meta name="twitter:title" content="[^"]*">/i, `<meta name="twitter:title" content="${safeTitle}">`, 'Twitter title');
     html = setOnce(html, /<meta name="twitter:description" content="[^"]*">/i, `<meta name="twitter:description" content="${safeDescription}">`, 'Twitter description');
-    html = setOnce(html, /(<noscript>\s*<h1>)[\s\S]*?(<\/h1>)/i, `$1${safeH1}$2`, 'no-script H1');
-    return `${GENERATED_MARKER}\n${html}`;
+    html = html.replace(/<h1 id="initial-home-h1">[\s\S]*?<\/h1>\s*/i, '');
+    html = setOnce(html, /(<noscript>)\s*(<p)/i, `$1${lineEnding}  <h1>${safeH1}</h1>${lineEnding}  $2`, 'no-script H1');
+    return `${GENERATED_MARKER}${lineEnding}${html}`;
 }
 
 function buildEntries(rootDir) {
@@ -94,11 +96,11 @@ export function collectSeoEntries({ rootDir = ROOT_DIR } = {}) {
     }));
 }
 
-function writeSitemap(entries, sitemapPath) {
+function writeSitemap(entries, sitemapPath, lineEnding) {
     const urls = ['/', ...entries.map(entry => entry.url)];
-    const entriesXml = urls.map(url => `  <url><loc>${SITE_ORIGIN}${url}</loc></url>`).join('\n');
+    const entriesXml = urls.map(url => `  <url><loc>${SITE_ORIGIN}${url}</loc></url>`).join(lineEnding);
     fs.writeFileSync(sitemapPath,
-        `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entriesXml}\n</urlset>\n`,
+        `<?xml version="1.0" encoding="UTF-8"?>${lineEnding}<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${lineEnding}${entriesXml}${lineEnding}</urlset>${lineEnding}`,
         'utf8'
     );
 }
@@ -118,13 +120,15 @@ function removeGeneratedEntries(directory) {
 
 export function generateSeoEntries({ rootDir = ROOT_DIR } = {}) {
     const entries = collectSeoEntries({ rootDir });
+    const shell = fs.readFileSync(path.join(rootDir, 'index.html'), 'utf8');
+    const lineEnding = shell.includes('\r\n') ? '\r\n' : '\n';
     removeGeneratedEntries(path.join(rootDir, 'characters'));
     for (const entry of entries) {
         const target = path.join(rootDir, entry.relativePath);
         fs.mkdirSync(path.dirname(target), { recursive: true });
         fs.writeFileSync(target, entry.html, 'utf8');
     }
-    writeSitemap(entries, path.join(rootDir, 'sitemap.xml'));
+    writeSitemap(entries, path.join(rootDir, 'sitemap.xml'), lineEnding);
     return { characters: readCharacters(path.join(rootDir, 'data')).length, entries: entries.length };
 }
 
