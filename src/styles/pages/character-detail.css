@@ -63,7 +63,7 @@
     flex-shrink: 0;
 }
 
-.char-title-row h2 {
+.char-title-row h1 {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--accent-gold);
     font-size: 2.8rem;
@@ -239,7 +239,7 @@
         margin-bottom: 10px;
     }
 
-    .char-title-row h2,
+    .char-title-row h1,
     .char-title-centered h2 {
         font-size: 2.2rem; /* Increased size */
         white-space: normal;

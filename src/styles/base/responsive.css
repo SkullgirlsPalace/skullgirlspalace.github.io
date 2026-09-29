@@ -204,7 +204,7 @@
         font-size: 1.6rem;
     }
 
-    .char-title-row h2 {
+    .char-title-row h1 {
         font-size: 1.6rem;
     }
 
@@ -802,7 +802,7 @@
         justify-content: flex-end;
     }
 
-    .char-title-row h2 {
+    .char-title-row h1 {
         font-size: 1.1rem !important;
         white-space: nowrap;
     }
