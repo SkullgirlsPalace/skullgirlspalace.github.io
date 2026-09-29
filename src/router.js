@@ -23,8 +23,11 @@ const routes = {
     'catalysts': catalysts,
     'tierlist': tierlist,
     'stats': statistics,
-    'guide': guide,
-    'time-converter': timeConverter
+    'guide': { render: () => timeConverter.renderEvents(), init: timeConverter.init },
+    'game-info': { render: () => guide.renderGameInfo(), init: guide.init },
+    'wiki': guide,
+    'events': { render: () => timeConverter.renderEvents(), init: timeConverter.init },
+    'time-converter': { render: () => timeConverter.renderConverter(), init: timeConverter.init }
 };
 
 // Current route state

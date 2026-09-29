@@ -98,6 +98,7 @@
     transition: all var(--transition-fast);
 }
 
+
 .nav-links li a:hover,
 .nav-links li a.active {
     color: var(--accent-gold);

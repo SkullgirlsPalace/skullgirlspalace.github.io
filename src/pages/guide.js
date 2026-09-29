@@ -13,6 +13,26 @@ export function render() {
   return `
   <div class="guide-container fade-in">
 
+    <header class="guide-header"><h1>${t('nav.guide')}</h1><p>${t('guide.wikiIntro')}</p></header>
+    <nav class="guide-tabs" aria-label="${t('guide.wikiSections')}">
+      <button class="guide-tab-btn active" aria-current="page">${t('nav.events')}</button>
+      <button class="guide-tab-btn" onclick="navigateTo('game-info')">${t('nav.gameInfo')}</button>
+      <button class="guide-tab-btn" onclick="navigateTo('time-converter')">${t('nav.timeConverter')}</button>
+    </nav>
+    <div class="guide-content"><div class="guide-modifier-library"><header class="guide-modifier-heading"><h2>${t('nav.guide')}</h2><p>${t('guide.wikiPlaceholder')}</p></header></div></div>
+  </div>`;
+}
+
+export function renderGameInfo() {
+  return `
+  <div class="guide-container fade-in">
+    <header class="guide-header"><h1>${t('nav.guide')}</h1><p>${t('guide.infoIntro')}</p></header>
+    <nav class="guide-tabs">
+      <button class="guide-tab-btn" onclick="navigateTo('events')">${t('nav.events')}</button>
+      <button class="guide-tab-btn active" aria-current="page">${t('nav.gameInfo')}</button>
+      <button class="guide-tab-btn" onclick="navigateTo('time-converter')">${t('nav.timeConverter')}</button>
+    </nav>
+
     <div class="guide-tabs">
       <button class="guide-tab-btn active" onclick="switchGuideTab('statistics')">
         <img loading="lazy" src="img/official/AttackIcon.webp" alt="${t('guide.statistics')}" class="tab-icon">
@@ -139,8 +159,7 @@ export function render() {
       </section>
     </div>
     </div>
-  </div>
-  `;
+  </div>`;
 }
 
 export function init() {

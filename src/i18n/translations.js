@@ -9,7 +9,9 @@ export const translations = {
     nav: {
       home: 'Início',
       characters: 'Personagens',
-      guide: 'Guia',
+      guide: 'Wiki',
+      gameInfo: 'Informações de Jogo',
+      events: 'Eventos',
       timeConverter: 'Fuso horário',
       calculator: 'Calculadora',
       about: 'Sobre'
@@ -19,7 +21,9 @@ export const translations = {
       heroTitle: 'Skullgirls Palace',
       heroSubtitle: 'Wiki de Skullgirls Mobile',
       characters: 'PERSONAGENS',
-      guide: 'GUIA',
+      guide: 'WIKI',
+      gameInfo: 'INFORMAÇÕES DE JOGO',
+      events: 'EVENTOS',
       calculator: 'CALCULADORA',
       hub: 'SKULLGIRLS MOBILE HUB',
       about: 'SOBRE'
@@ -57,6 +61,7 @@ export const translations = {
     },
     // Guide page
   guide: {
+    wikiTab: 'Wiki', wikiIntro: 'Guias e referências de Skullgirls Mobile.', wikiPlaceholder: 'Guias e referências serão organizados nesta página.', wikiSections: 'Seções da Wiki', infoIntro: 'Estatísticas, modificadores e catalisadores do jogo.', timeZoneIntro: 'Converta o horário anunciado pela Autumn Games para seu fuso horário.',
     title: 'Guia',
     tutorials: 'Tutoriais',
     statistics: 'Estatísticas',
@@ -102,10 +107,12 @@ export const translations = {
     catalystsLoaded: 'Catalisadores Carregados'
   },
   timeConverter: {
-    title: 'Conversor de Fuso Horário', yourZone: 'Seu fuso', announcement: 'Horário do anúncio',
-    date: 'Data do anúncio', convert: 'Converter horário', original: 'Horário original',
-    local: 'Horário no fuso selecionado', utc: 'Horário em UTC', countdown: 'Tempo restante'
+    title: 'Conversor de Fuso Horário', yourZone: 'Seu fuso horário', announcement: 'Fuso do anúncio da Autumn Games',
+    date: 'Data e hora do evento', convert: 'Converter horário', original: 'Horário original',
+    local: 'Horário no fuso selecionado', utc: 'Horário em UTC', countdown: 'Tempo restante',
+    moreZones: 'Escolher outro fuso horário', extraZone: 'Fusos horários disponíveis', searchZones: 'Buscar cidade ou fuso horário', invalidDate: 'Selecione uma data e hora válidas.'
   },
+  eventsPage: { intro: 'Disputas, passe de batalha e eventos de Skullgirls Mobile.', categories: 'Categorias de eventos', monthly: 'Eventos Mensais', dailyEvents: 'Eventos Diários', weeklyEvents: 'Eventos Semanais', loginEvents: 'Logins Diários', start: 'Início', previous: 'Eventos anteriores', next: 'Próximos eventos', days: 'D', hours: 'H', minutes: 'min', seconds: 'seg', timeUnknown: 'Horário de reinício a confirmar', openReward: 'Resgatar recompensa diária', imagePlaceholder: 'Imagem do evento' },
   element: {
     fire: 'Fogo',
     water: 'Água',
@@ -430,7 +437,9 @@ export const translations = {
     nav: {
       home: 'Home',
       characters: 'Characters',
-      guide: 'Guide',
+      guide: 'Wiki',
+      gameInfo: 'Game Info',
+      events: 'Events',
       timeConverter: 'Time zone',
       calculator: 'Calculator',
       about: 'about'
@@ -440,7 +449,9 @@ export const translations = {
       heroTitle: 'Skullgirls Palace',
       heroSubtitle: 'Your complete source for builds, calculators, and strategies for Skullgirls Mobile.',
       characters: 'CHARACTERS',
-      guide: 'GUIDE',
+      guide: 'WIKI',
+      gameInfo: 'GAME INFO',
+      events: 'EVENTS',
       calculator: 'CALCULATOR',
       hub: 'SKULLGIRLS MOBILE HUB',
       about: 'ABOUT'
@@ -478,6 +489,7 @@ export const translations = {
     },
   // Guide page
   guide: {
+    wikiTab: 'Wiki', wikiIntro: 'Skullgirls Mobile guides and references.', wikiPlaceholder: 'Guides and references will be organized on this page.', wikiSections: 'Wiki sections', infoIntro: 'Game statistics, modifiers, and catalysts.', timeZoneIntro: 'Convert the time announced by Autumn Games to your time zone.',
     title: 'Guide',
     tutorials: 'Tutorials',
     statistics: 'Statistics',
@@ -523,10 +535,15 @@ export const translations = {
     catalystsLoaded: 'Catalysts Loaded',
   },
   timeConverter: {
-    title: 'Time Zone Converter', yourZone: 'Your time zone', announcement: 'Announcement time',
-    date: 'Announcement date', convert: 'Convert time', original: 'Original announcement',
-    local: 'Selected time zone', utc: 'Time in UTC', countdown: 'Time remaining'
+    title: 'Time Zone Converter', yourZone: 'Your time zone', announcement: 'Autumn Games announcement time zone',
+    date: 'Event date and time', convert: 'Convert time', original: 'Original time',
+    local: 'Time in selected zone', utc: 'Time in UTC', countdown: 'Time remaining',
+    moreZones: 'Choose another time zone', extraZone: 'Available time zones', searchZones: 'Search city or time zone', invalidDate: 'Choose a valid date and time.'
   },
+  guide: {
+    title: 'Guide', wikiIntro: 'Skullgirls Mobile guides and references.', wikiPlaceholder: 'Guides and references will be organized on this page.', infoIntro: 'Game statistics, modifiers, and catalysts.',
+  },
+  eventsPage: { intro: 'Prize fights, battle pass, and Skullgirls Mobile events.', categories: 'Event categories', monthly: 'Monthly Prize Fights', dailyEvents: 'Daily Events', weeklyEvents: 'Weekly Events', loginEvents: 'Daily Logins', start: 'Start', previous: 'Previous events', next: 'Next events', days: 'D', hours: 'H', minutes: 'min', seconds: 'sec', timeUnknown: 'Reset time to be confirmed', openReward: 'Claim daily reward', imagePlaceholder: 'Event image' },
   element: {
     fire: 'Fire',
     water: 'Water',
