@@ -1,6 +1,12 @@
 # Skullgirls Palace
 Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso
 
+## URLs indexáveis
+
+O Palace continua usando a SPA e suas hash routes. As entradas em `characters/` são cópias do shell de `index.html`, com metadados próprios; o router interpreta o caminho para abrir “Todas as Variantes” ou a interface existente de um personagem em Builds/Tier List. Variantes não recebem URLs próprias.
+
+O GitHub Pages publica a raiz sem regras de reescrita, então cada URL de diretório precisa de um `index.html` para responder diretamente. Depois de adicionar um personagem, execute `npm run generate:seo` para atualizar as entradas e o `sitemap.xml`. Não edite os shells gerados manualmente.
+
 ## Arquitetura de Estilos (CSS)
 
 Refatoramos o antigo arquivo monolítico (`main.css`) em uma estrutura modular para facilitar a manutenção e o desenvolvimento de novas funcionalidades. Agora, cada parte do site tem seu próprio arquivo de estilo.

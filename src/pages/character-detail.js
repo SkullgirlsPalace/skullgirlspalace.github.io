@@ -64,8 +64,7 @@ export function render(charKey, initialTab = 'builds') {
         `;
     }
 
-    const state = getState();
-    const currentTab = state.currentTab || initialTab;
+    const currentTab = initialTab;
 
     return `
         <section class="section character-detail" id="character-detail" style="--char-accent: ${CHARACTER_COLORS[charKey] || 'var(--accent-gold)'}; --char-title-accent: ${CHARACTER_TITLE_COLORS[charKey] || 'var(--accent-gold)'}" data-current-tab="${currentTab}">
@@ -81,7 +80,7 @@ export function render(charKey, initialTab = 'builds') {
                     <div class="char-title-row centered-title">
                         <img loading="lazy" src="${CHARACTER_ICONS[charKey] || 'img/official/Annie_Icon.webp'}" alt="${getLocalizedNameSync(charData.character)}" class="char-select-icon"
                              onerror="this.src='img/official/Annie_Icon.webp'">
-                        <h2>${getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)}</h2>
+                        <h1>${getLocalizedNameSync(charData.character).charAt(0).toUpperCase() + getLocalizedNameSync(charData.character).slice(1)}</h1>
                     </div>
                     
                     <div class="header-right">
@@ -129,8 +128,7 @@ export function render(charKey, initialTab = 'builds') {
  * Render "Todos" (all characters) page
  */
 function renderTodosPage(initialTab = 'builds') {
-    const state = getState();
-    const currentTab = state.currentTab || initialTab;
+    const currentTab = initialTab;
 
     return `
         <section class="section character-detail" id="character-detail" style="--char-accent: var(--accent-gold); --char-title-accent: var(--accent-gold)" data-current-tab="${currentTab}" data-todos-mode="true">
@@ -144,7 +142,7 @@ function renderTodosPage(initialTab = 'builds') {
                     </div>
                     
                     <div class="char-title-row centered-title">
-                        <h2>${t('detail.allVariants')}</h2>
+                        <h1>${t('detail.allVariants')}</h1>
                     </div>
                     
                     <div class="header-right">

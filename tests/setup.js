@@ -24,13 +24,16 @@ global.localStorage = localStorageMock;
 
 // Mock window.location.hash
 let hashValue = '';
+let pathnameValue = '/';
 Object.defineProperty(window, 'location', {
   value: {
     hash: hashValue,
     get hash() { return hashValue; },
     set hash(val) { hashValue = val; },
     href: 'http://localhost/',
-    pathname: '/',
+    origin: 'http://localhost',
+    get pathname() { return pathnameValue; },
+    set pathname(value) { pathnameValue = value; },
     search: '',
   },
   writable: true,
@@ -53,4 +56,5 @@ global.IntersectionObserver = class IntersectionObserver {
 beforeEach(() => {
   localStorageMock.clear();
   hashValue = '';
+  pathnameValue = '/';
 });
