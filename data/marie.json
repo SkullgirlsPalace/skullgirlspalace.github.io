@@ -18,8 +18,8 @@
                     "power": "27,709"
                 },
                 "signature_ability": {
-                    "name": "Desconhecida",
-                    "description": "Habilidade Características: **DIA DO JULGAMENTO**\n\n[HAB 1]: Enquanto a **Marie estiver viva**, ganha ARMADURA e ESQUIVA permanentes por 10 s para cada 30% de** VIDA perdida por qualquer aliado**. Uma camada de **ARMADURA é removida sempre que o oponente usa um BLOCKBUSTER.**\n\n[HAB 2]: **Enquanto a Marie for a lutadora ativa e tiver ao menos 3 camadas de ARMADURA**, inflige ATORDOAMENTO por 4 s a cada 15 s e DRENA 10% do MEDIDOR DE BLOCKBUSTER a cada 5 s."
+                    "name": "DIA DO JULGAMENTO",
+                    "description": "[HAB 1]: Enquanto a Marie estiver viva, ganha ARMADURA e ESQUIVA permanentes por 10 s para cada 40/35/30% de VIDA perdida por qualquer aliado. Uma camada de ARMADURA é removida sempre que o oponente usa um BLOCKBUSTER.\n\n[HAB 2]: Enquanto Marie for a lutadora ativa, estiver enfrentando o mesmo oponente e tiver pelo menos 3 acúmulos de ARMADURA, ela aplica ATORDOAMENTO por 2/3/4 segundos a cada 10 segundos e DRENA 10% do MEDIDOR DE BLOCKBUSTER a cada 5 segundos."
                 },
                 "marquee_ability": "Ressureição Reforçada",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -265,7 +265,7 @@
                 },
                 "signature_ability": {
                     "name": "FAVOR INFERNAL",
-                    "description": "[HAB 1]: **Com a CARGA em pelo menos 50%**, usar um GOLPE ESPECIAL inflige IMOBILIZAÇÃO e DESATIVA BLOCKBUSTERS por 10 segundos cada.\n\n[HAB 2]: **Ao usar uma CARGA MORTUÁRIA**, todos os aliados ganham 50% no MEDIDOR DE BLOCKBUSTER e FÚRIA permanente."
+                    "description": "[HAB 1]: Ao usar um ESPECIAL, ganha 10/15/20% de CARGA MORTUÁRIA e aplica IMOBILIZAR e DESATIVAÇÃO DE BLOCKBUSTERS por 10 segundos cada. Ao ficar totalmente CARREGADO, também ganha FÚRIA.\n\n[HAB 2]: Ao usar uma CARGA MORTUÁRIA, todos os colegas de equipe ganham 1/2/3% do MEDIDOR DE BLOCKBUSTER a cada segundo e FÚRIA permanente pelo restante da partida."
                 },
                 "marquee_ability": "Incineração Melhorada",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
@@ -309,7 +309,7 @@
                 },
                 "signature_ability": {
                     "name": "VAI PASTAR",
-                    "description": "[HAB 1]: **GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 30% de DANO EXTRA** e têm uma chance de 50% de infligir GOSMA por 15 segundos.\n\n[HAB 2]: Usar um BLOCKBUSTER inflige QUIETUS por 15 segundos **se o oponente estiver sofrendo com GOSMA.**"
+                    "description": "[HAB 1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 30% de DANO EXTRA e têm uma chance de 50% de infligir GOSMA por 10/12/15 segundos.\n\n[HAB 2]: Quando o oponente RICOCHETEIA em uma parede, drena 2/3/4% do MEDIDOR DE BLOCKBUSTER por acúmulo de GOSMA nele."
                 },
                 "marquee_ability": "Incineração Melhorada",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",

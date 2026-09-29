@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "Quicando e Quebrando",
-                    "description": "[HAB 1]: **Quando Big Band estiver vivo**, os oponentes causam 35% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER\n\n[HAB 2]: **Quando Big Band realizar uma ARRANCADA DE ATAQUE bem-sucedida, drene 5% de VIDA do inimigo**. Quando Big Band sofre um GOLPE durante a ARRANCADA, ele ganha 2 acúmulos de ESPINHOS por 10 s."
+                    "description": "[HAB 1]: Quando Big Band estiver vivo, os oponentes causam 20/30/40% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER.\n\n[HAB 2]: Quando Big Band acerta um ATAQUE EM DISPARADA, drena 5% da VIDA do oponente. Quando Big Band sofre um GOLPE durante seu ATAQUE EM DISPARADA, ganha 2 acúmulos de BLOQUEIO AUTOMÁTICO por 5/7/10 segundos."
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -265,7 +265,7 @@
                 },
                 "signature_ability": {
                     "name": "TREINO CLÁSSICO",
-                    "description": "[HAB 1]: Ganhe 1 camada de PRECISÃO a cada 10 **golpes de combo.**\n\n[HAB 2]: **GOLPES DE PRECISÃO** dão FÚRIA e infligem QUEBRA DE GUARDA por 10 segundos."
+                    "description": "[HAB 1]: Ganhe 1 camada de PRECISÃO a cada 15/10/5 golpes de combo.\n\n[HAB 2]: GOLPES DE PRECISÃO dão FÚRIA e infligem QUEBRA DE GUARDA por 5/7/10 segundos."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
@@ -287,7 +287,7 @@
                 },
                 "signature_ability": {
                     "name": "VIVO OU MORTO",
-                    "description": "[HAB 1]: **Uma vez por luta**, ao sofrer um GOLPE que seria fatal, ganhe 3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.\n\n[HAB 2]: **Ao derrotar um oponente**, ganhe 2 camadas de FÚRIA por 30 s e 50% no MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Uma vez por luta, ao sofrer um GOLPE que seria fatal, ganhe 1/2/3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.\n\n[HAB 2]: Para cada 20% de VIDA perdida por qualquer lutador, ganha FÚRIA por 15 segundos e 15/20/25% do MEDIDOR DE BLOCKBUSTER."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
@@ -355,7 +355,7 @@
                 },
                 "signature_ability": {
                     "name": "ESTILO LIVRE",
-                    "description": "[HAB 1]: **Ganhe FÚRIA por 5 segundos ao usar um GOLPE ESPECIAL.**\n\n[HAB 2]: **Ganha 25% no MEDIDOR DE BLOCKBUSTER ao usar um GOLPE ESPECIAL.**"
+                    "description": "[HAB 1]: Ganhe FÚRIA por 3/4/5 segundos ao usar um GOLPE ESPECIAL.\n\n[HAB 2]: Ganha 15/20/25% no MEDIDOR DE BLOCKBUSTER ao usar um GOLPE ESPECIAL."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
@@ -377,7 +377,7 @@
                 },
                 "signature_ability": {
                     "name": "SEGUNDO FÔLEGO",
-                    "description": "[HAB 1]: **Na ASSISTÊNCIA, ganhe REGENERAÇÃO FORTE e ARMADURA por 10 segundos.**\n\n[HAB 2]: **Na ASSISTÊNCIA**, ganhe 35% no MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Ao fazer TAG-IN, ganha REGENERAÇÃO PESADA por 5/7/10 segundos e 20/25/35% do MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: Ao acertar um ATAQUE EM DISPARADA, ganha ARMADURA por 5/7/10 segundos e remove 1 EFEITO NEGATIVO de Big Band."
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",

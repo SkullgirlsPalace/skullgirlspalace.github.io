@@ -107,7 +107,7 @@
                 },
                 "signature_ability": {
                     "name": "INTENÇÕES ASSASSINAS",
-                    "description": "[HAB 1]: Inflige MARCA DA MORTE permanente e ganha FÚRIA a cada 15 segundos enquanto estiver enfrentando o mesmo oponente. **A FÚRIA é removida ao SAIR DA ASSISTÊNCIA.**\n\n[HAB 2]: 100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS **se o oponente estiver sofrendo de MARCA DA MORTE.**"
+                    "description": "[HAB 1]: Aplique MARCA DA MORTE permanente e ganhe FÚRIA para cada 20/15/10% de VIDA perdida por qualquer lutador.\n\n[HAB 2]: 50/75/100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS se o oponente estiver sofrendo de MARCA DA MORTE."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -153,7 +153,7 @@
                 },
                 "signature_ability": {
                     "name": "FANTASMA DA FUKUA",
-                    "description": "[HAB 1]: **Um BLOQUEIO no momento certo** dá 3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: **Enquanto Fukua está se beneficiando de BARREIRA**, ela não reage aos ataques de projéteis do oponente e 200% do dano do projétil é refletido de volta."
+                    "description": "[HAB 1]: Um BLOQUEIO no momento certo dá 1/2/3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: Enquanto estiver sob efeito de BARREIRA, GOLPES DE PROJÉTIL concedem OLHO-MORTO por 10/12/15 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -309,7 +309,7 @@
                 },
                 "signature_ability": {
                     "name": "CHUVA FANTASMA",
-                    "description": "[HAB 1]: 15% de chance de causar QUEBRA DE ARMADURA e OSCILAÇÃO DE ENERGIA por 15 seg cada **quando acertar um GOLPE BLOQUEADO.**\n\n[HAB 2]: Após 5 seg **ao lado da Fukua e não ATORDOADOS, os oponentes perdem os EF. POSITIVOS** e sofrem FADIGA por 10 seg."
+                    "description": "[HAB 1]: 15% de chance ao acertar um GOLPE, incluindo GOLPES bloqueados, de infligir QUEBRA DE ARM. e OSCILAÇÃO DE ENERGIA por 10/12/15 segundos cada.\n\n[HAB 2]: A cada 5 segundos enquanto Fukua estiver no lado do oponente no cenário e não estiver ATORDOADA, os oponentes perdem todos os EFEITOS POSITIVOS atuais e sofrem ATORDOAMENTO por 2/3/4 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

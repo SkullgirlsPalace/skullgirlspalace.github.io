@@ -241,7 +241,7 @@
                 },
                 "signature_ability": {
                     "name": "Fica Frio",
-                    "description": "[HAB 1]: **Ao bloquear um GOLPE**, aplica 1 acúmulo de LENTIDÃO por 15 s. Quando um oponente obtém 5 acúmulos de LENTIDÃO, remove todas as CAMADAS de LENTIDÃO e ATORDOA o oponente por 6 s.\n\n[HAB 2]: Quando **qualquer aliado** GOLPEAR um **oponente atordoado**, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por 15 s."
+                    "description": "[HAB 1]: Quando o lutador ativo bloqueia um GOLPE, aplica 1 acúmulo de LENTIDÃO por 10/13/15 segundos. Quando o oponente atinge 5 acúmulos de LENTIDÃO, remove todos os acúmulos de LENTIDÃO e aplica ATORDOAMENTO por 6 segundos.\n\n[HAB 2]: Quando qualquer aliado GOLPEAR um oponente atordoado, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por 5/8/10 segundos cada."
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",

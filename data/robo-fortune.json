@@ -268,7 +268,7 @@
                 },
                 "signature_ability": {
                     "name": "MEGA BUSTER",
-                    "description": "[HAB 1]: **Ao GOLPEAR, **todos os ataques de RAIO e ENERGIA têm 25% de chance de infligir QUEBRA DE ARMADURA por 15 segundos.\n\n[HAB 2]: Recupere 25% de VIDA e ganhe 5 camadas de BARREIRA **ao usar um BLOCKBUSTER de CATEGORIA 3.**"
+                    "description": "[HAB 1]: Todos os ataques de FEIXE e ENERGIA têm 25% de chance em GOLPE de conceder ACELERAÇÃO e aplicar QUEBRA DE ARM. por 8/10/12 segundos cada.\n\n[HAB 2]: Recupere 25% de VIDA e ganhe 3/4/5 camadas de BARREIRA ao usar um BLOCKBUSTER de CATEGORIA 3."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
@@ -290,7 +290,7 @@
                 },
                 "signature_ability": {
                     "name": "FIREWALL",
-                    "description": "[HAB 1]: Ganhe BARREIRA por 10 segundos **ao lançar um CABEÇONE.**\n\n[HAB 2]: **Quanto estiver com BARREIRA e sofrer um EF. NEG, **ganhe 100% de chance de converter imediatamente esse EF. NEG em FÚRIA."
+                    "description": "[HAB 1]: Ao lançar um DRONE-CABEÇA, ganha INABALÁVEL e BARREIRA por 8/10/12 segundos cada.\n\n[HAB 2]: Enquanto estiver sob efeito de BARREIRA e prestes a sofrer um EFEITO NEGATIVO, tem 50/75/100% de chance de impedi-lo e ganhar FÚRIA por 12 segundos."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
@@ -312,7 +312,7 @@
                 },
                 "signature_ability": {
                     "name": "Metalmorfose",
-                    "description": "[HAB 1]: Ganhe ARMADURA por 10 segundos **quando qualquer lutador usar um GOLPE ESPECIAL.**\n\n[HAB 2]:** O uso de um BLOCKBUSTER** converte todas as camadas de ARMADURA em MIASMA por 10 segundos."
+                    "description": "[HAB 1]: Quando qualquer lutador usa um ESPECIAL, ganha ARMADURA por 8/10/12 segundos e redefine a duração de todas as ARMADURAS.\n\n[HAB 2]: O uso de um BLOCKBUSTER converte todas as camadas de ARMADURA em MIASMA por 8/10/12 segundos."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",

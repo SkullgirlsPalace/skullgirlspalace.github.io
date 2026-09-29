@@ -85,7 +85,7 @@
                 },
                 "signature_ability": {
                     "name": "Músculo de Ferro",
-                    "description": "[HAB 1]: **Cada 7° GOLPE DE COMBO em Cerebella ou no oponente concede REGENERAÇÃO e ARMADURA** por 15 segundos cada. Enquanto utilizam REGENERAÇÃO ou ARMADURA, BLOCKBUSTERS causam dano aumentado em 50%.\n\n[HAB 2]: Ganhe 15% de MEDIDOR DE BLOCKBUSTER e tenha 50% de **chance de atualizar a REATIVAÇÃO de todos os GOLPES ESPECIAIS ao realizar um ARREMESSO.**"
+                    "description": "[HAB 1]: Quando qualquer lutador acerta um ARREMESSO, ganha ARMADURA por 15 segundos. GOLPES DE ARREMESSO de Cerebella aplicam BLOQUEIO DE CURA por 15 segundos, e 50/75/100% do dano causado é recuperado como VIDA.\n\n[HAB 2]: Ao acertar um ARREMESSO, ganha 10/12/15% do MEDIDOR DE BLOCKBUSTER e tem 30/40/50% de chance de redefinir o tempo de recarga de todos os ESPECIAIS. BLOCKBUSTERS causam 30% a mais de dano por acúmulo de ARMADURA em Cerebella."
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -197,7 +197,7 @@
                 },
                 "signature_ability": {
                     "name": "CONGELADA",
-                    "description": "[HAB 1]: **O dano de ATAQUE aumenta em 3% da sua VIDA ATUAL.**\n\n[HAB 2]: **O dano infligido pelo oponente é reduzido em 3% por cada GOLPE DE COMBO do oponente.**"
+                    "description": "[HAB 1]: Enquanto estiver perto do oponente, aplica IMOBILIZAR e LENTIDÃO por 7/10/12 segundos a cada 3 segundos. Reduz o ATAQUE do oponente em 3% por cada segundo em que estiver imobilizado até ele SAIR.\n\n[HAB 2]: Cause dano equivalente a 4/5/6% da VIDA MÁXIMA ao oponente quando qualquer lutador for NOCAUTEADO enquanto o oponente estiver IMOBILIZADO."
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -355,7 +355,7 @@
                 },
                 "signature_ability": {
                     "name": "JOGO DE CHÃO",
-                    "description": "[HAB 1]: **ARREMESSOS** causam 50% de dano extra.\n\n[HAB 2]: Ganhe ARMADURA por 15 segundos **ao ARREMESSAR o oponente**."
+                    "description": "[HAB 1]: ARREMESSOS causam 15/30/50% de dano extra.\n\n[HAB 2]: Ganhe ARMADURA por 10/12/15 segundos ao ARREMESSAR o oponente."
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",

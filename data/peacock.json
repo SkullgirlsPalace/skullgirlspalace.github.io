@@ -41,7 +41,7 @@
                 },
                 "signature_ability": {
                     "name": "CONGELAMENTO",
-                    "description": "[HAB 1]: **Projéteis têm 50% de chance de infligir LENTIDÃO e DEFINHAR** por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.\n\n[HAB 2]: **Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 50% do ATAQUE da Peacock e fica ATORDOADO por 3 s.**"
+                    "description": "[HAB 1]: Projéteis têm 50% de chance de infligir LENTIDÃO e DEFINHAR por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.\n\n[HAB 2]: Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 50% do ATAQUE da Peacock e fica ATORDOADO por 3 s."
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -265,7 +265,7 @@
                 },
                 "signature_ability": {
                     "name": "PIADA MORTAL",
-                    "description": "[HAB 1]: **Inflige um EFEITO NEGATIVO aleatório** por 5 segundos ao usar um GOLPE ESPECIAL.\n\n[HAB 2]:Se o oponente estiver **sofrendo um EFEITO NEGATIVO** quando a Peacock for derrotada, a VIDA dele será reduzida em 50%."
+                    "description": "[HAB 1]: Inflige um EFEITO NEGATIVO aleatório por 4/6/8 segundos ao usar um GOLPE ESPECIAL. Além disso, uma vez por partida, ao sofrer um GOLPE que seria fatal, recupera 10% da VIDA MÁXIMA por EFEITO NEGATIVO no oponente.\n\n[HAB 2]: Quando Peacock sofre um GOLPE que seria fatal enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, reduz a VIDA do oponente em 25/35/50%."
                 },
                 "marquee_ability": "Episódio Especial ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

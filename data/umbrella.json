@@ -276,7 +276,7 @@
                 },
                 "signature_ability": {
                     "name": "SAQUE E DIVERSÃO",
-                    "description": "[HAB 1]: O oponente perde 1 EF. POSITIVO a cada 2 segundos **enquanto estiver perto de uma POÇA.**\n\n[HAB 2]: **Com Hungern EMPANTURRADO**, a Umbrella ganha 5% de VIDA sempre que um oponente perder um EF. POSITIVO."
+                    "description": "[HAB 1]: GOLPES DE POÇA removem 1/2/3 EFEITO(S) POSITIVO(S) do oponente e aplicam IMOBILIZAR por 10 segundos.\n\n[HAB 2]: Enquanto o oponente não tiver EFEITOS POSITIVOS, GOLPES DE POÇA concedem FÚRIA por 5/7/10 segundos."
                 },
                 "marquee_ability": "Doce Vitória",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",

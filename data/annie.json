@@ -107,7 +107,7 @@
                 },
                 "signature_ability": {
                     "name": "Ruptura de Alma",
-                    "description": "[HAB 1]: **Quando não estiver em PODER ESTELAR nem sob efeito de ESQUIVA**, BLOQUEIOS bem sucedidos concedem 50% de PODER ESTELAR, 3 acúmulo(s) de BARREIRA e permitem que Annie DESVIE de todos os ataques por 3 segundos.\n\n[HAB 2]: **Ao ativar o PODER ESTELAR, sacrifique 35% da VIDA MÁXIMA para ganhar OLHO-MORTO** por 15 segundos. **Enquanto estiver em PODER ESTELAR, inimigos na reserva** sofrem FEITIÇO e TODOS os inimigos 3% de VIDA por segundo."
+                    "description": "[HAB 1]: Enquanto Annie não estiver em PODER ESTELAR, não estiver se beneficiando de ESQUIVA e estiver abaixo de 50% do medidor de PODER ESTELAR, BLOQUEIOS bem cronometrados concedem 30/40/50% do medidor de PODER ESTELAR, 1/2/3 acúmulo(s) de BARREIRA e permitem que Annie ESQUIVE de todos os ataques por 3 segundos.\n\n[HAB 2]: Ao ativar o PODER ESTELAR, sacrifique 35% da VIDA MÁXIMA para ganhar DEADEYE por 10/12/15 segundos. Enquanto estiver em PODER ESTELAR, inimigos na reserva sofrem HEX e TODOS os inimigos perdem 1/2/3% de VIDA por segundo."
                 },
                 "marquee_ability": "DESVIO PARA O VERMELHO",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -241,7 +241,7 @@
                 },
                 "signature_ability": {
                     "name": "FORÇA DE VONTADE",
-                    "description": "[HAB 1]: **O 10 º GOLPE DE COMBO que não seja projétil** inflige MARCA DA MORTE por 15 segundos e FADIGA por 15 segundos.\n\n[HAB 2]: **CRÍTICOS** concedem **IMUNIDADE por 5 segundos, INVENCÍVEL por 1 segundo** e DANO DE CRÍTICO 25% maior enquanto estiver **perto de um oponente sofrendo de MARCA DA MORTE.**"
+                    "description": "[HAB 1]: Cada 5º GOLPE DE COMBO que não seja projétil aplica MARCA DA MORTE por 10/12/15 segundos.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo MARCA DA MORTE, GOLPES CRÍTICOS concedem IMUNIDADE por 3/4/5 segundos, INVENCÍVEL por 1 segundo e 25% de aumento no Dano Crítico."
                 },
                 "marquee_ability": "DESVIO PARA O VERMELHO",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -377,7 +377,7 @@
                 },
                 "signature_ability": {
                     "name": "POEIRA ESTELAR",
-                    "description": "[HAB 1]: No MODO POEIRA ESTELAR, **cada GOLPE bloqueado pelo oponente** tem 10% de chance de infligir QUEBRA DE GUARDA e LENTIDÃO por 15 s.\n\n[HAB 2]: **BLOCKBUSTERS causam 50% de dano extra no MODO POEIRA ESTELAR.**"
+                    "description": "[HAB 1]: No MODO PODER ESTELAR, cada GOLPE bloqueado pelo oponente tem 10% de chance de infligir QUEBRA DE GUARDA e LENTIDÃO por 10/12/15 segundos.\n\n[HAB 2]: BLOCKBUSTERS causam 15/25/35% de dano adicional no MODO PODER ESTELAR."
                 },
                 "marquee_ability": "Desvio para o Vermelho",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

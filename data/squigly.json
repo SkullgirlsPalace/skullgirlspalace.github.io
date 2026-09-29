@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "O RETORNO DA LOUCURA",
-                    "description": "[HAB 1]: RESSUSCITE com 50% de VIDA **uma vez por luta.** Ganhe também 5 EF. NEGATIVOS aleatórios por 10 seg e 5 camadas de ESPINHOS por 20 seg.\n\n[HAB 2]: Causa 50% de dano bônus **por cada camada de EF. NEGATIVO aplicada à Squigly.**"
+                    "description": "[HAB 1]: 3/4/5% de chance de redefinir os cronômetros de todos os EF. POSITIVOS de Fukua e todos os EF. NEGATIVOS do oponente ao GOLPEAR.\n\n[HAB 2]: Uma vez por partida, ao ser GOLPEADO fatalmente, congele o tempo por 7 seg e ganhe 3/4/5 camadas de MIASMA por 7 seg. O tempo recomeça se Fukua atacar."
                 },
                 "marquee_ability": "Morta-Viva",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -153,7 +153,7 @@
                 },
                 "signature_ability": {
                     "name": "NEVASCA FANTASMA",
-                    "description": "[HAB 1]: RESSUSCITA com 25% de VIDA e 5 camadas de ARMADURA **depois de ficar morta por 30 segundos. Uma camada de ARMADURA é removida depois de cada GOLPE sofrido.**\n\n[HAB 2]: Causa 100% de dano extra **enquanto se beneficia de ARMADURA.**"
+                    "description": "[HAB 1]: Ganhe 1 camada de BARREIRA e ESPINHOS por 5/7/10 segundos a cada 3 segundos enquanto estiver perto de um cadáver.\n\n[HAB 2]: Ganhe 3/4/5 camadas de REGENERAÇÃO por 10 segundos e 50% no MEDIDOR DE BLOCKBUSTER ao derrotar um oponente. Oponentes derrotados não podem ser revividos."
                 },
                 "marquee_ability": "Morta-Viva",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "ECTOPLASMA",
-                    "description": "[HAB 1]: BLOCKBUSTERS causam 100% de dano extra nos oponentes **com um BLOCKBUSTER totalmente carregado.**\n\n[HAB 2]: **Quando um EFEITO POSITIVO na Squigly ou no oponente expirar,** ganhe 25% no MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Usar um BLOCKBUSTER aplica GOSMA por 10 segundos. BLOCKBUSTERS causam 50/75/100% de dano adicional a oponentes sofrendo GOSMA.\n\n[HAB 2]: Quando um EFEITO POSITIVO em qualquer lutador expira ou é removido, ganha 15/20/25% do MEDIDOR DE BLOCKBUSTER."
                 },
                 "marquee_ability": "Morta do Mal",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
