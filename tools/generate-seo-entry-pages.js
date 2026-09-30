@@ -97,14 +97,17 @@ export function collectSeoEntries({ rootDir = ROOT_DIR } = {}) {
 }
 
 function writeSitemap(entries, sitemapPath, lineEnding) {
-    const urls = ['/', ...entries.map(entry => entry.url)];
-    const entriesXml = urls.map(url => `  <url><loc>${SITE_ORIGIN}${url}</loc></url>`).join(lineEnding);
+    const urls = [{ canonical: `${SITE_ORIGIN}/` }, ...entries.map(entry => ({
+        canonical: `${SITE_ORIGIN}${entry.url}`
+    }))];
+    const entriesXml = urls.map(({ canonical }) =>
+        `  <url>${lineEnding}    <loc>${canonical}</loc>${lineEnding}  </url>`
+    ).join(lineEnding);
     fs.writeFileSync(sitemapPath,
         `<?xml version="1.0" encoding="UTF-8"?>${lineEnding}<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${lineEnding}${entriesXml}${lineEnding}</urlset>${lineEnding}`,
         'utf8'
     );
 }
-
 function removeGeneratedEntries(directory) {
     if (!fs.existsSync(directory)) return;
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
