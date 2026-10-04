@@ -1,17 +1,11 @@
-import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
-import { SITE_ORIGIN } from './generate-seo-entry-pages.js';
+import { pathToFileURL } from 'node:url';
+import { collectSitemapUrls, SITE_ORIGIN } from './build-site.js';
 
 /** Public by design: IndexNow validates it against /<key>.txt on the site. */
 export const INDEXNOW_KEY = 'eb38984f13b79ee37bb2809c0cac9a35';
 export const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const MAX_URLS_PER_REQUEST = 10000;
-const ROOT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-
-export function readSitemapUrls(sitemapXml) {
-    return [...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, url]) => url.trim());
-}
 
 export function buildIndexNowPayload(urls) {
     const { host } = new URL(SITE_ORIGIN);
@@ -28,8 +22,7 @@ export function buildIndexNowPayload(urls) {
     };
 }
 
-export async function submitIndexNow({ rootDir = ROOT_DIR, fetchImpl = fetch } = {}) {
-    const urls = readSitemapUrls(fs.readFileSync(path.join(rootDir, 'sitemap.xml'), 'utf8'));
+export async function submitIndexNow({ urls = collectSitemapUrls(), fetchImpl = fetch } = {}) {
     const response = await fetchImpl(INDEXNOW_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json; charset=utf-8' },
