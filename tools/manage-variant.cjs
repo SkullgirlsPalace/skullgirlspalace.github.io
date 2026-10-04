@@ -5,7 +5,7 @@
 // 
 // COMO USAR:
 // 1. Abra o terminal na pasta raíz do projeto.
-// 2. Digite: node tools/manage-variant.js
+// 2. Digite: node tools/manage-variant.cjs
 // 3. Siga as instruções no terminal.
 //
 // FUNÇÕES:

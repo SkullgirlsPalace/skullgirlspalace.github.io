@@ -38,7 +38,7 @@ console.log(`
 \x1b[35m=============================================================================\x1b[0m
 
 \x1b[36mCOMO USAR:\x1b[0m
-   Comando para o Terminal node tools/download-image.js
+   Comando para o Terminal node tools/download-image.cjs
 
 1. Este script permite baixar imagens de variantes e registrá-las automaticamente.
 2. Você pode baixar várias imagens em sequência sem precisar reiniciar.

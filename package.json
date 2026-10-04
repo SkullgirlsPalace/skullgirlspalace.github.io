@@ -4,7 +4,7 @@
   "description": "Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso",
   "main": "src/main.js",
   "scripts": {
-    "optimize": "node tools/optimize-images.js",
+    "optimize": "node tools/optimize-images.cjs",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
