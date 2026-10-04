@@ -73,3 +73,21 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Tells Bing (and other IndexNow engines) to recrawl every sitemap URL after a deploy.
+      - name: Submit sitemap URLs to IndexNow
+        run: npm run indexnow

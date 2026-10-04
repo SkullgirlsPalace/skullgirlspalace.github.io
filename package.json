@@ -8,7 +8,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "generate:seo": "node tools/generate-seo-entry-pages.js"
+    "generate:seo": "node tools/generate-seo-entry-pages.js",
+    "indexnow": "node tools/submit-indexnow.js"
   },
   "repository": {
     "type": "git",
