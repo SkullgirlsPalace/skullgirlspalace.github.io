@@ -1,5 +1,6 @@
 raw_images/
 node_modules/
+_site/
 
 # Claude Code configuration (local only)
 .claude/
