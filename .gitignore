@@ -1,6 +1,7 @@
 raw_images/
 node_modules/
 _site/
+coverage/
 
 # Claude Code configuration (local only)
 .claude/
@@ -8,5 +9,5 @@ _site/
 # Memory system
 .remember/
 
-# Agent directives (project-specific)
-CLAUDE.md
+# Personal agent directives (Claude Code loads it next to CLAUDE.md)
+CLAUDE.local.md
