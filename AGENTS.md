@@ -58,7 +58,7 @@ Só vai ao ar o que está em `PUBLISHED_PATHS` dentro desse arquivo. Um arquivo 
 Além do `data/<personagem>.json` e das imagens em `img/`, um personagem novo precisa entrar em listas fixas:
 
 - `CHARACTER_FILES`, `CHARACTER_ICONS`, `CHARACTER_COLORS` e `CHARACTER_NAMES_EN` em `src/config/constants.js`;
-- `VALID_CHARACTERS` em `tools/manage-variant.js` e `tools/download-image.js`;
+- `VALID_CHARACTERS` em `tools/manage-variant.cjs` e `tools/download-image.cjs`;
 - `src/data/variantImages.js`, `movesimages.js` e `characterProfiles.js`.
 
 As páginas e o sitemap saem sozinhos no build.
@@ -75,7 +75,7 @@ O problema não é o GitHub Pages, é o que o site manda baixar. Toda mudança d
 1. **Imagens** são o maior peso.
    - Hoje são 41 MB de retratos de variantes, com largura mediana de 1260 px, exibidos com 160 px nos cards. Os ícones de 800 px aparecem com uns 60 px, e o favicon tem 2000 px.
    - Toda imagem nova deve ser `.webp`, com no máximo 2× o maior tamanho em que aparece na tela.
-   - O `tools/optimize-images.js` só converte para webp: ele não redimensiona, a não ser `select_character`. Redimensione antes (o `sharp` já é dependência).
+   - O `npm run optimize` (`tools/optimize-images.cjs`) só converte para webp: ele não redimensiona, a não ser `select_character`. Redimensione antes (o `sharp` já é dependência).
    - Toda `<img>` nova leva `loading="lazy"` (menos as do topo da tela), `width` e `height`.
    - Nunca use URL do Discord (`cdn.discordapp.com`) como imagem: o link expira.
 2. **JS**: os 39 módulos de `src/` (cerca de 640 KB, sem minificar) carregam em toda página, inclusive `movesimages.js` (107 KB) e `characterProfiles.js` (91 KB), que a home nem usa.
@@ -92,8 +92,7 @@ O problema não é o GitHub Pages, é o que o site manda baixar. Toda mudança d
 
 ## Armadilhas conhecidas
 
-- Os scripts de `tools/` que usam `require` quebram com `require is not defined`, porque o `package.json` é `"type": "module"`. São eles: `manage-variant`, `download-image`, `optimize-images`, `process-moves`, `process-catalysts` e `fix-json-move-names`. Para rodar, converta o script para `import` ou renomeie para `.cjs`.
+- O `package.json` é `"type": "module"`, então todo `.js` é ES module. Os scripts antigos de `tools/` que usam `require` têm extensão `.cjs` por isso. Script novo deve usar `import`, como o `build-site.js`.
 - `raw_images/` (220 MB) e `dist/` (um build antigo do Vite) estão commitados, mas o site não usa nenhum dos dois e eles não vão ao ar. Não referencie nada deles.
-- `src/pages/character-profile.js` busca `data/krazete/stanleyDB-*.json`, que não existem, então a requisição dá 404 toda vez.
+- `data/krazete/stanleyDB-*.json` não está no repo. Por isso `src/pages/character-profile.js` toma 404 toda vez que busca esses arquivos, e `tools/process-moves.cjs`, `process-catalysts.cjs` e `fix-json-move-names.cjs` não rodam.
 - Ao trocar de idioma, os listeners de scroll, hashchange e tooltip são adicionados de novo sem remover os antigos.
-- `vitest.config.js` declara os limites de cobertura no formato antigo, que o Vitest 4 ignora. Quem barra cobertura baixa é o passo com `jq` no CI.
