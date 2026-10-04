@@ -2,6 +2,12 @@
 
 Guia para quem mexe neste repositório, gente ou IA (ChatGPT/Codex, Claude Code, Copilot…). O `CLAUDE.md` só importa este arquivo, então o que vale para todo mundo fica aqui.
 
+Leia também:
+
+- `CONTEXT.md`: glossário do jogo (variante, superior, build, Fenda…). Use esses termos nos textos da interface em pt-BR e ao falar do jogo.
+- `docs/adr/`: decisões de arquitetura e o motivo de cada uma. Leia antes de mexer no que elas cobrem. Uma decisão nova que seja difícil de desfazer, surpreendente sem contexto e escolhida entre alternativas reais vira uma ADR nova, com o próximo número.
+- `docs/TESTING.md`: como escrever e rodar os testes.
+
 ## O projeto
 
 Skullgirls Palace (https://skullgirlspalace.github.io/) é uma wiki de Skullgirls Mobile em pt-BR e inglês. É uma SPA em JavaScript puro, com ES modules nativos, sem framework e **sem bundler**, publicada no GitHub Pages. O navegador baixa os arquivos de `src/` exatamente como estão no repo. Cada import, fonte, imagem ou JSON novo vira peso direto para quem visita. Leia a seção de performance antes de adicionar qualquer coisa.
@@ -25,6 +31,8 @@ Um push na `main` dispara `.github/workflows/deploy.yml`, que roda em ordem:
 4. `npm run indexnow`, que avisa o Bing das URLs.
 
 Um PR só roda os testes.
+
+**O GitHub Pages precisa estar com a fonte "GitHub Actions"** (Settings → Pages). Com "Deploy from a branch", as páginas de personagem e o sitemap somem do ar (ver `docs/adr/0002-site-montado-no-deploy.md`). O `eb38984f13b79ee37bb2809c0cac9a35.txt` na raiz é a chave do IndexNow, e o Bing confere que ele está no site: não apague nem renomeie.
 
 `tools/build-site.js` gera, cada uma com o shell de `index.html`, metadados próprios e o conteúdo da página em HTML estático (o Bing roda pouco JS):
 
