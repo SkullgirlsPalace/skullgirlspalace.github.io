@@ -1,11 +1,13 @@
 # Skullgirls Palace
 Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso
 
-## URLs indexáveis
+## Build, deploy e URLs indexáveis
 
-O Palace continua usando a SPA e suas hash routes. As entradas em `characters/` são cópias do shell de `index.html`, com metadados próprios; o router interpreta o caminho para abrir “Todas as Variantes” ou a interface existente de um personagem em Builds/Tier List. Variantes não recebem URLs próprias.
+O Palace é uma SPA com hash routes (`#guide`, `#character/annie/builds`…). Para buscadores, o deploy gera uma página de verdade para a home, `/characters/` e cada personagem em `/characters/<slug>/`, `/builds/` e `/tier-list/`. Cada uma traz o shell de `index.html` com metadados próprios e o conteúdo em HTML (variantes, habilidades, builds, tier) com links reais, porque o Bing roda pouco JS. Quando o JS carrega, o router (`src/utils/seoRoutes.js`) abre a interface certa e substitui esse conteúdo. Variantes não recebem URLs próprias.
 
-O GitHub Pages publica a raiz sem regras de reescrita, então cada URL de diretório precisa de um `index.html` para responder diretamente. Depois de adicionar um personagem, execute `npm run generate:seo` para atualizar as entradas e o `sitemap.xml`. Não edite os shells gerados manualmente.
+Quem faz isso é `npm run build` (`tools/build-site.js`): ele monta `_site/` com as páginas, o `sitemap.xml` e só o que o site usa (`PUBLISHED_PATHS`). A cada push na `main`, o GitHub Actions roda os testes, o build, publica `_site/` e avisa o Bing pelo IndexNow (`npm run indexnow`). Nada disso é commitado: basta editar `data/*.json` e subir.
+
+Para ver localmente como vai ao ar: `npm run build` e sirva `_site/` (por exemplo `python3 -m http.server -d _site`).
 
 ## Arquitetura de Estilos (CSS)
 
