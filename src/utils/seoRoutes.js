@@ -34,7 +34,7 @@ export function parseSeoPath(pathname) {
     const section = (match[2] || 'character').toLowerCase();
     return {
         route: 'character',
-        params: [match[1].toLowerCase(), section === 'tier-list' ? 'tier' : 'builds'],
+        params: [match[1].toLowerCase(), section === 'character' ? 'overview' : section === 'tier-list' ? 'tier' : 'builds'],
         section
     };
 }

@@ -10,6 +10,8 @@
     "setup:hooks": "git config core.hooksPath .githooks",
     "test:coverage": "vitest run --coverage",
     "build": "node tools/build-site.js",
+    "postbuild": "node tools/audit-site.js",
+    "audit:site": "node tools/audit-site.js",
     "indexnow": "node tools/submit-indexnow.js"
   },
   "repository": {

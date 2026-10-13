@@ -1,4 +1,5 @@
 # Skullgirls Palace
+Site: [skullgirlspalace.github.io](https://skullgirlspalace.github.io/).
 Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso
 
 ## Build, deploy e URLs indexáveis
@@ -8,6 +9,10 @@ O Palace é uma SPA com hash routes (`#guide`, `#character/annie/builds`…). Pa
 Quem faz isso é `npm run build` (`tools/build-site.js`): ele monta `_site/` com as páginas, o `sitemap.xml` e só o que o site usa (`PUBLISHED_PATHS`). A cada push na `main`, o GitHub Actions roda os testes, o build, publica `_site/` e avisa o Bing pelo IndexNow (`npm run indexnow`). Nada disso é commitado: basta editar `data/*.json` e subir.
 
 Para ver localmente como vai ao ar: `npm run build` e sirva `_site/` (por exemplo `python3 -m http.server -d _site`).
+
+A montagem verifica automaticamente limites de peso, novas duplicatas e arquivos indevidos antes da publicação. A mesma checagem roda nos PRs para `main`. Consulte [Peso e duplicatas na publicação](docs/PERFORMANCE.md) e [Sincronização das branches](docs/BRANCHES.md).
+
+Para o estado conferido de rastreamento e as verificações no painel, consulte [Bing: diagnóstico atualizado](docs/BING-INDEXING.md). As URLs de personagem têm visão geral, builds e tier list distintas; o sitemap preserva 56 URLs.
 
 ## Arquitetura de Estilos (CSS)
 

@@ -14,6 +14,7 @@ import { createFilterBar, createSearchBar, updateFilterUI, updateCharacterNav } 
 import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
 import { t, getLocalizedNameSync } from '../i18n/index.js';
+import { characterPath } from '../utils/seoRoutes.js';
 
 /**
  * Get all variants across all characters (for "Todos" mode)
@@ -98,6 +99,7 @@ export function render(charKey, initialTab = 'builds') {
                 <div class="header-bottom-row">
                     <!-- Tab Navigation -->
                     <div class="detail-tabs">
+                        <a class="tab-btn" href="${characterPath(charKey)}">${t('characterOverview.title')}</a>
                         <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
                                 onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
                             ${t('variant.builds')}

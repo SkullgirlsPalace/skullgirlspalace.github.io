@@ -76,6 +76,8 @@ describe('static site build', () => {
         const tierList = staticContent(entryFor('/characters/annie/tier-list/').html);
         const ranks = tiers[variant.name];
         expect(tierList).toContain(`<tr><td>${variant.name}</td><td>${ranks.pf}</td><td>${ranks.parallel}</td><td>${ranks.riftOff}</td><td>${ranks.riftDef}</td></tr>`);
+        expect(overview).not.toContain('Build recomendada');
+        expect(builds).not.toContain('Habilidade característica:');
     });
 
     it('escapes wiki data, keeps "$" literal and falls back to rank B like the tier table', () => {
