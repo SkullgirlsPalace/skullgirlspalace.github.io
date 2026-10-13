@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "CRESCENDO MATADOR",
-                    "description": "[HAB 1]: Ao RECARREGAR com 3 TIROS ou menos restantes, ganhe 3 TIROS RELÂMPAGO. TIROS RELÂMPAGO DESATIVAM ENTRADAS NA ASSISTÊNCIA e têm 10% de chance de DESATIVAR BLOCKBUSTERS por 15 s cada.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo de ASSIST. DESATIVADA, TIROS RELÂMPAGO tiram 1.5% da VIDA MÁX. como dano extra dos aliados do oponente. Enquanto o oponente estiver sofrendo de BLOCKB. DESATIVADOS, tira mais 1.5% da VIDA MÁX. de todos os oponentes."
+                    "description": "[HAB 1]: Ao RECARREGAR com 3 DISPAROS ou menos restantes, ganha 3 DISPAROS ELÉTRICOS. GOLPES DE DISPARO ELÉTRICO aplicam OSCILAÇÃO DE ENERGIA a todos os oponentes por 10 segundos e DESATIVAM ASSISTÊNCIAS por 10 segundos.\n\n[HAB 2]: Os oponentes perdem 0.4% da VIDA MÁXIMA por segundo para cada acúmulo de OSCILAÇÃO DE ENERGIA neles. Ao aplicar OSCILAÇÃO DE ENERGIA, causa dano equivalente a 1% da VIDA MÁXIMA ao oponente ativo e 2% aos oponentes no banco."
                 },
                 "marquee_ability": "Descontrole Metálico",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

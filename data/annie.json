@@ -263,7 +263,7 @@
                 },
                 "signature_ability": {
                     "name": "ECLIPSE TOTAL",
-                    "description": "[HAB 1]: Inflija DEFINHAR por 10 s e ganhe 15% no medidor de PODER ESTELAR **ao acertar um GOLPE CRÍTICO com um projétil.**\n\n[HAB 2]: **UMA VEZ por LUTA**, ao **ATIVAR o PODER ESTELAR com o Medidor Cheio, REVIVA e CURE os aliados** em 100% da VIDA faltando da Annie."
+                    "description": "[HAB 1]: Ao acertar um GOLPE CRÍTICO com um projétil, aplica DEFINHAR por 10 segundos e ganha 10/12/15% do medidor de PODER ESTELAR. Quando o oponente atinge 5 acúmulos de DEFINHAR, remove todos os EFEITOS NEGATIVOS de Annie.\n\n[HAB 2]: Ao ativar PODER ESTELAR com o medidor cheio, REVIVE todos os colegas de equipe com 100% de VIDA. A cada REVIVER consecutivo, os colegas REVIVEM com 80/60/40% menos VIDA."
                 },
                 "marquee_ability": "DESVIO PARA O VERMELHO",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

@@ -3,14 +3,13 @@
 // Registry of recently added or heavily modified characters/variants
 // =====================================================
 
-import { getCharacter } from '../services/dataService.js';
+import { getState } from '../state/store.js';
 import { flattenVariants } from '../utils/variantUtils.js';
 
 // Nomes das variantes que ganharam destaque NEW
 export const NEW_VARIANTS = [
-    "Baba Yaga",
-    "Bailarina",
-    "Bellarina"
+    "Garota dos Sonhos",
+    "Chamego"
 ];
 
 /**
@@ -30,7 +29,7 @@ export function isNewVariant(variantName) {
  * @returns {boolean}
  */
 export function isNewCharacter(charKey) {
-    const charData = getCharacter(charKey);
+    const charData = getState().characters?.[charKey];
     if (!charData) return false;
 
     const allVariants = flattenVariants(charData.variants);

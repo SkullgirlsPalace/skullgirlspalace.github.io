@@ -221,8 +221,8 @@
             "fs": "444"
         },
         "ability": "SANGUINE SOLO",
-        "SA1": "If either Fighter uses a BLOCKBUSTER, both fighters are afflicted with BLEED for 5/7/10 seconds.",
-        "SA2": "25/50/100% chance to convert all BLEED effects on self into REGEN."
+        "SA1": "When either Fighter uses a SPECIAL MOVE, both Fighters suffer BLEED for 5/7/10 seconds.",
+        "SA2": "Gain a 25/50/100% chance to convert all BLEED effects on self into REGEN. When the opponent is about to gain REGEN, 25/50/100% chance to prevent it."
     },
     "lockedin": {
         "name": "Locked In",
@@ -671,8 +671,8 @@
             "fs": "471"
         },
         "ability": "BRIAR STRAITS",
-        "SA1": "Inflict DEATH MARK and gain THORNS for 5/7/10 seconds each when either Fighter deals at least 10% MAX HEALTH from a single HIT.",
-        "SA2": "Opponents are inflicted with BLEED for 3/4/5 seconds when dashing while suffering from DEATH MARK."
+        "SA1": "For each 10% HEALTH lost by either Fighter, Cerebella gains THORNS and the opponent suffers DEATH MARK and QUIETUS for 5/7/10 seconds each.",
+        "SA2": "Drain 3/4/5% BLOCKBUSTER METER when either Fighter lands a CRITICAL HIT while Cerebella is benefiting from THORNS."
     },
     "curlscout": {
         "name": "Curl Scout",
@@ -1745,8 +1745,8 @@
             "fs": "804"
         },
         "ability": "CORRUPTED WISH",
-        "SA1": "Once per match when TRANSMUTING to the opponent's element, permanently copy their Signature Ability, remove all their BUFFS and inflict HEX for 20/25/30 seconds.",
-        "SA2": "When defeating an opponent suffering from a DEBUFF, gain 3 stacks of MIASMA and inflict 3 random DEBUFFS on the next opponent for 10/15/20 seconds each."
+        "SA1": "When the opponent drops below 50/60/70% HEALTH, inflict an unpreventable HEX to all opponents for 20 seconds. HEX is removed from all opponents when Double is defeated.",
+        "SA2": "While the opponent is suffering from HEX, remove 1 opponent BUFF and reduce the opponent's CRIT RESIST by 5/7/10% every 2 seconds. Refresh all opponents' HEX every 7 CRITICAL HITS."
     },
     "hallowfiend": {
         "name": "Hallow Fiend",
@@ -1761,7 +1761,7 @@
         },
         "ability": "Lethal Injection",
         "SA1": "While none of Valentine's BLOCKBUSTERS are fully charged, NON-BLOCKBUSTER HITS drain 3/4/5% BLOCKBUSTER METER.",
-        "SA2": "If none of the opponent's BLOCKBUSTERS are fully charged, BLOCKBUSTER HITS inflict HEX for 4/5/6 seconds."
+        "SA2": "VIAL and COUNTERVENOM HITS inflict HEX for 4/5/6 seconds."
     },
     "heavyhanded": {
         "name": "Heavy Handed",
@@ -2555,8 +2555,8 @@
             "fs": "421"
         },
         "ability": "TOTAL ECLIPSE",
-        "SA1": "Inflict WITHER for 10 seconds and gain 10/12/15% STAR POWER meter when landing a CRITICAL HIT with a projectile.",
-        "SA2": "Once per match when activating STAR POWER at full meter, REVIVE and HEAL teammates by 50/75/100% of Annie's missing HEALTH."
+        "SA1": "Inflict WITHER for 10 seconds and gain 10/12/15% STAR POWER meter when landing a CRITICAL HIT with a projectile. When the opponent reaches 5 stacks of WITHER, remove all DEBUFFS from Annie.",
+        "SA2": "When activating STAR POWER at full meter, REVIVE all teammates with 100% HEALTH. Teammates REVIVE with 80/60/40% less HEALTH for each consecutive REVIVE."
     },
     "numbercruncher": {
         "name": "Number Cruncher",
@@ -2570,8 +2570,8 @@
             "fs": "409"
         },
         "ability": "POWER OF FIVE",
-        "SA1": "25/35/50% chance to gain 1 stack of BLESSING for 20 seconds every 5 COMBO HITS.",
-        "SA2": "When reaching 5 stacks of BLESSING, remove all BLESSINGS and inflict 5 stacks of GUARD BREAK for 5/7/10 seconds."
+        "SA1": "Gain 1 stack of BLESSING for 5/10/15 seconds every 0/5 COMBO HITS.",
+        "SA2": "When Robo-Fortune gains BLESSING, inflict GUARD BREAK for 5/10/15 seconds. Deal 5% bonus DAMAGE per COMBO HIT while benefiting from BLESSING."
     },
     "neardeath": {
         "name": "Near Death",
@@ -2690,8 +2690,8 @@
             "fs": "385"
         },
         "ability": "SLEEP PARALYSIS",
-        "SA1": "Gain 2 stacks of MIASMA for 10 seconds every 4/3/2 seconds while far away from the opponent.",
-        "SA2": "Inflict IMMOBILIZE and FATIGUE for 10 seconds each every 4/3/2 seconds while near the opponent."
+        "SA1": "Inflict IMMOBILIZE and FATIGUE for 10 seconds each every 4/3/2 seconds while near the opponent.",
+        "SA2": "Gain 1 stack of MIASMA for 10 seconds every 4/3/2 seconds while the opponent is FATIGUED."
     },
     "necrobreaker": {
         "name": "Necrobreaker",
@@ -2947,6 +2947,21 @@
         "ability": "VINTAGE PROJECTOR",
         "SA1": "Projectiles deal 15/25/35% bonus damage for all teammates.",
         "SA2": "All projectiles have a 10/15% chance to inflict ARMOR BREAK for 3/6 seconds."
+    },
+    "pillowtalk": {
+        "name": "Pillow Talk",
+        "rarity": "gold",
+        "element": "air",
+        "character": "<:sp_beo:684771548414083107> Beowulf",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/pTalk.png",
+        "stats": {
+            "atk": "326",
+            "hp": "1764",
+            "fs": "434"
+        },
+        "ability": "Repressed Memory",
+        "SA1": "While Beowulf is the active Fighter, Beowulf and the opponent suffer permanent QUIETUS and DISABLE TAG-INS. When Activating HYPE MODE, Beowulf heals for 10/20/30% HEALTH.",
+        "SA2": "While in HYPE MODE, Inflict 2 Random DEBUFFS for 5/7/10 seconds every 0 seconds."
     },
     "pyrotechnique": {
         "name": "Pyro-Technique",
@@ -3381,7 +3396,7 @@
         },
         "ability": "AMPED AND READY",
         "SA1": "While Big Band is alive, the active Fighter has a 50% chance to gain HASTE and HEAVY REGEN for 5/7/10 seconds when landing a DASH ATTACK.",
-        "SA2": "While the active Fighter is benefiting from HASTE and REGEN, DASH ATTACKS deal 50/75/100% bonus DAMAGE and inflict CURSE for 5/6/7 seconds."
+        "SA2": "While the active Fighter is benefiting from HASTE and REGEN, DASH ATTACKS deal 25/35/50% bonus DAMAGE and have a 50% chance to inflict CURSE for 3/4/5 seconds."
     },
     "rogueagent": {
         "name": "Rogue Agent",
@@ -3590,8 +3605,8 @@
             "fs": "429"
         },
         "ability": "KILLER CRESCENDO",
-        "SA1": "When RELOADING with 3 SHOTS or less remaining, gain 3 LIGHTNING SHOTS. LIGHTNING SHOTS DISABLE TAG INS and have a 10% chance to DISABLE BLOCKBUSTERS for 10/12/15 seconds each.",
-        "SA2": "While the opponent is suffering from DISABLE TAG IN, LIGHTNING SHOTS deal 0.5/1/1.5% MAX HEALTH as bonus damage to the opponent's teammates. While the opponent is suffering from DISABLE BLOCKBUSTERS, deal an additional 0.5/1/1.5% MAX HEALTH to all opponents."
+        "SA1": "When RELOADING with 3 SHOTS or less remaining, gain 3 LIGHTNING SHOTS. LIGHTNING SHOT HITS inflict POWER SURGE to all opponents for 10 seconds and DISABLE TAG-INS for 5/7/10 seconds.",
+        "SA2": "Opponents lose {0:0.0}% MAX HEALTH per second per stack of POWER SURGE on them. When inflicting POWER SURGE, deal 1% MAX HEALTH as damage to the active opponent and 2% to BENCHED opponents."
     },
     "splittingimage": {
         "name": "Splitting Image",
@@ -3635,8 +3650,8 @@
             "fs": "191"
         },
         "ability": "THROWING SHADE",
-        "SA1": "Opponents suffer CURSE after 3/2/1 seconds while near a TEAR.",
-        "SA2": "Gain THORNS every 3/2/1 seconds while near a TEAR."
+        "SA1": "Gain THORNS every 2 seconds while atleast 4/3/2 TEARS are on the stage. Opponents suffer curse while near a TEAR.",
+        "SA2": "5/7/10% of damage inflicted is regained as HEALTH per stack of THORNS on Parasoul. (max. 25/35/50%)"
     },
     "standout": {
         "name": "Stand Out",
@@ -3816,7 +3831,7 @@
         },
         "ability": "Scales of Obedience",
         "SA1": "While Filia has more BUFFS or fewer DEBUFFS than the opponent, transfer 1 opponent BUFF every 4/3/2 seconds and inflict 1 random DEBUFF every second for 7 seconds.",
-        "SA2": "When the current number of BUFFS and DEBUFFS between both Fighters is more than or equal to 25/20/17, the opponent suffers permanent DOOM for 10 seconds, bypassing all DEBUFF preventing effects."
+        "SA2": "When the current number of BUFFS and DEBUFFS between both Fighters is more than or equal to 25/20/17, the opponent suffers permanent DOOM for 20 seconds, bypassing all DEBUFF preventing effects."
     },
     "scarletviper": {
         "name": "Scarlet Viper",
@@ -3980,8 +3995,8 @@
             "fs": "409"
         },
         "ability": "ALIEN AUTOPSY",
-        "SA1": "While RAVENOUS, inflict DOOM for 15 seconds when an opponent's HEALTH drops below 25/35/50%. DOOM is removed if Umbrella TAGS OUT or is defeated.",
-        "SA2": "When defeating an opponent, gain 3 stacks of PRECISION and 3 stacks of a BUFF determined by the opponent's ELEMENT for 10/12/15 seconds."
+        "SA1": "When getting RAVENOUS, inflict permanent DOOM for 30/25/20 seconds. DOOM is removed when Umbrella is KNOCKED DOWN or TAGS OUT.",
+        "SA2": "While the opponent is suffering from a DEBUFF, inflict a random DEBUFF for 5/7/10 seconds every 5 COMBO HITS. When defeating an opponent, gain 10% BLOCKBUSTER METER per DEBUFF on the opponent."
     },
     "hacknsplash": {
         "name": "Hack n' Splash",
@@ -4054,9 +4069,9 @@
             "hp": "3335",
             "fs": "821"
         },
-        "ability": "TWO-FACED",
-        "SA1": "While on her own side of the stage, Valentine gains 1 stack of BARRIER, THORNS, or ARMOR every 5/4/3 seconds. These BUFFS are removed when KNOCKED DOWN.",
-        "SA2": "While on the opponent's side of the stage, CRITICAL HITS inflict BLEED, DEATH MARK, or ARMOR BREAK for 5/7/10 seconds."
+        "ability": "Needle Storm",
+        "SA1": "Valentine gains 3 stacks of permanent BARRIER when the match starts and when defeating an opponent. While benefiting from this BARRIER, permanently increase her CRIT RATE and reduce the opponent's CRIT RESIST by 3/4/5% each every 3 COMBO HITS.",
+        "SA2": "CRITICAL HITS grant HASTE and inflict HEAL BLOCK, DEATH MARK, or ARMOR BREAK for 8/10/12 seconds each."
     },
     "nailbiter": {
         "name": "Nail Biter",
@@ -4235,8 +4250,8 @@
             "fs": "875"
         },
         "ability": "Kung Faux",
-        "SA1": "Fukua's successful KICK attacks grant a stack of SHADOW KICK (max. 10). Regain 1/1.5/2% MAX HEALTH when gaining a SHADOW KICK stack. The next BLOCKBUSTER used after reaching 10 SHADOW KICK stacks will summon GRENDEL'S HAND to HIT the opponent.",
-        "SA2": "When GRENDEL's HAND successfully HITS, gain UNFLINCHING for 10/12/15 seconds. When gaining a SHADOW KICK stack while benefiting from UNFLINCHING, deal 2/2.5/3% MAX HEALTH as damage to the opponent and gain 2/3/4% BLOCKBUSTER METER."
+        "SA1": "Fukua's successful KICK attacks grant a stack of SHADOW KICK (max. 10). Transfer 1 opponent BUFF when gaining a SHADOW KICK stack. BLOCKBUSTERS spend 10/7/5 SHADOW KICK stacks to summon GRENDEL'S HAND to HIT the opponent.",
+        "SA2": "When spending 5 or more SHADOW KICK stacks, gain UNFLINCHING for 10/12/15 seconds. Opponents can no longer be revived when defeated while benefiting from this UNFLINCHING."
     },
     "chameleontwist": {
         "name": "Chameleon Twist",
@@ -4417,6 +4432,21 @@
         "ability": "FORCE CHOKE",
         "SA1": "THROWS have a 50% chance to inflict CRIPPLE and HEAL BLOCK for 5/7/10 seconds.",
         "SA2": "Deal 25/35/50% bonus damage against enemies suffering from a DEBUFF."
+    },
+    "dreamgirl": {
+        "name": "Dream Girl",
+        "rarity": "diamond",
+        "element": "air",
+        "character": "<:sp_pa:698884548678910043> Parasoul",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/wBorne.png",
+        "stats": {
+            "atk": "613",
+            "hp": "3704",
+            "fs": "862"
+        },
+        "ability": "The Fog Rolls In...",
+        "SA1": "When Parasoul starts the match, TAGS IN, or TAGS OUT, the stage becomes FOGGY for 12 seconds. While the stage is FOGGY, inflict an unpreventable permanent FATIGUE and prevent any BUFFS or DEBUFFS applied to the opponent to DRAIN 5/7/10% BLOCKBUSTER METER (Max 20/35/50% per FOG).",
+        "SA2": "While the opponent is FATIGUED, the active Fighter DRAINS 1/1.5/2% MAX HEALTH when either Fighter is about to gain a BUFF or suffer a DEBUFF (Max 20/30/40% per FOG)."
     },
     "wildcard": {
         "name": "Wildcard",
@@ -4610,8 +4640,8 @@
             "fs": "402"
         },
         "ability": "GAME OVER",
-        "SA1": "50/75/100% chance when TRANSMUTING to the DARK element to inflict a permanent DOOM effect, killing the opponent after 30 seconds. DOOM will be removed if Double is defeated.",
-        "SA2": "When defeated, inflict 1/2/3 stack(s) of permanent BLEED."
+        "SA1": "50/75/100% chance when TRANSMUTING to ELEMENTAL ADVANTAGE to inflict QUIETUS and permanent DOOM for 15 seconds each. DOOM will be removed if Double is defeated or TAGS OUT.",
+        "SA2": "Gain EVASION for 10 seconds when either Fighter suffers a DEBUFF. After EVADING, remove 1 opponent BUFF and inflict DEATH MARK for 5/7/10 seconds."
     },
     "yellowone": {
         "name": "Yellow One",

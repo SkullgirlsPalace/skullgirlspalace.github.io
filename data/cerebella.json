@@ -241,7 +241,7 @@
                 },
                 "signature_ability": {
                     "name": "SITUAÇÃO ESPINHOSA",
-                    "description": "[HAB 1]: Inflija MARCA DA MORTE e ganhe ESPINHOS por 10 seg cada **quando um lutador tirar ao menos 10% da VIDA MÁX. com um só GOLPE.**\n\n[HAB 2]: **Oponentes ficam com SANGRAMENTO por 5 seg ao arrancar sofrendo MARCA DA MORTE.**"
+                    "description": "[HAB 1]: Para cada 10% de VIDA perdida por qualquer lutador, Cerebella ganha ESPINHOS e o oponente sofre MARCA DA MORTE e QUIETUS por 5/7/10 segundos cada.\n\n[HAB 2]: Drena 3/4/5% do MEDIDOR DE BLOCKBUSTER quando qualquer lutador acerta um GOLPE CRÍTICO enquanto Cerebella estiver sob efeito de ESPINHOS."
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

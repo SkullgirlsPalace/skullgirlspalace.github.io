@@ -246,6 +246,28 @@
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
                 "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+            },
+            {
+                "name": "Chamego",
+                "title_formatted": "Chamego - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#80ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/beowulf/Pillow_Talk.webp"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "66,048",
+                    "power": "27,437"
+                },
+                "signature_ability": {
+                    "name": "MEM?RIA REPRIMIDA",
+                    "description": "[HAB 1]: Enquanto Beowulf for o lutador ativo, Beowulf e o oponente sofrem QUIETUS permanente e suas ASSISTÊNCIAS ficam DESATIVADAS. Ao ativar o MODO HYPE, Beowulf recupera 10/20/30% de VIDA.\n\n[HAB 2]: Durante o MODO HYPE, aplica 2 EFEITOS NEGATIVOS aleatórios por 5/7/10 segundos a cada 2 segundos."
+                },
+                "marquee_ability": "Defensor do T?tulo",
+                "recommended_build": "ATQ%, Perfura??o, Precis?o e Dano Cr?tico",
+                "recommended_arsenal": "Wulf Shoot, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
             }
         ],
         "prata": [

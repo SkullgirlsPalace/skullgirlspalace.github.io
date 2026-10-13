@@ -241,7 +241,7 @@
                 },
                 "signature_ability": {
                     "name": "SOLO SANGUÍNEO",
-                    "description": "[HAB 1]: **Se um dos lutadores usar um BLOCKBUSTER, ambos sofrerão SANGRAMENTO** por 10 segundos.\n\n[HAB 2]: 100% de chance de **converter todos os efeitos de SANGRAMENTO do próprio lutador em REGENERAÇÃO.**"
+                    "description": "[HAB 1]: Quando qualquer lutador usa um ESPECIAL, ambos os lutadores sofrem SANGRAMENTO por 5/7/10 segundos.\n\n[HAB 2]: Ganha 25/50/100% de chance de converter todos os efeitos de SANGRAMENTO de si mesma em REGENERAÇÃO. Quando o oponente estiver prestes a ganhar REGENERAÇÃO, tem 25/50/100% de chance de impedi-la."
                 },
                 "marquee_ability": "Sacrifício Ritual ou Critless",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",

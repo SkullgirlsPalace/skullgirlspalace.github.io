@@ -221,8 +221,8 @@
             "fs": "444"
         },
         "ability": "SOLO SANGUÍNEO",
-        "SA1": "Se um dos lutadores usar um BLOCKBUSTER, ambos sofrerão SANGRAMENTO por 5/7/10 segundos.",
-        "SA2": "25/50/100% de chance de converter todos os efeitos de SANGRAMENTO do próprio lutador em REGENERAÇÃO."
+        "SA1": "Quando qualquer lutador usa um ESPECIAL, ambos os lutadores sofrem SANGRAMENTO por 5/7/10 segundos.\r",
+        "SA2": "Ganha 25/50/100% de chance de converter todos os efeitos de SANGRAMENTO em si em REGENERAÇÃO. Quando o oponente estiver prestes a ganhar REGENERAÇÃO, tem 25/50/100% de chance de impedi-la.\r"
     },
     "lockedin": {
         "name": "Bela do Bar",
@@ -671,8 +671,8 @@
             "fs": "471"
         },
         "ability": "SITUAÇÃO ESPINHOSA",
-        "SA1": "Inflija MARCA DA MORTE e ganhe ESPINHOS por 5/7/10 seg cada quando um lutador tirar ao menos 10% da VIDA MÁX. com um só GOLPE.",
-        "SA2": "Oponentes ficam com SANGRAMENTO por 3/4/5 seg ao arrancar sofrendo MARCA DA MORTE."
+        "SA1": "Para cada 10% de VIDA perdida por qualquer lutador, Cerebella ganha ESPINHOS e o oponente sofre MARCA DA MORTE e QUIETUS por 5/7/10 segundos cada.\r",
+        "SA2": "Drena 3/4/5% do MEDIDOR DE BLOCKBUSTER quando qualquer lutador acerta um GOLPE CRÍTICO enquanto Cerebella estiver sob efeito de ESPINHOS.\r"
     },
     "curlscout": {
         "name": "Escoteira",
@@ -1745,8 +1745,8 @@
             "fs": "804"
         },
         "ability": "DESEJO CORROMPIDO",
-        "SA1": "Uma vez por luta, ao TRANSMUTAR para o elemento do oponente, copie permanentemente sua Habilidade Característica, remova os EF. POS. dele e inflija FEITIÇO por 20/25/30 s.",
-        "SA2": "Ao derrotar um oponente sofrendo de um EF. NEG., ganhe 3 camadas de MIASMA e inflija 3 EF. NEGATIVOS aleatórios no próximo oponente por 10/15/20 s cada."
+        "SA1": "Quando a VIDA do oponente cai abaixo de 50/60/70%, aplica FEITIÇO impossível de impedir a todos os oponentes por 20 segundos. FEITIÇO é removido de todos os oponentes quando Double é derrotada.\r",
+        "SA2": "Enquanto o oponente estiver sofrendo FEITIÇO, remove 1 EFEITO POSITIVO do oponente e reduz a RESIST. ATQ CRÍT. dele em 5/7/10% a cada 2 segundos. Reinicia a duração do FEITIÇO de todos os oponentes a cada 7 GOLPES CRÍTICOS.\r"
     },
     "hallowfiend": {
         "name": "Hallow – Demônio\r",
@@ -1761,7 +1761,7 @@
         },
         "ability": "Injeção Letal\r",
         "SA1": "Enquanto nenhum dos BLOCKBUSTERS da Valentine estiver totalmente carregado, GOLPES que não sejam BLOCKBUSTER drenam 3/4/5% da BARRA DE BLOCKBUSTER.\r",
-        "SA2": "Se nenhum dos BLOCKBUSTERS dos oponentes estiver carregado, GOLPES DE BLOCKBUSTERS causam FEITIÇO por 4/5/6 s.\r"
+        "SA2": "GOLPES DE FRASCO e CONTRAVENENO aplicam FEITIÇO por 4/5/6 segundos.\r"
     },
     "heavyhanded": {
         "name": "Mão Pesada",
@@ -2555,8 +2555,8 @@
             "fs": "421"
         },
         "ability": "ECLIPSE TOTAL",
-        "SA1": "Inflija DEFINHAR por 10 s e ganhe 10/12/15% no medidor de PODER ESTELAR ao acertar um GOLPE CRÍTICO com um projétil.",
-        "SA2": "Uma vez por luta, ao ativar o PODER ESTELAR com o medidor cheio, REVIVA e CURE os aliados em 50/75/100% da VIDA faltando da Annie."
+        "SA1": "Ao acertar um GOLPE CRÍTICO com um projétil, aplica DEFINHAR por 10 segundos e ganha 10/12/15% do medidor de PODER ESTELAR. Quando o oponente atinge 5 acúmulos de DEFINHAR, remove todos os EFEITOS NEGATIVOS de Annie.\r",
+        "SA2": "Ao ativar PODER ESTELAR com o medidor cheio, REVIVE todos os colegas de equipe com 100% de VIDA. A cada REVIVER consecutivo, os colegas REVIVEM com 80/60/40% menos VIDA.\r"
     },
     "numbercruncher": {
         "name": "Tritura-Números",
@@ -2570,8 +2570,8 @@
             "fs": "409"
         },
         "ability": "PODER DOS CINCO",
-        "SA1": "25/35/50% de chance de ganhar 1 cam. de BENÇÃO por 20 s a cada 5 GOLPES COMBO.",
-        "SA2": "Ao atingir 5 cam. de BÊNÇÃO, remova todas as BÊNÇÃOS e inflija 5 cam. de QUEBRA DE GUARDA por 5/7/10 s."
+        "SA1": "Ganha 1 acúmulo de BÊNÇÃO por 5/10/15 segundos a cada 0/5 GOLPES DE COMBO.\r",
+        "SA2": "Quando Robo-Fortune ganha BÊNÇÃO, aplica QUEBRA DE GUARDA por 5/10/15 segundos. Enquanto estiver sob efeito de BÊNÇÃO, causa 5% de DANO adicional por GOLPE DE COMBO.\r"
     },
     "neardeath": {
         "name": "Perto da Morte",
@@ -2690,8 +2690,8 @@
             "fs": "385"
         },
         "ability": "PARALISIA DO SONO",
-        "SA1": "Ganhe 2 camadas de MIASMA por 10 s a cada 4/3/2 s enquanto estiver longe do oponente.",
-        "SA2": "Inflige IMOBILIZAR e FADIGA por 10 s a cada 4/3/2 s enquanto estiver próximo ao oponente."
+        "SA1": "Inflige IMOBILIZAR e FADIGA por 10 s a cada 4/3/2 s enquanto estiver próximo ao oponente.",
+        "SA2": "Enquanto o oponente estiver sofrendo FADIGA, ganha 1 acúmulo de MIASMA por 10 segundos a cada 4/3/2 segundos.\r"
     },
     "necrobreaker": {
         "name": "Quebra-morto",
@@ -2947,6 +2947,21 @@
         "ability": "PROJETOR VINTAGE",
         "SA1": "Projéteis causam 15/25/35% de dano extra para todos os aliados.",
         "SA2": "Todos os projéteis têm 10/15% de chance de infligir QUEBRA DE ARMADURA por 3/6 segundos."
+    },
+    "pillowtalk": {
+        "name": "Chamego\r",
+        "rarity": "gold",
+        "element": "air",
+        "character": "<:sp_beo:684771548414083107> Beowulf",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/be/pTalk.png",
+        "stats": {
+            "atk": "326",
+            "hp": "1764",
+            "fs": "434"
+        },
+        "ability": "Memória Reprimida\r",
+        "SA1": "Enquanto Beowulf for o lutador ativo, Beowulf e o oponente sofrem QUIETUS permanente e seus TAG-INs ficam DESATIVADOS. Ao ativar o MODO HYPE, Beowulf recupera 10/20/30% de VIDA.\r",
+        "SA2": "Durante o MODO HYPE, aplica 2 EFEITOS NEGATIVOS aleatórios por 5/7/10 segundos a cada 0 segundos.\r"
     },
     "pyrotechnique": {
         "name": "Piro-técnica",
@@ -3381,7 +3396,7 @@
         },
         "ability": "AMPLIFICADO E PRONTO",
         "SA1": "Enquanto Big Band estiver vivo, o lutador ativo tem 50% de chance de ganhar ACELERAÇÃO e REGENERAÇÃO PESADA por 5/7/10 segundos ao acertar um ATAQUE EM DISPARADA.\r",
-        "SA2": "Enquanto o lutador ativo estiver sob efeito de ACELERAÇÃO e REGENERAÇÃO, ATAQUES EM DISPARADA causam 50/75/100% de DANO adicional e aplicam MALDIÇÃO por 5/6/7 segundos.\r"
+        "SA2": "Enquanto o lutador ativo estiver sob efeito de ACELERAÇÃO e REGENERAÇÃO, ATAQUES EM DISPARADA causam 25/35/50% de DANO adicional e têm 50% de chance de aplicar MALDIÇÃO por 3/4/5 segundos.\r"
     },
     "rogueagent": {
         "name": "Agente Trapaceira",
@@ -3590,8 +3605,8 @@
             "fs": "429"
         },
         "ability": "CRESCENDO MATADOR",
-        "SA1": "Ao RECARREGAR com 3 TIROS ou menos restantes, ganhe 3 TIROS RELÂMPAGO. TIROS RELÂMPAGO DESATIVAM ENTRADAS NA ASSISTÊNCIA e têm 10% de chance de DESATIVAR BLOCKBUSTERS por 10/12/15 s cada.",
-        "SA2": "Enquanto o oponente estiver sofrendo de ASSIST. DESATIVADA, TIROS RELÂMPAGO tiram 0.5/1/1.5% da VIDA MÁX. como dano extra dos aliados do oponente. Enquanto o oponente estiver sofrendo de BLOCKB. DESATIVADOS, tira mais 0.5/1/1.5% da VIDA MÁX. de todos os oponentes."
+        "SA1": "Ao RECARREGAR com 3 DISPAROS ou menos restantes, ganha 3 DISPAROS ELÉTRICOS. GOLPES DE DISPARO ELÉTRICO aplicam OSCILAÇÃO DE ENERGIA a todos os oponentes por 10 segundos e DESATIVAM TAG-INs por 5/7/10 segundos.\r",
+        "SA2": "Os oponentes perdem {0:0.0}% da VIDA MÁXIMA por segundo por acúmulo de OSCILAÇÃO DE ENERGIA neles. Ao aplicar OSCILAÇÃO DE ENERGIA, causa dano equivalente a 1% da VIDA MÁXIMA ao oponente ativo e 2% aos oponentes no banco.\r"
     },
     "splittingimage": {
         "name": "Imagem Dividida",
@@ -3635,8 +3650,8 @@
             "fs": "191"
         },
         "ability": "ENERGIA NEGATIVA",
-        "SA1": "Oponentes sofrem MALDIÇÃO após 3/2/1 s enquanto estão perto de uma LÁGRIMA.",
-        "SA2": "Ganhe ESPINHOS a cada 3/2/1 s enquanto estiver perto de uma LÁGRIMA."
+        "SA1": "Ganha ESPINHOS a cada 2 segundos enquanto houver pelo menos 4/3/2 LÁGRIMAS no cenário. Oponentes sofrem MALDIÇÃO enquanto estiverem perto de uma LÁGRIMA.\r",
+        "SA2": "Recupera como VIDA 5/7/10% do dano causado por acúmulo de ESPINHOS em Parasoul. (máx. 25/35/50%)\r"
     },
     "standout": {
         "name": "A Vampira",
@@ -3816,7 +3831,7 @@
         },
         "ability": "Balança da obediência\r",
         "SA1": "Enquanto Filia tiver mais EFEITOS POSITIVOS ou menos EFEITOS NEGATIVOS que o oponente, transfere 1 EFEITO POSITIVO do oponente a cada 4/3/2 segundos e inflige 1 EFEITO NEGATIVO aleatório por segundo durante 7 segundos.\r",
-        "SA2": "Quando o total de EFEITOS POSITIVOS e EFEITOS NEGATIVOS entre os dois lutadores for maior ou igual a 25/20/17, o oponente sofre PERDIÇÃO permanente por 10 segundos, ignorando todos os efeitos que impedem EFEITOS NEGATIVOS.\r"
+        "SA2": "Quando o total de EFEITOS POSITIVOS e EFEITOS NEGATIVOS entre os dois lutadores for maior ou igual a 25/20/17, o oponente sofre PERDIÇÃO permanente por 20 segundos, ignorando todos os efeitos que impedem EFEITOS NEGATIVOS.\r"
     },
     "scarletviper": {
         "name": "Víbora Escarlate",
@@ -3980,8 +3995,8 @@
             "fs": "409"
         },
         "ability": "AUTÓPSIA ALIENÍGENA",
-        "SA1": "Enquanto FAMINTO, inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 25/35/50%. Ela é removida se a Umbrella SAIR DA ASSISTÊNCIA ou for derrotada.",
-        "SA2": "Ao derrotar um inimigo, ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 10/12/15 s."
+        "SA1": "Ao ficar FAMINTA, aplica DESTRUIÇÃO permanente por 30/25/20 segundos. DESTRUIÇÃO é removida quando Umbrella é NOCAUTEADA ou SAI.\r",
+        "SA2": "Enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, aplica um EFEITO NEGATIVO aleatório por 5/7/10 segundos a cada 5 GOLPES DE COMBO. Ao derrotar um oponente, ganha 10% do MEDIDOR DE BLOCKBUSTER por EFEITO NEGATIVO nele.\r"
     },
     "hacknsplash": {
         "name": "Corta e Afoga",
@@ -4054,9 +4069,9 @@
             "hp": "3335",
             "fs": "821"
         },
-        "ability": "DUAS CARAS",
-        "SA1": "Enquanto está do seu lado do cenário, a Valentine ganha 1 camada(s) de BARREIRA, ESPINHOS ou ARMADURA a cada 5/4/3 seg. Esses EF. POSITIVOS são removidos quando NOCAUTEADA.",
-        "SA2": "Ao ficar do lado do oponente, GOLPES CRÍTICOS infligem SANGRAMENTO, MARCA DA MORTE ou QUEBRA DE ARMADURA por 5/7/10 seg."
+        "ability": "Tempestade de agulhas\r",
+        "SA1": "Valentine ganha 3 acúmulos de BARREIRA permanente no início da partida e ao derrotar um oponente. Enquanto estiver sob efeito desta BARREIRA, a cada 3 GOLPES DE COMBO aumenta permanentemente sua Chance de Crítico e reduz permanentemente a RESIST. ATQ CRÍT. do oponente, ambos em 3/4/5%.\r",
+        "SA2": "GOLPES CRÍTICOS concedem ACELERAÇÃO e aplicam BLOQUEIO DE CURA, MARCA DA MORTE ou QUEBRA DE ARM. por 8/10/12 segundos cada.\r"
     },
     "nailbiter": {
         "name": "Roendo as Unhas\r",
@@ -4235,8 +4250,8 @@
             "fs": "875"
         },
         "ability": "Kung Falso\r",
-        "SA1": "Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Recupera 1/1.5/2% da VIDA MÁXIMA ao ganhar um acúmulo de CHUTE SOMBRIO. O próximo BLOCKBUSTER usado após atingir 10 acúmulos de CHUTE SOMBRIO invocará a MÃO DE GRENDEL para ACERTAR o oponente.\r",
-        "SA2": "Quando a MÃO DE GRENDEL ACERTA com sucesso, ganha INABALÁVEL por 10/12/15 segundos. Ao ganhar um acúmulo de CHUTE SOMBRIO enquanto se beneficia de INABALÁVEL, causa 2/2.5/3% da VIDA MÁXIMA como dano ao oponente e ganha 2/3/4% do MEDIDOR DE BLOCKBUSTER.\r"
+        "SA1": "Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Ao ganhar um acúmulo de CHUTE SOMBRIO, TRANSFERE 1 EFEITO POSITIVO do oponente. BLOCKBUSTERS gastam 10/7/5 acúmulos de CHUTE SOMBRIO para invocar a MÃO DE GRENDEL e ACERTAR o oponente.\r",
+        "SA2": "Ao gastar 5 ou mais acúmulos de CHUTE SOMBRIO, ganha INABALÁVEL por 10/12/15 segundos. Oponentes derrotados enquanto este INABALÁVEL estiver ativo não podem mais REVIVER."
     },
     "chameleontwist": {
         "name": "Virada do Camaleão",
@@ -4417,6 +4432,21 @@
         "ability": "ESTRANGULAMENTO",
         "SA1": "ARREMESSOS têm 50% de chance de infligir INCAPACITAÇÃO e BLOQUEIO DE CURA por 5/7/10 segundos.",
         "SA2": "Causa 25/35/50% de dano extra contra oponentes sofrendo um EFEITO NEGATIVO."
+    },
+    "dreamgirl": {
+        "name": "Garota dos Sonhos\r",
+        "rarity": "diamond",
+        "element": "air",
+        "character": "<:sp_pa:698884548678910043> Parasoul",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/pa/wBorne.png",
+        "stats": {
+            "atk": "613",
+            "hp": "3704",
+            "fs": "862"
+        },
+        "ability": "A Neblina Avança...\r",
+        "SA1": "Quando Parasoul começa a partida, faz TAG-IN ou SAI, o cenário fica NEBULOSO por 12 segundos. Enquanto o cenário estiver NEBULOSO, aplica FADIGA permanente que não pode ser impedida e impede qualquer EFEITO POSITIVO ou EFEITO NEGATIVO que seria aplicado ao oponente para DRENAR 5/7/10% do MEDIDOR DE BLOCKBUSTER (máx. 20/35/50% por NÉVOA).\r",
+        "SA2": "Enquanto o oponente estiver sofrendo FADIGA, o lutador ativo DRENA 1/1.5/2% da VIDA MÁXIMA quando qualquer lutador estiver prestes a ganhar um EFEITO POSITIVO ou sofrer um EFEITO NEGATIVO (máx. 20/30/40% por NÉVOA).\r"
     },
     "wildcard": {
         "name": "Supercuringa",
@@ -4610,8 +4640,8 @@
             "fs": "402"
         },
         "ability": "FIM DE JOGO",
-        "SA1": "Ao TRANSMUTAR para o elemento TREVAS, 50/75/100% de chance de infligir um efeito de DESTRUIÇÃO permanente, matando o oponente após 30 s. A DESTRUIÇÃO será removida se a Double for derrotada.",
-        "SA2": "Quando derrotada, inflige 1/2/3 camada(s) de SANGRAMENTO permanente."
+        "SA1": "Ao TRANSMUTAR para VANTAGEM ELEMENTAL, tem 50/75/100% de chance de aplicar QUIETUS e DESTRUIÇÃO permanente por 15 segundos cada. DESTRUIÇÃO é removida se Double for derrotada ou SAIR.\r",
+        "SA2": "Quando qualquer lutador sofre um EFEITO NEGATIVO, ganha ESQUIVA por 10 segundos. Após ESQUIVAR, remove 1 EFEITO POSITIVO do oponente e aplica MARCA DA MORTE por 5/7/10 segundos.\r"
     },
     "yellowone": {
         "name": "A Amarela\r",

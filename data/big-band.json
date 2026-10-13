@@ -87,7 +87,7 @@
                 },
                 "signature_ability": {
                     "name": "PREPARAURSO",
-                    "description": "[HAB 1]: Enquanto Big Band tiver colegas de equipe vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 10/12/15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\n\n[HAB 2]: Com um colega de equipe vivo, Big Band sofre 10/15/20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem colegas de equipe vivos, esses efeitos são dobrados."
+                    "description": "[HAB 1]: Enquanto Big Band aliados vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\n\n[HAB 2]: Com um colega de equipe vivo, Big Band sofre 20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem aliados vivos, esses efeitos são dobrados."
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resist?ncia e Ganho Medidor",
@@ -175,7 +175,7 @@
                 },
                 "signature_ability": {
                     "name": "AMPLIFICADO E PRONTO",
-                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo**, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 10 s a cada 15 s\n\n[HAB 2]: **Ao se beneficiar** de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. **Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO**, a duração dela aumenta em 5 s."
+                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo, o lutador ativo tem 50% de chance de ganhar ACELERAÇÃO e REGENERAÇÃO FORTE por 10 segundos ao acertar um ATAQUE DE ARRANCADA.\n\n[HAB 2]: Enquanto o lutador ativo estiver sob efeito de ACELERAÇÃO e REGENERAÇÃO, ATAQUES DE ARRANCADA causam 50% de DANO adicional e têm 50% de chance de aplicar MALDIÇÃO por 5 segundos."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho medidor",

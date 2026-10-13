@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "KUNG FALSO",
-                    "description": "[HAB 1]: Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Recupera 1/1.5/2% da VIDA MÁXIMA ao ganhar um acúmulo de CHUTE SOMBRIO. O próximo BLOCKBUSTER usado após atingir 10 acúmulos de CHUTE SOMBRIO invocará a MÃO DE GRENDEL para ACERTAR o oponente.\n\n[HAB 2]: Quando a MÃO DE GRENDEL ACERTA com sucesso, ganha INABALÁVEL por 10/12/15 segundos. Ao ganhar um acúmulo de CHUTE SOMBRIO enquanto se beneficia de INABALÁVEL, causa 2/2.5/3% da VIDA MÁXIMA como dano ao oponente e ganha 2/3/4% do MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Ao ganhar um acúmulo de CHUTE SOMBRIO, TRANSFERE 1 EFEITO POSITIVO do oponente. BLOCKBUSTERS gastam 10/7/5 acúmulos de CHUTE SOMBRIO para invocar a MÃO DE GRENDEL e ACERTAR o oponente.\n\n[HAB 2]: Ao gastar 5 ou mais acúmulos de CHUTE SOMBRIO, ganha INABALÁVEL por 10/12/15 segundos. Oponentes derrotados enquanto este INABALÁVEL estiver ativo não podem mais REVIVER."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",
@@ -175,7 +175,7 @@
                 },
                 "signature_ability": {
                     "name": "PARALISIA DO SONO",
-                    "description": "[HAB 1]: Ganhe 2 camadas de MIASMA por 10 s a cada 2 s **enquanto estiver longe do oponente.**\n\n[HAB 2]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 2 s **enquanto estiver próximo ao oponente.**"
+                    "description": "[HAB 1]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 4/3/2 s enquanto estiver próximo ao oponente.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo FADIGA, ganha 1 acúmulo de MIASMA por 10 segundos a cada 4/3/2 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

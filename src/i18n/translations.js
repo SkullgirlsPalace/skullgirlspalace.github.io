@@ -11,7 +11,7 @@ export const translations = {
       characters: 'Personagens',
       guide: 'Wiki',
       gameInfo: 'Informações de Jogo',
-      events: 'Eventos',
+      events: 'Rotações',
       timeConverter: 'Fuso horário',
       calculator: 'Calculadora',
       about: 'Sobre'
@@ -23,7 +23,7 @@ export const translations = {
       characters: 'PERSONAGENS',
       guide: 'WIKI',
       gameInfo: 'INFORMAÇÕES DE JOGO',
-      events: 'EVENTOS',
+      events: 'ROTAÇÕES',
       calculator: 'CALCULADORA',
       hub: 'SKULLGIRLS MOBILE HUB',
       about: 'SOBRE'
@@ -439,7 +439,7 @@ export const translations = {
       characters: 'Characters',
       guide: 'Wiki',
       gameInfo: 'Game Info',
-      events: 'Events',
+      events: 'Rotations',
       timeConverter: 'Time zone',
       calculator: 'Calculator',
       about: 'about'
@@ -451,7 +451,7 @@ export const translations = {
       characters: 'CHARACTERS',
       guide: 'WIKI',
       gameInfo: 'GAME INFO',
-      events: 'EVENTS',
+      events: 'ROTATIONS',
       calculator: 'CALCULATOR',
       hub: 'SKULLGIRLS MOBILE HUB',
       about: 'ABOUT'

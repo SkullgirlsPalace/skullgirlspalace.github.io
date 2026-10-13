@@ -331,7 +331,7 @@
                 },
                 "signature_ability": {
                     "name": "Injeção Letal",
-                    "description": "[HAB 1]: **Enquanto nenhum dos BLOCKBUSTERS da Valentine estiver totalmente carregado**, GOLPES que não sejam BLOCKBUSTER drenam 5% da BARRA DE BLOCKBUSTER.\n\n[HAB 2]: **Se nenhum dos BLOCKBUSTERS dos oponentes estiver carregado**, GOLPES DE BLOCKBUSTERS causam FEITIÇO por 6 s."
+                    "description": "[HAB 1]: **Enquanto nenhum dos BLOCKBUSTERS da Valentine estiver totalmente carregado**, GOLPES que não sejam BLOCKBUSTER drenam 5% de MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: **Se nenhum dos BLOCKBUSTERS dos oponentes estiver carregado**, GOLPES DE BLOCKBUSTERS causam FEITIÇO por 6 s."
                 },
                 "marquee_ability": "UTI",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
