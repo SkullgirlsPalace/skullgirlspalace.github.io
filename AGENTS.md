@@ -21,6 +21,10 @@ Skullgirls Palace (https://skullgirlspalace.github.io/) é uma wiki de Skullgirl
 - `npm run build`: monta o site em `_site/`. Para ver como vai ao ar, rode `python3 -m http.server -d _site`.
 - Não há lint nem type-check configurado. Verificar uma mudança é rodar os testes e abrir o site.
 
+## Branches e commits
+
+Leia `docs/BRANCHES.md`. `seo/google-indexing` prepara mudanças públicas de indexação para a `main`; `nova-fase-v0` é uma beta fechada. Antes de trabalhar ou commitar nessas branches, faça `git fetch origin --prune` e confira se `origin/main` é ancestral de `HEAD`. Se não for, preserve o trabalho local e integre a principal na branch atual antes de validar e commitar. Nunca integre a beta à branch SEO ou à `main` como parte dessa sincronização. O hook de pré-commit pode ser instalado com `npm run setup:hooks`; não o contorne para commitar uma branch atrasada.
+
 ## Build e deploy
 
 Um push na `main` dispara `.github/workflows/deploy.yml`, que roda em ordem:

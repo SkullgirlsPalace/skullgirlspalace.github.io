@@ -7,6 +7,7 @@
     "optimize": "node tools/optimize-images.cjs",
     "test": "vitest",
     "test:run": "vitest run",
+    "setup:hooks": "git config core.hooksPath .githooks",
     "test:coverage": "vitest run --coverage",
     "build": "node tools/build-site.js",
     "postbuild": "node tools/audit-site.js",

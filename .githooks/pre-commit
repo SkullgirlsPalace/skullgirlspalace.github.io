@@ -1,0 +1,15 @@
+#!/bin/sh
+# Keep the public SEO branch and the private beta based on the latest main.
+branch=$(git branch --show-current) || exit 1
+case "$branch" in
+    seo/google-indexing|nova-fase-v0)
+        if ! git fetch --quiet origin main; then
+            echo "Nao foi possivel conferir origin/main. O commit foi interrompido para evitar usar uma referencia desatualizada." >&2
+            exit 1
+        fi
+        if ! git merge-base --is-ancestor origin/main HEAD; then
+            echo "A branch $branch ainda nao incorpora origin/main. Sincronize com git merge origin/main, preserve seus ajustes e valide antes de commitar." >&2
+            exit 1
+        fi
+        ;;
+esac
