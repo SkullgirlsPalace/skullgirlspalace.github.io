@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // Mock Calculator dependency (huge component)
-vi.mock('../../../src/components/Calculator.js', () => ({
+vi.mock('../../../src/components/CalculatorStudio.js', () => ({
   createCalculator: vi.fn(() => '<div class="calculator-mock" id="calculator-mock"><div class="calc-tabs"><button class="calc-tab-btn active" data-tab="earnings">Ganhos</button></div></div>'),
   initCalculator: vi.fn(),
   initToggleButtons: vi.fn(),
@@ -65,11 +65,12 @@ describe('statistics.js page', () => {
       expect(container).not.toBeNull();
     });
 
-    it('should render the stats intro card with h3', () => {
+    it('should render the stats intro text', () => {
       const introCard = document.querySelector('.stats-intro .intro-card');
       expect(introCard).not.toBeNull();
-      const h3 = introCard.querySelector('h3');
-      expect(h3).not.toBeNull();
+      const paragraph = introCard.querySelector('p');
+      expect(paragraph).not.toBeNull();
+      expect(paragraph.textContent.trim().length).toBeGreaterThan(0);
     });
 
     it('should render the calculator inside the container', () => {

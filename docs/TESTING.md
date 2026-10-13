@@ -54,7 +54,7 @@ npm test
 npm run test:coverage
 ```
 
-Isso mostra quanto do código está coberto pelos testes. Atualmente estamos com **~22% de coverage** e o mínimo aceito é **20%**.
+Isso mostra quanto do código está coberto pelos testes. Atualmente estamos com **~37% de coverage** de linhas. Abaixo dos mínimos de `coverage.thresholds` no `vitest.config.js` (35% de linhas e de statements, 20% de funções, 15% de branches) o comando falha.
 
 ### Rodar Apenas Um Arquivo de Teste
 
@@ -94,7 +94,7 @@ Quando você faz push para o GitHub, o pipeline automaticamente:
 
 1. Instala as dependências
 2. Roda todos os testes
-3. Verifica se a coverage está acima de 20%
+3. Falha se a coverage ficar abaixo dos mínimos do `vitest.config.js`
 4. Só faz deploy se os testes passarem
 
 **Se os testes falharem, o deploy NÃO acontece.**
@@ -123,7 +123,7 @@ npm install
 
 ### Coverage abaixo do threshold
 
-Se a coverage estiver abaixo de 20%, o pipeline vai falhar. Para aumentar:
+Se a coverage estiver abaixo dos mínimos (35% de linhas), o pipeline vai falhar. Para aumentar:
 
 1. Identifique arquivos com baixa cobertura
 2. Adicione mais testes para esses arquivos
@@ -136,7 +136,7 @@ Se a coverage estiver abaixo de 20%, o pipeline vai falhar. Para aumentar:
 ### ✅ Faça
 
 - Rode os testes antes de commitar mudanças importantes
-- Mantenha a coverage acima do mínimo (20%)
+- Mantenha a coverage acima do mínimo (35% de linhas)
 - Adicione novos testes quando criar novas funcionalidades
 - Nomeie os testes de forma clara (ex: "should return correct value for X")
 
@@ -152,8 +152,8 @@ Se a coverage estiver abaixo de 20%, o pipeline vai falhar. Para aumentar:
 
 - **Framework**: Vitest v4.1
 - **Ambiente DOM**: Happy-DOM
-- **Coverage mínima**: 20% (lines)
-- **Total de testes**: 281
+- **Coverage mínima**: 35% (lines)
+- **Total de testes**: 460
 
 ---
 

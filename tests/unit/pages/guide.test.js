@@ -28,7 +28,7 @@ vi.mock('../../../src/utils/formatters.js', () => ({
     formatConstraint: vi.fn((c) => c || '')
 }));
 
-import { render, init } from '../../../src/pages/guide.js';
+import { renderGameInfo as render, render as renderWikiEntry, init } from '../../../src/pages/guide.js';
 
 describe('guide.js', () => {
     beforeEach(() => {
@@ -46,6 +46,13 @@ describe('guide.js', () => {
     });
 
     describe('render', () => {
+        it('keeps the Wiki entry navigation separate from the game information tabs', () => {
+            const html = renderWikiEntry();
+            expect(html).toContain("navigateTo('game-info')");
+            expect(html).toContain("navigateTo('time-converter')");
+            expect(html).toContain('Rotações');
+            expect(html).not.toContain('tab-statistics');
+        });
         it('should return HTML string', () => {
             const html = render();
             expect(html).toContain('guide-container');

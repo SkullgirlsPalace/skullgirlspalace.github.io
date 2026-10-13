@@ -32,7 +32,7 @@ describe('guide.js page', () => {
     let html;
 
     beforeEach(async () => {
-      const { render } = await import('../../../src/pages/guide.js');
+      const { renderGameInfo: render } = await import('../../../src/pages/guide.js');
       html = render();
       document.body.innerHTML = html;
     });
@@ -43,12 +43,12 @@ describe('guide.js page', () => {
     });
 
     it('should render 3 tab buttons', () => {
-      const tabs = document.querySelectorAll('.guide-tab-btn');
+      const tabs = document.querySelectorAll('[onclick^="switchGuideTab("]');
       expect(tabs.length).toBe(3);
     });
 
     it('should open the statistics tab by default', () => {
-      const button = document.querySelector('.guide-tab-btn.active');
+      const button = document.querySelector('.guide-tab-btn.active[onclick^="switchGuideTab("]');
       const tab = document.querySelector('#tab-statistics');
       expect(button.getAttribute('onclick')).toContain("'statistics'");
       expect(tab.classList.contains('active')).toBe(true);
@@ -76,19 +76,13 @@ describe('guide.js page', () => {
       expect(specialList).not.toBeNull();
     });
 
-    it('should render the catalysts tab with element filter buttons', () => {
+    it('should render the catalysts tab with search and catalog category filters', () => {
       const tab = document.querySelector('#tab-catalysts');
       expect(tab).not.toBeNull();
 
-      const filterBtns = tab.querySelectorAll('.cotw-filter-btn');
-      expect(filterBtns.length).toBe(5); // water, fire, wind, light, dark
-
-      const elements = Array.from(filterBtns).map(b => b.dataset.element);
-      expect(elements).toContain('water');
-      expect(elements).toContain('fire');
-      expect(elements).toContain('wind');
-      expect(elements).toContain('light');
-      expect(elements).toContain('dark');
+      expect(tab.querySelector('#guide-catalyst-search')).not.toBeNull();
+      expect(tab.querySelector('#guide-catalyst-filters')).not.toBeNull();
+      expect(tab.querySelector('#catalyst-container')).not.toBeNull();
     });
 
     it('should not expose the Renda Passiva tutorial in the guide', () => {
@@ -121,7 +115,7 @@ describe('guide.js page', () => {
     });
 
     it('switchGuideTab should activate the correct tab', async () => {
-      const { render, init } = await import('../../../src/pages/guide.js');
+      const { renderGameInfo: render, init } = await import('../../../src/pages/guide.js');
       document.body.innerHTML = render();
       await init();
 

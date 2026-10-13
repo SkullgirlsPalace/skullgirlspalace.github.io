@@ -4,11 +4,14 @@
   "description": "Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso",
   "main": "src/main.js",
   "scripts": {
-    "optimize": "node tools/optimize-images.js",
+    "optimize": "node tools/optimize-images.cjs",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "generate:seo": "node tools/generate-seo-entry-pages.js"
+    "build": "node tools/build-site.js",
+    "postbuild": "node tools/audit-site.js",
+    "audit:site": "node tools/audit-site.js",
+    "indexnow": "node tools/submit-indexnow.js"
   },
   "repository": {
     "type": "git",

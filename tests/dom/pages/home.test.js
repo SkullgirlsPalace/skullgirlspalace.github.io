@@ -51,7 +51,8 @@ describe('home.js page', () => {
     it('should have a button to navigate to guide', () => {
       const buttons = document.querySelectorAll('.hub-btn');
       const labels = Array.from(buttons).map(b => b.textContent.trim());
-      expect(labels).toContain('GUIA');
+      expect(labels).toContain('WIKI');
+      expect(document.querySelector('.hub-btn[href="#guide"]')).not.toBeNull();
     });
 
     it('should have a button to navigate to stats (Calculadora)', () => {

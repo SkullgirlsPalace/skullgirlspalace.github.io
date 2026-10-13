@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // Mock Calculator component
-vi.mock('../../../src/components/Calculator.js', () => ({
+vi.mock('../../../src/components/CalculatorStudio.js', () => ({
     createCalculator: vi.fn(() => '<div class="calculator">Calculator UI</div>'),
     initCalculator: vi.fn(),
     initToggleButtons: vi.fn(),
@@ -64,7 +64,7 @@ describe('statistics.js', () => {
         });
 
         it('should call createCalculator', async () => {
-            const { createCalculator } = await import('../../../src/components/Calculator.js');
+            const { createCalculator } = await import('../../../src/components/CalculatorStudio.js');
             render();
             expect(createCalculator).toHaveBeenCalled();
         });
@@ -78,7 +78,7 @@ describe('statistics.js', () => {
         });
 
         it('should initialize calculator when data loads', async () => {
-            const { initCalculator, initToggleButtons, handleCalculateEarnings } = await import('../../../src/components/Calculator.js');
+            const { initCalculator, initToggleButtons, handleCalculateEarnings } = await import('../../../src/components/CalculatorStudio.js');
             await init();
             expect(initCalculator).toHaveBeenCalled();
             expect(initToggleButtons).toHaveBeenCalled();
@@ -100,7 +100,7 @@ describe('statistics.js', () => {
             const { loadStatistics } = await import('../../../src/services/dataService.js');
             loadStatistics.mockResolvedValueOnce(null);
 
-            const { initCalculator } = await import('../../../src/components/Calculator.js');
+            const { initCalculator } = await import('../../../src/components/CalculatorStudio.js');
             initCalculator.mockClear();
 
             await init();

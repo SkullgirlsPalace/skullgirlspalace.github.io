@@ -31,18 +31,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Fails below the coverage thresholds in vitest.config.js.
       - name: Run tests with coverage
         run: npm run test:coverage
 
-      - name: Check coverage threshold (35%)
-        run: |
-          COVERAGE=$(cat coverage/coverage-summary.json | jq '.total.lines.pct')
-          echo "Coverage: $COVERAGE%"
-          if (( $(echo "$COVERAGE < 35" | bc -l) )); then
-            echo "::error::Coverage $COVERAGE% is below 35% threshold"
-            exit 1
-          fi
-          echo "✅ Coverage check passed: $COVERAGE% >= 35%"
+      # Checks publication weight and duplicates on pull requests as well as deploys.
+      - name: Build and check published site
+        run: npm run build
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
@@ -62,14 +57,41 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Writes the static content pages and sitemap.xml into _site/ next to the published files.
+      - name: Build site
+        run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Tells Bing (and other IndexNow engines) to recrawl every sitemap URL after a deploy.
+      - name: Submit sitemap URLs to IndexNow
+        run: npm run indexnow

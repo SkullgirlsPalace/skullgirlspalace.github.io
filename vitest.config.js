@@ -15,10 +15,12 @@ export default defineConfig({
         'src/data/movesimages.js', // 2287 lines - tested via getMoveData
         'src/data/newContent.js',  // Static data
       ],
-      lines: 35,
-      functions: 20,
-      branches: 15,
-      statements: 35
+      thresholds: {
+        lines: 35,
+        functions: 20,
+        branches: 15,
+        statements: 35
+      }
     }
   }
 });
