@@ -72,7 +72,7 @@ export function render() {
       <!-- BUFFS SECTION -->
       <div class="modifiers-section">
         <h2 class="section-title" style="color: var(--accent-green); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-          <img loading="lazy" src="img/modifiers/buffs/Regen.webp" style="width: 24px; height: 24px;">
+          <span class="modifier-heading-icon modifier-heading-icon--positive" aria-hidden="true"></span>
           ${t('guide.positiveEffects')}
         </h2>
         <div class="effects-table-container">
@@ -97,7 +97,7 @@ export function render() {
       <!-- DEBUFFS SECTION -->
       <div class="modifiers-section">
         <h2 class="section-title" style="color: var(--accent-red); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-          <img loading="lazy" src="img/modifiers/debuffs/Bleed.webp" style="width: 24px; height: 24px;">
+          <span class="modifier-heading-icon modifier-heading-icon--negative" aria-hidden="true"></span>
           ${t('guide.negativeEffects')}
         </h2>
         <div class="effects-table-container">
@@ -122,7 +122,7 @@ export function render() {
       <!-- SPECIAL EFFECTS SECTION -->
       <div class="modifiers-section">
         <h2 class="section-title" style="color: #b0bec5; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-          <img loading="lazy" src="img/modifiers/permanent/Permanent.webp" style="width: 24px; height: 24px;">
+          <span class="modifier-heading-icon modifier-heading-icon--permanent" aria-hidden="true"></span>
           ${t('guide.permanentEffect')}
         </h2>
         <div class="effects-table-container">

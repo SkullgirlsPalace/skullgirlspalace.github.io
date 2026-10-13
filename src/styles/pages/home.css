@@ -146,9 +146,12 @@
   color: var(--accent-gold);
 }
 
-.home-about-link img {
+.home-about-icon {
+  display: inline-block;
   height: 16px;
-  width: auto;
+  width: 16px;
+  flex-shrink: 0;
+  background: url('../../../img/official/IconInfo.webp') center / contain no-repeat;
   filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
   -webkit-filter: brightness(0.8) sepia(1) saturate(5) hue-rotate(5deg);
 }

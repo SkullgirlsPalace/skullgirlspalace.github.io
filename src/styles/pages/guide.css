@@ -79,6 +79,26 @@
 }
 
 /* Effects Table */
+.modifier-heading-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: center / contain no-repeat;
+}
+
+.modifier-heading-icon--positive {
+    background-image: url('../../../img/modifiers/buffs/Regen.webp');
+}
+
+.modifier-heading-icon--negative {
+    background-image: url('../../../img/modifiers/debuffs/Bleed.webp');
+}
+
+.modifier-heading-icon--permanent {
+    background-image: url('../../../img/modifiers/permanent/Permanent.webp');
+}
+
 .effects-table-container {
     background: var(--bg-card);
     border-radius: var(--border-radius);
