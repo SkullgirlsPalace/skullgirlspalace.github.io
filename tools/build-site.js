@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { seoSlug } from '../src/utils/seoRoutes.js';
+import { renderCharacterOverviewContent, renderPlainParagraphs as renderParagraphs } from '../src/utils/characterOverview.js';
 
 export const SITE_ORIGIN = 'https://skullgirlspalace.github.io';
 const ROOT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -38,21 +39,6 @@ function escapeHtml(value) {
     return String(value ?? '').replace(/[&<>"']/g, character => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     })[character]);
-}
-
-/** Plain-text version of src/utils/formatters.js#formatText, split into paragraphs. */
-function renderParagraphs(text) {
-    const raw = Array.isArray(text) ? text.join('\n') : String(text ?? '');
-    return raw
-        .replace(/\[HAB \d+\]:\s*/g, '')
-        .replace(/\*\*([^*]+)\*\*/g, '$1')
-        .replace(/<:[^:]+:\d+>/g, '')
-        .replace(/\\n/g, '\n')
-        .split(/\n+/)
-        .map(line => line.trim())
-        .filter(Boolean)
-        .map(line => `<p>${escapeHtml(line)}</p>`)
-        .join('');
 }
 
 function readCharacters(dataDir) {
@@ -119,18 +105,8 @@ function renderAllVariants(characters) {
 }
 
 function renderCharacter(character) {
-    const counts = character.groups.map(group => `${group.variants.length} ${group.label.toLowerCase()}`).join(', ');
-    const variants = rarityGroups(character, variant => {
-        const stats = variant.stats || {};
-        const signature = variant.signature_ability || {};
-        return `<article><h3>${escapeHtml(variant.name)}</h3>`
-            + `<p>Elemento: ${escapeHtml(variant.element)}. Ataque ${escapeHtml(stats.attack)}, Vida ${escapeHtml(stats.health)}, Pontuação ${escapeHtml(stats.power)}.</p>`
-            + `<h4>Habilidade característica: ${escapeHtml(signature.name)}</h4>${renderParagraphs(signature.description)}`
-            + `</article>`;
-    });
     return `<h1>${escapeHtml(character.name)}</h1>`
-        + `<p>${escapeHtml(character.name)} tem ${character.variantCount} variantes em Skullgirls Mobile: ${escapeHtml(counts)}.</p>`
-        + characterLinks(character) + variants;
+        + characterLinks(character) + renderCharacterOverviewContent(character);
 }
 
 function renderBuilds(character) {
@@ -255,7 +231,10 @@ export function buildSite({ rootDir = ROOT_DIR, outDir = DEFAULT_OUT_DIR, publis
     fs.rmSync(outDir, { recursive: true, force: true });
     fs.mkdirSync(outDir, { recursive: true });
     for (const publishedPath of publishedPaths) {
-        fs.cpSync(path.join(rootDir, publishedPath), path.join(outDir, publishedPath), { recursive: true });
+        fs.cpSync(path.join(rootDir, publishedPath), path.join(outDir, publishedPath), {
+            recursive: true,
+            filter: source => !/(?:\.(?:bak|backup|orig|tmp)|~)$/i.test(path.basename(source))
+        });
     }
     for (const entry of entries) {
         const target = path.join(outDir, entry.relativePath);

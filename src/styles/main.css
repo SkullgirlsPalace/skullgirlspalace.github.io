@@ -31,6 +31,7 @@
 /* Pages */
 @import 'pages/home.css';
 @import 'pages/character-detail.css';
+@import 'pages/character-overview.css';
 @import 'pages/statistics.css';
 @import 'pages/catalysts.css';
 @import 'pages/tierlist.css';

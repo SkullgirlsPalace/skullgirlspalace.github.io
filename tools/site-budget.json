@@ -1,0 +1,17 @@
+{
+  "limits": {
+    "siteBytes": 80000000,
+    "javascriptBytes": 850000,
+    "cssBytes": 330000,
+    "imageBytes": 68000000,
+    "fontBytes": 10000000,
+    "fontFiles": 5,
+    "dataBytes": 2000000,
+    "singleImageBytes": 500000
+  },
+  "allowedDuplicates": [
+    ["img/double/Double_27.webp", "img/peacock/Peacock_26.webp"],
+    ["img/portrait/fu/rCopy.webp", "img/portrait/fu/rCopy_.webp"],
+    ["img/portrait/bb/rCopy.webp", "img/portrait/bb/rCopy_.webp"]
+  ]
+}

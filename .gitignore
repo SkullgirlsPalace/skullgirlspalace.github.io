@@ -2,6 +2,12 @@ raw_images/
 node_modules/
 _site/
 coverage/
+dist/
+*.tmp
+*.bak
+*.backup
+*.orig
+*~
 
 # Claude Code configuration (local only)
 .claude/
