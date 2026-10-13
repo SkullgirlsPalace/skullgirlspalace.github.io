@@ -55,6 +55,7 @@ Só vai ao ar o que está em `PUBLISHED_PATHS` dentro desse arquivo. Um arquivo 
 - **Router** (`src/router.js`):
   - Rotas por hash: `''` (home), `characters`, `character/<key>/<builds|tier>`, `catalysts`, `tierlist`, `stats`, `guide` e `tutorial-renda-passiva`.
   - Rotas por caminho (`/characters/...`): vêm de `src/utils/seoRoutes.js`. Se a URL tem hash, a hash ganha.
+  - `/characters/<slug>/` usa a página leve `character-overview.js`, importada sob demanda; `/builds/` mantém as recomendações existentes. A visão geral estática e a SPA compartilham `src/utils/characterOverview.js`, conforme a ADR 0003.
   - Cada página é um módulo em `src/pages/` com `render()`, que devolve uma string que vira o `innerHTML` de `<main id="app">`, e um `init()` opcional.
 - **Dados**: `src/services/dataService.js` busca e guarda em cache os `data/*.json`. Há um JSON por personagem, com as variantes agrupadas por raridade (`diamante`, `ouro`, `prata`, `bronze`). A tier list fica em `data/tier-data.json`, com ranks por variante nos modos `pf`, `parallel`, `riftOff` e `riftDef`. Quando falta rank, a tela mostra B. Dados fixos grandes ficam em módulos JS em `src/data/`.
 - **Estado** (`src/state/store.js`): um singleton com assinantes. As preferências ficam em `localStorage.SGM_USER_PREFS`.
@@ -107,6 +108,6 @@ O problema não é o GitHub Pages, é o que o site manda baixar. Toda mudança d
 ## Armadilhas conhecidas
 
 - O `package.json` é `"type": "module"`, então todo `.js` é ES module. Os scripts antigos de `tools/` que usam `require` têm extensão `.cjs` por isso. Script novo deve usar `import`, como o `build-site.js`.
-- `raw_images/` (originais locais) e `dist/` (um build antigo do Vite) foram retirados do versionamento e estão ignorados. As cópias locais foram preservadas e o histórico antigo ainda as contém. O site não usa nenhum dos dois; não referencie nada deles.
+- `raw_images/` (originais locais) e `dist/` (um build antigo do Vite) ficam fora do versionamento. As cópias locais foram preservadas e o histórico antigo ainda as contém. O site não usa nenhum dos dois; não referencie nada deles.
 - `data/krazete/stanleyDB-*.json` não está no repo. Por isso `src/pages/character-profile.js` toma 404 toda vez que busca esses arquivos, e `tools/process-moves.cjs`, `process-catalysts.cjs` e `fix-json-move-names.cjs` não rodam.
 - Ao trocar de idioma, os listeners de scroll, hashchange e tooltip são adicionados de novo sem remover os antigos.

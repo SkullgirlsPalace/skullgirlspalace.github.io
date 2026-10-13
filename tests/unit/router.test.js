@@ -18,6 +18,11 @@ vi.mock('../../src/pages/character-detail.js', () => ({
     switchTab: vi.fn()
 }));
 
+vi.mock('../../src/pages/character-overview.js', () => ({
+    render: vi.fn(() => '<section id="character-overview">Overview</section>'),
+    init: vi.fn()
+}));
+
 vi.mock('../../src/pages/catalysts.js', () => ({
     render: vi.fn(() => '<div>Catalysts</div>'),
     init: vi.fn()
@@ -138,6 +143,18 @@ describe('router.js', () => {
             window.location.pathname = '/characters/annie/tier-list/';
             initRouter();
             expect(characterDetail.render).toHaveBeenCalledWith('annie', 'tier');
+        });
+
+        it('opens a distinct overview on the character root while retaining the builds route', async () => {
+            const overview = await import('../../src/pages/character-overview.js');
+            const detail = await import('../../src/pages/character-detail.js');
+            window.location.pathname = '/characters/annie/';
+            initRouter();
+            await vi.waitFor(() => expect(overview.render).toHaveBeenCalledWith('annie', 'overview'));
+            expect(detail.render).not.toHaveBeenCalled();
+            window.location.pathname = '/characters/annie/builds/';
+            initRouter();
+            expect(detail.render).toHaveBeenCalledWith('annie', 'builds');
         });
 
         it('still resolves the existing hash route', async () => {

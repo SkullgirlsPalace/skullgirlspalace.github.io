@@ -1,0 +1,14 @@
+.character-overview { max-width: 1100px; margin: 0 auto; }
+.overview-header { display: flex; align-items: center; gap: 18px; margin-bottom: 24px; }
+.overview-header h1 { margin: 0; color: var(--accent-gold); font-size: clamp(1.8rem, 5vw, 2.8rem); }
+.overview-header .btn-back { text-decoration: none; }
+.detail-tabs a.tab-btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.character-overview .detail-tabs { display: flex; flex-wrap: wrap; gap: 10px; }
+.overview-summary { margin: 24px 0; color: var(--text-secondary); }
+.overview-rarity { margin: 28px 0; }
+.overview-rarity > h2 { color: var(--accent-gold-light); font-size: 1.3rem; }
+.overview-variants { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; align-items: start; }
+.overview-variant { min-width: 0; padding: 18px; border: var(--border-subtle); border-radius: 12px; background: var(--bg-card); overflow-wrap: anywhere; }
+.overview-variant h3 { margin: 0 0 12px; color: var(--text-primary); font-size: 1.1rem; }
+.overview-variant h4 { margin: 16px 0 8px; color: var(--accent-gold-light); font-size: .9rem; }
+.overview-variant p { margin: 8px 0; color: var(--text-secondary); font-size: .88rem; line-height: 1.6; }

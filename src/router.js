@@ -161,6 +161,10 @@ async function handleRouteChange() {
 
     // Render the page
     try {
+        if (route === 'character' && params[1] === 'overview') {
+            pageModule = await import('./pages/character-overview.js');
+            if (currentParams !== params) return;
+        }
         if (route === 'character' && params[0]) {
             // Character detail page with charKey param
             appContainer.innerHTML = pageModule.render(params[0], params[1] || 'builds');

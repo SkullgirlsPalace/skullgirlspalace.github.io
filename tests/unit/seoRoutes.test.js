@@ -4,7 +4,7 @@ import { characterPath, parseSeoPath } from '../../src/utils/seoRoutes.js';
 describe('clean character entry paths', () => {
     it('maps character, builds, and tier-list paths to existing SPA states', () => {
         expect(parseSeoPath('/characters/annie/')).toEqual({
-            route: 'character', params: ['annie', 'builds'], section: 'character'
+            route: 'character', params: ['annie', 'overview'], section: 'character'
         });
         expect(parseSeoPath('/characters/annie/builds/')).toEqual({
             route: 'character', params: ['annie', 'builds'], section: 'builds'
@@ -16,7 +16,7 @@ describe('clean character entry paths', () => {
 
     it('normalizes a direct index.html URL and repeated slashes', () => {
         expect(parseSeoPath('/characters/annie/index.html')).toEqual({
-            route: 'character', params: ['annie', 'builds'], section: 'character'
+            route: 'character', params: ['annie', 'overview'], section: 'character'
         });
         expect(parseSeoPath('//characters//annie//tier-list//')).toEqual({
             route: 'character', params: ['annie', 'tier'], section: 'tier-list'

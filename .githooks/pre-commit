@@ -8,8 +8,12 @@ case "$branch" in
             exit 1
         fi
         if ! git merge-base --is-ancestor origin/main HEAD; then
-            echo "A branch $branch ainda nao incorpora origin/main. Sincronize com git merge origin/main, preserve seus ajustes e valide antes de commitar." >&2
-            exit 1
+            # A merge commit includes MERGE_HEAD as a parent; HEAD is still the old branch.
+            if ! git rev-parse --verify MERGE_HEAD >/dev/null 2>&1 ||
+                ! git merge-base --is-ancestor origin/main MERGE_HEAD; then
+                echo "A branch $branch ainda nao incorpora origin/main. Sincronize com git merge origin/main, preserve seus ajustes e valide antes de commitar." >&2
+                exit 1
+            fi
         fi
         ;;
 esac

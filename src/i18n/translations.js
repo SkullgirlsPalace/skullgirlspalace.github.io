@@ -267,6 +267,11 @@ export const translations = {
       tierList: 'TIER LIST',
       exclusive: 'Exclusivo'
     },
+    characterOverview: {
+      title: 'Visão geral',
+      sections: 'Seções do personagem',
+      summary: '{name} tem {count} variantes em Skullgirls Mobile.'
+    },
     // Character Detail
     detail: {
       characterNotFound: 'Personagem não encontrado',
@@ -699,6 +704,11 @@ export const translations = {
       exclusive: 'Exclusive'
     },
     // Character Detail
+    characterOverview: {
+      title: 'Overview',
+      sections: 'Character sections',
+      summary: '{name} has {count} variants in Skullgirls Mobile.'
+    },
     detail: {
       characterNotFound: 'Character not found',
       filters: 'Advanced Filters',

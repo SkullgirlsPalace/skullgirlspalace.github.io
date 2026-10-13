@@ -1,4 +1,5 @@
 # Skullgirls Palace
+Site: [skullgirlspalace.github.io](https://skullgirlspalace.github.io/).
 Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso
 
 ## Build, deploy e URLs indexáveis
@@ -9,7 +10,9 @@ Quem faz isso é `npm run build` (`tools/build-site.js`): ele monta `_site/` com
 
 Para ver localmente como vai ao ar: `npm run build` e sirva `_site/` (por exemplo `python3 -m http.server -d _site`).
 
-Toda montagem verifica automaticamente limites de peso, novas duplicatas e arquivos indevidos antes da publicação. A mesma checagem roda nos PRs para `main`. Consulte [Peso e duplicatas na publicação](docs/PERFORMANCE.md); para conferir `_site/` novamente, use `npm run audit:site`.
+A montagem verifica automaticamente limites de peso, novas duplicatas e arquivos indevidos antes da publicação. A mesma checagem roda nos PRs para `main`. Consulte [Peso e duplicatas na publicação](docs/PERFORMANCE.md) e [Sincronização das branches](docs/BRANCHES.md).
+
+Para o estado conferido de rastreamento e as verificações no painel, consulte [Bing: diagnóstico atualizado](docs/BING-INDEXING.md). As URLs de personagem têm visão geral, builds e tier list distintas; o sitemap preserva 56 URLs.
 
 ## Arquitetura de Estilos (CSS)
 
