@@ -5,6 +5,11 @@
 
 export const translations = {
   'pt-BR': {
+    teams: {
+      title: 'Times', categories: 'Categorias de times', general: 'Times Ofensivos', rift: 'Batalhas da Fenda',
+      defense: 'Times Defensivos', loading: 'Carregando times...', empty: 'Ainda não há times revisados nesta categoria.',
+      loadError: 'Não foi possível carregar os times. Selecione a categoria para tentar novamente.', reviewedOn: 'Revisado em'
+    },
     // Navigation
     nav: {
       home: 'Início',
@@ -438,6 +443,11 @@ export const translations = {
  }
  },
   'en': {
+    teams: {
+      title: 'Teams', categories: 'Team categories', general: 'Offensive Teams', rift: 'Rift Battles',
+      defense: 'Defensive Teams', loading: 'Loading teams...', empty: 'No reviewed teams in this category yet.',
+      loadError: 'Unable to load teams. Select the category to retry.', reviewedOn: 'Reviewed on'
+    },
     // Navigation
     nav: {
       home: 'Home',

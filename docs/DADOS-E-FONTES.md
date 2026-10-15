@@ -13,8 +13,10 @@ O conteúdo em português pode conter traduções comunitárias ou automáticas 
 | Conteúdo | Arquivos usados pelo site | Observação |
 | --- | --- | --- |
 | Variantes e builds | `data/*.json` | A lista de arquivos de personagem está definida em `src/config/constants.js`. |
-| Nomes de variantes em inglês | `data/krazete/ENGLISH-Variants.json` e `data/krazete/PT-BR-Variantes.json` | O mapeamento é montado em `src/i18n/dataTranslations.js`. |
+| Nomes e habilidades em inglês | `data/krazete/ENGLISH-Variants.json` e `data/krazete/PT-BR-Variantes.json` | O mapeamento é montado em `src/i18n/dataTranslations.js`; as habilidades inglesas usam `ability`, `SA1` e `SA2` do arquivo em inglês. |
 | Avaliações da tier list | `data/tier-data.json` | Conteúdo editorial do projeto, separado dos dados básicos das variantes. |
+| Classes das variantes | `src/data/variantClassData.js` | Dados editoriais reexportados por `variantClasses.js`; a API de localização continua a mesma. |
+| Times recomendados | `data/teams.json` | Cartas por variante e categoria; somente times revisados e com referências válidas são exibidos. |
 | Ganhos e custos da calculadora | `data/stats/*.json` | Os valores vêm de arquivos JSON, enquanto as opções e regras também estão definidas em `src/components/Calculator.js`. |
 | Catalisadores e Fenda | `data/catalisadores*.json` e `data/fenda*.json` | Os dados servidos pelo site ficam fora da pasta `data/krazete/`. |
 
@@ -27,6 +29,10 @@ O conteúdo em português pode conter traduções comunitárias ou automáticas 
 5. Atualize os dados publicados pelo site e registre a data e a fonte da revisão quando o formato da seção permitir.
 
 Os scripts `tools/process-moves.js` e `tools/process-catalysts.js` transformam dados chamados `stanleyDB` em arquivos consumidos pela aplicação. Eles são ferramentas específicas; não constituem, por si só, uma sincronização geral de todos os arquivos do Krazete. Confira os caminhos de entrada e saída do script antes de usá-lo.
+
+## Editor local de recomendações
+
+O [Palace Estúdio](../tools/editor/README.md) permite corrigir habilidades em portugu?s e ingl?s, builds, classes, ranks e times sem editar o código manualmente. Abra pelo `Abrir-Editor.cmd` na raiz ou por `npm.cmd run editor`. Os rascunhos ficam no navegador, com backup JSON e exportação ZIP para revisão. O editor não publica nem confirma a precisão em relação ao jogo; a revisão editorial continua necessária. Os arquivos exportados devem ser aplicados à mesma versão dos dados que originou o rascunho, antes dos testes e da montagem do site.
 
 ## Limite atual da calculadora
 

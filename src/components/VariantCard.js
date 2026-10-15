@@ -9,6 +9,7 @@ import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
 import { hasExtras, getExtrasData } from '../data/extrasData.js';
 import { MOVE_DATA } from '../data/movesimages.js';
 import { t, getCurrentLanguage, getLocalizedNameSync, getLocalizedAbilityNameSync, getLocalizedSADescSync } from '../i18n/index.js';
+import { supportsDefensiveTeams, escapeTeamText } from '../utils/teamData.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -125,7 +126,7 @@ export function createVariantCard(variant, charKey, index = 0) {
         const bArsenal = formatArsenal(b.recommended_arsenal || '', charKey);
         
         return `
-            <div class="build-sub-content ${isFirst ? 'active' : ''}" data-build-idx="${variant.name}-${b.title}">
+            <div class="build-sub-content ${isFirst ? 'active' : ''}" data-build-idx="${escapeTeamText(`${variant.name}-${b.title}`)}">
                 ${b.marquee_ability ? `
                     <div class="ability-box marquee">
                         <div class="marquee-header" 
@@ -217,6 +218,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                             ${t('variant.build')}
                         </button>
                     ` : ''}
+                    <button class="variant-tab-btn" data-tab="teams" data-card="${cardId}">${t('teams.title')}</button>
                     ${hasExtras(charKey, variant.name) ? `
                         <button class="variant-tab-btn extras-tab-btn" data-tab="extras" data-card="${cardId}">
                             ⭐ ${t('variant.information')}
@@ -244,8 +246,9 @@ export function createVariantCard(variant, charKey, index = 0) {
                                 <div class="build-selector">
                                     ${builds.map((b, i) => `
                                         <button class="build-pill ${i === 0 ? 'active' : ''}" 
-                                                onclick="switchVariantBuild(this, '${variant.name}-${b.title}')">
-                                            ${b.title.toUpperCase()}
+                                                data-build-key="${escapeTeamText(`${variant.name}-${b.title}`)}"
+                                                onclick="switchVariantBuild(this, this.dataset.buildKey)">
+                                            ${escapeTeamText(b.title.toUpperCase())}
                                         </button>
                                     `).join('')}
                                 </div>
@@ -284,6 +287,14 @@ export function createVariantCard(variant, charKey, index = 0) {
                         </div>
                     ` : ''}
 
+                    <div class="variant-tab-content" data-tab="teams" data-team-character="${escapeTeamText(effectiveCharKey)}" data-team-variant="${escapeTeamText(variant.name)}">
+                        <div class="team-category-tabs" role="group" aria-label="${t('teams.categories')}">
+                            <button type="button" class="team-category-btn active" data-team-category="general" aria-pressed="true">${t('teams.general')}</button>
+                            <button type="button" class="team-category-btn" data-team-category="rift" aria-pressed="false">${t('teams.rift')}</button>
+                            ${supportsDefensiveTeams(getVariantClasses(variant.name)) ? `<button type="button" class="team-category-btn" data-team-category="defense" aria-pressed="false">${t('teams.defense')}</button>` : ''}
+                        </div>
+                        <div class="team-results" aria-live="polite"></div>
+                    </div>
                     <!-- Extras Tab -->
                     ${hasExtras(charKey, variant.name) ? `
                         <div class="variant-tab-content" data-tab="extras">
@@ -654,8 +665,31 @@ export function renderVariants(containerId, variants, charKey) {
       const cardId = this.dataset.card;
       const tabName = this.dataset.tab;
       switchVariantTab(cardId, tabName);
+      if (tabName === 'teams') openTeamCategory(document.getElementById(`${cardId}-contents`)?.querySelector('[data-tab="teams"]'));
     });
   });
+  container.querySelectorAll('[data-team-category]').forEach(button => button.addEventListener('click', () => {
+    openTeamCategory(button.closest('[data-tab="teams"]'), button.dataset.teamCategory);
+  }));
+}
+
+async function openTeamCategory(panel, category = 'general') {
+    if (!panel) return;
+    panel.querySelectorAll('[data-team-category]').forEach(button => {
+        const active = button.dataset.teamCategory === category;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+    });
+    const results = panel.querySelector('.team-results');
+    const request = {};
+    results._teamModuleRequest = request;
+    results.textContent = t('teams.loading');
+    try {
+        const { showTeams } = await import('./TeamRecommendations.js');
+        if (results.isConnected && results._teamModuleRequest === request) await showTeams(results, panel.dataset.teamCharacter, panel.dataset.teamVariant, category);
+    } catch {
+        if (results.isConnected && results._teamModuleRequest === request) results.textContent = t('teams.loadError');
+    }
 }
 
 /**
