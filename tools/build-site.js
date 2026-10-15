@@ -19,7 +19,7 @@ export const PUBLISHED_PATHS = [
     'eb38984f13b79ee37bb2809c0cac9a35.txt'
 ];
 
-const SITE_DESCRIPTION = 'Wiki de Skullgirls Mobile com informações de personagens, variantes, builds, tier lists, catalisadores e guias, em português e inglês.';
+const SITE_DESCRIPTION = 'Wiki de Skullgirls Mobile sobre Builds, Tier Lists e mais.';
 const RARITIES = [
     ['diamante', 'Diamante'],
     ['ouro', 'Ouro'],

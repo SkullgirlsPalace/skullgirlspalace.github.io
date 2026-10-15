@@ -20,7 +20,7 @@ export function render() {
       <div class="hub-hero">
         <div class="hero-main-row">
           <a href="javascript:void(0)" onclick="handleToggleAboutDrawer()" class="home-about-link">
-            <img loading="lazy" src="img/official/IconInfo.webp" alt="">
+            <span class="home-about-icon" aria-hidden="true"></span>
             <span>${t('home.about')}</span>
           </a>
           

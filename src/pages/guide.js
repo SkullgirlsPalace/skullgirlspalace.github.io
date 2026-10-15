@@ -104,7 +104,7 @@ export function renderGameInfo() {
         <div class="guide-modifier-groups">
           <section class="guide-modifier-group" data-modifier-type="buff">
             <header class="guide-modifier-group-heading modifier-positive">
-              <img loading="lazy" src="img/modifiers/buffs/Regen.webp" alt="">
+              <span class="modifier-heading-icon modifier-heading-icon--positive" aria-hidden="true"></span>
               <h3>${t('guide.positiveEffects')}</h3>
               <span class="guide-modifier-group-count"></span>
             </header>
@@ -113,7 +113,7 @@ export function renderGameInfo() {
 
           <section class="guide-modifier-group" data-modifier-type="debuff">
             <header class="guide-modifier-group-heading modifier-negative">
-              <img loading="lazy" src="img/modifiers/debuffs/Bleed.webp" alt="">
+              <span class="modifier-heading-icon modifier-heading-icon--negative" aria-hidden="true"></span>
               <h3>${t('guide.negativeEffects')}</h3>
               <span class="guide-modifier-group-count"></span>
             </header>

@@ -16,6 +16,16 @@ As URLs existentes e os 56 endereços do sitemap foram mantidos. A montagem gera
 
 ## O que conferir no Bing Webmaster Tools
 
+### Aviso de texto alternativo nas imagens
+
+O HTML dinâmico fornecido em 13/10 tinha sete imagens, todas com atributo `alt`. O ícone ao lado de “Sobre” tinha `alt=""`; isso é válido para imagens decorativas e não prova que existia um atributo ausente nessa URL. O motivo exato do aviso do Bing não foi confirmado.
+
+Esse ícone e os três ícones decorativos dos títulos de efeitos do Guia agora são fundos CSS, com os textos visíveis preservados. Os três ícones do Guia antes não tinham `alt`. A mudança segue a [orientação da W3C para imagens decorativas](https://www.w3.org/WAI/tutorials/images/decorative/) e reutiliza os mesmos arquivos, sem novas imagens ou dependências. Imagens informativas continuam com texto alternativo; outros ícones decorativos com `alt=""` continuam válidos.
+
+Após publicar pela `main`, refaça a inspeção dinâmica da URL. O aviso pode continuar até o Bing analisar a versão nova; os testes locais não verificam o estado interno do Bing.
+
+### Conferências da conta
+
 - Confira o sitemap `https://skullgirlspalace.github.io/sitemap.xml`, seu processamento e as 56 URLs.
 - Na inspeção da home e de `/characters/`, confira os motivos de não indexação e a última visita do Bing. Solicite indexação se ainda não fez isso.
 - Na área IndexNow, confira as URLs recebidas e seus estados de rastreamento e indexação. O sucesso do envio no Actions não substitui essa conferência.
