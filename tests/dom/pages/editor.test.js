@@ -44,6 +44,56 @@ describe('Palace Studio workflow', () => {
         expect(document.querySelector('#review').textContent).toContain('data/teams.json');
         expect(document.querySelector('#review [data-action="download"]').disabled).toBe(false);
     });
+    it('resets the results scroll and preserves the draft when paging through variants', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-action="add-team"]').click();
+        const draft = localStorage.getItem('palace-editor:v1:/');
+        document.querySelector('[data-action="pick"]').click();
+        const firstName = document.querySelector('.picker-grid strong').textContent;
+        document.querySelector('.picker-results').scrollTop = 300;
+        document.querySelector('[data-action="picker-next"]').click();
+        expect(document.querySelector('#picker [role="status"]').textContent).toMatch(/Página 2\//);
+        expect(document.querySelector('.picker-results').scrollTop).toBe(0);
+        expect(document.querySelector('.picker-grid strong').textContent).not.toBe(firstName);
+        document.querySelector('[data-action="picker-prev"]').click();
+        expect(document.querySelector('.picker-grid strong').textContent).toBe(firstName);
+        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+    });
+    it('filters ability descriptions by buffs and debuffs, combines selections and clears them', async () => {
+        fetch.mockImplementation(async url => {
+            const data = load(`data/${String(url).split('/data/')[1]}`);
+            if (String(url).endsWith('/data/annie.json')) data.variants.diamante.push(
+                { name: 'Alvo Barreira', signature_ability: { name: 'Nome sem efeito', description: 'Ganhe BARREIRA.' } },
+                { name: 'Alvo Feitiço', signature_ability: { name: 'Nome sem efeito', description: 'Aplique FEITIÇO.' } }
+            );
+            return { ok: true, json: async () => data };
+        });
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-action="add-team"]').click();
+        const draft = localStorage.getItem('palace-editor:v1:/');
+        document.querySelector('[data-action="pick"]').click();
+        const query = document.querySelector('#picker-query');
+        query.value = 'Alvo'; query.dispatchEvent(new Event('input', { bubbles: true }));
+        const names = () => [...document.querySelectorAll('.picker-grid strong')].map(el => el.textContent);
+        const toggle = key => {
+            const checkbox = document.querySelector(`[data-picker-effect="${key}"]`);
+            checkbox.checked = !checkbox.checked;
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+        };
+        expect(names()).toEqual(['Alvo Barreira', 'Alvo Feitiço']);
+        toggle('barrier');
+        expect(names()).toEqual(['Alvo Barreira']);
+        toggle('hex');
+        expect(names()).toEqual(['Alvo Barreira', 'Alvo Feitiço']);
+        toggle('barrier');
+        expect(names()).toEqual(['Alvo Feitiço']);
+        toggle('hex'); toggle('haste');
+        expect(names()).toEqual([]);
+        expect(document.querySelector('.picker-results').textContent).toContain('Nenhuma');
+        document.querySelector('[data-action="picker-effects-clear"]').click();
+        expect(names()).toHaveLength(2);
+        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+    });
     it('persists class corrections, invalidates affected teams and exposes defensive categories', async () => {
         await import('../../../tools/editor/editor.js');
         document.querySelector('[data-action="add-team"]').click();

@@ -5,8 +5,13 @@
 
 export const translations = {
   'pt-BR': {
+    recommendations: {
+      teams: 'Estes times são sugestões. As combinações podem variar conforme suas variantes, o modo de jogo, os adversários e mudanças no jogo. Adapte como preferir à sua coleção e ao seu jeito de jogar.',
+      builds: 'As builds são recomendações e podem variar conforme o papel da variante, o time, o modo de jogo e mudanças no jogo. Ajuste os atributos e golpes às suas necessidades.',
+      tier: 'Esta tier list é uma referência. O desempenho das variantes depende da build, do time, dos adversários e das mudanças no jogo.'
+    },
     teams: {
-      title: 'Times', categories: 'Categorias de times', general: 'Times Ofensivos', rift: 'Batalhas da Fenda',
+      title: 'Times', categories: 'Categorias de times', general: 'Times Ofensivos',
       defense: 'Times Defensivos', loading: 'Carregando times...', empty: 'Ainda não há times revisados nesta categoria.',
       loadError: 'Não foi possível carregar os times. Selecione a categoria para tentar novamente.', reviewedOn: 'Revisado em'
     },
@@ -268,7 +273,7 @@ export const translations = {
       noVariants: 'Nenhuma variante encontrada com estes filtros.',
       class: 'CLASSE',
       information: 'Informações',
-      builds: 'BUILDS',
+      builds: 'VARIANTES',
       tierList: 'TIER LIST',
       exclusive: 'Exclusivo'
     },
@@ -443,8 +448,13 @@ export const translations = {
  }
  },
   'en': {
+    recommendations: {
+      teams: 'These teams are suggestions. Combinations may vary depending on your variants, the game mode, and your opponents. Adapt them to your collection and playstyle.',
+      builds: 'Builds are recommendations and may vary depending on the variant’s role, team, and game mode. Adjust stats and moves to suit your needs.',
+      tier: 'This tier list is a reference. Variant performance depends on builds, teams, opponents, and changes to the game.'
+    },
     teams: {
-      title: 'Teams', categories: 'Team categories', general: 'Offensive Teams', rift: 'Rift Battles',
+      title: 'Teams', categories: 'Team categories', general: 'Offensive Teams',
       defense: 'Defensive Teams', loading: 'Loading teams...', empty: 'No reviewed teams in this category yet.',
       loadError: 'Unable to load teams. Select the category to retry.', reviewedOn: 'Reviewed on'
     },
@@ -709,7 +719,7 @@ export const translations = {
       noVariants: 'No variants found with these filters.',
       class: 'CLASS',
       information: 'Information',
-      builds: 'BUILDS',
+      builds: 'VARIANTS',
       tierList: 'TIER LIST',
       exclusive: 'Exclusive'
     },

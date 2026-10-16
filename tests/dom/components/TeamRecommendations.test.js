@@ -25,7 +25,8 @@ describe('lazy public Teams tab', () => {
         expect(fetch).toHaveBeenCalledTimes(1);
         expect(document.querySelector('.team-members strong').textContent).toBe('Rosa Estelar');
         expect(document.querySelector('.team-members p').textContent).toContain('Suporte de Utilidade');
-        document.querySelector('[data-team-category="rift"]').click();
+        expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
+        document.querySelector('[data-team-category="defense"]').click();
         await vi.waitFor(() => expect(document.querySelector('.teams-message')?.textContent).toContain('Ainda não há times revisados'));
         expect(fetch).toHaveBeenCalledTimes(1);
     });
@@ -34,7 +35,8 @@ describe('lazy public Teams tab', () => {
         renderVariants('cards', [{ name: 'Offensive test variant', recommended_build: 'ATQ%', element: 'Fogo' }], 'filia');
         expect(document.querySelector('[data-team-category="defense"]')).toBeNull();
         expect(document.querySelector('[data-tab="teams"]').textContent).toBe('Teams');
-        expect(document.querySelector('[data-team-category="rift"]').textContent).toBe('Rift Battles');
+        expect(document.querySelector('[data-team-category="general"]').textContent).toBe('Offensive Teams');
+        expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
         setLanguage('pt-BR');
     });
 });

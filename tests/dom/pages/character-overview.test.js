@@ -46,11 +46,11 @@ describe('distinct character overview', () => {
         expect(JSON.stringify(data)).toBe(original);
     });
 
-    it('links to the existing overview, builds, tier list, and all-variants URLs', () => {
+    it('links to variants, tier list, and all characters without an overview tab', () => {
         document.body.innerHTML = render('filia');
         const links = [...document.querySelectorAll('.detail-tabs a')].map(link => link.getAttribute('href'));
-        expect(links).toEqual(['/characters/filia/', '/characters/filia/builds/', '/characters/filia/tier-list/', '/characters/']);
-        expect(document.querySelector('[aria-current="page"]').textContent).toBe('Visão geral');
+        expect(links).toEqual(['/characters/filia/builds/', '/characters/filia/tier-list/', '/characters/']);
+        expect(document.querySelector('.detail-tabs a').textContent).toBe('VARIANTES');
     });
 
     it('uses the English labels and localized variant/ability data', () => {
@@ -61,7 +61,7 @@ describe('distinct character overview', () => {
         expect(document.body.textContent).toContain('Sample Ability');
         expect(document.body.textContent).toContain('Gain ENRAGE for 10 seconds.');
         expect(document.body.textContent).toContain('Element: Fire. Attack 100, Health 200, Power 300');
-        expect(document.querySelector('[aria-current="page"]').textContent).toBe('Overview');
+        expect(document.querySelector('.detail-tabs a').textContent).toBe('VARIANTS');
     });
 
     it('keeps missing characters recoverable through the home link', () => {

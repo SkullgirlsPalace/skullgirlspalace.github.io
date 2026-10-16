@@ -10,3 +10,23 @@
 .team-members p, .team-strategy { white-space: pre-wrap; overflow-wrap: anywhere; }
 .team-members p { margin: 4px 0 0; color: var(--text-secondary); }
 .teams-message, .team-recommendation small { color: var(--text-muted); }
+
+.recommendation-note {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 16px 20px;
+    border: var(--border-subtle);
+    border-left: 4px solid var(--accent-gold);
+    border-radius: var(--border-radius-sm);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .recommendation-note { padding: 12px 14px; }
+}

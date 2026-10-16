@@ -1,4 +1,6 @@
 const pt = {
+    pickerSearch: 'Buscar variante ou personagem', filterEffects: 'Filtrar por efeitos', positiveEffects: 'Efeitos positivos', negativeEffects: 'Efeitos negativos', clearEffects: 'Limpar efeitos',
+    effectFilterHelp: 'Mostra variantes que mencionam qualquer um dos efeitos selecionados na descrição da habilidade característica.',
     abilities: 'Habilidades', abilityName: 'Nome da habilidade', abilityDescription: 'Descrição completa · HAB 1 e HAB 2', abilitySA1: 'SA1 · primeira parte', abilitySA2: 'SA2 · segunda parte', abilityPreview: 'Prévia da descrição',
     abilityHelp: 'Edite os idiomas separadamente. Preserve condições, durações e valores de todos os níveis (por exemplo, 5/10/15). Em português, mantenha [HAB 1] e [HAB 2] e use **texto** para destaque. As alterações entram no backup e na exportação.',
     abilityUnlinked: 'Não há vínculo confirmado com o registro em inglês desta variante. A edição em inglês fica indisponível para evitar alterar outra variante.',
@@ -17,7 +19,7 @@ const pt = {
     saveError: 'Não foi possível salvar no navegador. Salve um backup para preservar suas alterações.',
     untouched: 'Nenhuma alteração para exportar.', changed: 'arquivos alterados', ability: 'Habilidade característica',
     classes: 'Classes da variante', classesHelp: 'A classe determina se “Times Defensivos” fica disponível. Selecione ao menos uma.',
-    general: 'Times Ofensivos', rift: 'Batalhas da Fenda', defense: 'Times Defensivos',
+    general: 'Times Ofensivos', defense: 'Times Defensivos',
     teamHelp: 'Monte até três variantes. A variante desta ficha faz parte do time. As cartas aparecem na ordem escolhida.',
     addTeam: 'Montar time', noTeams: 'Nenhum time nesta categoria. Comece escolhendo as cartas.',
     addMember: 'Escolher variante', replace: 'Trocar', remove: 'Remover', inspect: 'Ver ficha', fixed: 'Variante da ficha',
@@ -61,6 +63,8 @@ const pt = {
     }
 };
 const en = {
+    pickerSearch: 'Search variant or character', filterEffects: 'Filter by effects', positiveEffects: 'Buffs', negativeEffects: 'Debuffs', clearEffects: 'Clear effects',
+    effectFilterHelp: 'Shows variants that mention any selected effect in their signature ability description.',
     abilities: 'Abilities', abilityName: 'Ability name', abilityDescription: 'Full description · HAB 1 and HAB 2', abilitySA1: 'SA1 · first part', abilitySA2: 'SA2 · second part', abilityPreview: 'Description preview',
     abilityHelp: 'Edit each language separately. Preserve conditions, durations and values at every level (for example, 5/10/15). In Portuguese, keep [HAB 1] and [HAB 2] and use **text** for emphasis. Changes are included in backups and exports.',
     abilityUnlinked: 'No confirmed English record is linked to this variant. English editing is unavailable to avoid changing another variant.',
@@ -77,7 +81,7 @@ const en = {
     reference: 'Reference', edit: 'Builds and tier list', teams: 'Teams', backup: 'Save backup', import: 'Import backup', export: 'Review and export',
     saved: 'Draft saved in this browser', saveError: 'Unable to save in this browser. Download a backup to preserve your changes.',
     untouched: 'No changes to export.', changed: 'changed files', ability: 'Signature ability', classes: 'Variant classes',
-    classesHelp: 'Classes control availability of Defensive Teams. Select at least one.', general: 'Offensive Teams', rift: 'Rift Battles', defense: 'Defensive Teams',
+    classesHelp: 'Classes control availability of Defensive Teams. Select at least one.', general: 'Offensive Teams', defense: 'Defensive Teams',
     teamHelp: 'Select up to three variants, including the variant on this page. Cards appear in the chosen order.',
     addTeam: 'Build a team', noTeams: 'No teams in this category. Start by choosing the cards.', addMember: 'Choose variant', replace: 'Replace', remove: 'Remove', inspect: 'View details', fixed: 'Page variant',
     draft: 'Draft', reviewed: 'Reviewed', reviewTeam: 'Mark as reviewed', unreviewTeam: 'Return to draft', teamNumber: 'Team', teamReviewed: 'Team reviewed and ready to export.', date: 'Review date',

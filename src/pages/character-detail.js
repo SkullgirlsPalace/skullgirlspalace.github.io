@@ -14,7 +14,6 @@ import { createFilterBar, createSearchBar, updateFilterUI, updateCharacterNav } 
 import { createTierView } from '../components/TierTable.js';
 import { renderProfileModal } from './character-profile.js';
 import { t, getLocalizedNameSync } from '../i18n/index.js';
-import { characterPath } from '../utils/seoRoutes.js';
 
 /**
  * Get all variants across all characters (for "Todos" mode)
@@ -99,7 +98,6 @@ export function render(charKey, initialTab = 'builds') {
                 <div class="header-bottom-row">
                     <!-- Tab Navigation -->
                     <div class="detail-tabs">
-                        <a class="tab-btn" href="${characterPath(charKey)}">${t('characterOverview.title')}</a>
                         <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
                                 onclick="switchDetailTab('${charKey}', 'builds')" data-tab="builds">
                             ${t('variant.builds')}
@@ -111,6 +109,8 @@ export function render(charKey, initialTab = 'builds') {
                     </div>
                 </div>
             </div>
+
+            <p class="recommendation-note" id="detail-recommendation">${t(currentTab === 'tier' ? 'recommendations.tier' : 'recommendations.builds')}</p>
 
             <div id="variants-count-container" style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 4px;">
                 <p class="variants-count" id="variants-count"></p>
@@ -157,7 +157,7 @@ function renderTodosPage(initialTab = 'builds') {
                     <div class="detail-tabs">
                         <button class="tab-btn ${currentTab === 'builds' ? 'active' : ''}" 
                                 onclick="switchDetailTab('todos', 'builds')" data-tab="builds">
-                            BUILDS
+                            ${t('variant.builds')}
                         </button>
                         <button class="tab-btn ${currentTab === 'tier' ? 'active' : ''}" 
                                 onclick="switchDetailTab('todos', 'tier')" data-tab="tier">
@@ -166,6 +166,8 @@ function renderTodosPage(initialTab = 'builds') {
                     </div>
                 </div>
             </div>
+
+            <p class="recommendation-note" id="detail-recommendation">${t(currentTab === 'tier' ? 'recommendations.tier' : 'recommendations.builds')}</p>
 
             <div id="variants-count-container" style="display: flex; justify-content: flex-end; width: 100%; margin-bottom: 4px;">
                 <p class="variants-count" id="variants-count"></p>
@@ -359,6 +361,11 @@ export async function switchTab(charKey, tab) {
     const sectionEl = document.getElementById('character-detail');
     if (sectionEl) {
         sectionEl.dataset.currentTab = tab;
+    }
+
+    const recommendation = document.getElementById('detail-recommendation');
+    if (recommendation) {
+        recommendation.textContent = t(tab === 'tier' ? 'recommendations.tier' : 'recommendations.builds');
     }
 
     // Re-render content

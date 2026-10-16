@@ -1,5 +1,5 @@
 // Plain data rules shared by the wiki and the separate local editor.
-export const TEAM_CATEGORIES = ['general', 'rift', 'defense'];
+export const TEAM_CATEGORIES = ['general', 'defense'];
 export const DEFENSIVE_CLASSES = ['Defensivo', 'Coringa', 'Suporte de Utilidade'];
 
 export function supportsDefensiveTeams(classes) {

@@ -290,9 +290,9 @@ export function createVariantCard(variant, charKey, index = 0) {
                     <div class="variant-tab-content" data-tab="teams" data-team-character="${escapeTeamText(effectiveCharKey)}" data-team-variant="${escapeTeamText(variant.name)}">
                         <div class="team-category-tabs" role="group" aria-label="${t('teams.categories')}">
                             <button type="button" class="team-category-btn active" data-team-category="general" aria-pressed="true">${t('teams.general')}</button>
-                            <button type="button" class="team-category-btn" data-team-category="rift" aria-pressed="false">${t('teams.rift')}</button>
                             ${supportsDefensiveTeams(getVariantClasses(variant.name)) ? `<button type="button" class="team-category-btn" data-team-category="defense" aria-pressed="false">${t('teams.defense')}</button>` : ''}
                         </div>
+                        <p class="recommendation-note">${t('recommendations.teams')}</p>
                         <div class="team-results" aria-live="polite"></div>
                     </div>
                     <!-- Extras Tab -->

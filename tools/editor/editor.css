@@ -120,7 +120,25 @@ dialog::backdrop { background: var(--backdrop); backdrop-filter: blur(3px); }
 .picker-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
 .picker-grid .member-card img { height: 115px; }
 .picker-grid .member-card { padding: 12px; }
-.picker-search { position: sticky; top: 0; background: var(--paper); padding: 8px 0; }
+.picker-search { padding: 8px 0; }
+#picker[open] { display: flex; flex-direction: column; height: min(900px, 90dvh); overflow: hidden; }
+#picker .dialog-heading { flex-shrink: 0; gap: 12px; }
+.picker-controls { flex-shrink: 0; max-height: 42dvh; overflow-y: auto; padding-right: 4px; }
+.picker-controls > .help { margin: 8px 0; }
+.picker-results { min-height: 0; flex: 1; overflow-y: auto; padding-right: 6px; }
+.picker-results:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+#picker .pagination { flex-shrink: 0; justify-content: center; gap: 16px; flex-wrap: wrap; padding-top: 12px; border-top: 1px solid var(--line); font-size: .85rem; }
+#picker .pagination span { text-align: center; min-width: 90px; }
+.picker-effects { margin: 8px 0 12px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.picker-effects summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: .85rem; }
+.picker-effects .help { margin: 10px 0; }
+.picker-effect-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+.picker-effect-groups fieldset { border: 1px solid var(--line); border-radius: 6px; min-width: 0; padding: 10px; }
+.picker-effect-groups legend { font-size: .85rem; padding: 0 5px; }
+.picker-effect-options { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.picker-effect-options label { display: inline-flex; align-items: center; gap: 6px; font-weight: 400; }
+.picker-effect-options input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); }
+@media (max-width: 700px) { .picker-effect-groups { grid-template-columns: 1fr; } #picker .pagination { gap: 8px; } }
 .picker-class-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 .picker-class-filters button { font-size: .78rem; }
 .picker-class-filters .active { color: var(--accent); border-color: var(--accent); background: var(--soft); }

@@ -1,6 +1,7 @@
 import { CHARACTER_FILES } from '../../src/config/constants.js';
 import { VARIANT_CLASSES } from '../../src/data/variantClassData.js';
 import { getVariantImage } from '../../src/data/variantImages.js';
+import { EFFECT_DATA } from '../../src/data/effectData.js';
 import { escapeTeamText as esc, supportsDefensiveTeams, validateTeam, sameVariant } from '../../src/utils/teamData.js';
 import { catalogFrom, charactersFrom, clone, equal, makeBackup, restoreBackup, validateChanges, exportFiles, serializeFile, teamsFor, CLASS_PATH, CLASS_NAMES, TIER_MODES, RANKS, EDITABLE_BUILD_FIELDS } from './model.js';
 import { createZip } from './zip.js';
@@ -19,6 +20,8 @@ let language = localStorage.getItem('palace-editor-language') || 'pt-BR';
 if (!strings[language]) language = 'pt-BR';
 const state = { base: {}, files: {}, abilityLinks: {}, selected: null, tab: 'teams', category: 'general', query: '', character: '', page: 0, recovery: null, undo: null, saveError: false, notice: '' };
 const pickerClasses = new Set();
+const pickerEffects = new Set();
+let pickerEffectsOpen = false;
 const text = key => strings[language][key] || key;
 const classesFor = name => state.files[CLASS_PATH]?.[name] || ['Ofensivo'];
 const classLabel = name => text(({ Ofensivo: 'classOffensive', Defensivo: 'classDefensive', 'Suporte de Utilidade': 'classSupport', Coringa: 'classWildcard' })[name]);
@@ -94,10 +97,10 @@ function render() {
         <div id="main-view"></div></main></div>`;
     renderCatalog(); renderMain(); updateSaveState();
 }
-function filteredCatalog(query = state.query, character = state.character) {
+function filteredCatalog(query = state.query, character = state.character, includeAbilityNames = true) {
     const normalized = query.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
     return catalogFrom(state.files).filter(item => (!character || item.character === character) &&
-        [item.variant, item.characterName, item.data.signature_ability?.name, englishFor(item)?.name].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(normalized));
+        [item.variant, item.characterName, englishFor(item)?.name, ...(includeAbilityNames ? [item.data.signature_ability?.name] : [])].join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().includes(normalized));
 }
 function renderCatalog() {
     const list = root.querySelector('#catalog');
@@ -178,7 +181,7 @@ function memberMarkup(member, team, index) {
         <button class="small" data-action="move-member" data-team="${esc(team.id)}" data-index="${index}" data-direction="1" ${index === team.members.length - 1 ? 'disabled' : ''} aria-label="${text('moveRight')}">→</button></div></div>`;
 }
 function teamsMarkup(item) {
-    const categories = ['general', 'rift', ...(supportsDefensiveTeams(classesFor(item.variant)) ? ['defense'] : [])];
+    const categories = ['general', ...(supportsDefensiveTeams(classesFor(item.variant)) ? ['defense'] : [])];
     const teams = teamsFor(state.files, state.selected, state.category);
     return `<p class="help">${text('teamHelp')} ${text('noExplain')}</p>
         <div class="category-tabs">${categories.map(category => `<button data-action="category" data-category="${category}" class="${category === state.category ? 'active' : ''}" aria-pressed="${category === state.category}">${text(category)}</button>`).join('')}</div>
@@ -191,22 +194,38 @@ function teamsMarkup(item) {
 }
 
 let pickContext;
+function pickerEffectFilters() {
+    return `<details class="picker-effects" ${pickerEffectsOpen ? 'open' : ''}><summary>${text('filterEffects')} (${pickerEffects.size})</summary>
+        <p class="help">${text('effectFilterHelp')}</p>
+        <div class="picker-effect-groups">${['buff', 'debuff'].map(type => `<fieldset><legend>${text(type === 'buff' ? 'positiveEffects' : 'negativeEffects')}</legend>
+            <div class="picker-effect-options">${Object.entries(EFFECT_DATA).filter(([, effect]) => effect.type === type).map(([key, effect]) => `<label><input type="checkbox" data-picker-effect="${key}" ${pickerEffects.has(key) ? 'checked' : ''}>${esc(language === 'en' ? effect.name_en || effect.name : effect.name)}</label>`).join('')}</div>
+        </fieldset>`).join('')}</div>${btn('picker-effects-clear', 'clearEffects', '', 'small')}</details>`;
+}
 function openPicker(teamId, index, query = '', page = 0) {
     pickContext = { teamId, index, query, page };
     const team = state.files['data/teams.json'].teams.find(item => item.id === teamId);
-    const items = filteredCatalog(query, '').filter(item => !pickerClasses.size || classesFor(item.variant).some(name => pickerClasses.has(name)));
+    const items = filteredCatalog(query, '', false).filter(item => {
+        if (pickerClasses.size && !classesFor(item.variant).some(name => pickerClasses.has(name))) return false;
+        if (!pickerEffects.size) return true;
+        const en = englishFor(item);
+        const description = [item.data.signature_ability?.description, en?.SA1, en?.SA2].join(' ').toLowerCase();
+        return [...pickerEffects].some(key => EFFECT_DATA[key].keys.some(term => description.includes(term.toLowerCase())));
+    });
     const pages = Math.max(1, Math.ceil(items.length / 12));
     pickContext.page = Math.min(page, pages - 1);
-    picker.innerHTML = `<header class="dialog-heading"><h2>${text('addMember')}</h2>${btn('close-picker', 'close')}</header><div class="picker-search"><input id="picker-query" type="search" aria-label="${text('search')}" placeholder="${text('search')}" value="${esc(query)}"></div>
+    picker.innerHTML = `<header class="dialog-heading"><h2>${text('addMember')}</h2>${btn('close-picker', 'close')}</header><div class="picker-controls"><div class="picker-search"><input id="picker-query" type="search" aria-label="${text('pickerSearch')}" placeholder="${text('pickerSearch')}" value="${esc(query)}"></div>
         <div class="picker-class-filters" role="group" aria-label="${text('filterClasses')}">
             <button type="button" data-action="picker-class-all" class="${!pickerClasses.size ? 'active' : ''}" aria-pressed="${!pickerClasses.size}">${text('allClasses')}</button>
             ${CLASS_NAMES.map((name, index) => `<button type="button" data-action="picker-class" data-class-index="${index}" class="${pickerClasses.has(name) ? 'active' : ''}" aria-pressed="${pickerClasses.has(name)}">${esc(classLabel(name))}</button>`).join('')}
-        </div><p class="help">${text('classFilterHelp')}</p>
-        <div class="picker-grid">${items.slice(pickContext.page * 12, (pickContext.page + 1) * 12).map(item => {
+        </div><p class="help">${text('classFilterHelp')}</p>${pickerEffectFilters()}</div>
+        <div class="picker-results" tabindex="0" aria-label="${text('variants')}"><div class="picker-grid">${items.slice(pickContext.page * 12, (pickContext.page + 1) * 12).map(item => {
             const duplicate = team.members.some((member, memberIndex) => memberIndex !== index && sameVariant(member, item));
             return `<article class="member-card"><img loading="lazy" width="150" height="115" src="${image(item)}" alt=""><strong>${esc(displayName(item))}</strong>${chips(item.variant)}<div class="inline-actions">${btn('choose-member', 'choose', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}" ${duplicate ? 'disabled' : ''}`, 'small primary')}${btn('inspect-picker', 'inspect', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}"`, 'small')}</div></article>`;
-        }).join('') || `<p>${text('noMatch')}</p>`}</div><div class="pagination">${btn('picker-prev', 'previous', pickContext.page ? '' : 'disabled')}<span>${text('page')} ${pickContext.page + 1}/${pages}</span>${btn('picker-next', 'next', pickContext.page + 1 < pages ? '' : 'disabled')}</div>`;
+        }).join('') || `<p>${text('noMatch')}</p>`}</div></div><nav class="pagination" aria-label="${text('page')}">${btn('picker-prev', 'previous', pickContext.page ? '' : 'disabled')}<span role="status">${text('page')} ${pickContext.page + 1}/${pages}</span>${btn('picker-next', 'next', pickContext.page + 1 < pages ? '' : 'disabled')}</nav>`;
     if (!picker.open) picker.showModal();
+    picker.scrollTop = 0;
+    picker.querySelector('.picker-results').scrollTop = 0;
+    picker.querySelector('.picker-effects').addEventListener('toggle', event => { pickerEffectsOpen = event.target.open; });
 }
 function inspect(member, fromPicker = false) {
     const item = catalogFrom(state.files).find(candidate => sameVariant(candidate, member));
@@ -315,7 +334,18 @@ async function action(event) {
     if (action === 'tab') { state.tab = button.dataset.tab; state.notice = ''; renderMain(); return; }
     if (action === 'category') { state.category = button.dataset.category; state.notice = ''; renderMain(); return; }
     if (action === 'page-prev' || action === 'page-next') { state.page += action === 'page-prev' ? -1 : 1; renderCatalog(); return; }
-    if (action === 'picker-prev' || action === 'picker-next') { openPicker(pickContext.teamId, pickContext.index, pickContext.query, pickContext.page + (action === 'picker-prev' ? -1 : 1)); return; }
+    if (action === 'picker-prev' || action === 'picker-next') {
+        openPicker(pickContext.teamId, pickContext.index, pickContext.query, pickContext.page + (action === 'picker-prev' ? -1 : 1));
+        const direction = picker.querySelector(`[data-action="${action}"]`);
+        (direction.disabled ? picker.querySelector('.picker-results') : direction).focus({ preventScroll: true });
+        return;
+    }
+    if (action === 'picker-effects-clear') {
+        pickerEffects.clear();
+        openPicker(pickContext.teamId, pickContext.index, pickContext.query, 0);
+        picker.querySelector('[data-action="picker-effects-clear"]').focus({ preventScroll: true });
+        return;
+    }
     if (action === 'picker-class' || action === 'picker-class-all') {
         if (action === 'picker-class-all') pickerClasses.clear();
         else {
@@ -365,6 +395,14 @@ async function action(event) {
     }
 }
 for (const target of [root, picker, review]) target.addEventListener('click', event => { action(event).catch(error => { state.notice = error.message; renderMain(); }); });
+picker.addEventListener('change', event => {
+    const key = event.target.dataset.pickerEffect;
+    if (!key || !EFFECT_DATA[key]) return;
+    pickerEffectsOpen = true;
+    if (event.target.checked) pickerEffects.add(key); else pickerEffects.delete(key);
+    openPicker(pickContext.teamId, pickContext.index, pickContext.query, 0);
+    picker.querySelector(`[data-picker-effect="${key}"]`).focus({ preventScroll: true });
+});
 picker.addEventListener('input', event => {
     if (event.target.id !== 'picker-query') return;
     const value = event.target.value, caret = event.target.selectionStart;

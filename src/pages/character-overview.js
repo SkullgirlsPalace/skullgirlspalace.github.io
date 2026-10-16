@@ -32,7 +32,6 @@ export function render(charKey) {
     return `<section class="section character-overview" id="character-overview">
         <header class="overview-header"><a class="btn-back" href="/" aria-label="${t('common.backHome')}">←</a><h1>${escapeHtml(name)}</h1></header>
         <nav class="detail-tabs" aria-label="${t('characterOverview.sections')}">
-            <a class="tab-btn active" aria-current="page" href="${characterPath(charKey)}">${t('characterOverview.title')}</a>
             <a class="tab-btn" href="${characterPath(charKey, 'builds')}">${t('variant.builds')}</a>
             <a class="tab-btn" href="${characterPath(charKey, 'tier')}">${t('variant.tierList')}</a>
             <a class="tab-btn" href="/characters/">${t('characters.allCharacters')}</a>
