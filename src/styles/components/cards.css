@@ -1002,11 +1002,13 @@
 
 .extras-team-grid {
     display: grid;
+    direction: rtl;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 12px;
 }
 
 .extras-team-card {
+    direction: ltr;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;

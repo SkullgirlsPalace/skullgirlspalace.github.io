@@ -265,7 +265,7 @@
                 },
                 "signature_ability": {
                     "name": "CRIMINOLOGIA",
-                    "description": "[HAB 1]: **A Valentine e todos os aliados ganham REGEN. FORTE** por 15 s **quando qualquer lutador é derrotado.**\n\n[HAB 2]: **Ao GOLPEAR sob efeito de REGENERAÇÃO,** 15% de chance de infligir MALDIÇÃO e BLOQ. DE CURA por 10 s."
+                    "description": "[HAB 1]: **A Valentine e todos os aliados ganham REGENERAÇÃO FORTE** por 15 s **quando qualquer lutador é derrotado.**\n\n[HAB 2]: **Ao GOLPEAR sob efeito de REGENERAÇÃO,** 15% de chance de infligir MALDIÇÃO e BLOQ. DE CURA por 10 s."
                 },
                 "marquee_ability": "UTI (Ataque) / Centro de Traumas (Suporte)",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",

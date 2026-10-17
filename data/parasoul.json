@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "A NEBLINA AVANÇA...",
-                    "description": "[HAB 1]: Quando começa a partida e Parasoul ENTRA ou SAI da ASSISTÊNCIA o cenário fica NEBULOSO por 12 segundos. Enquanto o cenário estiver NEBULOSO, aplica FADIGA permanente que não pode ser impedida e impede qualquer EFEITO POSITIVO ou EFEITO NEGATIVO que seria aplicado ao oponente para DRENAR 10% do MEDIDOR DE BLOCKBUSTER (máx. 20/35/50% por NÉVOA).\n\n[HAB 2]: Enquanto o oponente estiver sofrendo FADIGA, o lutador ativo DRENA 1/1.5/2% da VIDA MÁXIMA quando qualquer lutador estiver prestes a ganhar um EFEITO POSITIVO ou sofrer um EFEITO NEGATIVO (máx. 40% por NÉVOA)."
+                    "description": "[HAB 1]: Quando começa a partida e Parasoul ENTRA ou SAI da ASSISTÊNCIA o cenário fica NEBULOSO por 12 segundos. Enquanto o cenário estiver NEBULOSO, aplica FADIGA permanente que não pode ser impedida e impede qualquer EFEITO POSITIVO ou EFEITO NEGATIVO que seria aplicado ao oponente para DRENAR 10% do MEDIDOR DE BLOCKBUSTER (máx. 50% por NÉVOA).\n\n[HAB 2]: Enquanto o oponente estiver sofrendo FADIGA, o lutador ativo DRENA 2% da VIDA MÁXIMA quando qualquer lutador estiver prestes a ganhar um EFEITO POSITIVO ou sofrer um EFEITO NEGATIVO (máx. 40% por NÉVOA)."
                 },
                 "marquee_ability": "MASSA CRÍTICA",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -309,7 +309,7 @@
                 },
                 "signature_ability": {
                     "name": "LEI MARCIAL",
-                    "description": "[HAB 1]: Em GOLPE CRÍTICO, DESATIVA os BLOCKBUSTERS, ESPECIAIS e TAG-INs do oponente por 4/5/6 segundos cada.\n\n[HAB 2]: Enquanto Parasoul estiver viva, aumenta a PRECISÃO do lutador ativo em 3/4/5% por GOLPE CRÍTICO até o COMBO terminar (até 30/40/50%)."
+                    "description": "[HAB 1]: Em GOLPE CRÍTICO, DESATIVA os BLOCKBUSTERS, ESPECIAIS e ASSISTÊNCIAS do oponente por 6 segundos cada.\n\n[HAB 2]: Enquanto Parasoul estiver viva, aumenta a PRECISÃO do lutador ativo em 5% por GOLPE CRÍTICO até o COMBO terminar (até 50%)."
                 },
                 "marquee_ability": "MASSA CRÍTICA",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -331,7 +331,7 @@
                 },
                 "signature_ability": {
                     "name": "CERCAR",
-                    "description": "[HAB 1]: Ao gerar uma LÁGRIMA, aplica LENTIDÃO por 5/7/10 segundos. Oponentes ficam IMOBILIZADOS enquanto estiverem perto de uma LÁGRIMA.\n\n[HAB 2]: DRENA 1/1.5/2% de VIDA por segundo enquanto o oponente estiver perto de uma LÁGRIMA."
+                    "description": "[HAB 1]: Ao gerar uma LÁGRIMA, aplica LENTIDÃO por 10 segundos. Oponentes ficam IMOBILIZADOS enquanto estiverem perto de uma LÁGRIMA.\n\n[HAB 2]: DRENA 2% de VIDA por segundo enquanto o oponente estiver perto de uma LÁGRIMA."
                 },
                 "marquee_ability": "MASSA CRÍTICA",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

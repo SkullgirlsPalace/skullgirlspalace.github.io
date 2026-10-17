@@ -69,6 +69,8 @@ h3 { font-size: .94rem; }
 .save-state { max-width: 390px; font-size: .76rem; color: var(--accent); text-align: right; }
 .variant-heading { display: flex; gap: 24px; align-items: center; padding: 23px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
 .variant-heading img { width: 110px; height: 118px; object-fit: contain; }
+.variant-heading > div { min-width: 0; }
+.variant-name-en { margin: 0 0 12px; font-size: .9rem; font-weight: 400; line-height: 1.4; color: var(--muted); overflow-wrap: anywhere; }
 .eyebrow { text-transform: uppercase; letter-spacing: .11em; font-size: .67rem; color: var(--muted); font-weight: 700; margin-bottom: 9px; }
 .chips { display: flex; flex-wrap: wrap; gap: 5px; }
 .chip { display: inline-block; font-size: .67rem; padding: 4px 7px; border: 1px solid var(--chip-line); border-radius: 5px; background: var(--chip-bg); color: var(--chip-text); }
@@ -97,7 +99,10 @@ h3 { font-size: .94rem; }
 .team-header h3 { margin: 0; }
 .status { padding: 5px 8px; background: var(--draft-bg); color: var(--draft-text); font-size: .68rem; border-radius: 20px; margin-left: 8px; }
 .status.reviewed { background: var(--reviewed-bg); color: var(--accent); }
-.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.team-grid { display: grid; direction: rtl; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.team-grid > * { direction: ltr; }
+.team-order { line-height: 1.7; color: var(--ink); }
+.team-position { display: block; grid-column: 1 / -1; margin-bottom: 8px; color: var(--accent); font-size: .8rem; font-weight: 700; }
 .member-card { border-radius: 9px; border: 1px solid var(--line); background: var(--surface-alt); padding: 16px 10px; text-align: center; min-width: 0; }
 .member-card img { width: 100%; max-width: 180px; height: 180px; object-fit: contain; }
 .member-card strong { display: block; font-size: .87rem; margin: 9px 0 7px; }

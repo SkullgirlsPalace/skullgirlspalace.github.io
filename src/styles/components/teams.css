@@ -4,8 +4,10 @@
 .team-category-btn:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 3px; }
 .team-recommendation { padding: 16px 0; border-top: 1px solid rgba(255,255,255,.12); }
 .team-recommendation h4 { margin: 0 0 12px; color: var(--accent-gold); }
-.team-members { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 0 0 14px; }
-.team-members li { min-width: 0; text-align: center; }
+.team-members { display: grid; direction: rtl; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 0 0 14px; }
+.team-members li { direction: ltr; min-width: 0; text-align: center; }
+.team-order { margin: 0 0 16px; line-height: 1.6; color: var(--text-secondary); }
+.team-position { display: block; margin-bottom: 8px; color: var(--accent-gold); font-size: .85rem; font-weight: 700; }
 .team-members img { object-fit: contain; width: 100%; max-width: 160px; height: auto; aspect-ratio: 1; }
 .team-members p, .team-strategy { white-space: pre-wrap; overflow-wrap: anywhere; }
 .team-members p { margin: 4px 0 0; color: var(--text-secondary); }

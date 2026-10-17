@@ -220,7 +220,7 @@ export const EFFECT_DATA = {
     explicacao_en: '+100% meter gain. Removes Slow.'
   },
   heavy_regen: {
-    keys: ['Regeneração Forte', 'Heavy Regen'],
+    keys: ['Regeneração Forte', 'Heavy Regen', 'Regen. Forte', 'Regen Forte', 'Regen.Forte'],
     name: 'Regeneração Forte',
     name_en: 'Heavy Regen',
     type: 'buff',

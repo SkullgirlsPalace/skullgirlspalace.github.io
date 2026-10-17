@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "SPLASH!",
-                    "description": "[HAB 1]: PROJÉTEIS que não sejam BLOCKBUSTER aplicam GOSMA e TINTA no oponente por 10 segundos cada e DRENAM 10/15/20% do MEDIDOR DE BLOCKBUSTER ao ACERTAR. BLOCKBUSTERS consomem toda a TINTA no oponente para causar 20% a mais de dano por acúmulo de TINTA (até 5 acúmulos).\n\n[HAB 2]: Ganhe BARREIRA ao entrar ou sair de IDEIA PROFUNDA. Enquanto estiver em IDEIA PROFUNDA, MOVIMENTOS ESPECIAIS recarregam 50/75/100% mais rápido e você ganha 10/20/30% do MEDIDOR DE BLOCKBUSTER por segundo."
+                    "description": "[HAB 1]: PROJÉTEIS que não sejam BLOCKBUSTER aplicam GOSMA e TINTA no oponente por 10 segundos cada e DRENAM 20% do MEDIDOR DE BLOCKBUSTER ao ACERTAR. BLOCKBUSTERS consomem toda a TINTA no oponente para causar 20% a mais de dano por acúmulo de TINTA (até 5 acúmulos).\n\n[HAB 2]: Ganhe BARREIRA ao entrar ou sair de IDEIA PROFUNDA. Enquanto estiver em IDEIA PROFUNDA, MOVIMENTOS ESPECIAIS recarregam 100% mais rápido e você ganha 30% do MEDIDOR DE BLOCKBUSTER por segundo."
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "Presença Chocante",
-                    "description": "[HAB 1]: **Todos os ataques de ASSISTÊNCIA dos aliados** aplicam MARCA DA MORTE por 20 seg e ATORDOAMENTO por 4s. Peacock também ganha 3 acúmulos de BARREIRA.\n\n[HAB 2]: **A cada 15 GOLPES de combo por um aliado de elemento Luz**, remove 1 EF. POS. do oponente e aplica OSCILAÇÃO DE ENERGIA por 10/12/15s."
+                    "description": "[HAB 1]: **Todos os ataques de ASSISTÊNCIA dos aliados** aplicam MARCA DA MORTE por 20 seg e ATORDOAMENTO por 4s. Peacock também ganha 3 acúmulos de BARREIRA.\n\n[HAB 2]: **A cada 15 GOLPES de combo por um aliado de elemento Luz**, remove 1 EF. POS. do oponente e aplica OSCILAÇÃO DE ENERGIA por 15s."
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
@@ -265,7 +265,7 @@
                 },
                 "signature_ability": {
                     "name": "PIADA MORTAL",
-                    "description": "[HAB 1]: Inflige um EFEITO NEGATIVO aleatório por 4/6/8 segundos ao usar um GOLPE ESPECIAL. Além disso, uma vez por partida, ao sofrer um GOLPE que seria fatal, recupera 10% da VIDA MÁXIMA por EFEITO NEGATIVO no oponente.\n\n[HAB 2]: Quando Peacock sofre um GOLPE que seria fatal enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, reduz a VIDA do oponente em 25/35/50%."
+                    "description": "[HAB 1]: Inflige um EFEITO NEGATIVO aleatório por 8 segundos ao usar um GOLPE ESPECIAL. Além disso, uma vez por partida, ao sofrer um GOLPE que seria fatal, recupera 10% da VIDA MÁXIMA por EFEITO NEGATIVO no oponente.\n\n[HAB 2]: Quando Peacock sofre um GOLPE que seria fatal enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, reduz a VIDA do oponente em 50%."
                 },
                 "marquee_ability": "Episódio Especial ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

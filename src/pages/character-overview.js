@@ -26,7 +26,7 @@ export function render(charKey) {
             }
         }))
     })).filter(group => group.variants.length);
-    const copy = { summary: t('characterOverview.summary'), element: t('detail.element'),
+    const copy = { language: getCurrentLanguage(), summary: t('characterOverview.summary'), element: t('detail.element'),
         attack: t('variant.attack'), health: t('variant.health'), power: t('variant.power'), ability: t('variant.signatureAbility') };
 
     return `<section class="section character-overview" id="character-overview">

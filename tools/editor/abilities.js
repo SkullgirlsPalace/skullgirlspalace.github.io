@@ -13,7 +13,8 @@ export function buildAbilityLinks(files) {
         const character = path.slice(5, -5);
         const keys = Object.keys(pt).filter(key => en[key] && characterName(en[key].character) === characterName(character));
         for (const variant of Object.values(data.variants).flat()) {
-            let matches = keys.filter(key => clean(pt[key].name) === clean(variant.name));
+            const referenceKey = variant.signature_ability?.krazete_id;
+            let matches = referenceKey && keys.includes(referenceKey) ? [referenceKey] : keys.filter(key => clean(pt[key].name) === clean(variant.name));
             if (!matches.length && variant.signature_ability?.name) {
                 matches = keys.filter(key => clean(pt[key].ability).toLocaleLowerCase('pt-BR') === clean(variant.signature_ability.name).toLocaleLowerCase('pt-BR'));
             }
@@ -38,7 +39,9 @@ export function publishedAbilityLinks(files) {
     for (const [path, data] of Object.entries(files)) {
         if (!data?.variants) continue;
         for (const variant of Object.values(data.variants).flat()) {
-            const key = names.get(clean(variant.name)) || abilities.get(clean(variant.signature_ability?.name).toLocaleLowerCase('pt-BR'));
+            const referenceKey = variant.signature_ability?.krazete_id;
+            const validReference = referenceKey && characterName(files[EN_ABILITIES_PATH]?.[referenceKey]?.character) === characterName(path.slice(5, -5));
+            const key = (validReference && referenceKey) || names.get(clean(variant.name)) || abilities.get(clean(variant.signature_ability?.name).toLocaleLowerCase('pt-BR'));
             if (key) links[abilityIdentity({ character: path.slice(5, -5), variant: variant.name })] = key;
         }
     }

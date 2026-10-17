@@ -6,6 +6,8 @@
 import { getEffectPatterns, getLocalizedEffect } from '../data/effectData.js';
 import { hasElementEffects } from '../data/elementEffectsData.js';
 import { getCurrentLanguage } from '../i18n/translations.js';
+import { stripAbilityLabels } from './abilityText.js';
+export { normalizeAbilityProgressions } from './abilityText.js';
 
 /**
  * Format ability/description text
@@ -27,7 +29,7 @@ export function formatText(text, variantName = null) {
     }
 
     // Remove source labels used by both PT-BR and English signature abilities.
-    text = text.replace(/\[(?:HAB|SA)\s*\d+\s*\]:?\s*/gi, '');
+    text = stripAbilityLabels(text);
 
     // Remove **bold** syntax instead of converting to <strong> since it doesn't add readability
     text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
@@ -98,19 +100,6 @@ export function formatText(text, variantName = null) {
     workingText = workingText.replace(/\\n/g, '<br>').replace(/\n/g, '<br>');
 
     return workingText;
-}
-
-/**
- * Reduce three-rank game ability progressions to the final displayed value.
- * Examples: 10/12/15 seconds -> 15 seconds; 20%/15%/10% -> 10%.
- */
-export function normalizeAbilityProgressions(text) {
-    if (Array.isArray(text)) text = text.join('\n');
-    if (typeof text !== 'string') text = String(text ?? '');
-
-    const value = String.raw`\d+(?:[.,]\d+)?(?:\s*(?:%|seconds?|second\(s\)|segundos?(?:\(s\))?|s|stacks?(?:\(s\))?|acúmulos?(?:\(s\))?|acumulos?(?:\(s\))?|camadas?))?`;
-    const progression = new RegExp(`${value}(?:\\s*\\/\\s*${value}){2,}`, 'gi');
-    return text.replace(progression, (sequence) => sequence.split('/').at(-1).trim());
 }
 
 import { getMoveData } from '../data/movesimages.js';

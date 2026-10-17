@@ -8,12 +8,14 @@ O Krazete é a referência principal para os dados originais do jogo. Os arquivo
 
 O conteúdo em português pode conter traduções comunitárias ou automáticas que não representam a forma desejada pelo Palácio Branco. Traduções e correções manuais feitas para o site são decisões editoriais válidas e devem ser preservadas durante atualizações. Uma diferença em relação ao inglês ou ao Krazete deve ser revisada, não substituída automaticamente.
 
+Abreviações portuguesas conhecidas são equivalências do nome completo, não erros de idioma ou mudanças de efeito. Por exemplo, `REGEN. FORTE`, `REGEN FORTE` e `REGEN.FORTE` significam **Regeneração Forte**. A revisão de 16/10/2026 confirmou ocorrências em Lazulita e Turno Mortal. Use o [glossário de abreviações](../CONTEXT.md) antes de traduzir ou marcar um termo como estrangeiro; equivalências desconhecidas continuam exigindo revisão manual.
+
 ## Onde o site lê os dados
 
 | Conteúdo | Arquivos usados pelo site | Observação |
 | --- | --- | --- |
 | Variantes e builds | `data/*.json` | A lista de arquivos de personagem está definida em `src/config/constants.js`. |
-| Nomes e habilidades em inglês | `data/krazete/ENGLISH-Variants.json` e `data/krazete/PT-BR-Variantes.json` | O mapeamento é montado em `src/i18n/dataTranslations.js`; as habilidades inglesas usam `ability`, `SA1` e `SA2` do arquivo em inglês. |
+| Nomes e habilidades em inglês | `data/krazete/ENGLISH-Variants.json`, `data/krazete/PT-BR-Variantes.json` e revisões em `data/<personagem>.json` | `src/i18n/dataTranslations.js` usa o Krazete como referência e fallback. Revisões em `signature_ability.english` têm prioridade; `krazete_id` preserva o vínculo confirmado sem renomear a fonte. |
 | Avaliações da tier list | `data/tier-data.json` | Conteúdo editorial do projeto, separado dos dados básicos das variantes. |
 | Classes das variantes | `src/data/variantClassData.js` | Dados editoriais reexportados por `variantClasses.js`; a API de localização continua a mesma. |
 | Times recomendados | `data/teams.json` | Cartas por variante e categoria; somente times revisados e com referências válidas são exibidos. |

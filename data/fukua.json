@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "KUNG FALSO",
-                    "description": "[HAB 1]: Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Ao ganhar um acúmulo de CHUTE SOMBRIO, TRANSFERE 1 EFEITO POSITIVO do oponente. BLOCKBUSTERS gastam 10/7/5 acúmulos de CHUTE SOMBRIO para invocar a MÃO DE GRENDEL e ACERTAR o oponente.\n\n[HAB 2]: Ao gastar 5 ou mais acúmulos de CHUTE SOMBRIO, ganha INABALÁVEL por 10/12/15 segundos. Oponentes derrotados enquanto este INABALÁVEL estiver ativo não podem mais REVIVER."
+                    "description": "[HAB 1]: Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Ao ganhar um acúmulo de CHUTE SOMBRIO, TRANSFERE 1 EFEITO POSITIVO do oponente. BLOCKBUSTERS gastam 5 acúmulos de CHUTE SOMBRIO para invocar a MÃO DE GRENDEL e ACERTAR o oponente.\n\n[HAB 2]: Ao gastar 5 ou mais acúmulos de CHUTE SOMBRIO, ganha INABALÁVEL por 15 segundos. Oponentes derrotados enquanto este INABALÁVEL estiver ativo não podem mais REVIVER."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",
@@ -107,7 +107,7 @@
                 },
                 "signature_ability": {
                     "name": "INTENÇÕES ASSASSINAS",
-                    "description": "[HAB 1]: Aplique MARCA DA MORTE permanente e ganhe FÚRIA para cada 20/15/10% de VIDA perdida por qualquer lutador.\n\n[HAB 2]: 50/75/100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS se o oponente estiver sofrendo de MARCA DA MORTE."
+                    "description": "[HAB 1]: Aplique MARCA DA MORTE permanente e ganhe FÚRIA para cada 10% de VIDA perdida por qualquer lutador.\n\n[HAB 2]: 100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS se o oponente estiver sofrendo de MARCA DA MORTE."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -153,7 +153,7 @@
                 },
                 "signature_ability": {
                     "name": "FANTASMA DA FUKUA",
-                    "description": "[HAB 1]: Um BLOQUEIO no momento certo dá 1/2/3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: Enquanto estiver sob efeito de BARREIRA, GOLPES DE PROJÉTIL concedem OLHO-MORTO por 10/12/15 segundos."
+                    "description": "[HAB 1]: Um BLOQUEIO no momento certo dá 3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: Enquanto estiver sob efeito de BARREIRA, GOLPES DE PROJÉTIL concedem OLHO-MORTO por 15 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -175,7 +175,7 @@
                 },
                 "signature_ability": {
                     "name": "PARALISIA DO SONO",
-                    "description": "[HAB 1]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 4/3/2 s enquanto estiver próximo ao oponente.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo FADIGA, ganha 1 acúmulo de MIASMA por 10 segundos a cada 4/3/2 segundos."
+                    "description": "[HAB 1]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 2 s enquanto estiver próximo ao oponente.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo FADIGA, ganha 1 acúmulo de MIASMA por 10 segundos a cada 2 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -309,7 +309,7 @@
                 },
                 "signature_ability": {
                     "name": "CHUVA FANTASMA",
-                    "description": "[HAB 1]: 15% de chance ao acertar um GOLPE, incluindo GOLPES bloqueados, de infligir QUEBRA DE ARM. e OSCILAÇÃO DE ENERGIA por 10/12/15 segundos cada.\n\n[HAB 2]: A cada 5 segundos enquanto Fukua estiver no lado do oponente no cenário e não estiver ATORDOADA, os oponentes perdem todos os EFEITOS POSITIVOS atuais e sofrem ATORDOAMENTO por 2/3/4 segundos."
+                    "description": "[HAB 1]: 15% de chance ao acertar um GOLPE, incluindo GOLPES bloqueados, de infligir QUEBRA DE ARM. e OSCILAÇÃO DE ENERGIA por 15 segundos cada.\n\n[HAB 2]: A cada 5 segundos enquanto Fukua estiver no lado do oponente no cenário e não estiver ATORDOADA, os oponentes perdem todos os EFEITOS POSITIVOS atuais e sofrem ATORDOAMENTO por 4 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

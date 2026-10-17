@@ -26,9 +26,9 @@ export async function showTeams(container, character, variant, category) {
         const teams = reviewedTeams(data, { character, variant }, category, characters, getVariantClasses);
         container.innerHTML = teams.length ? teams.map(team => `
             <article class="team-recommendation">
-                <ol class="team-members">${team.members.map(member => {
+                <ol class="team-members">${team.members.map((member, index) => {
                     const memberData = Object.values(characters[member.character].variants).flat().find(item => item.name === member.variant);
-                    return `<li><img loading="lazy" width="160" height="160" src="${escape(getVariantImage(member.character, member.variant))}" alt="">
+                    return `<li><span class="team-position">${t(`teams.${['front', 'middle', 'last'][index]}`)}</span><img loading="lazy" width="160" height="160" src="${escape(getVariantImage(member.character, member.variant))}" alt="">
                         <div><strong>${escape(getLocalizedNameSync(member.variant, memberData?.signature_ability?.name))}</strong>
                         <p>${getLocalizedVariantClasses(member.variant).map(item => escape(item.localized)).join(' · ')}</p></div></li>`;
                 }).join('')}</ol>

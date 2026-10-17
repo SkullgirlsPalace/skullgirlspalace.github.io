@@ -13,7 +13,9 @@ export const translations = {
     teams: {
       title: 'Times', categories: 'Categorias de times', general: 'Times Ofensivos',
       defense: 'Times Defensivos', loading: 'Carregando times...', empty: 'Ainda não há times revisados nesta categoria.',
-      loadError: 'Não foi possível carregar os times. Selecione a categoria para tentar novamente.', reviewedOn: 'Revisado em'
+      loadError: 'Não foi possível carregar os times. Selecione a categoria para tentar novamente.', reviewedOn: 'Revisado em',
+      order: 'Ordem no jogo: da direita para a esquerda. A 1ª variante fica na frente, a 2ª no meio e a 3ª por último.',
+      front: '1ª · Frente', middle: '2ª · Meio', last: '3ª · Última'
     },
     // Navigation
     nav: {
@@ -456,7 +458,9 @@ export const translations = {
     teams: {
       title: 'Teams', categories: 'Team categories', general: 'Offensive Teams',
       defense: 'Defensive Teams', loading: 'Loading teams...', empty: 'No reviewed teams in this category yet.',
-      loadError: 'Unable to load teams. Select the category to retry.', reviewedOn: 'Reviewed on'
+      loadError: 'Unable to load teams. Select the category to retry.', reviewedOn: 'Reviewed on',
+      order: 'In-game order: right to left. The 1st variant is in front, the 2nd in the middle, and the 3rd last.',
+      front: '1st · Front', middle: '2nd · Middle', last: '3rd · Last'
     },
     // Navigation
     nav: {

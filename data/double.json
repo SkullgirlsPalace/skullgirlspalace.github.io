@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "BEBIDA MONSTRO",
-                    "description": "[HAB 1]: Ganha 1 acúmulo de MIASMA a cada 5/4/3 segundos.\n\n[HAB 2]: Ao atingir 5 acúmulos de MIASMA, converte-os em 5 acúmulos de FÚRIA e recupera 25/35/50% da VIDA MÁXIMA. FÚRIA é removida quando Double é NOCAUTEADA ou SAI."
+                    "description": "[HAB 1]: Ganha 1 acúmulo de MIASMA a cada 3 segundos.\n\n[HAB 2]: Ao atingir 5 acúmulos de MIASMA, converte-os em 5 acúmulos de FÚRIA e recupera 50% da VIDA MÁXIMA. FÚRIA é removida quando Double é NOCAUTEADA ou SAI."
                 },
                 "marquee_ability": "Caos",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "FIM DE JOGO",
-                    "description": "[HAB 1]: Ao TRANSMUTAR para VANTAGEM ELEMENTAL, tem 50/75/100% de chance de aplicar QUIETUS e DESTRUIÇÃO permanente por 15 segundos cada. DESTRUIÇÃO é removida se Double for derrotada ou SAIR.\n\n[HAB 2]: Quando qualquer lutador sofre um EFEITO NEGATIVO, ganha ESQUIVA por 10 segundos. Após ESQUIVAR, remove 1 EFEITO POSITIVO do oponente e aplica MARCA DA MORTE por 5/7/10 segundos."
+                    "description": "[HAB 1]: Ao TRANSMUTAR para VANTAGEM ELEMENTAL, tem 100% de chance de aplicar QUIETUS e DESTRUIÇÃO permanente por 15 segundos cada. DESTRUIÇÃO é removida se Double for derrotada ou SAIR.\n\n[HAB 2]: Quando qualquer lutador sofre um EFEITO NEGATIVO, ganha ESQUIVA por 10 segundos. Após ESQUIVAR, remove 1 EFEITO POSITIVO do oponente e aplica MARCA DA MORTE por 10 segundos."
                 },
                 "marquee_ability": "Volatidade",
                 "recommended_build": "Vida%, Defesa, Resistência e Ganho Medidor",
@@ -265,7 +265,7 @@
                 },
                 "signature_ability": {
                     "name": "MORPHA",
-                    "description": "[HAB 1]: ARREMESSOS de Double concedem ARMADURA por 20 segundos e removem 1/2/3 EFEITO(S) NEGATIVO(S) dela.\n\n[HAB 2]: Quando o oponente é DERRUBADO após um ARREMESSO, aplica ATORDOAMENTO por 4 segundos. DRENA 2/3/4% de VIDA por segundo de oponentes ATORDOADOS."
+                    "description": "[HAB 1]: ARREMESSOS de Double concedem ARMADURA por 20 segundos e removem 3 EFEITO(S) NEGATIVO(S) dela.\n\n[HAB 2]: Quando o oponente é DERRUBADO após um ARREMESSO, aplica ATORDOAMENTO por 4 segundos. DRENA 4% de VIDA por segundo de oponentes ATORDOADOS."
                 },
                 "marquee_ability": "Volatidade",
                 "recommended_build": "VD%, Precisão, Defesa e Resistência",
@@ -309,7 +309,7 @@
                 },
                 "signature_ability": {
                     "name": "A RAIVA DA ÁGUA",
-                    "description": "[HAB 1]: Enquanto compartilhar o mesmo elemento que o oponente, ganha 1 acúmulo de PRECISÃO a cada 3/2/1 segundo(s), e todos os GOLPES causam 100% de DANO adicional.\n\n[HAB 2]: GOLPES com PRECISÃO de Double causam dano equivalente a 1/1.5/2% da VIDA MÁXIMA aos colegas de equipe do oponente."
+                    "description": "[HAB 1]: Enquanto compartilhar o mesmo elemento que o oponente, ganha 1 acúmulo de PRECISÃO a cada 1 segundo(s), e todos os GOLPES causam 100% de DANO adicional.\n\n[HAB 2]: GOLPES com PRECISÃO de Double causam dano equivalente a 2% da VIDA MÁXIMA aos colegas de equipe do oponente."
                 },
                 "marquee_ability": "Caos",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico/Taxa de Atq Crítico",

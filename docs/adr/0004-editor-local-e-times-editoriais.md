@@ -10,6 +10,8 @@ A manutenção de builds, classes e ranks exigia editar arquivos de código e JS
 
 ## Consequências
 
+O armazenamento das novas revisões de habilidades inglesas descrito abaixo foi substituído pela [ADR 0005](0005-referencia-krazete-separada-da-edicao.md), que preserva a fonte para consulta com progressões completas.
+
 - A exportação produz os arquivos consumidos pela wiki. O backup próprio inclui a base original de cada arquivo modificado. A reaplicação reconhece os arquivos já idênticos à própria exportação, preservando times em rascunho. Outras bases divergentes bloqueiam a importação inteira, sem tentar misturar decisões editoriais automaticamente.
 - As classes editoriais passam do corpo de `variantClasses.js` para `variantClassData.js`, módulo de dados puro reexportado pela API anterior. Isso permite exportar correções sem reescrever as funções de localização ou introduzir uma busca de dados no boot.
 - Times ficam em `data/teams.json`, separados de `extras.json` e dos JSON de personagens. A identidade é sempre personagem + nome exato de variante. Um time contém a variante da ficha e até três integrantes, em ordem. Classes elegíveis controlam a categoria defensiva. O editor admite vários times por categoria.

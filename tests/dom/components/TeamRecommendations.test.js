@@ -24,6 +24,8 @@ describe('lazy public Teams tab', () => {
         await vi.waitFor(() => expect(document.querySelectorAll('.team-recommendation')).toHaveLength(1));
         expect(fetch).toHaveBeenCalledTimes(1);
         expect(document.querySelector('.team-members strong').textContent).toBe('Rosa Estelar');
+        expect(document.querySelector('.team-position').textContent).toBe('1ª · Frente');
+        expect(document.querySelector('.team-order').textContent).toContain('da direita para a esquerda');
         expect(document.querySelector('.team-members p').textContent).toContain('Suporte de Utilidade');
         expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
         document.querySelector('[data-team-category="defense"]').click();
@@ -36,6 +38,7 @@ describe('lazy public Teams tab', () => {
         expect(document.querySelector('[data-team-category="defense"]')).toBeNull();
         expect(document.querySelector('[data-tab="teams"]').textContent).toBe('Teams');
         expect(document.querySelector('[data-team-category="general"]').textContent).toBe('Offensive Teams');
+        expect(document.querySelector('.team-order').textContent).toContain('right to left');
         expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
         setLanguage('pt-BR');
     });

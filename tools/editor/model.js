@@ -1,5 +1,6 @@
 import { validateTeam, sameVariant } from '../../src/utils/teamData.js';
 import { EN_ABILITIES_PATH, PT_MAPPING_PATH, buildAbilityLinks, abilityIdentity, publishedAbilityLinks } from './abilities.js';
+import { splitSignatureAbility } from '../../src/utils/abilityText.js';
 
 export const EDITABLE_BUILD_FIELDS = ['recommended_build', 'recommended_arsenal', 'marquee_ability'];
 export const TIER_MODES = ['pf', 'parallel', 'riftOff', 'riftDef'];
@@ -31,6 +32,8 @@ function protectedFields(variant) {
     if (copy.signature_ability && typeof copy.signature_ability === 'object') {
         delete copy.signature_ability.name;
         delete copy.signature_ability.description;
+        delete copy.signature_ability.english;
+        delete copy.signature_ability.krazete_id;
         if (!Object.keys(copy.signature_ability).length) delete copy.signature_ability;
     }
     return copy;
@@ -116,9 +119,21 @@ export function validateChanges(base, files, classesFor) {
                             if (equal(before.signature_ability?.[field], after.signature_ability?.[field])) continue;
                             const error = abilityTextError(after.signature_ability?.[field], true);
                             if (error) errors.push(`${before.name}/${field}: ${error}`);
+                            else if (field === 'description' && !splitSignatureAbility(after.signature_ability.description).SA1.trim()) errors.push(`${before.name}/${field}: abilityRequired`);
                         }
                         const key = abilityLinks[abilityIdentity({ character: path.slice(5, -5), variant: before.name })];
-                        if (key && before.signature_ability?.name !== after.signature_ability?.name && files[PT_MAPPING_PATH]?.[key]?.ability !== after.signature_ability?.name) errors.push(`${before.name}: abilityLink`);
+                        const referenceKey = after.signature_ability?.krazete_id;
+                        if (referenceKey !== before.signature_ability?.krazete_id && (!key || referenceKey !== key)) errors.push(`${before.name}: abilityLink`);
+                        if (key && referenceKey !== key && before.signature_ability?.name !== after.signature_ability?.name && files[PT_MAPPING_PATH]?.[key]?.ability !== after.signature_ability?.name) errors.push(`${before.name}: abilityLink`);
+                        const english = after.signature_ability?.english;
+                        if (!equal(before.signature_ability?.english, english)) {
+                            if (!english || typeof english !== 'object' || Array.isArray(english) || Object.keys(english).some(field => !['name', 'description'].includes(field))) errors.push(`${before.name}/english: protectedData`);
+                            else for (const field of ['name', 'description']) {
+                                const error = abilityTextError(english[field], true);
+                                if (error) errors.push(`${before.name}/english/${field}: ${error}`);
+                                else if (field === 'description' && !splitSignatureAbility(english.description).SA1.trim()) errors.push(`${before.name}/english/${field}: abilityRequired`);
+                            }
+                        }
                     }
                     for (const field of EDITABLE_BUILD_FIELDS) {
                         if (!equal(before[field], after[field]) && (typeof after[field] !== 'string' || /[<>]/.test(after[field]))) errors.push(`${before.name}/${field}: plainText`);

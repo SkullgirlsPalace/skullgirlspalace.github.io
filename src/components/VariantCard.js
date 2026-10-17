@@ -10,6 +10,7 @@ import { hasExtras, getExtrasData } from '../data/extrasData.js';
 import { MOVE_DATA } from '../data/movesimages.js';
 import { t, getCurrentLanguage, getLocalizedNameSync, getLocalizedAbilityNameSync, getLocalizedSADescSync } from '../i18n/index.js';
 import { supportsDefensiveTeams, escapeTeamText } from '../utils/teamData.js';
+import { localizePortugueseAbility } from '../utils/abilityText.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -37,8 +38,9 @@ export function createVariantCard(variant, charKey, index = 0) {
 
   // Format ability description
   const rawSADesc = variant.signature_ability?.description || t('variant.noDescription');
- const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc, variant.signature_ability?.name);
- const abilityDesc = formatText(normalizeAbilityProgressions(localizedSADesc), variant.name);
+  const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc, variant.signature_ability?.name);
+  const displaySADesc = getCurrentLanguage() === 'pt-BR' ? localizePortugueseAbility(localizedSADesc) : localizedSADesc;
+  const abilityDesc = formatText(normalizeAbilityProgressions(displaySADesc), variant.name);
 
   // Format arsenal with images
   const arsenalHTML = formatArsenal(variant.recommended_arsenal || '', charKey);
@@ -293,6 +295,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                             ${supportsDefensiveTeams(getVariantClasses(variant.name)) ? `<button type="button" class="team-category-btn" data-team-category="defense" aria-pressed="false">${t('teams.defense')}</button>` : ''}
                         </div>
                         <p class="recommendation-note">${t('recommendations.teams')}</p>
+                        <p class="team-order">${t('teams.order')}</p>
                         <div class="team-results" aria-live="polite"></div>
                     </div>
                     <!-- Extras Tab -->
@@ -368,7 +371,7 @@ function getMoveImage(charKey, moveName) {
 /**
  * Render a team member card with image
  */
-function renderTeamMemberCard(member) {
+function renderTeamMemberCard(member, index) {
     const imgSrc = getVariantImage(member.character, member.variant, 0);
     const classes = getVariantClasses(member.variant) || [];
     const mainClass = classes[0];
@@ -379,6 +382,7 @@ function renderTeamMemberCard(member) {
             <img loading="lazy" src="${imgSrc}" alt="${member.variant}" class="extras-team-img"
                  onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-team-info">
+                <span class="team-position">${t(`teams.${['front', 'middle', 'last'][index]}`)}</span>
                 <span class="extras-team-name">${member.variant}</span>
                 ${classInfo ? `
                 <span class="extras-team-class" style="color: ${classInfo.color}; font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 4px; margin-top: 2px;">
@@ -446,8 +450,9 @@ function renderBatalhasGerais(data, charKey) {
                 <h4 class="extras-section-title">
                     👥 TIME RECOMENDADO
                 </h4>
+                <p class="team-order">${t('teams.order')}</p>
                 <div class="extras-team-grid">
-                    ${data.time_recomendado.map(m => renderTeamMemberCard(m)).join('')}
+                    ${data.time_recomendado.map((member, index) => renderTeamMemberCard(member, index)).join('')}
                 </div>
             </div>
         `;
@@ -530,8 +535,9 @@ function renderGuildas(data, charKey) {
                     <h4 class="extras-section-title mini">
                         👥 TIME SUGERIDO
                     </h4>
+                    <p class="team-order">${t('teams.order')}</p>
                     <div class="extras-team-grid">
-                        ${boss.team.map(m => renderTeamMemberCard(m)).join('')}
+                        ${boss.team.map((member, index) => renderTeamMemberCard(member, index)).join('')}
                     </div>
                 </div>
             ` : ''}

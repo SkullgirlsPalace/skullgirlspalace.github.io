@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { EFFECT_DATA, getEffectPatterns } from '../../../src/data/effectData.js';
+import { EFFECT_DATA, getEffectPatterns, getEffectIconByName } from '../../../src/data/effectData.js';
 
 describe('effectData.js', () => {
   describe('EFFECT_DATA', () => {
@@ -51,6 +51,12 @@ describe('effectData.js', () => {
   });
 
   describe('getEffectPatterns', () => {
+    it('resolves Portuguese Heavy Regen abbreviations to the same effect icon and pattern', () => {
+      for (const name of ['REGEN. FORTE', 'REGEN FORTE', 'REGEN.FORTE']) {
+        expect(getEffectIconByName(name)).toBe(EFFECT_DATA.heavy_regen.icon);
+        expect(getEffectPatterns().some(item => item.effectKey === 'heavy_regen' && item.pattern.toLowerCase() === name.toLowerCase())).toBe(true);
+      }
+    });
     it('should return an array', () => {
       const patterns = getEffectPatterns();
       expect(Array.isArray(patterns)).toBe(true);

@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "O RETORNO DA LOUCURA",
-                    "description": "[HAB 1]: 3/4/5% de chance de redefinir os cronômetros de todos os EF. POSITIVOS de Fukua e todos os EF. NEGATIVOS do oponente ao GOLPEAR.\n\n[HAB 2]: Uma vez por partida, ao ser GOLPEADO fatalmente, congele o tempo por 7 seg e ganhe 3/4/5 camadas de MIASMA por 7 seg. O tempo recomeça se Fukua atacar."
+                    "description": "[HAB 1]: 5% de chance de redefinir os cronômetros de todos os EF. POSITIVOS de Fukua e todos os EF. NEGATIVOS do oponente ao GOLPEAR.\n\n[HAB 2]: Uma vez por partida, ao ser GOLPEADO fatalmente, congele o tempo por 7 seg e ganhe 5 camadas de MIASMA por 7 seg. O tempo recomeça se Fukua atacar."
                 },
                 "marquee_ability": "Morta-Viva",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -131,7 +131,7 @@
                 },
                 "signature_ability": {
                     "name": "HABILIDADE AMARELA",
-                    "description": "[HAB 1]: Ganhe BÊNÇÃO a cada 5 segundos. Esta BÊNÇÃO sempre dura 1/1.5/2 segundo(s) e se torna permanente ao usar MOVIMENTOS ESPECIAIS e BLOCKBUSTERS. As BÊNÇÃOS permanentes são removidas quando esta BÊNÇÃO expira.\n\n[HAB 2]: Enquanto estiver com pelo menos 3 acúmulos de BÊNÇÃO permanente, MOVIMENTOS ESPECIAIS e BLOCKBUSTERS ficam INDEFENSÁVEIS e recuperam 25/35/50% do dano causado como VIDA."
+                    "description": "[HAB 1]: Ganhe BÊNÇÃO a cada 5 segundos. Esta BÊNÇÃO sempre dura 2 segundo(s) e se torna permanente ao usar MOVIMENTOS ESPECIAIS e BLOCKBUSTERS. As BÊNÇÃOS permanentes são removidas quando esta BÊNÇÃO expira.\n\n[HAB 2]: Enquanto estiver com pelo menos 3 acúmulos de BÊNÇÃO permanente, MOVIMENTOS ESPECIAIS e BLOCKBUSTERS ficam INDEFENSÁVEIS e recuperam 50% do dano causado como VIDA."
                 },
                 "marquee_ability": "",
                 "recommended_build": "ATQ%, Perfura??o, Ganho Medidor e Reat. Especial",
@@ -153,7 +153,7 @@
                 },
                 "signature_ability": {
                     "name": "NEVASCA FANTASMA",
-                    "description": "[HAB 1]: Ganhe 1 camada de BARREIRA e ESPINHOS por 5/7/10 segundos a cada 3 segundos enquanto estiver perto de um cadáver.\n\n[HAB 2]: Ganhe 3/4/5 camadas de REGENERAÇÃO por 10 segundos e 50% no MEDIDOR DE BLOCKBUSTER ao derrotar um oponente. Oponentes derrotados não podem ser revividos."
+                    "description": "[HAB 1]: Ganhe 1 camada de BARREIRA e ESPINHOS por 10 segundos a cada 3 segundos enquanto estiver perto de um cadáver.\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO por 10 segundos e 50% no MEDIDOR DE BLOCKBUSTER ao derrotar um oponente. Oponentes derrotados não podem ser revividos."
                 },
                 "marquee_ability": "Morta-Viva",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -219,7 +219,7 @@
                 },
                 "signature_ability": {
                     "name": "ECTOPLASMA",
-                    "description": "[HAB 1]: Usar um BLOCKBUSTER aplica GOSMA por 10 segundos. BLOCKBUSTERS causam 50/75/100% de dano adicional a oponentes sofrendo GOSMA.\n\n[HAB 2]: Quando um EFEITO POSITIVO em qualquer lutador expira ou é removido, ganha 15/20/25% do MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Usar um BLOCKBUSTER aplica GOSMA por 10 segundos. BLOCKBUSTERS causam 100% de dano adicional a oponentes sofrendo GOSMA.\n\n[HAB 2]: Quando um EFEITO POSITIVO em qualquer lutador expira ou é removido, ganha 25% do MEDIDOR DE BLOCKBUSTER."
                 },
                 "marquee_ability": "Morta do Mal",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

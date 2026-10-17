@@ -101,6 +101,47 @@ function abilityBase() {
     return files;
 }
 describe('bilingual ability editing', () => {
+    it('publishes final editorial English from the character JSON and retains the Krazete source and identity', async () => {
+        const before = abilityBase(), files = clone(before);
+        files['data/annie.json'].variants.diamante[0].signature_ability = {
+            name: 'NOME PT REVISADO', description: '[SA1]: 15 segundos.\n\n[SA2]: Corrigida.',
+            krazete_id: 'rose', english: { name: 'EDITORIAL EN', description: '[SA1]: 15 seconds.\n\n[SA2]: Reviewed.' }
+        };
+        expect(validateChanges(before, files)).toEqual([]);
+        expect(Object.keys(exportFiles(before, files))).toEqual(['data/annie.json']);
+        expect(files[EN_ABILITIES_PATH]).toEqual(before[EN_ABILITIES_PATH]);
+        expect(files[PT_MAPPING_PATH]).toEqual(before[PT_MAPPING_PATH]);
+        expect(buildAbilityLinks(files)).toEqual(buildAbilityLinks(before));
+        expect(restoreBackup(files, makeBackup(before, files))).toEqual(files);
+        vi.resetModules();
+        vi.stubGlobal('fetch', vi.fn(async path => ({ json: async () => files[String(path)] })));
+        const { setCharacters } = await import('../../../src/state/store.js');
+        const { setLanguage } = await import('../../../src/i18n/translations.js');
+        const { preloadKrazeteData, getLocalizedSADescSync, getLocalizedAbilityNameSync, getLocalizedNameSync } = await import('../../../src/i18n/dataTranslations.js');
+        try {
+            setCharacters({ annie: files['data/annie.json'] });
+            await preloadKrazeteData(); setLanguage('en');
+            expect(getLocalizedNameSync('Rosa', 'NOME PT REVISADO')).toBe('Star Rose');
+            expect(getLocalizedAbilityNameSync('Rosa', 'NOME PT REVISADO')).toBe('EDITORIAL EN');
+            expect(getLocalizedSADescSync('Rosa', 'PT fallback', 'NOME PT REVISADO')).toContain('15 seconds.');
+            expect(getLocalizedSADescSync('Rosa', 'PT fallback', 'NOME PT REVISADO')).not.toContain('5/10/15');
+            setLanguage('pt-BR');
+            expect(getLocalizedSADescSync('Rosa', 'Texto PT')).toBe('Texto PT');
+        } finally { setCharacters({}); setLanguage('pt-BR'); vi.unstubAllGlobals(); }
+    });
+    it('protects reference IDs and validates incomplete or HTML English revisions in character JSONs', () => {
+        const before = abilityBase(), files = clone(before), signature = files['data/annie.json'].variants.diamante[0].signature_ability;
+        signature.krazete_id = 'other';
+        expect(validateChanges(before, files).join()).toContain('abilityLink');
+        signature.krazete_id = 'rose';
+        signature.english = { name: 'EDITED', description: '[SA1]: \n\n[SA2]: Second only.' };
+        expect(validateChanges(before, files).join()).toContain('abilityRequired');
+        expect(restoreBackup(before, makeBackup(before, files))).toEqual(files);
+        signature.english.description = '<img src=x>';
+        expect(() => restoreBackup(before, makeBackup(before, files))).toThrow('abilityText');
+        signature.english.description = 'HP < 50%; gain HEX for 15 seconds.';
+        expect(validateChanges(before, files)).toEqual([]);
+    });
     it('feeds the published language loader after a fallback PT ability rename', async () => {
         const before = abilityBase(), files = clone(before);
         files['data/annie.json'].variants.diamante[0].signature_ability = { name: 'NOVO NOME', description: '[HAB 1]: **5/10/15** segundos.\n\n[HAB 2]: Corrigida.' };

@@ -9,6 +9,7 @@ import { strings } from './strings.js';
 import { isLocalEditorURL, showLocalOnlyMessage } from './local-only.js';
 import { initEditorTheme } from './theme.js';
 import { EN_ABILITIES_PATH, PT_MAPPING_PATH, buildAbilityLinks, abilityIdentity, englishAbility } from './abilities.js';
+import { stripAbilityLabels, splitSignatureAbility, joinSignatureAbility, localizePortugueseAbility, normalizeAbilityProgressions } from '../../src/utils/abilityText.js';
 
 const root = document.querySelector('#editor');
 const picker = document.querySelector('#picker');
@@ -28,11 +29,16 @@ const classLabel = name => text(({ Ofensivo: 'classOffensive', Defensivo: 'class
 const image = member => new URL(getVariantImage(member.character, member.variant), repo).href;
 const selected = () => catalogFrom(state.files).find(item => sameVariant(item, state.selected));
 const today = () => { const date = new Date(); return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`; };
-const englishFor = item => englishAbility(state.files, state.abilityLinks, item);
+const englishFor = item => {
+    const source = englishAbility(state.files, state.abilityLinks, item);
+    const edited = item?.data.signature_ability?.english;
+    return edited ? { ...source, ability: edited.name, ...splitSignatureAbility(edited.description) } : source ? { ...source } : null;
+};
 const displayName = item => language === 'en' ? englishFor(item)?.name?.replace(/\r/g, '').trim() || item.variant : item.variant;
 const chips = name => `<div class="chips">${classesFor(name).map(value => `<span class="chip">${esc(classLabel(value))}</span>`).join('')}</div>`;
 const btn = (action, label, attributes = '', style = '') => `<button type="button" data-action="${action}" class="${style}" ${attributes}>${esc(text(label))}</button>`;
 const rich = value => esc(value || text('missing')).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+const richAbility = (value, locale) => rich(normalizeAbilityProgressions(stripAbilityLabels(locale === 'pt-BR' ? localizePortugueseAbility(value) : value)));
 function humanError(error) {
     const index = error.lastIndexOf(': ');
     const prefix = index >= 0 ? `${error.slice(0, index)}: ` : '';
@@ -115,9 +121,10 @@ function renderCatalog() {
 function renderMain() {
     const host = root.querySelector('#main-view'), item = selected();
     if (!item) { host.innerHTML = `<p>${text('noMatch')}</p>`; return; }
+    const englishName = englishFor(item)?.name?.replace(/\r/g, '').trim();
     if (state.category === 'defense' && !supportsDefensiveTeams(classesFor(item.variant))) state.category = 'general';
     host.innerHTML = `<section class="variant-heading"><img loading="lazy" width="110" height="118" src="${image(item)}" alt="">
-        <div><p class="eyebrow">${esc(item.characterName)} / ${esc(item.rarity)} / ${esc(item.data.element)}</p><h1>${esc(displayName(item))}</h1>${chips(item.variant)}
+        <div><p class="eyebrow">${esc(item.characterName)} / ${esc(item.rarity)} / ${esc(item.data.element)}</p><h1 lang="pt-BR">${esc(item.variant)}</h1>${englishName ? `<p class="variant-name-en" lang="en">${esc(englishName)}</p>` : ''}${chips(item.variant)}
         <div class="inline-actions">${btn('character-moves', 'characterMoves', `data-character="${esc(item.character)}"`, 'small')}</div></div></section>
         <nav class="tabs" aria-label="${text('section')}">${['reference', 'abilities', 'edit', 'teams'].map(tab => `<button data-action="tab" data-tab="${tab}" class="${state.tab === tab ? 'active' : ''}" aria-current="${state.tab === tab ? 'page' : 'false'}">${text(tab)}</button>`).join('')}</nav>
         <div class="error" id="editor-error" role="alert">${esc(state.notice)}</div>
@@ -133,28 +140,37 @@ function referenceMarkup(item) {
     const english = englishFor(item);
     const variantsBuilds = item.data.builds || [item.data];
     return `<p class="help">${text('referenceHelp')}</p><div class="reference-grid">
-        <section class="panel"><p class="eyebrow">PT-BR · ${text('ability')}</p><h2>${esc(item.data.signature_ability?.name || text('missing'))}</h2><div class="reference-text">${rich(item.data.signature_ability?.description)}</div></section>
-        <section class="panel"><p class="eyebrow">EN · ${text('enReference')}</p>${english ? `<h2>${esc(english.ability)}</h2><div class="reference-text">${rich([english.SA1, english.SA2].filter(Boolean).join('\n\n'))}</div>` : `<p class="help">${text('noEnglish')}</p>`}</section>
-        </div><section class="panel"><h2>${text('existingBuild')}</h2>${variantsBuilds.map(build => `<h3>${esc(build.title || text('baseBuild'))}</h3>${EDITABLE_BUILD_FIELDS.map(field => `<p class="reference-text"><strong>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}</strong>\n${rich(build[field])}</p>`).join('')}`).join('')}</section>
+        <section class="panel"><p class="eyebrow">PT-BR · ${text('ability')}</p><h2>${esc(item.data.signature_ability?.name || text('missing'))}</h2><div class="reference-text">${richAbility(item.data.signature_ability?.description, 'pt-BR')}</div></section>
+        <section class="panel"><p class="eyebrow">EN · ${text('enReference')}</p>${english ? `<h2>${esc(english.ability)}</h2><div class="reference-text">${richAbility([english.SA1, english.SA2].filter(Boolean).join('\n\n'), 'en')}</div>` : `<p class="help">${text('noEnglish')}</p>`}</section>
+        </div>${sourceAbilitiesMarkup(item)}<section class="panel"><h2>${text('existingBuild')}</h2>${variantsBuilds.map(build => `<h3>${esc(build.title || text('baseBuild'))}</h3>${EDITABLE_BUILD_FIELDS.map(field => `<p class="reference-text"><strong>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}</strong>\n${rich(build[field])}</p>`).join('')}`).join('')}</section>
         <section class="panel"><h2>${text('currentTiers')}</h2>${tiersMarkup(item)}</section>`;
+}
+function sourceAbilitiesMarkup(item) {
+    const key = state.abilityLinks[abilityIdentity(item)];
+    return `<section class="panel source-abilities"><h2>${text('sourceAbilities')}</h2><p class="help">${text('sourceAbilityHelp')}</p><div class="reference-grid">${[[PT_MAPPING_PATH, 'PT-BR'], [EN_ABILITIES_PATH, 'EN']].map(([path, locale]) => {
+        const source = state.base[path]?.[key];
+        return `<section data-ability-source="${locale}"><h3>Krazete · ${locale}</h3>${source ? `<h4>${esc(source.ability || text('missing'))}</h4>${['SA1', 'SA2'].map(part => `<p class="eyebrow">${part}</p><div class="reference-text">${rich(stripAbilityLabels(source[part]))}</div>`).join('')}` : `<p class="help">${text('noEnglish')}</p>`}</section>`;
+    }).join('')}</div></section>`;
 }
 function abilityField(locale, field, label, value, multiline = false) {
     const attributes = `data-ability-locale="${locale}" data-ability-field="${field}"`;
-    return `<label>${text(label)}${multiline ? `<textarea rows="7" ${attributes}>${esc(value || '')}</textarea>` : `<input ${attributes} value="${esc(value || '')}">`}</label>`;
+    return `<label>${text(label)}${multiline ? `<textarea rows="7" ${attributes}>${esc(normalizeAbilityProgressions(stripAbilityLabels(value)))}</textarea>` : `<input ${attributes} value="${esc(value || '')}">`}</label>`;
 }
 function abilitiesMarkup(item) {
     const pt = item.data.signature_ability || {}, en = englishFor(item);
+    const parts = splitSignatureAbility(localizePortugueseAbility(pt.description));
     return `<p class="help">${text('abilityHelp')}</p><div class="reference-grid">
         <section class="panel"><h2>PT-BR · ${esc(item.variant)}</h2><div class="fields">
         ${abilityField('pt-BR', 'name', 'abilityName', pt.name)}
-        ${abilityField('pt-BR', 'description', 'abilityDescription', pt.description, true)}</div>
-        <h3 class="ability-preview-label">${text('abilityPreview')}</h3><div id="ability-preview-pt" class="reference-text">${rich(pt.description)}</div></section>
+        ${abilityField('pt-BR', 'SA1', 'abilitySA1', parts.SA1, true)}
+        ${abilityField('pt-BR', 'SA2', 'abilitySA2', parts.SA2, true)}</div>
+        <h3 class="ability-preview-label">${text('abilityPreview')}</h3><div id="ability-preview-pt" class="reference-text">${richAbility(pt.description, 'pt-BR')}</div></section>
         <section class="panel"><h2>EN · ${esc(en?.name || item.variant)}</h2>${en ? `<div class="fields">
         ${abilityField('en', 'ability', 'abilityName', en.ability)}
         ${abilityField('en', 'SA1', 'abilitySA1', en.SA1, true)}
         ${abilityField('en', 'SA2', 'abilitySA2', en.SA2, true)}</div>
-        <h3 class="ability-preview-label">${text('abilityPreview')}</h3><div id="ability-preview-en" class="reference-text">${rich([en.SA1, en.SA2].filter(Boolean).join('\n\n'))}</div>` : `<p class="warning">${text('abilityUnlinked')}</p>`}</section>
-        </div>`;
+        <h3 class="ability-preview-label">${text('abilityPreview')}</h3><div id="ability-preview-en" class="reference-text">${richAbility([en.SA1, en.SA2].filter(Boolean).join('\n\n'), 'en')}</div>` : `<p class="warning">${text('abilityUnlinked')}</p>`}</section>
+        </div>${sourceAbilitiesMarkup(item)}`;
 }
 function buildFields(build, index) {
     return `<div class="fields">${index !== 'base' ? `<label>${text('buildTitle')}<input data-build="${index}" data-field="title" value="${esc(build.title)}"></label>` : ''}
@@ -170,20 +186,21 @@ function editMarkup(item) {
         ${ranks.notes ? `<p class="reference-text">${text('notes')}: ${esc(ranks.notes)}</p>` : ''}</section>`;
 }
 function memberMarkup(member, team, index) {
-    if (!member) return `<div class="member-card empty"><span class="slot-number">${index + 1}</span>${btn('pick', 'addMember', `data-team="${esc(team.id)}" data-index="${index}"`)}</div>`;
+    const position = `<span class="team-position">${text(['teamFront', 'teamMiddle', 'teamLast'][index])}</span>`;
+    if (!member) return `<div class="member-card empty">${position}${btn('pick', 'addMember', `data-team="${esc(team.id)}" data-index="${index}"`)}</div>`;
     const item = catalogFrom(state.files).find(candidate => sameVariant(candidate, member));
     const isAnchor = sameVariant(member, team.anchor);
-    return `<div class="member-card"><img loading="lazy" width="180" height="180" src="${image(member)}" alt=""><strong>${esc(item ? displayName(item) : member.variant)}</strong>${chips(member.variant)}
+    return `<div class="member-card">${position}<img loading="lazy" width="180" height="180" src="${image(member)}" alt=""><strong>${esc(item ? displayName(item) : member.variant)}</strong>${chips(member.variant)}
         ${isAnchor ? `<small>${text('fixed')}</small>` : ''}<div class="inline-actions">
         ${btn('inspect', 'inspect', `data-character="${esc(member.character)}" data-variant="${esc(member.variant)}"`, 'small')}
         ${!isAnchor ? btn('pick', 'replace', `data-team="${esc(team.id)}" data-index="${index}"`, 'small') + btn('remove-member', 'remove', `data-team="${esc(team.id)}" data-index="${index}"`, 'small danger') : ''}
-        <button class="small" data-action="move-member" data-team="${esc(team.id)}" data-index="${index}" data-direction="-1" ${index === 0 ? 'disabled' : ''} aria-label="${text('moveLeft')}">←</button>
-        <button class="small" data-action="move-member" data-team="${esc(team.id)}" data-index="${index}" data-direction="1" ${index === team.members.length - 1 ? 'disabled' : ''} aria-label="${text('moveRight')}">→</button></div></div>`;
+        <button class="small" data-action="move-member" data-team="${esc(team.id)}" data-index="${index}" data-direction="1" ${index === team.members.length - 1 ? 'disabled' : ''} aria-label="${text('moveLeft')}">←</button>
+        <button class="small" data-action="move-member" data-team="${esc(team.id)}" data-index="${index}" data-direction="-1" ${index === 0 ? 'disabled' : ''} aria-label="${text('moveRight')}">→</button></div></div>`;
 }
 function teamsMarkup(item) {
     const categories = ['general', ...(supportsDefensiveTeams(classesFor(item.variant)) ? ['defense'] : [])];
     const teams = teamsFor(state.files, state.selected, state.category);
-    return `<p class="help">${text('teamHelp')} ${text('noExplain')}</p>
+    return `<p class="help">${text('teamHelp')} ${text('noExplain')}</p><p class="team-order">${text('teamOrder')}</p>
         <div class="category-tabs">${categories.map(category => `<button data-action="category" data-category="${category}" class="${category === state.category ? 'active' : ''}" aria-pressed="${category === state.category}">${text(category)}</button>`).join('')}</div>
         <div class="team-header"><h2>${text(state.category)} <span class="chip">${teams.length}</span></h2>${btn('add-team', 'addTeam', '', 'primary')}</div>
         ${teams.map((team, number) => `<section class="panel"><header class="team-header"><h3>${text('teamNumber')} ${number + 1}<span class="status ${team.status}">${text(team.status)}</span></h3>${btn('delete-team', 'deleteTeam', `data-team="${esc(team.id)}"`, 'small danger')}</header>
@@ -239,7 +256,9 @@ function changesSummary(before, after, path = '') {
     if (before && after && typeof before === 'object' && typeof after === 'object') {
         return [...new Set([...Object.keys(before), ...Object.keys(after)])].flatMap(key => changesSummary(before[key], after[key], path ? `${path} / ${key}` : key));
     }
-    return [{ path, before, after }];
+    // Present the two ability parts without legacy source labels in the review too.
+    const abilityDescription = /signature_ability \/ (?:english \/ )?description$/.test(path) || /(?:^| \/ )SA[12]$/.test(path);
+    return [{ path, before: abilityDescription ? stripAbilityLabels(before) : before, after: abilityDescription ? stripAbilityLabels(after) : after }];
 }
 function openReview() {
     const files = exportFiles(state.base, state.files);
@@ -259,20 +278,28 @@ root.addEventListener('input', event => {
     const item = selected();
     if (target.dataset.abilityLocale) {
         const field = target.dataset.abilityField;
-        if (target.dataset.abilityLocale === 'pt-BR' && ['name', 'description'].includes(field)) {
+        if (target.dataset.abilityLocale === 'pt-BR' && ['name', 'SA1', 'SA2'].includes(field)) {
             item.data.signature_ability ||= {};
-            item.data.signature_ability[field] = target.value;
+            const parts = splitSignatureAbility(localizePortugueseAbility(normalizeAbilityProgressions(item.data.signature_ability.description)));
+            if (field === 'name') item.data.signature_ability.name = target.value;
+            else {
+                parts[field] = localizePortugueseAbility(normalizeAbilityProgressions(stripAbilityLabels(target.value)));
+            }
+            item.data.signature_ability.description = joinSignatureAbility(parts);
             const key = state.abilityLinks[abilityIdentity(item)];
-            // The PT reference supplies the fallback name link used by the wiki.
-            if (field === 'name' && key) state.files[PT_MAPPING_PATH][key].ability = target.value;
+            if (key) item.data.signature_ability.krazete_id = key;
             const preview = root.querySelector('#ability-preview-pt');
-            if (preview) preview.innerHTML = rich(item.data.signature_ability.description);
+            if (preview) preview.innerHTML = richAbility(item.data.signature_ability.description, 'pt-BR');
         } else if (target.dataset.abilityLocale === 'en' && ['ability', 'SA1', 'SA2'].includes(field)) {
             const en = englishFor(item);
             if (!en) return;
-            en[field] = target.value;
+            en[field] = field === 'ability' ? target.value : normalizeAbilityProgressions(stripAbilityLabels(target.value));
+            item.data.signature_ability ||= {};
+            item.data.signature_ability.english = { name: en.ability, description: joinSignatureAbility({ SA1: normalizeAbilityProgressions(en.SA1), SA2: normalizeAbilityProgressions(en.SA2) }) };
+            const key = state.abilityLinks[abilityIdentity(item)];
+            if (key) item.data.signature_ability.krazete_id = key;
             const preview = root.querySelector('#ability-preview-en');
-            if (preview) preview.innerHTML = rich([en.SA1, en.SA2].filter(Boolean).join('\n\n'));
+            if (preview) preview.innerHTML = richAbility([en.SA1, en.SA2].filter(Boolean).join('\n\n'), 'en');
         } else return;
         invalidateTeams(item); save();
     }
@@ -280,6 +307,14 @@ root.addEventListener('input', event => {
         const build = target.dataset.build === 'base' ? item.data : item.data.builds[Number(target.dataset.build)];
         build[target.dataset.field] = target.value; save();
     }
+});
+root.addEventListener('focusout', event => {
+    const target = event.target;
+    if (state.recovery || !target.dataset.abilityLocale || !['SA1', 'SA2'].includes(target.dataset.abilityField)) return;
+    const item = selected();
+    target.value = target.dataset.abilityLocale === 'pt-BR'
+        ? splitSignatureAbility(localizePortugueseAbility(normalizeAbilityProgressions(item.data.signature_ability?.description)))[target.dataset.abilityField]
+        : normalizeAbilityProgressions(stripAbilityLabels(englishFor(item)?.[target.dataset.abilityField]));
 });
 root.addEventListener('focusin', event => {
     if ((event.target.dataset.build !== undefined || event.target.dataset.abilityLocale) && !state.recovery) {
