@@ -1,3 +1,5 @@
+import { EDITOR_LABEL } from './version.js';
+
 const pt = {
     pickerSearch: 'Buscar variante ou personagem', filterEffects: 'Filtrar por efeitos', positiveEffects: 'Efeitos positivos', negativeEffects: 'Efeitos negativos', clearEffects: 'Limpar efeitos',
     effectFilterHelp: 'Mostra variantes que mencionam qualquer um dos efeitos selecionados na descrição da habilidade característica.',
@@ -110,4 +112,90 @@ const en = {
         unknownAnchor: 'Page variant does not exist.', invalidCategory: 'Unknown category.', defenseClass: 'The page variant class does not allow Defensive Teams.', memberLimit: 'Use one to three variants.', unknownMember: 'Select existing variants only.', duplicateMember: 'A variant appears more than once.', missingAnchor: 'Include the page variant.', invalidStatus: 'Invalid review status.', reviewDate: 'Provide a valid review date.', invalidTeam: 'Invalid team.', invalidTeamFile: 'Invalid team file.', duplicateId: 'Missing or duplicate team ID.', protectedData: 'Backup attempted to change protected data.', plainText: 'Use plain text without HTML tags.', invalidBuilds: 'Keep at least one alternative build or remove all through the interface.', buildTitle: 'Builds need unique, nonempty names.', invalidRank: 'Invalid rank.', removedRank: 'An existing rank was removed.', invalidTierFile: 'Invalid rank file.', unknownVariant: 'Unknown variant.', invalidClasses: 'Choose a primary class and at most one different secondary class. Wildcard must stand alone.', removedClass: 'A class record was removed.', missingFile: 'Required file missing.', unknownFile: 'File outside editor scope.', invalidBackup: 'Invalid backup.', staleBackup: 'Backup uses a different data version.'
     }
 };
+Object.assign(pt, {
+    quickPresets: 'Times padrão', quickCreate: 'Criar time padrão', quickDefaultName: 'Time padrão',
+    quickHelp: 'Salve uma variante ou uma dupla e use “Montar time” para juntá-las à variante da ficha, sem pesquisar de novo.',
+    quickEmpty: 'Escolha seus acompanhantes habituais uma vez. Os padrões salvos ficam disponíveis em todas as fichas.',
+    quickChooseHelp: 'Escolha uma ou duas variantes e salve. Ao usar, a variante da ficha fica na frente, a 1ª seleção no meio e a 2ª por último.',
+    quickApplyHelp: 'Mantém a variante da ficha na frente e substitui os outros integrantes pelos deste padrão.',
+    quickSave: 'Salvar padrão', quickBuild: 'Montar time', quickApply: 'Usar padrão', quickSaveCompanions: 'Salvar acompanhantes como padrão',
+    quickSaved: 'Padrão salvo. Você pode usá-lo diretamente na aba Times de qualquer ficha.',
+    quickApplied: 'Padrão aplicado como rascunho. Confira as posições e marque o time como revisado.',
+    saveWholeTeam: 'Salvar time completo', cancelQuick: 'Cancelar',
+    olderBackupHelp: 'Para continuar um backup antigo, use uma cópia da mesma geração do editor com a base do projeto correspondente. Este editor não converte backups de outras gerações.',
+    effectFilterHelp: 'Procura menções aos efeitos nas descrições das habilidades em português e inglês. Combine qualquer um ou todos os efeitos selecionados.',
+    pinVariant: 'Salvar', addVariants: 'Adicionar variantes', referenceHelp: 'Dados atuais do projeto. Consulte as habilidades, builds, classes e ranks nas suas abas próprias.',
+    edit: 'Builds e classes', tier: 'Tier list', presets: 'Predefinições', help: 'Arquivos e ajuda',
+    teamWorkspace: 'Montagem de time', finishTeam: 'Concluir montagem', filters: 'Filtros', clearFilters: 'Limpar filtros', clearClasses: 'Limpar classes', variantsFound: 'variantes encontradas',
+    sortBy: 'Ordenar por', sortDirection: 'Direção', ascending: 'Crescente', descending: 'Decrescente', rarity: 'Raridade', element: 'Elemento',
+    sort_catalog: 'Ordem do catálogo', sort_name: 'Nome', sort_score: 'Pontuação', sort_atk: 'Ataque', sort_hp: 'Vida', sort_rarity: 'Raridade', sort_element: 'Elemento', sort_class: 'Classe principal',
+    diamante: 'Diamante', ouro: 'Ouro', prata: 'Prata', bronze: 'Bronze', Fogo: 'Fogo', Água: 'Água', Ar: 'Ar', Luz: 'Luz', Trevas: 'Trevas', Neutro: 'Neutro',
+    searchEffects: 'Buscar efeito', effectMatch: 'Combinar efeitos', matchAny: 'Qualquer efeito selecionado', matchAll: 'Todos os efeitos selecionados',
+    filterPreset: 'Mostrar uma predefinição', allPresets: 'Todo o catálogo', saveToPreset: 'Salvar na lista', noPresetTarget: 'Escolha uma lista para salvar variantes',
+    presetPickerHelp: 'Crie listas na aba Predefinições. Escolha onde salvar e use “Salvar” nas cartas. Times guardam até três variantes, na ordem escolhida.',
+    applyTeamPreset: 'Aplicar time salvo', choosePreset: 'Escolha um time', memberChosen: 'Variante escolhida. Continue montando ou conclua.', presetSaved: 'Predefinição salva no rascunho.', presetApplied: 'Time aplicado como rascunho. Confira as posições e marque como revisado.',
+    presetName: 'Nome da predefinição', presetKind: 'Tipo', preset_team: 'Time', preset_support: 'Suportes', preset_defense: 'Defesas', createPreset: 'Criar predefinição', saveTeamPreset: 'Salvar como predefinição', removePreset: 'Excluir predefinição', removePresetMember: 'Remover da lista',
+    presetHelp: `Padrões de uma ou duas variantes aparecem direto na aba Times e funcionam com qualquer ficha. Aqui você pode renomear, remover integrantes e organizar listas maiores de suportes ou defesas. As listas são pessoais, não mudam classes nem são publicadas. Entram no backup ${EDITOR_LABEL}.`,
+    emptyPresets: 'Nenhuma predefinição salva. Crie uma lista ou salve um time pela aba Times.', presetEmpty: 'Lista vazia. Adicione variantes pela montagem de times.',
+    helpTitle: `Seus arquivos · editor ${EDITOR_LABEL}`, versionRule: `Cada geração usa um número simples: v1, ${EDITOR_LABEL}… Backups v1 não são compatíveis com ${EDITOR_LABEL}. A versão aparece no arquivo e no nome. Mesmo na mesma versão, os dados de origem precisam corresponder.`,
+    backupHelp: 'Backup (.json): guarda rascunhos, times não revisados, predefinições e a base original. Salve antes de atualizar o editor ou trocar de computador. Use Importar backup para continuar na mesma versão.',
+    importHelp: 'Importação: selecione um backup JSON da mesma versão do editor. O ZIP de exportação não é importável. Tudo é validado antes de substituir o rascunho; uma versão ou base incompatível é recusada.',
+    transferHelp: 'Exportação (.zip): leva apenas arquivos alterados para a wiki e times revisados. As predefinições pessoais ficam no backup. Extraia em uma pasta de revisão, confira os arquivos e substitua apenas os caminhos listados na mesma base do projeto. Depois rode os testes e o build e siga o fluxo normal de publicação da branch. O editor não envia alterações para o site.',
+    startFresh: `Iniciar rascunho ${EDITOR_LABEL}`, recoveryHelp: `Baixe o backup de recuperação para guardar o rascunho antigo antes de começar no ${EDITOR_LABEL}. Se for v1, ele também continuará preservado no navegador.`,
+    importVersion: `Editor ${EDITOR_LABEL} · aceita somente backups ${EDITOR_LABEL} (.json). Arquivos ZIP são para aplicar ao site.`, exportVersion: `Exportação do editor ${EDITOR_LABEL} · arquivo para o site, não para importar no editor.`,
+    exportHelp: `Confira os arquivos abaixo. O ZIP ${EDITOR_LABEL} contém arquivos alterados, uma lista de caminhos e instruções. Salve também seu backup ${EDITOR_LABEL} para manter rascunhos e predefinições. Nada é publicado automaticamente.`,
+    importPending: 'Este rascunho pertence a outra versão do editor ou base dos dados. Ele foi preservado.',
+});
+Object.assign(en, {
+    quickPresets: 'Standard teams', quickCreate: 'Create standard team', quickDefaultName: 'Standard team',
+    quickHelp: 'Save one variant or a pair and use Build team to add them to the page variant without searching again.',
+    quickEmpty: 'Choose your usual companions once. Saved presets are available on every variant page.',
+    quickChooseHelp: 'Choose one or two variants and save. When applied, the page variant goes first, the 1st selection in the middle and the 2nd last.',
+    quickApplyHelp: 'Keeps the page variant first and replaces the other members with this preset.',
+    quickSave: 'Save preset', quickBuild: 'Build team', quickApply: 'Use preset', quickSaveCompanions: 'Save companions as preset',
+    quickSaved: 'Preset saved. Use it directly in Teams on any variant page.',
+    quickApplied: 'Preset applied as a draft. Check its order and mark the team reviewed.',
+    saveWholeTeam: 'Save full team', cancelQuick: 'Cancel',
+    olderBackupHelp: 'To continue an older backup, use a copy of its editor generation with matching project data. This editor does not convert backups from other generations.',
+    effectFilterHelp: 'Searches effect mentions in Portuguese and English ability descriptions. Match any or all selected effects.',
+    pinVariant: 'Save', addVariants: 'Add variants', referenceHelp: 'Current project data. Abilities, builds, classes and ranks have their own tabs.',
+    edit: 'Builds and classes', tier: 'Tier list', presets: 'Presets', help: 'Files and help',
+    teamWorkspace: 'Team workspace', finishTeam: 'Finish team', filters: 'Filters', clearFilters: 'Clear filters', clearClasses: 'Clear classes', variantsFound: 'variants found',
+    sortBy: 'Sort by', sortDirection: 'Direction', ascending: 'Ascending', descending: 'Descending', rarity: 'Rarity', element: 'Element',
+    sort_catalog: 'Catalog order', sort_name: 'Name', sort_score: 'Score', sort_atk: 'Attack', sort_hp: 'Health', sort_rarity: 'Rarity', sort_element: 'Element', sort_class: 'Primary class',
+    diamante: 'Diamond', ouro: 'Gold', prata: 'Silver', bronze: 'Bronze', Fogo: 'Fire', Água: 'Water', Ar: 'Wind', Luz: 'Light', Trevas: 'Dark', Neutro: 'Neutral',
+    searchEffects: 'Search effects', effectMatch: 'Combine effects', matchAny: 'Any selected effect', matchAll: 'All selected effects',
+    filterPreset: 'Show a preset', allPresets: 'Full catalog', saveToPreset: 'Save to list', noPresetTarget: 'Choose a list for saving variants',
+    presetPickerHelp: 'Create lists in Presets. Choose a list here to save variants or filter the catalog by it. Teams keep up to three variants in the chosen order.',
+    applyTeamPreset: 'Apply saved team', choosePreset: 'Choose a team', memberChosen: 'Variant selected. Keep building or finish.', presetSaved: 'Preset saved in your draft.', presetApplied: 'Team applied as a draft. Check its order and mark it reviewed.',
+    presetName: 'Preset name', presetKind: 'Type', preset_team: 'Team', preset_support: 'Supports', preset_defense: 'Defenses', createPreset: 'Create preset', saveTeamPreset: 'Save as preset', removePreset: 'Delete preset', removePresetMember: 'Remove from list',
+    presetHelp: `Presets with one or two variants appear directly in Teams and work with any page variant. Here you can rename them, remove members and organize larger support or defense pools. Lists are personal, do not change classes and are not published. They are included in ${EDITOR_LABEL} backups.`,
+    emptyPresets: 'No presets yet. Create a list or save a team in Teams.', presetEmpty: 'Empty list. Add variants from the team workspace.',
+    helpTitle: `Your files · editor ${EDITOR_LABEL}`, versionRule: `Each generation uses a simple number: v1, ${EDITOR_LABEL}… v1 backups are incompatible with ${EDITOR_LABEL}. The version appears in the file and its name. Even within one generation, the original data must match.`,
+    backupHelp: 'Backup (.json): saves drafts, unreviewed teams, presets and the original data. Save before updating the editor or moving computers. Import it to continue in the same editor generation.',
+    importHelp: 'Import: choose a JSON backup from the same editor generation. The export ZIP cannot be imported. Everything is validated before replacing your draft; incompatible versions or data are rejected.',
+    transferHelp: 'Export (.zip): includes changed wiki files and reviewed teams. Personal presets stay in the backup. Extract into a review folder, check the files and replace only the listed paths in the same project revision. Then run tests/build and follow the normal branch publication workflow. The editor does not send changes to the site.',
+    startFresh: `Start a ${EDITOR_LABEL} draft`, recoveryHelp: `Download the recovery backup to keep your old draft before starting ${EDITOR_LABEL}. A v1 draft will also remain preserved in the browser.`,
+    importVersion: `Editor ${EDITOR_LABEL} · accepts only ${EDITOR_LABEL} JSON backups. ZIP files are for applying changes to the site.`, exportVersion: `Editor ${EDITOR_LABEL} export · for the site, not for importing into the editor.`,
+    exportHelp: `Review these files. The ${EDITOR_LABEL} ZIP includes changed files, a path manifest and instructions. Save a ${EDITOR_LABEL} backup as well to keep drafts and presets. Nothing is published automatically.`,
+    importPending: 'This draft belongs to another editor generation or source revision. It has been preserved.',
+});
+Object.assign(pt.validation, {
+    quickMemberLimit: 'Escolha uma ou duas variantes para um time padrão.',
+    incompatibleVersion: `Versão incompatível. O editor ${EDITOR_LABEL} aceita somente backups ${EDITOR_LABEL}; outras gerações não são compatíveis.`,
+    invalidPresets: 'Predefinições inválidas: confira nomes, referências e limites (100 listas).',
+    presetTeamRequired: 'Escolha uma predefinição de time com variantes.',
+    presetAnchor: 'Este time já tem três variantes e não inclui a variante da ficha. Ajuste a predefinição antes de aplicar.',
+    presetFull: 'Limite da lista atingido: três variantes por time ou 300 por lista de suportes/defesas.',
+    presetNameRequired: 'Informe um nome de até 80 caracteres.', unknownPreset: 'Predefinição não encontrada.'
+});
+Object.assign(en.validation, {
+    quickMemberLimit: 'Choose one or two variants for a standard team.',
+    incompatibleVersion: `Incompatible version. Editor ${EDITOR_LABEL} accepts only ${EDITOR_LABEL} backups; other generations are incompatible.`,
+    invalidPresets: 'Invalid presets: check names, references and limits (100 lists).',
+    presetTeamRequired: 'Choose a team preset with variants.',
+    presetAnchor: 'This full team does not include the page variant. Adjust the preset before applying it.',
+    presetFull: 'List limit reached: three variants per team or 300 per support/defense pool.',
+    presetNameRequired: 'Enter a name up to 80 characters.', unknownPreset: 'Preset not found.'
+});
 export const strings = { 'pt-BR': pt, en };

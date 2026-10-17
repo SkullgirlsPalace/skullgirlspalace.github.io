@@ -3,26 +3,31 @@ import { VARIANT_CLASSES } from '../../src/data/variantClassData.js';
 import { getVariantImage } from '../../src/data/variantImages.js';
 import { EFFECT_DATA } from '../../src/data/effectData.js';
 import { escapeTeamText as esc, supportsDefensiveTeams, validateTeam, sameVariant } from '../../src/utils/teamData.js';
-import { catalogFrom, charactersFrom, clone, equal, makeBackup, restoreBackup, validateChanges, exportFiles, serializeFile, teamsFor, CLASS_PATH, CLASS_NAMES, TIER_MODES, RANKS, EDITABLE_BUILD_FIELDS } from './model.js';
+import { catalogFrom, charactersFrom, clone, equal, makeBackup, restoreBackup, validateChanges, exportFiles, teamsFor, CLASS_PATH, CLASS_NAMES, TIER_MODES, RANKS, EDITABLE_BUILD_FIELDS } from './model.js';
 import { createZip } from './zip.js';
 import { strings } from './strings.js';
 import { isLocalEditorURL, showLocalOnlyMessage } from './local-only.js';
 import { initEditorTheme } from './theme.js';
 import { EN_ABILITIES_PATH, PT_MAPPING_PATH, buildAbilityLinks, abilityIdentity, englishAbility } from './abilities.js';
 import { stripAbilityLabels, splitSignatureAbility, joinSignatureAbility, localizePortugueseAbility, normalizeAbilityProgressions } from '../../src/utils/abilityText.js';
+import { EDITOR_VERSION, EDITOR_LABEL, backupFilename } from './version.js';
+import { createTeamPicker } from './team-picker.js';
+import { validatePresets, membersFromPreset, membersWithCompanions, isQuickPreset, PRESET_KINDS } from './presets.js';
+import { presetShortcuts } from './preset-shortcuts.js';
+import { createExportArchive } from './transfer.js';
 
 const root = document.querySelector('#editor');
 const picker = document.querySelector('#picker');
 const review = document.querySelector('#review');
 const repo = new URL('../../', document.baseURI);
-const storageKey = `palace-editor:v1:${repo.pathname}`;
+const storageKey = `palace-editor:${EDITOR_LABEL}:${repo.pathname}`;
+const legacyStorageKeys = Array.from({ length: EDITOR_VERSION - 1 }, (_, index) => `palace-editor:v${EDITOR_VERSION - index - 1}:${repo.pathname}`);
 const theme = isLocalEditorURL(window.location.href) ? initEditorTheme() : null;
 let language = localStorage.getItem('palace-editor-language') || 'pt-BR';
 if (!strings[language]) language = 'pt-BR';
-const state = { base: {}, files: {}, abilityLinks: {}, selected: null, tab: 'teams', category: 'general', query: '', character: '', page: 0, recovery: null, undo: null, saveError: false, notice: '' };
-const pickerClasses = new Set();
-const pickerEffects = new Set();
-let pickerEffectsOpen = false;
+const state = { base: {}, files: {}, presets: [], abilityLinks: {}, selected: null, tab: 'teams', category: 'general', query: '', character: '', page: 0, recovery: null, undo: null, saveError: false, notice: '' };
+let quickPage = 0;
+let recoveryDownloaded = false;
 const text = key => strings[language][key] || key;
 const classesFor = name => state.files[CLASS_PATH]?.[name] || ['Ofensivo'];
 const classLabel = name => text(({ Ofensivo: 'classOffensive', Defensivo: 'classDefensive', 'Suporte de Utilidade': 'classSupport', Coringa: 'classWildcard' })[name]);
@@ -60,12 +65,12 @@ function download(blob, name) {
     setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function downloadBackup() {
-    const backup = state.recovery || makeBackup(state.base, state.files);
-    download(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }), `palace-backup-${today()}.json`);
+    const backup = state.recovery || makeBackup(state.base, state.files, state.presets);
+    download(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }), backupFilename(backup));
 }
 function save() {
     if (state.recovery) return;
-    try { localStorage.setItem(storageKey, JSON.stringify(makeBackup(state.base, state.files))); state.saveError = false; }
+    try { localStorage.setItem(storageKey, JSON.stringify(makeBackup(state.base, state.files, state.presets))); state.saveError = false; }
     catch { state.saveError = true; }
     updateSaveState();
 }
@@ -76,7 +81,7 @@ function updateSaveState() {
     status.textContent = state.saveError ? text('saveError') : `${text('saved')} · ${count} ${text('changed')}`;
     status.classList.toggle('error', state.saveError);
 }
-function checkpoint() { state.undo = clone(state.files); }
+function checkpoint() { state.undo = { files: clone(state.files), presets: clone(state.presets) }; }
 function commitEdit() { save(); renderMain(); renderCatalog(); }
 function invalidateTeams(member) {
     for (const team of state.files['data/teams.json'].teams) {
@@ -86,22 +91,22 @@ function invalidateTeams(member) {
 
 function render() {
     document.documentElement.lang = language;
-    document.title = `Palace ${text('studio')}`;
+    document.title = `Palace ${text('studio')} ${EDITOR_LABEL}`;
     root.innerHTML = `<header class="topbar">
-        <div><div class="wordmark">PALACE<span>${text('studio')}</span></div><span class="local-tag">● ${text('local')}</span></div>
+        <div><div class="wordmark">PALACE<span>${text('studio')}</span><small>${EDITOR_LABEL}</small></div><span class="local-tag">● ${text('local')}</span></div>
         <div class="top-actions">
             <select id="editor-theme" aria-label="${text('theme')}">${['dark', 'light', 'system'].map(value => `<option value="${value}" ${theme?.getPreference() === value ? 'selected' : ''}>${text(`theme_${value}`)}</option>`).join('')}</select>
             <select id="editor-language" aria-label="${text('language')}"><option value="pt-BR" ${language === 'pt-BR' ? 'selected' : ''}>PT-BR</option><option value="en" ${language === 'en' ? 'selected' : ''}>English</option></select>
             ${btn('undo', 'undo', state.undo ? '' : 'disabled')}
-            ${btn('moves-gallery', 'movesGallery')}${btn('backup', 'backup')}${btn('import', 'import')}${btn('review', 'export', '', 'primary')}
+            ${btn('moves-gallery', 'movesGallery')}${btn('help', 'help')}${btn('backup', 'backup')}${btn('import', 'import')}${btn('review', 'export', '', 'primary')}
         </div></header>
-        <div class="workspace"><aside class="sidebar"><div class="sidebar-head"><h2>${text('variants')}<small>${catalogFrom(state.files).length}</small></h2>
+        <div class="workspace"><aside class="sidebar"><div class="sidebar-head"><h2>${text('variants')}<small>${catalogFrom(state.files).length}</small></h2>${btn('catalog-clear', 'clearFilters', '', 'small')}
             <input id="catalog-query" type="search" aria-label="${text('search')}" placeholder="${text('search')}" value="${esc(state.query)}">
             <select id="catalog-character" aria-label="${text('character')}"><option value="">${text('character')}</option>${CHARACTER_FILES.map(file => {
                 const key = file.slice(0, -5); return `<option value="${key}" ${key === state.character ? 'selected' : ''}>${esc(state.files[`data/${file}`].character)}</option>`;
             }).join('')}</select></div><div id="catalog" class="catalog"></div><div id="catalog-pages"></div></aside>
         <main class="main"><div class="intro"><p>${text('subtitle')}</p><span class="save-state" id="save-state" role="status"></span></div>
-        ${state.recovery ? `<div class="warning">${text('importPending')} ${btn('recover', 'recover')}</div>` : ''}
+        ${state.recovery ? `<div class="warning">${text('importPending')} · v${esc(state.recovery.version || '?')} → ${EDITOR_LABEL}<p>${text('recoveryHelp')}</p>${btn('recover', 'recover')}${btn('start-fresh', 'startFresh', recoveryDownloaded ? '' : 'disabled')}</div>` : ''}
         <div id="main-view"></div></main></div>`;
     renderCatalog(); renderMain(); updateSaveState();
 }
@@ -128,15 +133,15 @@ function renderMain() {
     host.innerHTML = `<section class="variant-heading"><img loading="lazy" width="110" height="118" src="${image(item)}" alt="">
         <div><p class="eyebrow">${esc(item.characterName)} / ${esc(item.rarity)} / ${esc(item.data.element)}</p><h1 lang="pt-BR">${esc(item.variant)}</h1>${englishName ? `<p class="variant-name-en" lang="en">${esc(englishName)}</p>` : ''}${chips(item.variant)}
         <div class="inline-actions">${btn('character-moves', 'characterMoves', `data-character="${esc(item.character)}"`, 'small')}</div></div></section>
-        <nav class="tabs" aria-label="${text('section')}">${['reference', 'abilities', 'edit', 'teams'].map(tab => `<button data-action="tab" data-tab="${tab}" class="${state.tab === tab ? 'active' : ''}" aria-current="${state.tab === tab ? 'page' : 'false'}">${text(tab)}</button>`).join('')}</nav>
+        <nav class="tabs" aria-label="${text('section')}">${['teams', 'presets', 'abilities', 'edit', 'tier', 'reference', 'help'].map(tab => `<button data-action="tab" data-tab="${tab}" class="${state.tab === tab ? 'active' : ''}" aria-current="${state.tab === tab ? 'page' : 'false'}">${text(tab)}</button>`).join('')}</nav>
         <div class="error" id="editor-error" role="alert">${esc(state.notice)}</div>
-        ${state.tab === 'reference' ? referenceMarkup(item) : state.tab === 'abilities' ? abilitiesMarkup(item) : state.tab === 'edit' ? editMarkup(item) : teamsMarkup(item)}`;
+        ${state.tab === 'reference' ? referenceMarkup(item) : state.tab === 'abilities' ? abilitiesMarkup(item) : state.tab === 'edit' ? editMarkup(item) : state.tab === 'tier' ? tierMarkup(item) : state.tab === 'presets' ? presetsMarkup() : state.tab === 'help' ? helpMarkup() : teamsMarkup(item)}`;
     const undo = root.querySelector('[data-action="undo"]');
     if (undo) undo.disabled = !state.undo;
 }
 function tiersMarkup(item) {
     const ranks = state.files['data/tier-data.json'][item.character]?.[item.variant] || {};
-    return `<div class="tier-read">${TIER_MODES.map(mode => `<span>${text(mode)}<strong>${esc(ranks[mode] ?? '—')}</strong></span>`).join('')}</div>`;
+    return `<div class="tier-read">${TIER_MODES.map(mode => `<span>${text(mode)}<strong class="rank-value" data-rank="${esc(ranks[mode] ?? '')}">${esc(ranks[mode] ?? '—')}</strong></span>`).join('')}</div>`;
 }
 function referenceMarkup(item) {
     const english = englishFor(item);
@@ -179,7 +184,6 @@ function buildFields(build, index) {
     ${EDITABLE_BUILD_FIELDS.map(field => `<div><label>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}<textarea data-build="${index}" data-field="${field}">${esc(build[field] || '')}</textarea></label>${field === 'recommended_arsenal' ? `<div class="inline-actions">${btn('character-moves', 'characterMoves', `data-character="${esc(selected().character)}"`, 'small')}</div>` : ''}</div>`).join('')}</div>`;
 }
 function editMarkup(item) {
-    const ranks = state.files['data/tier-data.json'][item.character]?.[item.variant] || {};
     const [primary, secondary = ''] = classesFor(item.variant);
     return `<section class="panel"><h2>${text('classes')}</h2><p class="help">${text('classesHelp')}</p><div class="class-options">
         <label>${text('primaryClass')}<select data-class-role="primary">${CLASS_NAMES.map(name => `<option value="${esc(name)}" ${name === primary ? 'selected' : ''}>${classLabel(name)}</option>`).join('')}</select></label>
@@ -187,8 +191,11 @@ function editMarkup(item) {
         </div></section>
         <section class="panel"><h2>${text('baseBuild')}</h2><p class="help">${text('buildPriority')}</p>${buildFields(item.data, 'base')}</section>
         <section class="panel"><div class="team-header"><h2>${text('multipleBuilds')}</h2>${btn('add-build', 'addBuild', '', 'small')}</div>
-            ${(item.data.builds || []).map((build, index) => `<section class="panel">${buildFields(build, index)}<div class="inline-actions">${btn('remove-build', 'removeBuild', `data-index="${index}"`, 'small danger')}</div></section>`).join('')}</section>
-        <section class="panel"><h2>Tier list</h2><p class="help">${text('rankHelp')}</p><div class="tier-fields">${TIER_MODES.map(mode => `<label>${text(mode)}<select data-rank="${mode}"><option value="" ${ranks[mode] == null ? 'selected' : ''} ${ranks[mode] != null ? 'disabled' : ''}>${text('missingRank')}</option>${RANKS.map(rank => `<option ${ranks[mode] === rank ? 'selected' : ''}>${rank}</option>`).join('')}</select></label>`).join('')}</div>
+            ${(item.data.builds || []).map((build, index) => `<section class="panel">${buildFields(build, index)}<div class="inline-actions">${btn('remove-build', 'removeBuild', `data-index="${index}"`, 'small danger')}</div></section>`).join('')}</section>`;
+}
+function tierMarkup(item) {
+    const ranks = state.files['data/tier-data.json'][item.character]?.[item.variant] || {};
+    return `<section class="panel"><h2>Tier list</h2><p class="help">${text('rankHelp')}</p><div class="tier-fields">${TIER_MODES.map(mode => `<div class="rank-card"><span class="rank-value" data-rank="${esc(ranks[mode] ?? '')}">${esc(ranks[mode] ?? '—')}</span><label>${text(mode)}<select data-rank="${mode}"><option value="" ${ranks[mode] == null ? 'selected' : ''} ${ranks[mode] != null ? 'disabled' : ''}>${text('missingRank')}</option>${RANKS.map(rank => `<option ${ranks[mode] === rank ? 'selected' : ''}>${rank}</option>`).join('')}</select></label></div>`).join('')}</div>
         ${ranks.notes ? `<p class="reference-text">${text('notes')}: ${esc(ranks.notes)}</p>` : ''}</section>`;
 }
 function memberMarkup(member, team, index) {
@@ -208,48 +215,90 @@ function teamsMarkup(item) {
     const teams = teamsFor(state.files, state.selected, state.category);
     return `<p class="help">${text('teamHelp')} ${text('noExplain')}</p><p class="team-order">${text('teamOrder')}</p>
         <div class="category-tabs">${categories.map(category => `<button data-action="category" data-category="${category}" class="${category === state.category ? 'active' : ''}" aria-pressed="${category === state.category}">${text(category)}</button>`).join('')}</div>
+        ${presetShortcuts(state.presets, { text, image, page: quickPage })}
         <div class="team-header"><h2>${text(state.category)} <span class="chip">${teams.length}</span></h2>${btn('add-team', 'addTeam', '', 'primary')}</div>
-        ${teams.map((team, number) => `<section class="panel"><header class="team-header"><h3>${text('teamNumber')} ${number + 1}<span class="status ${team.status}">${text(team.status)}</span></h3>${btn('delete-team', 'deleteTeam', `data-team="${esc(team.id)}"`, 'small danger')}</header>
+        ${teams.map((team, number) => `<section class="panel"><header class="team-header"><h3>${text('teamNumber')} ${number + 1}<span class="status ${team.status}">${text(team.status)}</span></h3><div class="inline-actions">${team.members.length > 1 ? btn('quick-save-companions', 'quickSaveCompanions', `data-team="${esc(team.id)}"`, 'small') : ''}${btn('delete-team', 'deleteTeam', `data-team="${esc(team.id)}"`, 'small danger')}</div></header>
         <div class="team-grid">${Array.from({ length: 3 }, (_, index) => memberMarkup(team.members[index], team, index)).join('')}</div>
         <footer class="team-footer"><label>${text('date')}<input type="date" data-team-date="${esc(team.id)}" value="${esc(team.reviewedOn || '')}"></label>
-        ${btn('review-team', team.status === 'reviewed' ? 'unreviewTeam' : 'reviewTeam', `data-team="${esc(team.id)}"`, team.status === 'reviewed' ? '' : 'primary')}</footer></section>`).join('') || `<div class="empty-state">${text('noTeams')}</div>`}
+        <div class="inline-actions">${btn('save-team-preset', 'saveWholeTeam', `data-team="${esc(team.id)}"`, 'small')}${btn('review-team', team.status === 'reviewed' ? 'unreviewTeam' : 'reviewTeam', `data-team="${esc(team.id)}"`, team.status === 'reviewed' ? '' : 'primary')}</div></footer></section>`).join('') || `<div class="empty-state">${text('noTeams')}</div>`}
         <p class="help">${text('onlyReviewed')}<br>${text('editedReview')}</p>`;
 }
 
-let pickContext;
-function pickerEffectFilters() {
-    return `<details class="picker-effects" ${pickerEffectsOpen ? 'open' : ''}><summary>${text('filterEffects')} (${pickerEffects.size})</summary>
-        <p class="help">${text('effectFilterHelp')}</p>
-        <div class="picker-effect-groups">${['buff', 'debuff'].map(type => `<fieldset><legend>${text(type === 'buff' ? 'positiveEffects' : 'negativeEffects')}</legend>
-            <div class="picker-effect-options">${Object.entries(EFFECT_DATA).filter(([, effect]) => effect.type === type).map(([key, effect]) => `<label><input type="checkbox" data-picker-effect="${key}" ${pickerEffects.has(key) ? 'checked' : ''}>${esc(language === 'en' ? effect.name_en || effect.name : effect.name)}</label>`).join('')}</div>
-        </fieldset>`).join('')}</div>${btn('picker-effects-clear', 'clearEffects', '', 'small')}</details>`;
+function helpMarkup() {
+    return `<section class="panel transfer-help"><h2>${text('helpTitle')}</h2><p class="help">${text('versionRule')}</p><p class="help">${text('olderBackupHelp')}</p>
+        <section><h3>1 · ${text('backup')}</h3><p>${text('backupHelp')}</p>${btn('backup', 'downloadBackup')}</section>
+        <section><h3>2 · ${text('import')}</h3><p>${text('importHelp')}</p>${btn('import', 'import')}</section>
+        <section><h3>3 · ${text('export')}</h3><p>${text('transferHelp')}</p><pre class="transfer-commands">npm.cmd run test:coverage -- --configLoader native\nnpm.cmd run build</pre>${btn('review', 'export', '', 'primary')}</section></section>`;
 }
-function openPicker(teamId, index, query = '', page = 0) {
-    pickContext = { teamId, index, query, page };
-    const team = state.files['data/teams.json'].teams.find(item => item.id === teamId);
-    const items = filteredCatalog(query, '', false).filter(item => {
-        if (pickerClasses.size && !classesFor(item.variant).some(name => pickerClasses.has(name))) return false;
-        if (!pickerEffects.size) return true;
-        const en = englishFor(item);
-        const description = [item.data.signature_ability?.description, en?.SA1, en?.SA2].join(' ').toLowerCase();
-        return [...pickerEffects].some(key => EFFECT_DATA[key].keys.some(term => description.includes(term.toLowerCase())));
-    });
-    const pages = Math.max(1, Math.ceil(items.length / 12));
-    pickContext.page = Math.min(page, pages - 1);
-    picker.innerHTML = `<header class="dialog-heading"><h2>${text('addMember')}</h2>${btn('close-picker', 'close')}</header><div class="picker-controls"><div class="picker-search"><input id="picker-query" type="search" aria-label="${text('pickerSearch')}" placeholder="${text('pickerSearch')}" value="${esc(query)}"></div>
-        <div class="picker-class-filters" role="group" aria-label="${text('filterClasses')}">
-            <button type="button" data-action="picker-class-all" class="${!pickerClasses.size ? 'active' : ''}" aria-pressed="${!pickerClasses.size}">${text('allClasses')}</button>
-            ${CLASS_NAMES.map((name, index) => `<button type="button" data-action="picker-class" data-class-index="${index}" class="${pickerClasses.has(name) ? 'active' : ''}" aria-pressed="${pickerClasses.has(name)}">${esc(classLabel(name))}</button>`).join('')}
-        </div><p class="help">${text('classFilterHelp')}</p>${pickerEffectFilters()}</div>
-        <div class="picker-results" tabindex="0" aria-label="${text('variants')}"><div class="picker-grid">${items.slice(pickContext.page * 12, (pickContext.page + 1) * 12).map(item => {
-            const duplicate = team.members.some((member, memberIndex) => memberIndex !== index && sameVariant(member, item));
-            return `<article class="member-card"><img loading="lazy" width="150" height="115" src="${image(item)}" alt=""><strong>${esc(displayName(item))}</strong>${chips(item.variant)}<div class="inline-actions">${btn('choose-member', 'choose', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}" ${duplicate ? 'disabled' : ''}`, 'small primary')}${btn('inspect-picker', 'inspect', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}"`, 'small')}</div></article>`;
-        }).join('') || `<p>${text('noMatch')}</p>`}</div></div><nav class="pagination" aria-label="${text('page')}">${btn('picker-prev', 'previous', pickContext.page ? '' : 'disabled')}<span role="status">${text('page')} ${pickContext.page + 1}/${pages}</span>${btn('picker-next', 'next', pickContext.page + 1 < pages ? '' : 'disabled')}</nav>`;
-    if (!picker.open) picker.showModal();
-    picker.scrollTop = 0;
-    picker.querySelector('.picker-results').scrollTop = 0;
-    picker.querySelector('.picker-effects').addEventListener('toggle', event => { pickerEffectsOpen = event.target.open; });
+const presetPages = new Map();
+let presetsPage = 0;
+function presetsMarkup() {
+    const pages = Math.max(1, Math.ceil(state.presets.length / 6));
+    presetsPage = Math.min(presetsPage, pages - 1);
+    return `<p class="help">${text('presetHelp')}</p><section class="panel preset-form">
+        <label>${text('presetName')}<input id="preset-name" maxlength="80"></label>
+        <label>${text('presetKind')}<select id="preset-kind">${PRESET_KINDS.map(kind => `<option value="${kind}">${text(`preset_${kind}`)}</option>`).join('')}</select></label>${btn('create-preset', 'createPreset', '', 'primary')}</section>
+        ${state.presets.slice(presetsPage * 6, (presetsPage + 1) * 6).map(preset => {
+            const pages = Math.max(1, Math.ceil(preset.members.length / 12));
+            const page = Math.min(presetPages.get(preset.id) || 0, pages - 1);
+            presetPages.set(preset.id, page);
+            return `<section class="panel preset-card"><header class="team-header"><label>${text('presetName')}<input data-preset-name="${esc(preset.id)}" maxlength="80" value="${esc(preset.name)}"></label><span class="chip">${text(`preset_${preset.kind}`)} · ${preset.members.length}</span>${btn('remove-preset', 'removePreset', `data-preset="${esc(preset.id)}"`, 'small danger')}</header>
+                <div class="preset-members">${preset.members.slice(page * 12, (page + 1) * 12).map((member, index) => `<article><img loading="lazy" width="44" height="48" src="${image(member)}" alt=""><strong>${preset.kind === 'team' ? `${page * 12 + index + 1} · ` : ''}${esc(member.variant)}</strong><div class="inline-actions">${btn('inspect', 'inspect', `data-character="${esc(member.character)}" data-variant="${esc(member.variant)}"`, 'small')}${btn('remove-preset-member', 'removePresetMember', `data-preset="${esc(preset.id)}" data-index="${page * 12 + index}"`, 'small')}</div></article>`).join('') || `<p class="help">${text('presetEmpty')}</p>`}</div>
+                ${pages > 1 ? `<div class="pagination">${btn('preset-prev', 'previous', `data-preset="${esc(preset.id)}" ${page ? '' : 'disabled'}`)}<span>${text('page')} ${page + 1}/${pages}</span>${btn('preset-next', 'next', `data-preset="${esc(preset.id)}" ${page + 1 < pages ? '' : 'disabled'}`)}</div>` : ''}
+                <div class="inline-actions">${btn('add-preset-members', 'addVariants', `data-preset="${esc(preset.id)}"`)}${isQuickPreset(preset) ? btn('quick-use', 'quickBuild', `data-preset="${esc(preset.id)}"`) : preset.kind === 'team' && preset.members.length ? btn('use-preset', 'applyTeamPreset', `data-preset="${esc(preset.id)}"`) : ''}</div></section>`;
+        }).join('') || `<div class="empty-state">${text('emptyPresets')}</div>`}
+        ${pages > 1 ? `<nav class="pagination" aria-label="${text('presets')}">${btn('presets-prev', 'previous', presetsPage ? '' : 'disabled')}<span>${text('page')} ${presetsPage + 1}/${pages}</span>${btn('presets-next', 'next', presetsPage + 1 < pages ? '' : 'disabled')}</nav>` : ''}`;
 }
+function updatePresets(next) {
+    validatePresets(next, charactersFrom(state.files));
+    checkpoint(); state.presets = next; commitEdit();
+}
+function saveQuickPreset(name, members) {
+    if (!name.trim() || name.length > 80) throw new Error('presetNameRequired');
+    membersWithCompanions({ members }, state.selected);
+    const next = [...state.presets, { id: crypto.randomUUID(), name: name.trim(), kind: 'team', members: clone(members) }];
+    quickPage = Math.floor(state.presets.filter(isQuickPreset).length / 4);
+    state.notice = text('quickSaved'); updatePresets(next);
+}
+function pinPreset(id, member) {
+    const next = clone(state.presets), preset = next.find(item => item.id === id);
+    if (!preset) throw new Error('unknownPreset');
+    if (preset.members.some(item => sameVariant(item, member))) return;
+    if (preset.members.length >= (preset.kind === 'team' ? 3 : 300)) throw new Error('presetFull');
+    preset.members.push({ character: member.character, variant: member.variant });
+    updatePresets(next);
+}
+const teamPicker = createTeamPicker({
+    dialog: picker, text, image, effectImage: path => new URL(path, repo).href, classesFor, englishFor, chips, effects: EFFECT_DATA,
+    getCatalog: () => catalogFrom(state.files), getPresets: () => state.presets, getLanguage: () => language,
+    getTeam: id => state.files['data/teams.json']?.teams.find(team => team.id === id),
+    onInspect: member => inspect(member), onPin: pinPreset, humanError,
+    onSaveQuick: saveQuickPreset,
+    onApplyQuick(teamId, presetId) {
+        const team = state.files['data/teams.json'].teams.find(team => team.id === teamId);
+        const preset = state.presets.find(preset => preset.id === presetId);
+        const members = membersWithCompanions(preset, team.anchor);
+        checkpoint(); team.members = members; team.status = 'draft'; commitEdit();
+    },
+    onChoose(teamId, index, member) {
+        if (state.recovery) return;
+        const team = state.files['data/teams.json'].teams.find(team => team.id === teamId);
+        if (!team || index < 0 || index > Math.min(2, team.members.length)
+            || sameVariant(team.members[index], team.anchor)
+            || team.members.some((item, position) => position !== index && sameVariant(item, member))
+            || !catalogFrom(state.files).some(item => sameVariant(item, member))) throw new Error('invalidTeam');
+        if (sameVariant(team.members[index], member)) return;
+        checkpoint(); team.members.splice(index, 1, member); team.status = 'draft'; commitEdit();
+    },
+    onApply(teamId, presetId) {
+        const preset = state.presets.find(item => item.id === presetId);
+        if (!preset) throw new Error('unknownPreset');
+        const team = state.files['data/teams.json'].teams.find(team => team.id === teamId);
+        const members = membersFromPreset(preset, team.anchor);
+        checkpoint(); team.members = members; team.status = 'draft'; commitEdit();
+    }
+});
+function openPicker(teamId, index) { teamPicker.open(teamId, index); }
 function inspect(member, fromPicker = false) {
     const item = catalogFrom(state.files).find(candidate => sameVariant(candidate, member));
     if (!item) return;
@@ -269,7 +318,7 @@ function changesSummary(before, after, path = '') {
 function openReview() {
     const files = exportFiles(state.base, state.files);
     const errors = validateChanges(state.base, { ...state.files, 'data/teams.json': { version: 1, teams: state.files['data/teams.json'].teams.filter(team => team.status === 'reviewed') } }, classesFor);
-    review.innerHTML = `<header class="dialog-heading"><h2>${text('exportTitle')}</h2>${btn('close-review', 'close')}</header><p class="help">${text('exportHelp')}</p><p class="help">${text('onlyReviewed')}</p>
+    review.innerHTML = `<header class="dialog-heading"><h2>${text('exportTitle')} · ${EDITOR_LABEL}</h2>${btn('close-review', 'close')}</header><p class="help">${text('exportVersion')}</p><p class="help">${text('exportHelp')}</p><p class="help">${text('onlyReviewed')}</p>
         ${errors.length ? `<div class="error">${text('reviewNeeded')}\n${errors.map(error => esc(humanError(error))).join('\n')}</div>` : ''}
         ${Object.entries(files).map(([path, after]) => `<details class="change-item"><summary>${esc(path)} · ${changesSummary(state.base[path], after).length} ${text('fields')}</summary>
         ${changesSummary(state.base[path], after).map(change => `<h3>${esc(change.path)}</h3><div class="diff-grid"><div><h3>${text('before')}</h3><pre>${esc(typeof change.before === 'object' ? JSON.stringify(change.before, null, 2) : change.before ?? '—')}</pre></div><div><h3>${text('after')}</h3><pre>${esc(typeof change.after === 'object' ? JSON.stringify(change.after, null, 2) : change.after ?? '—')}</pre></div></div>`).join('')}</details>`).join('') || `<div class="empty-state">${text('untouched')}</div>`}
@@ -336,6 +385,13 @@ root.addEventListener('change', event => {
     if (target.id === 'catalog-character') { state.character = target.value; state.page = 0; renderCatalog(); return; }
     if (state.recovery) { renderMain(); return; }
     const item = selected();
+    if (target.dataset.presetName) {
+        const name = target.value.trim();
+        if (!name) { state.notice = humanError('presetNameRequired'); renderMain(); return; }
+        const next = clone(state.presets), preset = next.find(preset => preset.id === target.dataset.presetName);
+        if (preset) { preset.name = name; updatePresets(next); }
+        return;
+    }
     if (target.dataset.classRole) {
         const [primary, secondary] = classesFor(item.variant);
         let names;
@@ -366,8 +422,11 @@ async function action(event) {
     const button = event.target.closest('[data-action]');
     if (!button || button.disabled) return;
     const action = button.dataset.action;
-    if (action === 'backup' || action === 'recover') { downloadBackup(); if (action === 'recover') { state.recovery = null; save(); render(); } return; }
-    if (action === 'close-picker') { picker.close(); return; }
+    if (action === 'backup' || action === 'recover') { downloadBackup(); if (action === 'recover') { recoveryDownloaded = true; render(); } return; }
+    if (action === 'start-fresh' && state.recovery && recoveryDownloaded) {
+        state.recovery = null; state.files = clone(state.base); state.presets = []; state.undo = null; state.notice = ''; save(); render(); return;
+    }
+    if (action === 'help') { state.tab = 'help'; renderMain(); return; }
     if (action === 'close-review') { review.close(); return; }
     if (action === 'moves-gallery' || action === 'character-moves') {
         const { openMovesGallery } = await import('./moves-gallery.js');
@@ -375,7 +434,7 @@ async function action(event) {
     }
     if (action === 'inspect' || action === 'inspect-picker') { inspect(button.dataset); return; }
     if (action === 'import') {
-        review.innerHTML = `<header class="dialog-heading"><h2>${text('import')}</h2>${btn('close-review', 'close')}</header><p>${text('importConfirm')}</p><p class="help">${text('backupFirst')}</p><div class="inline-actions">${btn('backup', 'backup')}${btn('import-continue', 'confirmImport', '', 'primary')}</div>`;
+        review.innerHTML = `<header class="dialog-heading"><h2>${text('import')} · ${EDITOR_LABEL}</h2>${btn('close-review', 'close')}</header><p>${text('importVersion')}</p><p>${text('importConfirm')}</p><p class="help">${text('backupFirst')}</p><div class="inline-actions">${btn('backup', 'backup')}${btn('import-continue', 'confirmImport', '', 'primary')}</div>`;
         review.showModal(); return;
     }
     if (action === 'import-continue') { review.close(); document.querySelector('#import-file').click(); return; }
@@ -383,39 +442,55 @@ async function action(event) {
     if (action === 'tab') { state.tab = button.dataset.tab; state.notice = ''; renderMain(); return; }
     if (action === 'category') { state.category = button.dataset.category; state.notice = ''; renderMain(); return; }
     if (action === 'page-prev' || action === 'page-next') { state.page += action === 'page-prev' ? -1 : 1; renderCatalog(); return; }
-    if (action === 'picker-prev' || action === 'picker-next') {
-        openPicker(pickContext.teamId, pickContext.index, pickContext.query, pickContext.page + (action === 'picker-prev' ? -1 : 1));
-        const direction = picker.querySelector(`[data-action="${action}"]`);
-        (direction.disabled ? picker.querySelector('.picker-results') : direction).focus({ preventScroll: true });
-        return;
-    }
-    if (action === 'picker-effects-clear') {
-        pickerEffects.clear();
-        openPicker(pickContext.teamId, pickContext.index, pickContext.query, 0);
-        picker.querySelector('[data-action="picker-effects-clear"]').focus({ preventScroll: true });
-        return;
-    }
-    if (action === 'picker-class' || action === 'picker-class-all') {
-        if (action === 'picker-class-all') pickerClasses.clear();
-        else {
-            const name = CLASS_NAMES[Number(button.dataset.classIndex)];
-            if (pickerClasses.has(name)) pickerClasses.delete(name); else pickerClasses.add(name);
-        }
-        openPicker(pickContext.teamId, pickContext.index, pickContext.query, 0);
-        picker.querySelector(action === 'picker-class-all' ? '[data-action="picker-class-all"]' : `[data-class-index="${button.dataset.classIndex}"]`)?.focus();
-        return;
-    }
+    if (action === 'catalog-clear') { state.query = ''; state.character = ''; state.page = 0; root.querySelector('#catalog-query').value = ''; root.querySelector('#catalog-character').value = ''; renderCatalog(); return; }
     if (action === 'review') { openReview(); return; }
     if (state.recovery) return;
-    if (action === 'undo') { if (state.undo) { const files = state.files; state.files = state.undo; state.undo = files; commitEdit(); } return; }
+    if (action === 'undo') {
+        if (state.undo) {
+            const previous = { files: state.files, presets: state.presets };
+            state.files = state.undo.files; state.presets = state.undo.presets; state.undo = previous; commitEdit();
+        }
+        return;
+    }
     const item = selected();
     const allTeams = state.files['data/teams.json'].teams;
     const team = allTeams.find(team => team.id === button.dataset.team);
-    if (action === 'pick') { openPicker(team.id, Number(button.dataset.index)); return; }
-    if (action === 'choose-member') {
-        const pickedTeam = allTeams.find(team => team.id === pickContext.teamId);
-        checkpoint(); pickedTeam.members.splice(pickContext.index, 1, { character: button.dataset.character, variant: button.dataset.variant }); pickedTeam.status = 'draft'; picker.close(); commitEdit(); return;
+    if (action === 'quick-create') { teamPicker.openQuick(`${text('quickDefaultName')} ${state.presets.length + 1}`); return; }
+    if (action === 'quick-save-companions') {
+        saveQuickPreset(`${text('quickDefaultName')} ${state.presets.length + 1}`, team.members.filter(member => !sameVariant(member, team.anchor))); return;
     }
+    if (action === 'quick-prev' || action === 'quick-next') { quickPage = Math.max(0, Number(button.dataset.page)); renderMain(); return; }
+    if (action === 'quick-use') {
+        const members = membersWithCompanions(state.presets.find(preset => preset.id === button.dataset.preset), state.selected);
+        checkpoint(); allTeams.push({ id: crypto.randomUUID(), anchor: clone(state.selected), category: state.category, members, status: 'draft', reviewedOn: today() });
+        state.tab = 'teams'; state.notice = text('quickApplied'); commitEdit(); return;
+    }
+    if (action === 'add-preset-members') { teamPicker.openPreset(button.dataset.preset); return; }
+    if (action === 'create-preset' || action === 'save-team-preset') {
+        const name = action === 'create-preset' ? root.querySelector('#preset-name').value.trim() : `${item.variant} · ${text(team.category)} ${state.presets.length + 1}`.slice(0, 80);
+        if (!name) throw new Error('presetNameRequired');
+        presetsPage = Math.floor(state.presets.length / 6);
+        updatePresets([...state.presets, { id: crypto.randomUUID(), name, kind: action === 'create-preset' ? root.querySelector('#preset-kind').value : 'team', members: action === 'create-preset' ? [] : clone(team.members) }]);
+        state.notice = text('presetSaved'); renderMain(); return;
+    }
+    if (action === 'remove-preset' || action === 'remove-preset-member') {
+        const next = clone(state.presets), preset = next.find(preset => preset.id === button.dataset.preset);
+        if (!preset) return;
+        if (action === 'remove-preset') next.splice(next.indexOf(preset), 1);
+        else preset.members.splice(Number(button.dataset.index), 1);
+        updatePresets(next); return;
+    }
+    if (action === 'preset-prev' || action === 'preset-next') {
+        const id = button.dataset.preset; presetPages.set(id, (presetPages.get(id) || 0) + (action === 'preset-next' ? 1 : -1)); renderMain(); return;
+    }
+    if (action === 'presets-prev' || action === 'presets-next') { presetsPage += action === 'presets-next' ? 1 : -1; renderMain(); return; }
+    if (action === 'use-preset') {
+        const preset = state.presets.find(preset => preset.id === button.dataset.preset);
+        const members = membersFromPreset(preset, state.selected);
+        checkpoint(); allTeams.push({ id: crypto.randomUUID(), anchor: clone(state.selected), category: state.category, members, status: 'draft', reviewedOn: today() });
+        state.tab = 'teams'; state.notice = text('presetApplied'); commitEdit(); return;
+    }
+    if (action === 'pick') { openPicker(team.id, Number(button.dataset.index)); return; }
     if (action === 'add-team') {
         checkpoint(); allTeams.push({ id: crypto.randomUUID(), anchor: clone(state.selected), category: state.category, members: [clone(state.selected)], status: 'draft', reviewedOn: today() }); commitEdit(); return;
     }
@@ -438,35 +513,20 @@ async function action(event) {
         const errors = validateChanges(state.base, publish, classesFor);
         if (errors.length) { review.close(); openReview(); return; }
         const files = exportFiles(state.base, state.files);
-        const archive = Object.fromEntries(Object.entries(files).map(([path, data]) => [path, serializeFile(path, data)]));
-        archive['LEIA-ME.txt'] = 'Palace Estudio\n\n1. Salve tambem o backup JSON para continuar a edicao.\n2. Confira os arquivos exportados.\n3. Substitua apenas os caminhos presentes neste ZIP na mesma versao do projeto usada ao abrir o editor.\n4. Rode os testes e a montagem antes de commitar na Nova Fase.\n5. A publicacao depende do fluxo normal do repositorio; este editor nao publica.\n\nOnly reviewed teams are included. Back up your drafts separately. Apply to the same source revision and validate before committing.\n';
-        download(createZip(archive), `palace-revisao-${today()}.zip`);
+        download(createZip(createExportArchive(files)), `palace-${EDITOR_LABEL}.zip`);
     }
 }
-for (const target of [root, picker, review]) target.addEventListener('click', event => { action(event).catch(error => { state.notice = error.message; renderMain(); }); });
-picker.addEventListener('change', event => {
-    const key = event.target.dataset.pickerEffect;
-    if (!key || !EFFECT_DATA[key]) return;
-    pickerEffectsOpen = true;
-    if (event.target.checked) pickerEffects.add(key); else pickerEffects.delete(key);
-    openPicker(pickContext.teamId, pickContext.index, pickContext.query, 0);
-    picker.querySelector(`[data-picker-effect="${key}"]`).focus({ preventScroll: true });
-});
-picker.addEventListener('input', event => {
-    if (event.target.id !== 'picker-query') return;
-    const value = event.target.value, caret = event.target.selectionStart;
-    openPicker(pickContext.teamId, pickContext.index, value, 0);
-    const input = picker.querySelector('#picker-query'); input.focus(); input.setSelectionRange(caret, caret);
-});
+for (const target of [root, review]) target.addEventListener('click', event => { action(event).catch(error => { state.notice = humanError(error.message); renderMain(); }); });
 document.querySelector('#import-file').addEventListener('change', async event => {
     const file = event.target.files[0];
     if (!file) return;
+    let backup;
     try {
         if (file.size > 8_000_000) throw new Error('invalidBackup');
-        const backup = JSON.parse(await file.text());
+        backup = JSON.parse(await file.text());
         const files = restoreBackup(state.base, backup, classesFor);
-        checkpoint(); state.files = files; state.recovery = null; state.notice = text('importSuccess'); save(); render();
-    } catch (error) { state.notice = error.message.includes('staleBackup') ? text('importUnavailable') : humanError(error.message); renderMain(); }
+        checkpoint(); state.files = files; state.presets = clone(backup.presets ?? []); state.recovery = null; state.notice = text('importSuccess'); save(); render();
+    } catch (error) { state.notice = error.message.includes('staleBackup') ? text('importUnavailable') : `${error.message === 'incompatibleVersion' ? `v${backup?.version ?? '?'} → ${EDITOR_LABEL}: ` : ''}${humanError(error.message)}`; renderMain(); }
     event.target.value = '';
 });
 
@@ -477,9 +537,9 @@ async function init() {
         state.base = Object.fromEntries(paths.map((path, index) => [path, data[index]]));
         state.base[CLASS_PATH] = clone(VARIANT_CLASSES); state.files = clone(state.base);
         state.abilityLinks = buildAbilityLinks(state.base);
-        const saved = localStorage.getItem(storageKey);
+        const saved = localStorage.getItem(storageKey) ?? legacyStorageKeys.map(key => localStorage.getItem(key)).find(value => value !== null);
         if (saved) {
-            try { state.files = restoreBackup(state.base, JSON.parse(saved), classesFor); }
+            try { const backup = JSON.parse(saved); state.files = restoreBackup(state.base, backup, classesFor); state.presets = clone(backup.presets ?? []); }
             catch { try { state.recovery = JSON.parse(saved); } catch { state.recovery = { unreadableBackup: saved }; } }
         }
         state.selected = { character: 'annie', variant: state.files['data/annie.json'].variants.diamante[0].name };

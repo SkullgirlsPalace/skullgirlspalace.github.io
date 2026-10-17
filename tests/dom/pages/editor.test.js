@@ -54,17 +54,338 @@ describe('Palace Studio workflow', () => {
     it('resets the results scroll and preserves the draft when paging through variants', async () => {
         await import('../../../tools/editor/editor.js');
         document.querySelector('[data-action="add-team"]').click();
-        const draft = localStorage.getItem('palace-editor:v1:/');
+        const draft = localStorage.getItem('palace-editor:v2:/');
         document.querySelector('[data-action="pick"]').click();
         const firstName = document.querySelector('.picker-grid strong').textContent;
         document.querySelector('.picker-results').scrollTop = 300;
         document.querySelector('[data-action="picker-next"]').click();
-        expect(document.querySelector('#picker [role="status"]').textContent).toMatch(/Página 2\//);
+        expect(document.querySelector('#picker-page').textContent).toMatch(/Página 2\//);
         expect(document.querySelector('.picker-results').scrollTop).toBe(0);
         expect(document.querySelector('.picker-grid strong').textContent).not.toBe(firstName);
         document.querySelector('[data-action="picker-prev"]').click();
         expect(document.querySelector('.picker-grid strong').textContent).toBe(firstName);
-        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
+    });
+    it('keeps the workspace open between slots and preserves result/filter scroll while selecting', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-action="add-team"]').click();
+        document.querySelector('[data-action="pick"]').click();
+        const choose = () => document.querySelector('#picker [data-action="choose-member"]:not(:disabled)');
+        const second = choose().dataset.variant;
+        document.querySelector('.picker-results').scrollTop = 220;
+        document.querySelector('.picker-filters').scrollTop = 140;
+        choose().click();
+        expect(document.querySelector('#picker').open).toBe(true);
+        expect(document.querySelector('.picker-results').scrollTop).toBe(220);
+        expect(document.querySelector('.picker-filters').scrollTop).toBe(140);
+        expect(document.querySelector('[data-action="picker-slot"][aria-pressed="true"]').dataset.index).toBe('2');
+        const third = choose().dataset.variant;
+        choose().click();
+        const savedTeam = () => JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.find(change => change.path === 'data/teams.json').after.teams[0];
+        expect(savedTeam().members.map(member => member.variant)).toEqual(['Rosa Estelar', second, third]);
+        expect(document.querySelector('[data-action="picker-slot"][data-index="0"]').disabled).toBe(true);
+        document.querySelector('[data-action="picker-slot"][data-index="1"]').click();
+        const replacement = [...document.querySelectorAll('#picker [data-action="choose-member"]:not(:disabled)')].find(button => ![second, third].includes(button.dataset.variant));
+        const replacementName = replacement.dataset.variant;
+        replacement.click();
+        expect(savedTeam().members.map(member => member.variant)).toEqual(['Rosa Estelar', replacementName, third]);
+        document.querySelector('[data-action="close-picker"]').click();
+        expect(document.querySelector('#picker').open).toBe(false);
+    });
+    it('combines compact rarity, element and character controls and clears them directly', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-action="add-team"]').click();
+        document.querySelector('[data-action="pick"]').click();
+        const change = (selector, value) => { const el = document.querySelector(selector); el.value = value; el.dispatchEvent(new Event('change', { bubbles: true })); };
+        change('#picker-character', 'annie');
+        document.querySelector('[data-picker-group="rarity"][data-value="diamante"]').click();
+        document.querySelector('[data-picker-group="element"][data-value="Neutro"]').click();
+        const names = [...document.querySelectorAll('.picker-grid strong')].map(el => el.textContent);
+        expect(names).toContain('Rosa Estelar');
+        expect([...document.querySelectorAll('.picker-grid .member-card small')].some(el => el.textContent.includes('Annie · Diamante · Neutro'))).toBe(true);
+        document.querySelector('[data-action="picker-class"][data-class-index="0"]').click();
+        document.querySelector('[data-action="picker-class-all"]').click();
+        expect(document.querySelector('[data-action="picker-class"][aria-pressed="true"]')).toBeNull();
+        expect(document.querySelectorAll('[data-picker-group][aria-pressed="true"]')).toHaveLength(2);
+        document.querySelector('[data-action="picker-clear"]').click();
+        expect(document.querySelector('#picker-character').value).toBe('');
+        expect(document.querySelectorAll('[data-picker-group][aria-pressed="true"]')).toHaveLength(0);
+        expect(document.querySelectorAll('.picker-grid .member-card')).toHaveLength(12);
+        expect(document.querySelector('.picker-filters details')).toBeNull();
+    });
+    it('creates personal support pools directly, pins unique variants, renames and undoes them', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-tab="presets"]').click();
+        document.querySelector('#preset-name').value = 'Suportes favoritos';
+        document.querySelector('#preset-kind').value = 'support';
+        document.querySelector('[data-action="create-preset"]').click();
+        document.querySelector('[data-action="add-preset-members"]').click();
+        const choose = () => document.querySelector('#picker [data-action="choose-member"]:not(:disabled)');
+        const first = choose().dataset.variant;
+        choose().click(); choose().click();
+        expect(document.querySelector('#picker').open).toBe(true);
+        const saved = () => JSON.parse(localStorage.getItem('palace-editor:v2:/'));
+        expect(saved().presets[0].members).toHaveLength(2);
+        expect(saved().presets[0].members[0].variant).toBe(first);
+        expect(saved().changes).toEqual([]);
+        document.querySelector('[data-action="close-picker"]').click();
+        expect(document.querySelectorAll('.preset-members article')).toHaveLength(2);
+        const field = document.querySelector('[data-preset-name]');
+        field.value = 'Suportes revisados'; field.dispatchEvent(new Event('change', { bubbles: true }));
+        expect(saved().presets[0].name).toBe('Suportes revisados');
+        document.querySelector('[data-action="undo"]').click();
+        expect(saved().presets[0].name).toBe('Suportes favoritos');
+        document.querySelector('[data-tab="teams"]').click();
+        document.querySelector('[data-action="add-team"]').click();
+        document.querySelector('[data-action="pick"]').click();
+        document.querySelector('[data-action="picker-panel"][data-panel="presets"]').click();
+        const list = document.querySelector('#picker-preset');
+        list.value = saved().presets[0].id; list.dispatchEvent(new Event('change', { bubbles: true }));
+        expect(document.querySelectorAll('.picker-grid .member-card')).toHaveLength(2);
+    });
+    it('paginates personal lists and keeps direct class/effect clears available on either panel', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-tab="presets"]').click();
+        for (let index = 0; index < 7; index++) {
+            document.querySelector('#preset-name').value = `Lista ${index + 1}`;
+            document.querySelector('[data-action="create-preset"]').click();
+        }
+        expect(document.querySelectorAll('.preset-card')).toHaveLength(1);
+        document.querySelector('[data-action="presets-prev"]').click();
+        expect(document.querySelectorAll('.preset-card')).toHaveLength(6);
+        document.querySelector('[data-action="add-preset-members"]').click();
+        document.querySelector('[data-action="picker-class"][data-class-index="0"]').click();
+        document.querySelector('[data-action="picker-panel"][data-panel="presets"]').click();
+        const clear = document.querySelector('.picker-filter-top [data-action="picker-class-all"]');
+        expect(clear.closest('[hidden]')).toBeNull();
+        clear.click();
+        expect(document.querySelector('[data-action="picker-class"][aria-pressed="true"]')).toBeNull();
+        expect(document.querySelector('.picker-filter-top [data-action="picker-effects-clear"]').closest('[hidden]')).toBeNull();
+    });
+    it('saves a team preset and reapplies its order only as a draft', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-action="add-team"]').click();
+        document.querySelector('[data-action="pick"]').click();
+        document.querySelector('#picker [data-action="choose-member"]:not(:disabled)').click();
+        document.querySelector('[data-action="close-picker"]').click();
+        document.querySelector('[data-action="review-team"]').click();
+        document.querySelector('[data-action="save-team-preset"]').click();
+        const saved = () => JSON.parse(localStorage.getItem('palace-editor:v2:/'));
+        const members = saved().presets[0].members;
+        document.querySelector('[data-tab="presets"]').click();
+        document.querySelector('#editor [data-action="quick-use"]').click();
+        const teams = saved().changes.find(change => change.path === 'data/teams.json').after.teams;
+        expect(teams).toHaveLength(2);
+        expect(teams[1].members).toEqual(members);
+        expect(teams[1].status).toBe('draft');
+        document.querySelector('[data-action="pick"]').click();
+        document.querySelector('[data-action="picker-panel"][data-panel="presets"]').click();
+        const select = document.querySelector('#picker-team-preset');
+        select.value = saved().presets[0].id;
+        document.querySelector('[data-action="picker-apply-preset"]').click();
+        expect(saved().changes.find(change => change.path === 'data/teams.json').after.teams[0].status).toBe('draft');
+    });
+    it('downloads a short v2 ZIP with a manifest and reviewed teams, while backups keep personal work', async () => {
+        const downloads = [], blobs = [];
+        const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(function () { downloads.push(this.download); });
+        const url = vi.spyOn(URL, 'createObjectURL').mockImplementation(blob => { blobs.push(blob); return 'blob:download'; });
+        try {
+            await import('../../../tools/editor/editor.js');
+            document.querySelector('[data-action="add-team"]').click();
+            document.querySelector('[data-action="review-team"]').click();
+            document.querySelector('[data-action="add-team"]').click();
+            document.querySelector('[data-action="save-team-preset"]').click();
+            document.querySelector('[data-action="review"]').click();
+            expect(document.querySelector('#review').textContent).toContain('Exportação do editor v2');
+            document.querySelector('#review [data-action="download"]').click();
+            expect(downloads).toEqual(['palace-v2.zip']);
+            const bytes = new Uint8Array(await blobs[0].arrayBuffer()), view = new DataView(bytes.buffer), entries = {};
+            let offset = 0;
+            while (view.getUint32(offset, true) === 0x04034b50) {
+                const size = view.getUint32(offset + 18, true), nameSize = view.getUint16(offset + 26, true), extra = view.getUint16(offset + 28, true);
+                const start = offset + 30 + nameSize + extra;
+                entries[new TextDecoder().decode(bytes.slice(offset + 30, offset + 30 + nameSize))] = new TextDecoder().decode(bytes.slice(start, start + size));
+                offset = start + size;
+            }
+            expect(JSON.parse(entries['palace-editor.json']).version).toBe(2);
+            expect(JSON.parse(entries['data/teams.json']).teams).toHaveLength(1);
+            expect(entries['LEIA-ME.txt']).toContain('Predefinições pessoais ficam no backup');
+            document.querySelector('#review [data-action="backup"]').click();
+            expect(downloads[1]).toBe('palace-v2-backup.json');
+            const backup = JSON.parse(await blobs[1].text());
+            expect(backup.presets).toHaveLength(1);
+            expect(backup.changes.find(change => change.path === 'data/teams.json').after.teams).toHaveLength(2);
+        } finally { click.mockRestore(); url.mockRestore(); }
+    });
+    it('edits colored ranks separately while preserving the build', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-tab="edit"]').click();
+        expect(document.querySelector('select[data-rank]')).toBeNull();
+        const build = document.querySelector('[data-build="base"][data-field="recommended_build"]');
+        build.value = 'ATQ% revisado'; build.dispatchEvent(new Event('input', { bubbles: true }));
+        document.querySelector('[data-tab="tier"]').click();
+        expect(document.querySelector('[data-build]')).toBeNull();
+        expect(document.querySelectorAll('.rank-card')).toHaveLength(4);
+        const rank = document.querySelector('select[data-rank="pf"]');
+        rank.value = 'SS'; rank.dispatchEvent(new Event('change', { bubbles: true }));
+        expect(document.querySelector('.rank-card .rank-value').dataset.rank).toBe('SS');
+        document.querySelector('[data-tab="edit"]').click();
+        expect(document.querySelector('[data-build="base"][data-field="recommended_build"]').value).toBe('ATQ% revisado');
+    });
+    it('saves a pair once and builds teams directly on different variant pages with one click', async () => {
+        await import('../../../tools/editor/editor.js');
+        const saved = () => JSON.parse(localStorage.getItem('palace-editor:v2:/'));
+        const teams = () => saved().changes.find(change => change.path === 'data/teams.json')?.after.teams || [];
+        document.querySelector('#editor [data-action="quick-create"]').click();
+        expect(document.querySelector('#picker [data-action="quick-save"]').disabled).toBe(true);
+        const name = document.querySelector('#quick-preset-name');
+        name.value = 'Minha dupla'; name.dispatchEvent(new Event('input', { bubbles: true }));
+        const choose = () => [...document.querySelectorAll('#picker [data-action="choose-member"]:not(:disabled)')].find(button => button.dataset.variant !== 'Rosa Estelar');
+        const first = choose().dataset.variant; choose().click();
+        const second = choose().dataset.variant; choose().click();
+        expect(document.querySelectorAll('#picker [data-action="choose-member"]:not(:disabled)')).toHaveLength(0);
+        expect(document.querySelectorAll('.quick-selection-members > div')).toHaveLength(2);
+        expect(saved().presets).toEqual([]);
+        document.querySelector('#picker [data-action="quick-save"]').click();
+        expect(document.querySelector('#picker').open).toBe(false);
+        expect(saved().presets[0].members.map(member => member.variant)).toEqual([first, second]);
+        expect(saved().changes).toEqual([]);
+        const shortcut = document.querySelector('#editor .quick-preset');
+        expect(shortcut.textContent).toContain('Minha dupla');
+        expect(shortcut.querySelectorAll('img')).toHaveLength(2);
+        shortcut.click();
+        expect(teams()[0].members.map(member => member.variant)).toEqual(['Rosa Estelar', first, second]);
+        const otherPage = [...document.querySelectorAll('#catalog [data-action="select"]')].find(button => !['Rosa Estelar', first, second].includes(button.dataset.variant));
+        const otherName = otherPage.dataset.variant;
+        otherPage.click();
+        document.querySelector('#editor .quick-preset').click();
+        expect(document.querySelector('#picker').open).toBe(false);
+        expect(teams()[1].members.map(member => member.variant)).toEqual([otherName, first, second]);
+        expect(teams()[1].status).toBe('draft');
+        expect(teams()[0].anchor.variant).toBe('Rosa Estelar');
+        document.querySelector('#editor [data-action="undo"]').click();
+        expect(teams()).toHaveLength(1);
+    });
+    it('allows a single-companion shortcut and discards unfinished selections when cancelled', async () => {
+        await import('../../../tools/editor/editor.js');
+        const before = localStorage.getItem('palace-editor:v2:/');
+        document.querySelector('#editor [data-action="quick-create"]').click();
+        document.querySelector('#picker [data-action="choose-member"]').click();
+        document.querySelector('#picker [data-action="close-picker"]').click();
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(before);
+        document.querySelector('#editor [data-action="quick-create"]').click();
+        const choose = [...document.querySelectorAll('#picker [data-action="choose-member"]')].find(button => button.dataset.variant !== 'Rosa Estelar');
+        const companion = choose.dataset.variant; choose.click();
+        document.querySelector('#picker [data-action="quick-save"]').click();
+        document.querySelector('#editor .quick-preset').click();
+        const backup = JSON.parse(localStorage.getItem('palace-editor:v2:/'));
+        expect(backup.presets[0].members).toHaveLength(1);
+        expect(backup.changes.find(change => change.path === 'data/teams.json').after.teams[0].members.map(member => member.variant)).toEqual(['Rosa Estelar', companion]);
+    });
+    it('saves only the companions from a finished team even when the anchor was moved', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('#editor [data-action="add-team"]').click();
+        document.querySelector('#editor [data-action="pick"]').click();
+        const choose = () => document.querySelector('#picker [data-action="choose-member"]:not(:disabled)');
+        const first = choose().dataset.variant; choose().click();
+        const second = choose().dataset.variant; choose().click();
+        document.querySelector('#picker [data-action="close-picker"]').click();
+        document.querySelector('.team-grid [data-index="0"][data-direction="1"]').click();
+        document.querySelector('.team-grid [data-index="1"][data-direction="1"]').click();
+        document.querySelector('#editor [data-action="review-team"]').click();
+        document.querySelector('#editor [data-action="quick-save-companions"]').click();
+        const backup = JSON.parse(localStorage.getItem('palace-editor:v2:/'));
+        expect(backup.presets[0].members.map(member => member.variant)).toEqual([first, second]);
+        expect(backup.changes.find(change => change.path === 'data/teams.json').after.teams[0]).toMatchObject({ status: 'reviewed', members: [{ variant: first }, { variant: second }, { variant: 'Rosa Estelar' }] });
+        expect(document.querySelector('#editor .quick-preset').textContent).toContain(first);
+    });
+    it('applies a shortcut directly in the picker, protects the anchor, and can undo the replacement', async () => {
+        const backup = { format: 'palace-editor', version: 2, changes: [], presets: [{ id: 'pair', name: 'Minha dupla', kind: 'support', members: load('data/annie.json').variants.diamante.slice(1, 3).map(variant => ({ character: 'annie', variant: variant.name })) }] };
+        localStorage.setItem('palace-editor:v2:/', JSON.stringify(backup));
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('#editor [data-action="add-team"]').click();
+        document.querySelector('#editor [data-action="review-team"]').click();
+        document.querySelector('#editor [data-action="pick"]').click();
+        expect(document.querySelector('#picker .quick-preset').closest('[hidden]')).toBeNull();
+        document.querySelector('#picker .quick-preset').click();
+        const team = () => JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.find(change => change.path === 'data/teams.json').after.teams[0];
+        expect(team().members).toEqual([{ character: 'annie', variant: 'Rosa Estelar' }, ...backup.presets[0].members]);
+        expect(team().status).toBe('draft');
+        expect(document.querySelector('#picker [data-action="picker-slot"][data-index="0"]').disabled).toBe(true);
+        document.querySelector('#picker [data-action="close-picker"]').click();
+        document.querySelector('#editor [data-action="undo"]').click();
+        expect(team().members).toEqual([{ character: 'annie', variant: 'Rosa Estelar' }]);
+        expect(team().status).toBe('reviewed');
+        expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).presets).toEqual(backup.presets);
+    });
+    it('shows existing v2 one/two-member lists as bounded quick shortcuts without changing their backups', async () => {
+        const backup = { format: 'palace-editor', version: 2, changes: [], presets: Array.from({ length: 5 }, (_, index) => ({ id: `p${index}`, name: `Padrão ${index}`, kind: 'team', members: [{ character: 'annie', variant: 'Rosa Estelar' }] })) };
+        localStorage.setItem('palace-editor:v2:/', JSON.stringify(backup));
+        await import('../../../tools/editor/editor.js');
+        const before = localStorage.getItem('palace-editor:v2:/');
+        expect(document.querySelectorAll('#editor .quick-preset')).toHaveLength(4);
+        document.querySelector('#editor [data-action="quick-next"]').click();
+        expect(document.querySelectorAll('#editor .quick-preset')).toHaveLength(1);
+        expect(document.querySelector('#editor .quick-preset').textContent).toContain('Padrão 4');
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(before);
+    });
+    it('preserves v1 storage and downloads the original version before starting v2', async () => {
+        const old = JSON.stringify({ format: 'palace-editor', version: 1, changes: [] });
+        localStorage.setItem('palace-editor:v1:/', old);
+        const downloads = [];
+        const click = vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(function () { downloads.push(this.download); });
+        const blobs = [];
+        const url = vi.spyOn(URL, 'createObjectURL').mockImplementation(blob => { blobs.push(blob); return 'blob:backup'; });
+        try {
+            await import('../../../tools/editor/editor.js');
+            expect(document.querySelector('[data-action="start-fresh"]').disabled).toBe(true);
+            document.querySelector('[data-action="add-team"]').click();
+            expect(localStorage.getItem('palace-editor:v2:/')).toBeNull();
+            document.querySelector('[data-action="recover"]').click();
+            expect(downloads).toEqual(['palace-v1-backup.json']);
+            expect(JSON.parse(await blobs[0].text())).toEqual(JSON.parse(old));
+            expect(document.querySelector('[data-action="start-fresh"]').disabled).toBe(false);
+            document.querySelector('[data-action="start-fresh"]').click();
+            expect(localStorage.getItem('palace-editor:v1:/')).toBe(old);
+            expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).version).toBe(2);
+            expect(document.querySelector('[data-action="recover"]')).toBeNull();
+        } finally { click.mockRestore(); url.mockRestore(); }
+    });
+    it('imports v2 presets and rejects other generations without replacing the current draft', async () => {
+        await import('../../../tools/editor/editor.js');
+        const importBackup = backup => {
+            const input = document.querySelector('#import-file');
+            Object.defineProperty(input, 'files', { configurable: true, value: [{ size: 100, text: async () => JSON.stringify(backup) }] });
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+        };
+        importBackup({ format: 'palace-editor', version: 2, changes: [], presets: [{ id: 'my-pool', name: 'Defesas', kind: 'defense', members: [{ character: 'annie', variant: 'Rosa Estelar' }] }] });
+        await vi.waitFor(() => expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).presets).toHaveLength(1));
+        const before = localStorage.getItem('palace-editor:v2:/');
+        document.querySelector('[data-tab="presets"]').click();
+        expect(document.querySelector('.preset-members strong').textContent).toBe('Rosa Estelar');
+        importBackup({ format: 'palace-editor', version: 1, changes: [] });
+        await vi.waitFor(() => expect(document.querySelector('#editor-error').textContent).toContain('v1 → v2'));
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(before);
+        document.querySelector('[data-action="help"]').click();
+        expect(document.querySelector('.transfer-help').textContent).toContain('Backups v1 não são compatíveis com v2');
+        expect(document.querySelector('.transfer-help').textContent).toContain('ZIP de exportação não é importável');
+        document.querySelector('[data-action="import"]').click();
+        expect(document.querySelector('#review').textContent).toContain('somente backups v2');
+    });
+    it('derives future generation labels and detects the immediately preceding draft without overwriting it', async () => {
+        vi.doMock('../../../tools/editor/version.js', () => ({ EDITOR_VERSION: 3, EDITOR_LABEL: 'v3', backupFilename: backup => `palace-v${backup.version}-backup.json` }));
+        const previous = JSON.stringify({ format: 'palace-editor', version: 2, presets: [], changes: [] });
+        localStorage.setItem('palace-editor:v2:/', previous);
+        try {
+            await import('../../../tools/editor/editor.js');
+            expect(document.title).toContain('v3');
+            expect(document.querySelector('.warning').textContent).toContain('v2 → v3');
+            expect(document.querySelector('[data-action="start-fresh"]').textContent).toContain('v3');
+            document.querySelector('[data-action="import"]').click();
+            expect(document.querySelector('#review').textContent).toContain('somente backups v3');
+            expect(localStorage.getItem('palace-editor:v2:/')).toBe(previous);
+            expect(localStorage.getItem('palace-editor:v3:/')).toBeNull();
+        } finally { vi.doUnmock('../../../tools/editor/version.js'); }
     });
     it('filters ability descriptions by buffs and debuffs, combines selections and clears them', async () => {
         fetch.mockImplementation(async url => {
@@ -77,7 +398,7 @@ describe('Palace Studio workflow', () => {
         });
         await import('../../../tools/editor/editor.js');
         document.querySelector('[data-action="add-team"]').click();
-        const draft = localStorage.getItem('palace-editor:v1:/');
+        const draft = localStorage.getItem('palace-editor:v2:/');
         document.querySelector('[data-action="pick"]').click();
         const query = document.querySelector('#picker-query');
         query.value = 'Alvo'; query.dispatchEvent(new Event('input', { bubbles: true }));
@@ -99,7 +420,7 @@ describe('Palace Studio workflow', () => {
         expect(document.querySelector('.picker-results').textContent).toContain('Nenhuma');
         document.querySelector('[data-action="picker-effects-clear"]').click();
         expect(names()).toHaveLength(2);
-        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
     });
     it('persists class corrections, invalidates affected teams and exposes defensive categories', async () => {
         await import('../../../tools/editor/editor.js');
@@ -111,7 +432,7 @@ describe('Palace Studio workflow', () => {
         document.querySelector('[data-tab="teams"]').click();
         expect(document.querySelector('.status.draft')).not.toBeNull();
         expect(document.querySelector('[data-category="defense"]')).not.toBeNull();
-        const backup = JSON.parse(localStorage.getItem('palace-editor:v1:/'));
+        const backup = JSON.parse(localStorage.getItem('palace-editor:v2:/'));
         expect(backup.changes.some(change => change.path === CLASS_PATH)).toBe(true);
     });
     it('chooses primary and secondary priority, swaps them and keeps Wildcard exclusive with undo', async () => {
@@ -121,7 +442,7 @@ describe('Palace Studio workflow', () => {
             const field = document.querySelector(`[data-class-role="${role}"]`);
             field.value = value; field.dispatchEvent(new Event('change', { bubbles: true }));
         };
-        const savedClasses = () => JSON.parse(localStorage.getItem('palace-editor:v1:/')).changes.find(change => change.path === CLASS_PATH).after['Rosa Estelar'];
+        const savedClasses = () => JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.find(change => change.path === CLASS_PATH).after['Rosa Estelar'];
         choose('secondary', 'Ofensivo');
         expect(savedClasses()).toEqual(['Suporte de Utilidade', 'Ofensivo']);
         choose('primary', 'Ofensivo');
@@ -137,7 +458,7 @@ describe('Palace Studio workflow', () => {
         document.querySelector('[data-action="undo"]').click();
         expect(savedClasses()).toEqual(['Ofensivo', 'Defensivo']);
         expect(document.querySelector('[data-class-role="secondary"]').value).toBe('Defensivo');
-        expect(JSON.parse(localStorage.getItem('palace-editor:v1:/')).changes.map(change => change.path)).toEqual([CLASS_PATH]);
+        expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.map(change => change.path)).toEqual([CLASS_PATH]);
     });
     it('switches themes and follows the system without replacing an edited form or its draft', async () => {
         const media = new EventTarget();
@@ -150,7 +471,7 @@ describe('Palace Studio workflow', () => {
             const field = document.querySelector('[data-build="base"][data-field="recommended_build"]');
             field.value = 'Precisão, Perfuração';
             field.dispatchEvent(new Event('input', { bubbles: true }));
-            const draft = localStorage.getItem('palace-editor:v1:/');
+            const draft = localStorage.getItem('palace-editor:v2:/');
             const selector = document.querySelector('#editor-theme');
             const choose = value => { selector.value = value; selector.dispatchEvent(new Event('change', { bubbles: true })); };
             choose('light');
@@ -164,7 +485,7 @@ describe('Palace Studio workflow', () => {
             expect(localStorage.getItem('palace-editor-theme')).toBe('light');
             expect(document.querySelector('[data-build="base"][data-field="recommended_build"]')).toBe(field);
             expect(field.value).toBe('Precisão, Perfuração');
-            expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+            expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
         } finally { matchMedia.mockRestore(); }
     });
     it('combines picker search with multiple classes, including locally corrected classes', async () => {
@@ -174,7 +495,7 @@ describe('Palace Studio workflow', () => {
         defensive.value = 'Defensivo'; defensive.dispatchEvent(new Event('change', { bubbles: true }));
         document.querySelector('[data-tab="teams"]').click();
         document.querySelector('[data-action="add-team"]').click();
-        const draft = localStorage.getItem('palace-editor:v1:/');
+        const draft = localStorage.getItem('palace-editor:v2:/');
         document.querySelector('[data-action="pick"]').click();
         document.querySelector('#picker [data-class-index="1"]').click();
         const cards = () => [...document.querySelectorAll('#picker .picker-grid .member-card')];
@@ -190,12 +511,12 @@ describe('Palace Studio workflow', () => {
         document.querySelector('#picker [data-class-index="2"]').click();
         expect(cards().every(card => /Defensivo|Suporte de Utilidade/.test(card.querySelector('.chips').textContent))).toBe(true);
         document.querySelector('#picker [data-action="picker-class-all"]').click();
-        expect(document.querySelector('#picker [data-action="picker-class-all"]').getAttribute('aria-pressed')).toBe('true');
-        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+        expect(document.querySelectorAll('#picker [data-action="picker-class"][aria-pressed="true"]')).toHaveLength(0);
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
     });
     it('shows one character at a time and switches moves without navigating away from the variant', async () => {
         await import('../../../tools/editor/editor.js');
-        const draft = localStorage.getItem('palace-editor:v1:/');
+        const draft = localStorage.getItem('palace-editor:v2:/');
         document.querySelector('[data-action="moves-gallery"]').click();
         await vi.waitFor(() => expect(document.querySelector('#moves-character')).not.toBeNull());
         expect(document.querySelectorAll('.move-gallery-card')).toHaveLength(Math.min(24, Object.keys(MOVE_DATA.annie).length));
@@ -215,7 +536,7 @@ describe('Palace Studio workflow', () => {
         vi.spyOn(navigator, 'clipboard', 'get').mockReturnValue({ writeText: copy });
         document.querySelector('[data-gallery-action="copy"]').click();
         await vi.waitFor(() => expect(copy).toHaveBeenCalledWith('Estilingue Gravitacional'));
-        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
         document.querySelector('[data-gallery-action="close"]').click();
         expect(document.querySelector('#moves-gallery')).toBeNull();
         expect(fetch.mock.calls.every(([url]) => !String(url).includes('stanleyDB'))).toBe(true);
@@ -248,7 +569,7 @@ describe('Palace Studio workflow', () => {
         expect(document.querySelector('[data-ability-locale="pt-BR"][data-ability-field="SA1"]').value).toContain('**4** segundos de FEITIÇO');
         expect(document.querySelector('.source-abilities').textContent).toBe(sourceBefore);
         expect(document.querySelector('#ability-preview-en').textContent).toContain('Reviewed second part.');
-        const backup = JSON.parse(localStorage.getItem('palace-editor:v1:/'));
+        const backup = JSON.parse(localStorage.getItem('palace-editor:v2:/'));
         const portuguese = backup.changes.find(change => change.path === 'data/annie.json').after.variants.diamante[0].signature_ability.description;
         expect(portuguese).toContain('**4**');
         expect(portuguese).not.toContain('2/3/4');
@@ -296,7 +617,7 @@ describe('Palace Studio workflow', () => {
         expect(document.querySelector('.source-abilities').textContent).toBe(before);
         document.querySelector('[data-tab="abilities"]').click();
         expect(document.querySelector('[data-ability-locale="en"][data-ability-field="SA1"]').value).toBe('HEX for 20 seconds.');
-        expect(JSON.parse(localStorage.getItem('palace-editor:v1:/')).changes.map(change => change.path)).toEqual(['data/annie.json']);
+        expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.map(change => change.path)).toEqual(['data/annie.json']);
     });
     it('opens character-specific moves beside the arsenal without changing edited text', async () => {
         await import('../../../tools/editor/editor.js');
@@ -304,13 +625,13 @@ describe('Palace Studio workflow', () => {
         const arsenal = document.querySelector('[data-build="base"][data-field="recommended_arsenal"]');
         arsenal.value = 'Estilingue Gravitacional';
         arsenal.dispatchEvent(new Event('input', { bubbles: true }));
-        const draft = localStorage.getItem('palace-editor:v1:/');
+        const draft = localStorage.getItem('palace-editor:v2:/');
         arsenal.closest('div').querySelector('[data-action="character-moves"]').click();
         await vi.waitFor(() => expect(document.querySelector('#moves-character')?.value).toBe('annie'));
         expect([...document.querySelectorAll('.move-gallery-card small')].every(label => label.textContent.startsWith('Annie'))).toBe(true);
         document.querySelector('[data-gallery-action="close"]').click();
         expect(document.querySelector('[data-build="base"][data-field="recommended_arsenal"]')).toBe(arsenal);
         expect(arsenal.value).toBe('Estilingue Gravitacional');
-        expect(localStorage.getItem('palace-editor:v1:/')).toBe(draft);
+        expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
     });
 });

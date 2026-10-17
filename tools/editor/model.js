@@ -1,6 +1,8 @@
 import { validateTeam, sameVariant } from '../../src/utils/teamData.js';
 import { EN_ABILITIES_PATH, PT_MAPPING_PATH, buildAbilityLinks, abilityIdentity, publishedAbilityLinks } from './abilities.js';
 import { splitSignatureAbility } from '../../src/utils/abilityText.js';
+import { EDITOR_VERSION } from './version.js';
+import { validatePresets } from './presets.js';
 
 export const EDITABLE_BUILD_FIELDS = ['recommended_build', 'recommended_arsenal', 'marquee_ability'];
 export const TIER_MODES = ['pf', 'parallel', 'riftOff', 'riftDef'];
@@ -181,14 +183,16 @@ export function serializeFile(path, data) {
     return path === CLASS_PATH ? `// Editorial class data. Editable through Palace Estudio.\nexport const VARIANT_CLASSES = ${json};\n` : `${json}\n`;
 }
 
-export function makeBackup(base, files) {
-    return { format: 'palace-editor', version: 1, changes: Object.entries(files).filter(([path, data]) => !equal(base[path], data))
+export function makeBackup(base, files, presets = []) {
+    return { format: 'palace-editor', version: EDITOR_VERSION, presets: clone(presets), changes: Object.entries(files).filter(([path, data]) => !equal(base[path], data))
         .map(([path, after]) => ({ path, before: clone(base[path]), after: clone(after) })) };
 }
 
 /** All-or-nothing import; an old base never silently replaces newer wiki data. */
 export function restoreBackup(base, backup, classesFor) {
-    if (backup?.format !== 'palace-editor' || backup.version !== 1 || !Array.isArray(backup.changes)) throw new Error('invalidBackup');
+    if (backup?.format !== 'palace-editor') throw new Error('invalidBackup');
+    if (backup.version !== EDITOR_VERSION) throw new Error('incompatibleVersion');
+    if (!Array.isArray(backup.changes)) throw new Error('invalidBackup');
     const restored = clone(base);
     const paths = new Set();
     for (const change of backup.changes) {
@@ -206,6 +210,7 @@ export function restoreBackup(base, backup, classesFor) {
     // An unfinished ability field is a valid draft, but cannot be exported yet.
     const errors = validateChanges(base, restored, classesFor).filter(error => !error.endsWith(': abilityRequired'));
     if (errors.length) throw new Error(`invalidBackup: ${errors.join('; ')}`);
+    validatePresets(backup.presets ?? [], charactersFrom(restored));
     return restored;
 }
 
