@@ -43,14 +43,14 @@ const CLASS_DESCRIPTIONS_PT = {
  "Ofensivo": "O Personagem Principal do time feito para causar o m\u00E1ximo de dano poss\u00EDvel, geralmente ele ganha efeitos ou inflinge efeitos. \u00DAtil contra personagens Defensivos.",
  "Defensivo": "Personagem que tem alta quantidade de Vida e Habilidades que aumentam a sobreviv\u00EAncia do mesmo, tamb\u00E9m pode ter habilidades punitivas como dano refletido e outros efeitos eficazes contra o opressor.",
  "Suporte de Utilidade": "Personagem que tem habilidades que podem conceder EF. POSITIVOS aos Aliados, EF. NEGATIVOS aos oponentes ou ambos (conceder efeitos e inflingir efeitos). Alguns suportes podem se beneficiar de suas pr\u00F3prias habilidades e entrar em campo para contribuir para o time de diferentes formas.",
- "Coringa": "Personagem que consegue desempenhar em v\u00E1rias fun\u00E7\u00F5es, pode inflingir dano, aplicar efeitos, inflingir efeitos, defender ou at\u00E9 servir como suporte."
+ "Coringa": "Variante que atua nas três classes: Ofensivo, Defensivo e Suporte de Utilidade. Ter uma classe principal e uma secundária não é suficiente para ser Coringa."
 };
 
 const CLASS_DESCRIPTIONS_EN = {
  "Ofensivo": "The team's main damage dealer, designed to deal as much damage as possible. Typically gains buffs or inflicts debuffs. Effective against Defensive fighters.",
  "Defensivo": "A fighter with high HP and abilities that increase survivability. May also have punishing abilities like reflect damage and other effects effective against aggressors.",
  "Suporte de Utilidade": "A fighter with abilities that grant BUFFS to allies, inflict DEBUFFS on opponents, or both. Some supports can benefit from their own abilities and contribute to the team in various ways.",
- "Coringa": "A fighter that can perform in multiple roles \u2014 dealing damage, applying buffs or debuffs, defending, or even supporting the team."
+ "Coringa": "A variant that can act as Offensive, Defensive and Utility Support. Having a primary and a secondary class alone does not make a variant a Wildcard."
 };
 
 export const CLASS_DESCRIPTIONS = CLASS_DESCRIPTIONS_PT;

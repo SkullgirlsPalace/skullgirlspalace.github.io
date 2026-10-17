@@ -381,6 +381,9 @@
         text-align: center !important;
     }
 
+    .variant-class-wrapper.secondary-class .variant-class-tag { font-size: .65rem !important; }
+    .variant-class-wrapper.secondary-class .variant-class-label { font-size: .6rem !important; }
+
     .mobile-classes {
         display: none !important;
     }

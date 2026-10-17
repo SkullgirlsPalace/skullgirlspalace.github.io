@@ -19,7 +19,8 @@ const pt = {
     backup: 'Salvar backup', import: 'Importar backup', export: 'Revisar e exportar', saved: 'Rascunho salvo neste navegador',
     saveError: 'Não foi possível salvar no navegador. Salve um backup para preservar suas alterações.',
     untouched: 'Nenhuma alteração para exportar.', changed: 'arquivos alterados', ability: 'Habilidade característica',
-    classes: 'Classes da variante', classesHelp: 'A classe determina se “Times Defensivos” fica disponível. Selecione ao menos uma.',
+    classes: 'Classes da variante', classesHelp: 'Escolha a classe principal e, se houver, uma secundária. Os filtros consideram ambas; a ordenação por classe usa a principal. Coringa reúne as três classes e não recebe secundária. Classes elegíveis em qualquer posição permitem Times Defensivos.',
+    primaryClass: 'Classe principal', secondaryClass: 'Classe secundária (opcional)', noSecondaryClass: 'Sem classe secundária', alsoActsAs: 'Também atua como',
     general: 'Times Ofensivos', defense: 'Times Defensivos',
     teamHelp: 'Monte até três variantes. A variante desta ficha faz parte do time.',
     teamOrder: 'Ordem no jogo: da direita para a esquerda. A 1ª variante fica na frente, a 2ª no meio e a 3ª por último.',
@@ -61,7 +62,7 @@ const pt = {
         protectedData: 'O backup tentou alterar dados fora do escopo do editor.', plainText: 'Use texto simples, sem tags HTML.',
         invalidBuilds: 'Mantenha ao menos uma build alternativa ou remova todas pela interface.', buildTitle: 'As builds precisam de nomes únicos e preenchidos.',
         invalidRank: 'Rank inválido.', removedRank: 'Um registro existente de rank foi removido.', invalidTierFile: 'Arquivo de ranks inválido.',
-        unknownVariant: 'Variante desconhecida.', invalidClasses: 'Selecione classes válidas.', removedClass: 'Um registro de classe foi removido.',
+        unknownVariant: 'Variante desconhecida.', invalidClasses: 'Escolha uma classe principal e até uma secundária diferente. Coringa deve ficar sozinho.', removedClass: 'Um registro de classe foi removido.',
         missingFile: 'Arquivo necessário ausente.', unknownFile: 'Arquivo fora do escopo.', invalidBackup: 'Backup inválido.', staleBackup: 'Backup de outra versão dos dados.'
     }
 };
@@ -85,7 +86,8 @@ const en = {
     reference: 'Reference', edit: 'Builds and tier list', teams: 'Teams', backup: 'Save backup', import: 'Import backup', export: 'Review and export',
     saved: 'Draft saved in this browser', saveError: 'Unable to save in this browser. Download a backup to preserve your changes.',
     untouched: 'No changes to export.', changed: 'changed files', ability: 'Signature ability', classes: 'Variant classes',
-    classesHelp: 'Classes control availability of Defensive Teams. Select at least one.', general: 'Offensive Teams', defense: 'Defensive Teams',
+    classesHelp: 'Choose a primary class and an optional secondary class. Filters match both; class sorting uses the primary. Wildcard covers all three classes and has no secondary. Eligible classes in either position allow Defensive Teams.', general: 'Offensive Teams', defense: 'Defensive Teams',
+    primaryClass: 'Primary class', secondaryClass: 'Secondary class (optional)', noSecondaryClass: 'No secondary class', alsoActsAs: 'Also acts as',
     teamHelp: 'Select up to three variants, including the variant on this page.',
     teamOrder: 'In-game order: right to left. The 1st variant is in front, the 2nd in the middle, and the 3rd last.',
     teamFront: '1st · Front', teamMiddle: '2nd · Middle', teamLast: '3rd · Last',
@@ -105,7 +107,7 @@ const en = {
     backupFirst: 'Use a backup to continue in another browser or computer.', classOffensive: 'Offensive', classDefensive: 'Defensive', classSupport: 'Utility Support', classWildcard: 'Wildcard',
     validation: {
         abilityText: 'Use ability text without HTML tags.', abilityRequired: 'Fill in required ability fields before exporting. SA2 may be empty when not applicable.', abilityLink: 'The Portuguese name must retain the language reference link.', unlinkedAbility: 'This English record is not linked to an existing variant.',
-        unknownAnchor: 'Page variant does not exist.', invalidCategory: 'Unknown category.', defenseClass: 'The page variant class does not allow Defensive Teams.', memberLimit: 'Use one to three variants.', unknownMember: 'Select existing variants only.', duplicateMember: 'A variant appears more than once.', missingAnchor: 'Include the page variant.', invalidStatus: 'Invalid review status.', reviewDate: 'Provide a valid review date.', invalidTeam: 'Invalid team.', invalidTeamFile: 'Invalid team file.', duplicateId: 'Missing or duplicate team ID.', protectedData: 'Backup attempted to change protected data.', plainText: 'Use plain text without HTML tags.', invalidBuilds: 'Keep at least one alternative build or remove all through the interface.', buildTitle: 'Builds need unique, nonempty names.', invalidRank: 'Invalid rank.', removedRank: 'An existing rank was removed.', invalidTierFile: 'Invalid rank file.', unknownVariant: 'Unknown variant.', invalidClasses: 'Select valid classes.', removedClass: 'A class record was removed.', missingFile: 'Required file missing.', unknownFile: 'File outside editor scope.', invalidBackup: 'Invalid backup.', staleBackup: 'Backup uses a different data version.'
+        unknownAnchor: 'Page variant does not exist.', invalidCategory: 'Unknown category.', defenseClass: 'The page variant class does not allow Defensive Teams.', memberLimit: 'Use one to three variants.', unknownMember: 'Select existing variants only.', duplicateMember: 'A variant appears more than once.', missingAnchor: 'Include the page variant.', invalidStatus: 'Invalid review status.', reviewDate: 'Provide a valid review date.', invalidTeam: 'Invalid team.', invalidTeamFile: 'Invalid team file.', duplicateId: 'Missing or duplicate team ID.', protectedData: 'Backup attempted to change protected data.', plainText: 'Use plain text without HTML tags.', invalidBuilds: 'Keep at least one alternative build or remove all through the interface.', buildTitle: 'Builds need unique, nonempty names.', invalidRank: 'Invalid rank.', removedRank: 'An existing rank was removed.', invalidTierFile: 'Invalid rank file.', unknownVariant: 'Unknown variant.', invalidClasses: 'Choose a primary class and at most one different secondary class. Wildcard must stand alone.', removedClass: 'A class record was removed.', missingFile: 'Required file missing.', unknownFile: 'File outside editor scope.', invalidBackup: 'Invalid backup.', staleBackup: 'Backup uses a different data version.'
     }
 };
 export const strings = { 'pt-BR': pt, en };

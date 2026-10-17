@@ -277,6 +277,10 @@
     line-height: 1.2;
 }
 
+.tier-class-summary { text-align: center; line-height: 1.5; }
+.tier-class-summary small { display: block; font-size: .75rem; color: var(--text-secondary); }
+.tier-class-summary .tier-secondary-class { margin-top: 3px; font-size: .68rem; color: var(--text-muted); }
+
 .rank-cell-container {
     display: flex;
     align-items: center;

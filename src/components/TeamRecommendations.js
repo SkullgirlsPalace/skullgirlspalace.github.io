@@ -30,7 +30,7 @@ export async function showTeams(container, character, variant, category) {
                     const memberData = Object.values(characters[member.character].variants).flat().find(item => item.name === member.variant);
                     return `<li><span class="team-position">${t(`teams.${['front', 'middle', 'last'][index]}`)}</span><img loading="lazy" width="160" height="160" src="${escape(getVariantImage(member.character, member.variant))}" alt="">
                         <div><strong>${escape(getLocalizedNameSync(member.variant, memberData?.signature_ability?.name))}</strong>
-                        <p>${getLocalizedVariantClasses(member.variant).map(item => escape(item.localized)).join(' · ')}</p></div></li>`;
+                        <p>${getLocalizedVariantClasses(member.variant).map((item, index) => index ? `<span class="team-secondary-class">${t('variant.alsoActsAs')}: ${escape(item.localized)}</span>` : `<span title="${t('variant.primaryClass')}">${escape(item.localized)}</span>`).join('')}</p></div></li>`;
                 }).join('')}</ol>
                 <small>${t('teams.reviewedOn')} ${escape(team.reviewedOn)}</small>
             </article>`).join('') : `<p class="teams-message">${t('teams.empty')}</p>`;

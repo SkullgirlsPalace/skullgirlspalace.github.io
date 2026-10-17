@@ -106,13 +106,38 @@ describe('Palace Studio workflow', () => {
         document.querySelector('[data-action="add-team"]').click();
         document.querySelector('[data-action="review-team"]').click();
         document.querySelector('[data-tab="edit"]').click();
-        const wildcard = document.querySelector('[data-class="3"]');
-        wildcard.checked = true; wildcard.dispatchEvent(new Event('change', { bubbles: true }));
+        const wildcard = document.querySelector('[data-class-role="primary"]');
+        wildcard.value = 'Coringa'; wildcard.dispatchEvent(new Event('change', { bubbles: true }));
         document.querySelector('[data-tab="teams"]').click();
         expect(document.querySelector('.status.draft')).not.toBeNull();
         expect(document.querySelector('[data-category="defense"]')).not.toBeNull();
         const backup = JSON.parse(localStorage.getItem('palace-editor:v1:/'));
         expect(backup.changes.some(change => change.path === CLASS_PATH)).toBe(true);
+    });
+    it('chooses primary and secondary priority, swaps them and keeps Wildcard exclusive with undo', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-tab="edit"]').click();
+        const choose = (role, value) => {
+            const field = document.querySelector(`[data-class-role="${role}"]`);
+            field.value = value; field.dispatchEvent(new Event('change', { bubbles: true }));
+        };
+        const savedClasses = () => JSON.parse(localStorage.getItem('palace-editor:v1:/')).changes.find(change => change.path === CLASS_PATH).after['Rosa Estelar'];
+        choose('secondary', 'Ofensivo');
+        expect(savedClasses()).toEqual(['Suporte de Utilidade', 'Ofensivo']);
+        choose('primary', 'Ofensivo');
+        expect(savedClasses()).toEqual(['Ofensivo', 'Suporte de Utilidade']);
+        expect(document.querySelector('.variant-heading .secondary-class').textContent).toContain('Também atua como: Suporte de Utilidade');
+        expect(document.querySelector('[data-class-role="secondary"] option[value="Ofensivo"]')).toBeNull();
+        choose('secondary', '');
+        expect(savedClasses()).toEqual(['Ofensivo']);
+        choose('secondary', 'Defensivo');
+        choose('primary', 'Coringa');
+        expect(savedClasses()).toEqual(['Coringa']);
+        expect(document.querySelector('[data-class-role="secondary"]').disabled).toBe(true);
+        document.querySelector('[data-action="undo"]').click();
+        expect(savedClasses()).toEqual(['Ofensivo', 'Defensivo']);
+        expect(document.querySelector('[data-class-role="secondary"]').value).toBe('Defensivo');
+        expect(JSON.parse(localStorage.getItem('palace-editor:v1:/')).changes.map(change => change.path)).toEqual([CLASS_PATH]);
     });
     it('switches themes and follows the system without replacing an edited form or its draft', async () => {
         const media = new EventTarget();
@@ -145,8 +170,8 @@ describe('Palace Studio workflow', () => {
     it('combines picker search with multiple classes, including locally corrected classes', async () => {
         await import('../../../tools/editor/editor.js');
         document.querySelector('[data-tab="edit"]').click();
-        const defensive = document.querySelector('[data-class="1"]');
-        defensive.checked = true; defensive.dispatchEvent(new Event('change', { bubbles: true }));
+        const defensive = document.querySelector('[data-class-role="secondary"]');
+        defensive.value = 'Defensivo'; defensive.dispatchEvent(new Event('change', { bubbles: true }));
         document.querySelector('[data-tab="teams"]').click();
         document.querySelector('[data-action="add-team"]').click();
         const draft = localStorage.getItem('palace-editor:v1:/');

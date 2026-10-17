@@ -6,6 +6,24 @@ describe('VariantCard.js', () => {
   });
 
   describe('createVariantCard', () => {
+    it.each([
+      ['pt-BR', 'Classe principal', 'OFENSIVO', 'Também atua como', 'SUPORTE'],
+      ['en', 'Primary class', 'OFFENSIVE', 'Also acts as', 'UTILITY SUPPORT']
+    ])('distinguishes primary and secondary classes in %s', async (language, primaryLabel, primary, secondaryLabel, secondary) => {
+      const { createVariantCard } = await import('../../../src/components/VariantCard.js');
+      const { setLanguage } = await import('../../../src/i18n/index.js');
+      try {
+        setLanguage(language);
+        document.body.innerHTML = createVariantCard({ name: 'Resguardada', element: 'Fogo' }, 'parasoul');
+        const classes = document.querySelector('.desktop-classes');
+        expect(classes.querySelector('.variant-class-wrapper:not(.secondary-class)').textContent).toContain(primaryLabel);
+        expect(classes.querySelector('.variant-class-wrapper:not(.secondary-class)').textContent).toContain(primary);
+        expect(classes.querySelector('.secondary-class').textContent).toContain(secondaryLabel);
+        expect(classes.querySelector('.secondary-class').textContent).toContain(secondary);
+        document.body.innerHTML = createVariantCard({ name: 'Homem de Gelo', element: 'Água' }, 'beowulf');
+        expect(document.querySelector('.desktop-classes .secondary-class')).toBeNull();
+      } finally { setLanguage('pt-BR'); }
+    });
     it('also identifies the order in existing extra and guild teams', async () => {
       const { createVariantCard } = await import('../../../src/components/VariantCard.js');
       const { loadExtrasData } = await import('../../../src/services/dataService.js');

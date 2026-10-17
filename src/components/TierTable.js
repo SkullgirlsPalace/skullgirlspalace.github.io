@@ -33,18 +33,14 @@ export function createRankBadge(rank) {
 
 
 /**
- * Create class badges HTML for a variant (no longer used in standard view, replaced by rank badges)
+ * Clarify the primary and secondary classes for variants with two classes.
  * @param {string} variantName - Variant name
  * @returns {string} HTML string with class icon badges
  */
-function createClassBadges(variantName) {
+function createClassSummary(variantName) {
   const classes = getLocalizedVariantClasses(variantName);
-  const badges = classes.map(cls => {
-    const info = CLASS_ICONS[cls.key];
-    if (!info) return '';
-    return `<img loading="lazy" src="${info.icon}" alt="${cls.localized}" title="${cls.localized}" class="class-role-icon" style="--class-color: ${info.color}">`;
-  }).join('');
-  return `<div class="class-badges">${badges}</div>`;
+  if (classes.length < 2) return '';
+  return `<div class="tier-class-summary"><small>${t('variant.primaryClass')}: ${classes[0].localized}</small><small class="tier-secondary-class">${t('variant.alsoActsAs')}: ${classes[1].localized}</small></div>`;
 }
 
 /**
@@ -61,7 +57,7 @@ function renderRankCell(charKey, variantName, mode, rankValue, classes) {
     if (mode === 'riftDef') {
       iconsHTML = `<img src="img/modifiers/buffs/Armor.webp" class="rank-class-badge" style="--class-color: #1565c0" alt="${t('tier.defensive')}" title="${t('tier.defensive')}">`;
     } else {
-      iconsHTML = classes.map(cls => {
+      iconsHTML = classes.map((cls, index) => {
         let classInfo = { ...CLASS_ICONS[cls.key] };
         if (!classInfo.icon) return '';
 
@@ -71,7 +67,8 @@ function renderRankCell(charKey, variantName, mode, rankValue, classes) {
         }
 
         if (showIcon) {
-          return `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${cls.localized}" title="${cls.localized}">`;
+          const label = `${t(index ? 'variant.alsoActsAs' : 'variant.primaryClass')}: ${cls.localized}`;
+          return `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${label}" title="${label}">`;
         }
         return '';
       }).join('');
@@ -133,6 +130,7 @@ export function createTierTable(charKey, charData) {
       const charCellContent = `
         <img loading="lazy" src="${imgPath}" alt="${localizedName}" onerror="this.src='img/official/Annie_Icon.webp'">
         <span>${localizedName}</span>
+        ${createClassSummary(variant.name)}
       `;
 
       return `

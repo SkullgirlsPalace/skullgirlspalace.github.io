@@ -34,6 +34,8 @@ Os scripts `tools/process-moves.js` e `tools/process-catalysts.js` transformam d
 
 ## Editor local de recomendações
 
+As classes em `src/data/variantClassData.js` são listas ordenadas: `[principal]` ou `[principal, secundaria]`. Coringa usa somente `['Coringa']`. O editor oferece seletores separados e valida esses limites na importação e exportação. A ordem existente das variantes com duas classes foi preservada; nenhuma variante foi reclassificada automaticamente. A ordenação por classe usa a principal e os filtros continuam aceitando qualquer uma das classes. Ambas mantêm a elegibilidade atual para Times Defensivos. Os ranks são independentes.
+
 O [Palace Estúdio](../tools/editor/README.md) permite corrigir habilidades em portugu?s e ingl?s, builds, classes, ranks e times sem editar o código manualmente. Abra pelo `Abrir-Editor.cmd` na raiz ou por `npm.cmd run editor`. Os rascunhos ficam no navegador, com backup JSON e exportação ZIP para revisão. O editor não publica nem confirma a precisão em relação ao jogo; a revisão editorial continua necessária. Os arquivos exportados devem ser aplicados à mesma versão dos dados que originou o rascunho, antes dos testes e da montagem do site.
 
 ## Limite atual da calculadora

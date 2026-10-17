@@ -83,7 +83,7 @@ export function validateChanges(base, files, classesFor) {
             if (!data || typeof data !== 'object' || Array.isArray(data)) { errors.push(`${path}: invalidClasses`); continue; }
             for (const [name, classes] of Object.entries(data)) {
                 if (equal(base[path][name], classes)) continue;
-                if (!names.includes(name) || !Array.isArray(classes) || !classes.length || classes.length > 4 || new Set(classes).size !== classes.length || classes.some(item => !CLASS_NAMES.includes(item))) errors.push(`${name}: invalidClasses`);
+                if (!names.includes(name) || !Array.isArray(classes) || !classes.length || classes.length > 2 || new Set(classes).size !== classes.length || classes.some(item => !CLASS_NAMES.includes(item)) || (classes.includes('Coringa') && classes.length !== 1)) errors.push(`${name}: invalidClasses`);
             }
             for (const name of Object.keys(base[path])) if (!(name in data)) errors.push(`${name}: removedClass`);
         } else if (path === 'data/tier-data.json') {

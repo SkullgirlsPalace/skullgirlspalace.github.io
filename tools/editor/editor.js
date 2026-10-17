@@ -35,7 +35,9 @@ const englishFor = item => {
     return edited ? { ...source, ability: edited.name, ...splitSignatureAbility(edited.description) } : source ? { ...source } : null;
 };
 const displayName = item => language === 'en' ? englishFor(item)?.name?.replace(/\r/g, '').trim() || item.variant : item.variant;
-const chips = name => `<div class="chips">${classesFor(name).map(value => `<span class="chip">${esc(classLabel(value))}</span>`).join('')}</div>`;
+const chips = name => `<div class="chips">${classesFor(name).map((value, index) => index === 0
+    ? `<span class="chip" title="${text('primaryClass')}">${esc(classLabel(value))}</span>`
+    : `<span class="secondary-class">${text('alsoActsAs')}: ${esc(classLabel(value))}</span>`).join('')}</div>`;
 const btn = (action, label, attributes = '', style = '') => `<button type="button" data-action="${action}" class="${style}" ${attributes}>${esc(text(label))}</button>`;
 const rich = value => esc(value || text('missing')).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
 const richAbility = (value, locale) => rich(normalizeAbilityProgressions(stripAbilityLabels(locale === 'pt-BR' ? localizePortugueseAbility(value) : value)));
@@ -178,7 +180,11 @@ function buildFields(build, index) {
 }
 function editMarkup(item) {
     const ranks = state.files['data/tier-data.json'][item.character]?.[item.variant] || {};
-    return `<section class="panel"><h2>${text('classes')}</h2><p class="help">${text('classesHelp')}</p><div class="class-options">${CLASS_NAMES.map((name, index) => `<label><input type="checkbox" data-class="${index}" ${classesFor(item.variant).includes(name) ? 'checked' : ''}>${classLabel(name)}</label>`).join('')}</div></section>
+    const [primary, secondary = ''] = classesFor(item.variant);
+    return `<section class="panel"><h2>${text('classes')}</h2><p class="help">${text('classesHelp')}</p><div class="class-options">
+        <label>${text('primaryClass')}<select data-class-role="primary">${CLASS_NAMES.map(name => `<option value="${esc(name)}" ${name === primary ? 'selected' : ''}>${classLabel(name)}</option>`).join('')}</select></label>
+        <label>${text('secondaryClass')}<select data-class-role="secondary" ${primary === 'Coringa' ? 'disabled' : ''}><option value="">${text('noSecondaryClass')}</option>${CLASS_NAMES.filter(name => name !== 'Coringa' && name !== primary).map(name => `<option value="${esc(name)}" ${name === secondary ? 'selected' : ''}>${classLabel(name)}</option>`).join('')}</select></label>
+        </div></section>
         <section class="panel"><h2>${text('baseBuild')}</h2><p class="help">${text('buildPriority')}</p>${buildFields(item.data, 'base')}</section>
         <section class="panel"><div class="team-header"><h2>${text('multipleBuilds')}</h2>${btn('add-build', 'addBuild', '', 'small')}</div>
             ${(item.data.builds || []).map((build, index) => `<section class="panel">${buildFields(build, index)}<div class="inline-actions">${btn('remove-build', 'removeBuild', `data-index="${index}"`, 'small danger')}</div></section>`).join('')}</section>
@@ -330,10 +336,18 @@ root.addEventListener('change', event => {
     if (target.id === 'catalog-character') { state.character = target.value; state.page = 0; renderCatalog(); return; }
     if (state.recovery) { renderMain(); return; }
     const item = selected();
-    if (target.dataset.class !== undefined) {
-        const names = [...root.querySelectorAll('[data-class]:checked')].map(input => CLASS_NAMES[Number(input.dataset.class)]);
-        if (!names.length) { target.checked = true; return; }
+    if (target.dataset.classRole) {
+        const [primary, secondary] = classesFor(item.variant);
+        let names;
+        if (target.dataset.classRole === 'primary' && CLASS_NAMES.includes(target.value)) {
+            const nextSecondary = target.value === secondary ? primary : secondary;
+            names = [target.value, ...(target.value !== 'Coringa' && nextSecondary && nextSecondary !== 'Coringa' ? [nextSecondary] : [])];
+        } else if (target.dataset.classRole === 'secondary' && primary !== 'Coringa' && target.value !== primary && target.value !== 'Coringa' && (!target.value || CLASS_NAMES.includes(target.value))) {
+            names = [primary, ...(target.value ? [target.value] : [])];
+        } else return;
+        if (equal(names, classesFor(item.variant))) return;
         checkpoint(); state.files[CLASS_PATH][item.variant] = names; invalidateTeams(item); commitEdit();
+        root.querySelector(`[data-class-role="${target.dataset.classRole}"]`)?.focus();
     }
     if (target.dataset.rank) {
         if (!target.value) return;

@@ -74,6 +74,7 @@ h3 { font-size: .94rem; }
 .eyebrow { text-transform: uppercase; letter-spacing: .11em; font-size: .67rem; color: var(--muted); font-weight: 700; margin-bottom: 9px; }
 .chips { display: flex; flex-wrap: wrap; gap: 5px; }
 .chip { display: inline-block; font-size: .67rem; padding: 4px 7px; border: 1px solid var(--chip-line); border-radius: 5px; background: var(--chip-bg); color: var(--chip-text); }
+.secondary-class { flex-basis: 100%; color: var(--muted); font-size: .65rem; line-height: 1.5; }
 .tabs { display: flex; gap: 24px; border-bottom: 1px solid var(--line); margin: 22px 0; }
 .tabs button { border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: transparent; padding: 14px 2px; font-size: .86rem; }
 .tabs button.active { border-bottom-color: var(--accent); color: var(--accent); font-weight: 700; }
@@ -84,9 +85,8 @@ h3 { font-size: .94rem; }
 .reference-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .reference-text { font-size: .86rem; white-space: pre-wrap; line-height: 1.8; overflow-wrap: anywhere; }
 .reference-text strong { color: var(--emphasis); }
-.class-options { display: flex; flex-wrap: wrap; gap: 10px 16px; }
-.class-options label { display: inline-flex; align-items: center; gap: 6px; font-weight: 400; }
-.class-options input { width: 17px; height: 17px; margin: 0; accent-color: var(--accent); }
+.class-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; }
+.class-options select { display: block; width: 100%; }
 .fields { display: grid; gap: 18px; }
 .tier-fields { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
 .tier-fields select { width: 100%; }

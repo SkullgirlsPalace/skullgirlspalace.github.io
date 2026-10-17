@@ -477,6 +477,10 @@
         height: 30px;
     }
 
+    #character-detail[data-current-tab="builds"] .secondary-class .variant-class-tag { font-size: .85rem; }
+    #character-detail[data-current-tab="builds"] .secondary-class .variant-class-label { font-size: .75rem; letter-spacing: 0; }
+    #character-detail[data-current-tab="builds"] .secondary-class .variant-class-tag img { width: 20px; height: 20px; }
+
     #character-detail[data-current-tab="builds"] .variant-tabs {
         gap: 8px;
     }

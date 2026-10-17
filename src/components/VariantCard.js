@@ -52,7 +52,7 @@ export function createVariantCard(variant, charKey, index = 0) {
 
   // Get Classes — use localized names
   const variantClasses = getLocalizedVariantClasses(variant.name);
-  const classesHTML = variantClasses.map(cls => {
+  const classesHTML = variantClasses.map((cls, classIndex) => {
     const info = CLASS_ICONS[cls.key];
     if (!info) return '';
     let displayName = cls.localized;
@@ -60,8 +60,8 @@ export function createVariantCard(variant, charKey, index = 0) {
         displayName = 'Suporte';
     }
     return `
-      <div class="variant-class-wrapper">
-        <span class="variant-class-label">${t('variant.class')}</span>
+      <div class="variant-class-wrapper${classIndex ? ' secondary-class' : ''}">
+        <span class="variant-class-label">${t(classIndex ? 'variant.alsoActsAs' : 'variant.primaryClass')}</span>
         <span class="variant-class-tag attr-highlight" data-attr-key="class_${cls.key}" style="--class-color: ${info.color}">
           <img src="${info.icon}" alt="${cls.localized}">
           <span class="class-name-text">${displayName.toUpperCase()}</span>
@@ -387,8 +387,9 @@ function renderTeamMemberCard(member, index) {
                 ${classInfo ? `
                 <span class="extras-team-class" style="color: ${classInfo.color}; font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 4px; margin-top: 2px;">
                     <img src="${classInfo.icon}" alt="${mainClass}" style="width: 12px; height: 12px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));">
-                    ${mainClass}
+                    ${getLocalizedClassName(mainClass)}
                 </span>` : ''}
+                ${classes.slice(1).map(cls => `<span class="extras-secondary-class">${t('variant.alsoActsAs')}: ${getLocalizedClassName(cls)}</span>`).join('')}
             </div>
             ${member.is_current ? '<span class="extras-current-badge">ATUAL</span>' : ''}
         </div>

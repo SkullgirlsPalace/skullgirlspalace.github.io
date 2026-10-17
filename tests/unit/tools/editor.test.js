@@ -12,6 +12,20 @@ const base = () => ({
 const draft = () => ({ id: 'one', anchor: { character: 'annie', variant: 'Rosa' }, category: 'general', status: 'draft', reviewedOn: '2026-10-15', members: [{ character: 'annie', variant: 'Rosa' }] });
 
 describe('local editor data safety', () => {
+    it('preserves class priority in backups and exports, including defensive eligibility from a secondary', () => {
+        const before = base(), files = clone(before);
+        files[CLASS_PATH].Rosa = ['Ofensivo', 'Defensivo'];
+        files['data/teams.json'].teams.push({ ...draft(), category: 'defense', status: 'reviewed' });
+        expect(validateChanges(before, files)).toEqual([]);
+        expect(exportFiles(before, files)[CLASS_PATH].Rosa).toEqual(['Ofensivo', 'Defensivo']);
+        expect(restoreBackup(before, makeBackup(before, files))[CLASS_PATH].Rosa).toEqual(['Ofensivo', 'Defensivo']);
+    });
+    it.each([[], ['Ofensivo', 'Ofensivo'], ['Ofensivo', 'Defensivo', 'Suporte de Utilidade'], ['Coringa', 'Defensivo'], ['Ofensivo', 'Coringa']].map(classes => ({ classes })))('rejects invalid primary/secondary class combinations $classes', ({ classes }) => {
+        const before = base(), files = clone(before);
+        files[CLASS_PATH].Rosa = classes;
+        expect(validateChanges(before, files)).toContain('Rosa: invalidClasses');
+        expect(() => restoreBackup(before, makeBackup(before, files))).toThrow('invalidClasses');
+    });
     it('allows the editor only on literal loopback hosts over HTTP(S)', () => {
         for (const url of ['http://127.0.0.1:4174/tools/editor/', 'http://localhost:5500/tools/editor/', 'http://[::1]:4174/']) expect(isLocalEditorURL(url)).toBe(true);
         for (const url of ['https://skullgirlspalace.github.io/tools/editor/', 'http://192.168.1.10:4174/', 'https://localhost.example.com/', 'https://localhost@evil.example/', 'file:///C:/editor/index.html', 'not a URL']) expect(isLocalEditorURL(url)).toBe(false);

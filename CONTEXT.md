@@ -23,8 +23,10 @@ Afinidade da variante: Fogo, Água, Ar, Luz, Trevas ou Neutro.
 _EN_: Element (Fire, Water, Wind, Light, Dark, Neutral)
 
 **Classe**:
-Papel da variante no time: Ofensivo (causa o máximo de dano), Defensivo (vida alta e sobrevivência), Suporte de Utilidade (dá efeitos positivos aos aliados ou negativos aos oponentes) ou Coringa (cumpre várias funções).
+Papel da variante no time: Ofensivo (causa o máximo de dano), Defensivo (vida alta e sobrevivência), Suporte de Utilidade (dá efeitos positivos aos aliados ou negativos aos oponentes) ou Coringa (atua nas três classes anteriores).
 _Avoid_: função, role
+
+Cada variante tem uma **classe principal** e pode ter uma **classe secundária**, exibida como “Também atua como”. A principal determina a ordenação por classe; os filtros consideram ambas. No arquivo editorial, a primeira posição da lista é a principal e a segunda é a secundária. Coringa é uma classificação única, sem secundária: ter duas classes não transforma uma variante em Coringa. Alterar classes não altera automaticamente seus ranks.
 
 **Habilidade característica**:
 Habilidade única de uma variante, quase sempre em duas partes. O editor usa os campos SA1 e SA2 nos dois idiomas; os marcadores dos arquivos não aparecem nas descrições da interface.

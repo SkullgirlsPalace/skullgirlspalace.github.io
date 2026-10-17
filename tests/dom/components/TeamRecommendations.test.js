@@ -12,7 +12,8 @@ describe('lazy public Teams tab', () => {
         setLanguage('pt-BR'); setCharacters({ annie: { variants: { diamante: [variant] } } });
     });
     it('adds Teams to the right of Build, loads on demand, hides drafts and renders classes below cards', async () => {
-        const team = { id: 'published', anchor, category: 'general', members: [anchor], reviewedOn: '2026-10-15', status: 'reviewed' };
+        setCharacters({ annie: { variants: { diamante: [variant, { name: 'Resguardada' }] } } });
+        const team = { id: 'published', anchor, category: 'general', members: [anchor, { character: 'annie', variant: 'Resguardada' }], reviewedOn: '2026-10-15', status: 'reviewed' };
         const fetch = vi.fn(async () => ({ ok: true, json: async () => ({ version: 1, teams: [team, { ...team, id: 'draft', status: 'draft' }] }) }));
         vi.stubGlobal('fetch', fetch);
         renderVariants('cards', [variant], 'annie');
@@ -27,6 +28,7 @@ describe('lazy public Teams tab', () => {
         expect(document.querySelector('.team-position').textContent).toBe('1ª · Frente');
         expect(document.querySelector('.team-order').textContent).toContain('da direita para a esquerda');
         expect(document.querySelector('.team-members p').textContent).toContain('Suporte de Utilidade');
+        expect(document.querySelector('.team-secondary-class').textContent).toBe('Também atua como: Suporte de Utilidade');
         expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
         document.querySelector('[data-team-category="defense"]').click();
         await vi.waitFor(() => expect(document.querySelector('.teams-message')?.textContent).toContain('Ainda não há times revisados'));
