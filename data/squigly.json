@@ -19,7 +19,7 @@
                 },
                 "signature_ability": {
                     "name": "O RETORNO DA LOUCURA",
-                    "description": "[HAB 1]: 5% de chance de redefinir os cronômetros de todos os EF. POSITIVOS de Fukua e todos os EF. NEGATIVOS do oponente ao GOLPEAR.\n\n[HAB 2]: Uma vez por partida, ao ser GOLPEADO fatalmente, congele o tempo por 7 seg e ganhe 5 camadas de MIASMA por 7 seg. O tempo recomeça se Fukua atacar."
+                    "description": "[HAB 1]: Reflete 10% de todo o dano recebido por EFEITO NEGATIVO em Squigly (máx. 40%). Além disso, uma vez por partida, RESSUSCITA com 50% de VIDA e 4 EFEITOS NEGATIVOS aleatórios por 15 segundos.\n\n[HAB 2]: Sofre um EFEITO NEGATIVO aleatório por 8 segundos a cada 4 segundos. GOLPES não-BLOCKBUSTER de Squigly causam dano equivalente a 1% da VIDA MÁXIMA ao oponente por EFEITO NEGATIVO em qualquer lutador (máx. 3%)."
                 },
                 "marquee_ability": "Morta-Viva",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -153,7 +153,7 @@
                 },
                 "signature_ability": {
                     "name": "NEVASCA FANTASMA",
-                    "description": "[HAB 1]: Ganhe 1 camada de BARREIRA e ESPINHOS por 10 segundos a cada 3 segundos enquanto estiver perto de um cadáver.\n\n[HAB 2]: Ganhe 5 camadas de REGENERAÇÃO por 10 segundos e 50% no MEDIDOR DE BLOCKBUSTER ao derrotar um oponente. Oponentes derrotados não podem ser revividos."
+                    "description": "[HAB 1]: Enquanto Squigly estiver viva, o lutador ativo inflige DEFINHAR por 10 segundos e ganha ARMADURA a cada 10 segundos. Esses efeitos são removidos quando o lutador ativo é DERRUBADO.\n\n[HAB 2]: Quando o lutador ativo estiver se beneficiando da ARMADURA desta habilidade e estiver prestes a sofrer um EFEITO NEGATIVO, remova ARMADURA para impedi-lo e ganhe 40% do MEDIDOR DE BLOCKBUSTER."
                 },
                 "marquee_ability": "Morta-Viva",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
