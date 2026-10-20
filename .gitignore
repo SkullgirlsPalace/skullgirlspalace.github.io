@@ -8,6 +8,7 @@ dist/
 *.backup
 *.orig
 *~
+/tmp/tier-list-sync/
 
 # Claude Code configuration (local only)
 .claude/

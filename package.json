@@ -4,6 +4,7 @@
   "description": "Projeto para transformar nosso saudoso bot e minhas planilhas em um sitezinho cheiroso",
   "main": "src/main.js",
   "scripts": {
+    "sync:tier-list": "node tools/sync-tier-list.js",
     "editor": "node tools/editor/serve.js",
     "optimize": "node tools/optimize-images.cjs",
     "test": "vitest",

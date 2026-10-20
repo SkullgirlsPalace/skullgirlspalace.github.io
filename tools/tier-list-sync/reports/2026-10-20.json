@@ -1,0 +1,5315 @@
+{
+  "source": "https://skullgirlsmobile.fandom.com/wiki/Tier_List",
+  "sourceVariants": 307,
+  "localVariants": 307,
+  "characters": {
+    "annie": 18,
+    "beowulf": 18,
+    "big-band": 17,
+    "black-dahlia": 16,
+    "cerebella": 17,
+    "double": 17,
+    "eliza": 17,
+    "filia": 17,
+    "fukua": 18,
+    "marie": 16,
+    "ms-fortune": 17,
+    "painwheel": 16,
+    "parasoul": 18,
+    "peacock": 17,
+    "robo-fortune": 17,
+    "squigly": 18,
+    "umbrella": 16,
+    "valentine": 17
+  },
+  "matched": 307,
+  "changedVariants": 269,
+  "changedRanks": 679,
+  "changes": [
+    {
+      "character": "annie",
+      "variant": "Criança Estelar",
+      "english": "Star Child",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Chama Solar",
+      "english": "Solar Flair",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Glamour Galático",
+      "english": "Galactic Glamour",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Ameaça Tripla",
+      "english": "Triple Threat",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Estrela Ninja",
+      "english": "Ninja Star",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Srta. Mercúrio",
+      "english": "Miss Mercury",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Maravilha Eterna",
+      "english": "Ageless Wonder",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Garota Material",
+      "english": "Materia Girl",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Princesa da Lua",
+      "english": "Moonstruck",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Heroína do Tempo",
+      "english": "Timeless Hero",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Rebelde Cósmica",
+      "english": "Cosmic Rebel",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Ondina",
+      "english": "Wave Warrior",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Desafiante da Morte",
+      "english": "Death Defier",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Modelo Submarina",
+      "english": "Model Leader",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Marcas de Fogo",
+      "english": "Fire Branded",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Brilho das Estrelas",
+      "english": "Star Shine",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "annie",
+      "variant": "Rosa Estelar",
+      "english": "Starlight Rose",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Lobo Azarão",
+      "english": "Underdog",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Promotor",
+      "english": "Hype Man",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Número Um",
+      "english": "Number One",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Lutador X",
+      "english": "Wrestler X",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Favorito dos Fãs",
+      "english": "Fan Favorite",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Praga do Lobo",
+      "english": "Wulfsbane",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Último Lutador",
+      "english": "Weekend Warrior",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Combatente da Liberdade",
+      "english": "Freedom Fighter",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Pico Bola",
+      "english": "Pickle Baller",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Homem de Gelo",
+      "english": "Chill Guy",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Chamego",
+      "english": "Pillow Talk",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Rei das Feras",
+      "english": "Beast King",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Poder Sombrio",
+      "english": "Dark Might",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Ogros Têm Camadas",
+      "english": "Ogre Achiever",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Picada de Cobra",
+      "english": "Snake Bite",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "beowulf",
+      "variant": "Baba Yaga",
+      "english": "Baba Yaga",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Superjazz",
+      "english": "Bassline",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Batidas Rítmicas",
+      "english": "Beat Box",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Robocópia",
+      "english": "Robocopy",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Virtuoso Vintage",
+      "english": "Vintage Virtuoso",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Pânico na Cidade",
+      "english": "Epic Sax",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Detetive \"Dick\"",
+      "english": "Private Dick",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Megassônico",
+      "english": "Megasonic",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Rodas Rítmicas",
+      "english": "Rhythm Rider",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Big Baddy",
+      "english": "Big Baddy",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Ganhando Vantagem",
+      "english": "One Up",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Inursuportável",
+      "english": "Unbearable",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Heavy Metal",
+      "english": "Heavy Metal",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "big-band",
+      "variant": "Banda dos Sonhos",
+      "english": "Dream Band",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Gatilho Nervoso",
+      "english": "Trigger Happy",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Pistola Dourada",
+      "english": "Golden Gunner",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Máquina Mortífera",
+      "english": "Lethal Weapon",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Dame Slayer",
+      "english": "Dame Slayer",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Perigo Biológico",
+      "english": "Biohazard",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Violência Vermelha",
+      "english": "Red Rider",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Psicomandante",
+      "english": "Psycommander",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Fora-da-Lei Marcial",
+      "english": "Martial Outlaw",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Agente Corrosiva",
+      "english": "Corrosive Agent",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Imperturbável",
+      "english": "Unfazed",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Estelar",
+      "english": "Stellar Huntress",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Pele Elegante",
+      "english": "Fur Monger",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Calibre Mágico",
+      "english": "Hex Caliber",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "black-dahlia",
+      "variant": "Carregada",
+      "english": "Locked 'N' Loaded",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Substituta",
+      "english": "Understudy",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Massa Cinzenta",
+      "english": "Gray Matter",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Ressurgente",
+      "english": "Big Top",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Sentinela de Pedra",
+      "english": "Stone Sentinel",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Guerreira Toad",
+      "english": "Toad Warrior",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Arlequim",
+      "english": "Harlequin",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Forças Armadas",
+      "english": "Armed Forces",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Cérebro Gelado",
+      "english": "Brain Freeze",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Mente Criminosa",
+      "english": "Criminal Mind",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Assustadora",
+      "english": "Scare Giver",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Blitz e Glamour",
+      "english": "Blitz & Glamour",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Bailarina",
+      "english": "Bellarina",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Mão Pesada",
+      "english": "Heavy Handed",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Estrelada",
+      "english": "Star-Spangled",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Mekastar",
+      "english": "Mekastar",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "cerebella",
+      "variant": "Ciclone Carmesim",
+      "english": "Crimson Cyclone",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Freirarteira",
+      "english": "Nunsense",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Sorvescola",
+      "english": "Sundae School",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Tirana do Templo",
+      "english": "Temple Tyrant",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "I",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "I",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Chicleteira",
+      "english": "Doublicious",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Misticatástrofe",
+      "english": "Myst-Match",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Pecado da Serpente",
+      "english": "Serpent Sin",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Xenamorfa",
+      "english": "Xenomorph",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Íris-Color",
+      "english": "Rainbow Blight",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Maldade Eterna",
+      "english": "Evergreen Evil",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Teoria do Caos",
+      "english": "Chaos Theory",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Bruxa do Mar",
+      "english": "Sea Witch",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Quebra-Queixo",
+      "english": "Jawbreaker",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Coração da Escuridão",
+      "english": "Heart of Darkness",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Criatura de Hábito",
+      "english": "Creature of Habit",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Altar Ego",
+      "english": "Altar Ego",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "double",
+      "variant": "Grande Mãe",
+      "english": "Grand Mother",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Rainha do Nilo",
+      "english": "In Denile",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Decifrada",
+      "english": "Decrypted",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Amor Sangrento",
+      "english": "Bloody Valentine",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Víbora Escarlate",
+      "english": "Scarlet Viper",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Sombria",
+      "english": "Tomb & Gloom",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Sombruma",
+      "english": "Nightshade",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Intervenção da Diva",
+      "english": "Diva Intervention",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Banho de Sangue",
+      "english": "Bloodbath",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Veludo Vermelho",
+      "english": "Red Velvet",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Lazulita",
+      "english": "Lapis Luxury",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Magnata Nobre",
+      "english": "Noble Mogul",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "A Vampira",
+      "english": "Stand Out",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Múmia Querida",
+      "english": "Mummy Dearest",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Don Passione",
+      "english": "Don Passione",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "eliza",
+      "variant": "Passatempo Mortal",
+      "english": "Killing Time",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Descabelada",
+      "english": "Bad Hair Day",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Pontas Duplas",
+      "english": "Frayed Ends",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Frio Cortante",
+      "english": "Bad Ms Frosty",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Quartzo Estelar",
+      "english": "Rock Star",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Investigadora",
+      "english": "Clue Chaser",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Trança Parasita",
+      "english": "Parasite Weave",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Cachinhos Malvados",
+      "english": "Dread Locks",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "I",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Estrela Virtual",
+      "english": "Idol Threat",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Escoteira",
+      "english": "Curl Scout",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Cacho Mágico",
+      "english": "Magicurl",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Vira a Balança",
+      "english": "Scale Tipper",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "N/A",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "N/A",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "N/A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "N/A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Matadora de Aula",
+      "english": "Class Cutter",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Djinn Frizz",
+      "english": "Djinn Frizz",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Borrão Azul",
+      "english": "Blue Streak",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "filia",
+      "variant": "Cisalhamento",
+      "english": "Shear Force",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Cópia Aproximada",
+      "english": "Rough Copy",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Gêmeo Infernal",
+      "english": "Infernal Twin",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Chuva Sombria",
+      "english": "Rain Shadow",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Virada do Camaleão",
+      "english": "Chameleon Twist",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Irmãs de Alma",
+      "english": "Souls Sister",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Falsa Temida",
+      "english": "Feared Faux",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Bordas Forradas",
+      "english": "Feathered Edges",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Fios Fantasmas",
+      "english": "Phantom Threads",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Terror Noturno",
+      "english": "Night Terror",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "SS"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Megera Vaporwave",
+      "english": "Vaporwave Vixen",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Bela do Inferno",
+      "english": "Hell's Belle",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Complexo de Pico",
+      "english": "Apex Complex",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Demônio dos Sonhos",
+      "english": "Dream Demon",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Eco de Estrela",
+      "english": "Idol Echo",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "fukua",
+      "variant": "Verdadeiro Eu",
+      "english": "True Self",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Osso Puro",
+      "english": "Bare Bones",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Maga Marrenta",
+      "english": "Moody Magus",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Encantadora de Serpentes",
+      "english": "Snake Charmer",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Dama de Honra",
+      "english": "Maid of Honor",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Abóbora Fantasma",
+      "english": "Jack-O-Specter",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Coveira",
+      "english": "Gravedigger",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Octoplasma",
+      "english": "Octoplasm",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Aspiradora de Fantasmas",
+      "english": "Gust Buster",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Ceifadora Sorridente",
+      "english": "Grin Reaper",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Sem Coração",
+      "english": "Heartless",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Megalomaníaca",
+      "english": "Megalomaniac",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "marie",
+      "variant": "Maldade Insana",
+      "english": "Mad Malice",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Brincadeirinha",
+      "english": "Just Kitten",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Gata do Inferno",
+      "english": "Hellcat",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Sorte Felina",
+      "english": "Feline Lucky",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Gata Negra",
+      "english": "Purrfect Dark",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Sra. Jurada",
+      "english": "Ms. Trial",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Miau e Ordem",
+      "english": "Claw & Order",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Agora e Sempre",
+      "english": "Meow & Furever",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Corta e Afoga",
+      "english": "Hack n' Splash",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Agente Trapaçeira",
+      "english": "Rogue Agent",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Ladra de Tempo",
+      "english": "Time Thief",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Terripeluda",
+      "english": "Furmidable",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Fúria Felpuda",
+      "english": "Furry Fury",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Biscoito da Sorte",
+      "english": "Fortune Cookie",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "ms-fortune",
+      "variant": "Briga Fatal",
+      "english": "Fatal Fray",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Enferrujada",
+      "english": "Rusty",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Pura Coragem",
+      "english": "Twisted Mettle",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Motor de Sangue",
+      "english": "Blood Drive",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Jovem Fúria",
+      "english": "Rage Appropriate",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Sexta Esquisita",
+      "english": "Freaky Friday",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Serrada ao Meio",
+      "english": "Sawed Apart",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Gênese",
+      "english": "Raw Nerv",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Corta-diversão",
+      "english": "Buzzkill",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Vagalume",
+      "english": "Firefly",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Frio Mordente",
+      "english": "Biting Cold",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Tirania",
+      "english": "Tyrannical",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Papa-Moscas",
+      "english": "Fly Trap",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Neuromancer",
+      "english": "Neuromancer",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Escalador de Paredes",
+      "english": "Web Crawler",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "painwheel",
+      "variant": "Ameaça Mascarada",
+      "english": "Masked Menace",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Resguardada",
+      "english": "Sheltered",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Reinado Duro",
+      "english": "Heavy Reign",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Voo da Garça",
+      "english": "No Egrets",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Hera Uma Vez",
+      "english": "Ivy League",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Operações Sombrias",
+      "english": "Shadow Ops",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Fã do Perigo",
+      "english": "Danger-Prone",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Varia",
+      "english": "Primed",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "The Legend of Parasoul",
+      "english": "High Ruler",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Orgulho Real",
+      "english": "Princess Pride",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Loura Real",
+      "english": "Regally Blonde",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Má Sorte",
+      "english": "Star-Crossed",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Salgada",
+      "english": "Summer Salt",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Ruiva Fatal",
+      "english": "Risky Ginger",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Atração Fatal",
+      "english": "Bombshell",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "parasoul",
+      "variant": "Garota dos Sonhos",
+      "english": "Dream Girl",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Reprise",
+      "english": "Rerun",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Chumbinho",
+      "english": "Pea Shooter",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Cara Pintada",
+      "english": "Inkling",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Supercuringa",
+      "english": "Wildcard",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Plumagem Prismática",
+      "english": "Prism Plumage",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Intocável",
+      "english": "Untouchable",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Prodígio Primitivo",
+      "english": "Primal Prodigy",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Velhos Tempos",
+      "english": "That's All Folks!",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Ultraviolenta",
+      "english": "Ultraviolent",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "A Malvada",
+      "english": "Mean One",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Ouro Maciço",
+      "english": "Solid Gold",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "N/A",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "N/A",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "N/A",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "N/A",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Fica Frio",
+      "english": "Freeze Frame",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Apanhadora de Sonhos",
+      "english": "Dream Catcher",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Quebra de Contrato",
+      "english": "Deal Breaker",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "peacock",
+      "variant": "Inkfluencer",
+      "english": "Inkfluencer",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Protótipo",
+      "english": "Prototype",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "M-1AU",
+      "english": "M-3OW",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Ronrominador",
+      "english": "Purrminator",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Protetor Vetor",
+      "english": "Vector Protector",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Terror Byte",
+      "english": "Terror Byte",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Tritura-Números",
+      "english": "Number Cruncher",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Persona Grata",
+      "english": "Persona Assistant",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Zona de Buffer",
+      "english": "Buffer Zone",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Dupla Exposição",
+      "english": "Double Exposure",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Overclocked",
+      "english": "Overclocked",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "X-Bot",
+      "english": "X-Bot",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "robo-fortune",
+      "variant": "Pulso de Prótons",
+      "english": "Proton Pulse",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Medo do Palco",
+      "english": "Stage Fright",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Branca de Medo",
+      "english": "Scared Stiff",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Semimorta",
+      "english": "Nearly Departed",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Morta de Calor",
+      "english": "Dead Heat",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Quebra-Morto",
+      "english": "Necrobreaker",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Verde Gangrena",
+      "english": "Gang Green",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Sopro da Morte",
+      "english": "Poltergust",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Artista Demônio",
+      "english": "Demon Artist",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Frio de Matar",
+      "english": "Dead of Winter",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "I",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Bioexorcista",
+      "english": "Bio-Exorcist",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Thriller",
+      "english": "Thrill Shrieker",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Roendo as Unhas",
+      "english": "Nail Biter",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "A Amarela",
+      "english": "Yellow One",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": null,
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": null,
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": null,
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Lovecraftiana",
+      "english": "Love Crafted",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Reviravolta",
+      "english": "Plot Twisted",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "C",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Perigo Mortal",
+      "english": "Grave Danger",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Ghoul Glacial",
+      "english": "Glacial Ghoul",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "squigly",
+      "variant": "Fluxo de Mana",
+      "english": "Mana Flow",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "N/A",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "N/A",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "N/A",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "N/A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Pitada de Raiva",
+      "english": "Salty",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Vento Ventania",
+      "english": "Fresh Heir",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Rosinha",
+      "english": "Rose-Tinted",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "SS"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Pirata de Poça",
+      "english": "Puddle Pirate",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Mordida Doce",
+      "english": "Candy Crusher",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Criança Selvagem",
+      "english": "Wild Child",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "I",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Visitante do Espaço",
+      "english": "Space Case",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Wunderkind",
+      "english": "Wunderkind",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Psicriança",
+      "english": "Psykid",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Saqueadora do Palácio",
+      "english": "Palace Plunderer",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Artista Ilusionista",
+      "english": "Eager Deceiver",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Campeã dos Campeões",
+      "english": "Raining Champ",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Desejo de Morte",
+      "english": "Death Wish",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "SS",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "umbrella",
+      "variant": "Angelical",
+      "english": "Angel Maker",
+      "changes": [
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Jaleco",
+      "english": "Scrub",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Quente com Gelo",
+      "english": "Icy Hot",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Turno Mortal",
+      "english": "Graveyard Shift",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Mai-s O Quê?",
+      "english": "Oh Mai",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Matadora Joy",
+      "english": "Kill Joy",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "A",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "C"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Hallow – Demônio",
+      "english": "Hallow Fiend",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "A"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Morro Quieto",
+      "english": "Silent Kill",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Última Esperança",
+      "english": "Last Hope",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "riftOff",
+          "before": "S",
+          "after": "B"
+        },
+        {
+          "mode": "riftDef",
+          "before": "S",
+          "after": "A"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Cirurgiã-General",
+      "english": "Surgeon General",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "B"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Piro-técnica",
+      "english": "Pyro-Technique",
+      "changes": [
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Presa Final",
+      "english": "Final Fang",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftOff",
+          "before": "C",
+          "after": "B"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Superluminal",
+      "english": "Superluminal",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Preços para matar",
+      "english": "Assassin's Greed",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "B",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "parallel",
+          "before": "B",
+          "after": "A"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Soldado Serafim",
+      "english": "Seraph Soldier",
+      "changes": [
+        {
+          "mode": "riftOff",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Très Chic",
+      "english": "Très Chic",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "S",
+          "after": "SS"
+        },
+        {
+          "mode": "riftDef",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "parallel",
+          "before": "S",
+          "after": "SS"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Negócio Sangrento",
+      "english": "Wetwork",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "A",
+          "after": "S"
+        }
+      ]
+    },
+    {
+      "character": "valentine",
+      "variant": "Perto da Morte",
+      "english": "Near Death",
+      "changes": [
+        {
+          "mode": "pf",
+          "before": "SS",
+          "after": "S"
+        },
+        {
+          "mode": "riftOff",
+          "before": "B",
+          "after": "C"
+        },
+        {
+          "mode": "riftDef",
+          "before": "C",
+          "after": "I"
+        },
+        {
+          "mode": "parallel",
+          "before": "SS",
+          "after": "A"
+        }
+      ]
+    }
+  ],
+  "unmatchedVariants": [],
+  "missingVariants": [],
+  "errors": [],
+  "valid": true,
+  "input": "tools/tier-list-sync/snapshots/2026-10-20.tsv",
+  "sourceSHA256": "c2dfd38d5a4a9f236b924abe73bd278a4d83d76eff2da563cb5cac81fc4fff2a",
+  "collectedAt": "2026-10-20T20:41:53.330Z"
+}
