@@ -28,7 +28,7 @@ describe('lazy public Teams tab', () => {
         expect(document.querySelector('.team-position').textContent).toBe('1ª · Frente');
         expect(document.querySelector('.team-order').textContent).toContain('da direita para a esquerda');
         expect(document.querySelector('.team-members p').textContent).toContain('Suporte de Utilidade');
-        expect(document.querySelector('.team-secondary-class').textContent).toBe('Também atua como: Suporte de Utilidade');
+        expect(document.querySelectorAll('.team-members p')[1].querySelector('.team-secondary-class').textContent).toBe('Também atua como: Suporte de Utilidade');
         expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
         document.querySelector('[data-team-category="defense"]').click();
         await vi.waitFor(() => expect(document.querySelector('.teams-message')?.textContent).toContain('Ainda não há times revisados'));

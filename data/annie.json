@@ -353,7 +353,8 @@
                 },
                 "signature_ability": {
                     "name": "Dança Morta",
-                    "description": "[HAB 1]: 13% de chance **ao ACERTAR GOLPES** de ganhar 13% de PODER ESTELAR e aplicar QUIETUS por 13 segundos.\n\n[HAB 2]: Ao ativar o PODER ESTELAR, **esvazie-o instantaneamente para converter 3 EF. POSITIVOS do oponente em EF. NEGATIVOS aleatórios** por 13 segundos. Ao ativar com a barra cheia, também aplica MALDIÇÃO por 13 segundos."
+                    "description": "[SA1]: 13% de chance, **ao ACERTAR golpes**, de ganhar 13% de PODER ESTELAR e aplicar QUIETUS por 13 segundos.\n\n[SA2]: Ao ativar o PODER ESTELAR, **esvazie-o instantaneamente para converter 3 EF. POSITIVOS do oponente em EF. NEGATIVOS aleatórios** por 13 segundos. Ao ativar com a barra cheia, também aplica MALDIÇÃO por 13 segundos.",
+                    "krazete_id": "missmercury"
                 },
                 "marquee_ability": "DESVIO PARA O VERMELHO",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",

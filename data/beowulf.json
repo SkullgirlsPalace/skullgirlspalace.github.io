@@ -131,7 +131,8 @@
                 },
                 "signature_ability": {
                     "name": "CAP'S LOCK",
-                    "description": "[HAB 1]: 10% de chance de infligir QUEBRA DE ARMADURA e ganhar BLOQUEIO AUTOMÁTICO por 10 segundos cada **quando qualquer lutador for GOLPEADO (inclui Bloquear).**\n\n[HAB 2]: **Ao BLOQUEAR um ataque BLOCKBUSTER ou GOLPE ESPECIAL, DESATIVA os BLOCKBUSTERS do oponente** por 15 seg inflige ATORDOAMENTO por 4 seg."
+                    "description": "[SA1]: 10% de chance de infligir QUEBRA DE ARMADURA e ganha BLOQUEIO AUTOMÁTICO por 10 segundos cada **quando qualquer lutador for GOLPEADO (inclui Bloquear).**\n\n[SA2]: **Ao BLOQUEAR um ataque BLOCKBUSTER ou GOLPE ESPECIAL, DESATIVA os BLOCKBUSTERS do oponente** por 15 seg inflige ATORDOAMENTO por 4 seg.",
+                    "krazete_id": "freedomfighter"
                 },
                 "marquee_ability": "Desafiante",
                 "recommended_build": "",

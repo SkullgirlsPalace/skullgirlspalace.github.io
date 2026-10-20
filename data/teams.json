@@ -1,4 +1,1109 @@
 {
     "version": 1,
-    "teams": []
+    "teams": [
+        {
+            "id": "6c5ad0d8-6d04-4f8f-89cf-ff54927288b0",
+            "anchor": {
+                "character": "annie",
+                "variant": "Rosa Estelar"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Vínculo de Alma"
+                },
+                {
+                    "character": "annie",
+                    "variant": "Rosa Estelar"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "967e2f86-6dcb-475d-8e57-6f0f80e9fe40",
+            "anchor": {
+                "character": "annie",
+                "variant": "Brilho das Estrelas"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Brilho das Estrelas"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "c1b0a2bb-a2dc-4783-b1fc-491a6936e752",
+            "anchor": {
+                "character": "annie",
+                "variant": "Marcas de Fogo"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Marcas de Fogo"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "6a4bb830-a87f-46ee-af3d-c37071d45cad",
+            "anchor": {
+                "character": "annie",
+                "variant": "Vínculo de Alma"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Vínculo de Alma"
+                },
+                {
+                    "character": "peacock",
+                    "variant": "Ícone Iônico"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "f912e893-8cb0-4985-b0fc-977e2ad07aa1",
+            "anchor": {
+                "character": "annie",
+                "variant": "Maravilha Eterna"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Maravilha Eterna"
+                },
+                {
+                    "character": "double",
+                    "variant": "Maldade Eterna"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "a2fafafb-cf63-4675-b15e-440bb3d7a74f",
+            "anchor": {
+                "character": "annie",
+                "variant": "Ondina"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Ondina"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Maldade Insana"
+                },
+                {
+                    "character": "umbrella",
+                    "variant": "Isca Sortuda"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "36d60bb6-af3f-47af-81e9-f9e22858919e",
+            "anchor": {
+                "character": "annie",
+                "variant": "Heroína do Tempo"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Heroína do Tempo"
+                },
+                {
+                    "character": "umbrella",
+                    "variant": "Isca Sortuda"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "1cb89228-b54b-4c34-9014-c649b8499ea4",
+            "anchor": {
+                "character": "annie",
+                "variant": "Rebelde Cósmica"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Rebelde Cósmica"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "e0483455-30cd-408b-9478-7e185f4467dd",
+            "anchor": {
+                "character": "annie",
+                "variant": "Princesa da Lua"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Princesa da Lua"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Maldade Insana"
+                },
+                {
+                    "character": "umbrella",
+                    "variant": "Isca Sortuda"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "d087a4f8-c80e-4f0f-be89-8a754c8c7446",
+            "anchor": {
+                "character": "annie",
+                "variant": "Ameaça Tripla"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Ameaça Tripla"
+                },
+                {
+                    "character": "peacock",
+                    "variant": "Ícone Iônico"
+                },
+                {
+                    "character": "peacock",
+                    "variant": "Esboço"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "924eb7ef-53bc-4e62-b87f-d4df06401521",
+            "anchor": {
+                "character": "annie",
+                "variant": "Glamour Galático"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Glamour Galático"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "6d3e5d18-fc4b-432c-8188-dce5c1e9beca",
+            "anchor": {
+                "character": "annie",
+                "variant": "Estrela Ninja"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Estrela Ninja"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "peacock",
+                    "variant": "Chumbinho"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "40cc26be-a83d-4b41-9d04-580e6b03c075",
+            "anchor": {
+                "character": "annie",
+                "variant": "Srta. Mercúrio"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Srta. Mercúrio"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Fora-da-Lei Marcial"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Superluminal"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "dab71ab5-887b-4794-9092-15bf44c712ed",
+            "anchor": {
+                "character": "annie",
+                "variant": "Criança Estelar"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Criança Estelar"
+                },
+                {
+                    "character": "umbrella",
+                    "variant": "Isca Sortuda"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "8edeefe1-c544-433c-a0cc-abc50d87a21f",
+            "anchor": {
+                "character": "annie",
+                "variant": "Chama Solar"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "annie",
+                    "variant": "Chama Solar"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "a15ce825-bc8a-4c38-93d9-b29fc80037e5",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Rei das Feras"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Rei das Feras"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "0657af71-cca2-4e21-9e35-32497a5bb4f3",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Poder Sombrio"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "robo-fortune",
+                    "variant": "Replicada"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "beowulf",
+                    "variant": "Poder Sombrio"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "3152c4b9-240d-41ea-a701-923a86373aa0",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Picada de Cobra"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Picada de Cobra"
+                },
+                {
+                    "character": "annie",
+                    "variant": "Rosa Estelar"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Fora-da-Lei Marcial"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "143bed71-a42c-4527-9be3-8dc1f2ca554b",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Ogros Têm Camadas"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Ogros Têm Camadas"
+                },
+                {
+                    "character": "eliza",
+                    "variant": "Confusão Interior"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "9927a002-44f6-47a8-82b2-fc02ee2aa93a",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Dragão Brigão"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Dragão Brigão"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "dd9c707f-0d4e-4743-af02-20a6f67e6642",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Praga do Lobo"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Praga do Lobo"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "73debe88-4815-461e-a585-bb01c1879688",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Último Lutador"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Último Lutador"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "double",
+                    "variant": "Maldade Eterna"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "a7d7be15-b4ed-4966-b5ca-a38a4dadd3c9",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Homem de Gelo"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Homem de Gelo"
+                },
+                {
+                    "character": "double",
+                    "variant": "Maldade Eterna"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "94eec1e4-1367-4706-925c-165711cabd9e",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Chamego"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Chamego"
+                },
+                {
+                    "character": "filia",
+                    "variant": "Cacho Mágico"
+                },
+                {
+                    "character": "double",
+                    "variant": "Maldade Eterna"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "8b022452-06bd-467c-8d03-0ebc0a9e13da",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Lutador X"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Lutador X"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "3942a628-aae7-43e3-a784-d3158c7e3861",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Número Um"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Número Um"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Soldado Serafim"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "d4f4b40f-7efd-473a-b7c3-638e12cfef97",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Promotor"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Promotor"
+                },
+                {
+                    "character": "big-band",
+                    "variant": "Bandido de Bronze"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "9be8c2ec-48a6-4923-b761-8284d4e47e33",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Favorito dos Fãs"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "cerebella",
+                    "variant": "Mão Pesada"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "beowulf",
+                    "variant": "Favorito dos Fãs"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "f3481cb2-82b1-4ea5-b595-f4cc1ba0e53e",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Combatente da Liberdade"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Combatente da Liberdade"
+                },
+                {
+                    "character": "robo-fortune",
+                    "variant": "Zona de Buffer"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Megalomaníaca"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "55a6ba51-5cb7-44df-b2e2-51198425878f",
+            "anchor": {
+                "character": "beowulf",
+                "variant": "Alma de Pedra"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "beowulf",
+                    "variant": "Alma de Pedra"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "93459fa5-a233-4a9a-9e21-90d79588c1b6",
+            "anchor": {
+                "character": "big-band",
+                "variant": "G.I. JAZZ"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "G.I. JAZZ"
+                },
+                {
+                    "character": "robo-fortune",
+                    "variant": "Zona de Buffer"
+                },
+                {
+                    "character": "painwheel",
+                    "variant": "Papa-Moscas"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "7d81a37b-5382-4a2d-a0bc-948d20c3b98e",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Inursuportável"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "painwheel",
+                    "variant": "Ameaça Mascarada"
+                },
+                {
+                    "character": "big-band",
+                    "variant": "Inursuportável"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Megalomaníaca"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "39dbb580-b15d-4af4-a960-3b9d6475addd",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Megassônico"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Megassônico"
+                },
+                {
+                    "character": "umbrella",
+                    "variant": "Isca Sortuda"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "641a9d6e-7446-4a6c-8456-6fd96ee80019",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Pânico na Cidade"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Pânico na Cidade"
+                },
+                {
+                    "character": "big-band",
+                    "variant": "Rodas Rítmicas"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "796b9faf-5656-4a5f-ad48-6488761c04c0",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Rodas Rítmicas"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Bandido de Bronze"
+                },
+                {
+                    "character": "big-band",
+                    "variant": "Rodas Rítmicas"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Superluminal"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "305d2e66-f833-40b6-a9a3-690a3d2b57fc",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Detetive \"Dick\""
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Detetive \"Dick\""
+                },
+                {
+                    "character": "big-band",
+                    "variant": "Rodas Rítmicas"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "65585b50-f4c9-401b-b1d8-6636154e587c",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Big Baddy"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Big Baddy"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Megalomaníaca"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "590b88cd-c7bd-467d-9296-12758c699ad0",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Ganhando Vantagem"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Ganhando Vantagem"
+                },
+                {
+                    "character": "annie",
+                    "variant": "Rosa Estelar"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "697c92a6-2467-43f9-9282-ba61d228a193",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Virtuoso Vintage"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Virtuoso Vintage"
+                },
+                {
+                    "character": "big-band",
+                    "variant": "Rodas Rítmicas"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "bafc670b-7cb3-41ce-86b8-1a3ada4c38bd",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Robocópia"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Robocópia"
+                },
+                {
+                    "character": "double",
+                    "variant": "Maldade Eterna"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "a5044b31-4c38-47d7-b211-caf6af3cdfe7",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Resonant Evil"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Resonant Evil"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "umbrella",
+                    "variant": "Desejo de Morte"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "214850f5-2048-4f61-92ca-683cde6ad7fa",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Desarmonizador"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Desarmonizador"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Megalomaníaca"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "bce0de3c-79f9-4aa5-bcb0-f772058fadc8",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Batidas Rítmicas"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Batidas Rítmicas"
+                },
+                {
+                    "character": "cerebella",
+                    "variant": "Arlequim"
+                },
+                {
+                    "character": "valentine",
+                    "variant": "Cirurgiã-General"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "848f14b6-9c15-45b3-999c-abfce78cc9a5",
+            "anchor": {
+                "character": "big-band",
+                "variant": "Superjazz"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "big-band",
+                    "variant": "Superjazz"
+                },
+                {
+                    "character": "robo-fortune",
+                    "variant": "Zona de Buffer"
+                },
+                {
+                    "character": "painwheel",
+                    "variant": "Papa-Moscas"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "24c81658-91f7-424a-9078-b5708d5a2e1a",
+            "anchor": {
+                "character": "black-dahlia",
+                "variant": "Hóstia Profana"
+            },
+            "category": "general",
+            "members": [
+                {
+                    "character": "fukua",
+                    "variant": "Fantoche Sombrio"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "peacock",
+                    "variant": "Esboço"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        },
+        {
+            "id": "55e45e0e-d461-471a-8920-476f54131fe4",
+            "anchor": {
+                "character": "black-dahlia",
+                "variant": "Hóstia Profana"
+            },
+            "category": "defense",
+            "members": [
+                {
+                    "character": "robo-fortune",
+                    "variant": "Replicada"
+                },
+                {
+                    "character": "black-dahlia",
+                    "variant": "Hóstia Profana"
+                },
+                {
+                    "character": "marie",
+                    "variant": "Megalomaníaca"
+                }
+            ],
+            "status": "reviewed",
+            "reviewedOn": "2026-10-20"
+        }
+    ]
 }

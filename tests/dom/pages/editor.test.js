@@ -5,7 +5,13 @@ import { CLASS_PATH } from '../../../tools/editor/model.js';
 import { MOVE_DATA } from '../../../src/data/movesimages.js';
 import { EN_ABILITIES_PATH, PT_MAPPING_PATH } from '../../../tools/editor/abilities.js';
 
-const load = name => JSON.parse(fs.readFileSync(path.resolve(name), 'utf8'));
+// Workflow scenarios start with no published teams, independently of editorial releases.
+const load = name => name === 'data/teams.json' ? { version: 1, teams: [] } : JSON.parse(fs.readFileSync(path.resolve(name), 'utf8'));
+
+vi.mock('../../../src/data/variantClassData.js', async importOriginal => {
+    const actual = await importOriginal();
+    return { ...actual, VARIANT_CLASSES: { ...actual.VARIANT_CLASSES, 'Rosa Estelar': ['Suporte de Utilidade'] } };
+});
 
 describe('Palace Studio workflow', () => {
     beforeEach(() => {
