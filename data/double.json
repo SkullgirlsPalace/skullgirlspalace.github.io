@@ -41,7 +41,8 @@
                 },
                 "signature_ability": {
                     "name": "DESEJO CORROMPIDO",
-                    "description": "[HAB 1]: **Uma vez por luta, ao TRANSMUTAR para o elemento do oponente**, copie permanentemente sua Habilidade Característica, remova os EF. POS. dele e inflija FEITIÇO por 30 s.\n\n[HAB 2]: **Ao derrotar um oponente sofrendo de um EF. NEG**, ganhe 3 camadas de MIASMA e inflija 3 EF. NEGATIVOS aleatórios no próximo oponente por 20 s cada."
+                    "description": "[SA1]: **Quando a VIDA do oponente cai abaixo de 70%, aplica FEITIÇO impossível de impedir a todos os oponentes** por 20 segundos. FEITIÇO é removido de todos os oponentes quando Double é derrotada.\n\n[SA2]: **Enquanto o oponente estiver sofrendo FEITIÇO**, remove 1 EFEITO POSITIVO do oponente e reduz a RESIST. ATQ CRÍT. dele em 10% a cada 2 segundos. Reinicia a duração do FEITIÇO de todos os oponentes a cada 7 GOLPES CRÍTICOS.",
+                    "krazete_id": "heartofdarkness"
                 },
                 "marquee_ability": "Caos",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Taxa de Atq Crítico",

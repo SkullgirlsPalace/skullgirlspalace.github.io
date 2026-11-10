@@ -142,7 +142,8 @@
                 },
                 "signature_ability": {
                     "name": "AUTÓPSIA ALIENÍGENA",
-                    "description": "**Enquanto FAMINTO,** inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 50%. **A DESTRUIÇÃO é removida se a Umbrella SAI DO CAMPO DE BATALHA ou for derrotada.**\n\n**Ao derrotar um inimigo,** ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 15 s."
+                    "description": "[SA1]: Ao ficar FAMINTA, aplica DESTRUIÇÃO permanente por 20 segundos. DESTRUIÇÃO é removida quando Umbrella é NOCAUTEADA ou SAI.\n\n[SA2]: Enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, aplica um EFEITO NEGATIVO aleatório por 10 segundos a cada 5 GOLPES DE COMBO. Ao derrotar um oponente, ganha 10% do MEDIDOR DE BLOCKBUSTER por EFEITO NEGATIVO nele.",
+                    "krazete_id": "spacecase"
                 },
                 "marquee_ability": "Doce Vitória",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",

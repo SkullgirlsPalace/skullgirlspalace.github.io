@@ -222,7 +222,8 @@
                 },
                 "signature_ability": {
                     "name": "PODER DOS CINCO",
-                    "description": "[HAB 1]: 50% de chance de ganhar 1 cam. de BENÇÃO por 20 s** a cada 5 GOLPES COMBO.**\n\n[HAB 2]: **Ao atingir 5 cam. de BÊNÇÃO,** remova todas as BÊNÇÃOS e inflija 5 cam. de QUEBRA DE GUARDA por 10 s."
+                    "description": "[SA1]: Ganha 1 acúmulo de BÊNÇÃO por 15 segundos a cada 0/5 GOLPES DE COMBO.\n\n[SA2]: Quando Robo-Fortune ganha BÊNÇÃO, aplica QUEBRA DE GUARDA por 15 segundos. Enquanto estiver sob efeito de BÊNÇÃO, causa 5% de DANO adicional por GOLPE DE COMBO.",
+                    "krazete_id": "numbercruncher"
                 },
                 "marquee_ability": "DDOS",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -361,7 +362,7 @@
                     "description": "[HAB 1]: **GOLPES DE BLOCKBUSTER** têm 25% de chance de infligir OSCILAÇÃO DE ENERGIA por 10 segundos.\n\n[HAB 2]: **Ao usar um BLOCKBUSTER,** ganhe 25% no MEDIDOR DE BLOCKBUSTER."
                 },
                 "marquee_ability": "VERIFICAÇÃO DE PING",
-                "recommended_build": "ATQ%, Perfuração, Dano Crítico e Ganho Medidor",
+                "recommended_build": "ATQ%, Perfuração, Taxa de ATQ Crítico e Ganho Medidor",
                 "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA, BATERIA DE ASSALTO, Raio de Calor, Raio de Teonita"
             },
             {

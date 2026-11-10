@@ -197,7 +197,8 @@
                 },
                 "signature_ability": {
                     "name": "CONTRAGOLPE",
-                    "description": "[HAB 1]: O 1° GOLPE DE COMBO **contra um oponente atacando ** concede FÚRIA por 10 s e ESQUIVA.\n\n[HAB 2]: Após ESQUIVAR, 100% de chance de ganhar PRECISÃO PERMANENTE, que **é removida quando um dos lutadores é NOCAUTEADO.**"
+                    "description": "[SA1]: O 1° GOLPE DE COMBO **contra um oponente atacando** concede FÚRIA por 10 s e ESQUIVA.\n\n[SA2]: Após ESQUIVAR, 100% de chance de ganhar PRECISÃO PERMANENTE, que **é removida quando um dos lutadores é NOCAUTEADO.**",
+                    "krazete_id": "windswept"
                 },
                 "marquee_ability": "Sanguessuga",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",

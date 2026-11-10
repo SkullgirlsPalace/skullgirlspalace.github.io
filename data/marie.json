@@ -153,7 +153,8 @@
                 },
                 "signature_ability": {
                     "name": "MANSÃO IMPOSSÍVEL",
-                    "description": "[HAB 1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 35% de DANO EXTRA e TRANSFEREM até 3 Efeito(s) Positivo(s) **do oponente para você.**\n\n[HAB 2]: **Enquanto CARREGADA, GOLPES de ATAQUE DE CARGA ** convertem todos os EF. POS. e NEG. em você em BARREIRA, MIASMA ou FÚRIA por 35 segundos."
+                    "description": "[SA1]: GOLPES de INVOCAÇÕES ESQUELÉTICAS causam 35% de DANO EXTRA e TRANSFEREM até 3 Efeito(s) Positivo(s) **do oponente para você.**\n\n[SA2]: **Enquanto CARREGADA, GOLPES de ATAQUE DE CARGA** convertem todos os EF. POS. e NEG. em você em BARREIRA, MIASMA ou FÚRIA por 35 segundos.",
+                    "krazete_id": "gustbuster"
                 },
                 "marquee_ability": "Incineração Melhorada",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
@@ -265,7 +266,8 @@
                 },
                 "signature_ability": {
                     "name": "FAVOR INFERNAL",
-                    "description": "[HAB 1]: Ao usar um ESPECIAL, ganha 20% de CARGA MORTUÁRIA e aplica IMOBILIZAR e DESATIVAÇÃO DE BLOCKBUSTERS por 10 segundos cada. Ao ficar totalmente CARREGADO, também ganha FÚRIA.\n\n[HAB 2]: Ao usar uma CARGA MORTUÁRIA, todos os colegas de equipe ganham 3% do MEDIDOR DE BLOCKBUSTER a cada segundo e FÚRIA permanente pelo restante da partida."
+                    "description": "[SA1]: Ao usar um GOLPE ESPECIAL, ganha 20% de CARGA MORTUÁRIA e aplica IMOBILIZAR e DESATIVAÇÃO DE BLOCKBUSTERS por 10 segundos cada. Ao ficar totalmente CARREGADO, também ganha FÚRIA.\n\n[SA2]: Ao usar uma CARGA MORTUÁRIA, todos os colegas de equipe ganham 3% do MEDIDOR DE BLOCKBUSTER a cada segundo e FÚRIA permanente pelo restante da partida.",
+                    "krazete_id": "snakecharmer"
                 },
                 "marquee_ability": "Incineração Melhorada",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",

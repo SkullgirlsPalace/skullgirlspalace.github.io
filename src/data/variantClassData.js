@@ -5,8 +5,8 @@ export const VARIANT_CLASSES = {
         "Ofensivo"
     ],
     "Modelo Submarina": [
-        "Defensivo",
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Defensivo"
     ],
     "Poder Sombrio": [
         "Defensivo"
@@ -54,13 +54,15 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Ciclone Carmesim": [
-        "Coringa"
+        "Ofensivo",
+        "Defensivo"
     ],
     "Arlequim": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Cérebro Gelado": [
-        "Defensivo"
+        "Ofensivo"
     ],
     "Forças Armadas": [
         "Defensivo"
@@ -78,28 +80,32 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Fora-da-Lei Marcial": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Agente Corrosiva": [
         "Coringa"
     ],
     "Xenamorfa": [
-        "Defensivo"
+        "Ofensivo"
     ],
     "Fibra Forte": [
         "Defensivo"
     ],
     "Maldade Eterna": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Defensivo"
     ],
     "Sorvescola": [
         "Suporte de Utilidade"
     ],
     "Confusão Interior": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Veludo Vermelho": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Magnata Nobre": [
         "Suporte de Utilidade"
@@ -108,7 +114,8 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Escoteira": [
-        "Coringa"
+        "Defensivo",
+        "Ofensivo"
     ],
     "Cachinhos Malvados": [
         "Defensivo"
@@ -120,7 +127,8 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Imagem Dividida": [
-        "Coringa"
+        "Defensivo",
+        "Ofensivo"
     ],
     "Bela do Inferno": [
         "Coringa"
@@ -129,22 +137,26 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Sem Coração": [
+        "Ofensivo",
         "Suporte de Utilidade"
     ],
     "Maldade Insana": [
-        "Ofensivo"
+        "Ofensivo",
+        "Suporte de Utilidade"
     ],
     "Megalomaníaca": [
         "Defensivo"
     ],
     "Cavalo Sombrio": [
+        "Ofensivo",
         "Suporte de Utilidade"
     ],
     "Octoplasma": [
         "Suporte de Utilidade"
     ],
     "Encantadora de Serpentes": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Dama de Honra": [
         "Suporte de Utilidade"
@@ -153,6 +165,7 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Agora e Sempre": [
+        "Ofensivo",
         "Defensivo"
     ],
     "Brincadeirinha": [
@@ -162,19 +175,22 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Neuromancer": [
-        "Coringa"
+        "Ofensivo",
+        "Defensivo"
     ],
     "Festa Macabra": [
-        "Coringa"
+        "Defensivo"
     ],
     "Ameaça Mascarada": [
-        "Coringa"
+        "Defensivo",
+        "Ofensivo"
     ],
     "Vagalume": [
         "Defensivo"
     ],
     "Frio Mordente": [
-        "Coringa"
+        "Defensivo",
+        "Ofensivo"
     ],
     "Pura Coragem": [
         "Defensivo"
@@ -184,6 +200,7 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Apanhadora de Sonhos": [
+        "Ofensivo",
         "Suporte de Utilidade"
     ],
     "Ícone Iônico": [
@@ -193,7 +210,8 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Intocável": [
-        "Defensivo"
+        "Defensivo",
+        "Ofensivo"
     ],
     "Chumbinho": [
         "Suporte de Utilidade"
@@ -211,6 +229,7 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Persona Grata": [
+        "Ofensivo",
         "Suporte de Utilidade"
     ],
     "Tela Azul": [
@@ -220,7 +239,7 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Frio de Matar": [
-        "Defensivo"
+        "Suporte de Utilidade"
     ],
     "Quebra-Morto": [
         "Defensivo"
@@ -251,7 +270,8 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Soldado Serafim": [
-        "Suporte de Utilidade"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Preços para Matar": [
         "Coringa"
@@ -267,7 +287,8 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Mai-s O Quê?": [
-        "Coringa"
+        "Ofensivo",
+        "Suporte de Utilidade"
     ],
     "Matadora Joy": [
         "Suporte de Utilidade",
@@ -286,7 +307,7 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Mente Criminosa": [
-        "Coringa"
+        "Ofensivo"
     ],
     "Megassônico": [
         "Ofensivo"
@@ -295,7 +316,8 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Fantoche Sombrio": [
-        "Coringa"
+        "Ofensivo",
+        "Defensivo"
     ],
     "Zona de Buffer": [
         "Coringa"
@@ -304,12 +326,17 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Ouro Maciço": [
+        "Ofensivo",
         "Suporte de Utilidade"
     ],
     "Inursuportável": [
-        "Coringa"
+        "Defensivo",
+        "Suporte de Utilidade"
     ],
     "G.I. JAZZ": [
+        "Defensivo"
+    ],
+    "Preços para matar": [
         "Defensivo"
     ]
 };

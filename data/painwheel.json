@@ -41,7 +41,8 @@
                 },
                 "signature_ability": {
                     "name": "DESTRUIÇÃO IMINENTE",
-                    "description": "[HAB 1]: **Enquanto estiver perto de um oponente,** inflige MALDIÇÃO e QUIETUS por 2 segundos a cada 1 segundo(s).\n\n[HAB 2]: **Com o oponente sofrendo QUIETUS, acertar uma EXPLOSÃO** inflige DESTRUIÇÃO permanente por 15 s e cura 15% da VIDA. **DESTRUIÇÃO é removida quando o oponente ganha um EF. POS. ou a Painwheel morre.***"
+                    "description": "[SA1]: **Enquanto estiver perto de um oponente,** inflige MALDIÇÃO e QUIETUS por 2 segundos a cada 1 segundo(s).\n\n[SA2]: **Com o oponente sofrendo QUIETUS, acertar uma EXPLOSÃO** inflige DESTRUIÇÃO permanente por 15 s e cura 15% da VIDA. **DESTRUIÇÃO é removida quando o oponente ganha um EF. POS. ou a Painwheel morre.**",
+                    "krazete_id": "maskedmenace"
                 },
                 "marquee_ability": "Sangue Maculado",
                 "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",

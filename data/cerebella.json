@@ -109,7 +109,8 @@
                 },
                 "signature_ability": {
                     "name": "PIRUETA",
-                    "description": "[HAB 1]: Ao acertar um ATAQUE EM DISPARADA, DRENA 15% do MEDIDOR DE BLOCKBUSTER, ganha OLHO-MORTO por 15 segundos e ganha 15% de ATAQUE permanente.\n\n[HAB 2]: Enquanto estiver sob efeito de OLHO-MORTO, ganha ESQUIVA por 10 segundos ao avançar e transfere 1 EFEITO POSITIVO do oponente ao GOLPEAR um oponente no ar."
+                    "description": "[SA1]: Ao acertar uma ARRANCADA, DRENA 15% do MEDIDOR DE BLOCKBUSTER, ganha OLHO-MORTO por 15 segundos e ganha 15% de ATAQUE permanente.\n\n[SA2]: Enquanto estiver sob efeito de OLHO-MORTO, ganha ESQUIVA por 10 segundos ao avançar e transfere 1 EFEITO POSITIVO do oponente ao GOLPEAR um oponente no ar.",
+                    "krazete_id": "bellarina"
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",

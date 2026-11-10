@@ -63,7 +63,8 @@
                 },
                 "signature_ability": {
                     "name": "EM PEDAÇOS",
-                    "description": "[HAB 1]: Quando Eliza **estiver para sofrer um EF. NEG., 50% de chance de impedi-lo** e infligir SANGRAMENTO, FEITIÇO ou QUIETUS por 12 segundos.\n\n[HAB 2]: Ganhe MIASMA permanente para cada EF. NEG. que um oponente **tenha ao sair do Modo Sekhmet** (máx. de 3 por saída). Remove MIASMA **quando o oponente não estiver mais sofrendo** um EF. NEG."
+                    "description": "[SA1]: Quando Eliza **estiver para sofrer um EF. NEG., 50% de chance de impedi-lo** e infligir SANGRAMENTO, FEITIÇO ou QUIETUS por 12 segundos.\n\n[SA2]: Ganhe MIASMA permanente para cada EF. NEG. que um oponente tenha **ao sair do Modo Sekhmet** (máx. de 3 por saída). Remove MIASMA **quando o oponente não estiver mais sofrendo** um EF. NEG.",
+                    "krazete_id": "donpassione"
                 },
                 "marquee_ability": "Sacrifício Ritual ou Critless",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",

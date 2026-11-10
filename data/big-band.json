@@ -63,7 +63,8 @@
                 },
                 "signature_ability": {
                     "name": "DISCO DE PLATINA",
-                    "description": "[HAB 1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por  um **ataque de curta distância (inclusive bloqueando).**\n\n[HAB 2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra."
+                    "description": "[SA1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por um **ataque de curta distância (inclusive bloqueando).**\n\n[SA2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra.",
+                    "krazete_id": "heavymetal"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -87,7 +88,8 @@
                 },
                 "signature_ability": {
                     "name": "PREPARAURSO",
-                    "description": "[HAB 1]: Enquanto Big Band aliados vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\n\n[HAB 2]: Com um colega de equipe vivo, Big Band sofre 20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem aliados vivos, esses efeitos são dobrados."
+                    "description": "[SA1]: Enquanto Big Band tiver aliados vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\n\n[SA2]: Com um aliado vivo, Big Band sofre 20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem aliados vivos, esses efeitos são dobrados.",
+                    "krazete_id": "unbearable"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resist?ncia e Ganho Medidor",
@@ -219,7 +221,8 @@
                 },
                 "signature_ability": {
                     "name": "Quicando e Quebrando",
-                    "description": "[HAB 1]: Quando Big Band estiver vivo, os oponentes causam 40% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER.\n\n[HAB 2]: Quando Big Band acerta um ATAQUE EM DISPARADA, drena 5% da VIDA do oponente. Quando Big Band sofre um GOLPE durante seu ATAQUE EM DISPARADA, ganha 2 acúmulos de BLOQUEIO AUTOMÁTICO por 10 segundos."
+                    "description": "[SA1]: Quando Big Band estiver vivo, os oponentes causam 40% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER.\n\n[SA2]: Quando Big Band acerta um ATAQUE DE ARRANCADA, drena 5% da VIDA do oponente. Quando Big Band sofre um GOLPE durante seu ATAQUE EM DISPARADA, ganha 2 acúmulos de BLOQUEIO AUTOMÁTICO por 10 segundos.",
+                    "krazete_id": "bigbaddy"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",

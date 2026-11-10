@@ -21,9 +21,9 @@
                     "name": "SPLASH!",
                     "description": "[HAB 1]: PROJÉTEIS que não sejam BLOCKBUSTER aplicam GOSMA e TINTA no oponente por 10 segundos cada e DRENAM 20% do MEDIDOR DE BLOCKBUSTER ao ACERTAR. BLOCKBUSTERS consomem toda a TINTA no oponente para causar 20% a mais de dano por acúmulo de TINTA (até 5 acúmulos).\n\n[HAB 2]: Ganhe BARREIRA ao entrar ou sair de IDEIA PROFUNDA. Enquanto estiver em IDEIA PROFUNDA, MOVIMENTOS ESPECIAIS recarregam 100% mais rápido e você ganha 30% do MEDIDOR DE BLOCKBUSTER por segundo."
                 },
-                "marquee_ability": "Festa do Elenco",
+                "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
-                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, BANG, BANG, BANG!, Vai, George!, Explosão"
+                "recommended_arsenal": "Aeroporto Mortal, Multidão Enfurecida, Dia do Julgamento, Vai, George!, Liguem os Motores!"
             },
             {
                 "name": "Fica Frio",
@@ -41,11 +41,12 @@
                 },
                 "signature_ability": {
                     "name": "CONGELAMENTO",
-                    "description": "[HAB 1]: Projéteis têm 50% de chance de infligir LENTIDÃO e DEFINHAR por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.\n\n[HAB 2]: Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 50% do ATAQUE da Peacock e fica ATORDOADO por 3 s."
+                    "description": "[SA1]: GOLPES DE PROJÉTIL aplicam DEFINHAR por 9 segundos. Quando o oponente atingir 5 acúmulos de DEFINHAR, remova todos os acúmulos de DEFINHAR para aplicar ATORDOAMENTO por 4 segundos e colocar os MOVIMENTOS ESPECIAIS e ASSISTÊNCIAS do oponente em recarga.\n\n[SA2]: Ao remover DEFINHAR do oponente, drena 9% de VIDA e do MEDIDOR DE BLOCKBUSTER.",
+                    "krazete_id": "freezeframe"
                 },
                 "marquee_ability": "Episódio Especial",
-                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Liguem os Motores!, BANG, BANG, BANG!, Vai, George!"
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Aeroporto Mortal, Multidão Enfurecida, Agonia de Argo, Dia do Julgamento, Vai, George!"
             },
             {
                 "name": "Apanhadora de Sonhos",
@@ -197,7 +198,8 @@
                 },
                 "signature_ability": {
                     "name": "ZOMBARIA FESTIVA",
-                    "description": "[HAB 1]: Ganhe FÚRIA por 15 seg para cada EF. POSITIVO **ganho pelo oponente.**\n\n[HAB 2]: **GOLPES  de Projétil** têm 50% de chance de converter 1 EF. POSITIVO do oponente em um EF. NEGATIVO aleatório."
+                    "description": "[SA1]: Ganhe FÚRIA por 15 seg para cada EF. POSITIVO **ganho pelo oponente.**\n\n[SA2]: **GOLPES de Projétil** têm 50% de chance de converter 1 EF. POSITIVO do oponente em um EF. NEGATIVO aleatório.",
+                    "krazete_id": "meanone"
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
