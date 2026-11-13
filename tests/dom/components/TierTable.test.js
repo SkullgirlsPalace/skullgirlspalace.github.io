@@ -15,6 +15,8 @@ describe('TierTable.js', () => {
         expect(document.querySelector('.tier-class-summary')).toBeNull();
         expect(document.querySelector('.tier-char-cell span').textContent).toBe('Resguardada');
         expect([...document.querySelectorAll('.rank-badge')].map(item => item.textContent)).toEqual(['B', 'B', 'B', 'B']);
+        expect([...document.querySelectorAll('.rank-class-badge')].map(item => item.getAttribute('src')))
+          .toEqual(Array(4).fill('img/modifiers/buffs/Enrage.webp'));
         setLanguage('en');
         document.body.innerHTML = createTierTable('parasoul', { variants: { ouro: [{ name: 'Resguardada', element: 'Fogo' }] } });
         expect(document.querySelector('.tier-class-summary')).toBeNull();
@@ -65,6 +67,18 @@ describe('TierTable.js', () => {
       expect(wrapper.classList.contains('is-dragging')).toBe(true);
       wrapper.dispatchEvent(pointerEvent('pointerup', { pointerId: 1 }));
       expect(wrapper.classList.contains('is-dragging')).toBe(false);
+    });
+
+    it('keeps a synchronized classification header available while scrolling the tier table', async () => {
+      const { createTierTable, enableTierTableDragScroll } = await import('../../../src/components/TierTable.js');
+      document.body.innerHTML = createTierTable('parasoul', { variants: { ouro: [{ name: 'Resguardada', element: 'Fogo' }] } });
+
+      enableTierTableDragScroll(document);
+
+      const stickyHeader = document.querySelector('.tier-table-sticky-header');
+      expect(stickyHeader).not.toBeNull();
+      expect(stickyHeader.querySelectorAll('th')).toHaveLength(5);
+      expect(stickyHeader.getAttribute('aria-hidden')).toBe('true');
     });
   });
 });

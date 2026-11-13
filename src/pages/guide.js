@@ -477,9 +477,9 @@ function renderModifierCard(effect) {
         ${effect.icon ? `<img class="guide-modifier-icon" loading="lazy" src="${effect.icon}" alt="">` : `<span class="guide-modifier-marker" style="--modifier-color: ${color}" aria-hidden="true"></span>`}
         <h4>${effect.name}</h4>
       </header>
+      ${gameDescription ? `<section class="guide-modifier-game-description"><h5>${t('guide.gameDescription')}</h5><p>${gameDescription}</p></section>` : ''}
       ${effect.stacks ? `<p class="guide-modifier-stacks">${t('guide.max')} ${effect.stacks}x</p>` : ''}
       ${effect.scaling ? `<p class="guide-modifier-scaling"><strong>${t('guide.scaling')}:</strong> ${effect.scaling}</p>` : ''}
-      ${gameDescription ? `<section class="guide-modifier-game-description"><h5>${t('guide.gameDescription')}</h5><p>${gameDescription}</p></section>` : ''}
       ${extraExplanation ? `<details class="guide-modifier-disclosure"><summary><span>${t('guide.explanation')}</span><span class="guide-modifier-chevron" aria-hidden="true">⌄</span></summary><div class="guide-modifier-card-body">${extraExplanation}</div></details>` : ''}
     </article>
   `;
