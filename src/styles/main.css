@@ -54,3 +54,6 @@
 
 /* Final desktop-only scale overrides for the approved TL-Definitiva. */
 @import 'pages/tierlist-definitiva.css';
+
+/* Mobile keeps its current dimensions; this file only aligns existing elements. */
+@import 'pages/tierlist-mobile-alignment.css';

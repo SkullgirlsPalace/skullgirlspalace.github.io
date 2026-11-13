@@ -122,11 +122,14 @@ function enableStickyTierHeader(wrapper) {
   };
 
   const updatePosition = () => {
-    const navbarHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')) || 64;
     const rect = wrapper.getBoundingClientRect();
     const tableRect = table.getBoundingClientRect();
     const headHeight = sourceHead.getBoundingClientRect().height;
-    const top = navbarHeight;
+    const navbar = document.querySelector('.navbar');
+    const navbarRect = navbar?.getBoundingClientRect();
+    const top = navbar && !navbar.classList.contains('hidden-nav')
+      ? Math.max(0, navbarRect?.bottom || 0)
+      : 0;
     const isInRange = tableRect.top < top && tableRect.bottom > top + headHeight;
     stickyViewport.style.top = `${top}px`;
     stickyViewport.style.height = `${headHeight}px`;
