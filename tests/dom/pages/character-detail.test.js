@@ -21,6 +21,7 @@ vi.mock('../../../src/state/store.js', () => ({
 
 vi.mock('../../../src/config/constants.js', () => ({
   CHARACTER_COLORS: { filia: '#e91e63' },
+  CHARACTER_TITLE_COLORS: { filia: '#ee8cba' },
   CHARACTER_ICONS: { filia: 'img/official/Filia_Icon.webp' },
 }));
 
@@ -69,9 +70,12 @@ vi.mock('../../../src/i18n/index.js', () => {
     'variant.information': 'Informações',
     'profile.critlessRecommended': 'Recomendado Critless',
     'profile.close': 'Fechar',
+    'detail.variantsFound': '{count} variantes encontradas',
+    'detail.variantsShown': 'Exibindo {shown} de {total}',
+    'detail.loadMore': 'Mostrar mais',
   };
   return {
-    t: vi.fn((key) => translationMap[key] || key),
+    t: vi.fn((key, vars = {}) => Object.entries(vars).reduce((text, [name, value]) => text.replaceAll(`{${name}}`, value), translationMap[key] || key)),
     getCurrentLanguage: vi.fn(() => 'pt-BR'),
     getLocalizedNameSync: vi.fn((charKey, fallbackName) => fallbackName || charKey),
     getLocalizedAbilityNameSync: vi.fn((charKey, abilityName, fallback) => fallback || abilityName),
@@ -178,6 +182,9 @@ describe('character-detail.js page', () => {
     it('should render the back button', () => {
       const backBtn = document.querySelector('.btn-back');
       expect(backBtn).not.toBeNull();
+      expect(backBtn.getAttribute('type')).toBe('button');
+      expect(backBtn.getAttribute('aria-label')).toBeTruthy();
+      expect(backBtn.classList.contains('pill')).toBe(false);
     });
 
     it('should render the profile/info button', () => {
@@ -185,9 +192,43 @@ describe('character-detail.js page', () => {
       expect(infoBtn).not.toBeNull();
     });
 
+    it('defers modal markup until the profile is opened', async () => {
+      const { renderProfileModal } = await import('../../../src/pages/character-profile.js');
+      expect(renderProfileModal).not.toHaveBeenCalled();
+      expect(document.querySelector('#profile-modal-host').dataset.character).toBe('filia');
+      expect(document.querySelector('#profile-modal-overlay')).toBeNull();
+    });
+
     it('should set data-current-tab attribute on section', () => {
       const section = document.querySelector('#character-detail');
       expect(section.dataset.currentTab).toBe('builds');
     });
+  });
+
+  it('limits the initial catalog to 24 cards and filters across all variants', async () => {
+    const { getCharacters } = await import('../../../src/services/dataService.js');
+    const { flattenVariants } = await import('../../../src/utils/variantUtils.js');
+    const { filterVariants } = await import('../../../src/utils/sorting.js');
+    const { renderVariants } = await import('../../../src/components/VariantCard.js');
+    const { render, refreshVariants } = await import('../../../src/pages/character-detail.js');
+    const variants = Array.from({ length: 55 }, (_, index) => ({ name: `Variant ${index}` }));
+    getCharacters.mockReturnValue({ filia: { character: 'Filia', variants: {} } });
+    flattenVariants.mockReturnValue(variants);
+    document.body.innerHTML = render('todos');
+    refreshVariants('todos');
+    expect(renderVariants.mock.lastCall[1]).toHaveLength(24);
+    expect(document.querySelector('#variants-count').textContent).toBe('55 variantes encontradas');
+    expect(document.querySelector('#variants-pagination p').textContent).toBe('Exibindo 24 de 55');
+
+    document.querySelector('#variants-pagination button').click();
+    expect(renderVariants.mock.lastCall[1][0].name).toBe('Variant 24');
+    expect(renderVariants.mock.lastCall[3]).toEqual({ append: true, indexOffset: 24 });
+    expect(document.querySelector('#variants-pagination p').textContent).toBe('Exibindo 48 de 55');
+
+    filterVariants.mockImplementationOnce(items => items.filter(item => item.name === 'Variant 54'));
+    refreshVariants('todos');
+    expect(renderVariants.mock.lastCall[1]).toHaveLength(1);
+    expect(renderVariants.mock.lastCall[1][0].name).toBe('Variant 54');
+    expect(document.querySelector('#variants-pagination')).toBeNull();
   });
 });

@@ -19,4 +19,16 @@ describe('shared static and interactive overview content', () => {
         expect(renderPlainParagraphs(text)).toBe('<p>Gain ENRAGE.</p><p>Second line</p><p>Third line</p>');
         expect(text).toEqual(before);
     });
+
+    it('uses maximum ranks and known Portuguese terms in both the static and SPA overview', () => {
+        const character = { name: 'Annie', groups: [{ label: 'Gold', variants: [{
+            name: 'Test', signature_ability: { name: 'Ability', description: '[HAB1]: HEX por 5/10/15 segundos.\n\n[SA 2]: 20/15/10% menos VIDA.' }
+        }] }] };
+        const pt = renderCharacterOverviewContent(character);
+        expect(pt).toContain('<p>FEITIÇO por 15 segundos.</p><p>10% menos VIDA.</p>');
+        expect(pt).not.toMatch(/HAB1|SA 2|5\/10\/15|20\/15\/10/);
+        const en = renderCharacterOverviewContent(character, { language: 'en', summary: '{name}', ability: 'Ability' });
+        expect(en).toContain('<p>HEX por 15 segundos.</p>');
+        expect(character.groups[0].variants[0].signature_ability.description).toContain('5/10/15');
+    });
 });

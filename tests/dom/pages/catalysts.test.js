@@ -64,19 +64,17 @@ describe('catalysts.js page', () => {
       expect(h2.textContent.trim()).toBe('Catalisadores');
     });
 
-    it('should render 5 COTW element filter buttons', () => {
+    it('does not mix weekly rotation filters into the standalone catalyst catalog', () => {
       const filterBtns = document.querySelectorAll('.cotw-filter-btn');
-      expect(filterBtns.length).toBe(5);
+      expect(filterBtns.length).toBe(0);
     });
 
-    it('should render all 5 element filter buttons with correct data-element attributes', () => {
-      const filterBtns = document.querySelectorAll('.cotw-filter-btn');
-      const elements = Array.from(filterBtns).map(b => b.dataset.element);
-      expect(elements).toContain('fire');
-      expect(elements).toContain('water');
-      expect(elements).toContain('wind');
-      expect(elements).toContain('light');
-      expect(elements).toContain('dark');
+    it('renders the catalog names and restrictions from its data', async () => {
+      const { init } = await import('../../../src/pages/catalysts.js');
+      await init();
+      const names = [...document.querySelectorAll('.catalyst-card h4')].map(node => node.textContent);
+      expect(names).toEqual(['Catalyst A', 'Catalyst B', 'Catalyst C']);
+      expect(document.querySelector('.catalyst-constraint').textContent).toBe('1v1');
     });
 
     it('should render the catalyst loading container', () => {
@@ -86,9 +84,9 @@ describe('catalysts.js page', () => {
       expect(container.querySelector('.loading-state')).not.toBeNull();
     });
 
-    it('should render the COTW container', () => {
-      const cotwContainer = document.querySelector('#cotw-container');
-      expect(cotwContainer).not.toBeNull();
+    it('places the catalog beneath its explanation', () => {
+      const intro = document.querySelector('.catalysts-intro');
+      expect(intro.nextElementSibling.id).toBe('catalyst-container');
     });
 
     it('should render the back button', () => {

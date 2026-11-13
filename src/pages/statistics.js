@@ -14,7 +14,7 @@ import {
   updateGolpeSlider,
   updateGolpeInicialSlider,
   updateAstroSlider
-} from '../components/Calculator.js';
+} from '../components/CalculatorStudio.js';
 import { loadStatistics } from '../services/dataService.js';
 import { t } from '../i18n/index.js';
 
@@ -26,7 +26,7 @@ export function render() {
   return `
   <section class="section statistics-section" id="statistics">
     <div class="section-header">
-      <button class="btn-back" onclick="navigateTo('')">
+      <button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
         \u2190
       </button>
       <h2>${t('calc.title')}</h2>
@@ -34,7 +34,6 @@ export function render() {
 
     <div class="stats-intro">
       <div class="intro-card">
-        <h3>${t('calc.title')}</h3>
         <p>${t('calc.intro')}</p>
       </div>
     </div>

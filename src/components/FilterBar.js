@@ -9,15 +9,19 @@ import { getCharacters } from '../services/dataService.js';
 import { flattenVariants } from '../utils/variantUtils.js';
 import { getVariantClasses, getLocalizedClassName, CLASS_ICONS } from '../data/variantClasses.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { ELEMENT_MAP, RARITY_ICONS, getElementMap, getRarityLabels } from '../config/constants.js';
+import { ELEMENT_MAP, RARITY_ICONS, CHARACTER_NAMES_EN, elementToEN, elementToPT, getElementMap, getRarityLabels, getLocalizedElementName, getLocalizedRarityLabel } from '../config/constants.js';
 import { EFFECT_DATA } from '../data/effectData.js';
-import { t, getCurrentLanguage } from '../i18n/index.js';
+import { t, getCurrentLanguage, getPreferredSecondaryLanguage, getLocalizedNameSync, getVariantNamePairSync } from '../i18n/index.js';
 
 // Debounce timer for search
 let searchDebounceTimer = null;
 // Store last valid search results
 let lastValidResults = [];
 let lastValidQuery = '';
+
+function renderEffectFilterToggle(label, color) {
+    return `<button type="button" class="adv-filter-label adv-filter-toggle" style="color: ${color};" aria-expanded="false" onclick="const panel=this.nextElementSibling; const expanded=panel.classList.toggle('active'); this.setAttribute('aria-expanded', String(expanded));">${label}<span aria-hidden="true">▼</span></button>`;
+}
 
 /**
  * Create search bar HTML (separate from filter bar for flexible positioning)
@@ -27,8 +31,7 @@ export function createSearchBar() {
     return `
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
-                <img loading="lazy" src="img/official/Search.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
-                     onerror="this.style.display='none'">
+                <span class="search-icon" aria-hidden="true">⌕</span>
                 <input type="text" id="variant-search-input" class="variant-search-input"
                        placeholder="${t('characters.searchPlaceholder')}"
                        oninput="handleSearchInput(this.value)"
@@ -135,8 +138,8 @@ export function createFilterBar() {
                             <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')"><img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> ${getLocalizedClassName('Coringa').toUpperCase()}</button>
                         </div>
                     </div>
-                    <div class="adv-filter-group" id="adv-filter-effects-pos"><span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span><div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div></div>
-                    <div class="adv-filter-group" id="adv-filter-effects-neg"><span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span><div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div></div>
+                    <div class="adv-filter-group" id="adv-filter-effects-pos">${renderEffectFilterToggle(t('guide.positiveEffects'), 'var(--buff-color, #6fbf73)')}<div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div></div>
+                    <div class="adv-filter-group" id="adv-filter-effects-neg">${renderEffectFilterToggle(t('guide.negativeEffects'), 'var(--debuff-color, #f06868)')}<div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div></div>
                     <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;"><button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAdvanced')}</button></div>
                 </div>
             </div>
@@ -271,11 +274,11 @@ export function createFilterBar() {
                             </div>
                         </div>
                         <div class="adv-filter-group" id="adv-filter-effects-pos-mobile">
-                            <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span>
+                            ${renderEffectFilterToggle(t('guide.positiveEffects'), 'var(--buff-color, #6fbf73)')}
                             <div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div>
                         </div>
                         <div class="adv-filter-group" id="adv-filter-effects-neg-mobile">
-                            <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span>
+                            ${renderEffectFilterToggle(t('guide.negativeEffects'), 'var(--debuff-color, #f06868)')}
                             <div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div>
                         </div>
                         <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">
@@ -477,21 +480,50 @@ export function updateCharacterNav(currentCharKey, currentTab = 'builds') {
  * Normalize text for search (remove accents, lowercase)
  */
 function normalizeText(text) {
-    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return String(text || '').toLocaleLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function getElementSearchNames(element) {
+    const englishName = elementToEN(element);
+    const portugueseName = elementToPT(englishName);
+    return [element, englishName, portugueseName].filter(Boolean);
+}
+
+function getRaritySearchNames(rarityKey) {
+    const englishNames = { diamante: 'Diamond', ouro: 'Gold', prata: 'Silver', bronze: 'Bronze' };
+    return [rarityKey, getLocalizedRarityLabel(rarityKey), englishNames[rarityKey]].filter(Boolean);
 }
 
 /**
  * Highlight matching text with green color
  */
 function highlightMatch(text, query) {
-    if (!query || query.length < 2) return text;
+    if (!query) return text;
     const normalizedText = normalizeText(text);
     const normalizedQuery = normalizeText(query);
     const idx = normalizedText.indexOf(normalizedQuery);
     if (idx === -1) return text;
-    const before = text.substring(0, idx);
-    const match = text.substring(idx, idx + query.length);
-    const after = text.substring(idx + query.length);
+    // Find matching bounds against the original string so accent normalization
+    // cannot shift the highlighted character range.
+    let normalizedIndex = 0;
+    let start = -1;
+    let end = -1;
+    for (let i = 0; i < text.length;) {
+        const point = text.codePointAt(i);
+        const character = String.fromCodePoint(point);
+        const normalizedCharacter = normalizeText(character);
+        if (start === -1 && normalizedIndex === idx) start = i;
+        normalizedIndex += normalizedCharacter.length;
+        if (start !== -1 && normalizedIndex >= idx + normalizedQuery.length) {
+            end = i + character.length;
+            break;
+        }
+        i += character.length;
+    }
+    if (start === -1 || end === -1) return text;
+    const before = text.substring(0, start);
+    const match = text.substring(start, end);
+    const after = text.substring(end);
     return `${before}<span class="search-match-highlight">${match}</span>${after}`;
 }
 
@@ -502,7 +534,7 @@ export function handleSearchInput(query) {
     clearTimeout(searchDebounceTimer);
     searchDebounceTimer = setTimeout(() => {
         performSearch(query);
-    }, 150);
+    }, 60);
 }
 
 /**
@@ -512,7 +544,7 @@ function performSearch(query) {
     const resultsContainer = document.getElementById('search-results-dropdown');
     const clearBtn = document.getElementById('search-clear-btn');
 
-    if (!query || query.trim().length < 2) {
+    if (!query || query.trim().length < 1) {
         if (resultsContainer) {
             resultsContainer.innerHTML = '';
             resultsContainer.classList.remove('active');
@@ -534,29 +566,44 @@ function performSearch(query) {
     for (const [charKey, charData] of Object.entries(characters)) {
         const variants = flattenVariants(charData.variants);
         for (const variant of variants) {
-            const normalizedName = normalizeText(variant.name);
-            const normalizedChar = normalizeText(charData.character);
+            const names = getVariantNamePairSync(variant.name, variant.signature_ability?.name);
+            const localizedName = getLocalizedNameSync(variant.name, variant.signature_ability?.name);
+            const enCharName = CHARACTER_NAMES_EN[charKey] || charData.character;
+            const localizedCharName = getCurrentLanguage() === 'en' ? enCharName : charData.character;
+            const elementNames = getElementSearchNames(variant.element);
+            const rarityNames = getRaritySearchNames(variant.rarityKey);
+            const searchableNames = [names.ptBR, names.en, charData.character, enCharName, ...elementNames, ...rarityNames];
+            const matchingName = searchableNames.find(name => normalizeText(name).includes(normalizedQuery));
 
-            // Search by variant name or character name
-            if (normalizedName.includes(normalizedQuery) || normalizedChar.includes(normalizedQuery)) {
+            if (matchingName) {
+                const variantNames = [names.ptBR, names.en].map(normalizeText);
+                const characterNames = [charData.character, enCharName].map(normalizeText);
+                const rank = variantNames.some(name => name.startsWith(normalizedQuery)) ? 0 :
+                    variantNames.some(name => name.includes(normalizedQuery)) ? 1 :
+                    characterNames.some(name => name.startsWith(normalizedQuery)) ? 2 :
+                    characterNames.some(name => name.includes(normalizedQuery)) ? 3 : 4;
                 results.push({
                     ...variant,
                     _charKey: charKey,
-                    _charName: charData.character
+                    _charName: localizedCharName,
+                    _localizedName: localizedName,
+                    _alternateName: getPreferredSecondaryLanguage() === 'pt-BR' ? names.ptBR : names.en,
+                    _searchRank: rank
                 });
             }
         }
     }
 
-    // If results found, update last valid; if not, show last valid results
+    results.sort((a, b) => a._searchRank - b._searchRank);
+
+    // Clear stale suggestions when the current query has no matches.
     if (results.length > 0) {
         lastValidResults = results.slice(0, 15);
         lastValidQuery = query.trim();
         renderSearchResults(lastValidResults, resultsContainer, query.trim());
-    } else if (lastValidResults.length > 0) {
-        // Keep showing last valid results when current query has no matches
-        renderSearchResults(lastValidResults, resultsContainer, lastValidQuery);
     } else {
+        lastValidResults = [];
+        lastValidQuery = '';
         renderSearchResults([], resultsContainer, query.trim());
     }
 }
@@ -570,7 +617,7 @@ function renderSearchResults(results, container, query = '') {
     if (results.length === 0) {
         container.innerHTML = `
             <div class="search-no-results">
-                <span>Nenhuma variante encontrada</span>
+                <span>${getCurrentLanguage() === 'en' ? 'No variants found' : 'Nenhuma variante encontrada'}</span>
             </div>
         `;
         container.classList.add('active');
@@ -579,21 +626,24 @@ function renderSearchResults(results, container, query = '') {
 
     container.innerHTML = results.map(variant => {
         const elementInfo = ELEMENT_MAP[variant.element] || {};
+        const localizedElement = getLocalizedElementName(variant.element);
         const rarityIcon = RARITY_ICONS[variant.rarityKey] || '';
         const portraitUrl = getVariantImage(variant._charKey, variant.name, 0);
-        const highlightedName = highlightMatch(variant.name, query);
+        const displayName = variant._localizedName || getLocalizedNameSync(variant.name, variant.signature_ability?.name);
+        const highlightedName = highlightMatch(displayName, query);
 
         return `
             <button class="search-result-item" onclick="handleSearchResultClick('${variant._charKey}', '${variant.name.replace(/'/g, "\\'")}')">
-                <img loading="lazy" src="${portraitUrl}" alt="${variant.name}" class="search-result-portrait"
+                <img loading="lazy" src="${portraitUrl}" alt="${displayName}" class="search-result-portrait"
                      onerror="this.src='img/official/Annie_Icon.webp'">
                 <div class="search-result-info">
                     <span class="search-result-name">${highlightedName}</span>
                     <span class="search-result-char">${variant._charName}</span>
+                    ${variant._alternateName && normalizeText(variant._alternateName) !== normalizeText(displayName) ? `<span class="search-result-alias">${variant._alternateName}</span>` : ''}
                 </div>
                 <div class="search-result-badges">
-                    ${elementInfo.iconPath ? `<img loading="lazy" src="${elementInfo.iconPath}" alt="${variant.element}" class="search-result-element">` : ''}
-                    ${rarityIcon ? `<img loading="lazy" src="${rarityIcon}" alt="${variant.rarityKey}" class="search-result-rarity">` : ''}
+                    ${elementInfo.iconPath ? `<span class="search-result-badge"><img loading="lazy" src="${elementInfo.iconPath}" alt="" class="search-result-element"><span>${localizedElement}</span></span>` : ''}
+                    ${rarityIcon ? `<span class="search-result-badge"><img loading="lazy" src="${rarityIcon}" alt="" class="search-result-rarity"><span>${getLocalizedRarityLabel(variant.rarityKey)}</span></span>` : ''}
                 </div>
             </button>
         `;
@@ -666,7 +716,7 @@ export function handleSearchClear() {
  */
 export function handleSearchFocus() {
     const input = document.getElementById('variant-search-input');
-    if (input && input.value.trim().length >= 2) {
+    if (input && input.value.trim().length >= 1) {
         performSearch(input.value);
     }
 }

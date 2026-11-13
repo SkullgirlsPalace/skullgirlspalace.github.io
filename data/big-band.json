@@ -41,7 +41,8 @@
                 },
                 "signature_ability": {
                     "name": "ENGULA!",
-                    "description": "[HAB 1]: REFLETE 1 EF. POSITIVOS do oponente e **reinicia o tempo dele** a cada 10 GOLPES DE COMBO.\n\n[HAB 2]: Quando qualquer um dos lutadores for NOCAUTEADO, **reinicia o tempo de todos** os EFEITOS POSITIVOS ativos e ganha IMUNIDADE por 15 segundos."
+                    "description": "[SA1]: REFLETE 1 EF. POSITIVOS do oponente e **reinicia o tempo dele** a cada 10 GOLPES DE COMBO.\n\n[SA2]: Quando qualquer lutador for DERRUBADO, reinicia a duração de todos os EFEITOS POSITIVOS ativos e ganha IMUNIDADE por 8 segundos.",
+                    "krazete_id": "dreamband"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -63,7 +64,8 @@
                 },
                 "signature_ability": {
                     "name": "DISCO DE PLATINA",
-                    "description": "[HAB 1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por  um **ataque de curta distância (inclusive bloqueando).**\n\n[HAB 2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra."
+                    "description": "[SA1]: 15% de chance de ganhar ARMADURA por 5 segundos quando qualquer lutador for GOLPEADO por um **ataque de curta distância (inclusive bloqueando).**\n\n[SA2]: **Ao se beneficiar** de ARMADURA, os BLOCKBUSTERS causam 100% de dano extra.",
+                    "krazete_id": "heavymetal"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -71,6 +73,29 @@
             }
         ],
         "ouro": [
+            {
+                "name": "Inursuportável",
+                "title_formatted": "Inursuportável - Água - Ouro",
+                "element": "Água",
+                "color_hex": "#00ffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/big-band/Unbearable.webp"
+                },
+                "stats": {
+                    "attack": "9,581",
+                    "health": "82,560",
+                    "power": "27,580"
+                },
+                "signature_ability": {
+                    "name": "PREPARAURSO",
+                    "description": "[SA1]: Enquanto Big Band tiver aliados vivos, o lutador ativo ganha 35% de chance, ao sofrer um EFEITO NEGATIVO, de convertê-lo em BARREIRA por 15 segundos e curar todos os colegas de equipe em 5% da VIDA MÁXIMA.\n\n[SA2]: Com um aliado vivo, Big Band sofre 20% menos dano e ganha 1% de chance de derrotar instantaneamente o oponente com GOLPES DE BLOCKBUSTER DE NÍVEL 3. Sem aliados vivos, esses efeitos são dobrados.",
+                    "krazete_id": "unbearable"
+                },
+                "marquee_ability": "Líder da Banda",
+                "recommended_build": "VD%, Defesa, Resist?ncia e Ganho Medidor",
+                "recommended_arsenal": "Tuba Tuba, Trompa Supersônica, Pedalada Gigante, Porrada de Pratos, Explosão"
+            },
             {
                 "name": "G.I. JAZZ",
                 "title_formatted": "G.I. JAZZ - Ar - Ouro",
@@ -153,7 +178,7 @@
                 },
                 "signature_ability": {
                     "name": "AMPLIFICADO E PRONTO",
-                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo**, todos os aliados ganham ACELERAÇÃO e REGENERAÇÃO por 10 s a cada 15 s\n\n[HAB 2]: **Ao se beneficiar** de ACELERAÇÃO e REGENERAÇÃO, ATAQUES de ARRANCADA infligem MALDIÇÃO. **Quando Big Band ou um aliado ganha um EF. POS. e o oponente tem uma MALDIÇÃO**, a duração dela aumenta em 5 s."
+                    "description": "[HAB 1]: **Enquanto Big Band estiver vivo, o lutador ativo tem 50% de chance de ganhar ACELERAÇÃO e REGENERAÇÃO FORTE por 10 segundos ao acertar um ATAQUE DE ARRANCADA.\n\n[HAB 2]: Enquanto o lutador ativo estiver sob efeito de ACELERAÇÃO e REGENERAÇÃO, ATAQUES DE ARRANCADA causam 50% de DANO adicional e têm 50% de chance de aplicar MALDIÇÃO por 5 segundos."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho medidor",
@@ -197,7 +222,8 @@
                 },
                 "signature_ability": {
                     "name": "Quicando e Quebrando",
-                    "description": "[HAB 1]: **Quando Big Band estiver vivo**, os oponentes causam 35% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER\n\n[HAB 2]: **Quando Big Band realizar uma ARRANCADA DE ATAQUE bem-sucedida, drene 5% de VIDA do inimigo**. Quando Big Band sofre um GOLPE durante a ARRANCADA, ele ganha 2 acúmulos de ESPINHOS por 10 s."
+                    "description": "[SA1]: Quando Big Band estiver vivo, os oponentes causam 40% de dano a menos em GOLPES ESPECIAIS e GOLPES DE BLOCKBUSTER.\n\n[SA2]: Quando Big Band acerta um ATAQUE DE ARRANCADA, drena 5% da VIDA do oponente. Quando Big Band sofre um GOLPE durante seu ATAQUE EM DISPARADA, ganha 2 acúmulos de BLOQUEIO AUTOMÁTICO por 10 segundos.",
+                    "krazete_id": "bigbaddy"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -243,7 +269,7 @@
                 },
                 "signature_ability": {
                     "name": "TREINO CLÁSSICO",
-                    "description": "[HAB 1]: Ganhe 1 camada de PRECISÃO a cada 10 **golpes de combo.**\n\n[HAB 2]: **GOLPES DE PRECISÃO** dão FÚRIA e infligem QUEBRA DE GUARDA por 10 segundos."
+                    "description": "[HAB 1]: Ganhe 1 camada de PRECISÃO a cada 5 golpes de combo.\n\n[HAB 2]: GOLPES DE PRECISÃO dão FÚRIA e infligem QUEBRA DE GUARDA por 10 segundos."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
@@ -265,7 +291,7 @@
                 },
                 "signature_ability": {
                     "name": "VIVO OU MORTO",
-                    "description": "[HAB 1]: **Uma vez por luta**, ao sofrer um GOLPE que seria fatal, ganhe 3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.\n\n[HAB 2]: **Ao derrotar um oponente**, ganhe 2 camadas de FÚRIA por 30 s e 50% no MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Uma vez por luta, ao sofrer um GOLPE que seria fatal, ganhe 3 camadas de ARMADURA e BARREIRA. A ARMADURA dura 10 s.\n\n[HAB 2]: Para cada 20% de VIDA perdida por qualquer lutador, ganha FÚRIA por 15 segundos e 25% do MEDIDOR DE BLOCKBUSTER."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Reat. Especial e Ganho Medidor",
@@ -333,7 +359,7 @@
                 },
                 "signature_ability": {
                     "name": "ESTILO LIVRE",
-                    "description": "[HAB 1]: **Ganhe FÚRIA por 5 segundos ao usar um GOLPE ESPECIAL.**\n\n[HAB 2]: **Ganha 25% no MEDIDOR DE BLOCKBUSTER ao usar um GOLPE ESPECIAL.**"
+                    "description": "[HAB 1]: Ganhe FÚRIA por 5 segundos ao usar um GOLPE ESPECIAL.\n\n[HAB 2]: Ganha 25% no MEDIDOR DE BLOCKBUSTER ao usar um GOLPE ESPECIAL."
                 },
                 "marquee_ability": "Solista",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
@@ -355,7 +381,7 @@
                 },
                 "signature_ability": {
                     "name": "SEGUNDO FÔLEGO",
-                    "description": "[HAB 1]: **Na ASSISTÊNCIA, ganhe REGENERAÇÃO FORTE e ARMADURA por 10 segundos.**\n\n[HAB 2]: **Na ASSISTÊNCIA**, ganhe 35% no MEDIDOR DE BLOCKBUSTER."
+                    "description": "[HAB 1]: Ao ENTRAR NA ASSISTÊNCIA, ganha REGENERAÇÃO PESADA por 10 segundos e 35% do MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: Ao acertar um ATAQUE EM DISPARADA, ganha ARMADURA por 10 segundos e remove 1 EFEITO NEGATIVO de Big Band."
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",

@@ -267,3 +267,22 @@
     transform: translateY(-50%) scale(1.05);
     box-shadow: 0 0 8px rgba(212, 168, 75, 0.3);
 }
+
+.route-back-control {
+    position: relative;
+    min-height: 48px;
+    margin: 0 0 12px;
+}
+
+.route-back-control .route-back-button {
+    position: static;
+    width: 48px;
+    height: 48px;
+    transform: none;
+    font-size: 1.25rem;
+    touch-action: manipulation;
+}
+
+.route-back-control .route-back-button:hover {
+    transform: scale(1.04);
+}

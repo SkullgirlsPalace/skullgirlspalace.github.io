@@ -27,6 +27,7 @@
 @import 'components/refactored.css';
 
 @import 'components/footer.css';
+@import 'components/site-chrome.css';
 
 /* Pages */
 @import 'pages/home.css';
@@ -36,7 +37,23 @@
 @import 'pages/catalysts.css';
 @import 'pages/tierlist.css';
 @import 'pages/guide.css';
+@import 'pages/guide-catalysts.css';
 @import 'pages/character-profile.css';
+@import 'pages/calculator-studio.css';
 
-/* Responsive (must be last to override all above) */
+/* Responsive baseline; scoped page overrides follow. */
 @import 'base/responsive.css';
+
+/* Tier list visual layer: scoped to selection and ranking screens. */
+@import 'pages/tierlist-polish.css';
+
+/* Shared spacing, surfaces and control styling across all screens. */
+@import 'pages/interface-consistency.css';
+@import 'pages/rotations.css';
+@import './components/teams.css';
+
+/* Final desktop-only scale overrides for the approved TL-Definitiva. */
+@import 'pages/tierlist-definitiva.css';
+
+/* Mobile keeps its current dimensions; this file only aligns existing elements. */
+@import 'pages/tierlist-mobile-alignment.css';

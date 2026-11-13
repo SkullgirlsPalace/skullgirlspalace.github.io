@@ -1,0 +1,76 @@
+/*
+ * TL-Definitiva - PROTEGIDA
+ * Desktop geometry approved by the user. Do not override it in another stylesheet.
+ * To intentionally unlock: remove this marker, edit this file, then restore the marker.
+ * Mobile presentation is maintained separately in tierlist-mobile-alignment.css.
+ */
+@media (min-width: 769px) {
+    #character-detail[data-current-tab="tier"] .tier-table-wrapper {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        overflow-x: auto !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table {
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        table-layout: fixed !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th {
+        padding: 20px 12px !important;
+        font-size: 0.8rem !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:first-child,
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child {
+        width: 28% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:not(:first-child),
+    #character-detail[data-current-tab="tier"] .tier-table td:not(:first-child) {
+        width: 18% !important;
+        min-width: 0 !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table td {
+        padding: 20px 12px !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell {
+        width: 100% !important;
+        max-width: 100% !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell img {
+        width: 150px !important;
+        max-width: 150px !important;
+        border-radius: 8px !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell span {
+        max-width: 100% !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+        overflow-wrap: normal !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .text-center {
+        width: 170px !important;
+        min-width: 170px !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .rank-badge {
+        width: 82px !important;
+        height: 82px !important;
+        border-radius: 8px !important;
+        font-size: 2.4rem !important;
+    }
+}

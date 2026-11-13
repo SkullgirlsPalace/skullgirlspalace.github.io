@@ -7,6 +7,7 @@ export {
     translations,
     t,
     getCurrentLanguage,
+    getPreferredSecondaryLanguage,
     setLanguage,
     toggleLanguage,
     getAllTranslations
@@ -17,6 +18,7 @@ export {
     getLocalizedName,
     getLocalizedAbilityName,
     getLocalizedNameSync,
+    getVariantNamePairSync,
     getLocalizedAbilityNameSync,
     getLocalizedSADescSync
 } from './dataTranslations.js';

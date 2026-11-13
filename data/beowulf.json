@@ -4,6 +4,28 @@
     "variants": {
         "diamante": [
             {
+                "name": "Baba Yaga",
+                "title_formatted": "Baba Yaga - Neutro - Diamante",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/beowulf/Baba_Yaga.webp"
+                },
+                "stats": {
+                    "attack": "15,130",
+                    "health": "64,032",
+                    "power": "30,488"
+                },
+                "signature_ability": {
+                    "name": "TIROTEIO",
+                    "description": "[HAB 1]: Ao GOLPEAR um oponente no ar, ganha OLHO-MORTO por 15 segundos. Enquanto estiver sob efeito de OLHO-MORTO, o MODO HYPE é estendido para durar 15 segundos e NOCAUTEAR o oponente concede uma CARGA DE HYPE.\n\n[HAB 2]: Durante o MODO HYPE, após um ARREMESSO, o oponente é lançado ao ar. Durante o MODO HYPE, aplica FEITIÇO por 10 segundos ao GOLPEAR o oponente no ar."
+                },
+                "marquee_ability": "Defensor do Título",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
+                "recommended_arsenal": "Gigantic Arm, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot"
+            },
+            {
                 "name": "Rei das Feras",
                 "title_formatted": "Rei das Feras - Fogo - Diamante",
                 "element": "Fogo",
@@ -44,7 +66,7 @@
                     "description": "[HAB 1]: **Quando um aliado perde com Beowulf vivo**, todos os EF. POS. do oponente são removidos. Inflige 3 camadas de OSC. DE ENERGIA e MALDIÇÃO permanentes.\n\n[HAB 2]: **Quando o oponente está com MALDIÇÃO**, os ACERTOS DE GOLPES ESPECIAIS e BLOCKBUSTERS têm 100% de chance de serem INDEFENSÁVEIS e conceder INABALÁVEL por 10 s."
                 },
                 "marquee_ability": "Desafiante",
-                "recommended_build": "",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                 "recommended_arsenal": "Three Wulf Moonsault, Gigantic Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
             },
             {
@@ -109,10 +131,11 @@
                 },
                 "signature_ability": {
                     "name": "CAP'S LOCK",
-                    "description": "[HAB 1]: 10% de chance de infligir QUEBRA DE ARMADURA e ganhar BLOQUEIO AUTOMÁTICO por 10 segundos cada **quando qualquer lutador for GOLPEADO (inclui Bloquear).**\n\n[HAB 2]: **Ao BLOQUEAR um ataque BLOCKBUSTER ou GOLPE ESPECIAL, DESATIVA os BLOCKBUSTERS do oponente** por 15 seg inflige ATORDOAMENTO por 4 seg."
+                    "description": "[SA1]: 10% de chance de infligir QUEBRA DE ARMADURA e ganha BLOQUEIO AUTOMÁTICO por 10 segundos cada **quando qualquer lutador for GOLPEADO (inclui Bloquear).**\n\n[SA2]: **Ao BLOQUEAR um ataque BLOCKBUSTER ou GOLPE ESPECIAL, DESATIVA os BLOCKBUSTERS do oponente** por 15 seg inflige ATORDOAMENTO por 4 seg.",
+                    "krazete_id": "freedomfighter"
                 },
                 "marquee_ability": "Desafiante",
-                "recommended_build": "",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                 "recommended_arsenal": "Three Wulf Moonsault, Gigantic Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
             },
             {
@@ -219,11 +242,34 @@
                 },
                 "signature_ability": {
                     "name": "Fica Frio",
-                    "description": "[HAB 1]: **Ao bloquear um GOLPE**, aplica 1 acúmulo de LENTIDÃO por 15 s. Quando um oponente obtém 5 acúmulos de LENTIDÃO, remove todas as CAMADAS de LENTIDÃO e ATORDOA o oponente por 6 s.\n\n[HAB 2]: Quando **qualquer aliado** GOLPEAR um **oponente atordoado**, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por 15 s."
+                    "description": "[HAB 1]: Quando o lutador ativo bloqueia um GOLPE, aplica 1 acúmulo de LENTIDÃO por 15 segundos. Quando o oponente atinge 5 acúmulos de LENTIDÃO, remove todos os acúmulos de LENTIDÃO e aplica ATORDOAMENTO por 6 segundos.\n\n[HAB 2]: Quando qualquer aliado GOLPEAR um oponente atordoado, inflige QUEBRA DE ARM. e ganha OLHO-MORTO por 10 segundos cada."
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Dano Crítico",
                 "recommended_arsenal": "Lupine Pummel, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
+            },
+            {
+                "name": "Chamego",
+                "title_formatted": "Chamego - Ar - Ouro",
+                "element": "Ar",
+                "color_hex": "#80ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/beowulf/Pillow_Talk.webp"
+                },
+                "stats": {
+                    "attack": "12,212",
+                    "health": "66,048",
+                    "power": "27,437"
+                },
+                "signature_ability": {
+                    "name": "MEMÓRIA REPRIMIDA",
+                    "description": "[HAB 1]: Enquanto Beowulf for o lutador ativo, Beowulf e o oponente sofrem QUIETUS permanente e suas ASSISTÊNCIAS ficam DESATIVADAS. Ao ativar o MODO HYPE, Beowulf recupera 30% de VIDA.\n\n[HAB 2]: Durante o MODO HYPE, aplica 2 EFEITOS NEGATIVOS aleatórios por 10 segundos a cada 2 segundos.",
+                    "krazete_id": "pillowtalk"
+                },
+                "marquee_ability": "Defensor do T?tulo",
+                "recommended_build": "ATQ%, Perfura??o, Precis?o e Dano Cr?tico",
+                "recommended_arsenal": "Wulf Shoot, Hurting Hurdle (Cadeira), Hurting Hurdle (Cadeira), Wulf Shoot, Wulf Shoot"
             }
         ],
         "prata": [
@@ -265,7 +311,8 @@
                 },
                 "signature_ability": {
                     "name": "ALERTA VERMELHO",
-                    "description": "[HAB 1]: Ganha OLHO-MORTO e ACELERAÇÃO por 10 s cada **quando ativar o MODO HYPE.**\n\n[HAB 2]: Ao GOLPEAR, tem 25% de chance de ganhar FÚRIA por 10 segundos **quando estiver se beneficiando de ACELERAÇÃO.**"
+                    "description": "[SA1]: Ganha OLHO-MORTO e ACELERAÇÃO por 15 segundos cada ao ativar o MODO HYPE.\n\n[SA2]: Ao GOLPEAR enquanto estiver sob efeito de ACELERAÇÃO, tem 25% de chance de ganhar FÚRIA por 15 segundos.",
+                    "krazete_id": "numberone"
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",

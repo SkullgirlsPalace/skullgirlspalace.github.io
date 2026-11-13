@@ -36,6 +36,13 @@ describe('tutorialRendaPassiva.js page', () => {
       expect(manifesto).not.toBeNull();
     });
 
+    it('should provide an accessible return control', () => {
+      const button = document.querySelector('.route-back-button');
+      expect(button).not.toBeNull();
+      expect(button.getAttribute('onclick')).toBe("navigateTo('')");
+      expect(button.getAttribute('aria-label')).toBeTruthy();
+    });
+
     it('should render the main h1 title', () => {
       const h1 = document.querySelector('.manifesto-wrapper h1');
       expect(h1).not.toBeNull();

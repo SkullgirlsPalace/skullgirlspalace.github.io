@@ -1,0 +1,110 @@
+/* Mobile-only position corrections; preserves the established mobile tier table. */
+@media (max-width: 768px) {
+    #character-detail:not([data-todos-mode]) .header-top-row {
+        grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+    }
+
+    #character-detail:not([data-todos-mode]) .header-top-row .centered-title {
+        grid-column: 1 / -1 !important;
+        grid-row: 1 !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 4px !important;
+    }
+
+    #character-detail:not([data-todos-mode]) .header-top-row .header-left {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        align-self: start !important;
+        z-index: 11;
+    }
+
+    #character-detail:not([data-todos-mode]) .header-top-row .char-select-icon {
+        margin: 0 auto !important;
+    }
+
+    #character-detail:not([data-todos-mode]) .header-top-row .char-title-row h1 {
+        width: 100%;
+        margin: 0 !important;
+        text-align: center !important;
+    }
+
+    #character-detail[data-current-tab="builds"] .desktop-classes {
+        align-items: center !important;
+    }
+
+    #character-detail[data-current-tab="builds"] .desktop-classes .variant-class-label {
+        text-align: center !important;
+    }
+
+    /* The fixed copy follows page scroll; keep the source header in normal flow. */
+    #character-detail[data-current-tab="tier"] .tier-table thead th {
+        position: static !important;
+        vertical-align: middle !important;
+        background: #17171e !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table thead th:first-child {
+        text-align: center !important;
+        background: #111116 !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child {
+        z-index: 10;
+        background: #14141b !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell {
+        align-items: center !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell span {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table thead th .attr-highlight {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 4px 0 8px !important;
+        line-height: 1.35 !important;
+        text-align: center !important;
+        white-space: normal !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+
+    .tier-table-sticky-header {
+        z-index: 9;
+    }
+
+    .tier-table-sticky-copy thead th {
+        position: static !important;
+        vertical-align: middle !important;
+    }
+
+    .tier-table-sticky-copy thead th:first-child {
+        position: sticky !important;
+        left: 0 !important;
+        z-index: 2 !important;
+        background: #111116 !important;
+        text-align: center !important;
+    }
+
+    .tier-table-sticky-copy thead th .attr-highlight {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 4px 0 8px !important;
+        line-height: 1.35 !important;
+        text-align: center !important;
+        white-space: normal !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+}

@@ -54,6 +54,8 @@ describe('characters.js page', () => {
     it('should render the back button', () => {
       const backBtn = document.querySelector('.btn-back');
       expect(backBtn).not.toBeNull();
+      expect(backBtn.getAttribute('type')).toBe('button');
+      expect(backBtn.getAttribute('aria-label')).toBeTruthy();
     });
   });
 });

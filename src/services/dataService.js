@@ -27,37 +27,31 @@ const cache = {
     extras: null
 };
 
+// Share requests while routes/languages change instead of fetching twice.
+const pending = new Map();
+function once(key, request) {
+    if (!pending.has(key)) {
+        const promise = request().finally(() => {
+            if (pending.get(key) === promise) pending.delete(key);
+        });
+        pending.set(key, promise);
+    }
+    return pending.get(key);
+}
+
+async function readJSON(filename) {
+    const response = await fetch(filename);
+    if (response.ok === false) throw new Error(`HTTP ${response.status}: ${filename}`);
+    return response.json();
+}
+
 /**
  * Load all character data from JSON files
  * @returns {Promise<Object>} Character data keyed by character slug
  */
 export async function loadAllCharacters() {
-    if (cache.characters) {
-        return cache.characters;
-    }
-
-    const characters = {};
-
-    const promises = CHARACTER_FILES.map(file =>
-        fetch(`data/${file}`)
-            .then(res => res.json())
-            .then(data => {
-                const charKey = file.replace('.json', '').toLowerCase();
-                characters[charKey] = data;
-                return data;
-            })
-            .catch(err => {
-                console.warn(`Error loading ${file}:`, err);
-                return null;
-            })
-    );
-
-    await Promise.all(promises);
-
-    cache.characters = characters;
-    setCharacters(characters);
-
-    return characters;
+    await Promise.all(CHARACTER_FILES.map(file => loadCharacter(file.replace('.json', '').toLowerCase())));
+    return cache.characters || {};
 }
 
 /**
@@ -70,20 +64,17 @@ export async function loadCharacter(charKey) {
         return cache.characters[charKey];
     }
 
-    try {
-        const res = await fetch(`data/${charKey}.json`);
-        const data = await res.json();
-
-        if (!cache.characters) {
-            cache.characters = {};
+    return once(`character:${charKey}`, async () => {
+        try {
+            const data = await readJSON(`data/${charKey}.json`);
+            cache.characters = { ...cache.characters, [charKey]: data };
+            setCharacters(cache.characters);
+            return data;
+        } catch (err) {
+            console.error(`Error loading ${charKey}:`, err);
+            return null;
         }
-        cache.characters[charKey] = data;
-
-        return data;
-    } catch (err) {
-        console.error(`Error loading ${charKey}:`, err);
-        return null;
-    }
+    });
 }
 
 /**
@@ -95,19 +86,16 @@ export async function loadTierData() {
         return cache.tierData;
     }
 
-    try {
-        const res = await fetch('data/tier-data.json');
-        const data = await res.json();
-
-        cache.tierData = data;
-
-        setTierData(data);
-
-        return data;
-    } catch (err) {
-        console.error('Error loading tier data:', err);
-        return {};
-    }
+    return once('tierData', async () => {
+        try {
+            cache.tierData = await readJSON('data/tier-data.json');
+            setTierData(cache.tierData);
+            return cache.tierData;
+        } catch (err) {
+            console.error('Error loading tier data:', err);
+            return {};
+        }
+    });
 }
 
 /**
@@ -119,23 +107,23 @@ export async function loadCatalysts() {
     const cacheKey = lang === 'en' ? 'catalysts_en' : 'catalysts';
 
     if (cache[cacheKey]) {
+        setCatalysts(cache[cacheKey]);
         return cache[cacheKey];
     }
 
     const filename = lang === 'en' ? 'data/catalisadores_en.json' : 'data/catalisadores.json';
 
-    try {
-        const res = await fetch(filename);
-        const data = await res.json();
-
-        cache[cacheKey] = data;
-        setCatalysts(data);
-
-        return data;
-    } catch (err) {
-        console.error('Error loading catalysts:', err);
-        return null;
-    }
+    return once(cacheKey, async () => {
+        try {
+            const data = await readJSON(filename);
+            cache[cacheKey] = data;
+            if (getCurrentLanguage() === lang) setCatalysts(data);
+            return data;
+        } catch (err) {
+            console.error('Error loading catalysts:', err);
+            return null;
+        }
+    });
 }
 
 /**
@@ -167,14 +155,15 @@ export async function loadFendaData() {
 export async function loadExtrasData() {
     if (cache.extras) return cache.extras;
 
-    try {
-        const res = await fetch('data/extras.json');
-        cache.extras = await res.json();
-        return cache.extras;
-    } catch (err) {
-        console.error('Error loading extras data:', err);
-        return null;
-    }
+    return once('extras', async () => {
+        try {
+            cache.extras = await readJSON('data/extras.json');
+            return cache.extras;
+        } catch (err) {
+            console.error('Error loading extras data:', err);
+            return null;
+        }
+    });
 }
 
 /**
@@ -365,6 +354,7 @@ export function getExtrasGlobalData() {
  * Clear all cached data
  */
 export function clearCache() {
+    pending.clear();
     cache.characters = null;
     cache.catalysts = null;
     cache.catalysts_en = null;
@@ -379,4 +369,5 @@ export function clearCache() {
     cache.reinosParalelos = null;
     cache.ganhosFixos = null;
     cache.guildas = null;
+    cache.extras = null;
 }

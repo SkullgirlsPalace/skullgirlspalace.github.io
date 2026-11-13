@@ -4,6 +4,7 @@
 // =====================================================
 
 import { t } from '../i18n/index.js';
+import { createPageBackControl } from '../components/Navigation.js';
 
 function renderListItems(key) {
   return t(key).split('|').map(item => `<li>${item}</li>`).join('\n');
@@ -15,8 +16,6 @@ export function render() {
 
   <style>
   /* Scoped styles for the manifesto to avoid conflicts */
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
-
   .manifesto-wrapper {
     font-family: 'Cinzel', serif;
     background-color: #fdf6e3; /* Cor de pergaminho claro da V1 */
@@ -178,6 +177,7 @@ export function render() {
   </style>
 
   <main class="manifesto-wrapper">
+  ${createPageBackControl()}
 
   <!-- Cabe\u00E7alho do Manifesto -->
   <header>
@@ -266,7 +266,7 @@ export function render() {
   <p>${t('tutorial.citadelDesc')}</p>
 
   <div class="image-frame">
-  <img loading="lazy" src="img/testes/base-renda-passiva.webp" alt="${t('tutorial.citadelImgAlt')}" class="base-image" onerror="this.src='https://via.placeholder.com/800x450?text=${encodeURIComponent(t('tutorial.imgNotFound'))}'">
+  <img loading="lazy" src="img/testes/base-renda-passiva.webp" alt="${t('tutorial.citadelImgAlt')}" class="base-image" onerror="this.hidden=true">
   <p style="text-align: center; font-size: 0.875rem; font-style: italic; margin-top: 1rem;">${t('tutorial.citadelCaption')}</p>
   </div>
 

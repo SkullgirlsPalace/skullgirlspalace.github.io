@@ -1,0 +1,798 @@
+/* Shared visual language across the Palace screens. Presentation only. */
+
+:root {
+    --surface-border: rgba(255, 255, 255, 0.075);
+    --surface-tint: rgba(212, 168, 75, 0.045);
+}
+
+/* Keep page titles, controls and content surfaces on the same rhythm. */
+.section-header {
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    line-height: 1.2;
+}
+
+#landing-hub .hub-menu,
+.guide-container .guide-header,
+.guide-container .stats-hero-container,
+.guide-container .stats-glossary-container,
+.guide-container .guide-catalyst-library,
+.guide-container .guide-modifier-library,
+#statistics .intro-card,
+#statistics .calculator-box,
+#catalysts .catalysts-intro,
+#catalysts .catalyst-card,
+.calculator-studio {
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+#landing-hub .hub-menu {
+    gap: 12px;
+    padding: 24px;
+}
+
+#landing-hub .hub-btn {
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#landing-hub .hub-btn:hover {
+    transform: translateY(-2px);
+}
+
+.guide-container {
+    max-width: 1240px;
+    padding-bottom: 40px;
+}
+
+.guide-container .guide-header {
+    margin-bottom: 22px;
+    padding: 20px 22px;
+    background: linear-gradient(145deg, var(--surface-tint), var(--bg-card) 56%);
+}
+
+.guide-container .guide-header h1 {
+    margin-bottom: 6px;
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+}
+
+.guide-container .guide-header p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.guide-tabs,
+.detail-tabs {
+    gap: 6px;
+    padding: 5px;
+    border: 1px solid var(--surface-border);
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.22);
+}
+
+.guide-tabs {
+    margin-bottom: 22px;
+}
+
+.guide-tab-btn,
+.tab-btn {
+    min-height: 42px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 0.82rem;
+    letter-spacing: 0.045em;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.25;
+}
+
+.guide-tab-btn .tab-icon,
+.guide-tab-btn img {
+    display: block;
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
+    object-fit: contain;
+}
+
+.guide-tab-btn.active,
+.tab-btn.active {
+    border-color: rgba(212, 168, 75, 0.36);
+    color: #17130b;
+    background: linear-gradient(135deg, var(--accent-gold-light), var(--accent-gold));
+    box-shadow: 0 4px 14px rgba(212, 168, 75, 0.16);
+}
+
+/* Detail header uses the same compact framed surface in both tabs. */
+#character-detail.character-detail .character-detail-header {
+    margin-bottom: 18px;
+    padding: 18px 20px 16px;
+    border: 1px solid rgba(212, 168, 75, 0.14);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.05), rgba(18, 18, 26, 0.88) 55%);
+}
+
+#character-detail.character-detail .header-top-row {
+    margin-bottom: 18px;
+}
+
+#character-detail.character-detail .header-middle-row {
+    margin-bottom: 16px;
+}
+
+#character-detail.character-detail .char-title-row h2,
+#character-detail.character-detail .char-title-centered h2 {
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    color: var(--char-title-accent, var(--accent-gold));
+    text-shadow: 0 2px 18px color-mix(in srgb, var(--char-title-accent, var(--accent-gold)) 20%, transparent);
+}
+
+#character-detail.character-detail .detail-tabs {
+    width: fit-content;
+}
+
+/* Match filters, search fields and data cards to the same border treatment. */
+.desktop-filter-bar,
+.mobile-filter-bar,
+.filters,
+.search-input-wrapper,
+.guide-catalyst-search input,
+.guide-modifier-search input,
+.guide-modifier-filters,
+.stats-glossary-search,
+.catalyst-note-input {
+    border-color: var(--surface-border);
+    border-radius: 12px;
+}
+
+.desktop-filter-bar,
+.mobile-filter-bar {
+    background: linear-gradient(145deg, rgba(212, 168, 75, 0.035), var(--bg-card) 60%);
+}
+
+.search-input-wrapper:focus-within,
+.guide-catalyst-search input:focus,
+.guide-modifier-search input:focus,
+.stats-glossary-search:focus-within,
+.catalyst-note-input:focus {
+    border-color: rgba(212, 168, 75, 0.58);
+    box-shadow: 0 0 0 3px rgba(212, 168, 75, 0.1);
+}
+
+#catalysts .catalysts-intro {
+    margin-bottom: 22px;
+    padding: 16px 20px;
+    border-color: rgba(212, 168, 75, 0.16);
+    background: linear-gradient(110deg, var(--surface-tint), rgba(255, 255, 255, 0.018) 72%);
+}
+
+#catalysts .catalysts-intro p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.55;
+}
+
+#catalysts .catalyst-card {
+    gap: 12px;
+    padding: 16px;
+    border-color: var(--surface-border);
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.025), var(--bg-card) 60%);
+    background-size: auto;
+}
+
+#catalysts .catalyst-card:hover {
+    border-color: rgba(212, 168, 75, 0.42);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+#catalysts .catalyst-card-header h4 {
+    color: var(--text-primary);
+}
+
+#statistics .intro-card {
+    padding: 20px;
+    background: linear-gradient(145deg, var(--surface-tint), var(--bg-card) 58%);
+}
+
+#statistics .calc-tab.active {
+    color: #17130b;
+    background: rgba(212, 168, 75, 0.11);
+}
+
+#statistics .calc-tab.active::after {
+    background: linear-gradient(90deg, var(--accent-gold-dark), var(--accent-gold-light));
+}
+
+.variant-card {
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 16px;
+    }
+
+    .guide-container {
+        padding-bottom: 24px;
+    }
+
+    .guide-container .guide-header {
+        margin-bottom: 16px;
+        padding: 16px;
+    }
+
+    .guide-tabs {
+        width: 100%;
+        gap: 4px;
+        margin-bottom: 16px;
+    }
+
+    .guide-tab-btn,
+    .tab-btn {
+        padding: 9px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.03em;
+    }
+
+    #character-detail:not([data-todos-mode]) .header-top-row .centered-title {
+        grid-column: 2;
+        grid-row: 1;
+        flex-direction: column;
+        gap: 4px;
+        margin-top: 0;
+    }
+
+    #character-detail:not([data-todos-mode]) .header-top-row .header-right {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    #character-detail:not([data-todos-mode]) .char-title-row .char-select-icon {
+        width: 78px;
+        height: 78px;
+        margin: 0;
+    }
+
+    #character-detail:not([data-todos-mode]) .char-title-row h1 {
+        margin: 0;
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    #character-detail.character-detail .character-detail-header {
+        margin-bottom: 14px;
+        padding: 14px 12px 12px;
+        border-radius: 15px;
+    }
+
+    #character-detail.character-detail .header-top-row,
+    #character-detail.character-detail .header-middle-row {
+        margin-bottom: 7px !important;
+    }
+
+    #character-detail.character-detail .character-detail-header {
+        padding: 12px 12px 10px;
+    }
+
+    #character-detail.character-detail .detail-tabs {
+        width: min(100%, 330px);
+    }
+
+    #character-detail.character-detail .tab-btn {
+        flex: 1;
+    }
+
+    #catalysts .catalysts-intro,
+    #statistics .intro-card {
+        padding: 14px;
+    }
+
+    #catalysts .catalyst-card {
+        padding: 14px;
+    }
+
+    #statistics .calc-tab-content {
+        padding: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #landing-hub .hub-btn,
+    #catalysts .catalyst-card {
+        transition: none;
+    }
+}
+
+/* Desktop variant cards and tier table: stronger hierarchy, larger content. */
+@media (min-width: 769px) {
+    #character-detail[data-current-tab="builds"] .search-bar-container {
+        width: 360px;
+        max-width: min(360px, 100%);
+        transition: width 180ms ease;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-bar-container.floating {
+        width: 320px;
+        max-width: min(320px, calc(100vw - 40px));
+    }
+
+    #character-detail[data-current-tab="builds"] .search-input-wrapper {
+        height: 58px;
+        padding: 8px 15px;
+        gap: 11px;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-search-input {
+        font-size: 1.08rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-results-dropdown {
+        left: auto;
+        right: 0;
+        width: max-content;
+        min-width: min(400px, calc(100vw - 48px));
+        max-width: min(620px, calc(100vw - 48px));
+        max-height: min(72vh, 760px);
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-item {
+        display: grid;
+        box-sizing: border-box;
+        min-height: 82px;
+        grid-template-columns: 68px minmax(0, 1fr) max-content;
+        gap: 12px;
+        padding: 7px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-portrait {
+        width: 68px;
+        height: 68px;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-info {
+        gap: 2px;
+        flex: 1;
+        padding: 1px 0;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-name {
+        font-size: 1.08rem;
+        line-height: 1.24;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-char,
+    #character-detail[data-current-tab="builds"] .search-result-alias {
+        font-size: 0.94rem;
+        line-height: 1.25;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-alias {
+        color: var(--text-secondary);
+        opacity: 0.82;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-badges {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+        min-width: 0;
+        height: 100%;
+        margin-left: 0;
+        padding-left: 11px;
+        border-left: 1px solid rgba(255, 255, 255, 0.075);
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--text-secondary);
+        font-size: 0.88rem;
+        font-weight: 700;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    #character-detail[data-current-tab="builds"] .search-result-element,
+    #character-detail[data-current-tab="builds"] .search-result-rarity {
+        width: 23px;
+        height: 23px;
+        flex: 0 0 23px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variants-container,
+    #character-detail[data-current-tab="builds"] .variants-grid {
+        gap: 10px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-card {
+        grid-template-columns: 210px minmax(0, 1fr);
+        align-items: start;
+        gap: 24px;
+        padding: 20px;
+        border-color: rgba(255, 255, 255, 0.12);
+        border-radius: 16px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-left-section {
+        width: 100%;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-portrait {
+        width: 190px;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-info {
+        gap: 13px;
+        min-width: 0;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-header h3 {
+        margin-bottom: 7px;
+        font-size: 1.9rem;
+        line-height: 1.18;
+    }
+
+    #character-detail[data-current-tab="builds"]:not([data-todos-mode="true"]) .variant-char-subtitle {
+        display: none;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-char-subtitle {
+        margin: 2px 0 10px;
+        font-size: 0.9rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-meta {
+        gap: 9px;
+        margin-bottom: 10px;
+    }
+
+    #character-detail[data-current-tab="builds"] .rarity-badge,
+    #character-detail[data-current-tab="builds"] .element-badge {
+        gap: 5px;
+        padding: 7px 12px;
+        font-size: 0.98rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .rarity-badge img.rarity-icon {
+        height: 20px;
+    }
+
+    #character-detail[data-current-tab="builds"] .element-badge img {
+        height: 24px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-stats {
+        gap: 10px;
+    }
+
+    #character-detail[data-current-tab="builds"] .stat-item {
+        gap: 8px;
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .stat-item .stat-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-classes-display {
+        gap: 9px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-class-tag {
+        gap: 6px;
+        font-size: 1.02rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-class-label {
+        font-size: 0.9rem;
+        letter-spacing: 0.06em;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-class-tag img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #character-detail[data-current-tab="builds"] .secondary-class .variant-class-tag { font-size: .85rem; }
+    #character-detail[data-current-tab="builds"] .secondary-class .variant-class-label { font-size: .75rem; letter-spacing: 0; }
+    #character-detail[data-current-tab="builds"] .secondary-class .variant-class-tag img { width: 20px; height: 20px; }
+
+    #character-detail[data-current-tab="builds"] .variant-tabs {
+        gap: 8px;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-tab-btn {
+        min-height: 40px;
+        padding: 9px 16px;
+        font-size: 0.82rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .ability-box {
+        padding: 16px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 12px;
+    }
+
+    #character-detail[data-current-tab="builds"] .ability-box h4 {
+        margin-bottom: 9px;
+        font-size: 1.08rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .ability-box p {
+        font-size: 1.12rem;
+        line-height: 1.68;
+    }
+
+    #character-detail[data-current-tab="builds"] .ability-box strong {
+        font-size: inherit;
+    }
+
+    #character-detail[data-current-tab="builds"] .arsenal-move .move-name {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    #character-detail[data-current-tab="builds"] .stat-item {
+        font-size: 1.08rem;
+    }
+
+    #character-detail[data-current-tab="builds"] .stat-item .label,
+    #character-detail[data-current-tab="builds"] .stat-item .value {
+        font-size: inherit;
+    }
+
+    #character-detail[data-current-tab="builds"] .variant-tab-btn {
+        font-size: 0.9rem;
+    }
+
+    /* The previous per-card stagger accumulated and delayed lower variant names. */
+    #character-detail[data-current-tab="builds"] .variant-card.animate-in {
+        animation-delay: 0ms !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table-wrapper {
+        width: 100%;
+        margin: 14px 0 24px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table {
+        width: auto;
+        min-width: 760px;
+        table-layout: auto;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th,
+    #character-detail[data-current-tab="tier"] .tier-table td {
+        padding: 15px 12px;
+        vertical-align: middle;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th {
+        font-size: 0.84rem;
+        letter-spacing: 0.055em;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(212, 168, 75, 0.22);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:first-child,
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child {
+        width: 190px;
+        min-width: 190px;
+        max-width: 190px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:not(:first-child),
+    #character-detail[data-current-tab="tier"] .tier-table td:not(:first-child) {
+        width: 170px;
+        min-width: 170px;
+        border-right: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 12;
+        background: #17171e;
+        box-shadow: 0 1px rgba(212, 168, 75, 0.22);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table thead th:first-child {
+        left: 0;
+        z-index: 24;
+        text-align: center;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table thead th .attr-highlight {
+        display: inline-block;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-inline: 0 !important;
+        line-height: 1.25;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table tbody tr:not(:last-child) td {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table tbody tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.018);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table tbody tr:hover {
+        background: rgba(212, 168, 75, 0.055);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child {
+        background: #14141b;
+        border-right-color: rgba(212, 168, 75, 0.18);
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell {
+        width: 190px;
+        max-width: 190px;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell img {
+        width: 108px;
+        max-width: 100%;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell span {
+        font-size: 0.9rem;
+        line-height: 1.25;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .text-center {
+        width: 170px;
+        min-width: 170px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .rank-badge {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        font-size: 1.75rem;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .rank-class-badge {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+/* Keep the back control, character title and search in separate desktop tracks. */
+@media (min-width: 769px) {
+    #character-detail.character-detail .header-top-row {
+        display: grid;
+        grid-template-columns: minmax(44px, 1fr) minmax(0, 1fr);
+        gap: clamp(12px, 2vw, 24px);
+        align-items: center;
+    }
+
+    #character-detail.character-detail .header-left,
+    #character-detail.character-detail .header-right {
+        min-width: 0;
+    }
+
+    #character-detail.character-detail .header-left {
+        grid-column: 1;
+        justify-content: flex-start;
+    }
+
+    #character-detail.character-detail .header-right {
+        grid-column: 2;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    #character-detail.character-detail .centered-title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        justify-self: auto;
+        max-width: calc(100% - 112px);
+        min-width: 0;
+    }
+
+    #character-detail.character-detail .char-title-row {
+        min-width: 0;
+        flex-shrink: 1;
+    }
+
+    #character-detail.character-detail .char-title-row h2 {
+        min-width: 0;
+        margin: 0;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 768px) {
+    #character-detail[data-current-tab="tier"] .tier-table {
+        width: max-content !important;
+        min-width: 560px !important;
+        table-layout: fixed !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:first-child,
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child,
+    #character-detail[data-current-tab="tier"] .tier-table th:not(:first-child),
+    #character-detail[data-current-tab="tier"] .tier-table td:not(:first-child) {
+        width: 112px !important;
+        min-width: 112px !important;
+        max-width: 112px !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:first-child,
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child {
+        padding-inline: 5px !important;
+        box-sizing: border-box;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        align-items: center;
+        gap: 6px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell img {
+        width: 76px !important;
+        max-width: 100% !important;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell span {
+        width: 100%;
+        font-size: 0.76rem;
+        line-height: 1.25;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .text-center {
+        width: auto;
+        min-width: 0;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .rank-badge {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 15px;
+        font-size: 1.3rem !important;
+    }
+}

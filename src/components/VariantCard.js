@@ -1,14 +1,15 @@
 import { getElementMap, getRarityLabels, getLocalizedRarityLabel, getLocalizedElementName, RARITY_ICONS, CHARACTER_COLORS, CHARACTER_ICONS } from '../config/constants.js';
 import { getVariantImage } from '../data/variantImages.js';
-import { formatText, formatArsenal, formatBuildText } from '../utils/formatters.js';
+import { formatText, formatArsenal, formatBuildText, normalizeAbilityProgressions, splitArsenalMoves, countBuildStats } from '../utils/formatters.js';
 import { getState } from '../state/store.js';
 import { getLocalizedClassName, getLocalizedVariantClasses, getVariantClasses, CLASS_ICONS } from '../data/variantClasses.js';
 import { getExclusiveData } from '../data/exclusiveVariants.js';
 import { isNewVariant } from '../data/newContent.js';
-import { CHARACTER_PROFILES } from '../data/characterProfiles.js';
 import { hasExtras, getExtrasData } from '../data/extrasData.js';
 import { MOVE_DATA } from '../data/movesimages.js';
 import { t, getCurrentLanguage, getLocalizedNameSync, getLocalizedAbilityNameSync, getLocalizedSADescSync } from '../i18n/index.js';
+import { supportsDefensiveTeams, escapeTeamText } from '../utils/teamData.js';
+import { localizePortugueseAbility } from '../utils/abilityText.js';
 
 /**
  * Create variant card HTML with tabbed sections
@@ -36,8 +37,9 @@ export function createVariantCard(variant, charKey, index = 0) {
 
   // Format ability description
   const rawSADesc = variant.signature_ability?.description || t('variant.noDescription');
- const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc);
- const abilityDesc = formatText(localizedSADesc, variant.name);
+  const localizedSADesc = getLocalizedSADescSync(variant.name, rawSADesc, variant.signature_ability?.name);
+  const displaySADesc = getCurrentLanguage() === 'pt-BR' ? localizePortugueseAbility(localizedSADesc) : localizedSADesc;
+  const abilityDesc = formatText(normalizeAbilityProgressions(displaySADesc), variant.name);
 
   // Format arsenal with images
   const arsenalHTML = formatArsenal(variant.recommended_arsenal || '', charKey);
@@ -49,7 +51,7 @@ export function createVariantCard(variant, charKey, index = 0) {
 
   // Get Classes — use localized names
   const variantClasses = getLocalizedVariantClasses(variant.name);
-  const classesHTML = variantClasses.map(cls => {
+  const classesHTML = variantClasses.map((cls, classIndex) => {
     const info = CLASS_ICONS[cls.key];
     if (!info) return '';
     let displayName = cls.localized;
@@ -57,8 +59,8 @@ export function createVariantCard(variant, charKey, index = 0) {
         displayName = 'Suporte';
     }
     return `
-      <div class="variant-class-wrapper">
-        <span class="variant-class-label">${t('variant.class')}</span>
+      <div class="variant-class-wrapper${classIndex ? ' secondary-class' : ''}">
+        <span class="variant-class-label">${t(classIndex ? 'variant.alsoActsAs' : 'variant.primaryClass')}</span>
         <span class="variant-class-tag attr-highlight" data-attr-key="class_${cls.key}" style="--class-color: ${info.color}">
           <img src="${info.icon}" alt="${cls.localized}">
           <span class="class-name-text">${displayName.toUpperCase()}</span>
@@ -71,15 +73,17 @@ export function createVariantCard(variant, charKey, index = 0) {
   const cardId = `variant-${charKey}-${index}`;
 
   // Build content - check if we have build or arsenal data
-  let builds = variant.builds ? [...variant.builds].sort((a, b) => {
+  const hasCompleteArsenal = build => splitArsenalMoves(build.recommended_arsenal).length === 5;
+  let builds = Array.isArray(variant.builds) ? variant.builds.filter(hasCompleteArsenal).sort((a, b) => {
     const aIsAttack = a.title.toLowerCase().includes('ataque') || a.title.toLowerCase().includes('attack');
     const bIsAttack = b.title.toLowerCase().includes('ataque') || b.title.toLowerCase().includes('attack');
     if (aIsAttack && !bIsAttack) return -1;
     if (bIsAttack && !aIsAttack) return 1;
     return 0;
   }) : null;
+  if (!builds?.length) builds = null;
   const buildText = variant.recommended_build || '';
-  const hasBuildContent = !!(builds || buildText || arsenalHTML || variant.marquee_ability);
+  const hasBuildContent = !!builds || hasCompleteArsenal(variant);
 
   const rawSAName = variant.signature_ability?.name || t('variant.specialAbility');
  const saName = getLocalizedAbilityNameSync(variant.name, rawSAName);
@@ -115,7 +119,7 @@ export function createVariantCard(variant, charKey, index = 0) {
 
     // Character subtitle (shown under variant name)
     const fallbackName = effectiveCharKey.charAt(0).toUpperCase() + effectiveCharKey.slice(1);
-    const effectiveCharName = variant._charName || fallbackName;
+    const effectiveCharName = getLocalizedNameSync(variant._charName || fallbackName);
     const charSubtitleHTML = `
         <span class="variant-char-subtitle">${effectiveCharName}</span>
     `;
@@ -125,7 +129,7 @@ export function createVariantCard(variant, charKey, index = 0) {
         const bArsenal = formatArsenal(b.recommended_arsenal || '', charKey);
         
         return `
-            <div class="build-sub-content ${isFirst ? 'active' : ''}" data-build-idx="${variant.name}-${b.title}">
+            <div class="build-sub-content ${isFirst ? 'active' : ''}" data-build-idx="${escapeTeamText(`${variant.name}-${b.title}`)}">
                 ${b.marquee_ability ? `
                     <div class="ability-box marquee">
                         <div class="marquee-header" 
@@ -140,7 +144,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                     </div>
                 ` : ''}
                 
-                ${b.recommended_build ? `
+                ${countBuildStats(b.recommended_build) >= 3 ? `
                     <div class="ability-box build">
                         <h4>${t('variant.recommendedBuild')}</h4>
                         <p>${formatBuildText(b.recommended_build)}</p>
@@ -160,11 +164,11 @@ export function createVariantCard(variant, charKey, index = 0) {
 
 
     return `
-        <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${index * 0.05}s; --char-accent: ${effectiveCharColor}" data-variant-name="${variant.name}">
+        <div class="variant-card ${rarityKey} animate-in" style="animation-delay: ${Math.min(index, 5) * 0.03}s; --char-accent: ${effectiveCharColor}" data-variant-name="${variant.name}">
             ${badgeHTML}
             ${exclusiveBadgeHTML}
             <div class="variant-left-section">
-                <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name)}" class="variant-portrait" loading="lazy"
+                <img src="${portraitUrl}" alt="${getLocalizedNameSync(variant.name, rawSAName)}" class="variant-portrait" loading="lazy"
                      onerror="this.src='img/official/Annie_Icon.webp'">
                 <div class="variant-classes-display desktop-classes">
                     ${classesHTML}
@@ -172,7 +176,7 @@ export function createVariantCard(variant, charKey, index = 0) {
             </div>
             <div class="variant-info">
                 <div class="variant-header">
-                    <h3>${getLocalizedNameSync(variant.name)}</h3>
+                    <h3>${getLocalizedNameSync(variant.name, rawSAName)}</h3>
                     ${charSubtitleHTML}
                     <div class="variant-classes-display mobile-classes">
                         ${classesHTML}
@@ -217,6 +221,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                             ${t('variant.build')}
                         </button>
                     ` : ''}
+                    <button class="variant-tab-btn" data-tab="teams" data-card="${cardId}">${t('teams.title')}</button>
                     ${hasExtras(charKey, variant.name) ? `
                         <button class="variant-tab-btn extras-tab-btn" data-tab="extras" data-card="${cardId}">
                             ⭐ ${t('variant.information')}
@@ -244,8 +249,9 @@ export function createVariantCard(variant, charKey, index = 0) {
                                 <div class="build-selector">
                                     ${builds.map((b, i) => `
                                         <button class="build-pill ${i === 0 ? 'active' : ''}" 
-                                                onclick="switchVariantBuild(this, '${variant.name}-${b.title}')">
-                                            ${b.title.toUpperCase()}
+                                                data-build-key="${escapeTeamText(`${variant.name}-${b.title}`)}"
+                                                onclick="switchVariantBuild(this, this.dataset.buildKey)">
+                                            ${escapeTeamText(b.title.toUpperCase())}
                                         </button>
                                     `).join('')}
                                 </div>
@@ -267,7 +273,7 @@ export function createVariantCard(variant, charKey, index = 0) {
                                         <p style="color: #fff; font-weight: 500; font-size: 0.9rem;">${formatText(variant.marquee_ability)}</p>
                                     </div>
                                 ` : ''}
-                                ${buildText ? `
+                                ${countBuildStats(buildText) >= 3 ? `
                                     <div class="ability-box build">
                                         <h4>${t('variant.recommendedBuild')}</h4>
                                         <p>${formatBuildText(buildText)}</p>
@@ -284,6 +290,15 @@ export function createVariantCard(variant, charKey, index = 0) {
                         </div>
                     ` : ''}
 
+                    <div class="variant-tab-content" data-tab="teams" data-team-character="${escapeTeamText(effectiveCharKey)}" data-team-variant="${escapeTeamText(variant.name)}">
+                        <div class="team-category-tabs" role="group" aria-label="${t('teams.categories')}">
+                            <button type="button" class="team-category-btn active" data-team-category="general" aria-pressed="true">${t('teams.general')}</button>
+                            ${supportsDefensiveTeams(getVariantClasses(variant.name)) ? `<button type="button" class="team-category-btn" data-team-category="defense" aria-pressed="false">${t('teams.defense')}</button>` : ''}
+                        </div>
+                        <p class="recommendation-note">${t('recommendations.teams')}</p>
+                        <p class="team-order">${t('teams.order')}</p>
+                        <div class="team-results" aria-live="polite"></div>
+                    </div>
                     <!-- Extras Tab -->
                     ${hasExtras(charKey, variant.name) ? `
                         <div class="variant-tab-content" data-tab="extras">
@@ -303,7 +318,7 @@ export function createVariantCard(variant, charKey, index = 0) {
  */
 function renderExtrasContent(charKey, variant) {
     const extras = getExtrasData(charKey, variant.name);
-    if (!extras) return '<p class="profile-empty">Sem extras disponíveis.</p>';
+    if (!extras) return `<p class="profile-empty">${t('extrasUi.empty')}</p>`;
 
     const cardUid = `extras-${charKey}-${variant.name.replace(/\s+/g, '-')}`;
 
@@ -314,9 +329,9 @@ function renderExtrasContent(charKey, variant) {
     return `
         <div class="extras-container" id="${cardUid}">
             <div class="extras-sub-tabs">
-                ${hasGeneral ? `<button class="extras-sub-pill active" onclick="switchExtrasSubTab('${cardUid}', 'gerais')">Batalhas Gerais</button>` : ''}
-                ${hasGuildas ? `<button class="extras-sub-pill" onclick="switchExtrasSubTab('${cardUid}', 'guildas')">Guildas</button>` : ''}
-                ${hasFenda ? `<button class="extras-sub-pill" onclick="switchExtrasSubTab('${cardUid}', 'fenda')">Batalhas da Fenda</button>` : ''}
+                ${hasGeneral ? `<button class="extras-sub-pill active" data-extras-tab="gerais" onclick="switchExtrasSubTab('${cardUid}', 'gerais')">${t('extrasUi.general')}</button>` : ''}
+                ${hasGuildas ? `<button class="extras-sub-pill" data-extras-tab="guildas" onclick="switchExtrasSubTab('${cardUid}', 'guildas')">${t('extrasUi.guilds')}</button>` : ''}
+                ${hasFenda ? `<button class="extras-sub-pill" data-extras-tab="fenda" onclick="switchExtrasSubTab('${cardUid}', 'fenda')">${t('extrasUi.rift')}</button>` : ''}
             </div>
 
             <div class="extras-sub-contents">
@@ -357,7 +372,7 @@ function getMoveImage(charKey, moveName) {
 /**
  * Render a team member card with image
  */
-function renderTeamMemberCard(member) {
+function renderTeamMemberCard(member, index) {
     const imgSrc = getVariantImage(member.character, member.variant, 0);
     const classes = getVariantClasses(member.variant) || [];
     const mainClass = classes[0];
@@ -365,17 +380,19 @@ function renderTeamMemberCard(member) {
 
     return `
         <div class="extras-team-card ${member.is_current ? 'is-current' : ''}">
-            <img loading="lazy" src="${imgSrc}" alt="${member.variant}" class="extras-team-img"
+            <img loading="lazy" src="${imgSrc}" alt="${getLocalizedNameSync(member.variant)}" class="extras-team-img"
                  onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-team-info">
-                <span class="extras-team-name">${member.variant}</span>
+                <span class="team-position">${t(`teams.${['front', 'middle', 'last'][index]}`)}</span>
+                <span class="extras-team-name">${getLocalizedNameSync(member.variant)}</span>
                 ${classInfo ? `
                 <span class="extras-team-class" style="color: ${classInfo.color}; font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; display: flex; align-items: center; gap: 4px; margin-top: 2px;">
                     <img src="${classInfo.icon}" alt="${mainClass}" style="width: 12px; height: 12px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));">
-                    ${mainClass}
+                    ${getLocalizedClassName(mainClass)}
                 </span>` : ''}
+                ${classes.slice(1).map(cls => `<span class="extras-secondary-class">${t('variant.alsoActsAs')}: ${getLocalizedClassName(cls)}</span>`).join('')}
             </div>
-            ${member.is_current ? '<span class="extras-current-badge">ATUAL</span>' : ''}
+            ${member.is_current ? `<span class="extras-current-badge">${t('extrasUi.current')}</span>` : ''}
         </div>
     `;
 }
@@ -391,14 +408,14 @@ function renderAllyCard(ally) {
 
     return `
         <div class="extras-ally-card">
-            <img loading="lazy" src="${imgSrc}" alt="${ally.variant}" class="extras-ally-img"
+            <img loading="lazy" src="${imgSrc}" alt="${getLocalizedNameSync(ally.variant)}" class="extras-ally-img"
                  onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-ally-info">
-                <span class="extras-ally-name">${ally.variant}</span>
+                <span class="extras-ally-name">${getLocalizedNameSync(ally.variant)}</span>
                 ${classInfo ? `
                 <span class="extras-ally-class" style="color: ${classInfo.color}; display: flex; align-items: center; gap: 4px;">
                     <img src="${classInfo.icon}" alt="${mainClass}" style="width: 12px; height: 12px; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));">
-                    ${mainClass}
+                    ${getLocalizedClassName(mainClass)}
                 </span>` : ''}
             </div>
         </div>
@@ -412,10 +429,10 @@ function renderMatchupCard(matchup) {
     const imgSrc = getVariantImage(matchup.character, matchup.variant, 0);
     return `
         <div class="extras-matchup-card">
-            <img loading="lazy" src="${imgSrc}" alt="${matchup.variant}" class="extras-matchup-img"
+            <img loading="lazy" src="${imgSrc}" alt="${getLocalizedNameSync(matchup.variant)}" class="extras-matchup-img"
                  onerror="this.onerror=null; this.src='img/official/Annie_Icon.webp'">
             <div class="extras-matchup-info">
-                <span class="extras-matchup-name" style="color: white;">${matchup.variant}</span>
+                <span class="extras-matchup-name" style="color: white;">${getLocalizedNameSync(matchup.variant)}</span>
                 ${matchup.reason ? `<p class="extras-matchup-reason">${matchup.reason}</p>` : ''}
             </div>
         </div>
@@ -433,10 +450,11 @@ function renderBatalhasGerais(data, charKey) {
         html += `
             <div class="extras-section">
                 <h4 class="extras-section-title">
-                    👥 TIME RECOMENDADO
+                    👥 ${t('extrasUi.recommendedTeam')}
                 </h4>
+                <p class="team-order">${t('teams.order')}</p>
                 <div class="extras-team-grid">
-                    ${data.time_recomendado.map(m => renderTeamMemberCard(m)).join('')}
+                    ${data.time_recomendado.map((member, index) => renderTeamMemberCard(member, index)).join('')}
                 </div>
             </div>
         `;
@@ -448,7 +466,7 @@ function renderBatalhasGerais(data, charKey) {
             <div class="extras-section">
                 <div class="extras-section-header" onclick="toggleExtrasSection(this)">
                     <h4 class="extras-section-title">
-                        🤝 ALIADOS RECOMENDADOS
+                        🤝 ${t('extrasUi.recommendedAllies')}
                     </h4>
                     <span class="extras-toggle-icon">▼</span>
                 </div>
@@ -467,7 +485,7 @@ function renderBatalhasGerais(data, charKey) {
             <div class="extras-section">
                 <div class="extras-section-header" onclick="toggleExtrasSection(this)">
                     <h4 class="extras-section-title">
-                        🥊 GOLPES EXTRAS
+                        🥊 ${t('extrasUi.extraMoves')}
                     </h4>
                     <span class="extras-toggle-icon">▼</span>
                 </div>
@@ -491,7 +509,7 @@ function renderBatalhasGerais(data, charKey) {
         `;
     }
 
-    return html || '<p class="profile-empty">Nenhuma informação disponível.</p>';
+    return html || `<p class="profile-empty">${t('extrasUi.noInformation')}</p>`;
 }
 
 /**
@@ -499,7 +517,7 @@ function renderBatalhasGerais(data, charKey) {
  */
 function renderGuildas(data, charKey) {
     if (!data.bosses || data.bosses.length === 0) {
-        return '<p class="profile-empty">Nenhuma recomendação para guildas.</p>';
+        return `<p class="profile-empty">${t('extrasUi.noGuilds')}</p>`;
     }
 
     return data.bosses.map(boss => `
@@ -517,10 +535,11 @@ function renderGuildas(data, charKey) {
             ${boss.team?.length > 0 ? `
                 <div class="extras-section">
                     <h4 class="extras-section-title mini">
-                        👥 TIME SUGERIDO
+                        👥 ${t('extrasUi.suggestedTeam')}
                     </h4>
+                    <p class="team-order">${t('teams.order')}</p>
                     <div class="extras-team-grid">
-                        ${boss.team.map(m => renderTeamMemberCard(m)).join('')}
+                        ${boss.team.map((member, index) => renderTeamMemberCard(member, index)).join('')}
                     </div>
                 </div>
             ` : ''}
@@ -540,7 +559,7 @@ function renderBatalhasFenda(data, charKey) {
             html += `
                 <div class="extras-section">
                     <h4 class="extras-section-title">
-                        🛡️ SE DÁ BEM CONTRA (DEFESA)
+                        🛡️ ${t('extrasUi.goodAgainst')}
                     </h4>
                     <div class="extras-matchups-grid">
                         ${defesa.boa_contra.map(m => renderMatchupCard(m)).join('')}
@@ -553,7 +572,7 @@ function renderBatalhasFenda(data, charKey) {
             html += `
                 <div class="extras-section">
                     <h4 class="extras-section-title">
-                        ⚠️ DIFICULDADE CONTRA
+                        ⚠️ ${t('extrasUi.difficultAgainst')}
                     </h4>
                     <div class="extras-matchups-grid">
                         ${defesa.ruim_contra.map(m => renderMatchupCard(m)).join('')}
@@ -566,7 +585,7 @@ function renderBatalhasFenda(data, charKey) {
             html += `
                 <div class="extras-section">
                     <h4 class="extras-section-title">
-                        🧪 CATALISADORES DIFÍCEIS
+                        🧪 ${t('extrasUi.difficultCatalysts')}
                     </h4>
                     <div class="extras-catalyst-tags">
                         ${defesa.catalisadores_dificeis.map(c => `<span class="catalyst-tag" style="cursor: pointer;" onclick="showCatalystDisclaimer('${c}')">${c}</span>`).join('')}
@@ -582,7 +601,7 @@ function renderBatalhasFenda(data, charKey) {
             <div class="extras-section">
                 <div class="extras-section-header" onclick="toggleExtrasSection(this)">
                     <h4 class="extras-section-title">
-                        🥊 GOLPES EXTRAS PARA FENDA
+                        🥊 ${t('extrasUi.riftMoves')}
                     </h4>
                     <span class="extras-toggle-icon">▼</span>
                 </div>
@@ -606,7 +625,7 @@ function renderBatalhasFenda(data, charKey) {
         `;
     }
 
-    return html || '<p class="profile-empty">Nenhuma informação de fenda disponível.</p>';
+    return html || `<p class="profile-empty">${t('extrasUi.noRift')}</p>`;
 }
 
 /**
@@ -632,7 +651,7 @@ window.switchVariantBuild = function(btn, buildKey) {
  * @param {Array} variants - Array of variant objects
  * @param {string} charKey - Current character key
  */
-export function renderVariants(containerId, variants, charKey) {
+export function renderVariants(containerId, variants, charKey, { append = false, indexOffset = 0 } = {}) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
@@ -641,21 +660,49 @@ export function renderVariants(containerId, variants, charKey) {
     return;
   }
 
-    container.innerHTML = variants
+    const html = variants
         .map((variant, index) => {
             const effectiveCharKey = variant._charKey || charKey;
-            return createVariantCard(variant, effectiveCharKey, index);
+            return createVariantCard(variant, effectiveCharKey, index + indexOffset);
         })
         .join('');
+    if (append) container.insertAdjacentHTML('beforeend', html);
+    else container.innerHTML = html;
 
-  // Attach event listeners for tab switching
-  container.querySelectorAll('.variant-tab-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const cardId = this.dataset.card;
-      const tabName = this.dataset.tab;
+  // One delegated listener also handles cards appended by "Show more".
+  if (container._variantActionsBound) return;
+  container._variantActionsBound = true;
+  container.addEventListener('click', event => {
+    const button = event.target.closest('button');
+    if (!button || !container.contains(button)) return;
+    if (button.matches('.variant-tab-btn')) {
+      const cardId = button.dataset.card;
+      const tabName = button.dataset.tab;
       switchVariantTab(cardId, tabName);
-    });
+      if (tabName === 'teams') openTeamCategory(document.getElementById(`${cardId}-contents`)?.querySelector('[data-tab="teams"]'));
+    } else if (button.matches('[data-team-category]')) {
+      openTeamCategory(button.closest('[data-tab="teams"]'), button.dataset.teamCategory);
+    }
   });
+}
+
+async function openTeamCategory(panel, category = 'general') {
+    if (!panel) return;
+    panel.querySelectorAll('[data-team-category]').forEach(button => {
+        const active = button.dataset.teamCategory === category;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+    });
+    const results = panel.querySelector('.team-results');
+    const request = {};
+    results._teamModuleRequest = request;
+    results.textContent = t('teams.loading');
+    try {
+        const { showTeams } = await import('./TeamRecommendations.js');
+        if (results.isConnected && results._teamModuleRequest === request) await showTeams(results, panel.dataset.teamCharacter, panel.dataset.teamVariant, category);
+    } catch {
+        if (results.isConnected && results._teamModuleRequest === request) results.textContent = t('teams.loadError');
+    }
 }
 
 /**

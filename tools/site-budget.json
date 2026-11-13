@@ -10,8 +10,6 @@
     "singleImageBytes": 500000
   },
   "allowedDuplicates": [
-    ["img/double/Double_27.webp", "img/peacock/Peacock_26.webp"],
-    ["img/portrait/fu/rCopy.webp", "img/portrait/fu/rCopy_.webp"],
-    ["img/portrait/bb/rCopy.webp", "img/portrait/bb/rCopy_.webp"]
+    ["img/double/Double_27.webp", "img/peacock/Peacock_26.webp"]
   ]
 }

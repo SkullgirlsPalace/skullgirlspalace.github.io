@@ -5,17 +5,10 @@
 
 // Core imports
 import { initRouter, navigateTo, openCharacterDetails, openCharacterTier, switchDetailTab } from './router.js';
-import { loadAllCharacters, loadTierData, loadExtrasData } from './services/dataService.js';
-import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleDisclaimer, handleToggleLanguageMenu, handleSelectLanguage } from './components/Navigation.js';
+import { createNavbar, createAboutDrawer, createScrollNav, scrollToTop, scrollToBottom, handleToggleAboutDrawer, handleToggleMobileMenu, handleToggleLanguageMenu, handleSelectLanguage } from './components/Navigation.js';
 import { createFooter } from './components/Footer.js';
-import { handleFilterClick, handleSortClick, handleClearFilters, handleToggleFilter, handleToggleCharDropdown, handleToggleCharDropdownMobile, handleSearchInput, handleSearchClear, handleSearchResultClick, handleSearchFocus, handleMainFilterAction, handleToggleAdvancedFilters, handleToggleAdvancedFiltersMobile, handleClearAdvancedFilters } from './components/FilterBar.js';
-import { handleCalculateEarnings } from './components/Calculator.js';
-import { initAttributeTooltips } from './components/AttributeTooltip.js';
-
-import { refreshVariants } from './pages/character-detail.js';
 import { getState } from './state/store.js';
-import { setLanguage, getCurrentLanguage, t } from './i18n/index.js';
-import { preloadKrazeteData } from './i18n/dataTranslations.js';
+import { t } from './i18n/index.js';
 
 // ========== GLOBAL HANDLER REGISTRATION ==========
 // These need to be globally accessible for onclick handlers in HTML
@@ -30,33 +23,24 @@ window.scrollToBottom = scrollToBottom;
 // Navigation handlers
 window.handleToggleAboutDrawer = handleToggleAboutDrawer;
 window.handleToggleMobileMenu = handleToggleMobileMenu;
-window.handleToggleDisclaimer = handleToggleDisclaimer;
 
 // Language handlers
 window.handleToggleLanguageMenu = handleToggleLanguageMenu;
 window.handleSelectLanguage = handleSelectLanguage;
 
-// Filter handlers
-window.handleFilterClick = handleFilterClick;
-window.handleSortClick = handleSortClick;
-window.handleClearFilters = handleClearFilters;
-window.handleToggleFilter = handleToggleFilter;
-window.handleToggleCharDropdown = handleToggleCharDropdown;
-window.handleToggleCharDropdownMobile = handleToggleCharDropdownMobile;
-window.handleToggleAdvancedFilters = handleToggleAdvancedFilters;
-window.handleToggleAdvancedFiltersMobile = handleToggleAdvancedFiltersMobile;
-
-// Search handlers
-window.handleSearchInput = handleSearchInput;
-window.handleSearchClear = handleSearchClear;
-window.handleSearchResultClick = handleSearchResultClick;
-window.handleSearchFocus = handleSearchFocus;
-window.handleMainFilterAction = handleMainFilterAction;
-window.handleClearAdvancedFilters = handleClearAdvancedFilters;
+// Keep template handlers available without downloading the character UI on home.
+for (const name of [
+    'handleFilterClick', 'handleSortClick', 'handleClearFilters', 'handleToggleFilter',
+    'handleToggleCharDropdown', 'handleToggleCharDropdownMobile', 'handleToggleAdvancedFilters',
+    'handleToggleAdvancedFiltersMobile', 'handleSearchInput', 'handleSearchClear',
+    'handleSearchResultClick', 'handleSearchFocus', 'handleMainFilterAction', 'handleClearAdvancedFilters'
+]) {
+    window[name] = (...args) => import('./components/FilterBar.js').then(module => module[name](...args));
+}
 
 
 // Calculator handlers (specific handlers registered by statistics.js init)
-window.handleCalculateEarnings = handleCalculateEarnings;
+window.handleCalculateEarnings = (...args) => import('./components/Calculator.js').then(module => module.handleCalculateEarnings(...args));
 
 
 // ========== VARIANT CARD TAB HANDLER ==========
@@ -95,13 +79,7 @@ window.switchExtrasSubTab = function (containerId, subTab) {
 
     // Update sub-tab pills
     container.querySelectorAll('.extras-sub-pill').forEach(pill => {
-        const pillTab = pill.textContent.trim().toLowerCase();
-        const isActive = (
-            (subTab === 'gerais' && pillTab.includes('gerais')) ||
-            (subTab === 'guildas' && pillTab.includes('guildas')) ||
-            (subTab === 'fenda' && pillTab.includes('fenda'))
-        );
-        pill.classList.toggle('active', isActive);
+        pill.classList.toggle('active', pill.dataset.extrasTab === subTab);
     });
 
     // Update sub-tab contents
@@ -128,7 +106,7 @@ window.onFiltersChanged = () => {
     const state = getState();
     if (state.currentCharacter) {
         if (state.currentTab === 'builds' || state.currentCharacter === 'todos') {
-            refreshVariants(state.currentCharacter);
+            return import('./pages/character-detail.js').then(module => module.refreshVariants(state.currentCharacter));
         } else if (state.currentTab === 'tier') {
             // Re-render tier view to apply filters
             import('./pages/character-detail.js').then(module => {
@@ -167,28 +145,8 @@ async function init() {
         console.log('🏗️ Setting up static UI...');
         setupStaticUI();
 
-        console.log('📦 Loading characters...');
-        await loadAllCharacters();
-        console.log('✅ Characters loaded');
-
-        console.log('📊 Loading tier data...');
-        await loadTierData();
-        console.log('✅ Tier data loaded');
-
-        console.log('🌟 Loading extras data...');
-        await loadExtrasData();
-        console.log('✅ Extras data loaded');
-
-        console.log('🌐 Preloading Krazete translations...');
-        try {
-            await preloadKrazeteData();
-            console.log('✅ Krazete data preloaded');
-        } catch (err) {
-            console.warn('⚠️ Krazete preload failed (will lazy-load):', err);
-        }
-
         console.log('🧭 Initializing router...');
-        initRouter();
+        await initRouter();
 
         console.log('✨ Application initialization complete!');
     } catch (error) {
@@ -235,9 +193,6 @@ function setupStaticUI() {
     // Setup scroll listener for navbar visibility
     setupScrollListener();
 
-    // Initialize attribute tooltip system (delegated events)
-    initAttributeTooltips();
-
     // Re-render static UI on language change
     window.addEventListener('languageChanged', () => {
         const navContainer = document.getElementById('nav-container');
@@ -256,16 +211,17 @@ function setupStaticUI() {
         }
 
         setupScrollListener();
-        initAttributeTooltips();
     });
 }
 
 let lastScrollY = window.scrollY;
+let removeScrollListener;
 
 /**
  * Setup scroll event listener for scroll-to-top button
  */
 function setupScrollListener() {
+    removeScrollListener?.();
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const scrollBottomBtn = document.getElementById('scrollToBottomBtn');
     const navbar = document.getElementById('navbar');
@@ -293,7 +249,7 @@ function setupScrollListener() {
             // Floating search bar logic
             const searchBar = document.getElementById('search-bar-container');
             if (searchBar) {
-                if (scrollY > 150) {
+                if (scrollY > 150 || window.scrollX > 150) {
                     searchBar.classList.add('floating');
                 } else {
                     searchBar.classList.remove('floating');
@@ -333,15 +289,22 @@ function setupScrollListener() {
             lastScrollY = scrollY;
         };
 
-        window.addEventListener('scroll', updateScrollButtons);
+        window.addEventListener('scroll', updateScrollButtons, { passive: true });
 
         // Run initial check after a short delay (content may load async)
-        setTimeout(updateScrollButtons, 500);
+        let timer = setTimeout(updateScrollButtons, 0);
 
         // Also re-check whenever hash changes (page navigation)
-        window.addEventListener('hashchange', () => {
-            setTimeout(updateScrollButtons, 300);
-        });
+        const onRouteChange = () => {
+            clearTimeout(timer);
+            timer = setTimeout(updateScrollButtons, 0);
+        };
+        window.addEventListener('hashchange', onRouteChange);
+        removeScrollListener = () => {
+            window.removeEventListener('scroll', updateScrollButtons);
+            window.removeEventListener('hashchange', onRouteChange);
+            clearTimeout(timer);
+        };
     }
 }
 

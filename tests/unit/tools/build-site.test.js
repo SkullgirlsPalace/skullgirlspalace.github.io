@@ -118,4 +118,34 @@ describe('static site build', () => {
         expect(() => buildSite({ outDir: path.resolve('.') })).toThrow(/wipe the source tree/);
         expect(() => buildSite({ outDir: path.resolve('..') })).toThrow(/wipe the source tree/);
     });
+
+    it('preserves local image temporaries but excludes them from publication', () => {
+        const rootDir = tempDir(), outDir = path.join(rootDir, '_site');
+        fs.mkdirSync(path.join(rootDir, 'data'));
+        fs.mkdirSync(path.join(rootDir, 'img'));
+        fs.copyFileSync(path.resolve('index.html'), path.join(rootDir, 'index.html'));
+        fs.writeFileSync(path.join(rootDir, 'data', 'tier-data.json'), '{}');
+        fs.writeFileSync(path.join(rootDir, 'img', 'portrait.webp'), 'image');
+        fs.writeFileSync(path.join(rootDir, 'img', 'portrait.webp.tmp'), 'temporary');
+        fs.writeFileSync(path.join(rootDir, 'img', 'portrait.webp.bak'), 'backup');
+        buildSite({ rootDir, outDir, publishedPaths: ['img'] });
+        expect(fs.existsSync(path.join(outDir, 'img', 'portrait.webp'))).toBe(true);
+        expect(fs.existsSync(path.join(outDir, 'img', 'portrait.webp.tmp'))).toBe(false);
+        expect(fs.existsSync(path.join(outDir, 'img', 'portrait.webp.bak'))).toBe(false);
+        expect(fs.existsSync(path.join(rootDir, 'img', 'portrait.webp.tmp'))).toBe(true);
+    });
+
+    it('keeps unreferenced Wiki source media outside the publication', () => {
+        const rootDir = tempDir(), outDir = path.join(rootDir, '_site');
+        fs.mkdirSync(path.join(rootDir, 'data'));
+        fs.mkdirSync(path.join(rootDir, 'img', 'Wiki'), { recursive: true });
+        fs.copyFileSync(path.resolve('index.html'), path.join(rootDir, 'index.html'));
+        fs.writeFileSync(path.join(rootDir, 'data', 'tier-data.json'), '{}');
+        fs.writeFileSync(path.join(rootDir, 'img', 'portrait.webp'), 'image');
+        fs.writeFileSync(path.join(rootDir, 'img', 'Wiki', 'source.gif'), 'source');
+        buildSite({ rootDir, outDir, publishedPaths: ['img'] });
+        expect(fs.existsSync(path.join(outDir, 'img', 'portrait.webp'))).toBe(true);
+        expect(fs.existsSync(path.join(outDir, 'img', 'Wiki'))).toBe(false);
+        expect(fs.existsSync(path.join(rootDir, 'img', 'Wiki', 'source.gif'))).toBe(true);
+    });
 });

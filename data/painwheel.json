@@ -4,8 +4,8 @@
     "variants": {
         "diamante": [
             {
-                "name": "Escaladora de Paredes",
-                "title_formatted": "Escaladora de Paredes - Água - Diamante",
+                "name": "Escalador de Paredes",
+                "title_formatted": "Escalador de Paredes - Água - Diamante",
                 "element": "Água",
                 "color_hex": "#000000",
                 "images": {
@@ -19,7 +19,8 @@
                 },
                 "signature_ability": {
                     "name": "SÓ PENDURADA AQUI",
-                    "description": "[HAB 1]: **Depois que Painwheel ficar no ar por 1.5 segundos,** ela ganha OLHO-MORTO por 10 segundos e inflige QUEBRA de GUARDA por 8 segundos.\n\n[HAB 2]: 15% de chance **ao GOLPEAR **de remover 1 EF. POS. do oponente e ganhar ESQUIVA por 10 seg. **enquanto perto de um oponente sofrendo de QUEBRA DE GUARDA.**"
+                    "description": "[SA1]: Depois que Painwheel permanece no ar por 1 segundo, ganha OLHO-MORTO e aplica QUEBRA DE GUARDA, ambos por 12 segundos.\n\n[SA2]: 15% de chance **ao GOLPEAR **de remover 1 EF. POS. do oponente e ganhar ESQUIVA por 10 seg. **enquanto perto de um oponente sofrendo de QUEBRA DE GUARDA.**",
+                    "krazete_id": "webcrawler"
                 },
                 "marquee_ability": "Rancor",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -41,7 +42,8 @@
                 },
                 "signature_ability": {
                     "name": "DESTRUIÇÃO IMINENTE",
-                    "description": "[HAB 1]: **Enquanto estiver perto de um oponente,** inflige MALDIÇÃO e QUIETUS por 2 segundos a cada 1 segundo(s).\n\n[HAB 2]: **Com o oponente sofrendo QUIETUS, acertar uma EXPLOSÃO** inflige DESTRUIÇÃO permanente por 15 s e cura 15% da VIDA. **DESTRUIÇÃO é removida quando o oponente ganha um EF. POS. ou a Painwheel morre.***"
+                    "description": "[SA1]: **Enquanto estiver perto de um oponente,** inflige MALDIÇÃO e QUIETUS por 2 segundos a cada 1 segundo(s).\n\n[SA2]: **Com o oponente sofrendo QUIETUS, acertar uma EXPLOSÃO** inflige DESTRUIÇÃO permanente por 15 s e cura 15% da VIDA. **DESTRUIÇÃO é removida quando o oponente ganha um EF. POS. ou a Painwheel morre.**",
+                    "krazete_id": "maskedmenace"
                 },
                 "marquee_ability": "Sangue Maculado",
                 "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",
@@ -102,7 +104,7 @@
                     {
                         "title": "Ataque",
                         "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                        "recommended_arsenal": "Morte Rastejante, Eixo de Corrida, Eixo de Corrida, Ferrão Gae Bolga",
+                        "recommended_arsenal": "Colheita de Buer, Morte Rastejante, Eixo de Corrida, Eixo de Corrida, Ferrão Gae Bolga",
                         "marquee_ability": "Rancor"
                     },
                     {
@@ -131,7 +133,8 @@
                 },
                 "signature_ability": {
                     "name": "SERENIDADE",
-                    "description": "[HAB 1]: **Ao BLOQUEAR com menos de 50% de VIDA,** ganhe 8% de VIDA por segundo.\n\n[HAB 2]: **Ganhe também 8% no MEDIDOR DE BLOCKBUSTER por segundo.**"
+                    "description": "[SA1]: Enquanto BLOQUEIA, o lutador ativo recupera 6% de VIDA por segundo. **Ao chegar a 100% de VIDA, ganha BÊNÇÃO por 12 segundos a cada segundo, em vez de se curar.**\n\n[SA2]: **Enquanto Painwheel estiver viva e o lutador ativo estiver sob efeito de BÊNÇÃO,** ele ganha 2% do MEDIDOR DE BLOCKBUSTER por segundo e tem 50% de chance de reiniciar a recarga dos GOLPES ESPECIAIS ao acertar um GOLPE CRÍTICO.",
+                    "krazete_id": "firefly"
                 },
                 "marquee_ability": "Sangue Maculado",
                 "recommended_build": "VD%, Defesa, Resistência e Reat. Especial",
@@ -251,8 +254,9 @@
                     "power": "27,134"
                 },
                 "signature_ability": {
-                    "name": "HEMORRAGIA",
-                    "description": "[HAB 1]: 10% de chance de infligir SANGRAMENTO FORTE por 10 segundos **ao GOLPEAR.**\n\n[HAB 2]: Ganhe FÚRIA permanente **quando a VIDA do oponente cair abaixo de 25%.**"
+                    "name": "ZUMBIDO DE INSETO",
+                    "description": "[SA1]: A cada 10% de VIDA perdida pelo oponente, aplica POLARIDADE INVERSA e DEFINHAR por 10 segundos.\n\n[SA2]: Enquanto a porcentagem de VIDA de Painwheel for maior que a do oponente, ganha 1 acúmulo de ESQUIVA a cada 5 segundos.",
+                    "krazete_id": "buzzkill"
                 },
                 "marquee_ability": "Rancor",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq de Crítico e Dano Crítico",

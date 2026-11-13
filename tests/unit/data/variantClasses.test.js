@@ -50,6 +50,14 @@ describe('variantClasses.js', () => {
   });
 
   describe('VARIANT_CLASSES', () => {
+    it('uses at most a primary and distinct secondary, with Wildcard standing alone', () => {
+      for (const classes of Object.values(VARIANT_CLASSES)) {
+        expect(classes.length).toBeGreaterThan(0);
+        expect(classes.length).toBeLessThanOrEqual(2);
+        expect(new Set(classes).size).toBe(classes.length);
+        if (classes.includes('Coringa')) expect(classes).toEqual(['Coringa']);
+      }
+    });
     it('should have many variant mappings', () => {
       expect(Object.keys(VARIANT_CLASSES).length).toBeGreaterThan(50);
     });

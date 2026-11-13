@@ -23,11 +23,13 @@ Afinidade da variante: Fogo, Água, Ar, Luz, Trevas ou Neutro.
 _EN_: Element (Fire, Water, Wind, Light, Dark, Neutral)
 
 **Classe**:
-Papel da variante no time: Ofensivo (causa o máximo de dano), Defensivo (vida alta e sobrevivência), Suporte de Utilidade (dá efeitos positivos aos aliados ou negativos aos oponentes) ou Coringa (cumpre várias funções).
+Papel da variante no time: Ofensivo (causa o máximo de dano), Defensivo (vida alta e sobrevivência), Suporte (dá efeitos positivos aos aliados ou negativos aos oponentes) ou Coringa (atua nas três classes anteriores). Os arquivos editoriais ainda usam o identificador `Suporte de Utilidade` para preservar os dados existentes.
 _Avoid_: função, role
 
+Cada variante tem uma **classe principal** e pode ter uma **classe secundária**, exibida como “Classe secundária”. A principal determina a ordenação por classe; os filtros consideram ambas e mostram primeiro as variantes cuja classe principal corresponde ao filtro. No arquivo editorial, a primeira posição da lista é a principal e a segunda é a secundária. Coringa é uma classificação única, sem secundária: ter duas classes não transforma uma variante em Coringa. Alterar classes não altera automaticamente seus ranks.
+
 **Habilidade característica**:
-Habilidade única de uma variante, quase sempre em duas partes (HAB 1 e HAB 2).
+Habilidade única de uma variante, quase sempre em duas partes. O editor usa os campos SA1 e SA2 nos dois idiomas; os marcadores dos arquivos não aparecem nas descrições da interface.
 _EN_: Signature Ability
 
 **Habilidade superior**:
@@ -42,6 +44,11 @@ _EN_: Moves
 **Efeito**:
 Buff ou debuff aplicado durante a luta: efeito positivo (EF. POS.) ou efeito negativo (EF. NEG.).
 _Avoid_: modificador (que também é usado para catalisador)
+
+**Abreviações de efeitos**:
+Abreviações portuguesas representam o mesmo efeito que o nome por extenso; não são outro idioma nem uma mudança na habilidade. `REGEN. FORTE`, `REGEN FORTE` e `REGEN.FORTE` equivalem a **Regeneração Forte** (_EN_: Heavy Regen). Essa equivalência apareceu em Lazulita e Turno Mortal e também vale para novas variantes e revisões. A forma por extenso é usada ao normalizar a habilidade publicada.
+
+Outros exemplos válidos são `BLOQ. DE CURA` (Bloqueio de Cura), `QUEBRA DE ARM.` (Quebra de Armadura), `EF. POS.` (Efeito Positivo) e `EF. NEG.` (Efeito Negativo), incluindo plurais. Preserve abreviações editoriais reconhecidas; não as classifique como inglês só pelo ponto ou pela caixa alta. Quando a equivalência não estiver confirmada, deixe para revisão manual.
 
 **Ficha**:
 Página de um personagem com as abas Sobre, Variantes e Golpes.

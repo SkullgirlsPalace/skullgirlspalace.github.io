@@ -53,6 +53,11 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
 }
 
 .about-link {
@@ -98,6 +103,7 @@
     transition: all var(--transition-fast);
 }
 
+
 .nav-links li a:hover,
 .nav-links li a.active {
     color: var(--accent-gold);
@@ -128,4 +134,15 @@
     color: var(--text-primary);
     cursor: pointer;
     padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: transparent;
+    touch-action: manipulation;
 }
+
+.nav-overlay { border: 0; padding: 0; }
+
+.nav-links li a { min-height: 44px; display: flex; align-items: center; }

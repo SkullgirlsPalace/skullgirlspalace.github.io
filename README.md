@@ -14,6 +14,10 @@ A montagem verifica automaticamente limites de peso, novas duplicatas e arquivos
 
 Para o estado conferido de rastreamento e as verificações no painel, consulte [Bing: diagnóstico atualizado](docs/BING-INDEXING.md). As URLs de personagem têm visão geral, builds e tier list distintas; o sitemap preserva 56 URLs.
 
+## Editores locais
+
+O [Palace Estúdio](tools/editor/README.md) edita habilidades, builds, classes, times e ranks. A [Oficina do site](tools/site-editor/README.md) permite selecionar partes da página real para ajustar aparência, textos e mídia, com prévia de computador/celular. Abra pelo `Abrir-Editor-Site.cmd` ou `npm.cmd run editor:site`. Ambos guardam rascunhos no navegador, em armazenamentos separados, e exportam arquivos para revisão; não publicam automaticamente.
+
 ## Arquitetura de Estilos (CSS)
 
 Refatoramos o antigo arquivo monolítico (`main.css`) em uma estrutura modular para facilitar a manutenção e o desenvolvimento de novas funcionalidades. Agora, cada parte do site tem seu próprio arquivo de estilo.
@@ -47,3 +51,7 @@ Estilos que são específicos de uma única página.
 -   `guide.css`: Tabelas e estrutura da página de guias.
 -   `tierlist.css`: Página e editor da Tier List.
 -   `catalysts.css`: Página de catalisadores.
+
+## Dados e traduções
+
+O Krazete é a referência principal do projeto para os dados originais do jogo. As traduções em português podem conter correções manuais editoriais e devem ser preservadas ao atualizar os dados. Consulte [Dados, fontes e atualizações](docs/DADOS-E-FONTES.md) antes de processar ou substituir arquivos de conteúdo.

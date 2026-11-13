@@ -51,6 +51,10 @@
 }
 
 .character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     background: var(--bg-card);
     border: var(--border-subtle);
     border-radius: var(--border-radius);
@@ -87,6 +91,7 @@
 }
 
 .character-card img {
+    display: block;
     width: 100px;
     height: 100px;
     object-fit: contain;
@@ -100,6 +105,8 @@
 }
 
 .character-card .name {
+    display: block;
+    width: 100%;
     font-family: 'Dodam', 'Inter', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
@@ -216,7 +223,7 @@
 
 .variant-classes-display {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 6px;
@@ -261,6 +268,11 @@
     object-fit: contain;
     filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
 }
+
+.variant-class-wrapper.secondary-class .variant-class-tag { font-size: .75rem; font-weight: 400; color: var(--text-secondary); }
+.variant-class-wrapper.secondary-class .variant-class-label { font-size: .65rem; font-weight: 500; text-transform: none; letter-spacing: 0; }
+.variant-class-wrapper.secondary-class .variant-class-tag img { width: 16px; height: 16px; }
+.extras-secondary-class { display: block; margin-top: 4px; font-size: .65rem; color: var(--text-secondary); line-height: 1.5; }
 
 /* Mobile variant classes are hidden on desktop by default */
 .mobile-classes {
@@ -1002,11 +1014,13 @@
 
 .extras-team-grid {
     display: grid;
+    direction: rtl;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 12px;
 }
 
 .extras-team-card {
+    direction: ltr;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;

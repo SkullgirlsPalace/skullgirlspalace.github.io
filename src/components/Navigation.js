@@ -16,12 +16,12 @@ export function createNavbar() {
   return `
 <nav class="navbar hidden-nav" id="navbar">
   <div class="navbar-brand">
-    <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
+    <button class="logo" type="button" onclick="navigateTo('')">Skullgirls Palace</button>
   </div>
   <div class="navbar-right">
     <div class="nav-actions">
       <div class="language-selector" id="languageSelector">
-        <button class="language-btn" onclick="handleToggleLanguageMenu()">
+        <button class="language-btn" aria-expanded="false" aria-controls="languageDropdown" onclick="handleToggleLanguageMenu()">
           <span class="lang-flag">${currentLang === 'pt-BR' ? '<img src="img/official/flag_pt.webp" alt="PT" class="flag-icon">' : '<img src="img/official/flag_en.webp" alt="EN" class="flag-icon">'}</span>
           <span class="lang-code">${currentLang === 'pt-BR' ? 'PT-BR' : 'EN'}</span>
           <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12">
@@ -39,14 +39,14 @@ export function createNavbar() {
           </button>
         </div>
       </div>
-      <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
+      <button class="hamburger" type="button" aria-label="${t('nav.toggleMenu')}" aria-expanded="false" aria-controls="navLinks" onclick="handleToggleMobileMenu()">☰</button>
     </div>
-    <div class="nav-overlay" id="navOverlay" onclick="handleToggleMobileMenu()"></div>
+    <button class="nav-overlay" id="navOverlay" type="button" aria-label="${t('nav.closeMenu')}" aria-hidden="true" onclick="handleToggleMobileMenu()"></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="javascript:void(0)" onclick="navigateTo('')">${t('nav.home')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('characters')">${t('nav.characters')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('guide')">${t('nav.guide')}</a></li>
-      <li><a href="javascript:void(0)" onclick="navigateTo('stats')">${t('nav.calculator')}</a></li>
+      <li><a href="#">${t('nav.home')}</a></li>
+      <li><a href="#characters">${t('nav.characters')}</a></li>
+      <li><a href="#guide">${t('nav.guide')}</a></li>
+      <li><a href="#stats">${t('nav.calculator')}</a></li>
     </ul>
   </div>
 </nav>
@@ -59,53 +59,51 @@ export function createNavbar() {
  */
 export function createAboutDrawer() {
   return `
-<div id="drawer-overlay" class="drawer-overlay" onclick="handleToggleAboutDrawer()"></div>
-<aside id="about-drawer" class="about-drawer">
+<div id="drawer-overlay" class="drawer-overlay" aria-hidden="true" onclick="handleToggleAboutDrawer()"></div>
+<aside id="about-drawer" class="about-drawer" role="dialog" aria-modal="true" aria-labelledby="about-drawer-title" aria-hidden="true" tabindex="-1">
   <div class="drawer-header">
-    <h3>${t('about.title')}</h3>
-    <button class="close-drawer" onclick="handleToggleAboutDrawer()">×</button>
+    <div class="drawer-heading">
+      <span class="about-eyebrow">Skullgirls Mobile</span>
+      <h3 id="about-drawer-title">${t('about.title')}</h3>
+    </div>
+    <button class="close-drawer" type="button" aria-label="${t('tooltip.close')}" onclick="handleToggleAboutDrawer()">×</button>
   </div>
   <div class="drawer-content">
-    <div class="hero">
+    <section class="about-drawer-hero">
       <h2>${t('about.heroTitle')}</h2>
       <p>${t('about.heroSubtitle')}</p>
-      <div class="hero-buttons">
-        <a href="https://discord.gg/whZJz92RTt" target="_blank" class="btn btn-primary">
+      <div class="about-actions">
+        <a href="https://discord.gg/whZJz92RTt" target="_blank" rel="noopener noreferrer" class="about-action about-action-primary">
           ${t('about.discord')}
         </a>
-        <a href="https://github.com/bot-do-jao/palacio-branco-entreprises" target="_blank" class="btn btn-secondary">
+        <a href="https://github.com/SkullgirlsPalace/skullgirlspalace.github.io" target="_blank" rel="noopener noreferrer" class="about-action">
           ${t('about.github')}
         </a>
       </div>
-    </div>
+    </section>
 
     <div class="info-cards vertical">
-      <div class="card-link">
-        <h3>${t('about.buildsTitle')}</h3>
-        <p>${t('about.buildsDesc')}</p>
-      </div>
-      <div class="card-link">
-        <h3>${t('about.calculatorTitle')}</h3>
-        <p>${t('about.calculatorDesc')}</p>
-      </div>
+      <section class="card-link about-info-card">
+        <h3>${t('about.projectAboutTitle')}</h3>
+        <p>${t('about.projectAboutDesc')}</p>
+      </section>
     </div>
 
     <div class="credits-section">
       <h4>${t('about.creditsTitle')}</h4>
       <p>${t('about.creditsDevs')}</p>
-      <p>${t('about.inspiration')} <a href="https://github.com/Krazete" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Krazete</a></p>
-      <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" style="color: var(--accent-gold); text-decoration: none;">Fandom Wiki</a>.</p>
+      <p>${t('about.inspiration')} <a href="https://github.com/Krazete" target="_blank" rel="noopener noreferrer">Krazete</a></p>
+      <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">${t('about.krazeteCatalog')}</a> ${t('about.and')} <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
       <p>${t('about.assetsNote')}</p>
 
-      <div class="disclaimer-tooltip" style="margin-top: 20px;">
-        <button class="disclaimer-btn" onclick="handleToggleDisclaimer()" title="${t('about.disclaimerBtn')}">⚠️</button>
-        <div class="disclaimer-content" id="disclaimer-content">
-          <p><strong>${t('about.disclaimerTitle')}</strong> ${t('about.disclaimerText1')}</p>
-          <p>${t('about.disclaimerText2')}</p>
-        </div>
+      <div class="about-legal-note">
+        <p><strong>${t('about.disclaimerTitle')}</strong> ${t('about.disclaimerText1')}</p>
+        <p>${t('about.disclaimerText2')}</p>
       </div>
-      <p style="font-size: 0.85rem; margin-top: 20px;">${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" style="color: var(--accent-gold); text-decoration: none; font-weight: bold;">LivePix</a></p>
-      <p style="font-size: 0.85rem; margin-top: 10px;">${t('about.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank" style="color: var(--accent-gold); text-decoration: none;">${t('about.serverName')}</a>.</p>
+      <div class="about-support">
+        <p>${t('about.supportDesc')} <a href="https://livepix.gg/lifizin" target="_blank" rel="noopener noreferrer">LivePix</a></p>
+        <p>${t('about.reportBug')} <a href="https://discord.gg/whZJz92RTt" target="_blank" rel="noopener noreferrer">${t('about.serverName')}</a>.</p>
+      </div>
     </div>
   </div>
 </aside>
@@ -121,6 +119,15 @@ export function createScrollNav() {
   <button id="scrollTopBtn" class="scroll-nav-btn" onclick="scrollToTop()" title="${t('common.scrollToTop')}"></button>
   <button id="scrollToBottomBtn" class="scroll-nav-btn" onclick="scrollToBottom()" title="${t('common.scrollToBottom')}"></button>
 `;
+}
+
+/** Create a touch-friendly back-to-home control for standalone pages. */
+export function createPageBackControl() {
+  return `
+    <div class="route-back-control">
+      <button class="btn-back route-back-button" type="button" onclick="navigateTo('')" aria-label="${t('common.backHome')}" title="${t('common.backHome')}">←</button>
+    </div>
+  `;
 }
 
 /**
@@ -146,14 +153,14 @@ export function updateNavbarVisibility(section) {
 export function updateActiveNavLink(section) {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
-        const onclick = link.getAttribute('onclick');
+        const href = link.getAttribute('href');
         
         let targetSection = section;
         if (section && section.startsWith('character')) {
             targetSection = 'characters';
         }
         
-        if (onclick && onclick.includes(`'${targetSection}'`)) {
+        if (href === `#${targetSection}`) {
             link.classList.add('active');
         }
     });
@@ -169,15 +176,21 @@ export function scrollToBottom() {
 }
 
 // Global handlers
-let disclaimerTimer = null;
 
 export function handleToggleAboutDrawer() {
   const drawer = document.getElementById('about-drawer');
   const overlay = document.getElementById('drawer-overlay');
   if (drawer && overlay) {
-    drawer.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = drawer.classList.contains('active') ? 'hidden' : '';
+    const isOpening = !drawer.classList.contains('active');
+    drawer.classList.toggle('active', isOpening);
+    overlay.classList.toggle('active', isOpening);
+    drawer.setAttribute('aria-hidden', String(!isOpening));
+    overlay.setAttribute('aria-hidden', String(!isOpening));
+    document.body.style.overflow = isOpening ? 'hidden' : '';
+
+    if (isOpening) {
+      drawer.querySelector('.close-drawer')?.focus();
+    }
   }
 }
 
@@ -186,25 +199,12 @@ export function handleToggleMobileMenu() {
   const overlay = document.getElementById('navOverlay');
   
   if (navLinks && overlay) {
-    navLinks.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-  }
-}
-
-export function handleToggleDisclaimer() {
-  const content = document.getElementById('disclaimer-content');
-  if (!content) return;
-
-  content.classList.toggle('active');
-
-  if (content.classList.contains('active')) {
-    clearTimeout(disclaimerTimer);
-    disclaimerTimer = setTimeout(() => {
-      content.classList.remove('active');
-    }, 7000);
-  } else {
-    clearTimeout(disclaimerTimer);
+    const isOpening = !navLinks.classList.contains('active');
+    navLinks.classList.toggle('active', isOpening);
+    overlay.classList.toggle('active', isOpening);
+    overlay.setAttribute('aria-hidden', String(!isOpening));
+    document.querySelector('.hamburger')?.setAttribute('aria-expanded', String(isOpening));
+    document.body.style.overflow = isOpening ? 'hidden' : '';
   }
 }
 
@@ -212,7 +212,9 @@ export function handleToggleDisclaimer() {
 export function handleToggleLanguageMenu() {
   const dropdown = document.getElementById('languageDropdown');
   if (dropdown) {
-    dropdown.classList.toggle('active');
+    const isOpening = !dropdown.classList.contains('active');
+    dropdown.classList.toggle('active', isOpening);
+    document.querySelector('.language-btn')?.setAttribute('aria-expanded', String(isOpening));
   }
 }
 
@@ -221,9 +223,9 @@ export function handleSelectLanguage(lang) {
   const dropdown = document.getElementById('languageDropdown');
   if (dropdown) {
     dropdown.classList.remove('active');
+    document.querySelector('.language-btn')?.setAttribute('aria-expanded', 'false');
   }
-  // Re-render the entire app with new language
-  window.location.reload();
+  // setLanguage dispatches languageChanged; the router updates the current page.
 }
 
 // Close language dropdown when clicking outside
@@ -232,5 +234,6 @@ document.addEventListener('click', (e) => {
   const dropdown = document.getElementById('languageDropdown');
   if (selector && dropdown && !selector.contains(e.target)) {
     dropdown.classList.remove('active');
+    selector.querySelector('.language-btn')?.setAttribute('aria-expanded', 'false');
   }
 });

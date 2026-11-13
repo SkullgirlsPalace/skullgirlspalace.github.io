@@ -4,6 +4,28 @@
     "variants": {
         "diamante": [
             {
+                "name": "Inkfluencer",
+                "title_formatted": "Inkfluencer - Neutro - Diamante",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/peacock/Inkfluencer.webp"
+                },
+                "stats": {
+                    "attack": "15,130",
+                    "health": "56,045",
+                    "power": "28,915"
+                },
+                "signature_ability": {
+                    "name": "SPLASH!",
+                    "description": "[HAB 1]: PROJÉTEIS que não sejam BLOCKBUSTER aplicam GOSMA e TINTA no oponente por 10 segundos cada e DRENAM 20% do MEDIDOR DE BLOCKBUSTER ao ACERTAR. BLOCKBUSTERS consomem toda a TINTA no oponente para causar 20% a mais de dano por acúmulo de TINTA (até 5 acúmulos).\n\n[HAB 2]: Ganhe BARREIRA ao entrar ou sair de IDEIA PROFUNDA. Enquanto estiver em IDEIA PROFUNDA, MOVIMENTOS ESPECIAIS recarregam 100% mais rápido e você ganha 30% do MEDIDOR DE BLOCKBUSTER por segundo."
+                },
+                "marquee_ability": "Episódio Especial",
+                "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",
+                "recommended_arsenal": "Aeroporto Mortal, Multidão Enfurecida, Dia do Julgamento, Vai, George!, Liguem os Motores!"
+            },
+            {
                 "name": "Fica Frio",
                 "title_formatted": "Fica Frio - Água - Diamante",
                 "element": "Água",
@@ -19,11 +41,12 @@
                 },
                 "signature_ability": {
                     "name": "CONGELAMENTO",
-                    "description": "[HAB 1]: **Projéteis têm 50% de chance de infligir LENTIDÃO e DEFINHAR** por 15 segundos ao GOLPEAR. Os dois efeitos serão removidos se o oponente usar um BLOCKBUSTER.\n\n[HAB 2]: **Quando LENTIDÃO ou DEFINHAR expiram, o oponente sofre dano igual a 50% do ATAQUE da Peacock e fica ATORDOADO por 3 s.**"
+                    "description": "[SA1]: GOLPES DE PROJÉTIL aplicam DEFINHAR por 9 segundos. Quando o oponente atingir 5 acúmulos de DEFINHAR, remova todos os acúmulos de DEFINHAR para aplicar ATORDOAMENTO por 4 segundos e colocar os MOVIMENTOS ESPECIAIS e ASSISTÊNCIAS do oponente em recarga.\n\n[SA2]: Ao remover DEFINHAR do oponente, drena 9% de VIDA e do MEDIDOR DE BLOCKBUSTER.",
+                    "krazete_id": "freezeframe"
                 },
                 "marquee_ability": "Episódio Especial",
-                "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
-                "recommended_arsenal": "Agonia de Argo, Dia do Julgamento, Liguem os Motores!, BANG, BANG, BANG!, Vai, George!"
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Aeroporto Mortal, Multidão Enfurecida, Agonia de Argo, Dia do Julgamento, Vai, George!"
             },
             {
                 "name": "Apanhadora de Sonhos",
@@ -87,7 +110,8 @@
                 },
                 "signature_ability": {
                     "name": "BLINDADA",
-                    "description": "[HAB 1]: Tem 15% de chance **ao ser golpeada ou golpear** a PEACOCK ganha INABALÁVEL por 6 s e INVENCÍVEL por 2s.\n\n[HAB 2]: **Ao se beneficiar de INABALÁVEL ou INVENCÍVEL**, causa 50% de dano extra e recupera 50% do dano causado como VIDA."
+                    "description": "[SA1]: Quando qualquer lutador é GOLPEADO, tem 15% de chance de ganhar INABALÁVEL por 6 segundos e INVENCÍVEL por 2 segundos.\n\n[SA2]: **Ao se beneficiar de INABALÁVEL ou INVENCÍVEL**, causa 50% de dano extra e recupera 50% do dano causado como VIDA.",
+                    "krazete_id": "untouchable"
                 },
                 "marquee_ability": "Episódio especial",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -175,7 +199,8 @@
                 },
                 "signature_ability": {
                     "name": "ZOMBARIA FESTIVA",
-                    "description": "[HAB 1]: Ganhe FÚRIA por 15 seg para cada EF. POSITIVO **ganho pelo oponente.**\n\n[HAB 2]: **GOLPES  de Projétil** têm 50% de chance de converter 1 EF. POSITIVO do oponente em um EF. NEGATIVO aleatório."
+                    "description": "[SA1]: Ganhe FÚRIA por 15 seg para cada EF. POSITIVO **ganho pelo oponente.**\n\n[SA2]: **GOLPES de Projétil** têm 50% de chance de converter 1 EF. POSITIVO do oponente em um EF. NEGATIVO aleatório.",
+                    "krazete_id": "meanone"
                 },
                 "marquee_ability": "Episódio Especial",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -197,7 +222,7 @@
                 },
                 "signature_ability": {
                     "name": "Presença Chocante",
-                    "description": "[HAB 1]: **Todos os ataques de ASSISTÊNCIA dos aliados** aplicam MARCA DA MORTE por 20 seg e ATORDOAMENTO por 4s. Peacock também ganha 3 acúmulos de BARREIRA.\n\n[HAB 2]: **A cada 15 GOLPES de combo por um aliado de elemento Luz**, remove 1 EF. POS. do oponente e aplica OSCILAÇÃO DE ENERGIA por 10/12/15s."
+                    "description": "[HAB 1]: **Todos os ataques de ASSISTÊNCIA dos aliados** aplicam MARCA DA MORTE por 20 seg e ATORDOAMENTO por 4s. Peacock também ganha 3 acúmulos de BARREIRA.\n\n[HAB 2]: **A cada 15 GOLPES de combo por um aliado de elemento Luz**, remove 1 EF. POS. do oponente e aplica OSCILAÇÃO DE ENERGIA por 15s."
                 },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
@@ -220,7 +245,7 @@
                 "signature_ability": {
                     "name": "VALEU A ESPERA",
                     "description": "[HAB 1]: A cada 15 segundos, aumente permanentemente o ATAQUE em 35% e a TAXA DE CRÍTICO em 20% (mesmo no banco).\n\n[HAB 2]: Quando qualquer lutador acertar um GOLPE CRÍTICO, há 50% de chance de ganhar FÚRIA e BÊNÇÃO por 10 segundos cada."
-                                },
+                },
                 "marquee_ability": "Festa do Elenco",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",
                 "recommended_arsenal": "Multidão Enfurecida, BANG, BANG, BANG!, Vai, George!, Quem Vem Agora? (Expulsão), Quem Vem Agora? (Expulsão)"
@@ -243,7 +268,7 @@
                 },
                 "signature_ability": {
                     "name": "PIADA MORTAL",
-                    "description": "[HAB 1]: **Inflige um EFEITO NEGATIVO aleatório** por 5 segundos ao usar um GOLPE ESPECIAL.\n\n[HAB 2]:Se o oponente estiver **sofrendo um EFEITO NEGATIVO** quando a Peacock for derrotada, a VIDA dele será reduzida em 50%."
+                    "description": "[HAB 1]: Inflige um EFEITO NEGATIVO aleatório por 8 segundos ao usar um GOLPE ESPECIAL. Além disso, uma vez por partida, ao sofrer um GOLPE que seria fatal, recupera 10% da VIDA MÁXIMA por EFEITO NEGATIVO no oponente.\n\n[HAB 2]: Quando Peacock sofre um GOLPE que seria fatal enquanto o oponente estiver sofrendo um EFEITO NEGATIVO, reduz a VIDA do oponente em 50%."
                 },
                 "marquee_ability": "Episódio Especial ",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

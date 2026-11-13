@@ -31,6 +31,11 @@ afterEach(() => {
 });
 
 describe('published site weight audit', () => {
+    it('rejects the local editor and its launcher in the published artifact', () => {
+        const report = auditSite({ siteDir: site({ 'tools/editor/index.html': 'local editor', 'Abrir-Editor.cmd': 'local launcher' }), budget });
+        expect(report.errors).toContain('Local-only directory was published: tools');
+        expect(report.errors).toContain('Unexpected published path: Abrir-Editor.cmd');
+    });
     it('counts the published resources without modifying them', () => {
         const siteDir = site({ 'index.html': 'home', 'src/app.js': 'const x=1;', 'src/style.css': 'body{}', 'img/icon.webp': 'image', 'data/test.json': '{}' });
         const before = fs.readFileSync(path.join(siteDir, 'img/icon.webp'));

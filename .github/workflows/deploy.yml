@@ -35,6 +35,7 @@ jobs:
       - name: Run tests with coverage
         run: npm run test:coverage
 
+      # Checks publication weight and duplicates on pull requests as well as deploys.
       - name: Build and check published site
         run: npm run build
 

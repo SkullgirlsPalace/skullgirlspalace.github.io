@@ -1,7 +1,18 @@
 import { describe, it, expect } from 'vitest';
-import { EFFECT_DATA, getEffectPatterns } from '../../../src/data/effectData.js';
+import { EFFECT_DATA, getEffectPatterns, getEffectIconByName, getLocalizedEffect } from '../../../src/data/effectData.js';
 
 describe('effectData.js', () => {
+  it('preserves the existing buff, debuff, and permanent-effect explanations in both languages', () => {
+    expect(getLocalizedEffect('armor', 'pt-BR').explicacao).toBe('Reduz dano em 20%. Removido por Quebra de Armadura.');
+    expect(getLocalizedEffect('armor', 'en').explicacao).toBe('Reduces damage by 20%. Removed by Armor Break.');
+    expect(getLocalizedEffect('bleed', 'pt-BR').explicacao).toBe(EFFECT_DATA.bleed.explicacao);
+    expect(getLocalizedEffect('permanent_modifier', 'pt-BR').explicacao).toBe(EFFECT_DATA.permanent_modifier.explicacao);
+    expect(getLocalizedEffect('armor', 'pt-BR')).not.toHaveProperty('wikiExplanation');
+  });
+
+  it('keeps the previous Miasma description instead of adding a new interpretation', () => {
+    expect(EFFECT_DATA.miasma.detailed).toBe('Drena 2% de VIDA e MEDIDOR por segundo de oponentes próximos.');
+  });
   describe('EFFECT_DATA', () => {
     it('should have effect entries', () => {
       expect(Object.keys(EFFECT_DATA).length).toBeGreaterThan(0);
@@ -51,6 +62,12 @@ describe('effectData.js', () => {
   });
 
   describe('getEffectPatterns', () => {
+    it('resolves Portuguese Heavy Regen abbreviations to the same effect icon and pattern', () => {
+      for (const name of ['REGEN. FORTE', 'REGEN FORTE', 'REGEN.FORTE']) {
+        expect(getEffectIconByName(name)).toBe(EFFECT_DATA.heavy_regen.icon);
+        expect(getEffectPatterns().some(item => item.effectKey === 'heavy_regen' && item.pattern.toLowerCase() === name.toLowerCase())).toBe(true);
+      }
+    });
     it('should return an array', () => {
       const patterns = getEffectPatterns();
       expect(Array.isArray(patterns)).toBe(true);

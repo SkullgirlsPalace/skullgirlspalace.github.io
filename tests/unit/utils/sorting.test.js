@@ -1,6 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { sortVariants, filterVariants } from '../../../src/utils/sorting.js';
 import { flattenVariants } from '../../../src/utils/variantUtils.js';
+import { getVariantClasses } from '../../../src/data/variantClasses.js';
 
 // Mock constants
 vi.mock('../../../src/config/constants.js', () => ({
@@ -29,8 +30,8 @@ vi.mock('../../../src/data/variantClasses.js', () => ({
 
 // Mock newContent
 vi.mock('../../../src/data/newContent.js', () => ({
-  isNewVariant: vi.fn(() => false),
-  NEW_VARIANTS: []
+  isNewVariant: vi.fn(name => ['Doente de Amor', 'Gremlindo'].includes(name)),
+  NEW_VARIANTS: ['Doente de Amor', 'Gremlindo']
 }));
 
 describe('sorting.js', () => {
@@ -46,6 +47,33 @@ describe('sorting.js', () => {
   });
 
   describe('sortVariants', () => {
+    it('shows new diamond variants before new gold variants', () => {
+      const featured = [
+        { name: 'Doente de Amor', rarityKey: 'ouro', stats: { power: '24,328' } },
+        { name: 'Gremlindo', rarityKey: 'diamante', stats: { power: '26,578' } },
+        { name: 'Outra', rarityKey: 'diamante', stats: { power: '30,000' } }
+      ];
+      expect(sortVariants(featured, { type: 'score', direction: 'desc' }, { rarity: [], element: [] }).map(item => item.name))
+        .toEqual(['Gremlindo', 'Doente de Amor', 'Outra']);
+    });
+    it('puts primary class matches first within each rarity, then follows the chosen sort', () => {
+      vi.mocked(getVariantClasses).mockImplementation(name => ({
+        'Defensivo A': ['Defensivo', 'Ofensivo'],
+        'Defensivo B': ['Defensivo'],
+        'Secundário': ['Ofensivo', 'Defensivo'],
+        'Diamante secundário': ['Ofensivo', 'Defensivo']
+      })[name] || ['Ofensivo']);
+      try {
+        const variants = [
+          { name: 'Secundário', rarityKey: 'ouro', stats: { power: '30000' } },
+          { name: 'Defensivo B', rarityKey: 'ouro', stats: { power: '20000' } },
+          { name: 'Defensivo A', rarityKey: 'ouro', stats: { power: '10000' } },
+          { name: 'Diamante secundário', rarityKey: 'diamante', stats: { power: '5000' } }
+        ];
+        expect(sortVariants(variants, { type: 'score', direction: 'desc' }, { variantClass: ['Defensivo'], rarity: [], element: [] }).map(item => item.name))
+          .toEqual(['Diamante secundário', 'Defensivo B', 'Defensivo A', 'Secundário']);
+      } finally { vi.mocked(getVariantClasses).mockImplementation(() => ['Ofensivo']); }
+    });
     it('should sort by score descending by default', () => {
       const result = sortVariants(mockVariants, { type: 'score', direction: 'desc' }, { rarity: [], element: [] });
       expect(result[0].name).toBe('Variant D'); // 20000 power

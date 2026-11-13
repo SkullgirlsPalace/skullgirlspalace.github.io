@@ -4,6 +4,28 @@
     "variants": {
         "diamante": [
             {
+                "name": "Verdadeiro Eu",
+                "title_formatted": "Verdadeiro Eu - Água - Diamante",
+                "element": "Água",
+                "color_hex": "#00ffff",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/fukua/True_Self.webp"
+                },
+                "stats": {
+                    "attack": "15,591",
+                    "health": "50,439",
+                    "power": "28,356"
+                },
+                "signature_ability": {
+                    "name": "KUNG FALSO",
+                    "description": "[HAB 1]: Ataques de CHUTE bem-sucedidos de Fukua concedem 1 acúmulo de CHUTE SOMBRIO (máx. 10). Ao ganhar um acúmulo de CHUTE SOMBRIO, TRANSFERE 1 EFEITO POSITIVO do oponente. BLOCKBUSTERS gastam 5 acúmulos de CHUTE SOMBRIO para invocar a MÃO DE GRENDEL e ACERTAR o oponente.\n\n[HAB 2]: Ao gastar 5 ou mais acúmulos de CHUTE SOMBRIO, ganha INABALÁVEL por 15 segundos. Oponentes derrotados enquanto este INABALÁVEL estiver ativo não podem mais REVIVER."
+                },
+                "marquee_ability": "Maldade Spectral",
+                "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",
+                "recommended_arsenal": "Uma Vez Mordido..., Conchinha Inevitável, Broca Sonhadora, Tiros de Amor, Tiros de Amor"
+            },
+            {
                 "name": "Imagem Dividida",
                 "title_formatted": "Imagem Dividida - Luz - Diamante",
                 "element": "Luz",
@@ -85,7 +107,7 @@
                 },
                 "signature_ability": {
                     "name": "INTENÇÕES ASSASSINAS",
-                    "description": "[HAB 1]: Inflige MARCA DA MORTE permanente e ganha FÚRIA a cada 15 segundos enquanto estiver enfrentando o mesmo oponente. **A FÚRIA é removida ao SAIR DA ASSISTÊNCIA.**\n\n[HAB 2]: 100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS **se o oponente estiver sofrendo de MARCA DA MORTE.**"
+                    "description": "[HAB 1]: Aplique MARCA DA MORTE permanente e ganhe FÚRIA para cada 10% de VIDA perdida por qualquer lutador.\n\n[HAB 2]: 100% de chance dos ATAQUES DE ARRANCADA da Fukua serem INDEFENSÁVEIS se o oponente estiver sofrendo de MARCA DA MORTE."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -107,7 +129,8 @@
                 },
                 "signature_ability": {
                     "name": "Hipnotizador ",
-                    "description": "[HAB 1]: **Durante um combo**, ganhe 1 EF. POSITIVO(S) aleatório(s) e aplique 1 EF. NEGETIVO(S) aleatório(s) a cada 1 segundos. Todos os EF. POSITIVOS e EF. NEGATIVOS são removidos no final do combo.\n\n[HAB 2]: Fukua causa 10% a mais de DANO **para cada EF. POSITIVO. aplicado nela**. Ao receber 10 ou mais EF. POSITIVO., todos os EF. POSITIVOS do oponente são removidos."
+                    "description": "[SA1]: Durante um combo, ganha 1 EFEITO POSITIVO aleatório e aplica 1 EFEITO NEGATIVO aleatório a cada segundo. Todos esses efeitos são removidos ao fim do combo.\n\n[SA2]: Fukua causa 10% a mais de DANO **para cada EF. POSITIVO. aplicado nela**. Ao receber 10 ou mais EF. POSITIVO., todos os EF. POSITIVOS do oponente são removidos.",
+                    "krazete_id": "idolecho"
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -131,7 +154,7 @@
                 },
                 "signature_ability": {
                     "name": "FANTASMA DA FUKUA",
-                    "description": "[HAB 1]: **Um BLOQUEIO no momento certo** dá 3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: **Enquanto Fukua está se beneficiando de BARREIRA**, ela não reage aos ataques de projéteis do oponente e 200% do dano do projétil é refletido de volta."
+                    "description": "[HAB 1]: Um BLOQUEIO no momento certo dá 3 camadas de BARREIRA e DESABILITA BLOCKBUSTERS e ASSISTÊNCIAS do oponente por 10 seg.\n\n[HAB 2]: Enquanto estiver sob efeito de BARREIRA, GOLPES DE PROJÉTIL concedem OLHO-MORTO por 15 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -153,7 +176,7 @@
                 },
                 "signature_ability": {
                     "name": "PARALISIA DO SONO",
-                    "description": "[HAB 1]: Ganhe 2 camadas de MIASMA por 10 s a cada 2 s **enquanto estiver longe do oponente.**\n\n[HAB 2]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 2 s **enquanto estiver próximo ao oponente.**"
+                    "description": "[HAB 1]: Inflige IMOBILIZAR e FADIGA por 10 s a cada 2 s enquanto estiver próximo ao oponente.\n\n[HAB 2]: Enquanto o oponente estiver sofrendo FADIGA, ganha 1 acúmulo de MIASMA por 10 segundos a cada 2 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -287,7 +310,7 @@
                 },
                 "signature_ability": {
                     "name": "CHUVA FANTASMA",
-                    "description": "[HAB 1]: 15% de chance de causar QUEBRA DE ARMADURA e OSCILAÇÃO DE ENERGIA por 15 seg cada **quando acertar um GOLPE BLOQUEADO.**\n\n[HAB 2]: Após 5 seg **ao lado da Fukua e não ATORDOADOS, os oponentes perdem os EF. POSITIVOS** e sofrem FADIGA por 10 seg."
+                    "description": "[HAB 1]: 15% de chance ao acertar um GOLPE, incluindo GOLPES bloqueados, de infligir QUEBRA DE ARM. e OSCILAÇÃO DE ENERGIA por 15 segundos cada.\n\n[HAB 2]: A cada 5 segundos enquanto Fukua estiver no lado do oponente no cenário e não estiver ATORDOADA, os oponentes perdem todos os EFEITOS POSITIVOS atuais e sofrem ATORDOAMENTO por 4 segundos."
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -354,8 +377,9 @@
                     "power": "20,949"
                 },
                 "signature_ability": {
-                    "name": "",
-                    "description": "[HAB 1]: **Qualquer aliado ganha ACELERAÇÃO permanente depois de enfrentar um oponente com o mesmo ELEMENTO** por 5 segundos.\n\n[HAB 2]: **Qualquer aliado inflige LENTIDÃO permanente depois de enfrentar um oponente do mesmo TIPO DE PERSONAGEM** por 5 segundos."
+                    "name": "MENTES IGUAIS",
+                    "description": "[HAB 1]: **Qualquer aliado ganha ACELERAÇÃO permanente depois de enfrentar um oponente com o mesmo ELEMENTO** por 5 segundos.\n\n[HAB 2]: **Qualquer aliado inflige LENTIDÃO permanente depois de enfrentar um oponente do mesmo TIPO DE PERSONAGEM** por 5 segundos.",
+                    "krazete_id": "roughcopy"
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

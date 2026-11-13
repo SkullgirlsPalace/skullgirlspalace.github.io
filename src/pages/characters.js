@@ -15,7 +15,7 @@ export function render() {
     return `
         <section class="section character-selection" id="character-selection">
             <div class="section-header">
-                <button class="btn-back" onclick="navigateTo('')">
+                <button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
                     ←
                 </button>
                 <h2>${t('characters.selectCharacter')}</h2>

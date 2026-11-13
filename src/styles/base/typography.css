@@ -1,7 +1,7 @@
 /* ========== FONTS ========== */
 @font-face {
     font-family: 'Washington';
-    src: url('../../../font/WashingtonBoldDynamic.otf') format('opentype');
+    src: url('../../../font/WashingtonBoldDynamic-latin.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,15 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../../font/RobotoCondensed-Regular.ttf') format('truetype');
+    src: url('../../../font/RobotoCondensed-Regular-latin.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../../../font/RobotoCondensed-Regular-latin.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +25,7 @@
 
 @font-face {
     font-family: 'Cinema';
-    src: url('../../../font/TBCinemaRGothic-M.ttf') format('truetype');
+    src: url('../../../font/TBCinemaRGothic-M-latin.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,22 +33,10 @@
 
 @font-face {
     font-family: 'Dodam';
-    src: url('../../../font/Typo_DodamM.ttf') format('truetype');
+    src: url('../../../font/Typo_DodamM-latin.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-html[lang='ja'] .cinematic {
-    font-family: 'Inter', 'Cinema', 'Trebuchet MS', 'Arial Narrow', sans-serif;
-}
-
-html[lang='ko'] .cinematic {
-    font-family: 'Inter', 'Dodam', 'Trebuchet MS', 'Arial Narrow', sans-serif;
-}
-
-html[lang='zh-cn'] .cinematic {
-    font-family: 'Inter', 'DMFT', 'Trebuchet MS', 'Arial Narrow', sans-serif;
 }
 
 /* Numerical Values Styling */
@@ -49,6 +45,12 @@ html[lang='zh-cn'] .cinematic {
     color: #00ff00;
     /* Standardized green for numbers */
     font-weight: 500;
+}
+
+.number.progression-final {
+    color: var(--accent-gold);
+    font-weight: 800;
+    text-shadow: 0 0 8px rgba(212, 168, 75, 0.35);
 }
 
 /* Rarity Gradients */

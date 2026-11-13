@@ -6,20 +6,23 @@
 import { getCurrentLanguage } from '../i18n/index.js';
 
 // ── Class names (PT-BR and EN) ──────────────────────────
-const CLASS_NAMES_PT = ['Ofensivo', 'Defensivo', 'Suporte de Utilidade', 'Coringa'];
-const CLASS_NAMES_EN = ['Offensive', 'Defensive', 'Utility Support', 'Wildcard'];
+const CLASS_NAMES_PT = ['Ofensivo', 'Defensivo', 'Suporte', 'Coringa'];
+const CLASS_NAMES_EN = ['Offensive', 'Defensive', 'Support', 'Wildcard'];
 
 const CLASS_NAME_PT_TO_EN = {
  'Ofensivo': 'Offensive',
  'Defensivo': 'Defensive',
- 'Suporte de Utilidade': 'Utility Support',
+ 'Suporte': 'Support',
+ 'Suporte de Utilidade': 'Support',
  'Coringa': 'Wildcard'
 };
 
 const CLASS_NAME_EN_TO_PT = {
  'Offensive': 'Ofensivo',
  'Defensive': 'Defensivo',
+ 'Support': 'Suporte de Utilidade',
  'Utility Support': 'Suporte de Utilidade',
+ 'Suporte': 'Suporte de Utilidade',
  'Wildcard': 'Coringa'
 };
 
@@ -40,17 +43,17 @@ export const CLASS_ORDER = {
 
 // ── Class descriptions (PT-BR and EN) ───────────────────
 const CLASS_DESCRIPTIONS_PT = {
- "Ofensivo": "O Personagem Principal do time feito para causar o m\u00E1ximo de dano poss\u00EDvel, geralmente ele ganha efeitos ou inflinge efeitos. \u00DAtil contra personagens Defensivos.",
+ "Ofensivo": "O Personagem Principal do time feito para causar o m\u00E1ximo de dano poss\u00EDvel, geralmente ele ganha efeitos ou inflige efeitos. \u00DAtil contra personagens Defensivos.",
  "Defensivo": "Personagem que tem alta quantidade de Vida e Habilidades que aumentam a sobreviv\u00EAncia do mesmo, tamb\u00E9m pode ter habilidades punitivas como dano refletido e outros efeitos eficazes contra o opressor.",
- "Suporte de Utilidade": "Personagem que tem habilidades que podem conceder EF. POSITIVOS aos Aliados, EF. NEGATIVOS aos oponentes ou ambos (conceder efeitos e inflingir efeitos). Alguns suportes podem se beneficiar de suas pr\u00F3prias habilidades e entrar em campo para contribuir para o time de diferentes formas.",
- "Coringa": "Personagem que consegue desempenhar em v\u00E1rias fun\u00E7\u00F5es, pode inflingir dano, aplicar efeitos, inflingir efeitos, defender ou at\u00E9 servir como suporte."
+ "Suporte de Utilidade": "Personagem que tem habilidades que podem conceder EF. POSITIVOS aos Aliados, EF. NEGATIVOS aos oponentes ou ambos (conceder efeitos e infligir efeitos). Alguns suportes podem se beneficiar de suas pr\u00F3prias habilidades e entrar em campo para contribuir para o time de diferentes formas.",
+ "Coringa": "Variante que atua nas três classes: Ofensivo, Defensivo e Suporte. Ter uma classe principal e uma secundária não é suficiente para ser Coringa."
 };
 
 const CLASS_DESCRIPTIONS_EN = {
  "Ofensivo": "The team's main damage dealer, designed to deal as much damage as possible. Typically gains buffs or inflicts debuffs. Effective against Defensive fighters.",
  "Defensivo": "A fighter with high HP and abilities that increase survivability. May also have punishing abilities like reflect damage and other effects effective against aggressors.",
  "Suporte de Utilidade": "A fighter with abilities that grant BUFFS to allies, inflict DEBUFFS on opponents, or both. Some supports can benefit from their own abilities and contribute to the team in various ways.",
- "Coringa": "A fighter that can perform in multiple roles \u2014 dealing damage, applying buffs or debuffs, defending, or even supporting the team."
+ "Coringa": "A variant that can act as Offensive, Defensive and Support. Having a primary and a secondary class alone does not make a variant a Wildcard."
 };
 
 export const CLASS_DESCRIPTIONS = CLASS_DESCRIPTIONS_PT;
@@ -64,7 +67,7 @@ export function getLocalizedClassName(ptClassName) {
  if (getCurrentLanguage() === 'en') {
   return CLASS_NAME_PT_TO_EN[ptClassName] || ptClassName;
  }
- return ptClassName;
+ return ptClassName === 'Suporte de Utilidade' ? 'Suporte' : ptClassName;
 }
 
 /**
@@ -97,107 +100,8 @@ export function classNameToPT(name) {
 }
 
 // Mapeamento de variantes espec\u00EDficas para suas classes prim\u00E1rias e secund\u00E1rias
-export const VARIANT_CLASSES = {
-    "Rosa Estelar": ["Suporte de Utilidade"],
-    "Modelo Submarina": ["Suporte de Utilidade"],
-    "Poder Sombrio": ["Defensivo"],
-    "Combatente da Liberdade": ["Defensivo"],
-    "Pico Bola": ["Suporte de Utilidade"],
-    "Homem de Gelo": ["Coringa"],
-    "Promotor": ["Suporte de Utilidade"],
-    "Favorito dos Fãs": ["Suporte de Utilidade"],
-    "Heavy Metal": ["Defensivo"],
-    "Banda dos Sonhos": ["Defensivo"],
-    "Rodas Rítmicas": ["Coringa"],
-    "G.I. Jazz": ["Defensivo"],
-    "Big Baddy": ["Defensivo"],
-    "Superjazz": ["Defensivo"],
-    "Desarmonizador": ["Defensivo"],
-    "Resonant Evil": ["Defensivo"],
-    "Ciclone Carmesim": ["Coringa"],
-    "Arlequim": ["Suporte de Utilidade"],
-    "Cérebro Gelado": ["Defensivo"],
-    "Forças Armadas": ["Defensivo"],
-    "Massa Cinzenta": ["Suporte de Utilidade"],
-    "Ressurgente": ["Defensivo"],
-    "Sentinela de Pedra": ["Coringa"],
-    "Hóstia Profana": ["Coringa"],
-    "Fora-da-Lei Marcial": ["Suporte de Utilidade"],
-    "Agente Corrosiva": ["Coringa"],
-    "Xenamorfa": ["Defensivo"],
-    "Fibra Forte": ["Defensivo"],
-    "Maldade Eterna": ["Suporte de Utilidade"],
-    "Sorvescola": ["Suporte de Utilidade"],
-    "Confusão Interior": ["Suporte de Utilidade"],
-    "Veludo Vermelho": ["Suporte de Utilidade"],
-    "Magnata Nobre": ["Suporte de Utilidade"],
-    "Cacho Mágico": ["Coringa"],
-    "Escoteira": ["Coringa"],
-    "Cachinhos Malvados": ["Defensivo"],
-    "Investigadora": ["Suporte de Utilidade"],
-    "Quartzo Estelar": ["Suporte de Utilidade"],
-    "Imagem Dividida": ["Coringa"],
-    "Bela do Inferno": ["Coringa"],
-    "Cópia Aproximada": ["Suporte de Utilidade"],
-    "Sem Coração": ["Suporte de Utilidade"],
-    "Maldade Insana": ["Ofensivo"],
-    "Megalomaníaca": ["Defensivo"],
-    "Cavalo Sombrio": ["Suporte de Utilidade"],
-    "Octoplasma": ["Suporte de Utilidade"],
-    "Encantadora de Serpentes": ["Suporte de Utilidade"],
-    "Dama de Honra": ["Suporte de Utilidade"],
-    "Briga Fatal": ["Coringa"],
-    "Agora e Sempre": ["Defensivo"],
-    "Brincadeirinha": ["Defensivo"],
-    "Papa-Moscas": ["Coringa"],
-    "Neuromancer": ["Coringa"],
-    "Festa Macabra": ["Coringa"],
-    "Ameaça Mascarada": ["Coringa"],
-    "Vagalume": ["Defensivo"],
-    "Frio Mordente": ["Coringa"],
-    "Pura Coragem": ["Defensivo"],
-    "Resguardada": ["Ofensivo", "Suporte de Utilidade"],
-    "Apanhadora de Sonhos": ["Suporte de Utilidade"],
-    "Ícone Iônico": ["Ofensivo"],
-    "Velhos Tempos": ["Defensivo"],
-    "Intocável": ["Defensivo"],
-    "Chumbinho": ["Suporte de Utilidade"],
-    "Esboço": ["Suporte de Utilidade"],
-    "Plumagem Prismática": ["Suporte de Utilidade"],
-    "Reprise": ["Suporte de Utilidade"],
-    "Replicada": ["Defensivo"],
-    "Persona Grata": ["Suporte de Utilidade"],
-    "Tela Azul": ["Defensivo"],
-    "Reviravolta": ["Defensivo"],
-    "Frio de Matar": ["Defensivo"],
-    "Quebra-Morto": ["Defensivo"],
-    "Branca de Medo": ["Defensivo"],
-    "Campeã dos Campeões": ["Suporte de Utilidade"],
-    "Angelical": ["Coringa"],
-    "Wunderkind": ["Suporte de Utilidade"],
-    "Desejo de Morte": ["Coringa"],
-    "Isca Sortuda": ["Suporte de Utilidade"],
-    "Saqueadora do Palácio": ["Coringa"],
-    "Rosinha": ["Suporte de Utilidade", "Defensivo"],
-    "Soldado Serafim": ["Suporte de Utilidade"],
-    "Preços para Matar": ["Coringa"],
-    "Cirurgiã-General": ["Coringa"],
-    "Superluminal": ["Suporte de Utilidade"],
-    "Última Esperança": ["Suporte de Utilidade", "Defensivo"],
-    "Mai-s O Quê?": ["Coringa"],
-    "Matadora Joy": ["Suporte de Utilidade", "Defensivo"],
-    "Turno Mortal": ["Coringa"],
-    "Quente com Gelo": ["Suporte de Utilidade"],
-    "Jaleco": ["Suporte de Utilidade"],
-    "Maravilha Eterna": ["Coringa"],
-    "Mente Criminosa": ["Coringa"],
-    "Megassônico": ["Coringa"],
-    "Megera Vaporwave": ["Coringa"],
-    "Fantoche Sombrio": ["Coringa"],
-    "Zona de Buffer": ["Coringa"],
-    "Overclocked": ["Coringa"],
-    "Ouro Maciço": ["Suporte de Utilidade"]
-};
+export { VARIANT_CLASSES } from './variantClassData.js';
+import { VARIANT_CLASSES } from './variantClassData.js';
 
 /**
  * Retorna as classes de uma variante (sempre em PT-BR para lookup interno).

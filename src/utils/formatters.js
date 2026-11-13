@@ -6,6 +6,8 @@
 import { getEffectPatterns, getLocalizedEffect } from '../data/effectData.js';
 import { hasElementEffects } from '../data/elementEffectsData.js';
 import { getCurrentLanguage } from '../i18n/translations.js';
+import { stripAbilityLabels } from './abilityText.js';
+export { normalizeAbilityProgressions } from './abilityText.js';
 
 /**
  * Format ability/description text
@@ -26,11 +28,8 @@ export function formatText(text, variantName = null) {
         text = String(text);
     }
 
-    // Remove [HAB 1]: and [HAB 2]: prefixes
-    text = text.replace(/\[HAB \d+\]:\s*/g, '');
-
-    // Remove **bold** syntax instead of converting to <strong> since it doesn't add readability
-    text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
+    // Remove source labels used by both PT-BR and English signature abilities.
+    text = stripAbilityLabels(text);
 
     // Convert Discord emoji format to simple text
     text = text.replace(/<:[^:]+:\d+>/g, '');
@@ -76,7 +75,14 @@ export function formatText(text, variantName = null) {
         workingText = workingText.replace(marker, html);
     }
 
-    // Convert numbers to highlighted spans
+    // Highlight each ability's final value in three-rank progressions.
+    // The final rank stays highlighted whether the values increase or decrease.
+    workingText = workingText.replace(
+        /(\d+(?:\.\d+)?%?)\s*\/\s*(\d+(?:\.\d+)?%?)\s*\/\s*(\d+(?:\.\d+)?%?)/g,
+        (_, first, second, final) => `<span class="number">${first}</span>/<span class="number">${second}</span>/<span class="number progression-final">${final}</span>`
+    );
+
+    // Highlight remaining standalone numbers without changing progression markup.
     workingText = workingText.replace(/((?:\?\?\?|\d+(?:\.\d+)?%?))/g, '<span class="number">$1</span>');
 
     // Wrap ELEMENTO keyword for variants with element effects
@@ -90,10 +96,43 @@ export function formatText(text, variantName = null) {
     // Convert \n to <br>
     workingText = workingText.replace(/\\n/g, '<br>').replace(/\n/g, '<br>');
 
+    // Keep the editor's deliberate emphasis visible on the public card too.
+    // Do this after effect/number markup so their highlights stay inside <strong>.
+    workingText = workingText.replace(/\*\*([^*]+)\*\*/g, '<strong class="ability-emphasis">$1</strong>');
+
     return workingText;
 }
 
 import { getMoveData } from '../data/movesimages.js';
+
+/**
+ * Split the move names using the same rules as the displayed arsenal.
+ * Repeated moves count as separate slots.
+ */
+export function splitArsenalMoves(arsenal) {
+    if (!arsenal) return [];
+    arsenal = String(arsenal).replace(/<:[^:]+:\d+>/g, '');
+    const specialMoves = [
+        'Contra, Ataque!', 'Nekhbet, a Abutre', 'Vai, George!',
+        'BANG, BANG, BANG!', 'Lenny, o Solitário'
+    ];
+    for (const [index, move] of specialMoves.entries()) {
+        const regex = new RegExp(move.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+        arsenal = arsenal.replace(regex, `__SPECIAL_MOVE_${index}__`);
+    }
+    return arsenal.split(/,\s*/).filter(item => item.trim()).map(item => {
+        let restored = item;
+        for (const [index, move] of specialMoves.entries()) {
+            restored = restored.replace(`__SPECIAL_MOVE_${index}__`, move);
+        }
+        return restored.trim();
+    });
+}
+
+/** Count the recommended attributes, allowing a final "e" between items. */
+export function countBuildStats(text) {
+    return String(text ?? '').split(/,\s*|\s+e\s+/i).filter(item => item.trim()).length;
+}
 
 /**
  * Format arsenal string into HTML with move images
@@ -102,46 +141,8 @@ import { getMoveData } from '../data/movesimages.js';
  * @returns {string} HTML string with move items
  */
 export function formatArsenal(arsenal, charKey = null) {
-    if (!arsenal) return '';
-
-    // Ensure arsenal is a string
-    if (typeof arsenal !== 'string') {
-        arsenal = String(arsenal);
-    }
-
-    // Remove Discord emoji codes
-    arsenal = arsenal.replace(/<:[^:]+:\d+>/g, '');
-
-    // Known moves with commas
-    const SPECIAL_MOVES = [
-        "Contra, Ataque!",
-        "Nekhbet, a Abutre",
-        "Vai, George!",
-        "BANG, BANG, BANG!",
-        "Lenny, o Solitário"
-    ];
-
-    // Temporarily replace special moves with placeholders to prevent splitting
-    SPECIAL_MOVES.forEach((move, index) => {
-        // Use a safe placeholder that won't be in the text
-        const placeholder = `__SPECIAL_MOVE_${index}__`;
-        // Replace all occurrences (case-insensitive to be safe)
-        const regex = new RegExp(move.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-        arsenal = arsenal.replace(regex, placeholder);
-    });
-
-    // Split by comma
-    let items = arsenal.split(/,\s*/).filter(item => item.trim());
-
-    // Restore special moves from placeholders
-    items = items.map(item => {
-        let restoredItem = item;
-        SPECIAL_MOVES.forEach((move, index) => {
-            const placeholder = `__SPECIAL_MOVE_${index}__`;
-            restoredItem = restoredItem.replace(placeholder, move);
-        });
-        return restoredItem;
-    });
+    const items = splitArsenalMoves(arsenal);
+    if (!items.length) return '';
 
     if (charKey) {
         return items.map(item => {
@@ -160,7 +161,7 @@ export function formatArsenal(arsenal, charKey = null) {
             }
             return `
                 <div class="arsenal-move">
-                    <span class="move-name">\${originalName}</span>
+                    <span class="move-name">${originalName}</span>
                 </div>
             `;
         }).join('');

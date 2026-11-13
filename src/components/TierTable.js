@@ -33,24 +33,9 @@ export function createRankBadge(rank) {
 
 
 /**
- * Create class badges HTML for a variant (no longer used in standard view, replaced by rank badges)
- * @param {string} variantName - Variant name
- * @returns {string} HTML string with class icon badges
- */
-function createClassBadges(variantName) {
-  const classes = getLocalizedVariantClasses(variantName);
-  const badges = classes.map(cls => {
-    const info = CLASS_ICONS[cls.key];
-    if (!info) return '';
-    return `<img loading="lazy" src="${info.icon}" alt="${cls.localized}" title="${cls.localized}" class="class-role-icon" style="--class-color: ${info.color}">`;
-  }).join('');
-  return `<div class="class-badges">${badges}</div>`;
-}
-
-/**
  * Render rank cell with optional class icon overlay
  */
-function renderRankCell(charKey, variantName, mode, rankValue, classes) {
+function renderRankCell(rankValue, classes) {
   const normalizedRank = rankValue ? String(rankValue).toUpperCase().trim() : '';
   const isRankBOrHigher = ['SS', 'S', 'A', 'B'].includes(normalizedRank);
   const isInvalidRank = ['I', 'N/A', 'NA', ''].includes(normalizedRank.replace('/', ''));
@@ -58,23 +43,11 @@ function renderRankCell(charKey, variantName, mode, rankValue, classes) {
   let iconsHTML = '';
 
   if (!isInvalidRank) {
-    if (mode === 'riftDef') {
-      iconsHTML = `<img src="img/modifiers/buffs/Armor.webp" class="rank-class-badge" style="--class-color: #1565c0" alt="${t('tier.defensive')}" title="${t('tier.defensive')}">`;
-    } else {
-      iconsHTML = classes.map(cls => {
-        let classInfo = { ...CLASS_ICONS[cls.key] };
-        if (!classInfo.icon) return '';
-
-        let showIcon = false;
-        if (cls.key === 'Ofensivo' || cls.key === 'Suporte de Utilidade' || cls.key === 'Coringa') {
-          showIcon = true;
-        }
-
-        if (showIcon) {
-          return `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${cls.localized}" title="${cls.localized}">`;
-        }
-        return '';
-      }).join('');
+    const primaryClass = classes[0];
+    const classInfo = primaryClass ? CLASS_ICONS[primaryClass.key] : null;
+    if (classInfo?.icon) {
+      const label = `${t('variant.primaryClass')}: ${primaryClass.localized}`;
+      iconsHTML = `<img src="${classInfo.icon}" class="rank-class-badge" style="--class-color: ${classInfo.color}" alt="${label}" title="${label}">`;
     }
   }
 
@@ -86,6 +59,116 @@ function renderRankCell(charKey, variantName, mode, rankValue, classes) {
     </div>
   </div>
   `;
+}
+
+let stickyTierHeaderCleanup = null;
+
+function enableStickyTierHeader(wrapper) {
+  stickyTierHeaderCleanup?.();
+
+  const table = wrapper.querySelector('.tier-table');
+  const sourceHead = table?.querySelector('thead');
+  if (!table || !sourceHead) return;
+
+  const stickyViewport = document.createElement('div');
+  stickyViewport.className = 'tier-table-sticky-header';
+  stickyViewport.setAttribute('aria-hidden', 'true');
+  const stickyTable = table.cloneNode(false);
+  stickyTable.removeAttribute('id');
+  stickyTable.classList.add('tier-table-sticky-copy');
+  const stickyHead = sourceHead.cloneNode(true);
+  stickyTable.append(stickyHead);
+  stickyViewport.append(stickyTable);
+  document.body.append(stickyViewport);
+
+  const syncGeometry = () => {
+    const sourceCells = sourceHead.querySelectorAll('th');
+    const stickyCells = stickyHead.querySelectorAll('th');
+    sourceCells.forEach((cell, index) => {
+      const width = cell.getBoundingClientRect().width;
+      const stickyCell = stickyCells[index];
+      if (!stickyCell) return;
+      const style = getComputedStyle(cell);
+      stickyCell.style.width = `${width}px`;
+      stickyCell.style.minWidth = `${width}px`;
+      stickyCell.style.maxWidth = `${width}px`;
+      stickyCell.style.padding = style.padding;
+      stickyCell.style.font = style.font;
+      stickyCell.style.letterSpacing = style.letterSpacing;
+      stickyCell.style.textTransform = style.textTransform;
+      stickyCell.style.textAlign = style.textAlign;
+      stickyCell.style.lineHeight = style.lineHeight;
+      stickyCell.style.borderRight = style.borderRight;
+      stickyCell.style.borderBottom = style.borderBottom;
+
+      const sourceLabel = cell.querySelector('.attr-highlight');
+      const stickyLabel = stickyCell.querySelector('.attr-highlight');
+      if (sourceLabel && stickyLabel) {
+        const labelStyle = getComputedStyle(sourceLabel);
+        stickyLabel.style.display = labelStyle.display;
+        stickyLabel.style.maxWidth = labelStyle.maxWidth;
+        stickyLabel.style.padding = labelStyle.padding;
+        stickyLabel.style.lineHeight = labelStyle.lineHeight;
+        stickyLabel.style.whiteSpace = labelStyle.whiteSpace;
+        stickyLabel.style.overflowWrap = labelStyle.overflowWrap;
+        stickyLabel.style.color = labelStyle.color;
+      }
+    });
+    const tableWidth = table.getBoundingClientRect().width;
+    stickyTable.style.width = `${tableWidth}px`;
+    stickyTable.style.minWidth = `${tableWidth}px`;
+    stickyViewport.style.left = `${wrapper.getBoundingClientRect().left}px`;
+    stickyViewport.style.width = `${wrapper.clientWidth}px`;
+  };
+
+  const updatePosition = () => {
+    const rect = wrapper.getBoundingClientRect();
+    const tableRect = table.getBoundingClientRect();
+    const headHeight = sourceHead.getBoundingClientRect().height;
+    const navbar = document.querySelector('.navbar');
+    const navbarRect = navbar?.getBoundingClientRect();
+    const top = navbar && !navbar.classList.contains('hidden-nav')
+      ? Math.max(0, navbarRect?.bottom || 0)
+      : 0;
+    const isInRange = tableRect.top < top && tableRect.bottom > top + headHeight;
+    stickyViewport.style.top = `${top}px`;
+    stickyViewport.style.height = `${headHeight}px`;
+    stickyViewport.style.display = isInRange ? 'block' : 'none';
+    stickyViewport.style.left = `${rect.left}px`;
+    stickyViewport.style.width = `${wrapper.clientWidth}px`;
+    stickyTable.style.transform = `translateX(-${wrapper.scrollLeft}px)`;
+    const firstHeaderCell = stickyHead.querySelector('th:first-child');
+    if (firstHeaderCell) firstHeaderCell.style.transform = `translateX(${wrapper.scrollLeft}px)`;
+  };
+  const syncResponsiveGeometry = () => {
+    syncGeometry();
+    updatePosition();
+  };
+  const resizeObserver = typeof ResizeObserver === 'function'
+    ? new ResizeObserver(syncResponsiveGeometry)
+    : null;
+  [wrapper, table, sourceHead, ...sourceHead.querySelectorAll('th')].forEach(element => resizeObserver?.observe(element));
+  window.visualViewport?.addEventListener('resize', syncResponsiveGeometry);
+
+  syncGeometry();
+  updatePosition();
+  wrapper.addEventListener('scroll', updatePosition, { passive: true });
+  window.addEventListener('scroll', updatePosition, { passive: true });
+  window.addEventListener('resize', syncGeometry);
+  window.addEventListener('resize', updatePosition);
+
+  stickyTierHeaderCleanup = () => {
+    wrapper.removeEventListener('scroll', updatePosition);
+    window.removeEventListener('scroll', updatePosition);
+    window.removeEventListener('resize', syncGeometry);
+    window.removeEventListener('resize', updatePosition);
+    window.visualViewport?.removeEventListener('resize', syncResponsiveGeometry);
+    resizeObserver?.disconnect();
+    window.removeEventListener('hashchange', stickyTierHeaderCleanup);
+    stickyViewport.remove();
+    stickyTierHeaderCleanup = null;
+  };
+  window.addEventListener('hashchange', stickyTierHeaderCleanup, { once: true });
 }
 
 /**
@@ -102,7 +185,7 @@ export function createTierTable(charKey, charData) {
   // Get and filter variants
   let variants = flattenVariants(charData.variants);
   variants = filterVariants(variants, filters);
-  variants = sortVariants(variants, sort);
+  variants = sortVariants(variants, sort, filters);
 
   let rowsHTML = '';
 
@@ -143,16 +226,16 @@ export function createTierTable(charKey, charData) {
           </div>
         </td>
         <td class="text-center">
-          ${renderRankCell(charKey, variant.name, 'pf', ranks.pf, variantClasses)}
+          ${renderRankCell(ranks.pf, variantClasses)}
         </td>
         <td class="text-center">
-          ${renderRankCell(charKey, variant.name, 'parallel', ranks.parallel, variantClasses)}
+          ${renderRankCell(ranks.parallel, variantClasses)}
         </td>
         <td class="text-center">
-          ${renderRankCell(charKey, variant.name, 'riftOff', ranks.riftOff, variantClasses)}
+          ${renderRankCell(ranks.riftOff, variantClasses)}
         </td>
         <td class="text-center">
-          ${renderRankCell(charKey, variant.name, 'riftDef', ranks.riftDef, variantClasses)}
+          ${renderRankCell(ranks.riftDef, variantClasses)}
         </td>
       </tr>
       `;
@@ -187,6 +270,49 @@ export function createTierTable(charKey, charData) {
   `;
 }
 
+/** Enable direct mouse dragging while preserving native touch scrolling. */
+export function enableTierTableDragScroll(root = document) {
+  stickyTierHeaderCleanup?.();
+  const tierWrapper = root.querySelector('.tier-table-wrapper');
+  if (tierWrapper) enableStickyTierHeader(tierWrapper);
+
+  root.querySelectorAll('.tier-table-wrapper:not([data-drag-scroll-bound])').forEach(wrapper => {
+    wrapper.dataset.dragScrollBound = 'true';
+    let startX = 0;
+    let startScrollLeft = 0;
+    let pointerId = null;
+
+    wrapper.addEventListener('pointerdown', event => {
+      if (event.pointerType !== 'mouse' || event.button !== 0 || event.target.closest('button, a, input, select, summary')) return;
+      startX = event.clientX;
+      startScrollLeft = wrapper.scrollLeft;
+      pointerId = event.pointerId;
+      wrapper.classList.add('is-drag-ready');
+      wrapper.setPointerCapture?.(pointerId);
+    });
+
+    wrapper.addEventListener('pointermove', event => {
+      if (pointerId === null || event.pointerId !== pointerId) return;
+      const deltaX = event.clientX - startX;
+      if (Math.abs(deltaX) < 4) return;
+      wrapper.classList.add('is-dragging');
+      wrapper.scrollLeft = startScrollLeft - deltaX;
+      event.preventDefault();
+    });
+
+    const stopDragging = event => {
+      if (pointerId === null || (event && event.pointerId !== pointerId)) return;
+      wrapper.classList.remove('is-drag-ready', 'is-dragging');
+      if (event && wrapper.hasPointerCapture?.(pointerId)) wrapper.releasePointerCapture(pointerId);
+      pointerId = null;
+    };
+
+    wrapper.addEventListener('pointerup', stopDragging);
+    wrapper.addEventListener('pointercancel', stopDragging);
+    wrapper.addEventListener('lostpointercapture', stopDragging);
+  });
+}
+
 /**
  * Create tier view content (includes dictionary, controls, and table)
  * @param {string} charKey - Character key
@@ -201,10 +327,10 @@ export function createTierView(charKey, charData) {
 
   <!-- Rank Explanations Dictionary -->
   <div class="legend-section">
-    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('rank-dict')">
+    <button class="legend-header" type="button" aria-expanded="false" aria-controls="rank-dict">
       <span class="legend-title iluminado">${t('tier.notes')}</span>
-      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
-    </div>
+      <span class="legend-toggle-btn" aria-hidden="true">\u25BC</span>
+    </button>
     <div class="rank-dictionary hidden" id="rank-dict">
       <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
         <p>${t('tier.rankSS')}</p>
@@ -232,10 +358,10 @@ export function createTierView(charKey, charData) {
 
   <!-- Class Role Legend -->
   <div class="legend-section">
-    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('class-dict')">
+    <button class="legend-header" type="button" aria-expanded="false" aria-controls="class-dict">
       <span class="legend-title iluminado">${t('tier.classes')}</span>
-      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
-    </div>
+      <span class="legend-toggle-btn" aria-hidden="true">\u25BC</span>
+    </button>
     <div class="class-dictionary hidden" id="class-dict">
       ${Object.entries(CLASS_ICONS).map(([cls, info]) => {
     return `
@@ -258,6 +384,7 @@ export function createTierView(charKey, charData) {
 // Global UI handler for legend sections
 window.toggleLegendSection = function (id) {
   const element = document.getElementById(id);
+  if (!element) return;
   const btn = element.closest('.legend-section').querySelector('.legend-toggle-btn');
 
   element.classList.toggle('hidden');
@@ -267,4 +394,10 @@ window.toggleLegendSection = function (id) {
   } else {
     btn.style.transform = 'rotate(0deg)';
   }
+  element.closest('.legend-section').querySelector('.legend-header')?.setAttribute('aria-expanded', String(!element.classList.contains('hidden')));
 };
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('.legend-header[aria-controls]');
+  if (button) window.toggleLegendSection(button.getAttribute('aria-controls'));
+});

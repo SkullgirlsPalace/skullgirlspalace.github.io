@@ -10,68 +10,6 @@
     text-shadow: 0 0 15px rgba(212, 168, 75, 0.3);
 }
 
-/* COTW Filters */
-.cotw-filters {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-    padding: 0 10px;
-}
-
-.cotw-filter-btn {
-    background: rgba(20, 20, 20, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 10px 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--text-secondary);
-    min-width: 140px;
-}
-
-.cotw-filter-btn img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    filter: grayscale(0.5) brightness(0.8);
-    transition: all 0.3s ease;
-}
-
-.cotw-filter-btn span {
-    font-family: 'TBCinema', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.cotw-filter-btn:hover {
-    background: rgba(40, 40, 45, 0.8);
-    border-color: rgba(212, 168, 75, 0.4);
-    transform: translateY(-2px);
-}
-
-.cotw-filter-btn:hover img {
-    filter: grayscale(0) brightness(1);
-    transform: scale(1.1);
-}
-
-.cotw-filter-btn.active {
-    background: rgba(212, 168, 75, 0.15);
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
-    box-shadow: 0 0 15px rgba(212, 168, 75, 0.2);
-}
-
-.cotw-filter-btn.active img {
-    filter: grayscale(0) brightness(1.2);
-}
-
 /* Catalysts Grid - 3 Columns */
 .catalyst-grid {
     display: grid;
@@ -91,10 +29,6 @@
         grid-template-columns: 1fr;
     }
 
-    .cotw-filter-btn {
-        min-width: auto;
-        padding: 8px 14px;
-    }
 }
 
 /* Catalyst Card - Premium Look */
@@ -196,9 +130,4 @@
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-/* Special Case for Temporary Modifiers (COTW) */
-.cotw-card {
-    border-left: 3px solid var(--accent-gold);
 }

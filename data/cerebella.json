@@ -85,7 +85,7 @@
                 },
                 "signature_ability": {
                     "name": "Músculo de Ferro",
-                    "description": "[HAB 1]: **Cada 7° GOLPE DE COMBO em Cerebella ou no oponente concede REGENERAÇÃO e ARMADURA** por 15 segundos cada. Enquanto utilizam REGENERAÇÃO ou ARMADURA, BLOCKBUSTERS causam dano aumentado em 50%.\n\n[HAB 2]: Ganhe 15% de MEDIDOR DE BLOCKBUSTER e tenha 50% de **chance de atualizar a REATIVAÇÃO de todos os GOLPES ESPECIAIS ao realizar um ARREMESSO.**"
+                    "description": "[HAB 1]: Quando qualquer lutador acerta um ARREMESSO, ganha ARMADURA por 15 segundos. GOLPES DE ARREMESSO de Cerebella aplicam BLOQUEIO DE CURA por 15 segundos, e 100% do dano causado é recuperado como VIDA.\n\n[HAB 2]: Ao acertar um ARREMESSO, ganha 15% do MEDIDOR DE BLOCKBUSTER e tem 50% de chance de redefinir o tempo de recarga de todos os ESPECIAIS. BLOCKBUSTERS causam 30% a mais de dano por acúmulo de ARMADURA em Cerebella."
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -93,6 +93,29 @@
             }
         ],
         "ouro": [
+            {
+                "name": "Bailarina",
+                "title_formatted": "Bailarina - Neutro - Ouro",
+                "element": "Neutro",
+                "color_hex": "#ff80c0",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/cerebella/Bellarina.webp"
+                },
+                "stats": {
+                    "attack": "14,036",
+                    "health": "66,874",
+                    "power": "29,755"
+                },
+                "signature_ability": {
+                    "name": "PIRUETA",
+                    "description": "[SA1]: Ao acertar uma ARRANCADA, DRENA 15% do MEDIDOR DE BLOCKBUSTER, ganha OLHO-MORTO por 15 segundos e ganha 15% de ATAQUE permanente.\n\n[SA2]: Enquanto estiver sob efeito de OLHO-MORTO, ganha ESQUIVA por 10 segundos ao avançar e transfere 1 EFEITO POSITIVO do oponente ao GOLPEAR um oponente no ar.",
+                    "krazete_id": "bellarina"
+                },
+                "marquee_ability": "Vantagem",
+                "recommended_build": "ATQ%, Perfura??o, Precis?o e Reat. Especial",
+                "recommended_arsenal": "Rede de Segurança, Diamante Bruto, Cerecóptero, Chifrada Montanhesa, Gorilassel"
+            },
             {
                 "name": "Assustadora",
                 "title_formatted": "Assustadora - Trevas - Ouro",
@@ -175,7 +198,7 @@
                 },
                 "signature_ability": {
                     "name": "CONGELADA",
-                    "description": "[HAB 1]: **O dano de ATAQUE aumenta em 3% da sua VIDA ATUAL.**\n\n[HAB 2]: **O dano infligido pelo oponente é reduzido em 3% por cada GOLPE DE COMBO do oponente.**"
+                    "description": "[HAB 1]: Enquanto estiver perto do oponente, aplica IMOBILIZAR e LENTIDÃO por 12 segundos a cada 3 segundos. Reduz o ATAQUE do oponente em 3% por cada segundo em que estiver imobilizado até ele SAIR.\n\n[HAB 2]: Cause dano equivalente a 6% da VIDA MÁXIMA ao oponente quando qualquer lutador for NOCAUTEADO enquanto o oponente estiver IMOBILIZADO."
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -197,7 +220,8 @@
                 },
                 "signature_ability": {
                     "name": "DEFESA DE DIAMANTE",
-                    "description": "[HAB 1]: 10% de chance de Cerebella ganhar ARMADURA e INABALÁVEL por 10 s **ao ser GOLPEADA.**\n\n[HAB 2]: **Quando Cerebella ganha um EF. POS., 100% de chance de transferir 1 EF. NEG. dela ao oponente.**"
+                    "description": "[SA1]: Quando qualquer lutador é GOLPEADO, tem 10% de chance de ganhar ARMADURA e INABALÁVEL por 10 segundos.\n\n[SA2]: **Quando Cerebella ganha um EF. POS., 100% de chance de transferir 1 EF. NEG. dela ao oponente.**",
+                    "krazete_id": "armedforces"
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -219,7 +243,7 @@
                 },
                 "signature_ability": {
                     "name": "SITUAÇÃO ESPINHOSA",
-                    "description": "[HAB 1]: Inflija MARCA DA MORTE e ganhe ESPINHOS por 10 seg cada **quando um lutador tirar ao menos 10% da VIDA MÁX. com um só GOLPE.**\n\n[HAB 2]: **Oponentes ficam com SANGRAMENTO por 5 seg ao arrancar sofrendo MARCA DA MORTE.**"
+                    "description": "[HAB 1]: Para cada 10% de VIDA perdida por qualquer lutador, Cerebella ganha ESPINHOS e o oponente sofre MARCA DA MORTE e QUIETUS por 10 segundos cada.\n\n[HAB 2]: Drena 5% do MEDIDOR DE BLOCKBUSTER quando qualquer lutador acerta um GOLPE CRÍTICO enquanto Cerebella estiver sob efeito de ESPINHOS."
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",
@@ -333,7 +357,7 @@
                 },
                 "signature_ability": {
                     "name": "JOGO DE CHÃO",
-                    "description": "[HAB 1]: **ARREMESSOS** causam 50% de dano extra.\n\n[HAB 2]: Ganhe ARMADURA por 15 segundos **ao ARREMESSAR o oponente**."
+                    "description": "[HAB 1]: ARREMESSOS causam 50% de dano extra.\n\n[HAB 2]: Ganhe ARMADURA por 15 segundos ao ARREMESSAR o oponente."
                 },
                 "marquee_ability": "Vantagem",
                 "recommended_build": "ATQ%, Perfuração, Ganho Medidor e Reat. Especial",

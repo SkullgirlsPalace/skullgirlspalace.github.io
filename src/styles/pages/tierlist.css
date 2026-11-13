@@ -205,6 +205,52 @@
     display: flex;
     justify-content: center;
     margin-bottom: 32px;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y pinch-zoom;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.tier-table-wrapper.is-drag-ready { cursor: grabbing; }
+.tier-table-wrapper.is-dragging { cursor: grabbing; user-select: none; -webkit-user-select: none; }
+.tier-table-wrapper.is-dragging img { pointer-events: none; }
+.tier-table-wrapper::-webkit-scrollbar { height: 9px; }
+
+.tier-table-sticky-header {
+    position: fixed;
+    z-index: 997;
+    display: none;
+    overflow: hidden;
+    pointer-events: none;
+    background: #17171e;
+    border-bottom: 1px solid rgba(212, 168, 75, 0.35);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28);
+}
+
+.tier-table-sticky-copy {
+    margin: 0 !important;
+    border-collapse: collapse;
+    table-layout: fixed !important;
+    background: #17171e;
+}
+
+.tier-table-sticky-copy thead th {
+    position: static !important;
+    height: 100%;
+    background: #17171e !important;
+    box-shadow: none !important;
+}
+
+.tier-table-sticky-copy thead th:first-child {
+    position: sticky !important;
+    left: 0;
+    z-index: 2;
+    background: #17171e !important;
+}
+
+.tier-table-sticky-copy .attr-highlight {
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .tier-table {
@@ -500,6 +546,12 @@
     padding: 12px 20px;
     background: rgba(255, 255, 255, 0.02);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    touch-action: manipulation;
 }
 
 .legend-title {
@@ -524,6 +576,7 @@
     padding: 2px 6px;
     opacity: 0.6;
     transition: all 0.2s ease;
+    transform: rotate(-90deg);
 }
 
 .legend-toggle-btn:hover {

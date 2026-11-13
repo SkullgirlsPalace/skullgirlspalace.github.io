@@ -96,7 +96,31 @@
                 },
                 "signature_ability": {
                     "name": "COLHEITA DE PODER/SIFÃO",
-                    "description": "[HAB 1]: **Ao usar a ASSITÊNCIA de Umbrella**, o próximo lutador ganha 3 acúmulos de FÚRIA, 3 camadas de MIASMA e IMUNIDADE por 20 segundos cada, **ao custo de até 25% da VIDA MÁXIMA da Umbrella.**\n\n[HAB 2]: **Quando a Umbrella ENTRA NA ASSISTÊNCIA**, ganha 3 acúmulos de ESQUIVA, 3 acúmulos de REGENERAÇÃO e IMUNIDADE por 15 segundos cada e DRENA 35% do MEDIDOR DE BLOCKBUSTER do oponente."
+                    "description": "[SA1]: **Ao usar a ASSITÊNCIA de Umbrella**, o próximo lutador ganha 3 acúmulos de FÚRIA, 3 camadas de MIASMA e IMUNIDADE por 20 segundos cada, **ao custo de até 25% da VIDA MÁXIMA da Umbrella.**\n\n[SA2]: Quando Umbrella ENTRA NA ASSISTÊNCIA, ganha 3 acúmulos de ESQUIVA, 2 acúmulos de REGENERAÇÃO e IMUNIDADE por 15 segundos cada e DRENA 35% do MEDIDOR DE BLOCKBUSTER do oponente.",
+                    "krazete_id": "angelmaker"
+                },
+                "marquee_ability": "Final Amargo",
+                "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
+                "recommended_arsenal": "Hora do Rango, Trava-Língua, Refluxo Ácido, Bolha Boba, Moedor de Sal"
+            },
+            {
+                "name": "Gremlindo",
+                "title_formatted": "Gremlindo - Ar - Diamante",
+                "element": "Ar",
+                "color_hex": "#00ff00",
+                "images": {
+                    "icon_url": "",
+                    "portrait_url": "img/umbrella/Garish_Gremlin.webp"
+                },
+                "stats": {
+                    "attack": "13,312",
+                    "health": "56,045",
+                    "power": "26,578"
+                },
+                "signature_ability": {
+                    "name": "IMPACTO DE BOLHA",
+                    "description": "[SA1]: Umbrella possui uma BOLHA flutuante que ataca o inimigo ao acertar um ARREMESSO ou ATAQUE CARREGADO e possui 3 NÍVEIS DE PODER. A cada 5 GOLPES DE COMBO, a BOLHA ganha 1 NÍVEL DE PODER e causa mais dano. Quando a BOLHA acerta um inimigo, uma POÇA é formada sob o oponente.\n\n[SA2]: GOLPES DE POÇA curam os outros colegas de equipe em 15% da VIDA MÁXIMA e concedem a Umbrella OLHO-MORTO, ACELERAÇÃO e 2 acúmulos de REGENERAÇÃO por 10 segundos cada. Enquanto Umbrella estiver sob efeito de pelo menos 1 acúmulo de REGENERAÇÃO, sua BOLHA causa 75% de dano adicional.",
+                    "krazete_id": "garishgremlin"
                 },
                 "marquee_ability": "Final Amargo",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -142,7 +166,8 @@
                 },
                 "signature_ability": {
                     "name": "AUTÓPSIA ALIENÍGENA",
-                    "description": "**Enquanto FAMINTO,** inflige DESTRUIÇÃO por 15 s quando a VIDA de um oponente cair abaixo de 50%. **A DESTRUIÇÃO é removida se a Umbrella SAI DO CAMPO DE BATALHA ou for derrotada.**\n\n**Ao derrotar um inimigo,** ganhe 3 camadas de PRECISÃO e 3 camadas de um EF. POSITIVO determinado pelo ELEMENTO do oponente por 15 s."
+                    "description": "[SA1]: **Ao ficar FAMINTA,** aplica DESTRUIÇÃO permanente por 20 segundos. **DESTRUIÇÃO é removida quando Umbrella é NOCAUTEADA ou SAI.**\n\n[SA2]: **Enquanto o oponente estiver sofrendo um EFEITO NEGATIVO,** aplica um EFEITO NEGATIVO aleatório por 10 segundos a cada 5 GOLPES DE COMBO. Ao derrotar um oponente, ganha 10% do MEDIDOR DE BLOCKBUSTER por EFEITO NEGATIVO nele.",
+                    "krazete_id": "spacecase"
                 },
                 "marquee_ability": "Doce Vitória",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -276,7 +301,7 @@
                 },
                 "signature_ability": {
                     "name": "SAQUE E DIVERSÃO",
-                    "description": "[HAB 1]: O oponente perde 1 EF. POSITIVO a cada 2 segundos **enquanto estiver perto de uma POÇA.**\n\n[HAB 2]: **Com Hungern EMPANTURRADO**, a Umbrella ganha 5% de VIDA sempre que um oponente perder um EF. POSITIVO."
+                    "description": "[HAB 1]: GOLPES DE POÇA removem 3 EFEITO(S) POSITIVO(S) do oponente e aplicam IMOBILIZAR por 10 segundos.\n\n[HAB 2]: Enquanto o oponente não tiver EFEITOS POSITIVOS, GOLPES DE POÇA concedem FÚRIA por 10 segundos."
                 },
                 "marquee_ability": "Doce Vitória",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",

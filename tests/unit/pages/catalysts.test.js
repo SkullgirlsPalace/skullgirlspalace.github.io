@@ -12,12 +12,14 @@ vi.mock('../../../src/state/store.js', () => ({
 }));
 
 import { render, init } from '../../../src/pages/catalysts.js';
+import { loadCatalysts } from '../../../src/services/dataService.js';
 
 describe('catalysts.js', () => {
     let container;
 
     beforeEach(() => {
         vi.clearAllMocks();
+        loadCatalysts.mockReset();
 
         // Setup DOM
         document.body.innerHTML = `
@@ -50,17 +52,16 @@ describe('catalysts.js', () => {
             expect(html).toContain('catalyst-container');
         });
 
-        it('should include COTW section', () => {
+        it('keeps the standalone catalog separate from weekly rotations', () => {
             const html = render();
-            expect(html).toContain('cotw-section');
-            expect(html).toContain('Modificadores da Semana');
+            expect(html).toContain('catalyst-categories');
+            expect(html).not.toContain('cotw-section');
         });
 
-        it('should include element filter buttons', () => {
+        it('shows the catalog loading state until its data is ready', () => {
             const html = render();
-            expect(html).toContain('cotw-filter-btn');
-            expect(html).toContain('data-element="fire"');
-            expect(html).toContain('data-element="water"');
+            expect(html).toContain('loading-state');
+            expect(html).toContain('Carregando catalisadores');
         });
 
         it('should include intro text', () => {
@@ -118,22 +119,18 @@ describe('catalysts.js', () => {
             await init();
         });
 
-        it('should attach COTW filter button listeners', async () => {
+        it('persists a player note when a catalog note input changes', async () => {
             const { loadCatalysts } = await import('../../../src/services/dataService.js');
             loadCatalysts.mockResolvedValueOnce({
-                categories: []
+                categories: [{ category: 'Forte', items: [{ name: 'Test Catalyst', description: 'Test description' }] }]
             });
 
-            // Add filter buttons to DOM
-            document.body.innerHTML += `
-                <button class="cotw-filter-btn" data-element="fire">Fire</button>
-                <button class="cotw-filter-btn" data-element="water">Water</button>
-            `;
-
             await init();
-
-            const buttons = document.querySelectorAll('.cotw-filter-btn');
-            expect(buttons.length).toBe(2);
+            const input = document.querySelector('.catalyst-note-input');
+            input.value = 'My note';
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+            const { updateCatalystNote } = await import('../../../src/state/store.js');
+            expect(updateCatalystNote).toHaveBeenCalledWith('Test Catalyst', 'My note');
         });
     });
 });
