@@ -1,0 +1,71 @@
+/* TL-Definitiva: preserve the approved desktop scale without changing mobile. */
+@media (min-width: 769px) {
+    #character-detail[data-current-tab="tier"] .tier-table-wrapper {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-x: auto;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        table-layout: fixed;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th {
+        padding: 20px 12px;
+        font-size: 0.8rem;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:first-child,
+    #character-detail[data-current-tab="tier"] .tier-table td:first-child {
+        width: 28%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table th:not(:first-child),
+    #character-detail[data-current-tab="tier"] .tier-table td:not(:first-child) {
+        width: 18%;
+        min-width: 0;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table td {
+        padding: 20px 12px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell {
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell img {
+        width: 150px;
+        max-width: 150px;
+        border-radius: 8px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .tier-char-cell span {
+        max-width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        overflow-wrap: normal;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .text-center {
+        width: 170px;
+        min-width: 170px;
+    }
+
+    #character-detail[data-current-tab="tier"] .tier-table .rank-badge {
+        width: 82px;
+        height: 82px;
+        border-radius: 8px;
+        font-size: 2.4rem;
+    }
+}

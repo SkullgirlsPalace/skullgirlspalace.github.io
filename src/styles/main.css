@@ -51,3 +51,6 @@
 @import 'pages/interface-consistency.css';
 @import 'pages/rotations.css';
 @import './components/teams.css';
+
+/* Final desktop-only scale overrides for the approved TL-Definitiva. */
+@import 'pages/tierlist-definitiva.css';

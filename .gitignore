@@ -18,3 +18,5 @@ dist/
 
 # Personal agent directives (Claude Code loads it next to CLAUDE.md)
 CLAUDE.local.md
+/backups/
+/preview-tierlist-antiga-8e40374/
