@@ -22,12 +22,21 @@ export function pickerItems(catalog, filters, { classesFor, englishFor, effects,
         }
         return true;
     });
-    if (filters.sort === 'catalog') return items;
+    if (filters.sort === 'catalog' && !filters.classes.length) return items;
     const classOrder = { Ofensivo: 1, Coringa: 2, Defensivo: 3, 'Suporte de Utilidade': 4 };
     const stat = (item, key) => Number(String(item.data.stats?.[key] ?? '').replace(/[,.]/g, '')) || 0;
     const value = item => ({ name: normalized(item.variant), rarity: RARITY_ORDER[item.rarity], element: ELEMENT_ORDER[item.data.element], class: classOrder[classesFor(item.variant)[0]], score: stat(item, 'power'), atk: stat(item, 'attack'), hp: stat(item, 'health') })[filters.sort];
     return items.sort((a, b) => {
-        const first = value(a), second = value(b), direction = filters.direction === 'asc' ? 1 : -1;
+        const direction = filters.direction === 'asc' ? 1 : -1;
+        if (filters.classes.length) {
+            const rarityA = RARITY_ORDER[a.rarity] || 0, rarityB = RARITY_ORDER[b.rarity] || 0;
+            if (rarityA !== rarityB) return (rarityA - rarityB) * direction;
+            const primaryA = filters.classes.includes(classesFor(a.variant)[0]);
+            const primaryB = filters.classes.includes(classesFor(b.variant)[0]);
+            if (primaryA !== primaryB) return primaryA ? -1 : 1;
+        }
+        if (filters.sort === 'catalog') return 0;
+        const first = value(a), second = value(b);
         return first < second ? -direction : first > second ? direction : normalized(a.variant).localeCompare(normalized(b.variant));
     });
 }

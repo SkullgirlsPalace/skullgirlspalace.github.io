@@ -1520,6 +1520,21 @@
         "SA1": "Uma vez por luta, ganhe INABALÁVEL e IMUNIDADE por 15 segundos quando a VIDA cair abaixo de 25/35/50%.",
         "SA2": "Quando o INABALÁVEL da Painwheel expirar, RESSUSSITE aliados com 20/25/30% de VIDA."
     },
+    "garishgremlin": {
+        "name": "Gremlindo\r",
+        "rarity": "diamond",
+        "element": "air",
+        "character": "<:sp_um:969082448082268241> Umbrella",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/gGremlin.png",
+        "stats": {
+            "atk": "685",
+            "hp": "2919",
+            "fs": "821"
+        },
+        "ability": "Impacto de Bolha\r",
+        "SA1": "Umbrella possui uma BOLHA flutuante que ataca o inimigo ao acertar um ARREMESSO ou ATAQUE CARREGADO e possui 3 NÍVEIS DE PODER. A cada 10/7/5 GOLPES DE COMBO, a BOLHA ganha 1 NÍVEL DE PODER e causa mais dano. Quando a BOLHA acerta um inimigo, uma POÇA é formada sob o oponente.\r",
+        "SA2": "GOLPES DE POÇA curam os outros colegas de equipe em 5/10/15% da VIDA MÁXIMA e concedem a Umbrella OLHO-MORTO, ACELERAÇÃO e 2 acúmulos de REGENERAÇÃO por 10 segundos cada. Enquanto Umbrella estiver sob efeito de pelo menos 1 acúmulo de REGENERAÇÃO, sua BOLHA causa 25/50/75% de dano adicional.\r"
+    },
     "gijazz": {
         "name": "G.I. JAZZ",
         "rarity": "gold",
@@ -2182,6 +2197,21 @@
         "ability": "LUA DE MAU AGOURO",
         "SA1": "Inflige MALDIÇÃO e dá ACELERAÇÃO permanente depois de enfrentar o mesmo oponente por 15/12/10 segundos.",
         "SA2": "Enquanto Marie estiver viva e se beneficiando de ACELERAÇÃO, todos os aliados das Trevas causam 25/35/50% de DANO EXTRA."
+    },
+    "lovesick": {
+        "name": "Doente de Amor\r",
+        "rarity": "gold",
+        "element": "dark",
+        "character": "<:sp_va:698852651617746974> Valentine",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/lSick.png",
+        "stats": {
+            "atk": "256",
+            "hp": "1764",
+            "fs": "385"
+        },
+        "ability": "Devoção de Cavaleira\r",
+        "SA1": "A cada 5/4/3 segundos e a cada 7/6/5 GOLPES DE COMBO, ganha 1 acúmulo de DEVOÇÃO (máx. 7). Ao atingir 7 acúmulos de DEVOÇÃO, Valentine entra em FORTALECIMENTO por 15 segundos e ganha 3 acúmulos permanentes e inevitáveis de FÚRIA, MIASMA e ACELERAÇÃO enquanto o FORTALECIMENTO estiver ativo. Quando o FORTALECIMENTO termina, sofre DEBILITAÇÃO por 10 segundos, impedindo DEVOÇÃO durante esse período.\r",
+        "SA2": "Enquanto estiver em FORTALECIMENTO, a cada 4 segundos ganha 5/10/15% de ATAQUE aumentado até o FORTALECIMENTO terminar. A cada 7 GOLPES DE COMBO, prolonga o FORTALECIMENTO de Valentine em 1 segundo.\r"
     },
     "lethalweapon": {
         "name": "Máquina Mortífera",

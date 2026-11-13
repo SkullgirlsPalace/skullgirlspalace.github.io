@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { describe, it, expect } from 'vitest';
-import { HEADERS, MODES, normalizeRank, parseHTML, parseTSV, prepareSync } from '../../../tools/tier-list-sync/core.js';
+import { HEADERS, normalizeRank, parseHTML, parseTSV, prepareSync } from '../../../tools/tier-list-sync/core.js';
 import { EN_ABILITIES_PATH, PT_MAPPING_PATH } from '../../../tools/editor/abilities.js';
 
 const snapshot = fs.readFileSync('tools/tier-list-sync/snapshots/2026-10-20.tsv', 'utf8');
@@ -52,18 +52,19 @@ describe('Fandom tier list synchronization', () => {
         ambiguous['data/annie.json'].variants.bronze.push({ name: 'Outra', signature_ability: { krazete_id: 'test' } });
         expect(prepareSync([row], ambiguous, {}).report.unmatchedVariants[0].reason).toBe('ambiguous');
     });
-    it('matches every entry of the complete captured source to the current catalog', () => {
+    it('rejects the old complete capture after two new variants enter the catalog', () => {
         const rows = parseTSV(snapshot);
         const catalog = Object.fromEntries([...new Set(rows.map(row => row.character))].map(character => [`data/${character}.json`, JSON.parse(fs.readFileSync(`data/${character}.json`, 'utf8'))]));
         for (const path of [EN_ABILITIES_PATH, PT_MAPPING_PATH]) catalog[path] = JSON.parse(fs.readFileSync(path, 'utf8'));
         const tier = JSON.parse(fs.readFileSync('data/tier-data.json', 'utf8'));
-        const { data, report } = prepareSync(rows, catalog, tier);
+        const { report } = prepareSync(rows, catalog, tier);
         expect(rows).toHaveLength(307);
         expect(Object.keys(report.characters)).toHaveLength(18);
-        expect(report.valid).toBe(true);
+        expect(report.valid).toBe(false);
         expect(report.matched).toBe(307);
-        for (const character of Object.values(data)) for (const ranks of Object.values(character)) {
-            for (const mode of MODES) expect(['SS', 'S', 'A', 'B', 'C', 'I', 'N/A']).toContain(ranks[mode]);
-        }
+        expect(report.missingVariants).toEqual([
+            { character: 'umbrella', variant: 'Gremlindo', english: 'Garish Gremlin' },
+            { character: 'valentine', variant: 'Doente de Amor', english: 'Lovesick' }
+        ]);
     });
 });

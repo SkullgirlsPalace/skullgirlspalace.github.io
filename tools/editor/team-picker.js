@@ -11,17 +11,18 @@ export function createTeamPicker(options) {
     const { dialog, text, image, effectImage, classesFor, englishFor, chips } = options;
     let filters = emptyPickerFilters(), context, page = 0, targetPreset = '', notice = '', panel = 'filters', quickPage = 0;
     const button = (action, label, attrs = '') => `<button type="button" data-action="${action}" ${attrs}>${esc(text(label))}</button>`;
+    const stats = item => `<dl class="variant-stats">${[['attack', 'statAttack'], ['health', 'statHealth'], ['power', 'statScore']].map(([key, label]) => `<div><dt>${esc(text(label))}</dt><dd>${esc(item.data.stats?.[key] || '—')}</dd></div>`).join('')}</dl>`;
     const classLabel = name => text(({ Ofensivo: 'classOffensive', Defensivo: 'classDefensive', 'Suporte de Utilidade': 'classSupport', Coringa: 'classWildcard' })[name]);
     const selectedTeam = () => options.getTeam(context?.teamId);
     const refresh = () => { if (context) render(); };
     function open(teamId, index) {
-        context = { teamId, index }; notice = ''; page = 0;
+        context = { teamId, index }; filters = emptyPickerFilters(); targetPreset = ''; panel = 'filters'; notice = ''; page = 0;
         render(true);
         if (!dialog.open) dialog.showModal();
         dialog.querySelector('#picker-query')?.focus();
     }
     function openPreset(id) {
-        context = { presetId: id }; targetPreset = id; notice = ''; page = 0; filters.preset = '';
+        context = { presetId: id }; filters = emptyPickerFilters(); targetPreset = id; panel = 'filters'; notice = ''; page = 0;
         render(true);
         if (!dialog.open) dialog.showModal();
         dialog.querySelector('#picker-query')?.focus();
@@ -62,12 +63,12 @@ export function createTeamPicker(options) {
                 const fixed = sameVariant(member, team.anchor);
                 return `<button type="button" data-action="picker-slot" data-index="${index}" class="${context.index === index ? 'active' : ''}" aria-pressed="${context.index === index}" ${fixed ? 'disabled' : ''}><span>${text(['teamFront', 'teamMiddle', 'teamLast'][index])}</span>${member ? `<img width="44" height="44" src="${image(member)}" alt=""><strong>${esc(item?.variant || member.variant)}</strong>` : `<strong>${text('addMember')}</strong>`}${fixed ? `<small>${text('fixed')}</small>` : ''}</button>`;
             }).join('')}</div>` : `<p class="picker-order">${text('presetPickerHelp')}${editingPreset.kind === 'team' ? ` ${text('teamOrder')}` : ''}</p>`}
-            <div class="picker-searchbar"><input id="picker-query" type="search" value="${esc(filters.query)}" aria-label="${text('pickerSearch')}" placeholder="${text('pickerSearch')}">${button('picker-clear', 'clearFilters')}<span role="status">${items.length} ${text('variantsFound')}</span></div>
+            <div class="picker-searchbar"><span class="editor-search-field"><span class="editor-search-icon" aria-hidden="true">⌕</span><input id="picker-query" type="search" value="${esc(filters.query)}" aria-label="${text('pickerSearch')}" placeholder="${text('pickerSearch')}"></span>${button('picker-clear', 'clearFilters')}<span role="status">${items.length} ${text('variantsFound')}</span></div>
             <div class="picker-notice" role="status">${esc(notice)}</div>
             <div class="picker-layout"><section class="picker-results" tabindex="0" aria-label="${text('variants')}">${team && presets.some(isQuickPreset) ? presetShortcuts(presets, { text, image, page: quickPage, inPicker: true }) : ''}<div class="picker-grid">${items.slice(page * 12, (page + 1) * 12).map(item => {
                 const duplicate = editingPreset ? editingPreset.members.some(member => sameVariant(member, item)) || quick && quick.members.length === 2 : team.members.some((member, index) => index !== context.index && sameVariant(member, item));
                 const enName = englishFor(item)?.name?.replace(/\r/g, '').trim();
-                return `<article class="member-card"><img loading="lazy" width="130" height="110" src="${image(item)}" alt=""><strong>${esc(item.variant)}</strong>${enName && enName !== item.variant ? `<small lang="en">${esc(enName)}</small>` : ''}<small>${esc(item.characterName)} · ${text(item.rarity)} · ${text(item.data.element)}</small>${chips(item.variant)}<div class="inline-actions">${button('choose-member', editingPreset && !quick ? 'pinVariant' : 'choose', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}" ${duplicate ? 'disabled' : ''}`)}${button('inspect-picker', 'inspect', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}"`)}${targetPreset && !editingPreset ? button('preset-pin', 'pinVariant', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}"`) : ''}</div></article>`;
+                return `<article class="member-card"><img loading="lazy" width="130" height="110" src="${image(item)}" alt=""><strong>${esc(item.variant)}</strong>${enName && enName !== item.variant ? `<small lang="en">${esc(enName)}</small>` : ''}<small>${esc(item.characterName)} · ${text(item.rarity)} · ${text(item.data.element)}</small>${stats(item)}${chips(item.variant)}<div class="inline-actions">${button('choose-member', editingPreset && !quick ? 'pinVariant' : 'choose', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}" ${duplicate ? 'disabled' : ''}`)}${button('inspect-picker', 'inspect', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}"`)}${targetPreset && !editingPreset ? button('preset-pin', 'pinVariant', `data-character="${esc(item.character)}" data-variant="${esc(item.variant)}"`) : ''}</div></article>`;
             }).join('') || `<p class="empty-state">${text('noMatch')}</p>`}</div></section>
             <aside class="picker-filters" aria-label="${text('filters')}"><div class="picker-filter-heading"><h3>${text('filters')}</h3>${button('picker-clear', 'clearFilters')}</div>
                 <div class="picker-filter-top"><nav class="picker-panel-tabs" aria-label="${text('section')}">${['filters', 'presets'].map(value => `<button type="button" data-action="picker-panel" data-panel="${value}" aria-pressed="${panel === value}" class="${panel === value ? 'active' : ''}">${text(value)}</button>`).join('')}</nav><div class="picker-direct-clears">${button('picker-class-all', 'clearClasses')}${button('picker-effects-clear', 'clearEffects')}</div></div>
@@ -79,7 +80,7 @@ export function createTeamPicker(options) {
                 <div class="picker-filter-heading"><h3>${text('filterClasses')} · ${filters.classes.length}</h3></div>
                 <div class="picker-class-filters">${CLASSES.map((name, index) => `<button type="button" data-action="picker-class" data-class-index="${index}" class="${filters.classes.includes(name) ? 'active' : ''}" aria-pressed="${filters.classes.includes(name)}">${esc(classLabel(name))}</button>`).join('')}</div>
                 <div class="picker-filter-heading"><h3>${text('filterEffects')} · ${filters.effects.length}</h3></div>
-                <p class="help">${text('effectFilterHelp')}</p><input id="picker-effect-query" type="search" value="${esc(filters.effectQuery)}" aria-label="${text('searchEffects')}" placeholder="${text('searchEffects')}">
+                <p class="help">${text('effectFilterHelp')}</p><span class="editor-search-field"><span class="editor-search-icon" aria-hidden="true">⌕</span><input id="picker-effect-query" type="search" value="${esc(filters.effectQuery)}" aria-label="${text('searchEffects')}" placeholder="${text('searchEffects')}"></span>
                 <label>${text('effectMatch')}<select id="picker-effect-match"><option value="any" ${filters.effectMatch === 'any' ? 'selected' : ''}>${text('matchAny')}</option><option value="all" ${filters.effectMatch === 'all' ? 'selected' : ''}>${text('matchAll')}</option></select></label>
                 <div class="picker-effect-groups">${effectsMarkup()}</div>
                 </div><div ${panel !== 'presets' ? 'hidden' : ''}>
@@ -98,7 +99,7 @@ export function createTeamPicker(options) {
     dialog.addEventListener('click', event => {
         const target = event.target.closest('button'); if (!target || target.disabled) return;
         const action = target.dataset.action;
-        if (action === 'close-picker') { dialog.close(); return; }
+        if (action === 'close-picker') { filters = emptyPickerFilters(); targetPreset = ''; panel = 'filters'; page = 0; context = null; dialog.close(); return; }
         if (action === 'quick-save') {
             try { options.onSaveQuick(context.quick.name, context.quick.members); dialog.close(); }
             catch (error) { notice = options.humanError(error.message); render(); }

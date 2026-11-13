@@ -3,6 +3,7 @@ import { MOVE_DATA } from '../../src/data/movesimages.js';
 import { escapeTeamText as esc } from '../../src/utils/teamData.js';
 import { strings } from './strings.js';
 import { isLocalEditorURL } from './local-only.js';
+import { moveDescriptionControl, toggleMoveDescription } from './move-description.js';
 
 const normalize = value => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 
@@ -10,7 +11,7 @@ export function openMovesGallery({ repo, language, characters, initialCharacter 
     if (!isLocalEditorURL(window.location.href)) return;
     const text = key => strings[language]?.[key] || strings['pt-BR'][key] || key;
     const rows = Object.entries(MOVE_DATA).flatMap(([character, moves]) => Object.entries(moves).map(([name, data]) => ({
-        character, characterName: characters[character]?.character || character, name, type: data.type, image: data.image?.image
+        character, characterName: characters[character]?.character || character, name, type: data.type, image: data.image?.image, description: data.description || data.image?.description
     })));
     const state = { query: '', character: Object.hasOwn(MOVE_DATA, initialCharacter) ? initialCharacter : Object.keys(MOVE_DATA)[0], type: '', page: 0 };
     document.querySelector('#moves-gallery')?.remove();
@@ -20,7 +21,7 @@ export function openMovesGallery({ repo, language, characters, initialCharacter 
     dialog.innerHTML = `<header class="dialog-heading"><h2 id="moves-gallery-title">${text('movesGallery')}</h2><button type="button" data-gallery-action="close">${text('close')}</button></header>
         <p class="help">${text('movesHelp')}</p>
         <div class="gallery-toolbar">
-            <label>${text('movesSearch')}<input id="moves-query" type="search" placeholder="${text('movesSearch')}"></label>
+            <label>${text('movesSearch')}<span class="editor-search-field"><span class="editor-search-icon" aria-hidden="true">⌕</span><input id="moves-query" type="search" placeholder="${text('movesSearch')}"></span></label>
             <label>${text('moveCharacter')}<select id="moves-character">${Object.keys(MOVE_DATA).map(character => `<option value="${esc(character)}" ${state.character === character ? 'selected' : ''}>${esc(characters[character]?.character || character)}</option>`).join('')}</select></label>
             <label>${text('moveType')}<select id="moves-type"><option value="">${text('allMoveTypes')}</option><option value="Golpe Especial">${text('specialMoves')}</option><option value="Blockbuster">${text('blockbusters')}</option></select></label>
         </div><p class="help" id="moves-count" role="status"></p>
@@ -37,7 +38,7 @@ export function openMovesGallery({ repo, language, characters, initialCharacter 
         dialog.querySelector('#moves-count').textContent = `${matches.length} ${text('movesFound')}`;
         dialog.querySelector('#moves-grid').innerHTML = matches.slice(state.page * 24, (state.page + 1) * 24).map(row => `<figure class="move-gallery-card" data-move-index="${row.index}">
             <img loading="lazy" width="128" height="128" src="${esc(new URL(row.image, repo).href)}" alt="">
-            <figcaption><strong class="move-name">${esc(row.name)}</strong><small>${esc(row.characterName)} · ${text(row.type === 'Golpe Especial' ? 'specialMoves' : 'blockbusters')}</small>
+            <figcaption><strong class="move-name">${esc(row.name)}</strong><small>${esc(row.characterName)} · ${text(row.type === 'Golpe Especial' ? 'specialMoves' : 'blockbusters')}</small>${moveDescriptionControl(row, text)}
             <button type="button" class="small" data-gallery-action="copy" data-move-index="${row.index}">${text('copyMove')}</button></figcaption></figure>`).join('') || `<p class="empty-state">${text('noMoves')}</p>`;
         dialog.querySelector('#moves-pages').innerHTML = `<div class="pagination"><button type="button" data-gallery-action="previous" ${state.page ? '' : 'disabled'}>${text('previous')}</button><span>${text('page')} ${state.page + 1}/${pages}</span><button type="button" data-gallery-action="next" ${state.page + 1 < pages ? '' : 'disabled'}>${text('next')}</button></div>`;
         dialog.querySelector('#moves-copy-status').textContent = '';
@@ -53,6 +54,8 @@ export function openMovesGallery({ repo, language, characters, initialCharacter 
         state.page = 0; renderCards();
     });
     dialog.addEventListener('click', async event => {
+        const effectButton = event.target.closest('[data-move-effect]');
+        if (effectButton) { toggleMoveDescription(effectButton, text); return; }
         const button = event.target.closest('[data-gallery-action]');
         if (!button || button.disabled) return;
         if (button.dataset.galleryAction === 'close') { dialog.close(); return; }

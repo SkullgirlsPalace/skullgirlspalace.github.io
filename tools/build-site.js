@@ -12,6 +12,7 @@ const DEFAULT_OUT_DIR = path.join(ROOT_DIR, '_site');
 export const PUBLISHED_PATHS = [
     'src',
     'img',
+    'media',
     'data',
     'font',
     'robots.txt',
@@ -230,11 +231,14 @@ export function buildSite({ rootDir = ROOT_DIR, outDir = DEFAULT_OUT_DIR, publis
     const entries = collectSeoEntries({ rootDir });
     fs.rmSync(outDir, { recursive: true, force: true });
     fs.mkdirSync(outDir, { recursive: true });
+    const unpublishedWikiAssets = path.join(rootDir, 'img', 'Wiki');
     for (const publishedPath of publishedPaths) {
         fs.cpSync(path.join(rootDir, publishedPath), path.join(outDir, publishedPath), {
             recursive: true,
-            // Image tools can leave these local files behind after an interrupted conversion.
-            filter: source => !/(?:\.(?:bak|backup|orig|tmp)|~)$/i.test(path.basename(source))
+            // The Wiki media collection has no site references and includes large source GIFs.
+            // Image tools can also leave local files after an interrupted conversion.
+            filter: source => source !== unpublishedWikiAssets
+                && !/(?:\.(?:bak|backup|orig|tmp)|~)$/i.test(path.basename(source))
         });
     }
     for (const entry of entries) {

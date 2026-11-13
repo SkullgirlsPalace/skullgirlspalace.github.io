@@ -119,6 +119,43 @@ describe('Palace Studio workflow', () => {
         expect(document.querySelectorAll('.picker-grid .member-card')).toHaveLength(12);
         expect(document.querySelector('.picker-filters details')).toBeNull();
     });
+    it('shows variant stats while choosing and starts the next team search with clean filters', async () => {
+        await import('../../../tools/editor/editor.js');
+        expect(document.querySelector('.variant-heading .variant-stats').textContent).toContain('27,226');
+        document.querySelector('[data-action="add-team"]').click();
+        document.querySelector('[data-action="pick"]').click();
+        const firstCard = document.querySelector('.picker-grid .member-card');
+        expect(firstCard.querySelector('.variant-stats').textContent).toMatch(/ATQ.*VD.*Pontuação/);
+        const query = document.querySelector('#picker-query');
+        query.value = 'Umbrella'; query.dispatchEvent(new Event('input', { bubbles: true }));
+        document.querySelector('[data-picker-group="rarity"][data-value="diamante"]').click();
+        document.querySelector('[data-action="close-picker"]').click();
+        document.querySelector('[data-action="pick"]').click();
+        expect(document.querySelector('#picker-query').value).toBe('');
+        expect(document.querySelectorAll('[data-picker-group][aria-pressed="true"]')).toHaveLength(0);
+        expect(document.querySelectorAll('.picker-grid .member-card')).toHaveLength(12);
+    });
+    it('shows move images alongside build text and refreshes the preview while editing', async () => {
+        await import('../../../tools/editor/editor.js');
+        document.querySelector('[data-tab="edit"]').click();
+        const preview = document.querySelector('[data-build-preview="base"]');
+        expect(preview.textContent).toContain('ATQ%');
+        expect(preview.querySelectorAll('.build-moves-grid img').length).toBeGreaterThan(0);
+        const arsenal = document.querySelector('[data-build="base"][data-field="recommended_arsenal"]');
+        arsenal.value = 'Explosão'; arsenal.dispatchEvent(new Event('input', { bubbles: true }));
+        expect(preview.querySelectorAll('.build-moves-grid figure')).toHaveLength(1);
+        expect(preview.textContent).toContain('Explosão');
+        const effect = preview.querySelector('[data-move-effect]');
+        const description = preview.querySelector('.move-description');
+        expect(description.hidden).toBe(true);
+        effect.click();
+        expect(effect.getAttribute('aria-expanded')).toBe('true');
+        expect(description.hidden).toBe(false);
+        expect(description.textContent).toBe(MOVE_DATA.annie['Explosão'].description);
+        effect.click();
+        expect(description.hidden).toBe(true);
+        expect(preview.querySelector('img').getAttribute('src')).toContain('.webp');
+    });
     it('creates personal support pools directly, pins unique variants, renames and undoes them', async () => {
         await import('../../../tools/editor/editor.js');
         document.querySelector('[data-tab="presets"]').click();
@@ -335,7 +372,7 @@ describe('Palace Studio workflow', () => {
         expect(document.querySelector('#editor .quick-preset').textContent).toContain('Padrão 4');
         expect(localStorage.getItem('palace-editor:v2:/')).toBe(before);
     });
-    it('preserves v1 storage and downloads the original version before starting v2', async () => {
+    it('preserves v1 storage while allowing new team edits immediately', async () => {
         const old = JSON.stringify({ format: 'palace-editor', version: 1, changes: [] });
         localStorage.setItem('palace-editor:v1:/', old);
         const downloads = [];
@@ -346,7 +383,7 @@ describe('Palace Studio workflow', () => {
             await import('../../../tools/editor/editor.js');
             expect(document.querySelector('[data-action="start-fresh"]').disabled).toBe(true);
             document.querySelector('[data-action="add-team"]').click();
-            expect(localStorage.getItem('palace-editor:v2:/')).toBeNull();
+            expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.some(change => change.path === 'data/teams.json')).toBe(true);
             document.querySelector('[data-action="recover"]').click();
             expect(downloads).toEqual(['palace-v1-backup.json']);
             expect(JSON.parse(await blobs[0].text())).toEqual(JSON.parse(old));
@@ -356,6 +393,19 @@ describe('Palace Studio workflow', () => {
             expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).version).toBe(2);
             expect(document.querySelector('[data-action="recover"]')).toBeNull();
         } finally { click.mockRestore(); url.mockRestore(); }
+    });
+    it('archives an incompatible v2 team draft before saving a new editable draft', async () => {
+        const old = JSON.stringify({ format: 'palace-editor', version: 2, presets: [], changes: [{
+            path: 'data/teams.json', before: { version: 1, teams: [{ id: 'old-published-team' }] },
+            after: { version: 1, teams: [{ id: 'old-draft-team' }] }
+        }] });
+        localStorage.setItem('palace-editor:v2:/', old);
+        await import('../../../tools/editor/editor.js');
+        const archiveKey = localStorage.getItem('palace-editor:v2:/:recovery-latest');
+        expect(localStorage.getItem(archiveKey)).toBe(old);
+        document.querySelector('[data-action="add-team"]').click();
+        expect(JSON.parse(localStorage.getItem('palace-editor:v2:/')).changes.some(change => change.path === 'data/teams.json')).toBe(true);
+        expect(localStorage.getItem(archiveKey)).toBe(old);
     });
     it('imports v2 presets and rejects other generations without replacing the current draft', async () => {
         await import('../../../tools/editor/editor.js');
@@ -390,7 +440,7 @@ describe('Palace Studio workflow', () => {
             document.querySelector('[data-action="import"]').click();
             expect(document.querySelector('#review').textContent).toContain('somente backups v3');
             expect(localStorage.getItem('palace-editor:v2:/')).toBe(previous);
-            expect(localStorage.getItem('palace-editor:v3:/')).toBeNull();
+            expect(JSON.parse(localStorage.getItem('palace-editor:v3:/')).version).toBe(3);
         } finally { vi.doUnmock('../../../tools/editor/version.js'); }
     });
     it('filters ability descriptions by buffs and debuffs, combines selections and clears them', async () => {
@@ -453,7 +503,7 @@ describe('Palace Studio workflow', () => {
         expect(savedClasses()).toEqual(['Suporte de Utilidade', 'Ofensivo']);
         choose('primary', 'Ofensivo');
         expect(savedClasses()).toEqual(['Ofensivo', 'Suporte de Utilidade']);
-        expect(document.querySelector('.variant-heading .secondary-class').textContent).toContain('Também atua como: Suporte de Utilidade');
+        expect(document.querySelector('.variant-heading .secondary-class').textContent).toContain('Classe secundária: Suporte');
         expect(document.querySelector('[data-class-role="secondary"] option[value="Ofensivo"]')).toBeNull();
         choose('secondary', '');
         expect(savedClasses()).toEqual(['Ofensivo']);
@@ -515,7 +565,7 @@ describe('Palace Studio workflow', () => {
         const search = document.querySelector('#picker-query');
         search.value = ''; search.dispatchEvent(new Event('input', { bubbles: true }));
         document.querySelector('#picker [data-class-index="2"]').click();
-        expect(cards().every(card => /Defensivo|Suporte de Utilidade/.test(card.querySelector('.chips').textContent))).toBe(true);
+        expect(cards().every(card => /Defensivo|Suporte/.test(card.querySelector('.chips').textContent))).toBe(true);
         document.querySelector('#picker [data-action="picker-class-all"]').click();
         expect(document.querySelectorAll('#picker [data-action="picker-class"][aria-pressed="true"]')).toHaveLength(0);
         expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
@@ -537,11 +587,25 @@ describe('Palace Studio workflow', () => {
         query.value = 'estilingue gravitacional'; query.dispatchEvent(new Event('input', { bubbles: true }));
         expect(document.querySelectorAll('.move-gallery-card')).toHaveLength(1);
         expect(document.querySelector('.move-name').textContent).toBe('Estilingue Gravitacional');
+        const galleryEffect = document.querySelector('.move-gallery-card [data-move-effect]');
+        expect(document.querySelector('.move-gallery-card .move-description').hidden).toBe(true);
+        galleryEffect.click();
+        expect(galleryEffect.textContent).toBe('Ocultar efeito');
+        expect(document.querySelector('.move-gallery-card .move-description').hidden).toBe(false);
+        expect(document.querySelector('.move-gallery-card .move-description').textContent).toBe(MOVE_DATA.annie['Estilingue Gravitacional'].description);
         expect(document.querySelector('.move-gallery-card img').getAttribute('src')).toContain('/img/annie/Annie_28.webp');
         const copy = vi.fn(async () => {});
         vi.spyOn(navigator, 'clipboard', 'get').mockReturnValue({ writeText: copy });
         document.querySelector('[data-gallery-action="copy"]').click();
         await vi.waitFor(() => expect(copy).toHaveBeenCalledWith('Estilingue Gravitacional'));
+        character.value = 'beowulf'; character.dispatchEvent(new Event('change', { bubbles: true }));
+        query.value = 'Wulf Shoot'; query.dispatchEvent(new Event('input', { bubbles: true }));
+        expect(document.querySelector('.move-gallery-card .move-description').textContent).toBe('Descrição não disponível.');
+        character.value = 'annie'; character.dispatchEvent(new Event('change', { bubbles: true }));
+        query.value = 'Corte Saturno'; query.dispatchEvent(new Event('input', { bubbles: true }));
+        const description = document.querySelector('.move-gallery-card .move-description');
+        expect(description.querySelector('strong').textContent).toBe('Expulsão');
+        expect(description.textContent).toContain('\n\nAo GOLPEAR');
         expect(localStorage.getItem('palace-editor:v2:/')).toBe(draft);
         document.querySelector('[data-gallery-action="close"]').click();
         expect(document.querySelector('#moves-gallery')).toBeNull();

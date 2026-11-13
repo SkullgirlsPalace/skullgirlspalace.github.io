@@ -50,7 +50,7 @@ Só vai ao ar o que está em `PUBLISHED_PATHS` dentro desse arquivo. Um arquivo 
 
 ## Arquitetura
 
-- **Boot** (`src/main.js`): monta navbar, drawer, rodapé e scroll-nav. Depois espera, em série, os JSON de todos os personagens, `tier-data.json`, `extras.json` e as traduções do Krazete, e só então chama `initRouter()`. Nada da página aparece antes disso.
+- **Boot** (`src/main.js`): monta navbar, drawer, rodapé e scroll-nav e inicia o router sem esperar pelos dados do jogo. Módulos e dados são carregados conforme a rota, descrito na ADR 0008.
 - **Handlers globais**: as páginas são template strings com `onclick="navigateTo(...)"` e afins, então as funções chamadas no HTML precisam estar em `window`. `main.js` expõe a maioria, e alguns módulos de página e componente expõem as suas ao serem carregados. Uma função nova usada num template também precisa ser exposta.
 - **Router** (`src/router.js`):
   - Rotas por hash: `''` (home), `characters`, `character/<key>/<builds|tier>`, `catalysts`, `tierlist`, `stats`, `guide` e `tutorial-renda-passiva`.
@@ -80,7 +80,7 @@ As páginas e o sitemap saem sozinhos no build.
 
 `npm run build` executa a auditoria de peso e duplicatas automaticamente, e o CI também monta e verifica o site nos PRs. Leia `docs/PERFORMANCE.md` antes de alterar recursos publicados. Os limites ficam em `tools/site-budget.json`; não aumente limites ou autorize novas duplicatas sem investigar e justificar a necessidade no PR. Não commite `_site/`, `dist/`, `raw_images/`, `coverage/` nem temporários.
 
-Estimativa de outubro de 2026, contando os arquivos:
+Estimativa de outubro de 2026, contando os arquivos. `npm run build` mede atualmente os limites em `tools/site-budget.json`; o tamanho total do artefato não representa o download da home.
 
 - **Home:** a primeira visita faz cerca de 100 requisições e baixa uns 2 MB.
 - **Página de personagem:** pode passar de 5 MB.

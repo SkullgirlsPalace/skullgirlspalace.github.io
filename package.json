@@ -6,6 +6,7 @@
   "scripts": {
     "sync:tier-list": "node tools/sync-tier-list.js",
     "editor": "node tools/editor/serve.js",
+    "editor:site": "node tools/site-editor/serve.js",
     "optimize": "node tools/optimize-images.cjs",
     "test": "vitest",
     "test:run": "vitest run",

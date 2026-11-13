@@ -220,7 +220,8 @@
                 },
                 "signature_ability": {
                     "name": "DEFESA DE DIAMANTE",
-                    "description": "[HAB 1]: 10% de chance de Cerebella ganhar ARMADURA e INABALÁVEL por 10 s **ao ser GOLPEADA.**\n\n[HAB 2]: **Quando Cerebella ganha um EF. POS., 100% de chance de transferir 1 EF. NEG. dela ao oponente.**"
+                    "description": "[SA1]: Quando qualquer lutador é GOLPEADO, tem 10% de chance de ganhar ARMADURA e INABALÁVEL por 10 segundos.\n\n[SA2]: **Quando Cerebella ganha um EF. POS., 100% de chance de transferir 1 EF. NEG. dela ao oponente.**",
+                    "krazete_id": "armedforces"
                 },
                 "marquee_ability": "Mestre do Picadeiro",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",

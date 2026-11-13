@@ -6,7 +6,7 @@
 import { RARITY_ORDER, ELEMENT_ORDER, ELEMENT_MAP } from '../config/constants.js';
 import { parseStatValue } from './formatters.js';
 import { getVariantClasses, CLASS_ORDER } from '../data/variantClasses.js';
-import { isNewVariant, NEW_VARIANTS } from '../data/newContent.js';
+import { isNewVariant } from '../data/newContent.js';
 import { flattenVariants } from './variantUtils.js';
 import { getEffectPatterns, EFFECT_DATA } from '../data/effectData.js';
 
@@ -24,7 +24,8 @@ export function sortVariants(variants, sortConfig, filters = null) {
         // AND the user hasn't explicitly changed the sorting (default is score desc).
         const noGroupingFiltersActive = !filters || (
             (!filters.rarity || filters.rarity.length === 0) &&
-            (!filters.element || filters.element.length === 0)
+            (!filters.element || filters.element.length === 0) &&
+            (!filters.variantClass || filters.variantClass.length === 0)
         );
         const isDefaultSort = type === 'score' && direction === 'desc';
 
@@ -35,17 +36,10 @@ export function sortVariants(variants, sortConfig, filters = null) {
             if (isANew !== isBNew) {
                 return isANew ? -1 : 1; 
             }
-            // Among New variants, sort by their order in NEW_VARIANTS array
+            // Featured variants follow the same rarity priority as the catalog.
             if (isANew && isBNew) {
-                const getNewIndex = (name) => {
-                    const norm = name.trim().toLowerCase();
-                    return NEW_VARIANTS.findIndex(v => v.toLowerCase() === norm);
-                };
-                const indexA = getNewIndex(a.name);
-                const indexB = getNewIndex(b.name);
-                if (indexA !== -1 && indexB !== -1) {
-                    return indexA - indexB;
-                }
+                const rarityDifference = (RARITY_ORDER[b.rarityKey] || 0) - (RARITY_ORDER[a.rarityKey] || 0);
+                if (rarityDifference) return rarityDifference;
             }
         }
 
@@ -56,6 +50,13 @@ export function sortVariants(variants, sortConfig, filters = null) {
 
         if (rarityA !== rarityB) {
             return direction === 'desc' ? (rarityB - rarityA) : (rarityA - rarityB);
+        }
+
+        // Within each rarity, show primary matches before secondary matches.
+        if (filters?.variantClass?.length) {
+            const primaryA = filters.variantClass.includes(getVariantClasses(a.name)[0]);
+            const primaryB = filters.variantClass.includes(getVariantClasses(b.name)[0]);
+            if (primaryA !== primaryB) return primaryA ? -1 : 1;
         }
 
         // Secondary Sort (User's chosen criterion)
@@ -94,7 +95,7 @@ export function sortVariants(variants, sortConfig, filters = null) {
 
         if (valA < valB) return direction === 'asc' ? -1 : 1;
         if (valA > valB) return direction === 'asc' ? 1 : -1;
-        return 0;
+        return a.name.localeCompare(b.name);
     });
 }
 

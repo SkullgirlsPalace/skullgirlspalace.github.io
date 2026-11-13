@@ -6,20 +6,23 @@
 import { getCurrentLanguage } from '../i18n/index.js';
 
 // ── Class names (PT-BR and EN) ──────────────────────────
-const CLASS_NAMES_PT = ['Ofensivo', 'Defensivo', 'Suporte de Utilidade', 'Coringa'];
-const CLASS_NAMES_EN = ['Offensive', 'Defensive', 'Utility Support', 'Wildcard'];
+const CLASS_NAMES_PT = ['Ofensivo', 'Defensivo', 'Suporte', 'Coringa'];
+const CLASS_NAMES_EN = ['Offensive', 'Defensive', 'Support', 'Wildcard'];
 
 const CLASS_NAME_PT_TO_EN = {
  'Ofensivo': 'Offensive',
  'Defensivo': 'Defensive',
- 'Suporte de Utilidade': 'Utility Support',
+ 'Suporte': 'Support',
+ 'Suporte de Utilidade': 'Support',
  'Coringa': 'Wildcard'
 };
 
 const CLASS_NAME_EN_TO_PT = {
  'Offensive': 'Ofensivo',
  'Defensive': 'Defensivo',
+ 'Support': 'Suporte de Utilidade',
  'Utility Support': 'Suporte de Utilidade',
+ 'Suporte': 'Suporte de Utilidade',
  'Wildcard': 'Coringa'
 };
 
@@ -40,17 +43,17 @@ export const CLASS_ORDER = {
 
 // ── Class descriptions (PT-BR and EN) ───────────────────
 const CLASS_DESCRIPTIONS_PT = {
- "Ofensivo": "O Personagem Principal do time feito para causar o m\u00E1ximo de dano poss\u00EDvel, geralmente ele ganha efeitos ou inflinge efeitos. \u00DAtil contra personagens Defensivos.",
+ "Ofensivo": "O Personagem Principal do time feito para causar o m\u00E1ximo de dano poss\u00EDvel, geralmente ele ganha efeitos ou inflige efeitos. \u00DAtil contra personagens Defensivos.",
  "Defensivo": "Personagem que tem alta quantidade de Vida e Habilidades que aumentam a sobreviv\u00EAncia do mesmo, tamb\u00E9m pode ter habilidades punitivas como dano refletido e outros efeitos eficazes contra o opressor.",
- "Suporte de Utilidade": "Personagem que tem habilidades que podem conceder EF. POSITIVOS aos Aliados, EF. NEGATIVOS aos oponentes ou ambos (conceder efeitos e inflingir efeitos). Alguns suportes podem se beneficiar de suas pr\u00F3prias habilidades e entrar em campo para contribuir para o time de diferentes formas.",
- "Coringa": "Variante que atua nas três classes: Ofensivo, Defensivo e Suporte de Utilidade. Ter uma classe principal e uma secundária não é suficiente para ser Coringa."
+ "Suporte de Utilidade": "Personagem que tem habilidades que podem conceder EF. POSITIVOS aos Aliados, EF. NEGATIVOS aos oponentes ou ambos (conceder efeitos e infligir efeitos). Alguns suportes podem se beneficiar de suas pr\u00F3prias habilidades e entrar em campo para contribuir para o time de diferentes formas.",
+ "Coringa": "Variante que atua nas três classes: Ofensivo, Defensivo e Suporte. Ter uma classe principal e uma secundária não é suficiente para ser Coringa."
 };
 
 const CLASS_DESCRIPTIONS_EN = {
  "Ofensivo": "The team's main damage dealer, designed to deal as much damage as possible. Typically gains buffs or inflicts debuffs. Effective against Defensive fighters.",
  "Defensivo": "A fighter with high HP and abilities that increase survivability. May also have punishing abilities like reflect damage and other effects effective against aggressors.",
  "Suporte de Utilidade": "A fighter with abilities that grant BUFFS to allies, inflict DEBUFFS on opponents, or both. Some supports can benefit from their own abilities and contribute to the team in various ways.",
- "Coringa": "A variant that can act as Offensive, Defensive and Utility Support. Having a primary and a secondary class alone does not make a variant a Wildcard."
+ "Coringa": "A variant that can act as Offensive, Defensive and Support. Having a primary and a secondary class alone does not make a variant a Wildcard."
 };
 
 export const CLASS_DESCRIPTIONS = CLASS_DESCRIPTIONS_PT;
@@ -64,7 +67,7 @@ export function getLocalizedClassName(ptClassName) {
  if (getCurrentLanguage() === 'en') {
   return CLASS_NAME_PT_TO_EN[ptClassName] || ptClassName;
  }
- return ptClassName;
+ return ptClassName === 'Suporte de Utilidade' ? 'Suporte' : ptClassName;
 }
 
 /**

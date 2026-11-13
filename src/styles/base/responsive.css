@@ -1,5 +1,7 @@
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
+    button { min-height: 44px; touch-action: manipulation; }
+    [onclick] { touch-action: manipulation; }
 
     /* Global: prevent horizontal scroll on mobile */
     html,
@@ -198,7 +200,8 @@
     }
 
     .search-icon {
-        width: 14px !important;
+        width: 20px !important;
+        font-size: 1.35rem;
     }
 
     /* ===== PHASE 3: CHARACTER DETAIL & FILTER BAR ===== */
@@ -706,11 +709,11 @@
     .tier-table-wrapper {
         overflow-x: auto;
         margin-left: 0;
-        justify-content: flex-start;
+        scroll-behavior: auto;
     }
 
     .tier-table {
-        min-width: 500px;
+        min-width: 665px;
     }
 
     /* Sticky first column (character name + photo) */
@@ -729,15 +732,20 @@
     }
 
     .tier-table .tier-char-cell {
-        width: 120px;
+        width: max-content;
+        max-width: min(54vw, 280px);
     }
 
     .tier-table .tier-char-cell img {
-        width: 70px;
+        width: clamp(68px, 15vw, 96px);
+        max-width: 100%;
     }
 
     .tier-table .tier-char-cell span {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
+        line-height: 1.25;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .tier-table .rank-badge {
@@ -747,8 +755,8 @@
     }
 
     .text-center {
-        width: 90px;
-        min-width: 90px;
+        width: 130px;
+        min-width: 130px;
     }
 
     .tier-table th {
@@ -786,38 +794,59 @@
         gap: 12px !important;
     }
 
+    .header-top-row {
+        display: grid !important;
+        grid-template-columns: 44px minmax(0, 1fr);
+        align-items: center;
+        gap: 8px;
+    }
+
     .header-top-row .header-left {
-        order: 1;
-        flex: 0 0 auto;
+        grid-column: 1;
+        grid-row: 1;
+        position: relative;
+        z-index: 11;
+        width: 44px;
+        flex: 0 0 44px;
     }
 
     .header-top-row .centered-title {
-        order: 2;
-        flex: 1 1 auto;
+        position: static;
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        min-width: 0;
+        transform: none;
+        z-index: auto;
         text-align: center;
         justify-content: center;
     }
 
     .header-top-row .header-right {
-        order: 3;
+        grid-column: 1 / -1;
+        grid-row: 2;
         position: static;
-        flex: 0 0 100%;
         width: 100%;
         display: flex;
         justify-content: center;
     }
 
     .char-title-row h1 {
-        font-size: 1.1rem !important;
-        white-space: nowrap;
+        min-width: 0;
+        font-size: 1.05rem !important;
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     .header-top-row .btn-back {
-        width: 38px !important;
-        height: 38px !important;
-        min-width: 38px !important;
+        position: static !important;
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
         padding: 0 !important;
         display: flex !important;
+        transform: none !important;
         align-items: center;
         justify-content: center;
     }

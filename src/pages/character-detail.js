@@ -11,9 +11,12 @@ import { filterVariants, sortVariants } from '../utils/sorting.js';
 import { flattenVariants } from '../utils/variantUtils.js';
 import { renderVariants } from '../components/VariantCard.js';
 import { createFilterBar, createSearchBar, updateFilterUI, updateCharacterNav } from '../components/FilterBar.js';
-import { createTierView } from '../components/TierTable.js';
-import { renderProfileModal } from './character-profile.js';
+import { createTierView, enableTierTableDragScroll } from '../components/TierTable.js';
 import { t, getLocalizedNameSync } from '../i18n/index.js';
+
+const VARIANT_PAGE_SIZE = 24;
+let visibleVariantCount = VARIANT_PAGE_SIZE;
+let displayedCharacter = null;
 
 /**
  * Get all variants across all characters (for "Todos" mode)
@@ -55,7 +58,7 @@ export function render(charKey, initialTab = 'builds') {
         return `
             <section class="section character-detail">
                 <div class="section-header">
-                    <button class="btn-back" onclick="navigateTo('')">
+                    <button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
                         ←
                     </button>
                     <h2>${t('detail.characterNotFound')}</h2>
@@ -72,7 +75,7 @@ export function render(charKey, initialTab = 'builds') {
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
                     <div class="header-left">
-                        <button class="btn-back pill" onclick="navigateTo('')">
+                        <button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
@@ -121,7 +124,7 @@ export function render(charKey, initialTab = 'builds') {
                 ${currentTab === 'builds' ? renderBuildsTab(charKey, charData) : renderTierTab(charKey, charData)}
             </div>
 
-            ${renderProfileModal(charKey)}
+            <div id="profile-modal-host" data-character="${charKey}"></div>
         </section>
     `;
 }
@@ -138,7 +141,7 @@ function renderTodosPage(initialTab = 'builds') {
             <div class="character-detail-header fade-in">
                 <div class="header-top-row">
                     <div class="header-left">
-                        <button class="btn-back pill" onclick="navigateTo('')">
+                        <button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
                             <span style="font-size: 1.2rem; line-height: 1;">&#8592;</span>
                         </button>
                     </div>
@@ -186,7 +189,7 @@ function renderTodosPage(initialTab = 'builds') {
  */
 function renderTodosTierRedirect() {
     const characters = getCharacters();
-    if (!characters) return '<p>Carregando...</p>';
+    if (!characters) return `<p>${t('common.loading')}</p>`;
     
     // Get first character alphabetically (Annie)
     const sortedKeys = Object.keys(characters).sort((a, b) => 
@@ -202,7 +205,7 @@ function renderTodosTierRedirect() {
             </div>
         `;
     }
-    return '<p style="color: var(--text-muted); text-align: center;">Nenhuma tier list disponível.</p>';
+    return `<p style="color: var(--text-muted); text-align: center;">${t('detail.noTierList')}</p>`;
 }
 
 /**
@@ -218,7 +221,7 @@ function renderTodosBuildsTab() {
 
     let variantsHTML = '';
     if (variants.length === 0) {
-        variantsHTML = '<p style="color: var(--text-muted); padding: 20px; text-align: center;">Nenhuma variante encontrada com estes filtros.</p>';
+        variantsHTML = `<p style="color: var(--text-muted); padding: 20px; text-align: center;">${t('detail.noVariantsFilters')}</p>`;
     } else {
         variantsHTML = `<div class="variants-grid" id="variants-container"></div>`;
     }
@@ -304,7 +307,7 @@ export async function init(charKey, initialTab = 'builds') {
  * Refresh variants display
  * @param {string} charKey - Character key
  */
-export function refreshVariants(charKey) {
+export function refreshVariants(charKey, keepPage = false) {
     const state = getState();
     const { filters, sort } = state.tabState.builds;
 
@@ -320,13 +323,40 @@ export function refreshVariants(charKey) {
     variants = filterVariants(variants, filters);
     variants = sortVariants(variants, sort, filters);
 
-    // Update variant count for all modes
+    if (!keepPage || displayedCharacter !== charKey) visibleVariantCount = VARIANT_PAGE_SIZE;
+    displayedCharacter = charKey;
+    const shown = variants.slice(0, visibleVariantCount);
+
+    // Filtering always searches the whole catalog; only cards are paged.
     const countEl = document.getElementById('variants-count');
     if (countEl) {
-        countEl.textContent = `${variants.length} variantes encontradas`;
+        countEl.textContent = t('detail.variantsFound', { count: variants.length });
     }
 
-    renderVariants('variants-container', variants, charKey);
+    const indexOffset = keepPage ? Math.max(0, visibleVariantCount - VARIANT_PAGE_SIZE) : 0;
+    renderVariants('variants-container', variants.slice(indexOffset, visibleVariantCount), charKey, { append: keepPage, indexOffset });
+
+    document.getElementById('variants-pagination')?.remove();
+    const container = document.getElementById('variants-container');
+    if (container && variants.length > VARIANT_PAGE_SIZE) {
+        const pagination = document.createElement('div');
+        pagination.id = 'variants-pagination';
+        pagination.className = 'variants-pagination';
+        const count = document.createElement('p');
+        count.textContent = t('detail.variantsShown', { shown: shown.length, total: variants.length });
+        pagination.append(count);
+        if (shown.length < variants.length) {
+            const button = document.createElement('button');
+            button.className = 'btn btn-secondary';
+            button.textContent = t('detail.loadMore');
+            button.addEventListener('click', () => {
+                visibleVariantCount += VARIANT_PAGE_SIZE;
+                refreshVariants(charKey, true);
+            });
+            pagination.append(button);
+        }
+        container.after(pagination);
+    }
 }
 
 /**
@@ -392,6 +422,8 @@ export async function switchTab(charKey, tab) {
 
                 if (tab === 'builds') {
                     refreshVariants(charKey);
+                } else {
+                    enableTierTableDragScroll(contentEl);
                 }
             }
         }

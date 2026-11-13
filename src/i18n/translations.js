@@ -17,6 +17,12 @@ export const translations = {
       order: 'Ordem no jogo: da direita para a esquerda. A 1ª variante fica na frente, a 2ª no meio e a 3ª por último.',
       front: '1ª · Frente', middle: '2ª · Meio', last: '3ª · Última'
     },
+    extrasUi: {
+      empty: 'Sem extras disponíveis.', general: 'Batalhas Gerais', guilds: 'Guildas', rift: 'Batalhas da Fenda', current: 'ATUAL',
+      recommendedTeam: 'TIME RECOMENDADO', suggestedTeam: 'TIME SUGERIDO', recommendedAllies: 'ALIADOS RECOMENDADOS', extraMoves: 'GOLPES EXTRAS',
+      goodAgainst: 'SE DÁ BEM CONTRA (DEFESA)', difficultAgainst: 'DIFICULDADE CONTRA', difficultCatalysts: 'CATALISADORES DIFÍCEIS', riftMoves: 'GOLPES EXTRAS PARA FENDA',
+      noInformation: 'Nenhuma informação disponível.', noGuilds: 'Nenhuma recomendação para guildas.', noRift: 'Nenhuma informação de fenda disponível.'
+    },
     // Navigation
     nav: {
       home: 'Início',
@@ -24,9 +30,10 @@ export const translations = {
       guide: 'Wiki',
       gameInfo: 'Informações de Jogo',
       events: 'Rotações',
-      timeConverter: 'Fuso horário',
       calculator: 'Calculadora',
-      about: 'Sobre'
+      about: 'Sobre',
+      toggleMenu: 'Abrir ou fechar menu',
+      closeMenu: 'Fechar menu'
     },
     // Home page
     home: {
@@ -49,11 +56,11 @@ export const translations = {
       discord: 'Discord',
       github: 'GitHub',
       projectAboutTitle: 'Feito de fãs para fãs.',
-      projectAboutDesc: 'O Skullgirls Palace é um projeto de fãs, independente e de código aberto. Ele é desenvolvido em vibe coding: ideias da comunidade viram melhorias no site com apoio de ferramentas de inteligência artificial e revisão humana. O conteúdo é informativo e pode ser corrigido pela comunidade. Para contato, sugestões, correções, contribuição ou apoio, use os links destacados no próprio site.',
+      projectAboutDesc: 'O Skullgirls Palace é um projeto de fãs, independente e de código aberto. O conteúdo é informativo e pode ser corrigido pela comunidade. Para contato, sugestões, correções, contribuição ou apoio, use os links destacados no próprio site.',
       creditsTitle: 'Créditos',
       creditsDevs: 'Desenvolvido por <strong>Lifi ツ</strong> e <strong>João Pedro</strong>.',
       inspiration: 'Inspiração Principal e Colaborador:',
-      sources: 'Fontes de dados consultadas:',
+      sources: 'Fontes de dados consultadas:', krazeteCatalog: 'Catálogo Krazete', and: 'e',
       assetsNote: 'Assets originais pertencem à Autumn Game e Hidden Variable Studios.',
       disclaimerBtn: 'Aviso Legal',
       disclaimerTitle: 'Aviso Legal:',
@@ -73,7 +80,7 @@ export const translations = {
     },
     // Guide page
   guide: {
-    wikiTab: 'Wiki', wikiIntro: 'Guias e referências de Skullgirls Mobile.', wikiPlaceholder: 'Guias e referências serão organizados nesta página.', wikiSections: 'Seções da Wiki', infoIntro: 'Estatísticas, modificadores e catalisadores do jogo.', timeZoneIntro: 'Converta o horário anunciado pela Autumn Games para seu fuso horário.',
+    wikiTab: 'Wiki', wikiIntro: 'Guias e Informações de Skullgirls Mobile.', wikiPlaceholder: 'Guias e referências serão organizados nesta página.', wikiSections: 'Seções da Wiki', infoIntro: 'Guias e Informações de Skullgirls Mobile.',
     title: 'Guia',
     tutorials: 'Tutoriais',
     statistics: 'Estatísticas',
@@ -82,6 +89,7 @@ export const translations = {
     passiveIncomeTitle: 'Renda Passiva',
     passiveIncomeDesc: 'Aprenda a maximizar seus ganhos diários e semanais sem gastar teonitas.',
     maxStats: 'Estatísticas Máximas',
+    statsImageLanguage: 'Imagem de referência em português.',
     searchStatistics: 'Buscar estatística, descrição ou mecânica...',
     statisticsResults: '{count} estatísticas encontradas',
     noStatisticsMatches: 'Nenhuma estatística corresponde à busca. Tente outro termo.',
@@ -98,7 +106,10 @@ export const translations = {
     maxUndefined: 'Indefinido',
     gameDescription: 'Descrição do Jogo',
     explanation: 'Explicação',
-    scaling: 'Escala',
+    showMore: 'Ver mais',
+    showLess: 'Ver menos',
+    scaling: 'Escala por acúmulo',
+    scalingHint: 'Na escala de cada efeito, o primeiro valor vale para 1 acúmulo, o segundo para 2 acúmulos e assim por diante. Exemplo: Regeneração cura 1% com 1 acúmulo e 2% com 2.',
     modifierLibraryEyebrow: 'CONSULTA DO JOGO • EFEITOS',
     modifierLibraryDescription: 'Pesquise efeitos e modificadores pelo nome ou por qualquer trecho da descrição.',
     searchModifiers: 'Buscar modificador ou efeito...',
@@ -117,12 +128,6 @@ export const translations = {
     errorCatalysts: 'Erro ao carregar catalisadores.',
     riftCatalysts: 'Catalisadores da Fenda',
     catalystsLoaded: 'Catalisadores Carregados'
-  },
-  timeConverter: {
-    title: 'Conversor de Fuso Horário', yourZone: 'Seu fuso horário', announcement: 'Fuso do anúncio da Autumn Games',
-    date: 'Data e hora do evento', convert: 'Converter horário', original: 'Horário original',
-    local: 'Horário no fuso selecionado', utc: 'Horário em UTC', countdown: 'Tempo restante',
-    moreZones: 'Escolher outro fuso horário', extraZone: 'Fusos horários disponíveis', searchZones: 'Buscar cidade ou fuso horário', invalidDate: 'Selecione uma data e hora válidas.'
   },
   eventsPage: { intro: 'Disputas, passe de batalha e eventos de Skullgirls Mobile.', categories: 'Categorias de eventos', monthly: 'Eventos Mensais', dailyEvents: 'Eventos Diários', weeklyEvents: 'Eventos Semanais', loginEvents: 'Logins Diários', start: 'Início', previous: 'Eventos anteriores', next: 'Próximos eventos', days: 'D', hours: 'H', minutes: 'min', seconds: 'seg', timeUnknown: 'Horário de reinício a confirmar', openReward: 'Resgatar recompensa diária', imagePlaceholder: 'Imagem do evento' },
   element: {
@@ -274,7 +279,7 @@ export const translations = {
       power: 'Pontuação',
       noVariants: 'Nenhuma variante encontrada com estes filtros.',
       class: 'CLASSE',
-      primaryClass: 'Classe principal', alsoActsAs: 'Também atua como',
+      primaryClass: 'Classe principal', alsoActsAs: 'Classe secundária',
       information: 'Informações',
       builds: 'VARIANTES',
       tierList: 'TIER LIST',
@@ -295,7 +300,11 @@ export const translations = {
       profileOf: 'Ficha de',
       aboutChar: 'Sobre',
       noVariantsFilters: 'Nenhuma variante encontrada com estes filtros.',
-      allVariants: 'TODAS AS VARIANTES'
+      noTierList: 'Nenhuma tier list disponível.',
+      allVariants: 'TODAS AS VARIANTES',
+      variantsFound: '{count} variantes encontradas',
+      variantsShown: 'Exibindo {shown} de {total}',
+      loadMore: 'Mostrar mais'
     },
     // Tier List
   tier: {
@@ -400,6 +409,7 @@ export const translations = {
   height: 'Altura',
   likes: 'Gosta',
   marqueeDetails: 'Detalhes do Marquee',
+  catalystDetails: 'Detalhes do catalisador',
   moves: 'Golpes',
   noDescription: 'Sem descrição disponível.',
   noMoves: 'Nenhum movimento disponível.',
@@ -463,6 +473,12 @@ export const translations = {
       order: 'In-game order: right to left. The 1st variant is in front, the 2nd in the middle, and the 3rd last.',
       front: '1st · Front', middle: '2nd · Middle', last: '3rd · Last'
     },
+    extrasUi: {
+      empty: 'No extras available.', general: 'General Battles', guilds: 'Guilds', rift: 'Rift Battles', current: 'CURRENT',
+      recommendedTeam: 'RECOMMENDED TEAM', suggestedTeam: 'SUGGESTED TEAM', recommendedAllies: 'RECOMMENDED ALLIES', extraMoves: 'EXTRA MOVES',
+      goodAgainst: 'GOOD AGAINST (DEFENSE)', difficultAgainst: 'DIFFICULT AGAINST', difficultCatalysts: 'DIFFICULT CATALYSTS', riftMoves: 'EXTRA MOVES FOR RIFT',
+      noInformation: 'No information available.', noGuilds: 'No guild recommendations.', noRift: 'No Rift information available.'
+    },
     // Navigation
     nav: {
       home: 'Home',
@@ -470,9 +486,10 @@ export const translations = {
       guide: 'Wiki',
       gameInfo: 'Game Info',
       events: 'Rotations',
-      timeConverter: 'Time zone',
       calculator: 'Calculator',
-      about: 'about'
+      about: 'about',
+      toggleMenu: 'Open or close menu',
+      closeMenu: 'Close menu'
     },
     // Home page
     home: {
@@ -499,7 +516,7 @@ export const translations = {
       creditsTitle: 'Credits',
       creditsDevs: 'Developed by <strong>Lifi ツ</strong> and <strong>João Pedro</strong>.',
       inspiration: 'Main Inspiration and Collaborator:',
-      sources: 'Data references consulted:',
+      sources: 'Data references consulted:', krazeteCatalog: 'Krazete Catalog', and: 'and',
       assetsNote: 'Original assets belong to Autumn Game and Hidden Variable Studios.',
       disclaimerBtn: 'Legal Notice',
       disclaimerTitle: 'Legal Notice:',
@@ -519,7 +536,7 @@ export const translations = {
     },
   // Guide page
   guide: {
-    wikiTab: 'Wiki', wikiIntro: 'Skullgirls Mobile guides and references.', wikiPlaceholder: 'Guides and references will be organized on this page.', wikiSections: 'Wiki sections', infoIntro: 'Game statistics, modifiers, and catalysts.', timeZoneIntro: 'Convert the time announced by Autumn Games to your time zone.',
+    wikiTab: 'Wiki', wikiIntro: 'Skullgirls Mobile guides and references.', wikiPlaceholder: 'Guides and references will be organized on this page.', wikiSections: 'Wiki sections', infoIntro: 'Game statistics, modifiers, and catalysts.',
     title: 'Guide',
     tutorials: 'Tutorials',
     statistics: 'Statistics',
@@ -528,6 +545,7 @@ export const translations = {
     passiveIncomeTitle: 'Passive Income',
     passiveIncomeDesc: 'Learn how to maximize your daily and weekly earnings without spending theonites.',
     maxStats: 'Max Stats',
+    statsImageLanguage: 'Reference image in Portuguese.',
     searchStatistics: 'Search stats, descriptions, or mechanics...',
     statisticsResults: '{count} stats found',
     noStatisticsMatches: 'No stats match your search. Try another term.',
@@ -544,7 +562,10 @@ export const translations = {
     maxUndefined: 'Undefined',
     gameDescription: 'Game Description',
     explanation: 'Explanation',
-    scaling: 'Scaling',
+    showMore: 'Show more',
+    showLess: 'Show less',
+    scaling: 'Per-stack scaling',
+    scalingHint: 'Each value follows the number of stacks: the first is for 1 stack, the second for 2 stacks, and so on. For example, Regen heals 1% with 1 stack and 2% with 2.',
     modifierLibraryEyebrow: 'GAME REFERENCE • EFFECTS',
     modifierLibraryDescription: 'Search effects and modifiers by name or any part of their description.',
     searchModifiers: 'Search modifiers or effects...',
@@ -563,15 +584,6 @@ export const translations = {
     errorCatalysts: 'Error loading catalysts.',
     riftCatalysts: 'Rift Catalysts',
     catalystsLoaded: 'Catalysts Loaded',
-  },
-  timeConverter: {
-    title: 'Time Zone Converter', yourZone: 'Your time zone', announcement: 'Autumn Games announcement time zone',
-    date: 'Event date and time', convert: 'Convert time', original: 'Original time',
-    local: 'Time in selected zone', utc: 'Time in UTC', countdown: 'Time remaining',
-    moreZones: 'Choose another time zone', extraZone: 'Available time zones', searchZones: 'Search city or time zone', invalidDate: 'Choose a valid date and time.'
-  },
-  guide: {
-    title: 'Guide', wikiIntro: 'Skullgirls Mobile guides and references.', wikiPlaceholder: 'Guides and references will be organized on this page.', infoIntro: 'Game statistics, modifiers, and catalysts.',
   },
   eventsPage: { intro: 'Prize fights, battle pass, and Skullgirls Mobile events.', categories: 'Event categories', monthly: 'Monthly Prize Fights', dailyEvents: 'Daily Events', weeklyEvents: 'Weekly Events', loginEvents: 'Daily Logins', start: 'Start', previous: 'Previous events', next: 'Next events', days: 'D', hours: 'H', minutes: 'min', seconds: 'sec', timeUnknown: 'Reset time to be confirmed', openReward: 'Claim daily reward', imagePlaceholder: 'Event image' },
   element: {
@@ -723,7 +735,7 @@ export const translations = {
       power: 'Power',
       noVariants: 'No variants found with these filters.',
       class: 'CLASS',
-      primaryClass: 'Primary class', alsoActsAs: 'Also acts as',
+      primaryClass: 'Primary class', alsoActsAs: 'Secondary class',
       information: 'Information',
       builds: 'VARIANTS',
       tierList: 'TIER LIST',
@@ -744,14 +756,18 @@ export const translations = {
       profileOf: 'Profile of',
       aboutChar: 'About',
       noVariantsFilters: 'No variants found with these filters.',
-      allVariants: 'ALL VARIANTS'
+      noTierList: 'No tier list available.',
+      allVariants: 'ALL VARIANTS',
+      variantsFound: '{count} variants found',
+      variantsShown: 'Showing {shown} of {total}',
+      loadMore: 'Show more'
     },
     // Tier List
   tier: {
     tierlistTitle: 'Tier List',
     chooseChar: 'Choose a character to view their tier list.',
     variant: 'Variant',
-    dpAttack: 'DP Attack',
+    dpAttack: 'PF Attack',
     parallelRealms: 'Parallel Realms',
     riftAttack: 'Rift Attack',
     riftDefense: 'Rift Defense',
@@ -849,6 +865,7 @@ export const translations = {
   height: 'Height',
   likes: 'Likes',
   marqueeDetails: 'Marquee Details',
+  catalystDetails: 'Catalyst Details',
   moves: 'Moves',
   noDescription: 'No description available.',
   noMoves: 'No moves available.',

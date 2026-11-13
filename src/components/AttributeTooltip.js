@@ -1,7 +1,6 @@
 // =====================================================
 // ATTRIBUTE TOOLTIP COMPONENT
 // Hover tooltips + detail modal for attribute names
-// Auto-closes after 20 seconds of inactivity
 // =====================================================
 
 import { getLocalizedAttribute } from '../data/attributeData.js';
@@ -9,14 +8,14 @@ import { getLocalizedEffect, getEffectIconByName } from '../data/effectData.js';
 import { getMoveData } from '../data/movesimages.js';
 import { getElementEffects } from '../data/elementEffectsData.js';
 import { getElementMap, getLocalizedElementName, elementToPT } from '../config/constants.js';
-import { CLASS_ICONS, getLocalizedClassDescription } from '../data/variantClasses.js';
-import { t } from '../i18n/index.js';
+import { CLASS_ICONS, getLocalizedClassName, getLocalizedClassDescription } from '../data/variantClasses.js';
+import { t, getLocalizedNameSync } from '../i18n/index.js';
 
 // ========== STATE ==========
 let activeTooltip = null;
 let activeModal = null;
-let inactivityTimer = null;
-const INACTIVITY_TIMEOUT = 20000; // 20 seconds
+let initialized = false;
+let modalEscapeHandler = null;
 
 // ========== TOOLTIP (hover) ==========
 
@@ -36,7 +35,7 @@ function resolveData(target) {
  return {
  source: 'element_table',
  data: {
- variantName,
+ variantName: getLocalizedNameSync(variantName),
  ...effectsData
  }
  };
@@ -65,14 +64,14 @@ function resolveData(target) {
  return null;
  }
 
- if (key.startsWith('class_')) {
+ if (key?.startsWith('class_')) {
  const clsName = key.replace('class_', '');
  const clsDescription = getLocalizedClassDescription(clsName);
  if (clsDescription) {
  return {
  source: 'class',
  data: {
- name: clsName,
+ name: getLocalizedClassName(clsName),
  summary: clsDescription,
  detailed: clsDescription,
  icon: CLASS_ICONS[clsName]?.icon,
@@ -413,23 +412,27 @@ function showDetailModal(target) {
  });
 
  // Keyboard close
- const escHandler = (e) => {
+ modalEscapeHandler = (e) => {
  if (e.key === 'Escape') {
  hideDetailModal();
- document.removeEventListener('keydown', escHandler);
  }
  };
- document.addEventListener('keydown', escHandler);
+ document.addEventListener('keydown', modalEscapeHandler);
 }
 
 /**
  * Hide the detail modal
  */
-function hideDetailModal() {
+function hideDetailModal(immediate = false) {
+ if (modalEscapeHandler) {
+ document.removeEventListener('keydown', modalEscapeHandler);
+ modalEscapeHandler = null;
+ }
  if (activeModal) {
  activeModal.classList.remove('visible');
  const modal = activeModal;
- setTimeout(() => modal.remove(), 300);
+ if (immediate === true) modal.remove();
+ else setTimeout(() => modal.remove(), 300);
  activeModal = null;
  }
 }
@@ -441,6 +444,14 @@ function hideDetailModal() {
  * Should be called once during app initialization.
  */
 export function initAttributeTooltips() {
+  if (initialized) return;
+  initialized = true;
+  // A tooltip describes the page as rendered. Dismiss it before that page is
+  // replaced so its labels and content cannot retain the previous language.
+  window.addEventListener('languageChanged', () => {
+    hideTooltip();
+    hideDetailModal(true);
+  });
   // Hover: show tooltip
   document.addEventListener('mouseenter', (e) => {
     if (!e.target || !e.target.closest) return;

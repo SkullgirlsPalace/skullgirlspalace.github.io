@@ -109,7 +109,8 @@
                 },
                 "signature_ability": {
                     "name": "MORTA NA ÁGUA",
-                    "description": "[HAB 1]: **Ao usar ASSITÊNCIA de ou para a Marie**, o lutador que entra em campo recebe 2 acúmulos de REGENERAÇÃO por 15 segundos e ganham 15% de MEDIDOR DE BLOCKBUSTER.\n\n[HAB 2]: **Enquanto Marie estiver viva, golpes de aliados de ÁGUA** têm 25% de chance de aplicar SANGRAMENTO, GOSMA ou QUIETUS por 15 segundos, enquanto tiver REGENERAÇÃO."
+                    "description": "[SA1]: Ao usar a ASSISTÊNCIA de ou para Marie, o lutador que entra em campo ganha 2 acúmulos de REGENERAÇÃO por 15 segundos e 15% do MEDIDOR DE BLOCKBUSTER.\n\n[SA2]: **Enquanto Marie estiver viva, golpes de aliados de ÁGUA** têm 25% de chance de aplicar SANGRAMENTO, GOSMA ou QUIETUS por 15 segundos, enquanto tiver REGENERAÇÃO.",
+                    "krazete_id": "octoplasm"
                 },
                 "marquee_ability": "Ressureição Reforçada",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Reat. Especial",

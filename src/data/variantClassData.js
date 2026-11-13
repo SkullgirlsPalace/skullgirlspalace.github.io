@@ -19,7 +19,8 @@ export const VARIANT_CLASSES = {
         "Ofensivo"
     ],
     "Homem de Gelo": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Promotor": [
         "Suporte de Utilidade"
@@ -74,7 +75,8 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Sentinela de Pedra": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Defensivo"
     ],
     "Hóstia Profana": [
         "Coringa"
@@ -84,7 +86,8 @@ export const VARIANT_CLASSES = {
         "Ofensivo"
     ],
     "Agente Corrosiva": [
-        "Coringa"
+        "Ofensivo",
+        "Defensivo"
     ],
     "Xenamorfa": [
         "Ofensivo"
@@ -111,7 +114,8 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Cacho Mágico": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Escoteira": [
         "Defensivo",
@@ -131,7 +135,8 @@ export const VARIANT_CLASSES = {
         "Ofensivo"
     ],
     "Bela do Inferno": [
-        "Coringa"
+        "Ofensivo",
+        "Suporte de Utilidade"
     ],
     "Cópia Aproximada": [
         "Suporte de Utilidade"
@@ -162,7 +167,8 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Briga Fatal": [
-        "Coringa"
+        "Ofensivo",
+        "Defensivo"
     ],
     "Agora e Sempre": [
         "Ofensivo",
@@ -251,7 +257,8 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Angelical": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Wunderkind": [
         "Suporte de Utilidade"
@@ -263,7 +270,8 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Saqueadora do Palácio": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Rosinha": [
         "Suporte de Utilidade",
@@ -277,7 +285,8 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Cirurgiã-General": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Superluminal": [
         "Suporte de Utilidade"
@@ -295,7 +304,8 @@ export const VARIANT_CLASSES = {
         "Defensivo"
     ],
     "Turno Mortal": [
-        "Coringa"
+        "Suporte de Utilidade",
+        "Ofensivo"
     ],
     "Quente com Gelo": [
         "Suporte de Utilidade"
@@ -304,7 +314,7 @@ export const VARIANT_CLASSES = {
         "Suporte de Utilidade"
     ],
     "Maravilha Eterna": [
-        "Coringa"
+        "Ofensivo"
     ],
     "Mente Criminosa": [
         "Ofensivo"
@@ -313,7 +323,8 @@ export const VARIANT_CLASSES = {
         "Ofensivo"
     ],
     "Megera Vaporwave": [
-        "Coringa"
+        "Defensivo",
+        "Ofensivo"
     ],
     "Fantoche Sombrio": [
         "Ofensivo",
@@ -323,7 +334,8 @@ export const VARIANT_CLASSES = {
         "Coringa"
     ],
     "Overclocked": [
-        "Coringa"
+        "Ofensivo",
+        "Defensivo"
     ],
     "Ouro Maciço": [
         "Ofensivo",
@@ -338,5 +350,9 @@ export const VARIANT_CLASSES = {
     ],
     "Preços para matar": [
         "Defensivo"
+    ],
+    "Gremlindo": [
+        "Ofensivo",
+        "Suporte de Utilidade"
     ]
 };

@@ -3,7 +3,7 @@ import { renderVariants } from '../../../src/components/VariantCard.js';
 import { setCharacters } from '../../../src/state/store.js';
 import { setLanguage } from '../../../src/i18n/index.js';
 
-const variant = { name: 'Rosa Estelar', element: 'Neutro', recommended_build: 'Precisão', signature_ability: { name: 'POLIMENTO DE GEMA' } };
+const variant = { name: 'Rosa Estelar', element: 'Neutro', recommended_build: 'Precisão', recommended_arsenal: 'A, B, C, D, E', signature_ability: { name: 'POLIMENTO DE GEMA' } };
 const anchor = { character: 'annie', variant: variant.name };
 
 describe('lazy public Teams tab', () => {
@@ -22,13 +22,14 @@ describe('lazy public Teams tab', () => {
         expect(tabs.indexOf('teams')).toBe(tabs.indexOf('build') + 1);
         expect(document.querySelector('[data-team-category="defense"]')).not.toBeNull();
         document.querySelector('[data-tab="teams"]').click();
-        await vi.waitFor(() => expect(document.querySelectorAll('.team-recommendation')).toHaveLength(1));
+        await vi.waitFor(() => expect(document.querySelectorAll('.team-recommendation'), `${document.querySelector('.team-results')?.textContent} / ${fetch.mock.calls.length} fetches`).toHaveLength(1));
         expect(fetch).toHaveBeenCalledTimes(1);
+        expect(new URL(fetch.mock.calls[0][0]).pathname).toMatch(/\/data\/teams\.json$/);
         expect(document.querySelector('.team-members strong').textContent).toBe('Rosa Estelar');
         expect(document.querySelector('.team-position').textContent).toBe('1ª · Frente');
         expect(document.querySelector('.team-order').textContent).toContain('da direita para a esquerda');
-        expect(document.querySelector('.team-members p').textContent).toContain('Suporte de Utilidade');
-        expect(document.querySelectorAll('.team-members p')[1].querySelector('.team-secondary-class').textContent).toBe('Também atua como: Suporte de Utilidade');
+        expect(document.querySelector('.team-members p').textContent).toContain('Suporte');
+        expect(document.querySelectorAll('.team-members p')[1].querySelector('.team-secondary-class').textContent).toBe('Classe secundária: Suporte');
         expect(document.querySelector('[data-team-category="rift"]')).toBeNull();
         document.querySelector('[data-team-category="defense"]').click();
         await vi.waitFor(() => expect(document.querySelector('.teams-message')?.textContent).toContain('Ainda não há times revisados'));

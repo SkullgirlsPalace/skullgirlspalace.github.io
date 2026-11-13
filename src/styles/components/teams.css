@@ -31,5 +31,6 @@
 }
 
 @media (max-width: 600px) {
+    .team-category-btn { min-height: 44px; }
     .recommendation-note { padding: 12px 14px; }
 }

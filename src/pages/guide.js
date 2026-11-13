@@ -7,30 +7,32 @@ import { EFFECT_DATA, getLocalizedEffect } from '../data/effectData.js';
 import { ATTRIBUTE_DATA, getLocalizedAttribute } from '../data/attributeData.js';
 import { loadCatalysts } from '../services/dataService.js';
 import { formatConstraint } from '../utils/formatters.js';
-import { t } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
+import { createPageBackControl } from '../components/Navigation.js';
 
 export function render() {
   return `
   <div class="guide-container fade-in">
-
+    ${createPageBackControl()}
     <header class="guide-header"><h1>${t('nav.guide')}</h1><p>${t('guide.wikiIntro')}</p></header>
     <nav class="guide-tabs" aria-label="${t('guide.wikiSections')}">
       <button class="guide-tab-btn active" aria-current="page">${t('nav.events')}</button>
       <button class="guide-tab-btn" onclick="navigateTo('game-info')">${t('nav.gameInfo')}</button>
-      <button class="guide-tab-btn" onclick="navigateTo('time-converter')">${t('nav.timeConverter')}</button>
     </nav>
     <div class="guide-content"><div class="guide-modifier-library"><header class="guide-modifier-heading"><h2>${t('nav.guide')}</h2><p>${t('guide.wikiPlaceholder')}</p></header></div></div>
   </div>`;
 }
 
 export function renderGameInfo() {
+  // Keep the selected reference section when the router renders a new language.
+  const activeTab = document.querySelector('.guide-container .guide-tab-content.active')?.id.replace('tab-', '') || 'statistics';
   return `
-  <div class="guide-container fade-in">
+  <div class="guide-container fade-in" data-active-tab="${activeTab}">
+    ${createPageBackControl()}
     <header class="guide-header"><h1>${t('nav.guide')}</h1><p>${t('guide.infoIntro')}</p></header>
     <nav class="guide-tabs">
       <button class="guide-tab-btn" onclick="navigateTo('events')">${t('nav.events')}</button>
       <button class="guide-tab-btn active" aria-current="page">${t('nav.gameInfo')}</button>
-      <button class="guide-tab-btn" onclick="navigateTo('time-converter')">${t('nav.timeConverter')}</button>
     </nav>
 
     <div class="guide-tabs">
@@ -62,6 +64,7 @@ export function renderGameInfo() {
 
         <div id="statsImageWrapper" class="stats-image-wrapper">
           <img loading="lazy" src="img/unofficial/status_max_pt-br.webp" alt="${t('guide.maxStats')}" class="stats-ref-image">
+          ${getCurrentLanguage() === 'en' ? `<p>${t('guide.statsImageLanguage')}</p>` : ''}
         </div>
       </div>
 
@@ -99,6 +102,7 @@ export function renderGameInfo() {
             <button type="button" class="guide-modifier-filter" data-modifier-filter="technical" aria-pressed="false">${t('guide.technicalTerms')}</button>
           </div>
           <p class="guide-modifier-results" id="guide-modifier-results" aria-live="polite"></p>
+          <p class="guide-modifier-scale-help">${t('guide.scalingHint')}</p>
         </div>
 
         <div class="guide-modifier-groups">
@@ -168,14 +172,16 @@ export function init() {
   renderEffects('debuffs-list', effect => effect.type === 'debuff');
   renderEffects('special-list', effect => effect.type === 'term' || ['critless', 'buff', 'debuff'].includes(effect.key));
   initModifierBrowser();
-  initCatalysts();
+  const catalystsReady = initCatalysts();
 
   // Register global tab switcher
   window.switchGuideTab = switchGuideTab;
   window.toggleStatsImage = toggleStatsImage;
+  switchGuideTab(document.querySelector('.guide-container')?.dataset.activeTab || 'statistics');
 
   // Trigger lazy loading if needed
   if (window.setupLazyLoading) window.setupLazyLoading();
+  return catalystsReady;
 }
 
 function switchGuideTab(tabName) {
@@ -205,22 +211,9 @@ function renderEffects(containerId, matchesCategory) {
   const effects = Object.entries(EFFECT_DATA)
     .filter(([key, effect]) => matchesCategory({ ...effect, key }))
     .map(([key, effect]) => ({ ...getLocalizedEffect(key) || effect, key }))
-    .sort((a, b) => {
-      const priorityDifference = getTechnicalTermPriority(a) - getTechnicalTermPriority(b);
-      return priorityDifference || a.name.localeCompare(b.name);
-    });
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   container.innerHTML = effects.map(renderModifierCard).join('');
-}
-
-function getTechnicalTermPriority(effect) {
-  if (effect.key === 'critless') return 2;
-  if (effect.type !== 'term' && !['buff', 'debuff'].includes(effect.key)) return 0;
-
-  const text = [effect.name, effect.detailed, effect.explicacao].filter(Boolean).join(' ');
-  const longestWord = Math.max(0, ...text.split(/\s+/).map(word => word.length));
-  const unusuallyLong = text.length > 420 || longestWord > 26;
-  return unusuallyLong ? 1 : 0;
 }
 
 function initStatisticsGlossary() {
@@ -256,7 +249,9 @@ async function initCatalysts() {
   const container = document.getElementById('catalyst-container');
   if (!container) return;
 
+  const language = getCurrentLanguage();
   const catalysts = await loadCatalysts();
+  if (!container.isConnected || document.getElementById('catalyst-container') !== container || getCurrentLanguage() !== language) return;
   if (!catalysts) {
     container.innerHTML = `<p class="error-state">${t('guide.errorCatalysts')}</p>`;
     return;
@@ -472,20 +467,21 @@ function renderModifierCard(effect) {
   const category = effect.key === 'critless' || effect.key === 'buff' || effect.key === 'debuff'
     ? 'technical'
     : effect.type === 'buff' ? 'positive' : effect.type === 'debuff' ? 'negative' : 'technical';
-  const details = [
-    effect.detailed ? `<section class="guide-modifier-detail"><h5>${t('guide.gameDescription')}</h5><p>${effect.detailed}</p></section>` : '',
-    effect.explicacao ? `<section class="guide-modifier-detail"><h5>${t('guide.explanation')}</h5><p>${effect.explicacao}</p></section>` : '',
-    effect.scaling ? `<p class="guide-modifier-scaling"><strong>${t('guide.scaling')}:</strong> ${effect.scaling}</p>` : ''
+  const extraExplanation = [
+    effect.explicacao ? `<section class="guide-modifier-detail"><p>${effect.explicacao}</p></section>` : ''
   ].filter(Boolean).join('');
+  const gameDescription = effect.detailed || effect.description;
 
   return `
     <article class="guide-modifier-card modifier-card-${category}">
       <header class="guide-modifier-card-heading">
         ${effect.icon ? `<img class="guide-modifier-icon" loading="lazy" src="${effect.icon}" alt="">` : `<span class="guide-modifier-marker" style="--modifier-color: ${color}" aria-hidden="true"></span>`}
         <h4>${effect.name}</h4>
-        ${effect.stacks ? `<span class="guide-modifier-stacks">${t('guide.max')} ${effect.stacks}x</span>` : ''}
       </header>
-      <div class="guide-modifier-card-body">${details || `<p>${effect.description || ''}</p>`}</div>
+      ${effect.stacks ? `<p class="guide-modifier-stacks">${t('guide.max')} ${effect.stacks}x</p>` : ''}
+      ${effect.scaling ? `<p class="guide-modifier-scaling"><strong>${t('guide.scaling')}:</strong> ${effect.scaling}</p>` : ''}
+      ${gameDescription ? `<section class="guide-modifier-game-description"><h5>${t('guide.gameDescription')}</h5><p>${gameDescription}</p></section>` : ''}
+      ${extraExplanation ? `<details class="guide-modifier-disclosure"><summary><span>${t('guide.explanation')}</span><span class="guide-modifier-chevron" aria-hidden="true">⌄</span></summary><div class="guide-modifier-card-body">${extraExplanation}</div></details>` : ''}
     </article>
   `;
 }

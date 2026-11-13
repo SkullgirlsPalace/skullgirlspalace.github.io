@@ -4,6 +4,8 @@ import { describe, expect, it, vi } from 'vitest';
 import { CHARACTER_FILES } from '../../../src/config/constants.js';
 import { abilityIdentity, buildAbilityLinks, EN_ABILITIES_PATH, PT_MAPPING_PATH, publishedAbilityLinks } from '../../../tools/editor/abilities.js';
 import { normalizeAbilityProgressions, splitSignatureAbility, stripAbilityLabels } from '../../../src/utils/abilityText.js';
+import { NEW_VARIANTS } from '../../../src/data/newContent.js';
+import { getVariantImage } from '../../../src/data/variantImages.js';
 
 const read = file => JSON.parse(fs.readFileSync(path.resolve(file), 'utf8'));
 const files = Object.fromEntries([...CHARACTER_FILES.map(file => `data/${file}`), PT_MAPPING_PATH, EN_ABILITIES_PATH].map(path => [path, read(path)]));
@@ -32,6 +34,45 @@ function repeatedParts() {
 }
 
 describe('published signature ability assignments', () => {
+    it('publishes the November fighters with their exact references, stats, images and new badges', () => {
+        expect(catalog).toHaveLength(309);
+        expect(NEW_VARIANTS).toEqual(['Doente de Amor', 'Gremlindo']);
+        for (const [character, name, id, rarity, element, attack, health, power] of [
+            ['valentine', 'Doente de Amor', 'lovesick', 'ouro', 'Trevas', '9,581', '66,048', '24,328'],
+            ['umbrella', 'Gremlindo', 'garishgremlin', 'diamante', 'Ar', '13,312', '56,045', '26,578']
+        ]) {
+            const item = catalog.find(entry => entry.character === character && entry.variant === name);
+            expect(item).toBeDefined();
+            expect(files[`data/${character}.json`].variants[rarity]).toContain(item.data);
+            expect(item.data.element).toBe(element);
+            expect(item.data.stats).toEqual({ attack, health, power });
+            expect(item.data.signature_ability.krazete_id).toBe(id);
+            expect(links[abilityIdentity(item)]).toBe(id);
+            const image = getVariantImage(character, name);
+            expect(image).toBe(item.data.images.portrait_url);
+            expect(fs.existsSync(path.resolve(image))).toBe(true);
+            const text = fingerprint(item.data.signature_ability.description);
+            if (id === 'lovesick') {
+                // Editorial correction in the supplied v2 export: the published
+                // Portuguese condition uses Incapacitação rather than the older mapping.
+                expect(text).toContain('sofre incapacitacao por 10 segundos');
+                expect(text).not.toContain('sofre debilitacao por 10 segundos');
+            } else expect(text).toContain(fingerprint(normalizeAbilityProgressions(files[PT_MAPPING_PATH][id].SA1)));
+            expect(text).toContain(fingerprint(normalizeAbilityProgressions(files[PT_MAPPING_PATH][id].SA2)));
+        }
+    });
+
+    it('uses the current mechanics for confirmed reworks and corrected conditions', () => {
+        const ability = id => catalog.find(item => links[abilityIdentity(item)] === id).data.signature_ability;
+        expect(fingerprint(ability('firefly').description)).toContain('bencao');
+        expect(fingerprint(ability('buzzkill').description)).toContain('polaridade inversa');
+        expect(fingerprint(ability('trschic').description)).toContain('3 acumulos permanentes de barreira');
+        expect(fingerprint(ability('starchild').description)).toContain('golpes especiais e blockbusters');
+        expect(fingerprint(ability('hallowfiend').description)).toContain('golpes de frasco e contraveneno');
+        expect(fingerprint(ability('fatalfray').description)).toContain('ate ms fortune sair ou ser derrotada');
+        expect(ability('roughcopy').name).toBe('MENTES IGUAIS');
+        expect(ability('pillowtalk').name).toBe('MEMÓRIA REPRIMIDA');
+    });
     it('resolves every published variant once, within its character, in the editor and wiki', () => {
         expect(catalog.length).toBeGreaterThan(300);
         expect(Object.keys(links)).toHaveLength(catalog.length);
@@ -77,7 +118,7 @@ describe('published signature ability assignments', () => {
                 const expected = ability.english?.description || `[SA1]: ${reference.SA1}${reference.SA2 ? `\n\n[SA2]: ${reference.SA2}` : ''}`;
                 expect(getLocalizedSADescSync(item.variant, ability.description, ability.name), item.variant).toBe(expected);
             }
-            for (const key of ['plottwisted', 'deadofwinter', 'nightshade', 'purrfectdark']) {
+            for (const key of ['plottwisted', 'deadofwinter', 'nightshade', 'purrfectdark', 'lovesick', 'garishgremlin', 'spacecase']) {
                 const item = catalog.find(item => links[abilityIdentity(item)] === key);
                 const ability = item.data.signature_ability;
                 const reference = files[EN_ABILITIES_PATH][key];
@@ -90,6 +131,10 @@ describe('published signature ability assignments', () => {
                     expect(fingerprint(card.textContent)).toContain(fingerprint(expectedTitle));
                     const expectedDescription = language === 'pt-BR' ? ability.description : `${reference.SA1}\n\n${reference.SA2}`;
                     expect(fingerprint(card.textContent)).toContain(fingerprint(expectedDescription));
+                    if (key === 'spacecase' && language === 'pt-BR') {
+                        expect(card.querySelector('.ability-emphasis')?.textContent).toContain('Ao ficar FAMINTA');
+                        expect(card.querySelectorAll('.ability-emphasis')).toHaveLength(3);
+                    }
                 }
             }
         } finally {

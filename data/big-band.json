@@ -41,7 +41,8 @@
                 },
                 "signature_ability": {
                     "name": "ENGULA!",
-                    "description": "[HAB 1]: REFLETE 1 EF. POSITIVOS do oponente e **reinicia o tempo dele** a cada 10 GOLPES DE COMBO.\n\n[HAB 2]: Quando qualquer um dos lutadores for NOCAUTEADO, **reinicia o tempo de todos** os EFEITOS POSITIVOS ativos e ganha IMUNIDADE por 15 segundos."
+                    "description": "[SA1]: REFLETE 1 EF. POSITIVOS do oponente e **reinicia o tempo dele** a cada 10 GOLPES DE COMBO.\n\n[SA2]: Quando qualquer lutador for DERRUBADO, reinicia a duração de todos os EFEITOS POSITIVOS ativos e ganha IMUNIDADE por 8 segundos.",
+                    "krazete_id": "dreamband"
                 },
                 "marquee_ability": "Líder da Banda",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",

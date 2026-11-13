@@ -93,6 +93,16 @@ describe('compact team catalog', () => {
         expect(names({ rarity: ['ouro'], classes: ['Ofensivo'] })).toEqual([]);
         expect(names({ classes: ['Defensivo'] })).toEqual(['Água']);
     });
+    it('prioritizes primary class matches within each rarity in the team picker', () => {
+        const variants = [
+            { variant: 'Gold secondary', rarity: 'ouro', character: 'annie', characterName: 'Annie', data: { element: 'Fogo', stats: { attack: '9000' } } },
+            { variant: 'Gold primary', rarity: 'ouro', character: 'annie', characterName: 'Annie', data: { element: 'Fogo', stats: { attack: '1000' } } },
+            { variant: 'Diamond secondary', rarity: 'diamante', character: 'annie', characterName: 'Annie', data: { element: 'Fogo', stats: { attack: '500' } } }
+        ];
+        const classesFor = name => name === 'Gold primary' ? ['Defensivo'] : ['Ofensivo', 'Defensivo'];
+        const result = pickerItems(variants, { ...emptyPickerFilters(), classes: ['Defensivo'], sort: 'atk' }, { ...options, classesFor });
+        expect(result.map(item => item.variant)).toEqual(['Diamond secondary', 'Gold primary', 'Gold secondary']);
+    });
     it('searches names in both languages without accents and excludes ability titles', () => {
         expect(names({ query: 'agua' })).toEqual(['Água']);
         expect(names({ query: 'flame' })).toEqual(['Chama']);

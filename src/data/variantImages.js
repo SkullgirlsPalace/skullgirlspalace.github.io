@@ -325,7 +325,8 @@ const VARIANT_IMAGES = {
         "Pitada de Raiva": "img/umbrella/Umbrella_2.webp",
         "Vento Ventania": "img/umbrella/Umbrella_3.webp"
     ,
-        'Isca Sortuda': 'img/umbrella/Umbrella_31.webp'
+        'Isca Sortuda': 'img/umbrella/Umbrella_31.webp',
+        "Gremlindo": "img/umbrella/Garish_Gremlin.webp"
     },
     "valentine": {
         "Preços para matar": "img/valentine/Valentine_13.webp",
@@ -344,7 +345,8 @@ const VARIANT_IMAGES = {
         "Mai-s O Quê?": "img/valentine/Valentine_4.webp",
         "Hallow – Demônio": "img/valentine/Valentine_6.webp",
         "Jaleco": "img/valentine/Valentine_1.webp",
-        "Quente com Gelo": "img/valentine/Valentine_2.webp"
+        "Quente com Gelo": "img/valentine/Valentine_2.webp",
+        "Doente de Amor": "img/valentine/Lovesick_Card.webp"
     }
 };
 

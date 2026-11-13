@@ -29,7 +29,7 @@ export function createFooter() {
     <h4>${t('footer.creditsTitle')}</h4>
     <p>${t('footer.creditsDevs')}</p>
     <p>${t('footer.inspiration')} <a href="https://github.com/Krazete" target="_blank" rel="noopener noreferrer">Krazete</a></p>
-    <p>${t('footer.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
+    <p>${t('footer.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">${t('about.krazeteCatalog')}</a> ${t('about.and')} <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
   </section>
 
   <section class="footer-section">

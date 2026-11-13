@@ -51,6 +51,10 @@
 }
 
 .character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     background: var(--bg-card);
     border: var(--border-subtle);
     border-radius: var(--border-radius);
@@ -87,6 +91,7 @@
 }
 
 .character-card img {
+    display: block;
     width: 100px;
     height: 100px;
     object-fit: contain;
@@ -100,6 +105,8 @@
 }
 
 .character-card .name {
+    display: block;
+    width: 100%;
     font-family: 'Dodam', 'Inter', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;

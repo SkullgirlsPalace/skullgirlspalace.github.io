@@ -26,7 +26,7 @@ export function render() {
   return `
   <section class="section statistics-section" id="statistics">
     <div class="section-header">
-      <button class="btn-back" onclick="navigateTo('')">
+      <button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
         \u2190
       </button>
       <h2>${t('calc.title')}</h2>

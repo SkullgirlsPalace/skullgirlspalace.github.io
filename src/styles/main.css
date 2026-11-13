@@ -49,5 +49,5 @@
 
 /* Shared spacing, surfaces and control styling across all screens. */
 @import 'pages/interface-consistency.css';
-@import 'pages/time-converter.css';
+@import 'pages/rotations.css';
 @import './components/teams.css';

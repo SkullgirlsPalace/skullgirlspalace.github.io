@@ -232,6 +232,8 @@
 .stats-hero-container {
     max-width: 500px;
     margin: 0 auto;
+    padding: 14px;
+    overflow: hidden;
 }
 
 /* Statistics Tab - Header Row */
@@ -280,7 +282,7 @@
 /* Statistics Tab - Reference Image */
 .stats-image-wrapper {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
     animation: fadeSlideIn 0.3s ease;
 }
 
@@ -290,10 +292,14 @@
 }
 
 .stats-ref-image {
-    max-width: 500px;
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
     width: 100%;
+    height: auto;
+    margin: 0;
     border-radius: 10px;
-    border: 1px solid var(--border-subtle);
+    border: 0;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 

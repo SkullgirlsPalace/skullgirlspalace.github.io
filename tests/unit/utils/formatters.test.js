@@ -2,6 +2,8 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import {
   formatText,
   formatArsenal,
+  splitArsenalMoves,
+  countBuildStats,
   parseStatValue,
   formatNumber,
   formatBuildText,
@@ -15,6 +17,7 @@ vi.mock('../../../src/data/effectData.js', () => ({
     { pattern: 'Armadura', effectKey: 'armor' },
     { pattern: 'Sangramento', effectKey: 'bleed' }
   ],
+  getLocalizedEffect: () => ({ type: 'buff-term', icon: '' }),
   EFFECT_DATA: {
     armor: { type: 'buff', icon: 'img/test.webp' },
     bleed: { type: 'debuff', icon: 'img/test2.webp' },
@@ -44,6 +47,13 @@ vi.mock('../../../src/data/movesimages.js', () => ({
 }));
 
 describe('formatters.js', () => {
+  it('counts five move slots even when a move name has a comma or repeats', () => {
+    expect(splitArsenalMoves('Contra, Ataque!, Hairball, Hairball, Outro, Último')).toEqual([
+      'Contra, Ataque!', 'Hairball', 'Hairball', 'Outro', 'Último'
+    ]);
+    expect(countBuildStats('ATQ%, Perfuração e Precisão')).toBe(3);
+    expect(countBuildStats('ATQ% e Perfuração')).toBe(2);
+  });
   describe('formatText', () => {
     it('should handle empty input', () => {
       expect(formatText('')).toBe('');
@@ -68,9 +78,13 @@ describe('formatters.js', () => {
       expect(formatText('[SA 2]: Test')).toBe('Test');
     });
 
-    it('should remove **bold** markdown', () => {
-      expect(formatText('**Test**')).toBe('Test');
-      expect(formatText('Some **bold** text')).toBe('Some bold text');
+    it('renders deliberate emphasis around words and highlighted effects', () => {
+      expect(formatText('**Test**')).toBe('<strong class="ability-emphasis">Test</strong>');
+      expect(formatText('Some **bold** text')).toBe('Some <strong class="ability-emphasis">bold</strong> text');
+      const effect = formatText('**Armadura por 10 segundos**');
+      expect(effect).toContain('<strong class="ability-emphasis">');
+      expect(effect).toContain('<span class="number">10</span>');
+      expect(effect).not.toContain('**');
     });
 
     it('should remove Discord emoji codes', () => {
@@ -128,6 +142,8 @@ describe('formatters.js', () => {
     it('should return divs when charKey provided', () => {
       const result = formatArsenal('Hairball, Other Move', 'filia');
       expect(result).toContain('move');
+      expect(result).toContain('Other Move');
+      expect(result).not.toContain('${originalName}');
     });
   });
 

@@ -66,7 +66,7 @@
                     "description": "[HAB 1]: **Quando um aliado perde com Beowulf vivo**, todos os EF. POS. do oponente são removidos. Inflige 3 camadas de OSC. DE ENERGIA e MALDIÇÃO permanentes.\n\n[HAB 2]: **Quando o oponente está com MALDIÇÃO**, os ACERTOS DE GOLPES ESPECIAIS e BLOCKBUSTERS têm 100% de chance de serem INDEFENSÁVEIS e conceder INABALÁVEL por 10 s."
                 },
                 "marquee_ability": "Desafiante",
-                "recommended_build": "",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                 "recommended_arsenal": "Three Wulf Moonsault, Gigantic Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
             },
             {
@@ -135,7 +135,7 @@
                     "krazete_id": "freedomfighter"
                 },
                 "marquee_ability": "Desafiante",
-                "recommended_build": "",
+                "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
                 "recommended_arsenal": "Three Wulf Moonsault, Gigantic Arm, Wulf Shoot, Hurting Hurdle (Cadeira), Explosão"
             },
             {
@@ -263,8 +263,9 @@
                     "power": "27,437"
                 },
                 "signature_ability": {
-                    "name": "MEM?RIA REPRIMIDA",
-                    "description": "[HAB 1]: Enquanto Beowulf for o lutador ativo, Beowulf e o oponente sofrem QUIETUS permanente e suas ASSISTÊNCIAS ficam DESATIVADAS. Ao ativar o MODO HYPE, Beowulf recupera 30% de VIDA.\n\n[HAB 2]: Durante o MODO HYPE, aplica 2 EFEITOS NEGATIVOS aleatórios por 10 segundos a cada 2 segundos."
+                    "name": "MEMÓRIA REPRIMIDA",
+                    "description": "[HAB 1]: Enquanto Beowulf for o lutador ativo, Beowulf e o oponente sofrem QUIETUS permanente e suas ASSISTÊNCIAS ficam DESATIVADAS. Ao ativar o MODO HYPE, Beowulf recupera 30% de VIDA.\n\n[HAB 2]: Durante o MODO HYPE, aplica 2 EFEITOS NEGATIVOS aleatórios por 10 segundos a cada 2 segundos.",
+                    "krazete_id": "pillowtalk"
                 },
                 "marquee_ability": "Defensor do T?tulo",
                 "recommended_build": "ATQ%, Perfura??o, Precis?o e Dano Cr?tico",
@@ -310,7 +311,8 @@
                 },
                 "signature_ability": {
                     "name": "ALERTA VERMELHO",
-                    "description": "[HAB 1]: Ganha OLHO-MORTO e ACELERAÇÃO por 10 s cada **quando ativar o MODO HYPE.**\n\n[HAB 2]: Ao GOLPEAR, tem 25% de chance de ganhar FÚRIA por 10 segundos **quando estiver se beneficiando de ACELERAÇÃO.**"
+                    "description": "[SA1]: Ganha OLHO-MORTO e ACELERAÇÃO por 15 segundos cada ao ativar o MODO HYPE.\n\n[SA2]: Ao GOLPEAR enquanto estiver sob efeito de ACELERAÇÃO, tem 25% de chance de ganhar FÚRIA por 15 segundos.",
+                    "krazete_id": "numberone"
                 },
                 "marquee_ability": "Defensor do Título",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",

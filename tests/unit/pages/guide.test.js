@@ -49,13 +49,15 @@ describe('guide.js', () => {
         it('keeps the Wiki entry navigation separate from the game information tabs', () => {
             const html = renderWikiEntry();
             expect(html).toContain("navigateTo('game-info')");
-            expect(html).toContain("navigateTo('time-converter')");
+            expect(html).toContain('route-back-button');
+            expect(html).not.toContain("navigateTo('time-converter')");
             expect(html).toContain('Rotações');
             expect(html).not.toContain('tab-statistics');
         });
         it('should return HTML string', () => {
             const html = render();
             expect(html).toContain('guide-container');
+            expect(html).toContain('route-back-button');
         });
 
         it('should include tab buttons', () => {

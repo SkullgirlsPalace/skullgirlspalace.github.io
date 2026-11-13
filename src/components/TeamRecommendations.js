@@ -7,7 +7,7 @@ import { escapeTeamText as escape, reviewedTeams } from '../utils/teamData.js';
 let dataPromise;
 function loadTeams() {
     if (!dataPromise) {
-        dataPromise = fetch('data/teams.json').then(response => {
+        dataPromise = fetch(new URL('/data/teams.json', window.location.origin).href).then(response => {
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
             return response.json();
         }).catch(error => { dataPromise = null; throw error; });

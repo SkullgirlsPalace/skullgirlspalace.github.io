@@ -1520,6 +1520,21 @@
         "SA1": "Once per match, gain UNFLINCHING and IMMUNITY for 15 seconds when dropping below 25/35/50% HEALTH.",
         "SA2": "When Painwheel's UNFLINCHING expires, RESURRECT teammates with 20/25/30% HEALTH ."
     },
+    "garishgremlin": {
+        "name": "Garish Gremlin",
+        "rarity": "diamond",
+        "element": "air",
+        "character": "<:sp_um:969082448082268241> Umbrella",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/um/gGremlin.png",
+        "stats": {
+            "atk": "685",
+            "hp": "2919",
+            "fs": "821"
+        },
+        "ability": "Bubble Bash",
+        "SA1": "Umbrella has a floating BUBBLE that attacks the enemy when landing a THROW or CHARGE ATTACK, and has 3 POWER LEVELS. Every 10/7/5 COMBO HITS, the BUBBLE gains a POWER LEVEL, dealing increased damage. When the BUBBLE successfully hits an enemy, a PUDDLE is formed underneath the opponent.",
+        "SA2": "PUDDLE HITS heal other teammates for 5/10/15% MAX HEALTH and grants Umbrella DEADEYE, HASTE, and 2 stacks of REGEN for 10 seconds each. While benefiting from at least 1 stack of REGEN, Umbrella's BUBBLE deals 25/50/75% bonus damage."
+    },
     "gijazz": {
         "name": "G.I. Jazz",
         "rarity": "gold",
@@ -2182,6 +2197,21 @@
         "ability": "BAD MOON RISING",
         "SA1": "Inflict CURSE and gain permanent HASTE after facing the same opponent for 15/12/10 seconds.",
         "SA2": "While Marie is alive and benefiting from HASTE, all Dark teammates deal 25/35/50% BONUS DAMAGE."
+    },
+    "lovesick": {
+        "name": "Lovesick",
+        "rarity": "gold",
+        "element": "dark",
+        "character": "<:sp_va:698852651617746974> Valentine",
+        "image": "https://raw.githubusercontent.com/Krazete/sgm/main/image/stanley/va/lSick.png",
+        "stats": {
+            "atk": "256",
+            "hp": "1764",
+            "fs": "385"
+        },
+        "ability": "Knight's Devotion",
+        "SA1": "Every 5/4/3 seconds and every 7/6/5 COMBO HITS, gain DEVOTION (max. 7). At 7 DEVOTION, Valentine becomes EMPOWERED for 15 seconds, gaining 3 unpreventable, permanent stacks of ENRAGE, MIASMA, and HASTE while EMPOWERED. When EMPOWERED ends, suffer CRIPPLE for 10 seconds, preventing DEVOTION for the duration.",
+        "SA2": "While EMPOWERED, every 4 seconds, gain 5/10/15% increased ATTACK until EMPOWERED ends. Every 7 COMBO HITS, extend Valentine's EMPOWERED state by 1 second."
     },
     "lethalweapon": {
         "name": "Lethal Weapon",

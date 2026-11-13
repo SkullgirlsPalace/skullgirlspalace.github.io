@@ -133,20 +133,30 @@
 .guide-modifier-group-heading h3 { margin: 0; color: var(--text-primary); font-size: 0.98rem; }
 .guide-modifier-group-count { margin-left: auto; color: var(--text-muted); font-size: 0.76rem; }
 .guide-modifier-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); align-items: start; gap: 11px; }
-.guide-modifier-card { min-width: 0; height: fit-content; align-self: start; padding: 15px; border: 1px solid rgba(255,255,255,.09); border-radius: 15px; background: rgba(12,13,17,.82); animation: guide-modifier-appear 180ms ease both; }
+.guide-modifier-card { display: flex; flex-direction: column; min-width: 0; min-height: 132px; align-self: start; padding: 16px; border: 1px solid rgba(255,255,255,.09); border-radius: 15px; background: rgba(12,13,17,.82); animation: guide-modifier-appear 180ms ease both; }
 .guide-modifier-card.modifier-card-positive { border-color: rgba(100, 205, 150, 0.22); background: linear-gradient(145deg, rgba(52, 135, 92, 0.10), rgba(12,13,17,.86) 58%); }
 .guide-modifier-card.modifier-card-negative { border-color: rgba(235, 105, 115, 0.23); background: linear-gradient(145deg, rgba(155, 57, 67, 0.11), rgba(12,13,17,.86) 58%); }
 .guide-modifier-card.modifier-card-technical { border-color: rgba(212, 168, 75, 0.20); background: linear-gradient(145deg, rgba(212, 168, 75, 0.08), rgba(12,13,17,.86) 58%); }
-.guide-modifier-card-heading { display: flex; align-items: center; gap: 10px; min-width: 0; margin-bottom: 10px; }
+.guide-modifier-card-heading { display: flex; align-items: center; gap: 10px; min-width: 0; margin-bottom: 8px; }
 .guide-modifier-icon { width: 28px; height: 28px; flex: 0 0 28px; object-fit: contain; }
-.guide-modifier-card-heading h4 { flex: 1; min-width: 0; margin: 0; color: var(--text-primary); font-size: .94rem; line-height: 1.35; overflow-wrap: anywhere; word-break: normal; }
+.guide-modifier-card-heading h4 { flex: 1; min-width: 0; margin: 0; color: var(--text-primary); font-size: 1.12rem; line-height: 1.35; overflow-wrap: anywhere; word-break: normal; }
 .guide-modifier-marker { width: 9px; height: 9px; flex: 0 0 9px; border-radius: 50%; background: var(--modifier-color); box-shadow: 0 0 12px color-mix(in srgb, var(--modifier-color) 55%, transparent); }
-.guide-modifier-stacks { flex: 0 0 auto; padding: 4px 8px; border-radius: 999px; background: rgba(255,255,255,.06); color: var(--text-muted); font-size: .68rem; }
-.guide-modifier-card-body { min-width: 0; color: var(--text-secondary); font-size: .82rem; line-height: 1.6; overflow-wrap: anywhere; }
+.guide-modifier-stacks { width: fit-content; max-width: 100%; margin: 0 0 8px; padding: 4px 9px; border-radius: 999px; background: rgba(255,255,255,.06); color: var(--text-secondary); font-size: .78rem; }
+.guide-modifier-disclosure { margin-top: auto; border-top: 1px solid rgba(255,255,255,.07); }
+.guide-modifier-disclosure summary { display: flex; align-items: center; justify-content: flex-end; min-height: 44px; gap: 8px; color: var(--accent-gold-light); font-size: .88rem; font-weight: 650; cursor: pointer; list-style: none; touch-action: manipulation; }
+.guide-modifier-disclosure summary::-webkit-details-marker { display: none; }
+.guide-modifier-disclosure summary:focus-visible { outline: 2px solid var(--accent-gold); outline-offset: 2px; border-radius: 5px; }
+.guide-modifier-chevron { display: inline-grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: rgba(255,255,255,.07); font-size: 1.25rem; line-height: 1; transition: transform 160ms ease; }
+.guide-modifier-disclosure[open] .guide-modifier-chevron { transform: rotate(180deg); }
+.guide-modifier-card-body { min-width: 0; padding: 8px 0 2px; color: var(--text-secondary); font-size: .96rem; line-height: 1.55; overflow-wrap: anywhere; }
+.guide-modifier-game-description { margin: 0 0 12px; color: var(--text-secondary); font-size: .94rem; line-height: 1.5; overflow-wrap: anywhere; }
+.guide-modifier-game-description h5 { margin: 0 0 4px; color: var(--text-muted); font-size: .72rem; letter-spacing: .05em; text-transform: uppercase; }
+.guide-modifier-game-description p { margin: 0; white-space: pre-line; }
 .guide-modifier-detail + .guide-modifier-detail { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,.07); }
-.guide-modifier-detail h5 { margin: 0 0 3px; color: var(--accent-gold-light); font-size: .68rem; letter-spacing: .07em; text-transform: uppercase; }
+.guide-modifier-detail h5 { margin: 0 0 5px; color: var(--accent-gold-light); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
 .guide-modifier-detail p, .guide-modifier-card-body > p { margin: 0; white-space: pre-line; }
-.guide-modifier-scaling { margin: 9px 0 0; color: var(--text-muted); font-size: .75rem; }
+.guide-modifier-scaling { margin: 12px 0 0; color: var(--text-primary); font-size: .92rem; }
+.guide-modifier-scale-help { margin: 8px 2px 0; color: var(--text-secondary); font-size: .94rem; line-height: 1.55; }
 .guide-modifier-empty { margin: 12px 0 0; padding: 26px 16px; border: 1px dashed rgba(212,168,75,.22); border-radius: 14px; color: var(--text-muted); text-align: center; }
 .guide-modifier-empty[hidden] { display: none !important; }
 @keyframes guide-modifier-appear { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
@@ -354,11 +364,13 @@
 
     .guide-catalyst-filter {
         flex: 0 0 auto;
+        min-height: 44px;
     }
 
     .guide-modifier-filters { flex-wrap: nowrap; overflow-x: auto; margin: 12px -2px 0; padding: 2px 2px 8px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
-    .guide-modifier-filter { flex: 0 0 auto; }
+    .guide-modifier-filter { flex: 0 0 auto; min-height: 44px; }
     .guide-modifier-grid { grid-template-columns: 1fr; }
+    .guide-modifier-card { min-height: 0; padding: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

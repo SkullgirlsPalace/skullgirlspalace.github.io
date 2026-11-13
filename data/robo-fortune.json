@@ -21,12 +21,17 @@
                     "name": "ESTOURO DE BUFFER",
                     "description": "[HAB 1]: Ganhe PRECISÃO e BARREIRA **após cada 3 s sem sofrer um golpe (incluindo golpes bloqueados).**\n\n[HAB 2]: **Todos os ataques são INDEFENSÁVEIS com 3 ou mais camadas de PRECISÃO,** e 50% do dano recebido é refletido **ao ter 3 ou mais camadas de BARREIRA.**"
                 },
-                "marquee_ability": [
-                    "> VERIFICAÇÃO DE PING (Ataque)",
-                    "> DDOS (Defesa)"
-                ],
+                "marquee_ability": "VERIFICAÇÃO DE PING",
                 "recommended_build": "ATQ%, Perfuração, Dano Crítico e Reat. Especial",
-                "recommended_arsenal": "ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Corte Rápido, Raio de Calor, Raio de Teonita"
+                "recommended_arsenal": "ARMADILHA MAGNÉTICA, CANHÃO DRAMÁTICO ALFA, Corte Rápido, Raio de Calor, Raio de Teonita",
+                "builds": [
+                    {
+                        "title": "Defesa",
+                        "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
+                        "recommended_arsenal": "CANHÃO DRAMÁTICO ÔMEGA, CANHÃO DRAMÁTICO ALFA , Raio de Calor, Raio de Teonita, Explosão",
+                        "marquee_ability": "DDOS"
+                    }
+                ]
             },
             {
                 "name": "X-Bot",

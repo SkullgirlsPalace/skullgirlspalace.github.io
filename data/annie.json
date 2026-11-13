@@ -41,7 +41,8 @@
                 },
                 "signature_ability": {
                     "name": "CORAGEM LÍQUIDA",
-                    "description": "[HAB 1]: **Enquanto Annie estiver viva**, ela limpa os EFEITOS NEGATIVOS de todos os aliados e concede ARMADURA por 15 segundos. Todos os aliados de ÁGUA também recebem 2 camadas de FÚRIA por 15 segundos.\n\n[HAB 2]: Ganha BLOQUEIO AUTOMÁTICO PERMANENTE por cada 15% de vida perdida. Todos os aliados que se beneficiam de ARMADURA ou BLOQ. AUTOMÁTICO recebem 6% de MEDIDOR BLOCKBUSTER **ao usar um GOLPE ESPECIAL.**"
+                    "description": "[SA1]: Enquanto Annie estiver viva, ela remove os EFEITOS NEGATIVOS do lutador ativo e concede ARMADURA por 15 segundos a cada 20 segundos. Aliados de Água também ganham 2 acúmulos de FÚRIA por 15 segundos.\n\n[SA2]: Ganha BLOQUEIO AUTOMÁTICO PERMANENTE por cada 15% de vida perdida. Todos os aliados que se beneficiam de ARMADURA ou BLOQ. AUTOMÁTICO recebem 6% de MEDIDOR BLOCKBUSTER **ao usar um GOLPE ESPECIAL.**",
+                    "krazete_id": "modelleader"
                 },
                 "marquee_ability": "DESVIO PARA O AZUL",
                 "recommended_build": "VD%, Defesa, Resistência e Ganho Medidor",
@@ -378,7 +379,8 @@
                 },
                 "signature_ability": {
                     "name": "POEIRA ESTELAR",
-                    "description": "[HAB 1]: No MODO PODER ESTELAR, cada GOLPE bloqueado pelo oponente tem 10% de chance de infligir QUEBRA DE GUARDA e LENTIDÃO por 15 segundos.\n\n[HAB 2]: BLOCKBUSTERS causam 35% de dano adicional no MODO PODER ESTELAR."
+                    "description": "[SA1]: Cada GOLPE bloqueado pelo oponente tem 10% de chance de aplicar QUEBRA DE GUARDA e QUEBRA DE ARMADURA por 15 segundos cada.\n\n[SA2]: GOLPES ESPECIAIS e BLOCKBUSTERS causam 35% de DANO adicional.",
+                    "krazete_id": "starchild"
                 },
                 "marquee_ability": "Desvio para o Vermelho",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

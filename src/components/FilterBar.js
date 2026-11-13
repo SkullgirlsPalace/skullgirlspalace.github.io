@@ -19,6 +19,10 @@ let searchDebounceTimer = null;
 let lastValidResults = [];
 let lastValidQuery = '';
 
+function renderEffectFilterToggle(label, color) {
+    return `<button type="button" class="adv-filter-label adv-filter-toggle" style="color: ${color};" aria-expanded="false" onclick="const panel=this.nextElementSibling; const expanded=panel.classList.toggle('active'); this.setAttribute('aria-expanded', String(expanded));">${label}<span aria-hidden="true">▼</span></button>`;
+}
+
 /**
  * Create search bar HTML (separate from filter bar for flexible positioning)
  * @returns {string} HTML string
@@ -27,8 +31,7 @@ export function createSearchBar() {
     return `
         <div class="search-bar-container" id="search-bar-container">
             <div class="search-input-wrapper">
-                <img loading="lazy" src="img/official/Search.webp" alt="${t('characters.searchPlaceholder')}" class="search-icon"
-                     onerror="this.style.display='none'">
+                <span class="search-icon" aria-hidden="true">⌕</span>
                 <input type="text" id="variant-search-input" class="variant-search-input"
                        placeholder="${t('characters.searchPlaceholder')}"
                        oninput="handleSearchInput(this.value)"
@@ -135,8 +138,8 @@ export function createFilterBar() {
                             <button class="sort-btn class-filter-btn class-filter-icon-btn" data-variant-class="Coringa" onclick="handleFilterClick('variantClass', 'Coringa')"><img loading="lazy" src="${CLASS_ICONS['Coringa']?.icon}" alt=""> ${getLocalizedClassName('Coringa').toUpperCase()}</button>
                         </div>
                     </div>
-                    <div class="adv-filter-group" id="adv-filter-effects-pos"><span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span><div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div></div>
-                    <div class="adv-filter-group" id="adv-filter-effects-neg"><span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span><div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div></div>
+                    <div class="adv-filter-group" id="adv-filter-effects-pos">${renderEffectFilterToggle(t('guide.positiveEffects'), 'var(--buff-color, #6fbf73)')}<div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div></div>
+                    <div class="adv-filter-group" id="adv-filter-effects-neg">${renderEffectFilterToggle(t('guide.negativeEffects'), 'var(--debuff-color, #f06868)')}<div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div></div>
                     <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;"><button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 8px;" onclick="handleClearAdvancedFilters()">${t('filter.clearAdvanced')}</button></div>
                 </div>
             </div>
@@ -271,11 +274,11 @@ export function createFilterBar() {
                             </div>
                         </div>
                         <div class="adv-filter-group" id="adv-filter-effects-pos-mobile">
-                            <span class="adv-filter-label" style="color: var(--buff-color, #6fbf73); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.positiveEffects')} <span>▼</span></span>
+                            ${renderEffectFilterToggle(t('guide.positiveEffects'), 'var(--buff-color, #6fbf73)')}
                             <div class="filter-grid effects-grid collapsible-content">${createEffectGrid(buffs, true)}</div>
                         </div>
                         <div class="adv-filter-group" id="adv-filter-effects-neg-mobile">
-                            <span class="adv-filter-label" style="color: var(--debuff-color, #f06868); cursor: pointer;" onclick="this.nextElementSibling.classList.toggle('active')">${t('guide.negativeEffects')} <span>▼</span></span>
+                            ${renderEffectFilterToggle(t('guide.negativeEffects'), 'var(--debuff-color, #f06868)')}
                             <div class="filter-grid effects-grid collapsible-content">${createEffectGrid(debuffs, false)}</div>
                         </div>
                         <div class="adv-filter-group" style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px;">

@@ -15,12 +15,16 @@ import { createTeamPicker } from './team-picker.js';
 import { validatePresets, membersFromPreset, membersWithCompanions, isQuickPreset, PRESET_KINDS } from './presets.js';
 import { presetShortcuts } from './preset-shortcuts.js';
 import { createExportArchive } from './transfer.js';
+import { MOVE_DATA } from '../../src/data/movesimages.js';
+import { moveDescriptionControl, toggleMoveDescription } from './move-description.js';
 
 const root = document.querySelector('#editor');
 const picker = document.querySelector('#picker');
 const review = document.querySelector('#review');
 const repo = new URL('../../', document.baseURI);
 const storageKey = `palace-editor:${EDITOR_LABEL}:${repo.pathname}`;
+const recoveryPointerKey = `${storageKey}:recovery-latest`;
+let draftStorageKey = storageKey;
 const legacyStorageKeys = Array.from({ length: EDITOR_VERSION - 1 }, (_, index) => `palace-editor:v${EDITOR_VERSION - index - 1}:${repo.pathname}`);
 const theme = isLocalEditorURL(window.location.href) ? initEditorTheme() : null;
 let language = localStorage.getItem('palace-editor-language') || 'pt-BR';
@@ -46,6 +50,17 @@ const chips = name => `<div class="chips">${classesFor(name).map((value, index) 
 const btn = (action, label, attributes = '', style = '') => `<button type="button" data-action="${action}" class="${style}" ${attributes}>${esc(text(label))}</button>`;
 const rich = value => esc(value || text('missing')).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
 const richAbility = (value, locale) => rich(normalizeAbilityProgressions(stripAbilityLabels(locale === 'pt-BR' ? localizePortugueseAbility(value) : value)));
+const statMarkup = data => `<dl class="variant-stats">${[['attack', 'statAttack'], ['health', 'statHealth'], ['power', 'statScore']].map(([key, label]) => `<div><dt>${esc(text(label))}</dt><dd>${esc(data.stats?.[key] || '—')}</dd></div>`).join('')}</dl>`;
+function moveMarkup(character, build) {
+    const source = [build.recommended_arsenal, build.recommended_build].filter(Boolean).join(', ');
+    const moves = Object.entries(MOVE_DATA[character] || {}).filter(([name, data]) => {
+        if (!data.image?.image) return false;
+        const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return new RegExp(`(?<![\\p{L}])${escaped}(?![\\p{L}])`, 'iu').test(source);
+    });
+    return moves.length ? `<div class="build-moves"><p class="eyebrow">${text('movePreview')}</p><div class="build-moves-grid">${moves.map(([name, data]) => `<figure><img loading="lazy" width="64" height="64" src="${esc(new URL(data.image?.image || '', repo).href)}" alt=""><figcaption><strong>${esc(name)}</strong>${moveDescriptionControl(data, text)}</figcaption></figure>`).join('')}</div></div>` : '';
+}
+const buildPreview = (character, build) => `<div class="build-preview">${build.recommended_build ? `<div class="reference-text">${rich(build.recommended_build)}</div>` : ''}${moveMarkup(character, build)}</div>`;
 function humanError(error) {
     const index = error.lastIndexOf(': ');
     const prefix = index >= 0 ? `${error.slice(0, index)}: ` : '';
@@ -65,12 +80,19 @@ function download(blob, name) {
     setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function downloadBackup() {
-    const backup = state.recovery || makeBackup(state.base, state.files, state.presets);
+    const backup = makeBackup(state.base, state.files, state.presets);
+    download(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }), backupFilename(backup));
+}
+function downloadRecovery() {
+    const backup = state.recovery;
     download(new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }), backupFilename(backup));
 }
 function save() {
-    if (state.recovery) return;
-    try { localStorage.setItem(storageKey, JSON.stringify(makeBackup(state.base, state.files, state.presets))); state.saveError = false; }
+    try {
+        if (!draftStorageKey) throw new Error('archiveFailed');
+        localStorage.setItem(draftStorageKey, JSON.stringify(makeBackup(state.base, state.files, state.presets)));
+        state.saveError = false;
+    }
     catch { state.saveError = true; }
     updateSaveState();
 }
@@ -101,7 +123,7 @@ function render() {
             ${btn('moves-gallery', 'movesGallery')}${btn('help', 'help')}${btn('backup', 'backup')}${btn('import', 'import')}${btn('review', 'export', '', 'primary')}
         </div></header>
         <div class="workspace"><aside class="sidebar"><div class="sidebar-head"><h2>${text('variants')}<small>${catalogFrom(state.files).length}</small></h2>${btn('catalog-clear', 'clearFilters', '', 'small')}
-            <input id="catalog-query" type="search" aria-label="${text('search')}" placeholder="${text('search')}" value="${esc(state.query)}">
+            <span class="editor-search-field"><span class="editor-search-icon" aria-hidden="true">⌕</span><input id="catalog-query" type="search" aria-label="${text('search')}" placeholder="${text('search')}" value="${esc(state.query)}"></span>
             <select id="catalog-character" aria-label="${text('character')}"><option value="">${text('character')}</option>${CHARACTER_FILES.map(file => {
                 const key = file.slice(0, -5); return `<option value="${key}" ${key === state.character ? 'selected' : ''}>${esc(state.files[`data/${file}`].character)}</option>`;
             }).join('')}</select></div><div id="catalog" class="catalog"></div><div id="catalog-pages"></div></aside>
@@ -131,7 +153,7 @@ function renderMain() {
     const englishName = englishFor(item)?.name?.replace(/\r/g, '').trim();
     if (state.category === 'defense' && !supportsDefensiveTeams(classesFor(item.variant))) state.category = 'general';
     host.innerHTML = `<section class="variant-heading"><img loading="lazy" width="110" height="118" src="${image(item)}" alt="">
-        <div><p class="eyebrow">${esc(item.characterName)} / ${esc(item.rarity)} / ${esc(item.data.element)}</p><h1 lang="pt-BR">${esc(item.variant)}</h1>${englishName ? `<p class="variant-name-en" lang="en">${esc(englishName)}</p>` : ''}${chips(item.variant)}
+        <div><p class="eyebrow">${esc(item.characterName)} / ${esc(item.rarity)} / ${esc(item.data.element)}</p><h1 lang="pt-BR">${esc(item.variant)}</h1>${englishName ? `<p class="variant-name-en" lang="en">${esc(englishName)}</p>` : ''}${chips(item.variant)}${statMarkup(item.data)}
         <div class="inline-actions">${btn('character-moves', 'characterMoves', `data-character="${esc(item.character)}"`, 'small')}</div></div></section>
         <nav class="tabs" aria-label="${text('section')}">${['teams', 'presets', 'abilities', 'edit', 'tier', 'reference', 'help'].map(tab => `<button data-action="tab" data-tab="${tab}" class="${state.tab === tab ? 'active' : ''}" aria-current="${state.tab === tab ? 'page' : 'false'}">${text(tab)}</button>`).join('')}</nav>
         <div class="error" id="editor-error" role="alert">${esc(state.notice)}</div>
@@ -149,7 +171,7 @@ function referenceMarkup(item) {
     return `<p class="help">${text('referenceHelp')}</p><div class="reference-grid">
         <section class="panel"><p class="eyebrow">PT-BR · ${text('ability')}</p><h2>${esc(item.data.signature_ability?.name || text('missing'))}</h2><div class="reference-text">${richAbility(item.data.signature_ability?.description, 'pt-BR')}</div></section>
         <section class="panel"><p class="eyebrow">EN · ${text('enReference')}</p>${english ? `<h2>${esc(english.ability)}</h2><div class="reference-text">${richAbility([english.SA1, english.SA2].filter(Boolean).join('\n\n'), 'en')}</div>` : `<p class="help">${text('noEnglish')}</p>`}</section>
-        </div>${sourceAbilitiesMarkup(item)}<section class="panel"><h2>${text('existingBuild')}</h2>${variantsBuilds.map(build => `<h3>${esc(build.title || text('baseBuild'))}</h3>${EDITABLE_BUILD_FIELDS.map(field => `<p class="reference-text"><strong>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}</strong>\n${rich(build[field])}</p>`).join('')}`).join('')}</section>
+        </div>${sourceAbilitiesMarkup(item)}<section class="panel"><h2>${text('existingBuild')}</h2>${variantsBuilds.map(build => `<h3>${esc(build.title || text('baseBuild'))}</h3>${EDITABLE_BUILD_FIELDS.map(field => `<p class="reference-text"><strong>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}</strong>\n${rich(build[field])}</p>`).join('')}${moveMarkup(item.character, build)}`).join('')}</section>
         <section class="panel"><h2>${text('currentTiers')}</h2>${tiersMarkup(item)}</section>`;
 }
 function sourceAbilitiesMarkup(item) {
@@ -181,7 +203,7 @@ function abilitiesMarkup(item) {
 }
 function buildFields(build, index) {
     return `<div class="fields">${index !== 'base' ? `<label>${text('buildTitle')}<input data-build="${index}" data-field="title" value="${esc(build.title)}"></label>` : ''}
-    ${EDITABLE_BUILD_FIELDS.map(field => `<div><label>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}<textarea data-build="${index}" data-field="${field}">${esc(build[field] || '')}</textarea></label>${field === 'recommended_arsenal' ? `<div class="inline-actions">${btn('character-moves', 'characterMoves', `data-character="${esc(selected().character)}"`, 'small')}</div>` : ''}</div>`).join('')}</div>`;
+    ${EDITABLE_BUILD_FIELDS.map(field => `<div><label>${text(({ recommended_build: 'build', recommended_arsenal: 'arsenal', marquee_ability: 'marquee' })[field])}<textarea data-build="${index}" data-field="${field}">${esc(build[field] || '')}</textarea></label>${field === 'recommended_arsenal' ? `<div class="inline-actions">${btn('character-moves', 'characterMoves', `data-character="${esc(selected().character)}"`, 'small')}</div>` : ''}</div>`).join('')}</div><div data-build-preview="${index}">${buildPreview(selected().character, build)}</div>`;
 }
 function editMarkup(item) {
     const [primary, secondary = ''] = classesFor(item.variant);
@@ -203,7 +225,7 @@ function memberMarkup(member, team, index) {
     if (!member) return `<div class="member-card empty">${position}${btn('pick', 'addMember', `data-team="${esc(team.id)}" data-index="${index}"`)}</div>`;
     const item = catalogFrom(state.files).find(candidate => sameVariant(candidate, member));
     const isAnchor = sameVariant(member, team.anchor);
-    return `<div class="member-card">${position}<img loading="lazy" width="180" height="180" src="${image(member)}" alt=""><strong>${esc(item ? displayName(item) : member.variant)}</strong>${chips(member.variant)}
+    return `<div class="member-card">${position}<img loading="lazy" width="180" height="180" src="${image(member)}" alt=""><strong>${esc(item ? displayName(item) : member.variant)}</strong>${item ? statMarkup(item.data) : ''}${chips(member.variant)}
         ${isAnchor ? `<small>${text('fixed')}</small>` : ''}<div class="inline-actions">
         ${btn('inspect', 'inspect', `data-character="${esc(member.character)}" data-variant="${esc(member.variant)}"`, 'small')}
         ${!isAnchor ? btn('pick', 'replace', `data-team="${esc(team.id)}" data-index="${index}"`, 'small') + btn('remove-member', 'remove', `data-team="${esc(team.id)}" data-index="${index}"`, 'small danger') : ''}
@@ -281,7 +303,6 @@ const teamPicker = createTeamPicker({
         checkpoint(); team.members = members; team.status = 'draft'; commitEdit();
     },
     onChoose(teamId, index, member) {
-        if (state.recovery) return;
         const team = state.files['data/teams.json'].teams.find(team => team.id === teamId);
         if (!team || index < 0 || index > Math.min(2, team.members.length)
             || sameVariant(team.members[index], team.anchor)
@@ -329,7 +350,6 @@ function openReview() {
 root.addEventListener('input', event => {
     const target = event.target;
     if (target.id === 'catalog-query') { state.query = target.value; state.page = 0; renderCatalog(); return; }
-    if (state.recovery) { renderMain(); return; }
     const item = selected();
     if (target.dataset.abilityLocale) {
         const field = target.dataset.abilityField;
@@ -361,18 +381,20 @@ root.addEventListener('input', event => {
     if (target.dataset.build !== undefined) {
         const build = target.dataset.build === 'base' ? item.data : item.data.builds[Number(target.dataset.build)];
         build[target.dataset.field] = target.value; save();
+        const preview = root.querySelector(`[data-build-preview="${target.dataset.build}"]`);
+        if (preview) preview.innerHTML = buildPreview(item.character, build);
     }
 });
 root.addEventListener('focusout', event => {
     const target = event.target;
-    if (state.recovery || !target.dataset.abilityLocale || !['SA1', 'SA2'].includes(target.dataset.abilityField)) return;
+    if (!target.dataset.abilityLocale || !['SA1', 'SA2'].includes(target.dataset.abilityField)) return;
     const item = selected();
     target.value = target.dataset.abilityLocale === 'pt-BR'
         ? splitSignatureAbility(localizePortugueseAbility(normalizeAbilityProgressions(item.data.signature_ability?.description)))[target.dataset.abilityField]
         : normalizeAbilityProgressions(stripAbilityLabels(englishFor(item)?.[target.dataset.abilityField]));
 });
 root.addEventListener('focusin', event => {
-    if ((event.target.dataset.build !== undefined || event.target.dataset.abilityLocale) && !state.recovery) {
+    if (event.target.dataset.build !== undefined || event.target.dataset.abilityLocale) {
         checkpoint();
         const undo = root.querySelector('[data-action="undo"]');
         if (undo) undo.disabled = false;
@@ -383,7 +405,6 @@ root.addEventListener('change', event => {
     if (target.id === 'editor-theme') { theme?.setPreference(target.value); return; }
     if (target.id === 'editor-language') { language = target.value; localStorage.setItem('palace-editor-language', language); render(); return; }
     if (target.id === 'catalog-character') { state.character = target.value; state.page = 0; renderCatalog(); return; }
-    if (state.recovery) { renderMain(); return; }
     const item = selected();
     if (target.dataset.presetName) {
         const name = target.value.trim();
@@ -422,9 +443,9 @@ async function action(event) {
     const button = event.target.closest('[data-action]');
     if (!button || button.disabled) return;
     const action = button.dataset.action;
-    if (action === 'backup' || action === 'recover') { downloadBackup(); if (action === 'recover') { recoveryDownloaded = true; render(); } return; }
+    if (action === 'backup' || action === 'recover') { if (action === 'recover') { downloadRecovery(); recoveryDownloaded = true; render(); } else downloadBackup(); return; }
     if (action === 'start-fresh' && state.recovery && recoveryDownloaded) {
-        state.recovery = null; state.files = clone(state.base); state.presets = []; state.undo = null; state.notice = ''; save(); render(); return;
+        state.recovery = null; localStorage.removeItem(recoveryPointerKey); state.files = clone(state.base); state.presets = []; state.undo = null; state.notice = ''; save(); render(); return;
     }
     if (action === 'help') { state.tab = 'help'; renderMain(); return; }
     if (action === 'close-review') { review.close(); return; }
@@ -444,7 +465,6 @@ async function action(event) {
     if (action === 'page-prev' || action === 'page-next') { state.page += action === 'page-prev' ? -1 : 1; renderCatalog(); return; }
     if (action === 'catalog-clear') { state.query = ''; state.character = ''; state.page = 0; root.querySelector('#catalog-query').value = ''; root.querySelector('#catalog-character').value = ''; renderCatalog(); return; }
     if (action === 'review') { openReview(); return; }
-    if (state.recovery) return;
     if (action === 'undo') {
         if (state.undo) {
             const previous = { files: state.files, presets: state.presets };
@@ -516,6 +536,10 @@ async function action(event) {
         download(createZip(createExportArchive(files)), `palace-${EDITOR_LABEL}.zip`);
     }
 }
+root.addEventListener('click', event => {
+    const button = event.target.closest('[data-move-effect]');
+    if (button) toggleMoveDescription(button, text);
+});
 for (const target of [root, review]) target.addEventListener('click', event => { action(event).catch(error => { state.notice = humanError(error.message); renderMain(); }); });
 document.querySelector('#import-file').addEventListener('change', async event => {
     const file = event.target.files[0];
@@ -525,7 +549,7 @@ document.querySelector('#import-file').addEventListener('change', async event =>
         if (file.size > 8_000_000) throw new Error('invalidBackup');
         backup = JSON.parse(await file.text());
         const files = restoreBackup(state.base, backup, classesFor);
-        checkpoint(); state.files = files; state.presets = clone(backup.presets ?? []); state.recovery = null; state.notice = text('importSuccess'); save(); render();
+        checkpoint(); state.files = files; state.presets = clone(backup.presets ?? []); state.recovery = null; localStorage.removeItem(recoveryPointerKey); state.notice = text('importSuccess'); save(); render();
     } catch (error) { state.notice = error.message.includes('staleBackup') ? text('importUnavailable') : `${error.message === 'incompatibleVersion' ? `v${backup?.version ?? '?'} → ${EDITOR_LABEL}: ` : ''}${humanError(error.message)}`; renderMain(); }
     event.target.value = '';
 });
@@ -537,14 +561,28 @@ async function init() {
         state.base = Object.fromEntries(paths.map((path, index) => [path, data[index]]));
         state.base[CLASS_PATH] = clone(VARIANT_CLASSES); state.files = clone(state.base);
         state.abilityLinks = buildAbilityLinks(state.base);
-        const saved = localStorage.getItem(storageKey) ?? legacyStorageKeys.map(key => localStorage.getItem(key)).find(value => value !== null);
+        const current = localStorage.getItem(storageKey);
+        const legacyKey = current === null ? legacyStorageKeys.find(key => localStorage.getItem(key) !== null) : null;
+        const saved = current ?? (legacyKey ? localStorage.getItem(legacyKey) : null);
         if (saved) {
             try { const backup = JSON.parse(saved); state.files = restoreBackup(state.base, backup, classesFor); state.presets = clone(backup.presets ?? []); }
-            catch { try { state.recovery = JSON.parse(saved); } catch { state.recovery = { unreadableBackup: saved }; } }
+            catch {
+                try { state.recovery = JSON.parse(saved); } catch { state.recovery = { unreadableBackup: saved }; }
+                if (current !== null) {
+                    const archiveKey = `${storageKey}:recovery:${Date.now()}`;
+                    try { localStorage.setItem(archiveKey, saved); localStorage.setItem(recoveryPointerKey, archiveKey); }
+                    catch { draftStorageKey = null; state.saveError = true; }
+                } else { try { localStorage.setItem(recoveryPointerKey, legacyKey); } catch { draftStorageKey = null; state.saveError = true; } }
+            }
+        }
+        if (!state.recovery) {
+            const recoveryKey = localStorage.getItem(recoveryPointerKey);
+            const recoveryText = recoveryKey && localStorage.getItem(recoveryKey);
+            if (recoveryText) { try { state.recovery = JSON.parse(recoveryText); } catch { state.recovery = { unreadableBackup: recoveryText }; } }
         }
         state.selected = { character: 'annie', variant: state.files['data/annie.json'].variants.diamante[0].name };
         render();
-        if (!state.recovery) save();
+        save();
     } catch (error) { root.innerHTML = `<div class="boot"><h1>Palace ${text('studio')}</h1><p class="error">${text('loadError')}\n${esc(error.message)}</p></div>`; }
 }
 if (isLocalEditorURL(window.location.href)) await init();

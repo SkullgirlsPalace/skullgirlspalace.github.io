@@ -8,8 +8,8 @@ import { flattenVariants } from '../utils/variantUtils.js';
 
 // Nomes das variantes que ganharam destaque NEW
 export const NEW_VARIANTS = [
-    "Garota dos Sonhos",
-    "Chamego"
+    "Doente de Amor",
+    "Gremlindo"
 ];
 
 /**

@@ -4,7 +4,7 @@
 // Accessed via the info icon on the detail page
 // =====================================================
 
-import { getCharacter } from '../services/dataService.js';
+import { getCharacter, loadCatalysts } from '../services/dataService.js';
 import { CHARACTER_COLORS, CHARACTER_ICONS, getLocalizedRarityLabel } from '../config/constants.js';
 import { getCharacterProfile } from '../data/characterProfiles.js';
 import { MOVE_DATA } from '../data/movesimages.js';
@@ -60,7 +60,6 @@ export function renderProfileModal(charKeyRaw) {
   </div>
   `;
 }
-
 /**
  * Open the profile modal
  */
@@ -138,17 +137,15 @@ async function renderProfileTabContent(charKeyRaw, tabName) {
   const charData = getCharacter(charKey);
   if (!charData) return;
 
-  const profile = getCharacterProfile(charKey);
-
   switch (tabName) {
     case 'about':
-      contentEl.innerHTML = renderSobreTab(charKey, charData, profile);
+      contentEl.innerHTML = renderSobreTab(charKey, charData, getCharacterProfile(charKey));
       break;
     case 'variants':
       contentEl.innerHTML = renderVariantesTab(charKey, charData);
       break;
     case 'moves':
-      contentEl.innerHTML = await renderGolpesTab(charKey);
+      contentEl.innerHTML = renderGolpesTab(charKey);
       break;
   }
 }
@@ -364,9 +361,9 @@ function renderVariantesTab(charKey, charData) {
         <div class="profile-variants-grid">
           ${variants.map((v, i) => `
           <div class="profile-variant-card animate-in" style="animation-delay: ${i * 0.03}s">
-            <img loading="lazy" src="${getVariantImage(charKey, v.name, 0)}" alt="${v.name}" class="profile-variant-img"
+            <img loading="lazy" src="${getVariantImage(charKey, v.name, 0)}" alt="${getLocalizedNameSync(v.name, v.signature_ability?.name)}" class="profile-variant-img"
               onerror="this.src='img/official/Annie_Icon.webp'">
-            <span class="profile-variant-name">${v.name}</span>
+            <span class="profile-variant-name">${getLocalizedNameSync(v.name, v.signature_ability?.name)}</span>
           </div>
           `).join('')}
         </div>
@@ -387,37 +384,13 @@ function renderVariantesTab(charKey, charData) {
   `;
 }
 
-let stanleyMovesCache = null;
-
-async function fetchStanleyMoves() {
-  if (stanleyMovesCache) return stanleyMovesCache;
-  try {
-    const res = await fetch('data/krazete/stanleyDB-moves.json');
-    const moves = await res.json();
-
-    const map = {};
-    Object.values(moves).forEach(m => {
-      if (m.image) {
-        const filename = m.image.split('/').pop();
-        map[filename] = m.gear || 0;
-      }
-    });
-    stanleyMovesCache = map;
-    return map;
-  } catch (e) {
-    console.error('Failed to load stanley moves:', e);
-    return {};
-  }
-}
-
-async function renderGolpesTab(charKey) {
+function renderGolpesTab(charKey) {
   const moves = MOVE_DATA[charKey];
   if (!moves || Object.keys(moves).length === 0) {
     return `<div class="profile-tab-panel"><p class="profile-empty">${t('profile.noMoves')}</p></div>`;
   }
 
   const moveEntries = Object.entries(moves);
-  const stanleyMap = await fetchStanleyMoves();
 
   function getMoveGear(data, moveName) {
     const imgPath = data.image?.image || '';
@@ -429,11 +402,7 @@ async function renderGolpesTab(charKey) {
     if (lowerName.includes('explos\u00E3o') || lowerName.includes('burst') || filename.includes('burst')) return -2;
     if (lowerName.includes('expuls\u00E3o') || lowerDesc.includes('expuls\u00E3o') || filename.includes('outtake') || filename.includes('snapback')) return -1;
 
-    if (stanleyMap[filename] !== undefined) {
-      return stanleyMap[filename];
-    }
-
-    // Fallback to extraction if not found in db
+    // Local move data is the published source; no unavailable StanleyDB fetch.
     const match = filename.match(/_(\d+)\.webp$/i);
     return match ? parseInt(match[1], 10) : 0;
   }
@@ -466,7 +435,7 @@ async function renderGolpesTab(charKey) {
               <span class="move-card-chevron">&#9660;</span>
             </div>
             <div class="move-card-detail">
-              <div class="move-card-type">${data.type || t('profile.unknown')}</div>
+              <div class="move-card-type">${data.type === 'Golpe Especial' ? t('profile.specialMoves') : data.type || t('profile.unknown')}</div>
               <p class="move-card-desc">${formattedDesc}</p>
             </div>
           </div>
@@ -672,18 +641,28 @@ export function showCritlessDisclaimer() {
  */
 export async function showCatalystDisclaimer(catalystName) {
     try {
-        const res = await fetch('data/krazete/stanleyDB-catalysts.json');
-        const db = await res.json();
-        
-        // Find matching catalyst by name (ignoring case)
-        let catalystData = null;
-        for (const key in db) {
-            if (db[key].name && db[key].name.toLowerCase() === catalystName.toLowerCase()) {
-                catalystData = db[key];
-                break;
+        const language = getCurrentLanguage();
+        const db = await loadCatalysts();
+        const items = db?.categories?.flatMap(category => category.items) || [];
+        const nameMatches = items.filter(item => item.name.toLocaleLowerCase() === catalystName.toLocaleLowerCase());
+        let catalystData = nameMatches.length === 1 ? nameMatches[0] : null;
+        // Extras retain Portuguese editorial names. Resolve a translated entry
+        // by its unique icon + restriction, never by list position or similarity.
+        if (!catalystData && !nameMatches.length) {
+            const otherFile = language === 'en' ? 'catalisadores.json' : 'catalisadores_en.json';
+            const response = await fetch(`data/${otherFile}`);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const other = await response.json();
+            const references = other.categories.flatMap(category => category.items)
+                .filter(item => item.name.toLocaleLowerCase() === catalystName.toLocaleLowerCase());
+            if (references.length === 1) {
+                const aliases = { Ambos: 'Both', 'Def. Ar': 'Def. Wind', 'Def. Água': 'Def. Water', 'Def. Luz': 'Def. Light', 'Def. Fogo': 'Def. Fire', 'Def. Trevas': 'Def. Dark' };
+                const identity = item => JSON.stringify([item.icon?.split('/').pop().replace(/\.(?:png|webp)$/i, ''), aliases[item.constraint] || item.constraint]);
+                const matches = items.filter(item => identity(item) === identity(references[0]));
+                if (matches.length === 1) catalystData = matches[0];
             }
         }
-        
+        if (language !== getCurrentLanguage()) return;
         if (!catalystData) {
             console.warn('Catalyst not found:', catalystName);
             return;
@@ -699,7 +678,7 @@ export async function showCatalystDisclaimer(catalystName) {
             ">
                 <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="color: #fff; margin: 0; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; font-family: 'Dodam', sans-serif;">
-                        <i class="fas fa-flask" style="color: #e1bee7;"></i> DETALHES DO CATALISADOR
+                        <i class="fas fa-flask" style="color: #e1bee7;"></i> ${t('profile.catalystDetails')}
                     </h3>
                     <button onclick="document.querySelectorAll('.catalyst-disclaimer-overlay, .catalyst-disclaimer-modal').forEach(el => el.remove());" 
                         style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s; padding: 0; font-size: 1.2rem; font-weight: bold;" 
@@ -710,15 +689,12 @@ export async function showCatalystDisclaimer(catalystName) {
                 </div>
 
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
-                    <img src="${catalystData.image}" alt="${catalystData.name}" style="width: 60px; height: 60px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
+                    <img loading="lazy" width="60" height="60" src="${catalystData.icon}" alt="${catalystData.name}" style="width: 60px; height: 60px; object-fit: contain; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));" onerror="this.style.display='none'">
                     <h4 style="color: #e1bee7; font-size: 1.2rem; margin: 0; font-family: 'Inter', sans-serif; font-weight: 700;">${catalystData.name.toUpperCase()}</h4>
                 </div>
 
                 <div class="catalyst-explanation" style="font-size: 0.92rem; color: #bbb; line-height: 1.6; font-family: 'Roboto Condensed', sans-serif; background: rgba(156, 39, 176, 0.05); padding: 15px; border-radius: 8px; border: 1px solid rgba(156, 39, 176, 0.15);">
-                    ${[catalystData.SA1, catalystData.SA2, catalystData.SA3]
-                        .filter(Boolean)
-                        .map(sa => sa.replace(/\b(?:\d+(?:\.\d+)?\/)+(\d+(?:\.\d+)?)\b/g, '$1'))
-                        .join('<br><br>')}
+                    ${formatText(catalystData.description.replace(/\b(?:\d+(?:\.\d+)?\/)+(\d+(?:\.\d+)?)\b/g, '$1'))}
                 </div>
             </div>
             <div class="catalyst-disclaimer-overlay" onclick="document.querySelectorAll('.catalyst-disclaimer-overlay, .catalyst-disclaimer-modal').forEach(el => el.remove());" style="
@@ -740,15 +716,3 @@ export async function showCatalystDisclaimer(catalystName) {
         console.error('Failed to load catalyst data:', e);
     }
 }
-
-// Register global handlers
-window.showMarqueeDisclaimer = showMarqueeDisclaimer;
-window.showCritlessDisclaimer = showCritlessDisclaimer;
-window.showCatalystDisclaimer = showCatalystDisclaimer;
-window.openProfileModal = openProfileModal;
-window.closeProfileModal = closeProfileModal;
-window.handleProfileOverlayClick = handleProfileOverlayClick;
-window.switchProfileModalTab = switchProfileModalTab;
-window.toggleProfileBio = toggleProfileBio;
-window.toggleProfileAbilities = toggleProfileAbilities;
-window.toggleMoveDetail = toggleMoveDetail;

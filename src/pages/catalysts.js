@@ -5,7 +5,7 @@
 
 import { loadCatalysts } from '../services/dataService.js';
 import { getState, updateCatalystNote } from '../state/store.js';
-import { t } from '../i18n/index.js';
+import { t, getCurrentLanguage } from '../i18n/index.js';
 
 /**
  * Render catalysts page
@@ -15,7 +15,7 @@ export function render() {
 	return `
 	<section class="section catalysts-section" id="catalysts">
 		<div class="section-header">
-			<button class="btn-back" onclick="navigateTo('')">
+			<button class="btn-back" type="button" aria-label="${t('common.backHome')}" title="${t('common.backHome')}" onclick="navigateTo('')">
 				\u2190
 			</button>
 			<h2>${t('catalysts.title')}</h2>
@@ -40,7 +40,9 @@ export async function init() {
 	const container = document.getElementById('catalyst-container');
 	if (!container) return;
 
+	const language = getCurrentLanguage();
 	const catalystData = await loadCatalysts();
+	if (!container.isConnected || document.getElementById('catalyst-container') !== container || getCurrentLanguage() !== language) return;
 	if (!catalystData || !catalystData.categories) {
 		container.innerHTML = `<p class="error-state">${t('catalysts.errorLoad')}</p>`;
 		return;

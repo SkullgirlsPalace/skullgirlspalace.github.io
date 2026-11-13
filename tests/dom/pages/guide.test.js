@@ -1,4 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { setLanguage } from '../../../src/i18n/translations.js';
+import { loadCatalysts } from '../../../src/services/dataService.js';
 
 // Mock heavy dependencies
 
@@ -14,7 +16,45 @@ vi.mock('../../../src/utils/formatters.js', () => ({
 describe('guide.js page', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    setLanguage('pt-BR');
     document.body.innerHTML = '';
+  });
+
+  afterEach(() => setLanguage('pt-BR'));
+
+  it('switches modifier labels, descriptions and controls together while retaining the selected tab', async () => {
+    const { renderGameInfo, init } = await import('../../../src/pages/guide.js');
+    setLanguage('en');
+    document.body.innerHTML = renderGameInfo();
+    await init();
+    window.switchGuideTab('modifiers');
+    expect(document.querySelector('#tab-modifiers h2').textContent).toBe('Modifiers');
+    expect(document.querySelector('#guide-modifier-search').placeholder).toBe('Search modifiers or effects...');
+    expect(document.querySelector('#buffs-list').textContent).toContain('Armor');
+    expect(document.querySelector('#buffs-list').textContent).not.toContain('Armadura');
+
+    setLanguage('pt-BR');
+    document.body.innerHTML = renderGameInfo();
+    await init();
+    expect(document.querySelector('.guide-tab-content.active').id).toBe('tab-modifiers');
+    expect(document.querySelector('#tab-modifiers h2').textContent).toBe('Modificadores');
+    expect(document.querySelector('#buffs-list').textContent).toContain('Armadura');
+    expect(document.querySelector('#guide-modifier-search').placeholder).toBe('Buscar modificador ou efeito...');
+  });
+
+  it('ignores an earlier catalyst request after the language and page have changed', async () => {
+    const { renderGameInfo, init } = await import('../../../src/pages/guide.js');
+    let finishPortuguese;
+    loadCatalysts.mockImplementationOnce(() => new Promise(resolve => { finishPortuguese = resolve; }));
+    document.body.innerHTML = renderGameInfo();
+    const firstRender = init();
+    setLanguage('en');
+    document.body.innerHTML = renderGameInfo();
+    await init();
+    finishPortuguese({ categories: [{ category: 'Forte', items: [{ name: 'Catalisador antigo', description: 'Português' }] }] });
+    await firstRender;
+    expect(document.querySelector('#catalyst-container').textContent).toContain('Error loading catalysts.');
+    expect(document.querySelector('#catalyst-container').textContent).not.toContain('Catalisador antigo');
   });
 
   it('should be importable', async () => {
@@ -106,6 +146,26 @@ describe('guide.js page', () => {
   });
 
   describe('init() tab switching', () => {
+    it('keeps original game explanations collapsed behind an accessible disclosure', async () => {
+      const { renderGameInfo, init } = await import('../../../src/pages/guide.js');
+      document.body.innerHTML = renderGameInfo();
+      await init();
+      const armor = [...document.querySelectorAll('#buffs-list .guide-modifier-card')]
+        .find(card => card.querySelector('h4').textContent === 'Armadura');
+      const disclosure = armor.querySelector('.guide-modifier-disclosure');
+      expect(armor.querySelector('.guide-modifier-stacks').textContent).toContain('5x');
+      const gameDescription = armor.querySelector('.guide-modifier-game-description');
+      expect(gameDescription.textContent).toContain('Reduz o dano sofrido em 20%.');
+      expect(gameDescription.closest('details')).toBeNull();
+      expect(disclosure.open).toBe(false);
+      expect(disclosure.textContent).toContain('Reduz dano em 20%. Removido por Quebra de Armadura.');
+      expect(disclosure.querySelectorAll('h5')).toHaveLength(0);
+      expect(disclosure.querySelector('summary').textContent).toContain('Explicação');
+      expect(disclosure.textContent).not.toContain('Reduz o dano sofrido em 20%.');
+      disclosure.querySelector('summary').click();
+      expect(disclosure.open).toBe(true);
+      expect(disclosure.querySelector('.guide-modifier-chevron').getAttribute('aria-hidden')).toBe('true');
+    });
     it('should register switchGuideTab on window', async () => {
       document.body.innerHTML = '<div class="guide-tab-btn active" onclick="switchGuideTab(\'statistics\')"></div><div class="guide-tab-content active" id="tab-statistics"></div>';
       const { init } = await import('../../../src/pages/guide.js');

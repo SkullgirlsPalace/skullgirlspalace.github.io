@@ -1,4 +1,5 @@
 import { t } from '../i18n/index.js';
+import { createPageBackControl } from '../components/Navigation.js';
 import {
   DAY, ROTATION_TIME_ZONE, MONTHLY_PRIZE_NAMES, mod, dailyWindow,
   characterEdition, eventWindow, formatDuration, guildBossIndex
@@ -100,9 +101,10 @@ function loginItems() {
 export function renderEvents() {
   const now = new Date();
   const categories = [['monthly', tr('Mensais', 'Monthly')], ['events', tr('Eventos', 'Events')], ['weekly', tr('Semanais', 'Weekly')], ['daily', tr('Diários', 'Daily')], ['login', 'Login']];
-  return `<section class="section events-section" id="events">
-    <header class="events-heading"><h1>${tr('Rotações', 'Rotations')}</h1><p>${tr('Informações e Ciclos para Skullgirls Mobile.', 'Skullgirls Mobile event information and cycles.')}</p></header>
-    <nav class="guide-tabs events-tabs"><button class="guide-tab-btn active" data-open-panel="monthly">${tr('Rotações', 'Rotations')}</button><button class="guide-tab-btn" onclick="navigateTo('game-info')">${t('nav.gameInfo')}</button><button class="guide-tab-btn" onclick="navigateTo('time-converter')">${t('nav.timeConverter')}</button></nav>
+  return `<div class="guide-container events-section fade-in" id="events">
+    ${createPageBackControl()}
+    <header class="guide-header events-wiki-header"><h1>${t('nav.guide')}</h1><p>${t('guide.wikiIntro')}</p></header>
+    <nav class="guide-tabs events-tabs"><button class="guide-tab-btn active" data-open-panel="monthly">${tr('Rotações', 'Rotations')}</button><button class="guide-tab-btn" onclick="navigateTo('game-info')">${t('nav.gameInfo')}</button></nav>
     <nav class="rotation-category-nav" aria-label="${tr('Categorias de rotação', 'Rotation categories')}">${categories.map(([id, label]) => `<button data-open-panel="${id}" aria-controls="rotations-${id}" aria-pressed="${id === 'monthly'}"${id === 'monthly' ? ' class="active"' : ''}>${label}</button>`).join('')}</nav>
     ${panel('monthly', tr('Mensais', 'Monthly'), monthlyItems(), true)}
     ${panel('events', tr('Eventos', 'Events'), eventItems())}
@@ -110,7 +112,7 @@ export function renderEvents() {
     ${panel('daily', tr('Diários', 'Daily'), dailyItems(now))}
     ${panel('login', tr('Login, Missões e Interação do Jogador', 'Login, Missions, and Player Interaction'), loginItems())}
     <p class="rotation-reset-note">${tr('Horários de referência: Brasília. Reinício às 14h.', 'Reference times: Brasília. Reset at 14:00.')}</p>
-  </section>`;
+  </div>`;
 }
 
 function calendarEntries(el, now) {

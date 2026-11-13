@@ -56,7 +56,7 @@ export const EFFECT_DATA = {
     name: 'Golpes Especiais',
     name_en: 'Special Moves',
     type: 'term',
-    detailed: 'Golpes Especiais são os golpesredondos, são mais "simples" que os Blockbusters, eles podem ser usados com mais frequência (Reat. Especial e Níveis carrega mais rápido) e podem ser repetidos.',
+    detailed: 'Golpes Especiais são os golpes redondos. São mais simples que os Blockbusters, podem ser usados com mais frequência e podem ser repetidos.',
     detailed_en: 'Special Moves are simpler than Blockbusters, they can be used more frequently (Special Cooldown and Levels charge faster) and can be repeated.'
   },
   tag_in: {
@@ -93,7 +93,7 @@ export const EFFECT_DATA = {
     color: '#b0bec5',
     icon: 'img/modifiers/permanent/Permanent.webp',
     stacks: 5,
-    explicacao: 'O Efeito com está borda não pode ser removido.',
+    explicacao: 'O efeito com esta borda não pode ser removido.',
     explicacao_en: 'The Effect with this border cannot be removed.'
   },
 
@@ -267,7 +267,7 @@ export const EFFECT_DATA = {
     icon: 'img/modifiers/buffs/Miasma.webp',
     stacks: 5,
     scaling: '1% > 2% > 3% > 4% > 5%',
-    detailed: 'Drena 2% de VIDA e MEDIDOR por seg de oponentes próximos.',
+    detailed: 'Drena 2% de VIDA e MEDIDOR por segundo de oponentes próximos.',
     detailed_en: 'Drains 2% HEALTH and METER per second from nearby opponents.',
     explicacao: 'Drena 1% de Vida e Medidor do oponente. Bloqueio de Cura e Polaridade Inversa não impedem a Drenagem de Vida e Blockbuster.',
     explicacao_en: 'Drains 1% of the opponent\'s Health and Meter. Heal Block and Inverse Polarity do not prevent Health and Blockbuster Drain.'
@@ -415,7 +415,7 @@ export const EFFECT_DATA = {
     color: '#ff4444',
     icon: 'img/modifiers/debuffs/Fatigue.webp',
     stacks: 1,
-    detailed: 'ASSISTÊNCIAS E GOLPES ESPECIAIS levem o dobro do tempo para reativar. Após X segundos, o Lutador atingido tem 50% de chance de ficar ATORDOADO por 2 seg.',
+    detailed: 'ASSISTÊNCIAS E GOLPES ESPECIAIS levam o dobro do tempo para reativar. Após X segundos, o lutador atingido tem 50% de chance de ficar ATORDOADO por 2 segundos.',
     detailed_en: 'ASSISTS and SPECIAL MOVES take double the time to reactivate. After X seconds, the affected Fighter has a 50% chance to be STUNNED for 2 sec.',
     explicacao: 'Recarga de Golpes Especiais e Assistência 50% mais lenta, ao expirar tem 50% de chance infligir Atordoamento.',
     explicacao_en: 'Special Moves and Assist cooldown 50% slower, upon expiration has a 50% chance to inflict Stun.'
@@ -481,7 +481,7 @@ export const EFFECT_DATA = {
     color: '#ff4444',
     icon: 'img/modifiers/debuffs/InversePolarity.webp',
     stacks: 1,
-    detailed: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.',
+    detailed: 'Inverte qualquer tipo de Regeneração e causa dano em vez de curar.',
     detailed_en: 'Inverts any type of Regeneration and deals damage instead of healing.',
     explicacao: 'Inverte qualquer tipo de Regeneração e causa dano ao invés de curar.',
     explicacao_en: 'Inverts any type of Regeneration and deals damage instead of healing.'
@@ -560,7 +560,7 @@ export const EFFECT_DATA = {
     color: '#ff4444',
     icon: 'img/modifiers/debuffs/Quietus.webp',
     stacks: 1,
-    detailed: 'A RESITÊNCIA da vítima é ignorada e os efeitos de RESISTÊNCIA FINAL e BENÇÃO são contornados.',
+    detailed: 'A RESISTÊNCIA da vítima é ignorada e os efeitos de RESISTÊNCIA FINAL e BÊNÇÃO são contornados.',
     detailed_en: 'The victim\'S RESISTANCE is ignored and FINAL STAND and BLESSING effects are bypassed.',
     explicacao: 'Ignora Resistência, Resistência Final e Benção.',
     explicacao_en: 'Ignores Resistance, Final Stand and Blessing.'
@@ -574,7 +574,7 @@ export const EFFECT_DATA = {
     icon: 'img/modifiers/debuffs/Slime.webp',
     stacks: 5,
     scaling: '2% > 4% > 6% > 8% > 10%',
-    detailed: 'Sofra dano igual a 2% VIDA MÁXIMA sempre que um EF. POSITIVO for recebido.',
+    detailed: 'Sofra dano igual a 2% da VIDA MÁXIMA sempre que um EF. POSITIVO for recebido.',
     detailed_en: 'Suffer damage equal to 2% MAX HEALTH whenever a BUFF is received.',
     explicacao: 'Sofre 2% de dano igual a sua Vida Máxima ao ganhar EF. POS.',
     explicacao_en: 'Suffers 2% damage equal to your Max Health when gaining a Buff.'
@@ -615,7 +615,7 @@ export const EFFECT_DATA = {
     icon: 'img/modifiers/debuffs/Wither.webp',
     stacks: 5,
     scaling: '5% > 10% > 15% > 20% > 25%',
-    detailed: 'Perca 10% a cada segundo no MEDIDOR DE BLOCKBUSTER.',
+    detailed: 'Perca 10% do MEDIDOR DE BLOCKBUSTER a cada segundo.',
     detailed_en: 'Lose 10% per second from the BLOCKBUSTER METER.',
     explicacao: 'Remove 5% de Medidor de Blockbuster por segundo.',
     explicacao_en: 'Removes 5% Blockbuster Meter per second.'

@@ -33,17 +33,6 @@ export function createRankBadge(rank) {
 
 
 /**
- * Clarify the primary and secondary classes for variants with two classes.
- * @param {string} variantName - Variant name
- * @returns {string} HTML string with class icon badges
- */
-function createClassSummary(variantName) {
-  const classes = getLocalizedVariantClasses(variantName);
-  if (classes.length < 2) return '';
-  return `<div class="tier-class-summary"><small>${t('variant.primaryClass')}: ${classes[0].localized}</small><small class="tier-secondary-class">${t('variant.alsoActsAs')}: ${classes[1].localized}</small></div>`;
-}
-
-/**
  * Render rank cell with optional class icon overlay
  */
 function renderRankCell(charKey, variantName, mode, rankValue, classes) {
@@ -99,7 +88,7 @@ export function createTierTable(charKey, charData) {
   // Get and filter variants
   let variants = flattenVariants(charData.variants);
   variants = filterVariants(variants, filters);
-  variants = sortVariants(variants, sort);
+  variants = sortVariants(variants, sort, filters);
 
   let rowsHTML = '';
 
@@ -130,7 +119,6 @@ export function createTierTable(charKey, charData) {
       const charCellContent = `
         <img loading="lazy" src="${imgPath}" alt="${localizedName}" onerror="this.src='img/official/Annie_Icon.webp'">
         <span>${localizedName}</span>
-        ${createClassSummary(variant.name)}
       `;
 
       return `
@@ -185,6 +173,45 @@ export function createTierTable(charKey, charData) {
   `;
 }
 
+/** Enable direct mouse dragging while preserving native touch scrolling. */
+export function enableTierTableDragScroll(root = document) {
+  root.querySelectorAll('.tier-table-wrapper:not([data-drag-scroll-bound])').forEach(wrapper => {
+    wrapper.dataset.dragScrollBound = 'true';
+    let startX = 0;
+    let startScrollLeft = 0;
+    let pointerId = null;
+
+    wrapper.addEventListener('pointerdown', event => {
+      if (event.pointerType !== 'mouse' || event.button !== 0 || event.target.closest('button, a, input, select, summary')) return;
+      startX = event.clientX;
+      startScrollLeft = wrapper.scrollLeft;
+      pointerId = event.pointerId;
+      wrapper.classList.add('is-drag-ready');
+      wrapper.setPointerCapture?.(pointerId);
+    });
+
+    wrapper.addEventListener('pointermove', event => {
+      if (pointerId === null || event.pointerId !== pointerId) return;
+      const deltaX = event.clientX - startX;
+      if (Math.abs(deltaX) < 4) return;
+      wrapper.classList.add('is-dragging');
+      wrapper.scrollLeft = startScrollLeft - deltaX;
+      event.preventDefault();
+    });
+
+    const stopDragging = event => {
+      if (pointerId === null || (event && event.pointerId !== pointerId)) return;
+      wrapper.classList.remove('is-drag-ready', 'is-dragging');
+      if (event && wrapper.hasPointerCapture?.(pointerId)) wrapper.releasePointerCapture(pointerId);
+      pointerId = null;
+    };
+
+    wrapper.addEventListener('pointerup', stopDragging);
+    wrapper.addEventListener('pointercancel', stopDragging);
+    wrapper.addEventListener('lostpointercapture', stopDragging);
+  });
+}
+
 /**
  * Create tier view content (includes dictionary, controls, and table)
  * @param {string} charKey - Character key
@@ -199,10 +226,10 @@ export function createTierView(charKey, charData) {
 
   <!-- Rank Explanations Dictionary -->
   <div class="legend-section">
-    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('rank-dict')">
+    <button class="legend-header" type="button" aria-expanded="false" aria-controls="rank-dict">
       <span class="legend-title iluminado">${t('tier.notes')}</span>
-      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
-    </div>
+      <span class="legend-toggle-btn" aria-hidden="true">\u25BC</span>
+    </button>
     <div class="rank-dictionary hidden" id="rank-dict">
       <div class="dict-item"><span class="rank-badge rank-ss">SS</span>
         <p>${t('tier.rankSS')}</p>
@@ -230,10 +257,10 @@ export function createTierView(charKey, charData) {
 
   <!-- Class Role Legend -->
   <div class="legend-section">
-    <div class="legend-header" style="cursor: pointer;" onclick="toggleLegendSection('class-dict')">
+    <button class="legend-header" type="button" aria-expanded="false" aria-controls="class-dict">
       <span class="legend-title iluminado">${t('tier.classes')}</span>
-      <button class="legend-toggle-btn" style="transform: rotate(-90deg); pointer-events: none;">\u25BC</button>
-    </div>
+      <span class="legend-toggle-btn" aria-hidden="true">\u25BC</span>
+    </button>
     <div class="class-dictionary hidden" id="class-dict">
       ${Object.entries(CLASS_ICONS).map(([cls, info]) => {
     return `
@@ -256,6 +283,7 @@ export function createTierView(charKey, charData) {
 // Global UI handler for legend sections
 window.toggleLegendSection = function (id) {
   const element = document.getElementById(id);
+  if (!element) return;
   const btn = element.closest('.legend-section').querySelector('.legend-toggle-btn');
 
   element.classList.toggle('hidden');
@@ -265,4 +293,10 @@ window.toggleLegendSection = function (id) {
   } else {
     btn.style.transform = 'rotate(0deg)';
   }
+  element.closest('.legend-section').querySelector('.legend-header')?.setAttribute('aria-expanded', String(!element.classList.contains('hidden')));
 };
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('.legend-header[aria-controls]');
+  if (button) window.toggleLegendSection(button.getAttribute('aria-controls'));
+});

@@ -36,6 +36,14 @@ describe('FilterBar.js', () => {
       const html = createFilterBar();
       expect(html).toContain('element-btn');
     });
+
+    it('renders positive and negative effect filters as touch-sized buttons', async () => {
+      const { createFilterBar } = await import('../../../src/components/FilterBar.js');
+      const html = createFilterBar();
+      expect(html.match(/class="adv-filter-label adv-filter-toggle"/g)?.length).toBe(4);
+      expect(html).toContain('aria-expanded="false"');
+      expect(html).toContain('this.setAttribute(\'aria-expanded\', String(expanded))');
+    });
   });
 
   describe('handleFilterClick', () => {

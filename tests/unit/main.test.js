@@ -15,6 +15,10 @@ vi.mock('../../src/services/dataService.js', () => ({
     loadExtrasData: vi.fn()
 }));
 
+vi.mock('../../src/services/routeData.js', () => ({
+    prepareRouteData: vi.fn(() => Promise.resolve())
+}));
+
 vi.mock('../../src/components/Navigation.js', () => ({
     createNavbar: vi.fn(() => '<nav>Navbar</nav>'),
     createAboutDrawer: vi.fn(() => '<div class="drawer">Drawer</div>'),
@@ -190,7 +194,7 @@ describe('main.js', () => {
             });
 
             await import('../../src/main.js');
-            window.onFiltersChanged();
+            await window.onFiltersChanged();
 
             expect(refreshVariants).toHaveBeenCalledWith('filia');
         });
@@ -236,23 +240,16 @@ describe('main.js', () => {
     });
 
     describe('init', () => {
-        it('should call loadAllCharacters', async () => {
-            const { loadAllCharacters } = await import('../../src/services/dataService.js');
-
+        it('initializes the router without preloading character data on the home page', async () => {
             // Re-import to trigger init
             vi.resetModules();
             await import('../../src/main.js');
 
-            expect(loadAllCharacters).toHaveBeenCalled();
-        });
-
-        it('should call loadTierData', async () => {
-            const { loadTierData } = await import('../../src/services/dataService.js');
-
-            vi.resetModules();
-            await import('../../src/main.js');
-
-            expect(loadTierData).toHaveBeenCalled();
+            const data = await import('../../src/services/dataService.js');
+            expect(data.loadAllCharacters).not.toHaveBeenCalled();
+            expect(data.loadTierData).not.toHaveBeenCalled();
+            const { initRouter } = await import('../../src/router.js');
+            expect(initRouter).toHaveBeenCalled();
         });
 
         it('should call initRouter', async () => {

@@ -129,7 +129,8 @@
                 },
                 "signature_ability": {
                     "name": "Hipnotizador ",
-                    "description": "[HAB 1]: **Durante um combo**, ganhe 1 EF. POSITIVO(S) aleatório(s) e aplique 1 EF. NEGETIVO(S) aleatório(s) a cada 1 segundos. Todos os EF. POSITIVOS e EF. NEGATIVOS são removidos no final do combo.\n\n[HAB 2]: Fukua causa 10% a mais de DANO **para cada EF. POSITIVO. aplicado nela**. Ao receber 10 ou mais EF. POSITIVO., todos os EF. POSITIVOS do oponente são removidos."
+                    "description": "[SA1]: Durante um combo, ganha 1 EFEITO POSITIVO aleatório e aplica 1 EFEITO NEGATIVO aleatório a cada segundo. Todos esses efeitos são removidos ao fim do combo.\n\n[SA2]: Fukua causa 10% a mais de DANO **para cada EF. POSITIVO. aplicado nela**. Ao receber 10 ou mais EF. POSITIVO., todos os EF. POSITIVOS do oponente são removidos.",
+                    "krazete_id": "idolecho"
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Precisão e Ganho Medidor",
@@ -376,8 +377,9 @@
                     "power": "20,949"
                 },
                 "signature_ability": {
-                    "name": "",
-                    "description": "[HAB 1]: **Qualquer aliado ganha ACELERAÇÃO permanente depois de enfrentar um oponente com o mesmo ELEMENTO** por 5 segundos.\n\n[HAB 2]: **Qualquer aliado inflige LENTIDÃO permanente depois de enfrentar um oponente do mesmo TIPO DE PERSONAGEM** por 5 segundos."
+                    "name": "MENTES IGUAIS",
+                    "description": "[HAB 1]: **Qualquer aliado ganha ACELERAÇÃO permanente depois de enfrentar um oponente com o mesmo ELEMENTO** por 5 segundos.\n\n[HAB 2]: **Qualquer aliado inflige LENTIDÃO permanente depois de enfrentar um oponente do mesmo TIPO DE PERSONAGEM** por 5 segundos.",
+                    "krazete_id": "roughcopy"
                 },
                 "marquee_ability": "Maldade Spectral",
                 "recommended_build": "ATQ%, Perfuração, Taxa de Atq Crítico e Dano Crítico",

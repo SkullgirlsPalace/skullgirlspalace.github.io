@@ -1,8 +1,13 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import { renderEvents, renderConverter, init } from '../../../src/pages/time-converter.js';
-import { stopRotations } from '../../../src/pages/rotations.js';
+import { renderEvents, initRotations as init, stopRotations } from '../../../src/pages/rotations.js';
 
-vi.mock('../../../src/i18n/index.js', () => ({ t: key => key }));
+vi.mock('../../../src/i18n/index.js', () => ({
+  t: key => ({
+    'nav.guide': 'Wiki',
+    'guide.wikiIntro': 'Guias e referências de Skullgirls Mobile.',
+    'common.backHome': 'Voltar ao Início'
+  })[key] || key
+}));
 
 const card = id => document.querySelector(`[data-event="${id}"]`);
 const openCategory = id => document.querySelector(`.rotation-category-nav [data-open-panel="${id}"]`).click();
@@ -19,6 +24,21 @@ describe('Rotações page', () => {
     stopRotations();
     vi.useRealTimers();
     document.body.innerHTML = '';
+  });
+
+  it('provides an accessible touch-sized return control', () => {
+    const button = document.querySelector('.route-back-button');
+    expect(button).not.toBeNull();
+    expect(button.getAttribute('aria-label')).toBe('Voltar ao Início');
+    expect(button.getAttribute('onclick')).toBe("navigateTo('')");
+  });
+
+  it('identifies Rotations as a section of the Wiki', () => {
+    expect(document.querySelector('#events').classList.contains('guide-container')).toBe(true);
+    expect(document.querySelector('.events-wiki-header h1').textContent).toBe('Wiki');
+    expect(document.querySelector('.events-wiki-header p').textContent).toBe('Guias e referências de Skullgirls Mobile.');
+    expect(document.querySelector('.events-heading')).toBeNull();
+    expect(document.querySelector('.events-tabs').classList.contains('guide-tabs')).toBe(true);
   });
 
   it('shows both monthly fights and the dynamic month/year without the schedule image/download', () => {
@@ -128,18 +148,4 @@ describe('Rotações page', () => {
     expect(card('monthly-prize').textContent).toMatch(/day\(s\).*hours.*minutes.*seconds/);
   });
 
-  it('keeps the timezone converter working and replaces its timer when converting again', () => {
-    document.body.innerHTML = renderConverter();
-    init();
-    document.querySelector('#event-date').value = '2026-10-14T14:00';
-    document.querySelector('#announcement-zone').value = 'UTC';
-    const button = document.querySelector('#convert-event-time');
-    button.click();
-    expect(document.querySelector('#timezone-result').hidden).toBe(false);
-    expect(document.querySelector('#event-countdown').textContent).toMatch(/dia\(s\).*horas.*minutos.*segundos/);
-    const timerCount = vi.getTimerCount();
-    button.click();
-    expect(vi.getTimerCount()).toBe(timerCount);
-    expect(document.querySelector('#timezone-local-result').textContent).not.toBe('');
-  });
 });

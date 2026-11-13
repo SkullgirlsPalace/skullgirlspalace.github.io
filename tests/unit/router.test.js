@@ -43,6 +43,10 @@ vi.mock('../../src/pages/guide.js', () => ({
     init: vi.fn()
 }));
 
+vi.mock('../../src/services/routeData.js', () => ({
+    prepareRouteData: vi.fn(() => Promise.resolve())
+}));
+
 // Mock Navigation component
 vi.mock('../../src/components/Navigation.js', () => ({
     updateNavbarVisibility: vi.fn(),
@@ -138,10 +142,30 @@ describe('router.js', () => {
             expect(appContainer.querySelector('h1').textContent).toBe('Skullgirls Palace');
         });
 
+        it('discards a slow route when the visitor has already navigated elsewhere', async () => {
+            const { prepareRouteData } = await import('../../src/services/routeData.js');
+            const characterDetail = await import('../../src/pages/character-detail.js');
+            const home = await import('../../src/pages/home.js');
+            let finishCharacterData;
+            prepareRouteData.mockImplementationOnce(() => new Promise(resolve => { finishCharacterData = resolve; }));
+            window.location.pathname = '/';
+            window.location.hash = '#character/annie/builds';
+
+            const staleNavigation = initRouter();
+            await vi.waitFor(() => expect(finishCharacterData).toBeTypeOf('function'));
+            window.location.hash = '';
+            await initRouter();
+            finishCharacterData();
+            await staleNavigation;
+
+            expect(home.render).toHaveBeenCalled();
+            expect(characterDetail.render).not.toHaveBeenCalled();
+        });
+
         it('opens the existing character interface from a clean tier-list path', async () => {
             const characterDetail = await import('../../src/pages/character-detail.js');
             window.location.pathname = '/characters/annie/tier-list/';
-            initRouter();
+            await initRouter();
             expect(characterDetail.render).toHaveBeenCalledWith('annie', 'tier');
         });
 
@@ -149,18 +173,18 @@ describe('router.js', () => {
             const overview = await import('../../src/pages/character-overview.js');
             const detail = await import('../../src/pages/character-detail.js');
             window.location.pathname = '/characters/annie/';
-            initRouter();
+            await initRouter();
             await vi.waitFor(() => expect(overview.render).toHaveBeenCalledWith('annie', 'overview'));
             expect(detail.render).not.toHaveBeenCalled();
             window.location.pathname = '/characters/annie/builds/';
-            initRouter();
+            await initRouter();
             expect(detail.render).toHaveBeenCalledWith('annie', 'builds');
         });
 
         it('still resolves the existing hash route', async () => {
             const characterDetail = await import('../../src/pages/character-detail.js');
             window.location.hash = '#character/annie/builds';
-            initRouter();
+            await initRouter();
             expect(characterDetail.render).toHaveBeenCalledWith('annie', 'builds');
         });
     });
@@ -193,7 +217,7 @@ describe('router.js', () => {
 
             const replaceStateSpy = vi.spyOn(window.history, 'replaceState');
 
-            switchDetailTab('filia', 'tier');
+            await switchDetailTab('filia', 'tier');
 
             expect(replaceStateSpy).toHaveBeenCalledWith(null, '', '#character/filia/tier');
         });
@@ -201,7 +225,7 @@ describe('router.js', () => {
         it('should call characterDetail.switchTab', async () => {
             const characterDetail = await import('../../src/pages/character-detail.js');
 
-            switchDetailTab('filia', 'tier');
+            await switchDetailTab('filia', 'tier');
 
             expect(characterDetail.switchTab).toHaveBeenCalledWith('filia', 'tier');
         });

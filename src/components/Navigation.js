@@ -16,12 +16,12 @@ export function createNavbar() {
   return `
 <nav class="navbar hidden-nav" id="navbar">
   <div class="navbar-brand">
-    <div class="logo" onclick="navigateTo('')">Skullgirls Palace</div>
+    <button class="logo" type="button" onclick="navigateTo('')">Skullgirls Palace</button>
   </div>
   <div class="navbar-right">
     <div class="nav-actions">
       <div class="language-selector" id="languageSelector">
-        <button class="language-btn" onclick="handleToggleLanguageMenu()">
+        <button class="language-btn" aria-expanded="false" aria-controls="languageDropdown" onclick="handleToggleLanguageMenu()">
           <span class="lang-flag">${currentLang === 'pt-BR' ? '<img src="img/official/flag_pt.webp" alt="PT" class="flag-icon">' : '<img src="img/official/flag_en.webp" alt="EN" class="flag-icon">'}</span>
           <span class="lang-code">${currentLang === 'pt-BR' ? 'PT-BR' : 'EN'}</span>
           <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12">
@@ -39,9 +39,9 @@ export function createNavbar() {
           </button>
         </div>
       </div>
-      <div class="hamburger" onclick="handleToggleMobileMenu()">☰</div>
+      <button class="hamburger" type="button" aria-label="${t('nav.toggleMenu')}" aria-expanded="false" aria-controls="navLinks" onclick="handleToggleMobileMenu()">☰</button>
     </div>
-    <div class="nav-overlay" id="navOverlay" onclick="handleToggleMobileMenu()"></div>
+    <button class="nav-overlay" id="navOverlay" type="button" aria-label="${t('nav.closeMenu')}" aria-hidden="true" onclick="handleToggleMobileMenu()"></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="#">${t('nav.home')}</a></li>
       <li><a href="#characters">${t('nav.characters')}</a></li>
@@ -66,7 +66,7 @@ export function createAboutDrawer() {
       <span class="about-eyebrow">Skullgirls Mobile</span>
       <h3 id="about-drawer-title">${t('about.title')}</h3>
     </div>
-    <button class="close-drawer" type="button" aria-label="Close" onclick="handleToggleAboutDrawer()">×</button>
+    <button class="close-drawer" type="button" aria-label="${t('tooltip.close')}" onclick="handleToggleAboutDrawer()">×</button>
   </div>
   <div class="drawer-content">
     <section class="about-drawer-hero">
@@ -93,7 +93,7 @@ export function createAboutDrawer() {
       <h4>${t('about.creditsTitle')}</h4>
       <p>${t('about.creditsDevs')}</p>
       <p>${t('about.inspiration')} <a href="https://github.com/Krazete" target="_blank" rel="noopener noreferrer">Krazete</a></p>
-      <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">Catálogo Krazete</a> e <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
+      <p>${t('about.sources')} <a href="https://krazete.github.io/sgm/" target="_blank" rel="noopener noreferrer">${t('about.krazeteCatalog')}</a> ${t('about.and')} <a href="https://skullgirlsmobile.fandom.com/wiki/SkullgirlsMobile_Wiki" target="_blank" rel="noopener noreferrer">Fandom Wiki</a>.</p>
       <p>${t('about.assetsNote')}</p>
 
       <div class="about-legal-note">
@@ -119,6 +119,15 @@ export function createScrollNav() {
   <button id="scrollTopBtn" class="scroll-nav-btn" onclick="scrollToTop()" title="${t('common.scrollToTop')}"></button>
   <button id="scrollToBottomBtn" class="scroll-nav-btn" onclick="scrollToBottom()" title="${t('common.scrollToBottom')}"></button>
 `;
+}
+
+/** Create a touch-friendly back-to-home control for standalone pages. */
+export function createPageBackControl() {
+  return `
+    <div class="route-back-control">
+      <button class="btn-back route-back-button" type="button" onclick="navigateTo('')" aria-label="${t('common.backHome')}" title="${t('common.backHome')}">←</button>
+    </div>
+  `;
 }
 
 /**
@@ -190,9 +199,12 @@ export function handleToggleMobileMenu() {
   const overlay = document.getElementById('navOverlay');
   
   if (navLinks && overlay) {
-    navLinks.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    const isOpening = !navLinks.classList.contains('active');
+    navLinks.classList.toggle('active', isOpening);
+    overlay.classList.toggle('active', isOpening);
+    overlay.setAttribute('aria-hidden', String(!isOpening));
+    document.querySelector('.hamburger')?.setAttribute('aria-expanded', String(isOpening));
+    document.body.style.overflow = isOpening ? 'hidden' : '';
   }
 }
 
@@ -200,7 +212,9 @@ export function handleToggleMobileMenu() {
 export function handleToggleLanguageMenu() {
   const dropdown = document.getElementById('languageDropdown');
   if (dropdown) {
-    dropdown.classList.toggle('active');
+    const isOpening = !dropdown.classList.contains('active');
+    dropdown.classList.toggle('active', isOpening);
+    document.querySelector('.language-btn')?.setAttribute('aria-expanded', String(isOpening));
   }
 }
 
@@ -209,9 +223,9 @@ export function handleSelectLanguage(lang) {
   const dropdown = document.getElementById('languageDropdown');
   if (dropdown) {
     dropdown.classList.remove('active');
+    document.querySelector('.language-btn')?.setAttribute('aria-expanded', 'false');
   }
-  // Re-render the entire app with new language
-  window.location.reload();
+  // setLanguage dispatches languageChanged; the router updates the current page.
 }
 
 // Close language dropdown when clicking outside
@@ -220,5 +234,6 @@ document.addEventListener('click', (e) => {
   const dropdown = document.getElementById('languageDropdown');
   if (selector && dropdown && !selector.contains(e.target)) {
     dropdown.classList.remove('active');
+    selector.querySelector('.language-btn')?.setAttribute('aria-expanded', 'false');
   }
 });

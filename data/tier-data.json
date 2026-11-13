@@ -595,7 +595,7 @@
         "Tirana do Templo": {
             "pf": "S",
             "riftOff": "B",
-            "riftDef": "B",
+            "riftDef": "I",
             "parallel": "B"
         },
         "Chicleteira": {
@@ -1756,8 +1756,8 @@
         },
         "Rosinha": {
             "pf": "B",
-            "riftOff": "S",
-            "riftDef": "SS",
+            "riftOff": "A",
+            "riftDef": "S",
             "parallel": "B"
         },
         "Pirata de Poça": {
@@ -1789,6 +1789,12 @@
             "riftOff": "I",
             "riftDef": "C",
             "parallel": "C"
+        },
+        "Gremlindo": {
+            "parallel": "SS",
+            "pf": "S",
+            "riftOff": "B",
+            "riftDef": "C"
         }
     },
     "valentine": {
@@ -1805,7 +1811,7 @@
             "parallel": "SS"
         },
         "Negócio Sangrento": {
-            "pf": "S",
+            "pf": "A",
             "riftOff": "C",
             "riftDef": "I",
             "parallel": "A"
@@ -1893,6 +1899,12 @@
             "riftOff": "B",
             "riftDef": "I",
             "parallel": "B"
+        },
+        "Doente de Amor": {
+            "pf": "S",
+            "parallel": "S",
+            "riftOff": "C",
+            "riftDef": "I"
         }
     }
 }
