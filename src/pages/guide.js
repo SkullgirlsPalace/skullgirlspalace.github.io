@@ -185,10 +185,9 @@ export function init() {
 }
 
 function switchGuideTab(tabName) {
-  // Update buttons
-  document.querySelectorAll('.guide-tab-btn').forEach(btn => {
+  // Only update the reference tabs; keep the Wiki section navigation active.
+  document.querySelectorAll('.guide-tab-btn[onclick^="switchGuideTab("]').forEach(btn => {
     btn.classList.remove('active');
-    // Check if the onclick contains the tabName exactly
     const onClickAttr = btn.getAttribute('onclick');
     if (onClickAttr && onClickAttr.includes(`'${tabName}'`)) {
       btn.classList.add('active');

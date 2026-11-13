@@ -179,7 +179,12 @@ describe('guide.js page', () => {
       document.body.innerHTML = render();
       await init();
 
+      const wikiSectionTab = document.querySelector('.guide-tabs [aria-current="page"]');
+      expect(wikiSectionTab.classList.contains('active')).toBe(true);
+
       window.switchGuideTab('modifiers');
+
+      expect(wikiSectionTab.classList.contains('active')).toBe(true);
 
       const statsTab = document.querySelector('#tab-statistics');
       expect(statsTab.classList.contains('active')).toBe(false);
